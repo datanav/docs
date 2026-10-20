@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8cceb513ef9852ef565bc765d5f346244f087492313d284eae176c7f2bc579f5",
+  "claims": [
+    {
+      "id": "claim_52eaf6739d894d44898d28df7781eee7",
+      "statement": "DTL uses JSON function syntax to apply the same transformation to each source entity in a stream, constructing a new entity stream and permitting composable functions and dataset hops starting from the source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/introduction.rst#L4-L30",
+          "version": "repo-lines-v1:sha256:21e07d20358118d66db50e52c0146eb10ec9415905c168e1d19a85fa3194cae7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MWUyYjQ4ZjRjYmYxYjg0NjJiNzM5YzcyMWVlNzQwZTA5Mjg1MWRlZDkxYzFhZTczYzg5YzVjZTljZDBiZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjNGU2OTNmMTliMmFlYjQ4OTBkNGQ4NzU0YmI2ZWZhMDM5YTU0YzJlZTg3OTAwZGJiMzZlMTkxMGY3Njk2YWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_49765c584a4f449e9ff85237092d6f00",
+      "statement": "A pipe's transform field can contain a single configuration or a chain of transforms between source and sink; a DTL transform requires rules.default as the source-entity entry point, with other named rules invoked through apply or apply-hops.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L7-L27",
+          "version": "repo-lines-v1:sha256:3a5d094a76101dadfe786faa581fb445abd37145ebac60a2ccea2e9317807775:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5MjlkNThiNjE1YzExY2Y5MjUyZDE5MTk2MDBlNDk3OTY4YmEyOTQyY2U0MzQ3NWRmYzE3N2JhYWEzN2UxNDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQxNmMxMzJjMTFmMDZkZTMxNDllMzEyMzM5ZDU2NjhlYzhkMTViMzZkZTE3NGMxM2UwOTY2M2Q4NTAwZWY5MjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwNzk2NjhjYmEzYjhkNzljZjg5YTk0Y2E2ZjM5MGU2Yzg2MTIwMDRhNGUwNDE4OGViZjRkM2YyZDVjOGFlNmEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms.rst#L6-L14",
+          "version": "repo-lines-v1:sha256:8b604dcad1b39b3c6d9108615e5bb9bd670163f50190f233671085a57b58c155:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ5MmIxNjdkMTZlNjQ4ZWM5YTYwODVkZGFhODg2MTZiNWNjMDQ5ZDIwNWIyN2RkZDMwMGQ5NzE4MWRkNGI1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTM2ZDk3ZjU3NmZmODdhMWRjMjkyNDM5YThmOGNiZjRlMTZhZDIyZmYxOGQ3MjgwOWRmNDQyOGExMmUzMDczZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWFkNTc2MTIzMTFhODE4Y2UzZDZiZjM4NWIxMmIzMmIzOTg0MDlhM2I5ZTZlYmZiYzYzZjU1ZWExZTY3OWE2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE5NTBlZGE4Y2MwZWYyMGU0MWJlMGM4ZDAzYTg2YmYzODc5NzJmYWQxMzllMzhlZjhiNzBlODQzMGFlMTcyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_94a1c3abf4354eb29093c712d1f619b8",
+      "statement": "DTL rule transforms execute in written order, allowing later transforms to read target properties created earlier; copy transfers selected source properties and add constructs target properties from evaluated expressions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L167-L181",
+          "version": "repo-lines-v1:sha256:1a5396a8597698116515dbb9a90a41f20141d895d91249766832d3be9031bc70:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjNjdmNGJjMDEzOWM2YzYzZTI4Yzg5YjE0ZTI0ODA2OGU4NDAwYzg2MmY1YTc4YjdiZDViMWZjZTUxY2IxOGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4NjZjMzdmNjQxZTc1YjJhZDFjYzRiOGM0NzFlZGJmYjc4OGM1ODU3NDM4OGFhZTA4ZDNmMmU2YzQ5Y2RhMTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzODVmNWM3NTM2MTE4ZjM2NTgzYTg2NWE2NjRkZDNiYzlkODE0OTY1NDlhM2YzMzJiZDNjZWM3MjI1ODJkMWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4MTg2M2QxNTU5NjcxYmU5NTk2OTg3NzRlZmRiOWJkY2U4Y2E1NjYwYzIwMTA0MThmY2IxYzg1YTZhMTNkN2YifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L21-L46",
+          "version": "repo-lines-v1:sha256:7e8891c17feae44678c566b23345afe5b74d674dcb57a081c6c6117ad2f9cf0e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MDk4MmMwZDI4MDlkZTBiODc0YjdiZmY2NGNhZTQ2NmVlODQzMWNlNjM0MjRiOWJhMzU5YWI5YmMxMmQ5OTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRhNTM3MDU5OGExNzBkNmUwMzg2MTMyMTBhZTFjZjU2YTk3NzMxYmM5OWNlYTQ0ODY0MTIxYzliOWEwNGQ5MDEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L291-L309",
+          "version": "repo-lines-v1:sha256:dbb4606b8cb97fc2f838b6cc72da7dd514d271c3e725324cdbb6d5df1971d1ba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3YTVkOTQ5MTRhNjc2NjRjNTg2NTJhYjEyMmU5YTNlNzZkNTkzYWNjNDQxYjRiNTVlOWYyNGM5NzY2MWQxNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBhYTY1NzhjZTM4M2M0MTI3NjViNTRjOTZhZGM5NzNkYWRmMjIwNWJkODhmZTUwYzNjMmJkY2Q3MTdjYzY3YTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f6dd65b825254c2e92bf4b7dfe976bed",
+      "statement": "The default transform operator is distinct from the default rule entry point: it adds a target property only when that property does not already exist.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L23-L27",
+          "version": "repo-lines-v1:sha256:3827ce86a4c0614af5c827694e2ccd057b1c8c1a183ee856b7dc9aabb33e65d0:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU5NDhlMmVkZjZlOGYyNjA5MGVmM2I3YWM3MGEwNGNiYjY1ZTkzODE1ZDY3M2EwMTNmNWExZTgzNjcxYzFlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjA3OTY2OGNiYTNiOGQ3OWNmODlhOTRjYTZmMzkwZTZjODYxMjAwNGE0ZTA0MTg4ZWJmNGQzZjJkNWM4YWU2YSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L424-L459",
+          "version": "repo-lines-v1:sha256:4f345cc12c9361592186f71952d30cb9579bc1daa2ad5bdd20a1151b72311033:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMDM4YmQwMzZmYjg4ZDc4ZmM5ZGNlODEyOThmNmJmNjRkYmQzODJjYTQ1YzZkZTJjMzFkMjQ3ZTJiOTc3MDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiNTZiYmQzMmJiYjQxZjJhZjZmYmEyMzJhMDkxYzExZmE0YTFmOGJkNmIwNTk4ZmNkNGYwN2FiMmVmYjAzMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZkNjBlY2ExMDE5MTYxZjhiMzUyMGI5MzhlNjU4ODI4M2FiZjk2M2Y2ZTk1MGQzYzg3ZGM1ZWM3MzI5YWIzMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlNjYyNjNlYWYwYWZjYzE0YjU0Y2Y1NzNkOWYyM2IxMWExODVjYzQ4NDNhZmE1NDcxMDgxNzI1YTljMmU1ZjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0fe240f06799450f87633775f4053497",
+      "statement": "DTL expressions return values without side effects, whereas transform functions have side effects, typically modifying the target, and have no return value.",
+      "evidence": [
+        {
+          "resource": "repo://hub/data-transformation-language.rst#L27-L42",
+          "version": "repo-lines-v1:sha256:972861fd872f976e1d980c7010ca8afa79224e374a131dba4317c898c5f271c4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5MDQ2ZWEyZGY0ZTkwYmEyMDAxMTMyYjRlNmIxM2YwODIyYzhhMjFlMGJjM2VhYWFmZDRjMTgwNjIxMGM0N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmNTlkNmM2ZjA0MmY5YWE4MGQ0NDY2YmRkNGYzMDU0ZWQ4NTgxYmFjNGUwOTYyNTU2ZjNlZmJhZjQ2ZmFkYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2NjdlOWVkYzJlZWU1Y2Y5OTgxNmI2MzQ3Y2EwNGY1M2E2YzcyODg2YmQzM2I5NDdlOTBmZjdlODdmZjY2OTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkYTQzZDU4MGYzMmJiN2M5ODM0NTk4ZDJhYzJmZTQyMDI4MTU4YjJiMDQ3ODY0MDI0NWI5MzdlMmJlZDY1YmEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L6-L7",
+          "version": "repo-lines-v1:sha256:46c9d8971adcde31b58e0e51e1cc3bbdd2643c77fed4832f22c7a4e191ad25cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY2MWE0OTVjZGJiOTI0MWVkNzY3YWE3OGQzYTYwMmEzZjRmM2Q0M2I0MjNjMWYyOTk3Njg3YzRjNmVhMGFkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWZkMTdlY2IyNWYxOTYyNDlkNTBjMGUyZjA5ZWViNGQzODZjY2Q4NzgzMzg2NzQ1NTE3MmMxNjY2OTgzNjY5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzU5ZGFjNTE4NzhiNzA2NzNjZmIyZGNkM2E1NmMzNjAxYmFjZWJjNzU2MjVkMzAwNTM1OWJiYzJiOTcxMDljOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjUyYTNlYjQ3OWRmZTEzMjk0ODU4ODUyYjY5MDA3YjA0YzcwNmMzYWIyYjZlMDdjNTQ4NjliZmM1ZDIxYmM2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_73ef2a0318524659999e7b4d2a5ef11b",
+      "statement": "DTL id_required defaults to true and fails on missing or non-string target IDs or invalid create/create-child arguments; when false, invalid values are ignored instead.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L29-L33",
+          "version": "repo-lines-v1:sha256:a3e79fbe316d0d702677ecafb014eb9c734b1126e3a6f1f25510a3cde738f1ef:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkYzdiZWUwNTk2NjNhMzNkZjM3MGY3ZWI0ODc1NTQxZGE5YzM4MWRjMDBmZTk5MDM1MTFkZTI1ZmYxNDgxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDA5YjdjY2ExM2M0ZDFlY2RmZWJiMjQ0N2VmYjlkMzAxM2YwYjVmZjY1NTZiOGQwNDgzNTZmMmE1NTZhYjBiZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e7f5fad31dc940c38388b47fbc4f0ffd",
+      "statement": "The experimental trigger_on DTL option gates transformation by a property path and a wildcard-capable matching value, passing the entity through untransformed if the key is missing or the value does not match.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L35-L42",
+          "version": "repo-lines-v1:sha256:220178bf50836f0f3c10265631422e41f958fd6f44ad74220a90fa4051430bdf:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWUwMGEwNzU0Y2ZlZTM5ODEzNmNiM2FkYmE2NTgzOTkxMjdkZTRkNzA3YWM3YTdiYmNlMmE3NzQxMTNhMWNkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODNiNzI0YjA4YWE2ZjE1MTFiMzNiYWZkYTc2YWIwMTBmMzAxNjRlYjJiYzc2OGU2NTkwNjU2MTliMDQ2ZTIzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzY4ZDViZDk4ZGZhMWJlN2U0ZjQxNDE3YzFlNDFhNmY1NTZkMzgzY2E3ZDNjZjI2YzQ3NTZmYzYwZGQyZDNjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_93d947c0b4524da1b9f9ade08d8a8c89",
+      "statement": "The pipe transform side_effects configuration flag concerns changes to external systems and protects preview from inadvertent changes, rather than merely denoting DTL target-property mutation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms.rst#L56-L59",
+          "version": "repo-lines-v1:sha256:169fa530aee25ddee9075084e25c959b3d7dd5586baae8948a067519970045ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDhlMjI5M2E5NDI0Mzc5YTdlZmU0NzJlZTMzYmY4NmI5ZDQ1M2ZlNTg1MmRlMjc1ZjhmNWQ2ZGQyMWQyY2UxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZThmNDY1NzNlZDYyOGQ5NmQyYmM5ZjViMjgzYmEwZGJkMzYyNGM5MmM5MTA3Y2RjN2E4MWJmMjA1Nzg2M2VlNyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L6-L7",
+          "version": "repo-lines-v1:sha256:46c9d8971adcde31b58e0e51e1cc3bbdd2643c77fed4832f22c7a4e191ad25cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY2MWE0OTVjZGJiOTI0MWVkNzY3YWE3OGQzYTYwMmEzZjRmM2Q0M2I0MjNjMWYyOTk3Njg3YzRjNmVhMGFkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWZkMTdlY2IyNWYxOTYyNDlkNTBjMGUyZjA5ZWViNGQzODZjY2Q4NzgzMzg2NzQ1NTE3MmMxNjY2OTgzNjY5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzU5ZGFjNTE4NzhiNzA2NzNjZmIyZGNkM2E1NmMzNjAxYmFjZWJjNzU2MjVkMzAwNTM1OWJiYzJiOTcxMDljOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjUyYTNlYjQ3OWRmZTEzMjk0ODU4ODUyYjY5MDA3YjA0YzcwNmMzYWIyYjZlMDdjNTQ4NjliZmM1ZDIxYmM2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_838e0517b7bc4f369fa36c3d572a38fd",
+      "statement": "DTL defines six built-in variables, with _S and _T forming a source/primary-target pair for each applied transform; nested apply makes each input value the nested rule's source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/variables.rst#L6-L41",
+          "version": "repo-lines-v1:sha256:ec730944b3e90fb71743cd342e80322443b9709cc527c1c1dffc7b5588a2d052:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NmMwMDU0YzA3ZWI3NzY2ZjU0OWU0MjAyOGJmZWYxYWYwNzI4OGVkZDEwNDgwYzNmY2FiZjQxMWRmMTA4ZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4NWZiMDEwNzFhOWIwYWFmYjkzNGExMmYwOWI3NThmMTEzNzgzZjI4ZGY2MjgxM2M4MjFkNmFjN2Q5Njc4Y2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5ZGY3MmFjMmVmMDRkMzQ1MWMyNzdjNzhhZTQ3Yzc0YjkxZGRkYjJlOTM4NGE2MjZiODU1OWYxNDc3ZTQ3OWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4ZDQxZDE2ZjljYTgxZjMzZjNkMzhkYTc0NjM0ZTBjMGUyZDA2ZTk4NTQyOTIwMjMzZWI2NDZiZjYyMzI1NTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_355f8725df814f35b24414562e64a55b",
+      "statement": "Inside apply, _P is the parent context dictionary containing _S, _T, and optionally a further _P, but not _R, so parent and grandparent values can be addressed explicitly.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/variables.rst#L49-L64",
+          "version": "repo-lines-v1:sha256:92c331eb7deea9fe6eaaa8932a59191ea8636b386394eb6092ef627d84ef6fa5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhMzU4YjVlMGU5ZjI3Y2I4MDU2NGYyZWQ3YzgzMGZjYWNhOWQ2MGNlYTY5ZDdhYTQwMTk5ZGE0ZjM3NjZiMTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwN2YxMTM0YjhhZTIzZmZhNzMxOGRjMTNjMDc4ZTcyYzA0Mjk2ZjY3YjI0YzFmN2U5ZWRiZjYyNTg5ZWYxY2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3NTYzNjFhOTY5NjVkODUxMGE1ZDcxYmVmNDNiZGU1OGVmYzk4ODlkZjg1ODIzY2RhMGFlZjc0OTA2YjE0YTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkMDM5NDM2ZDZkMjc5Mjg1ODM5M2QzODU5ODQzYjA4MTAzZThiODM0YzhjYTFiNzg5NjliMzcwZGI1ZjYxMTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_43cb423f8bdd4701bcc095f49be394c1",
+      "statement": "DTL _R contains the source and target of the outermost root context, in practice the default rule, so nested rules can address root values independently of their immediate parent.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/variables.rst#L68-L81",
+          "version": "repo-lines-v1:sha256:b634f24eb64fb2102f2811ec3023fc1a78724cac257a4a7a24d3e18a0be89266:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzYTZkMTI4NmIwZjM5OTg2NmMyYmQ0ZTU4MTA4MmNiN2Y5Yjg2ZjQ0OTJmMmEzMTZkNWRlMjBlZjQ4MWQwYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiMWQ4ODM2M2E2OTA0YTViMzY2M2U4NzhlNWFlZjAwZDM1NTE4ZDg0ZTJjNmMyYjc1MmMxM2E3ZjhlYWJjNDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRkMDM5NDM2ZDZkMjc5Mjg1ODM5M2QzODU5ODQzYjA4MTAzZThiODM0YzhjYTFiNzg5NjliMzcwZGI1ZjYxMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyM2Y4ZDdkZWRiZjQxOGJmMWUwMjU2YmI1NDhjMjQ0NjU4YTg1MDk2Njg4MTk1NTY1NDJmMjMyZTYwMjIzNGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3107432d022a410bb7f0b61e9e542e6d",
+      "statement": "HTTP endpoint sinks have no ordinary pump and flow entities on endpoint retrieval; supplied URL parameters are bound in _B for DTL transforms on the pipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-http.rst#L40-L42",
+          "version": "repo-lines-v1:sha256:bbff73f0393ad2e6d2d0eed7dcf67b00578a06a8dd488110defc56706ae44d07:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODY1NGVmZDU3OGY5MDM3ZDZiMTU3NDkwN2FmMjNlOGIzOTE2M2M2YzVmN2E3OGVjZDNlNDJhNWQ1ZTQzY2E5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk1ZGVlMWQ2OTY5YjAzZjM5ODY3NjJmZjA3MWU4NmE4ZDNiMDQ1ZTY0YTk0NDgzMTFiNGZhMTA5NGMxZDA1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM0MGE2ZGU4YzA1MzkxZTMyYTAzZTY3NjQ2MDE2YTIzNDdlMTk2ZjQ2ODRiYWYyZGYyYjZiZjc2ZDZkN2YzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjIyNTI4YjBmMzFlOTc3ZjJmZDc2Y2JiYjlmZTUxYjBiY2NlZTE0Y2FkNTE2ODViZTBmMjQ5NjIxOTIxNGJiYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-http.rst#L7-L13",
+          "version": "repo-lines-v1:sha256:647f73623aba377b0265ef93205803f69ac18567819ba080a31ce3599698f6a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGIzNTFiOTc2ZWUyODkzNzZiOGM0NGFhODAwY2FiZTc5MzY4YTNmOGRkZTIzMGM0NThkNWYxZTRjMDhiNjVlMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzYWU2YTI4OWM5Mzk3ZDgxNDkxZWVmMjk5NjA1YjBhMTY0MGYzNzg2YzczZWI2M2NkNDEwNzg0MTIwYzlmNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2M5OTBmNTQyZDM2YjU0YzRjOTcyZGFkN2I1OGM5YTc1NWRlZWU1OGE2Y2U3ZDk4NTVmYTQ1MTk0ZjI3NGUxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWIyOGU5ZDEwYjU1Y2QxYWViZmJkNThiOTg4ZjQ3Mjc4MDhhMjZhMzQxYjc5MzNiYWE3NDA2YTU1ZWQzZTIwNCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/variables.rst#L85-L91",
+          "version": "repo-lines-v1:sha256:0ec5d073a982d05c2d81e41181e4fcde37d1e133da30a566047c9252254e6fd9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVjNjAzMjlmMzA0MTExMzM5ODNkOWExYjM1NjVhMzcxNmRiYjM4MGVhZjk5YmEwM2ZhY2YyODkwOTYyYmM3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI0YjI3OWM3NjEzODhjYTU0MGY4YWUxZTAwMmNmYTRhZWQxMzVjYTYxNThlZTAwZGE0YTM3OTJkY2IyZWViNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzIzZjhkN2RlZGJmNDE4YmYxZTAyNTZiYjU0OGMyNDQ2NThhODUwOTY2ODgxOTU1NjU0MmYyMzJlNjAyMjM0YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDYyNzFhYTIzMjBkYTNkOWMzMDkwYmIxYzk1ODExN2FhZGM2MDg1YWMxODJhMzU0NDdmYmU2MzU1OGMzYTUzMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7cdd1e8dd1054e1291d41ef3c1d94d0e",
+      "statement": "The underscore variable denotes the current value within functions accepting functional expressions, including filter, sorted, min, max, and coalesce, rather than a universally available source alias.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/argument-types.rst#L46-L50",
+          "version": "repo-lines-v1:sha256:042a69bb77375a37cbe366753d1534bf4a938eb75f34fa851147868d3d03b379:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTZlYmRlZjE4NDgyY2Q5ZWNiZDU5MTNkYTIyZjE0NDNmZjQ3NjQ3NzYzNDJmYzRjNGZhYmE3NzA4NzYyYmYwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdlMzQwNmUxMWM2MWEwYjQ0OTIyZGM0NGU1MDI1YjQ5N2M5YWY2ODNhNDZmODg5MTJkNmY0ZWY2ZTdmOWZmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTFkNTY5NjZhNWM2MDQ4MDcyMDc4MTgxZmRhNjdiNDE5MzgxYzU3ZTZlNjM5OTk4Zjg0ZjQ1Y2E4MmE2MmJlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGYzOTZlOTFhMTRmNTJjNzMzNDFjNWExZjBhNmY0YjQxNTBlNWM1MDc2N2E0NmYyNDZkOWYyMTdjNGQyYzExNSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/variables.rst#L95-L105",
+          "version": "repo-lines-v1:sha256:5659742efaa564d44610091682f5df2e4c4dcac3fbc6bf75af9b47a01f5e9887:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhYzNhMGQ1NDY1MWMwMzEwZWZkMGExYTliYzQ4YjY5YjhmZGFlZmY1MTU2NWI1ZjhlNTU4ZjRiODcxOTZjZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YzViZTI5OWM2NTlkYzUwZDliYTY5M2IxMmIzYTQ3OTIwMmJhNTFiZGVlMGI1MmUwN2FkZTI1NzQ0ZTllZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2MjcxYWEyMzIwZGEzZDljMzA5MGJiMWM5NTgxMTdhYWRjNjA4NWFjMTgyYTM1NDQ3ZmJlNjM1NThjM2E1MzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c51fa42df9594b63bfbce5b917da9392",
+      "statement": "apply uses a named rule from the current DTL specification and returns transformed values; additional standalone emission is the separate responsibility of create.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L405-L428",
+          "version": "repo-lines-v1:sha256:d2e5bd291a0dcd9a17e16107684eb88fc2f9ba94137815bfbf6e1454d3675951:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5ZjE1ODk1YTMxYjk4ZDQ3ODNmOTg5NzQ4Njc1OWZkM2U3ODc2MTQ0YWJjYzIxYmMyZmE5N2Y3NjYyYTFmZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxMjBlNGVlZjEwODE2ZTdiZmNhMGU1N2Y1N2JjZjUxMmRhNWFiYjhiMzAyZGYxZDMxMmI0ODhiMDBlZWYxMzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1OWFjMWQ4YTMxNjViNzFiMmZmM2M3Yjc0N2VkODM0ZmUzMmJmMTc5NmFlYWQxMDYyYTExOGU4ZDRhMDUzMjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjNmJmMzEyMDVkOWVmZTAwMDM0MzI2MzFlODE1MTcyZTIxN2NjODBhNmZmNGNlODdkOTRiYThjMTdlZDZjYWQifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L353-L381",
+          "version": "repo-lines-v1:sha256:f96ead99f98986cea4a1986af271a756ec41f3bd4ebe153a5ff0e24b87f7185c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NTI3MTJjYjk3NzI2OWQwNzgxYTkzNjczZThjYjBjNWJkYTM4MmVkYzA1MGZkNmVlNDE3NzAwMzQ0ZGU1Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiYjZmNmI3OWE0MzA1Yjg5NzU0OTlmYzZjOTU3YzcyZDk2MmVmNDJlMjVlYTdlN2EyMTg3MDE0YTkzNzY0YWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiZjQ2NWUzZTNmNGFlOGIyMzBkNjMxN2E4MmIxYWU0MDJhMDY0Njc5NjM1Y2FhYjgxMzcwNzc0ODJiOWI1ODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YTI4OTA0MWU2NDJhOGNjZTEzMTFhZGY1ZDIxZWQzMzZmNjIyZjU2NjFiZmNhMDJkMmZkN2Q5ZDMxY2VjNTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_19b2072c73054474928432a7a4106860",
+      "statement": "create emits additional entities into the DTL output pipeline, while create-child adds entities to the target's special $children property; normal validation requires string _id values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L29-L33",
+          "version": "repo-lines-v1:sha256:a3e79fbe316d0d702677ecafb014eb9c734b1126e3a6f1f25510a3cde738f1ef:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkYzdiZWUwNTk2NjNhMzNkZjM3MGY3ZWI0ODc1NTQxZGE5YzM4MWRjMDBmZTk5MDM1MTFkZTI1ZmYxNDgxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDA5YjdjY2ExM2M0ZDFlY2RmZWJiMjQ0N2VmYjlkMzAxM2YwYjVmZjY1NTZiOGQwNDgzNTZmMmE1NTZhYjBiZSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L353-L417",
+          "version": "repo-lines-v1:sha256:e221127327896693d921ed860ee17f0c56b3ac27c083b28da19e2323569339f5:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NTI3MTJjYjk3NzI2OWQwNzgxYTkzNjczZThjYjBjNWJkYTM4MmVkYzA1MGZkNmVlNDE3NzAwMzQ0ZGU1Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMGI0MWI0ZmMwYmYzZTg2NzQ2NjllOGI4NTE4OTliMTMzOWRiNDFhOTRhZjc2YTVlZGE0ZjMyYjU4NGI5YjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiZjQ2NWUzZTNmNGFlOGIyMzBkNjMxN2E4MmIxYWU0MDJhMDY0Njc5NjM1Y2FhYjgxMzcwNzc0ODJiOWI1ODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwOWE3MGIxMDQwZWZjODU4NDIzNTVjOTVlMTU0N2JjOTc4YzlhMDliMjUwNGFjZmZkY2MxZWEyMTEyMGE1YTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3551b01418f246e8a7a6b1a3f14d81c2",
+      "statement": "The list-expression filter returns only input values whose functional predicate evaluates true, binding underscore to each individual value, rather than filtering the enclosing source entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L149-L174",
+          "version": "repo-lines-v1:sha256:2209e9e146c3b4ec271305f773a6d7b0756b1cea873ae8eec78409424e3811ac:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwMDUyNTdiYzk5N2Q1ZTVmOTE5ZTdiYTRmY2Y1ZWZjMDU1ZmYzYWM5Nzg0YmM1NzBkMjRkZDJjMzI0NDg4YzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNjgyNWVmM2Q4NWExNTQ0NjhjZWNmMjcwNjkwNGJmMDE4N2E1YjMzMGY0YjBhYWJhMWVhMjE1M2NmNzgzNTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZDg4OTY2OTYwOTY3MTk4YTYxMGY3N2E0Mjc0MjY0OWYyMzcyZjU3Y2I3NjgyNmMwMDFiNDJlOGQ0MzEyMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1NDk2MDk0OGM4MWQ3ZWNjZjlmY2JkZDllYjllMDJlN2RiMTY5NzFmNTk1ODlhNDgwMTY0YzMxMGI5NmNkZjAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/variables.rst#L95-L105",
+          "version": "repo-lines-v1:sha256:5659742efaa564d44610091682f5df2e4c4dcac3fbc6bf75af9b47a01f5e9887:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhYzNhMGQ1NDY1MWMwMzEwZWZkMGExYTliYzQ4YjY5YjhmZGFlZmY1MTU2NWI1ZjhlNTU4ZjRiODcxOTZjZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YzViZTI5OWM2NTlkYzUwZDliYTY5M2IxMmIzYTQ3OTIwMmJhNTFiZGVlMGI1MmUwN2FkZTI1NzQ0ZTllZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2MjcxYWEyMzIwZGEzZDljMzA5MGJiMWM5NTgxMTdhYWRjNjA4NWFjMTgyYTM1NDQ3ZmJlNjM1NThjM2E1MzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d4301bcf5c8a4102826c0e232dd9ce90",
+      "statement": "The transform filter continues when its condition is true and stops further transformations when false; with no condition it stops unconditionally and suppresses the ordinary target output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L561-L619",
+          "version": "repo-lines-v1:sha256:58f65b32680a0eeff993824edfec4d760a6bc6b99235f0e2a36e877ebbfc2aa4:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlY2QxZDBiNWFhYTlmYmNiNmYxMzExN2Y5M2JmN2UzNmFhOTE1MWU2MDA0MzkwZGY4MzM1NmU4MTk3OTYzNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5YWIxOWZiOGI2MjA0ZmQzN2IwZTRhYmJiMzZhMzVhMTJlNTc2ZTdmMjc3NDdkYTBiNDVmZDAyNjU3NmU4M2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZkNGU4NmI4NDJmNTJjZWEyZTc2ZDdhMjc1YThkOWJjZjRjZWZkODRlODJkYWRhNzcwMGVhYjhmOWYyYTljZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRhZTczM2JkNzkxNzBjYjk2ZTU0NDVmZjQzYmYxZjMwM2YyNzQxYzk1MjM1MDkwMzA5Y2U0NWE4OWIwNTBhNjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_220f12821f3b441e908bf78ba40232c0",
+      "statement": "With a dataset sink, failed transform filters emit _filtered:true to enable incremental deletion of existing, not-already-deleted entities, and subsequent transforms must handle such entities carefully.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L585-L607",
+          "version": "repo-lines-v1:sha256:92ca38f544361a863f431df6a4103384851664343cb68a3ea8aa4379827422d4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1ZThkZGFkZjJhYzUzNWI1N2JhNTkyMTM4MjdiNTc3NDA3ZDU1MGMwNWJiMzAyMDg1YTViMDNiYTQ4NDM4YmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMDVlMTNmOGFmZGNkYjhiYjUxMDAyZGEyMjJiNjU4N2EyYzVmN2I4YjhmMTcwNDViYTNhYmM1NDc1YmVlMDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg0ZjMwNTg4ZGY3M2YxYjRjZjQzMDBhZGU2ZWNhZmJjOTVhMjRjMmZkMmE2MDg5ZWNmZDJmNTFlYzdmYzJkYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1NzRjMTE0ZmNjMGM4ZjJhNDcxN2I0MmU4Y2ZkNDdkODI3YTQ5ZTJmYzkzMGY0YWJjODg1MzgyOGRmMjIzMmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_26e3788ab4f3487789f1eb7439ed2331",
+      "statement": "discard drops the target when its condition is false, or unconditionally without an argument, but does not delete an entity previously sent to the sink and is therefore unsafe for previously emitted IDs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L514-L558",
+          "version": "repo-lines-v1:sha256:f84e2bc284951494f02cd900b32171a2c4085e8594eff7e32077bfd593048060:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0ZTljYjU4YTdhNjkwYmZmYWI1ZWMyMDY4MzExYzhkYmVlYjc1OWE2NDg0NThjY2FiY2U0MjMzNWMyZDFhYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5M2U0NzZjYWJlZmViYTIyNmM2Y2Q1ZWU0ZGUwYTcxMGUxYjU2YWUwOTg0N2Y1ZGJjNTY0YmFkZjc4N2I3OTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMTczNmViNDM2MGNhYmYzMGM2NzU4OTEzNDkzNWUxM2VkODVjYjg4NDE1NDkxYWEwMzIzN2FlZDI5OTE3YTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMjkzZDEwMzk4NDAxM2IwYmI3OTk1MjM3ZWFlMDQwNzhjYWNiNjQwZjVmMDc4MGEyN2EzNDQ2YjFiN2ZiMmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_44add7ebeaa64ab2a767b6e890551ec6",
+      "statement": "Neither filter nor discard cancels entities already emitted by create, so an output gate must precede creation if it must govern those additional entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L533-L537",
+          "version": "repo-lines-v1:sha256:ae32e7694bcd69874fcc030d7195522ace609cfbf242be668946501c376bce53:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxZWYwN2Q0ZWE2ZDBlOWZmMTJmMGIyYzA5ZTZmMWMyNGJhYjJlMzQzYWM3NzFiZTJmYjU2ZWU2NjJjZjkyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUyZmVjNzgxMTFhNmFkNDNlZTYxNWRiYmQwMTQ3MzI5ZTE1MmQzZjAyNzRmNmZjMmJjMzdhOWM2YTQyNDIzZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTE1M2NmZjUzMmY2ZjUxNGRjMTdkMmY5ZTRhYWZlNWY2ZDhmNTlkOGVkYzQ3MWVmNjg3YmI3YjU5MjVhOGUyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTFmMWU5YWZhZmZkYWU2MWY3OTg0ZmUxMmMxMDk1YmJjYTVkNzY0ZDI5M2Y0MWIyNGY3NGRjOTg1MDBkNDNhZiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L576-L580",
+          "version": "repo-lines-v1:sha256:99bc1cfe8c8efe0d624cfe2d09a43c34634eea29c09ec18a2e5cc6088ad66239:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxZWYwN2Q0ZWE2ZDBlOWZmMTJmMGIyYzA5ZTZmMWMyNGJhYjJlMzQzYWM3NzFiZTJmYjU2ZWU2NjJjZjkyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk0ODA2ZTY1ZTJlZWYwZjQxMDVkYTU1MmY0Nzc4NzBjNzM0MWExYWFkZGZjOGFmNDNhN2IwOTk4MDhjNTdmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNiZTM5NDE0NzVmMWRmNGU4MTZlZmUxY2NlYWQ0ZWZiYTFiOWRhNTlhZGNiMjMyN2ZhMmJkNmI5MGYxMzk2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWRlZGEwZDM1NGM5ODc0MWEyZGZkMTc5ZjJlZjI4MjVhZmJmN2JlMDdjZGMwNzQ0YTdiMzVhMGJmNzc1YmJiNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4428940ddb4344cd845252db13d06040",
+      "statement": "Property-path strings start from a variable and traverse only its entity and nested values, potentially yielding collections; a trailing dot such as _S., _T., or _. addresses the whole variable value.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/paths.rst#L8-L17",
+          "version": "repo-lines-v1:sha256:8cc43987d211dff3ef8c4f7f6b4f1a48b2d13f0552e573a4c5c6966c5c479c1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwMDMwYjI1NThkZjQyYTNhNjhhNmYyMjA2MTk0Y2UxMWJjMWJlZmQ4MDg4ZGVlZWNhODEzNmY4MTZhMGU4ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxZWYwYmQzMzc3Y2MyMGQ3OTc5MzA1ZTAzZmEyYmYyOTI1ZmJmMjYyZDhjNjc3MjIzZWMwMTczMjQxZjA4NzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1Njc5Mzc2MjAzODAzNzIyYzRlNGM4OWU3Zjc5NzNiNTM3ZTAxYzk2ZWRmOTUyOTllMTNlN2IzMjI0MTY0N2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJjNjYxNDQ0Yzg0NGRjZDZlNTlkYTNjYWMyZjg2MTU1MjE5OWI0MDIyMTRhNWEyMzEyOTY5YWY1YzNhYWY3YTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d3e171ec40954b07bd7d680f5f119c2f",
+      "statement": "DTL path elements containing periods can be single-quoted, with doubled single quotes escaping an apostrophe, so _S.foo.'john.doe''s'.bar addresses the literal key john.doe's.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/paths.rst#L19-L20",
+          "version": "repo-lines-v1:sha256:79b463c340ea7567a62111dc0c2d6d4eef8bd9a78703452f9217a40de56bf4ee:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGVkYzVmZmMyY2YyMGY3Yzg1OTdiYjNiNmU4ZjVkMTc1YzcwODM3ZGE3ZWVmODkxNDIxZDQzYWNmNGNlOWMyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjViYWE2MGE5OTc5NTg5YjY2NWQ0NGI1ODNjMThkMzFjMDkyNTE1OTMzMzE1MjhiMWJhYmZhNmY2ZjA5ZTgwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjUzZjllMDJjZjQzNWU3NzlkMWRhMGUwZmVkNjQ3MTczOWQwYTVmZmJiMjZjY2E3YzY3OTU4ODE2MzUwOGJhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2EzNTdhMmJmNDBmOWE0MzdhY2MxOTMyMDgwZTc2NWIzYjU1Yjg3MjAzZDkxNjI4NzkxMDUzMGY0NDU4MjQ0ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f64b5e7102404cbb93536c61f5516958",
+      "statement": "The explicit path function evaluates its VALUES input before traversal and accepts a path expression resolving to literal property-name strings; non-string steps are ignored, missing properties yield null, and an empty path returns the input value.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L317-L373",
+          "version": "repo-lines-v1:sha256:92eee807e0bf77fe6976c7b7f2cdb5de0d8b049b3a79de6c8ac907d131159546:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiNWJlYWEyMWRkYTJmNTI0YWE1ODFkZjE2ODA5YzVlNjcxNzU5MWQ1ZmQ3NjQ3MWRhOWNmYjY4NGVlOTg0YjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwY2M3MDY4ODI5MjFlOTBiNWU4YjMzZmM5NTJhZGZiYmQ3MjhlYzAyZGFmMDVmM2YwNDU2YjE0MDJmYzIzYjEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/paths.rst#L22-L28",
+          "version": "repo-lines-v1:sha256:6b1b2c7539ce9e71255d57ca508e82367ff3389cd4892de2ce0727dc0f1d0c04:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjkzZTFhYzlhMTU5N2MwMmU2MTk4MTljNmQ3YjA2NWZjODc3YmQ0N2I1ZmY2ZmRlYjBiZmQzYzdlOWZmYzdmYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmNkMmNjMDYzM2FiMmExMjNhZGYzMzYyYmZmMDllY2U5MmFkZGVlYmM3YmM0MjI2NzQ0N2IzZWQ2Y2U5NWY5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQwMTMwMDZiMzdlMjhhMjhiY2NiNjlmMmYzODczMTNmOTYzOTljYmY4YmFhZWM5ZTM0NjNiMWMwNTcyZjJjYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTdiMzM4NDhiZjc3N2ZhYjgyYmY2YmY4YTY2NDgzZTRjNTMwMjI1ZTk3ZDgxYzU5MTc3MTIzODBjMTIzNWQ5YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a931f03b1d5a44679082ad90d1d44bdc",
+      "statement": "Hops join eligibility requires eq arguments each referencing exactly one unique dataset alias and connecting different datasets; all declared aliases must be joined and reachable from the source or compilation fails.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L93-L97",
+          "version": "repo-lines-v1:sha256:e130d32e1a7a12d84d8e07e1dd2026da0b52359c9b253d54bd2e86357d51be67:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTAxZDg0NjU3YjVkZmQ4NmVmNWE5OGUzMmRiYmY0NGUzMGY5ZjFmMjU0MDVkNWE5ZDcxM2Y2NDM2NzBiYzVhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFlNDI0NWNlYWMxMTdmMDcyZmU2MmYxNTdiODdiZTBjNzAwMDcwMjkzNjg3MjlkNjYwMDNhNWVjYjBkNGYzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGEzMmNiNzcyNTg3MjNhNzIxNjBkMmEyNjg4Y2I2NTRiYTdkMWVkOTExOWU1ZjIyZTNjODRiMzA0YWE1ODBmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRjYjk3YWQyZDBkNWIxZjU4ZWFiY2M4MTRhNDEwYmRjZjAwM2IwN2NiMjk1NjJiNTk0YjZhZGNjNTI0YWU5ZiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L52-L56",
+          "version": "repo-lines-v1:sha256:41cd83504175b516234df4adfc8a5cbe33699a75c3f58b632edf1107c6c7a5a6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWM3YjYyMWIzZWQ0MTZkNjBhY2FmMjNjMTgwODdiYjY3MzM5OTQ5N2FmN2YzOWZjZDBkMjYyNDZlZGM1ZDg2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxOTYxZjRiMDhkNDg4OGYwYWNlZGI4YjJkNTVhMjZkODI1NTIxZjlmMDMyNjA4MDIyNGFhN2NhZGUxMjYwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/paths.rst#L50-L53",
+          "version": "repo-lines-v1:sha256:a2d70a3a0c60aa8892fad9bd9540e8aa3ae420e8f511d9563fed7d5a53e44f32:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTM3OTA2MDY1ODdiMzNjN2JjZWQ5Yjc3ZTFiZTg5NzAwMTY3NzEyOGMxMjZiODBjOWU2YzJhNDg0NzUyMWJmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBjNGUwNzY2MjYwZWI5ZTczNWZlY2ZjZGNiZWY1OWEwZDcyMzRjMDczOWU3MWU2MTJkNjkxYzY2MjVjNmM3NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjVmMTc0OWI4NDc3NjAzNWFmNzRhMGJiMmEwZTljNThhMDM5M2RkNzA4MzIxZGVkYWRmOTZkY2RmNGQxMzBmYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cef90242e262458b8e54ea3e894f4fe6",
+      "statement": "Hops specifications declare dataset IDs with aliases, combine a list of where expressions with and, and return values from the last dataset alias by default.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L21-L31",
+          "version": "repo-lines-v1:sha256:a1120be182ba6b0e6260495033b1073d5a9f6ac9f462bff4a6798ec23bcf04fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjNmVjZDUyMjkwOWJiOWNiOTViZWQ5NmNmMDEwNjM4Yzk5ZDY2NTNhMDZmODg3NmYzOTVmYTUwYTJjMDVjZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkYmU3ZTVlNDg0M2RhOGFmZGYyY2I2NGMxNTRmNGYyZDMxODExOWNjYjBmOTlmMTUwYWEwOGVjYjczMDY2YTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhYTgwMWY3NDhlMDU4MzFjZjNhNzlmMWQyMWI5MDk4M2U5MWExNDVkY2Q0NThmNDE0NzFkN2FlZDU2ZTI0ODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmOGIwNGZkMTk1YjhhZjI0YmIwMzQ1MjIyZWNhZDBlMWY3MzA3NmI2MmNiOGU3OWFiMTFkNWU4NDA3ZmQwYzAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L53-L63",
+          "version": "repo-lines-v1:sha256:821dc65b7cf7c65e2e904c2297158642e27952f7d44834b8ab7a94e1ad74de39:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYzA2ZWRmMDI2MWMxZTdmNjZlZGU3MjkwMWNmZTA3ZGI3YmRlYzZlODZhYzJmZWZiYjk3NzM5OTIyZWY5M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5Nzg4OTk5OGM1YWJmYmMyNjU1OGE4MjU1OGQzYzhkY2NhN2M5YmI4MWQ5MDc4OGE5YjgyM2ViNzQyMDM1NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMmViYWJmOTAyMGFmNWVlMzUwYjYxOGU1ODg2ODBhMjhkMzY4MjM3N2RjOWQ3Y2M0MTQxNDgxYjU3OTAxNTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiODlhMDU3OWYzMjUxNjNhNWQ0OTJlYzQxYWI5ZmYwM2Q3YzFhOTc0OTAxYWQ0Y2YzMzI3YTBjNmU5Mzk5NWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b16aff4b721743179583cf76fec9e952",
+      "statement": "Join eq succeeds on overlapping values, including scalar/list combinations, whereas ordinary eq coerces arguments to lists and compares exactly, including ordering; intersects is the non-join overlap comparison.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-comparisons.rst#L16-L39",
+          "version": "repo-lines-v1:sha256:427d692ab9b13e0b2e0cc8bd9445f5fadfbadab6ab61a23e35d54881d696cff2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4OTVjNTBiMmJiZTBjYjk4NGZiY2ZiODVjN2U5ZmVlZjg2NzNiOWI4NGRlMDAxNDRmNWRjYTQyMGU0NDY4MGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxODEzZTNiMWNiNjFjZTI2ZDUzYWQxMmEzYmQ2ZTBhZjgwY2FiNmNmYWRiZmFkNDc3ZDZkN2NhYjdiMjJhYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0YTc4YWQ1YzBlMzRjZjllMDMxZDgyNGI2ODZlYjhkMWIxZjYyOGQyZGVkNmFmMzYyZTQ2NTZjM2YwZGM5ZjkifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L25-L44",
+          "version": "repo-lines-v1:sha256:6f139fdf39330e735bbb4edcf11e2735840db3ef0d45da25cdac7139e29249ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTlhYThmMTYyMGFlNjM2OWM5YTMzY2Y5YzMzODAwNWViNWY4YmQwZThlODljYTA0ODVjMTIxOTc2NjE2YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3Zjc2MTQyNDQxMDE4NTI2MWZiNDQyYTkyMGEwZWM4ZjQ0Nzc4MDIzMDk3ODY0NDI0NjZkZDRmYWNlODFjMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZGMyMGIxN2ViMzljMjVmZmMxMTc0NmJkYzY5NjE2ZjdlMDEzMzg3ZjhlZmRhMDg3ZmZmNjYwOTUyYTgwMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0NjdiODcyODcyZDNhYTAxMzZlZjRhN2M5ZjgyMmYyOTlhMmI0NDQ0ZTE0YzU2MjkyNDE1ZmViM2ZhOGRmYmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0a49d50541474c3f85bfe5e89d795295",
+      "statement": "Null values and deleted entities are not indexed and therefore are not traversed by DTL joins.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/joins.rst#L48-L50",
+          "version": "repo-lines-v1:sha256:b022b18aff150ebec1adf63ef873e2d322e45b9a6907b63356976b5a7539a525:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E1NTc0YTUyYzM5Njg3YzI0YTBhNzk1ODhhZTUyOWFkYzcwZDUyNTUwMWY2ZTU3ZTM1NGY0NDE5NDlkNGUxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNiNzI5MzJjZjFjNzRhZDI0NGU2NDFkYmVlNTY3ZDZhN2E3NGMxNzM3YmYzMmMwODM2NWFiYTRjN2Y0NjcxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ2N2I4NzI4NzJkM2FhMDEzNmVmNGE3YzlmODIyZjI5OWEyYjQ0NDRlMTRjNTYyOTI0MTVmZWIzZmE4ZGZiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlYWJiMjFhYTBlOGRkNDU0ZjkyN2ZhMjE0MGZlNDM4YmU2OTI0ZDA4NDViZmFhOTNkZGUzMTg4YWU5NjQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_967ff836fd2f43f688983e05d64ff759",
+      "statement": "Hops results have deterministic ordering for identical input entities based on _id, but require an explicit sorted function to obtain a chosen business-property ordering.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L183-L186",
+          "version": "repo-lines-v1:sha256:0f9180295637e5f1901b52cd68780c50bdcd4d8061dca61614b5ca6e14cf1193:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ1N2RjNGMyNGM1YTlhN2VkYmJlNTUwOTViNzNiODgxNGQ4OTkwMDczOWJkYTQwZTVhNjk2ZjA3YmFmYmY2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk4NTcwZDIzMzY0YzEzMjVjMTkyYjYyMzVlNDk2ZmYxOGE1NWY5OWM2ZWUyZjQyNGUzNmZlN2NjOTY1Y2JlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTBlZWQ0YTBkNDNlNDZlNDlkZWJjZDIwYWQzYmI0ZDE2ZGJiZDI2NDdiMGE0MTU3MWJlYzNkYTk3YjJiODExNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDYxMTgyZWQwMzRlNmJmZjIxZDY5Nzk3N2MwMGIxY2RjMDk4YzIwMTJhNzcxOGQ0YmMwNjMwNDNkNjExZWM4YiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L104-L108",
+          "version": "repo-lines-v1:sha256:d0e6d02c03dd48cf6313627a2d23575ac90829cf384a6727b40368b22a7b3ee7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGJlM2Y0YjNmMDRiMWVkNTdlOTJhNTIxZGQ4ZDkyOWVlNDAzZDNkODExN2I1OTc3OTUyOTg4ZWY1ZTIwN2Q0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgyYjFhNTY2YTM4ZWU5OTA0ZGVmNGFjZGRiNDdiNThkNWFmOTg0YWE3YzM2ZDg4ZTE3Y2YxYTBhYzEzY2Y1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTAzMWI2MDdmOTg3YjhmMzBkZDNlNmJkYzJkMDQwYTU5NzRlYmFhNzE3MDljMGI2ZWFmZDc1NWU1ZTRlNDEwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGEyODQ0ODcyOGQxZDkyZGJmMzViMDg2NDAyYWI5YTVhYWIxMzI2ZDQ2ZDMxNmI2MWU5MDA1NjUwYjQ4YjdmMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e9bfa0ae2493403bab5f3cb4d7b03873",
+      "statement": "apply-hops runs hops and then transforms the results with a named rule; calling apply on a rule containing hops or apply-hops is prohibited so dependency tracking can work.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L430-L469",
+          "version": "repo-lines-v1:sha256:97628644f74800095a37cc64893c4da761cb4969f7acc12c94bbdac5eb7c1deb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMDg3MmRiZDE1OTkyMTA5YTI2NjM5ZGFhMTAyYTMyMTk4MzFkMzdkYzg2MzA2Njg3YzYwYzk5NTRjNTFmNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkZDM5ZTQ1NTZhZmUzZmUwYjJhYmEzYzFjMGMwMzEzMGZmN2JkMmY3NjIzMjVjMDk1YjAxNmQzZjAxODhhNGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhOTkwOWFhZjU2N2U1MGQ4NGUyZjdkYjgwMmJjOWYxMDZkY2YxOGIxOWRhYmNhNjExM2RkYjg3ZWQzZGVmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_438a483a77de48c38f07d7f29806c229",
+      "statement": "lookup-entity requires its referenced dataset to be populated, returns null for an absent entity, and does not support dependency tracking or automatically refresh output when the looked-up entity changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L173-L200",
+          "version": "repo-lines-v1:sha256:d14bab3df9a4c3366addbea9bfac10fcb4822ca568300ac92af3a2fa06ef7862:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MzBmMDBmMzVmYWUzOGY5OTdiNDc0NDFlNDE1ZTAyODMzMzc5ZDU2N2ZhNmFhODg0MzRiYjQ4ZGYzYzNkZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1Y2E1ZjVlYTNhYTFhMGE4MDViOGFiZTVjM2Y5YjExYjNkYmYwY2FhYTY0NDZkOTZlOTA2NWU0OWFiMzg1NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4NWRlYWZhZDIyNmY1YjA3OTkzMmNiODZmYTE3YWNmNDFkZGY1OGY2ZjE0NTRjMDIwNzlmMjFjMDM1YjRhMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_73465358aceb49d196c5301e5b81f8a7",
+      "statement": "DTL argument tables distinguish logical argument names, types, and cardinalities; value expressions can yield null/scalars/lists, wildcard literals support * and ?, and transforms arguments may be single transforms or lists.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/argument-types.rst#L4-L72",
+          "version": "repo-lines-v1:sha256:0f1af001c7c3c8fc7a3e58e02331e7a078eb3e494d5e4286cd747cd983fb7466:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMmJkMDNmZmFhNTExYjc1NGNmZDAwMGU0MWIwZTJhMGRjYjgzYzQwZmY2MzBkODQ2NmViNTkyMDJhOGRjMDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4Mjc0M2RjMzdhZDk3MjM1NDZhNWM1NDI3YjUwNjFjNzQ1OWUyMDNjOTFjNmExNDNhMThmNzE2NzM4MzZjOWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwZTIxMTgzMzAwZmY0NjI1MmRiODU4YmI3ODk2Nzc4MjA3MTY1MzcyYTFjMzRiYmU4ZWU0OTg1ZDcwNWU3OTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8327d2e0957a49c39a1de923d1deb6b2",
+      "statement": "The expression conditional if returns a branch value, while transform if applies branch transforms, so identical operator spelling does not imply interchangeable branch argument types.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-conditionals.rst#L74-L97",
+          "version": "repo-lines-v1:sha256:1ac7787c4a6163f10c4e19bde88c6119244416df4fd42d4d76cfacb58e07b578:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4ZjM4M2U0NGMzMjQwMGZmY2FiMTRiM2I3ZWQyNWYyMDNmMjJhYTY3MGM2NWFhMzdjZGI3NDBhOGJiOGFjYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3ZmI2N2UzMDAyODQ5NmRhNjY2OTdiOWM5M2FkZWQyYWJjNGNkY2IzN2VhMWYwYWQ5ZDQ2ZWIxZGUxMDA4NGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0OTlhMGFhMTk2NjNlYWI5NDc1NzgyZWJhN2UzMzQxYWJjZjNmZGNhNzRlN2EzZWM4ZmMyZWMyZGEzMmQxOTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L622-L647",
+          "version": "repo-lines-v1:sha256:08ad4372b95c28788d4c16f229e097384f1d2267f84300c618ce7fdc2f73b901:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMDI2YTk3YjMzYzA3NDU0MzZlYzZjZmRiMDliMTk0ZWY4NzhlNmYxN2RjNTczZGQzZjVlMmFmZTQ5OGIyYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1MGU2MzRjYzE5N2Q0MjU5ZGM1M2M4NmUwMDI0MDJlMTkwY2FkYzZjNzBiNzhlYTEyYmFhYzU3NDZkZmY3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjOTQ5YzIzMGZjNDgxOTNlYTY3NDNhMWVkNTFmNWIyNDY2M2JkZGMxMjIxNzA2ZWFhYjJjYWU2OGQyNmY4MGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkYmJlZTA0YmQ5MDg0YWFjYTM5YTQ1OWJiMzcwNjhhOGU4NTEyMDM4YjNhNzQ2MjUxMGM5MzUxMTc0M2Q1MTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f79316c43426451fa1703c3960f465f7",
+      "statement": "DTL boolean-expression truthiness treats only false, null, and the empty list as false; all other values, including zero and the empty string, evaluate true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/argument-types.rst#L31-L35",
+          "version": "repo-lines-v1:sha256:d2758ac9762dc14a5d238af475bb1055123727c190f16beaa5250e4b25e4af89:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWIyODVhZTM1OThkYzkwNDA4YzRhMzg5MDUxNjI0MGMxOTk1NzFmNDYzODgyNTI1ZTVjMDhjZmFiYzhiZDVkMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODQyNjJlYmQ2YTEyZjRmNjExMWMyMjI2MmEwYWYxMTliOGRkNTUxMGU2NmQyMzM3ZDFjYTIwNzc0NjZkNGJiNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI2MDQ3MDc2ZjUyMDI4NjkzZDcxMjIxMTQzYjVkYWQ1YzIzNTAxNmIwYTM4NWRhMTZiMDk2OWM2MWFlNGEwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGM5ZTA0YzlkZTIyM2U3OWI1NTVjZjJiYTRmZWQ0NTBiMzgzOTFkMDkyY2U2ZWFiNGRkYjQ0NDZhYmI3ZGM0OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aa74097561484bf49a1b0e598a7342ae",
+      "statement": "literal returns its argument unevaluated, allowing variable-looking strings and function-looking arrays to be returned as data rather than interpreted as DTL.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-misc.rst#L100-L126",
+          "version": "repo-lines-v1:sha256:3239da54cdea9e74abdbc2f6cc2c97b2319daa949ea45824d5f58bc9d88c9a6a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyYzc3NmUwMmY0MTEzY2YyZGEzOTZhMWUwMTU0ODg3YzcwYWRmN2FiZTI1MWJhNjRmOTUyMmZmMmQ2NGRjNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1ZDUwMzBhZTg0Njk5MzBiZGQ3MDg4ZGJmNWUxZGI3ZDllNTc2MTgzNjk1N2Q2ODljNjg1MjZkMTA0ODZhMDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzOTUyZmE0ZWRjZDMwMGJhNzI4MGQ2MmUyM2E3OWFlMzI5ZjJlN2Q4ZjFhZjRjYzViOTQ5NzkyZmQ5MGZhZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3Mjc4OGMxODcwZGZjZTIxN2VkYTcwZWFhMDY1YjAzZjhiMjhiZDlkODJkZDY5MThmZjMzZGRkMjA1ZjEyMGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_02cdb8ada768432db3f1165e58c7ae51",
+      "statement": "list constructs a collection preserving nested values, whereas combine combines its arguments into a single list and treats null as an empty list.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L4-L37",
+          "version": "repo-lines-v1:sha256:e0c2d80e05123cf7fe5c8540129bdd695998671d88ec6144566815678bb21146:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhM2YzNDc5NGYxN2ExNGVjODZkZWFhYWFlMzBhZDkzNGYwMTkwYjdiZmNhYzNkM2Y4MjNkNTBiOGE1NzJiNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0MjQ0ZDFlOTM3ZWU1NzcxOThmYzk0NDQ4ODg3NWNjYTk4ZTlkYTdhOTgwYzRhYjI2YjY1MGE2MTMzMWNkNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3ZGU1YWY1NjMzMGE5ZWZlN2JlYzFhZGRmYzAzOTU3ODJmYmVlZDhiMDQzNDU4MGIzZDY4ZWIzNzAxN2RlMWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0MTYzYmVlMDk4Njc5NWUxMTcyNTM4YmU0N2Q0MDhkOGFmYTEzODU2MmY2ZjIxZWI1ZDIzZTcyNmQ2M2JkNDIifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L520-L546",
+          "version": "repo-lines-v1:sha256:205538107508f59e576339bceaa6ca13cf59ee424afd6b0cc71dc5b3214f6cc5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NmU1ZGRjOGU0ZTM5MGUzMWE2YjJjYjQ4NzA2ZTdkNjZkYWI0OGM4NjAwMmE1ZmZlNDhmY2Y0MGIzMzk3YTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzZjA5YTVlYTQ2NDhlZDdlOGMwMjE4YjYxZjAxZmRhODJlYjVkOGRiYTgyYTFhMjdhZWJlNDA5MGM4MDY4M2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1Mjk3NDU4YjI2OGZlNGVlN2Y1MjE0NDE0NDg2NWIzYzI3ODBhZTBkYzJjNTQ2MTBiYzQzMzRiZjY3OWM2MDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1YWIyOTQwNTE0OGNhZTg2ZGY2ZTYzM2JlM2NkNDkwMTBjNDdkZDFkMzc3OTE0YzhlNDdmMjFjZTY4YWM5NmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_da4b0a62eae0479bbe16b71f2ccee552",
+      "statement": "flatten constructs a new list by flattening input one level, not recursively.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L206-L231",
+          "version": "repo-lines-v1:sha256:770d6428da959150a326ffad2a6478e28722be52b0ae1bd7b2ee48565b2115a7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYzM1ZDJkMDllYjFjN2M4ZGNjYmNjMTQ2ZjJhMjZhZGY4MmI5OTA5YWJmYjEzYTlkY2Y0OTg0NjU2NWNjODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NjRiZDA2OGUyMDgxZjU3ZWZhYTI2NTUyNDYyMjJmZTM3YjhmYzExODczYjg4YmE4ZTVkZmNkOGVmMWVhNmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4ODYyZjgzZTVmMzNjZDVmM2MzZjZlNTQ4OWI0OTVlNTM3YjBlNGZlYzEyYzU5MmY5MWRhMDQzNDJiNTU0MzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyMWE2N2ZmZDZhMGVhYjg1ZDI5MjE0ZWFhY2NkYTdhOTM2M2YyM2JhMmViMWRkZGYyMDViZjc1MjM3OTdhY2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_115f8c5759e94518ae380642f579de0e",
+      "statement": "count returns the element count, counting a scalar as one and null as zero; first returns a scalar unchanged and returns null for an empty sequence.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L176-L204",
+          "version": "repo-lines-v1:sha256:7f8f87ebb193f1ccc078ee00b0082b3aaa4eedd1fee6e6a88e539d9f9c622acf:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNWZjOTg5YTJkZGM0MzVlMWIzNTVhOTg5ZjQzYjZmMGRiZjgxNDNhNzMwYTkxY2JhYzQ5NzZiZmMzOTFhNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlOTNmNjQ5YWNjOTQyMTViNzcxZmNlZWU2ZGU0YTZlYzBmYjMzNGQ3ZmEwNzMyNTA0YWY0MmRiMWIyYzUzMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiNTAxMTc1MTI0Y2ZhNzcxYmYyOTY2NzA5MzQ0ZTZjOTJkZTIwZDBiMjUyNDkxNzViMmIwYTgwODcwYjZjZmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2MmFkNjYxYTRkNzk4ZGQ2ZWU4MGViZTc4MTZiYjNmNjA3OWZjMTNjMTY3YjFlYzNlMTE5MmFlODk5ZDk4YTAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L39-L65",
+          "version": "repo-lines-v1:sha256:c778eb4b08e2a1cda9bc9b5141ddc28e6666d20c51cd6ad293f9cac158376590:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljMWZhOWMyZmVmYTg4MzhiZTMxNWY2OTI4ZmJiZmRmYjE1NGEyZjkxOTU1ZDk5MjYzOGE0ZDljNDA3YWYyMzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMWNmOWEzNWRlZDE1MWVlM2JhMjk4MzUzOGRiZWVlYWIzOWE3Nzg0ZDlmNTRkNmRkOGNlM2IwZDZiZDM1NTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2ZhNWE1MTVjYzAxMDk1NmE2ZTYxMTc3OWQ4M2QxNGFjMTAzNTFiY2FkZWI4MGUzYTljODU2NWRmM2E5NDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2N2U3YWQwN2VkNGZjOTU1MWU0ZjUzOTk5OGNlODQxZThlZWQ2ZWJlYWQwYmUwMjZhOTE0NDFmMGMwMjE5MzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4aab1767f6ff44e5a1bd0a1afb734284",
+      "statement": "Named plus, minus, multiply, divide, mod, and pow are map-style arithmetic, while symbolic equivalents use natural operand order and the first value of list arguments, producing null for null operands; symbolic division by zero also yields null.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-math.rst#L171-L194",
+          "version": "repo-lines-v1:sha256:1518a744e5936cd4b87697f2f37c6b91ea29c9602b6d733f8710d71457804cea:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwYzdhODdkNjllODE2ZTc4NDBhMzE5OWM1YjI0YTMwNTI5NzA4ODU4ZGI2NTQ0NmEzYjI0YTVhNDVjNjA2NDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZWIxM2RiNjAwMjg5NTU3NThjOGY3MGQ1OWM1YWRkZTFhYzFmZTg2MDlmZDBmZWNiNzM2OGI5MjRiZjEzMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1ZTU3OWJkZTgwMzFjYzIzY2UyZTE4YTdmYmQ2YzVmMzVkNzVmNWZiODEzYjNhYzRmYzA5ZDQzNjBlNDA3ZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhMTIxZjAzZGMwYjA1MDIyYWIwMGRkMTc4ZDdhZmZhYTI4MTI3ZjAxNjRiZDI2ZTk0YTcyM2ZhN2UxN2RiMzQifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-math.rst#L4-L8",
+          "version": "repo-lines-v1:sha256:b8ac6d609a415c6a35a5dbda36f18a2cfe740f07947e25896e8d22481650fd7b:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTkyZWM5MTAwY2Y3MTQxNzQ5YWU1OWMxNDZjZGE4MDJjZGQ1ZjQxOTI5OTBhZjgzZGNhMTliNjMyOGVlNTI1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZiYmRiNTRmMTY3MzA2N2Y4NzkyZGE0NzMxN2E4YzczNmVmYWUzM2M1MWY3N2FhOWJjYzc5N2E0MzViZjkwYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmZkOTNlMjU2YzQxYWU5MDc0YjE1NzU4MzBhM2EwMDM4ZTk4YTk4ZDY4MTJlMjdmNDE1NmUzMmUxZmNiYmIwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWYxYzhlNjRlMzY3ZGZhN2ExYjU0MzIyMjRlODRkMGU2MWJkNzZmMzg0MGI1N2E2MGE2YzU2YzhkYTFlZmNjYyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-math.rst#L438-L462",
+          "version": "repo-lines-v1:sha256:20ba75b056d58ee1a3d405e2483effcf2f0085d304b8be57c169df546926fac2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzMGE4MzkzNzc4ZWY2Y2M4NTE3NzIxZWNhOGY3NDQ1M2RkODdlYTdiMGM2ZmUzNzU5ZWRhODhlZTBlMmM2OGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZWIxM2RiNjAwMjg5NTU3NThjOGY3MGQ1OWM1YWRkZTFhYzFmZTg2MDlmZDBmZWNiNzM2OGI5MjRiZjEzMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MjA1NzY0ZjJjOWEyODZmZGE5ZTFlYWM0NTRlYWI0MGE4ZjEyNjY2NzU1NWM5YWViZWFiMjY5YjYyOTUyNmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwN2JkZTJhMWQzN2U5YzhiOGQzODI0NWNlMjc5ZWZlYzFmN2FjNDAzMzI4Y2QwOTNhY2ZmMWU1ZDkzMTk1MzUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-math.rst#L65-L100",
+          "version": "repo-lines-v1:sha256:3c813144dcea85048883270f6862ac1a4affb0cd400c0f17d3328ede56986b5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3MTE4NTk2ZGEzYTY3NTY3Y2NhNjhmMTU0YzkwZGZhNTg2ODNhZjgxY2Y4OTRiMThkNGJjNGNiMjIwZDMxMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTNkMGNlODA5ZmQyZDRiM2VkNzU2ZTVjOThlOGYzNjgyZWJlYmNlYWZhN2JjMTFhZDhiYjFkZjFjZWMxNGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MjA1NzY0ZjJjOWEyODZmZGE5ZTFlYWM0NTRlYWI0MGE4ZjEyNjY2NzU1NWM5YWViZWFiMjY5YjYyOTUyNmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3ZTE2NDUzZTQ0MDI1ZWRiYmY5MGZiNjU5NDA0OGI1MTgxNzkyZDBmYjU3ZTZiYTllMjgyYmMwMmI4MjYwZWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e9ac01ff53344021a3f347986fb7cd7c",
+      "statement": "Ordered DTL comparisons gt, gte, lt, and lte compare only the first value returned by each argument, rather than validating every list item.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-comparisons.rst#L41-L127",
+          "version": "repo-lines-v1:sha256:de4253700acdc7f3f63fa4ccb6da777b8b2d30be9c6d998ba0081dbed034d06a:eyJzZWxlY3RlZExpbmVDb3VudCI6ODcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyZjAxZDBhMThhNGU2OTI1ODYyODcwMTU2NDE2MTE3OTEwMDlkMDM5ZjE4ZTk3OTYyYTA3MmZjNmZhYzllMTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzMWU4Yjc3YTYzYzIyZWQ3ZDQ3NDlhMjI1NTU4YTk2YzFlYzFkNTY1OTM1Y2NlNjdhNGNjNjVhZDQwOTcwZjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMDNmYmM5NjMxNjhjZTI2Njk2OGJiODBmNWZmNjlkNGQ3YWY1YzMwYzQ4MmFmNzg5NWYwYTYxYTk0YzMwMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5MTBlNWYwNDI3YTQxZjQ4ZmRkNmYyOThjZGYyNDBjOTg1YjQ3MjNiNTcwMDIzMTNhOTU0YmNiMmMwNjk0NDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ab925208f9ed402e88e44a8ab9d1e8af",
+      "statement": "concat concatenates string input values and ignores non-string inputs instead of formatting them implicitly.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-strings.rst#L4-L39",
+          "version": "repo-lines-v1:sha256:b5141b8d18821c4545caddf9450f471ecf3dfd0d9d964e94b0529c3cbd1019dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjY2JjMDQyYjk0NWJjMzViMjA4OWY1Y2I1NDVhNGE3NmMxMTlkODYzYTdjYjg1ZTU2MWNmOWRiYjk4OWQxZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllNTNlNDFiNzNhODMxZjA1MGY0Mjk1MjI5ODdhZDk1MDQxZGI0N2FjNThjMThjMmQ1OTlkYjA2ZDg5NWE3MmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4Y2U2OTlmMzVlYmIwMGU5ZTc2ZTY3OTdhNTc1MTIyZGQzZDM5NWE1NDJlN2M0NjE3ODRkMGZkNTc1NzAxMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE4NTg2Y2ZmNTdlMDU0MGYxMDk2ZjU0YWY4ODI5MGY3ZTQ0ZjI2MmM1YzRlNjhkN2I2YmQ0YWI0NjIxMzZhMWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6cb5a22db9644552a80813cb76955fff",
+      "statement": "Type predicates including is-string, is-ni, is-dict, and is-decimal inspect the first item when supplied a list and therefore are not whole-list type validation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L88-L116",
+          "version": "repo-lines-v1:sha256:697d91d58015ebff3cef35f36da3e0ba5123175ec716a60bde93276547522e09:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdiODE1N2QyZTcyNTMwZTJmODc4ZTk5YzBhMWJlNGViZmMwZjQyYThkNGJmNTNmNGYxOGIwMDczYThkNTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MjJmM2QzNTQyZjk5ZWM1YjVmMjhlM2RhZTlkM2NlNDdjYWI5OTE4Y2E2MjRiY2EwNGZkMjRmOWNiMDE2M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3ZWFmMGEyMDlhNTI1NDFkNDk1N2JhMDA3NWFhNDI3Njg1MmZkM2Y3ZTEyNTlkY2JiOWZiMGRkYmMzNGFmODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3ZTVjMGQwMWQ0ODk1NjJmOTZmZjNjOTU2YTE1NzYyNjYwMjdkMjkwN2FiODdlZDYyMjMyYjdmNjZlMWQ5OWEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L4-L36",
+          "version": "repo-lines-v1:sha256:e19e36f5c7dcf09b34d74db9bc4de242e7b0f87ef48b3f2522dfc7613051fb24:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ZjE5YjBlNWQ2NTgwNThlNzNmMWQzNWRjZDc1MDNlNmI4ZTE5MjIzNjk3ZWIxNDViMjA3Mzk1NmE1OTU4ZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGZiMDBjNGEwNDRkNzZlNTFlZTQ0MGUwZTBhNzRiZWM5ZjY1Y2JhNTAxOTUwNjQwZTFjNDc5MWI2MjllNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1ZDcxMThiYzhmYzU3NGQ3NGVjNjRhNjg1ZjA3OGI0ZjhlNWIxNzg2YzI5ZmZhMmEyY2ZlNGFmYWExZjM4ZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjODk1YjYzN2U1OTRhYmRlZjQ4Y2QyOWEzMWMwYzFkNjJlNmNmZDc0YTZkMjBhNDEzYmEyMGQ0NjJlMmI0YWQifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L203-L227",
+          "version": "repo-lines-v1:sha256:be29c5c53cb6f0dd728b99ce26f3e6ce79e78c50e1969b6141f6d5da0eeaed5a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzNzJjZmU0MmQxYWUyNzBhMTM5OWM4Y2M4ZDA5M2M0YjY1OWY0ZTEwNDVjMGZjNjc3MWE5ODZkZjBhYTlhOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZmZmNmI2OWVhMGI3ZjUwZjEzMGJlZmFiMGE3ZjA0NWIyYmUzOWZmODEwNDA0MThmN2NiMGY3NTQ5NDc3ZTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwOTgzMmRkZWVlY2VjYjJhYzM5MjRiOTUxOGNlZmNhZmE0MjYxOWVkOTU4ZTAzNzIzNzBhNjliZjlhN2QyYjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZmY2NjFhMmNhY2Q2ZGI4NTVhNjZjNWU1MmI1YTZlYjgwNjFhNzFiYTA3MjgwNmMzYWUwNGU5YWQ3MTdjM2MifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-strings.rst#L41-L74",
+          "version": "repo-lines-v1:sha256:f8c4f4d5f514d5b04843d186490816ce82a9d1ee8a929d254eb6202c76de7f7f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExMmNlNTBjOGUxMjlmZWEzNDYxNzk1YzczZTliNTIwMWVjMWVhZmRjNmM3MjJkN2M1Yzk5ZDNmMjE3ZmMzNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjYjA5YzVkODFkZTEwNzkxNjMwOTIzZWEwZTQ3OWYwNmE4MGRhNDc1YjJkNzFiMzc0OGE0OGMzMmIyYzc4ZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkNTM4N2QxMTMyNGQyZDQ1MjY0MWQ3OTM2Mzg3YWE4YmYyNjI1ZDA4Y2E1ODhhOGRlMGEwNDBlZTVlMzM3OTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4ODBjODIyMGJkMGFiZDgyOWQ3MDg1ODgzY2FhOTQ3YTJhYTI5YWNiZTM2ZTk5ZjM1ZDBiZjUyYWYxYmMyM2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_95830c9d15404e7095048134726f37ac",
+      "statement": "The entity model has JSON-like standard types plus Transit extension types represented by tagged strings in serialized JSON, including typed NIs, datetimes, bytes, UUIDs, and decimals; an ordinary colon-containing string is not an NI literal.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L183-L298",
+          "version": "repo-lines-v1:sha256:4b09404272669c8f45680a4c44c76f2f1b88f7e2791fa0a0a4f77b98c25bf0ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiYzJhZjAyOGZjMjFkZGU1NDIwZjhhMWM0OTE2Yzg5YmMzOTBlZjViMGFmNzhhYjVlYjIxNzIxZTRhYTgyNWVjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhYzcwZDUwYzJmM2E3OTU4MDZiZTg2YzgwNDE3NmZiOTAxMjljNGY0NDQyMTFjZjAzOTIyNzUzOGE3YjIxMzExIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5MjM1MjYyNDQ3YjM0Zjk1MWVhMjBhMTYyYTg5N2FiYzBjNmY4NmNiMDhjMTMwNDcwNjgzMGMzOGM4NTNjNjY1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5NTM4MzA1YmViZmU4YWU1ZDI0OTk4M2RjZTY5YzE1ZjdlMjc0OTk2MDRjNGRkODk2NTQ2MTA0ZDY3MTRkZDZiIn0"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L19-L28",
+          "version": "repo-lines-v1:sha256:32a50ae84bbd419cc6d2069b5e16d63317849f185754862df0a7fd178f6dee74:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMzRlOTEyMTYyYjY5ZTU0YWIyNDIzNzk4YWMyMDJkNjRmMTE2YzEzODQ2OWZiNzNhZjM2MDM1MjZhYThmZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGZiMDBjNGEwNDRkNzZlNTFlZTQ0MGUwZTBhNzRiZWM5ZjY1Y2JhNTAxOTUwNjQwZTFjNDc5MWI2MjllNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwMDYxODRjMzgyNDI5OTgwZWEyYzY1YWE0ODI2ZTQ2ODg3YmQ3NzUwMTBlOTY5MWMwNjAyZjFkMDc0NTAxZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlMzQzMTUxYmZkOGNiMGE2Y2Y3Mzg2NzFjMmRhNzlkOWQxODY4OTRjMzE2MmY4ZjhiNjljMzE5MTM1YThhYmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c996091d9ec141b190fa7ac263f48333",
+      "statement": "Decimals have arbitrary precision while floats use IEEE 754 binary64 and may lose precision, including on decimal-to-float conversion; ordinary fractional JSON literals are float rather than decimal values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L223-L234",
+          "version": "repo-lines-v1:sha256:9396ffa52c4d51f4e49ce4880c12d07c1522765ee1a2ad1c26a64b3a7d021eb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1ODY2NTVkZjc4NDNiNWMxMDQxMGYwZjAwZGZmMzhhYjk0ZTQ1MTEwNDkwNDYwM2M2ZjI4YmY2OGE4ZDYwMzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyY2VkODc2Mzk0M2FhNWJlOWRhMGQxNjQ1ZTRjYTEzNzQ0ZjcyNzBkOWQxYTdlM2UwM2RkNzIyZjZmZWQwZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1ZjhmNTRhY2Y4NmE3ZDY1YzMzMjYyYzgyNWQ1ZTRhNGI3MWQ3ZWY2ZWNhOThiMjlhYzRmYTZjMDUzODMzMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwZDJmZTAxY2RjODg1NWYyNzVjNWJjZDg5ZGNlZTJmY2RiNjUyMjI5ZDJlOGE1ZDM3YmQzNGY3ODgyODE5OTAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L218-L227",
+          "version": "repo-lines-v1:sha256:7a71fe6f442a2a2d7f2de2c2b4f5a5e6ffeddafb13b29597b0e5e00b76c2812d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMjA5ZmQyNWMyYzBkYWE1Yjk2N2M3NGE1Mjc5ZGE0NzYxNDhmZTE4ODc5OGNhODdkOTRlYTcwMjUzYTFkYTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZmZmNmI2OWVhMGI3ZjUwZjEzMGJlZmFiMGE3ZjA0NWIyYmUzOWZmODEwNDA0MThmN2NiMGY3NTQ5NDc3ZTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwMDYxODRjMzgyNDI5OTgwZWEyYzY1YWE0ODI2ZTQ2ODg3YmQ3NzUwMTBlOTY5MWMwNjAyZjFkMDc0NTAxZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZmY2NjFhMmNhY2Q2ZGI4NTVhNjZjNWU1MmI1YTZlYjgwNjFhNzFiYTA3MjgwNmMzYWUwNGU5YWQ3MTdjM2MifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L71-L76",
+          "version": "repo-lines-v1:sha256:96bb35e12e97b89216d3bbbcb81c6de7521f6188c382ac93ca03584d22313881:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWY3ZGQwMzc3MjMwMzBlMTViMzA1YzIwZTdmNWI5ZjEyYWY1ZjUzMmI0MzdmODYxOGEzYzczMWVjMDlkY2U5YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZkZjczNmYwNzEwY2NkMDFiMmUxODUyNDYxMWVlMDQ5NjJjODI0OTIzNTRlZGFkYzc1YTRiN2NjM2Q4ODExOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWRjODVmYWY2NDljZjk0YTdmMTk0ODNkZmY0OTc1MTRkMDBhMGFmZWY0M2UzNWVmYmVhMDhiNWEwMGU5ZTc3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNThkYzk1YzBlNDhlYmNjNjY2N2RiNDA4Y2JjODNjODlkMjFjNmNiNTU5NzVmMDlhNzc0OGQ5NDIyODAyNmU5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7125df64af0a40a7bc282a1e6212082a",
+      "statement": "Casts such as integer, decimal, float, and datetime process non-null input values, ignore unparseable values by default, and accept default expressions whose replacement values can introduce heterogeneous output types.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-date-and-time.rst#L20-L47",
+          "version": "repo-lines-v1:sha256:93d1a66c351ef233e76715d998852ac6ecd541928b27ca67bc0501bb9397ec44:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NzM4NTIzYmE0MWViNTAxMTIyMWM2ZmM0MjFhZjE2YWIzZTQ2MjFkMTFiYTJmNTFkY2UzNjQwODk4ZjQ0MzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ1NWY3ZWNjYWQwYjI1M2FiZjBmMWFjYWIwMzZiZmFiMjZkZjI2NjVlZWViMGY4OWJhMzM0ZmVmMjlkODQ5OWEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L154-L191",
+          "version": "repo-lines-v1:sha256:028036b0d3f52812fd2722c61735f6272042078baf4e0d7bb3db47ba57195afd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViM2QwNWFhYjBkZDZjMDAxMGIwYTY1MDQ2MTAzZTNmYWMwYmNmY2NiNzcyOTc3MWJjMzgxNGYyNjhjNDVkOWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkZDE1YjRiYjcwMjQxZjMwMDkzNjg2Mzk2NmJlYmQ3ZGQzMDQ5YTUyNThjZWVkMjhlNTA3NjdmNzAwOGYzY2EifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L16-L53",
+          "version": "repo-lines-v1:sha256:42b4d2fedb2a33e338885b7a4566ed21bef8b25351365334168e0f0613bf293e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2NzA4MWNhMDczYWNhMTNlZmI4YTJjMzA3Zjc1ZTdjNGFkZTU5MGQ5NTQyNzkyZjMxZDRkZTY0NzM5NTUzOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkZTI0NTRlYzU3Y2Y3NjQ5M2NhNDU4OWIyNDg3ODE5YmM0OGFiMmI5NjNjMTBlMDIwNWVhNGJjZmIwMjUxZTYifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-numbers.rst#L67-L105",
+          "version": "repo-lines-v1:sha256:1822ed3dd9b5edd0c3e762c2a6a02883756112055f1b50faaffbe0c8f53023e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2NzA4MWNhMDczYWNhMTNlZmI4YTJjMzA3Zjc1ZTdjNGFkZTU5MGQ5NTQyNzkyZjMxZDRkZTY0NzM5NTUzOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2ZWYwODRkZDA3YzQ4OTc3NThmMzc3MDIzYzAzYWIyMzJhNTQzYTY4MjM1YTA2NDE1YzFiZDA3YTVlNzg3MzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_85d7efcb62b74a1c9a0e7c78d7d984eb",
+      "statement": "json/json-parse do not perform Transit encoding/decoding, whereas json-transit/json-transit-parse do; tagged URI text remains a string under ordinary JSON parsing but can become a URI under Transit parsing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-json.rst#L111-L116",
+          "version": "repo-lines-v1:sha256:49adfac7b2914106e8394baed911d16d822c78e606893b99f88424a0cdc531e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE0ZmM1OWJlNDY2MDFmZTgwZjE4YmY3MDIyYzJiYjIwNzU1ZDE3MTA4OWYwYjc4MDFmNjJhZDk4OWI3ZTg4NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgyNzFmOTExNWZhZDYzODczNDI0MWY2Yjc2MGE0ZTk2YjRjZjRkZTczMGQzYzA5MDY1MDg4MDAyZmQ2MjZkYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FhZWI3ZWYyNjBhMTRmMWQ5M2MzZWRjYzc0YzAxZGRmYzhiOWE3OGY0N2NkYmViMmU4ZTE5ZTc1MTIxZTI4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcwZmI2MjAwZjJlMjRkMDExYmU3MGIzNDRkYjMyMTJlMjEzNjYzMmUyNGY5NTcxY2NmOTMxNjY0MDhiNDUxMyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-json.rst#L147-L183",
+          "version": "repo-lines-v1:sha256:6f2bf1285d7f5ea290a60279c1a6e03674b42c429408f24857c46aec4e73fee8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NGRmOTA4NWExZDRhZjkwZmY2NTc1NDU0MzEyZTRlMzM1MGI0ODEzNzExMzViMmM1OTNhMjcyM2JhNDIzODgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJlODI5YTA3OWU2ZTdlMjBiNjRlNjZmN2U5MGZjYWYxZTk1ZmZiOTE4ZjljNjY5YjA1NzZiOGQzMzY0MGY0NjQifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-json.rst#L16-L20",
+          "version": "repo-lines-v1:sha256:7ae29ccb45f141f09fa2355ecdcc25a6bc6ad6ed99e8ce2404973cbd198db796:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE0ZmM1OWJlNDY2MDFmZTgwZjE4YmY3MDIyYzJiYjIwNzU1ZDE3MTA4OWYwYjc4MDFmNjJhZDk4OWI3ZTg4NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTE2MTZiNWE1ODkyOTgxNTAxODdhNGU3MDEyNGRhM2U2NDQ1ZWNhMTFmYmNkNzlkNTA1MTdjNDYyYWY5MWQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FhZWI3ZWYyNjBhMTRmMWQ5M2MzZWRjYzc0YzAxZGRmYzhiOWE3OGY0N2NkYmViMmU4ZTE5ZTc1MTIxZTI4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTkwZTNlYzFjOGJkZDJhMWI2OGU3ODYxZTgwMmI3OTg0YzdiM2Y5MTExM2M4ZDJlZmM5NThjZjBhOWM5NzljOCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-json.rst#L51-L89",
+          "version": "repo-lines-v1:sha256:7ba5256b976203970c09b7e549c90ae3cd97ee7585a1dc463a44d996b12ecd87:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4YTI1OTQyZTljZDBjZGU0ODcyM2VkNGZmNmRlYzFkOWFkMTRhMzc0Yzk1N2IxMmEyNjg1MTQ4NzExZmU4YzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2YTAyOWVlZjkxM2RiNzk0YzYyYmI5YTdiNjdmOGNkZTJlZDJmMjA5YWMxOWIwYjYzZjQ0OTgyZWU3YTExNWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_023027b7d43d4ffdabf75b6818bb32e9",
+      "statement": "coalesce chooses the first non-null value within VALUES, or the first value satisfying an optional functional predicate.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-nulls.rst#L6-L33",
+          "version": "repo-lines-v1:sha256:e935fcfcd4420463a7acccf78482b659b8c561670881177c0f2b97004bce1840:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyNmQxMDJiMzU0YzFjZDYxYzU1OWNlMmQ5MmRlZjhkODljMDQ1OTQ0ZDI4Y2ZmZDRjNWM3NDJkMDBjNzlkMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4NDRlNWE2ZDQ4YTY2Mzk1NjgyMzMwMjBhODEyNWQ0ODdiM2Q3Y2Q5NzA3Mzg1OTM1Y2U0MDdhNDljYWMzOGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ1MzU1MTJiMDkwYWY5NDkyZmY1MTVhZjY1MjU1YWM1M2E4MTczNmQ2MjY0ODEzOWRkYTc4MzQ2ODg1MzNiYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlMTU5MjU1MzBiZTIzN2U0NGQzMGRmYTM2NmExNWIzZmRlYmVlN2Y3OWMyMGEyNzVmYmQ4NDVkMjUzNjcwOTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e331bd4d9a2e461c9e04e147465eb10d",
+      "statement": "coalesce-args evaluates arguments sequentially and short-circuits on the first non-null argument, treating an empty list as non-null and returning null only when all arguments are null.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-nulls.rst#L35-L71",
+          "version": "repo-lines-v1:sha256:2eb501f405bae0b0e2e418dcfa917959dbef9bd3d18aef7346600a3301bf54e2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YTFiYzM4NTk2NmJjNmM2Zjc2ZWYyNmUzNTdkMTUzN2I0ZWQ5M2VkYmQ0MmNkZWEyYWNjODlkNGIxMjUxY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhZmM0OTM3ZjI3YjYxNDg3NjU0ZTlhNmM5NDNiNTVhNjNlYzY0Mzg1OTlhZjI0MTBmOWJjMjkyNTk5MDhjOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1YjczYmY3NjhjMGY2ODE3ZTA4ZmZhZTRlNTY4Zjg2OTBiZWMzMDRmZTFlMWNiNmJmODNjZjdlZjFkOTQ4MjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM5MjUxOTQ0NDNkMWEwMWM2MDdmNjEwMWU4MDdjMWEyM2Y4NTc2NGM1MTA0M2VhMzIwMDAwYjVkZGMwMzJmYmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d25ecc73981c425fa261c391b7329427",
+      "statement": "is-null treats null, an empty list, and a list beginning with null as null; is-not-null is its opposite, and if-null uses this first-item-sensitive test to decide whether to return its fallback.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-nulls.rst#L73-L196",
+          "version": "repo-lines-v1:sha256:ad79701a0f9afaab5322a98b3cc0bc32bcb489533d8b124784bd390ffdb50794:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhNjA1NmFiMDkzNzNjYmRiZDU3N2FiMDEzZGIxZjMxNDNlYWI0ZWMwNDQ2OGJiYTA2YTcxZjJiOTFiNjNhNzdmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3NTRmYjAwYzRhMDQ0ZDc2ZTUxZWU0NDBlMGUwYTc0YmVjOWY2NWNiYTUwMTk1MDY0MGUxYzQ3OTFiNjI5ZTU2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyZGQ1OGJiNjA2OWYzMjM4OTU4NWY3NzdkY2UzZGU0NmNmMWRiMjI2MGZkZjUyMzYwNmJiYWY1OTAxNTQyMThiIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1a8a53bab5a4c7cb0931bac85921b3d",
+      "statement": "add-if evaluates its optional condition with underscore bound to the complete VALUES result; its default neq-to-null condition skips null but adds empty lists and lists containing null.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L91-L146",
+          "version": "repo-lines-v1:sha256:8973aed96d56cf10a116d1130676c7489279d0a4acd29016a94d3f2f18710517:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhNWJmMDg3YWI0ODM4Mzc4YzZlMjY1NWNkODA4Y2IyMzAzOTU1ZWMwM2M3YWJiODkxZGExZDhmNGRlYWJhMjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5MzRiZWEzYmU5YjdhZjU5NTUxZTYxOTI1YThjNTIzNjZjYjQ2MDM3MjkxMDMzNWEyN2YxZmQxYTM0YTJkMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMTczNmViNDM2MGNhYmYzMGM2NzU4OTEzNDkzNWUxM2VkODVjYjg4NDE1NDkxYWEwMzIzN2FlZDI5OTE3YTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU0MWYzOWIwNTM2M2Q5NjRlZmVkODQ1MDY0ZTJlNDIwNjk3ZGIzZjA0MjUyZWViZGJkZTkwNTRlOGFjZDllNGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_37657517e9024dd380ed5ae91d663fd9",
+      "statement": "Namespace configuration can be enabled globally and overridden per pipe, with identity/property namespaces defaulting to the pipe ID; add_namespaces runs before the first transform and remove_namespaces after the last.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L34-L45",
+          "version": "repo-lines-v1:sha256:14b4c78660cc61c029f96513b6efe566ea4bd6b753ad41beea42902a4610d889:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZDk3MjIxNDJhMTA3MjVmMmMwYzI5M2YwNTVhOTNiOTNhODVkZDRlZGY5OTgwYmFkZmNlNjQyNzk0MGYzZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNWJhMjFjZThkZTAxMDQ3NGQxNjlhYmQ2ZjhkYmIyZWQ1MDdiZTgwMmRkZjMyN2Y1MWE4ZDNlMDMyMDdkNTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViNTc2NGZjNjk1ZjYxNDc4MDAxMWI5OGU5YzQzM2MyNzMxMWUwMTUxYTRhODE5MGY2NWIzMTllMTEyM2YzMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L67-L91",
+          "version": "repo-lines-v1:sha256:9de36b82b9b3dbabc1ea6b5c9078994634ef4baba9babdd22ad534980304b411:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5YjVjZWJhMzdjNzU4ODYxYjUwNTA1MjQ4MTU4YTdkNjdlNWE2ZTAyNzU3NWNiN2FhODU2ZmY0MDI4ZDIzYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4ODg5M2UwOTA5MmYzNDI1YjMzNjRhY2NjNjkwNjRmYTY1ZTA0MmQ2OTRlYTNmNTJhN2NhMjIzYzdkNzY2ZmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlZTE0YjQzOTZlMGRmODUyODNlZDMwOTBhMmJhYzI1MTgxMDVkZmRhYzQ0ZDQ0ODYxNjcyOGRhMGNhYzFkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQxMDRmYTIyNTcyM2I1YzMyZTM5NWFmYTMzNDY1YTY0MjE1MmI1ZjQzYWIwMWQyZGVkZTdkYzk1OTUxNGNhZWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3aeb9796bb2b450ab491e714d207b6f5",
+      "statement": "The namespace-aware functions add, add-if, default, make-ni, remove, copy, rename, and path use namespace boundaries for wildcard matching and generally match unqualified property identifiers across namespaces; copy preserves matching source keys and unqualified path can return combined values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L330-L337",
+          "version": "repo-lines-v1:sha256:59eb81556dbe3d14d75c5d29526f1ee545adbe50e06b231b2dceb1bcb5971c2f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlOGRkYWRmMmFjNTM1YjU3YmE1OTIxMzgyN2I1Nzc0MDdkNTUwYzA1YmIzMDIwODVhNWIwM2JhNDg0MzhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNkNjIzMjZjMzJhMDc5NmUzM2E0OTNhOTllNWJmMTYxZjk3NWM1NjVhNzBmYzhjYzVmNmVlZTllZDIwZTk5YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI0ZmE3ZTk2NDY2ZjQ3MWQzN2NkMGIyZjdjOTAyMGM5NWUyNmMyMGMwZTE2ODkxOWQwNjdmNWU0NWU0MzRhZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzdiNzFiNTAwODBiMGYxOGUyODZlY2RiY2E5MjM5NDRkNGNlMmU1OGFlOTRjNjY1YjMzZGFmYTgyZTQxMDU0YyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L385-L403",
+          "version": "repo-lines-v1:sha256:4ef3005e1ec6222c9215d090436cd5a271e7397a2b7c579c1d3c4cb08e560673:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3NDEyNGRhNDlhY2Y4YjExNWY1YWY2NDBiYTE3MDAwNzg1MjE2Y2E2YWU2MmU1MmM1NmNmNWJmZjY2MWM5YTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmQwZTA0NmJhMzhmNjU4ODY4OTRhNWEyYmVlYzdiMDFlZTcyNGI1OGY3NTE0ZTZkNGZjMmIzOWEyNjUyZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3N2VmMjNjNmY2OTFkNDI1ZTNiYjEzMjViNmQ2MWJmNGRlMzI4YTk5NGYzMzQzZmYwYjJmMDVlNzA5ZDczYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyOTVkMTNkMjBkNWFjOTVjNDkwZWNjYmE4ZDcwZDQ1ZDY2ZWNjZDZlNzI3N2Q0OTc1YTkwMDVkOGRkMmI1ZjgifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L301-L350",
+          "version": "repo-lines-v1:sha256:0f63799bb61a7fad683b7c2ea725a1cfda77778b50a11840f88f24aaf433d06a:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1ZThkZGFkZjJhYzUzNWI1N2JhNTkyMTM4MjdiNTc3NDA3ZDU1MGMwNWJiMzAyMDg1YTViMDNiYTQ4NDM4YmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwNDM5NzVlYjljNWM0MzhmY2JiZjRlMGNiYzVhODhmYjQ1MDUyOWM1NDg1ZTViZDRhNDM0MjlmMzg5ZDFhN2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1YTczZmJjNDc1ZTg5MjRjM2Y4NjYwMDkwZTczNDAxNTdlMGZkNjFlMDZiMTM0ZWU3YzBhOWIyM2I5MDQwOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwNzgzMzk4MGE1M2NmZjM2ZDFkMTNmNTdlZWRkMjE4ODc4NzY4NzI5YWY2MTNhMGFmZDEwNWE1YmEwYzU3YzcifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L6-L21",
+          "version": "repo-lines-v1:sha256:f9fa5b54c7276782d1b018c3ce5c28686a04d7acfcbeae0bdcd89738d1c5733c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1Njc2ZDhlNmNlNWJiMDYxZDYxYjhkMWRlZDM5YjExYWZjNmQ1ZjdkMTNkMzdhY2FjNDAzNzdmYWQyOWRhMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDZjYjJhNzBlNDM3ZjYwNGMzZGU2Nzk1M2EyZjdlYWQxOWI5MmI4ZTFlYjE2M2Q0NGE0NWZkNmYzN2ExZTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NDk2ZWNjMmY3ZDM5MDRlYTVkNjI0ZTI5N2E3NGU5YTlmNjFmZjYwMTgxOGFhZDNkODY2ZWQxMmEyYTIyOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyOGM1NmNjMDljNTJiYjg3N2Q4NWRiNDEyNTZmNGI2MjM4MGU1N2QzYzg2N2ZkN2YyYjc5ZjFjMTdmYzQzNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_36b7c828817c4d0aa494f9d89fc39bce",
+      "statement": "With namespace-aware behavior enabled, add prefixes new ordinary properties with the property namespace and _id string values with the identity namespace; fully qualified names or :: escaping can override ordinary property prefixing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L30-L37",
+          "version": "repo-lines-v1:sha256:b0d6b4360107e91a54a48ff345a17d67437883e26660af8035665dc7fbf12601:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGJhNzYwYjU4ZTgxOTk3MWEwZGM1MGViMTRlMmZlYTBhNmFmNzcxNGMwYzY5NGE2YjQ3NmVhYTZlNTZjMGExMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNlNzNhM2FkODI3NmE1NzBhNzdkNjQ4YjJkMTYwOWMzNTJmZmI3MWZjODM4MWNmNzBiNmI3YmJjZjljNTBjZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDlmMDJlNmEwMWE0MDRjZjZjZDUzMzhjOGEwOWYwYzQ4ODY1NTg2NjIwZmI2YzY0YjdjMWFhZjJjMjc1NTUwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmMxZjI3YTc4NDQ0YzEwMTkxMzZhYzgwNjQxYTYzNGZhNDU2ZjRkMjdmNzMyMGIxMDQ5MjllOTYzYjk4OTg2YyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L64-L89",
+          "version": "repo-lines-v1:sha256:2fcefc83cab777f6815ed81d456b4193cc66eba6d74009ca1a520f6e2989e349:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhNDdmYTc3ZjIzYTcxYzNiZTNlNGU0Y2YzODkxOWE1ZDA0NDQyYWU2NTE3ZDMwOTBiMmNjMzY4YzE3YjBjNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MTc3NDNkMGE1YzI4MDMwNzFjMjFhOWEyZGNjNmIxMjQ0N2YzNWE2NmMxNzAxZDQyZTI3MjZhZDVjYjRiMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3N2VmMjNjNmY2OTFkNDI1ZTNiYjEzMjViNmQ2MWJmNGRlMzI4YTk5NGYzMzQzZmYwYjJmMDVlNzA5ZDczYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlNTdlOWY0ZjhiYjdmNDkwZWVjZDU5Yzk5MDVkNGQ2NGVjNjUwNWFkYmEwNmFiOTI4NzI1YmEwY2ZlM2U2YTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7137a594aec24de182421ead7be54c19",
+      "statement": "NI escape prefixes distinguish :: for as-is interpretation from : for the current namespace, allowing path to distinguish an unqualified key, a qualified key, or all keys with the same identifier.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L385-L403",
+          "version": "repo-lines-v1:sha256:4ef3005e1ec6222c9215d090436cd5a271e7397a2b7c579c1d3c4cb08e560673:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3NDEyNGRhNDlhY2Y4YjExNWY1YWY2NDBiYTE3MDAwNzg1MjE2Y2E2YWU2MmU1MmM1NmNmNWJmZjY2MWM5YTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmQwZTA0NmJhMzhmNjU4ODY4OTRhNWEyYmVlYzdiMDFlZTcyNGI1OGY3NTE0ZTZkNGZjMmIzOWEyNjUyZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3N2VmMjNjNmY2OTFkNDI1ZTNiYjEzMjViNmQ2MWJmNGRlMzI4YTk5NGYzMzQzZmYwYjJmMDVlNzA5ZDczYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyOTVkMTNkMjBkNWFjOTVjNDkwZWNjYmE4ZDcwZDQ1ZDY2ZWNjZDZlNzI3N2Q0OTc1YTkwMDVkOGRkMmI1ZjgifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L23-L41",
+          "version": "repo-lines-v1:sha256:0cc80ec22a0be81efd6294a5493b43ebfc3d8d0c54a2aacee6465e7e2265afae:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkZGJkNjhhNTUyZjMzNGUyMzZmMzQ2YzJkNTZlZGVkMTZlZTU1M2MyM2YwYTM3NjFhNTk4NDk4MTM3ZjJmM2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYzQzYzU3OTlkOTljZDc3NzVmZjhhMDk4OTUyYjcxZjAxMjBmOGRjMmMyMjllOTUzYjhmMDZhMmRlZjlhNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMTA0ODc0OGFmZGNiM2VhODEwNmRkNGViM2Y0YmJmOTBhZWYzNmY5YjEzZWNiNTA2YjkwNzQ2NWFhN2UzNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_63e94d7b0f714e8c9f36d68e75fbc7b5",
+      "statement": "ni casts strings and URIs to typed namespaced identifiers without string escaping, uses the global namespace when omitted for strings, and only accepts URI input without an explicit namespace, collapsing URI prefixes to declared or generated namespaces.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L38-L95",
+          "version": "repo-lines-v1:sha256:91f0eafd4b502e172bc6b5a7eb2485898c4ab5b9e3c46e0b905cfb60af09b1d1:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlODNjZTk3ZjgwYjFjOTJiMmU2OGQxM2Q0NmFlZGIzNjg3Njk2NWY4ZWE3YWQwYjgwNmU4MDljZDgwYTY2MTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZjcxMTI3MjdhNWE1MjJmNDJiMTY5OGM3MjU1YWM0ZmQ0OGE5MDE4ZjY4N2I1NmYzNzY3ODA5YjhlN2EyODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzNzJkNDE4MzIxMWI2YTM5YmVkMjEyMTcxYzNmM2U5OTA5ZTNjOGVlOTUzOTg5MmEwNTUyZmExYmFiZTQwYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlMjJkNGI1OTdmNTIwM2E3MmEwN2NmMDQ5YWNkYTQ1MGMzM2I2ZmVmMjMwNzcyZjk1MDBiODY3YzNiZjcwODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a1561a509dc4d5e8bf6a03283024d37",
+      "statement": "make-ni is a target-mutating transform that constructs namespaced identifier values from a source property, rather than the value-returning ni expression.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L38-L68",
+          "version": "repo-lines-v1:sha256:2cd6c324e0e1e7bbf69c2be9724daa4dfe4a0dff65384e51fc4d583dfd6428a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlODNjZTk3ZjgwYjFjOTJiMmU2OGQxM2Q0NmFlZGIzNjg3Njk2NWY4ZWE3YWQwYjgwNmU4MDljZDgwYTY2MTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4ZDNlYjU4ZTk0OTY5YzQ2NTdmNzllYTRiNGIwN2E0Y2U3Mjc0MmRhMWY5ODMwYmM4ODRiZTY5ZWYwYzg2Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzNzJkNDE4MzIxMWI2YTM5YmVkMjEyMTcxYzNmM2U5OTA5ZTNjOGVlOTUzOTg5MmEwNTUyZmExYmFiZTQwYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NzAwZTk5MzA2MTkzMmNhZDk1NGZjOWU0MzZhOGVjMTU2YjY0NDgwYmRlNGU2NDEyMjE0ZTc2MzhkODY1OWQifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L669-L704",
+          "version": "repo-lines-v1:sha256:94c7e97f3803ce63169e77f98968f1af8ba5c9668a6f54c3c0025e13b522d761:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkYWEzOWIzYzMyNjIyYjkzZTY4NmUyZTE3ZDFmMDY2YTBlNmZmYzA3YjA5M2Y0MjgzZWRlYWM2NDUzM2ZkMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzNDg5YzY0YzE5MDIxOGUxN2MyN2MxYjQzYWFlNTZjODcyNTdkMGVhZGExY2IwZGRlMDA4MjhmZjJmZGU3ZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1NWFhNTVhMzc0MTE2NzU1YmZmNTNmMjE2NjAwNDQxNmRmNjk4NjJiNTcxMTBhMmY3MGFiODEwM2I0ZDAxMDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1YjMwZTg3YmI1NTM2OTY1Njc1OTM4ODAyMzUzZDRjMTQzZmMyNDRiNjM2ZTlkYzg1ZWVjNzAwZmQ4YjA5M2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f6a0005e7c84e85ad0f54645794dceb",
+      "statement": "Datetime values are stored in UTC with up to nanosecond precision, and integer input to datetime denotes nanoseconds since the Unix epoch.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L280-L286",
+          "version": "repo-lines-v1:sha256:dce7192fc9adbed9ff95a8c7551139ad0f1399af541afc11727d038456f48427:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBiZTc3NzVhZTQ0NzU2NTIyMWIzODc3MjkxOTczYTBkMWU1MGFhNDZhNmM0Y2M1YWJhNjJkYmM0Nzg4YjdjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZkZmI2NWRjZWI5ZTdiNTBkZTJhZTg1ZDkzZmQ1YmQwMjI4ODRiZjkwYWFiNGE5ZmRiYjExNDYyMmYwMjJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTIzNTQ5ZDNkMzUyZDhmNGE1M2M5ZGYwYmQxMzJjMmEwMTU5MTU2NTQyMWM0YjIyZmQ1MTE5NGM1MThlOGQ5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2IwZWVkODVjNWQwODMxMmQ0NTJjYjcyMWZmMmI5ZGQ2NjgyODFjYWY1N2RlY2Q1MGMwZGQ0MjVlNjI2NWJjMSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-date-and-time.rst#L29-L37",
+          "version": "repo-lines-v1:sha256:256a78fb6eb4afa154fa0d41c32f8029665a073cad9791569ef0bbe86758c2e7:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBmNGViZTczYjMyZWZhMGYxNmRkYmFkNmMxZWQ4MDMxYTAzYzhiNmEyYTE1YzExOTcwNTJjMDZiNTQ0MGQ1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWIzZDc4ZWUwNjY1NzNiYWY0MzcyMWE0YzNmNzExMTIyYzBjNDk4YmEyYTdkMTJmNmUwYjc5MmI0YmM2MDg5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTg4YTFkZDE0NGQyNmU0YWExOTlkZjFiOGQxOTljOGQ4ZGMzMjcxMjEzYzBhZDQ0MGI4NGI1ZTU5MGYyODZmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWU0NDU1ZDllM2FlMTZjNjRiZTRlMTkzZmRmN2UzNDg1MzE0NzhjNTQ0OTlkOGRjYmNkYWVkNjUwNmRjY2E2ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6da6025f8ec84ccdb665b05b72f67d33",
+      "statement": "datetime-parse interprets input strings in its specified timezone, default UTC, while datetime-format converts typed datetime values to the requested timezone, default UTC, and returns strings; %f formatting supports only microseconds and can lose internal nanosecond precision.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-date-and-time.rst#L121-L169",
+          "version": "repo-lines-v1:sha256:df166b2452bedea9b43da41584899bd4985363f1a6cae5c6809f313a96062aef:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmYjgwZjk1NTEzMjMyZjQzZjk0ZjY2ZjBlYWMxYTQxZDU2NDE0Yjc5NWVhNTlhNGIzODZjNjc0OWI2MzRmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzZjk3YTJmYmNkYTdjNTkyZmE0MGE1YzYyZWIyNWYyOTIxOTZhODQwMGYwYTYwOTAzNjEzNmUxNjY0ZjJlNWUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-date-and-time.rst#L183-L210",
+          "version": "repo-lines-v1:sha256:8d064f3e2bf1babc6c0a38038bbc51703063bd7045aeae2f2d5307b568e0f49f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZTYwNTNhYzY0ZmQ1YTA0M2Y3ZDVkZTkzMDY5NzI0NTE5MGJkZTQwNDQwZTM2YzYwOTExMDNmY2QzN2ZiNDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhY2I0ZDA5NWQ1M2YwYzUxNjU1YWFlOTYzMDA5ZTU1Y2FiZTZjNDM2NGMzNDhjODMwMWY1MGNhMzRjY2I5NTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_52b188ffe60047259e8c765aed264da9",
+      "statement": "Timezone conversions rely on historical daylight-saving tables that can be corrected or supplemented, so explicit or implicit conversion results can change over time.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-date-and-time.rst#L4-L6",
+          "version": "repo-lines-v1:sha256:a9268f54d9a8d9527ebcea0c8a7660261c387ad98aeece7d586898341faeac09:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM2OTcxNjYxMWEwNzg3YzEzNTRiYWZkY2FiMTI2Yzc1OTZiOGVmYTMwYzRhNzMyYmViMDBjMjVlMTg5ZDk4YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFiMmM1ZTYwODg0MThkN2I2MTExOTA4M2NlYjQ5M2NjZTNiODJjNTJmODkzNDVhMDgzMGZmODFjMjJkOTAxYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDc4M2M1NjBhOTNlMTJjNzA4NTY0ZWU2OGRlZWVkZmY5NjEzMGJiZDRmODFmY2ZlNzVjZWE1MWUzZTcwMzNhZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWEwZDRjNWIxNDlmZjYxZDhlNTJjNjRmMmJlOGJiYTRkMmMzMTE5YWZiZTk0ODFjOTU0ZDY3ZDg1YzVlZjNlNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee8b7ef7cb1049c59a2fcb53049b786a",
+      "statement": "encrypt uses symmetric Fernet encryption and returns encrypted bytes, but the documentation warns it is not an end-to-end secure encryption system because the key is stored with the data even when secrets-manager references are used.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-encryption.rst#L116-L140",
+          "version": "repo-lines-v1:sha256:39d612b1b868649d4abf264bfb77f6f52443b4a793be082fba02508f5578d3d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlOWU1MDI0ZTQ5MjBkMTBkMGNiNzIyNTdkN2Y0MmViN2YxOWNlNjZkZmNmNzlkMjZkMjBmMzk4NWVmYTA3ZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMmZkZmNjNGQ3Y2I5ZjgyZWE4MGVmNDhiN2FiMWU4OWMxYjYxNTBmZWQ3ZjQzOTA5MDY0YzYzOTRjOTAwMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkZmQwOTYxYWEwODBmNmVjY2FhNmUxMjdhZWVkOTliYzY4NWIwMWVlYjU4OGQ0MzA2OGI2YTcwZTIxMTk1MTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4YjE4NTk2MjU0YzU5ZDhjMmZkMzM1NTBlMGJmNzUzZWQ0YTZmZTUyMDVkMjAyNmZlYWMyYzQ0MmIzNjk0YzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_db7ed316bf6247bb8087885bb24e2801",
+      "statement": "OpenPGP operators encrypt string or list-of-string input into ASCII OpenPGP messages and decrypt with the matching private key and passphrase; non-string data must be serialized first.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-encryption.rst#L142-L180",
+          "version": "repo-lines-v1:sha256:d266234ea59b01a6dc134d7d8ac6e4663392e3f13a87c74f19bbfa5fc29a96f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhNmY3YTExY2NlYjAwYjM3NDEwZjg2ODdiN2Y5YTQ4NTA1MThiOGNkMTkyZGJkMTEwZDg1OWExNTI3YjRiZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1MGEyYjcxZTYzYzM0MTA4ODM5YmZhNWM3MmJlMzUzNDg3MzdhNjFmYTA0NmMxMWRjY2YwM2I1OTU0NDlkMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZkMTIzNGY3NmU4MmUyNDUzNGVhZjkxZTAyYzU5NWEzN2Q5OWZjZmYyODllODY4M2U4NDM3ZDE2MWIxZTk1MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAzOGNlNTkyOTJjMWJlNDk1YTk1ZTljNjlhZDRiMTg0MzBkMzE1NmIyMzhjMzljYzYxOTgwY2ZkMWY0NzFlMTUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-encryption.rst#L32-L72",
+          "version": "repo-lines-v1:sha256:2d07228d7b55c27f3e6551a6c7e18b3213de96fe89da97f99863a9ce9a44de65:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmNWNkZTJlZDM1MGU1NjZjZmM0ZGVkNDAzYmM4NWE1ZTRkOTc4NWQzYTQ4MGE4N2Y3ZmY1N2NlMDljYjM5MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2NmU4ODRkZjljZDE4YmYwZTNhMTlkOGE5NTc0MTJlN2EwNTBlNGFiMjE5MzkwNTA4NDkyMDY4OWUzODM5ZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkZmQwOTYxYWEwODBmNmVjY2FhNmUxMjdhZWVkOTliYzY4NWIwMWVlYjU4OGQ0MzA2OGI2YTcwZTIxMTk1MTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzY2VhODBmNTNjNmI0Zjc4MGQ2YzE2ZDZmYzQ3ZjI2OTYyOWRhMWNlM2M0MDJhNmVkNDU4MDRlOTE0NGEyYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_90e4ada91d4e40f199550623dbe608fb",
+      "statement": "RSA/PKI encryption accepts strings and returns bytes, while decryption accepts bytes and returns strings requiring parsing or casting for typed data; PKI is intended for short passphrases or identifiers, with OpenPGP recommended for larger blocks.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-encryption.rst#L182-L221",
+          "version": "repo-lines-v1:sha256:5ba829e2acdd026da8ee53ed4d5aa9a0068f2345e75b065895a6d28120cc5b0f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3Yzk5NWY5NjY1OTgwMWJkOWU1ZTliNzE5NWJmNzkyOWVjZDdjYzEzYjRiZTNjOTk1ODg5Y2YzMGZiNThhNmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzOWY2ZTJhNDNlZGJjYjM0N2Y3Y2QyYTEyZDVkYWRlMzhlYWQ0NDY5YjRmMzg0NjFjYWQ2OGI5ODc3YmQxOTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyMDQ2NTNmYmY4ZjBhMGY5ZmUzYzc0YTEzMmM2ZDQyNDc1MmZlYmZjYWM3ZGQxNDI0NzI2ZGI2ZDA3N2UzMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-encryption.rst#L74-L113",
+          "version": "repo-lines-v1:sha256:b6cccf222984abefd9e1898b57b67c1b8e16fac6a32dbdabf1837f96307447b7:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNGU5N2ZlZDAyMTJmYjZhMmNmOWJiOTdmOTg5MGI4NzZkNzNkZmZkMWI5NzhhZGE4NGVmNjNlNGM4NDJkNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiNjkxOTc5ZGMxN2JiOGJjYzg0Yjc0ZjJlM2FmZmFkNmE4YzFmYTdjMjllNTkwNmFmMzAzYjA1MzQyMTVhZGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3NDM2NjIzYTBjZWZhNDE2Mzk3MDVkYzM1OTVlNWM1NzU3Mjk5Y2RmNjBkNTg4YjhmYmY2YWIyNjIzMjczN2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzYzI5NjI4M2NhMzQ3NWNmZmMxMTkyN2UwNjc2ZjAzMWE3N2Y4MTIwNWZlYWQxMTczNDBiNzdiMWE0ZmQ1YTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_048176d15c2d49a1b3f21db9848e80e9",
+      "statement": "The deprecations document classifies curie, uri-expand, lookup, reference, ni-collapse, and ni-expand as deprecated DTL material and instructs readers not to use these features.",
+      "evidence": [
+        {
+          "resource": "repo://hub/deprecations.rst#L18-L195",
+          "version": "repo-lines-v1:sha256:e8906f113134500d628b2393deaa4c6d30fff462e1cd93387eb517ce6c91fab1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTc4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIxNWQyYjNkN2Q1ZmU2NDk5NWZlMGFhMmFkZTgxZTcwMjRmMzZmNDBlYmIxYzI2YzdkZDFkNmYzNDRiZWRhZDQ4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhODE4OGFiNjdhYmFjNTRjMDdkMGY0MjZjMjA5ZjIzNGVkY2M2YmRlNjUwY2QyZjAxOTg0ZmJiMjE1ZjEyZDIyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyMjFhM2JiY2NiODJkNDc5NGM3NWMzMjEzMzk5MjMzOGM1NzE1Y2FjYmM0Yjg0YmQ3OWVlYWE5ZGRiYmYxZjI2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2NGU1ZWI4YjliZTk5YTZkMDQ0OTU2YWM3ODRjNjQzYzQzODUwZWU5OTFiZGZiYjQ4ZmFiMTQ3YzUwNWVkNWY5In0"
+        },
+        {
+          "resource": "repo://hub/deprecations.rst#L199-L319",
+          "version": "repo-lines-v1:sha256:9360e2d79180a7cb52c6825a2f834a493c40e188f0b4c312a2404a48167dc01f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI5ZWZlNzNjZTYzODIyY2RlYTg0ZWEwNjkzNjllOGVkNjMzODE4NzgyYjFkM2E5ZjRjODJkYjNmZmZlN2VkMzNkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJjZDczMGExYmZkYzA0YWI5NDljZTgzYjcwNTM3OWFiZmVjMzI1ZWQ0NTJhNmZiMjI0ODAwNGMxYWVmOTNiOWQ4IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NGU1ZWI4YjliZTk5YTZkMDQ0OTU2YWM3ODRjNjQzYzQzODUwZWU5OTFiZGZiYjQ4ZmFiMTQ3YzUwNWVkNWY5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3MTBlYjY3ODI4N2EzN2MxMjI3ZWE1YWQyNzNjMzk3MjRjZTc4MTYzN2MwM2ViN2Y5YWY5OWZmM2EzNDRjN2QzIn0"
+        },
+        {
+          "resource": "repo://hub/deprecations.rst#L7-L8",
+          "version": "repo-lines-v1:sha256:d8ad1b6ff007e2ce1314748254407f38d35dd98d07be6a7e0ea07f6b65bb1aea:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTljOTQ3ZmY1MjQxY2U5YjdkMTBjN2E0MDZjOGVkNjlkM2IwODc5NDMzMWI3NzY0ZDA2YzU0NTM5YTE4OTI5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzM3MmY5ZGUxODI4MzIyOWIzZWYwMTFjYzU0Zjg5OWIxZmRlMWY2YTk1MjYyMjk5YjZjYTM3MWJhYTkxNTM0NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmVkNWNmNTYxZDQ5Njk3MjZmZWU3OGZmNGExNjM1ZTk1NTc2MTkzMDUwNjM3OGNlNGMzNzY3ZDFhODJlNDgxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTYxNmY1NmIwYjU2ZTUzYjJkNTc4YWZjMGMzNTUwZDlkNGNlZGUyYTYwYTYzZGU0OTRiZmEyYjhlYzFiMjJjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3bf79413d71436491784a870037e2cd",
+      "statement": "The hops subsets property replaces the deprecated prefilters property.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L80-L86",
+          "version": "repo-lines-v1:sha256:20f8a1caf0a227e8f616e426428e31cb964f9ff015d09ac44a0a6a12191fe4b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDM3NDUzM2Q1NTczMTI0YjUwZGY3OTU1M2I5NmI1N2MyZGNjZTAwNDYyZjhhNWIyYzY5NzU3ODQ1Yzg3NWJiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGVkNGVhNDljZjZiZmZlNDNiNmIyMWFjOTBmYzFkYzE4NjQxMTg0ZTlkNDE3NjRmZjNkZmRiMDNjOGY1MTdlYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdmYTAxNjAxMTI5Y2RlZWRlZGNlYTcxNGZmYzA4ZThmYTgyNGRiYjMzOWI3NjRlMmQyNDgxNjRhMWE1NDdjYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlMzZlNjZjNDM4N2FjNGZkZTc3ZTM1NDg5NWQyZmFiMGI3NzFiODU2OWI3MjZhMjc5MDc3YWI2ODc3MmFmOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cb13cf95da19469898248b0004aa928e",
+      "statement": "DTL configuration changes require attention to already-seen input: the annotated example describes clearing last-seen via update-last-seen, while reprocessing_policy defaults to continue and automatic resets on detected out-of-sync factors including configuration changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L191-L194",
+          "version": "repo-lines-v1:sha256:b82fca791a7b7b2d3fb51ab633d1242b8ab8c526631de813747a38085560aa17:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODRhMzE1MDkyYjkxMDYwYTVkODQwMzYyZjIxNjMxNWI5NDg2YzZhNTVhZTg2NGE4ZWZkMzY2ODI3YzMwNmNjNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjlkMjc3NzhmNzQxMWU2ZjQ2NzAyNTg3OWQ1ZDZlMTViZjIwY2NiMjBiYjlhY2NlYzY4NmQ4ZTY2OWQ0OWU4OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDU4YjIxYjQwNTUwZTM2ZDIxNTQxMWY4MmIzZDg3YzAwMTE4MTQyM2Y1ODU5OTkwMDYyMzllYWRhNWNmODExNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L52",
+          "version": "repo-lines-v1:sha256:f0172db2703bd060347d503c0fdd5dff62d2032a5a3636b302a4ad8ef8bbae82:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L29",
+          "version": "repo-lines-v1:sha256:a4b946ddb36e387d4a22d297c148b62823304265c2176c1fc46d4042a5bf3e60:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1f2f372081924f10be0d520f38188e1e",
+      "statement": "Dependency tracking reprocesses source entities affected by changes in joined datasets by reversing hops/apply-hops traversal and is supported only for dataset sources, not merge sources.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L9-L11",
+          "version": "repo-lines-v1:sha256:a1bd2cf1485667322c1d314fe889c2b1f9886d19fe1d007a938a091067598872:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODk1MTc3N2Q5OGI3YzFjNzUxYTY0YzQ2MmE5YmRiOWQwN2MzNDg2N2I2Y2QzYTA1YzE5NWFhMTQ0NTllMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0NmY5NjM5ODUzY2I2ZGZiOGMzOWYzMTZiZDQ0ZDg4YjYyNjc1NmMwZTM2OTI3NzM0NTAwNzNmOGNjYjg5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L14",
+          "version": "repo-lines-v1:sha256:752f9ae994e38b757195dcec312457813f6ed823de4486cff9a14aae1b61267b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e33135d2e84440cbec7e1cdeed372bb",
+      "statement": "Inverse dependency traversal matches original source-dataset entities, so chained transforms must preserve join-key values; namespace insertion and dynamic _S.$ids rewriting can interfere with join criteria and dependency tracking.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:6419ac7275c07e7654cb59fe4c95097379760e036aaff57fd126603e42a284a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI1MzgwYmYxN2MyZWFmOTQxNGFmY2VjMTVkYzEwYTYxNmUyYmIzMWE1YmQzNDIwZWUxNTliMzhmOThhYTdmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f5a67f02380493fa53a53a98740d2be",
+      "statement": "The local configuration-test workflow pairs expected output and test configuration files under expected, runs sesam -vv test, allows pipe-stage selection and bound parameters for published endpoints, and advises disabling or isolating external outputs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L108-L139",
+          "version": "repo-lines-v1:sha256:0fb86541b0234d1c51be8c1686785f19cfd1cc1bc63dbf5f3b5de8e1aaf4cdeb:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlYmUyOGI4NzIxYjVhZTMzMzM4MjZkYzBlZTQ3ZGU0OWQwY2VmZjdkYWQ1NjVmYzkzMTVjNDdjMTYyYTNjNTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzNTBkYzY2Njg4M2Y2Yzc0YzRhY2U2Mzk1MjY0MWVkYTRmNWQ5ZDQ0MzI2Y2Y3YmU3ZDQzMDMxNTZkZTA2OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5OWJkZWZlZWFjYTYzNDBlMDI5MGRjODZlODg5Yzg5ZDVlMTg5YWE1YmE0NGI1ODViM2I3MDczNGY0YTYyZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ODA4Yjc3MjQyMmI5NTA4ZGQwYjU2ZWNjMzJjYjFhY2Q2ZGJiOGVjOGRjYzlmNDIzM2Q4ZTQ2Mjc2MDBlNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L63-L91",
+          "version": "repo-lines-v1:sha256:dc2b0997a2854d04dafce14526c151389c4e5540d7db44e6652cccd0a80fcc3b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMzdiNDcxZTcwOWUwNGU1ZmYwMGI3M2Y5MzNmNjY1ZWMyMjYyZWU1ZmM0MTc0NjBiMGUzYzU4YzZkZGVkNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjExOTAwMjM3NTFhM2M5MWVlYTM2ZTUyN2UwMzRiZGRhZmNhMGY2NzFmMTE4NzY5NWViNDI3MmI4NTAxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhMTNlZjY4NWFlNzc5Yzg4ZDJhZTkxNDFmNzlhMTNiYjQxY2JlMmExMDg5MWI4NWNmOGUwZjg0ZDFmNzVkMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_50975a565a63432f994bd064c9ac612d",
+      "statement": "The annotated example's proposed two-order output conflicts with its final filter requiring order_count greater than ten, and its explanation reverses the filter's true/false stopping contract.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L173-L175",
+          "version": "repo-lines-v1:sha256:e14a19d2d74d031d9e62313ba0dcd04b6988c77889ba02de3908c1decaf8bda7:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTc4ODgwMzk0YjFkMWVhMTE3YzZlOWZlZWQ4MDU3NjNiNTU3ZmUzMjRiZjA4MGM5ZjEyMmZjMmEyMzFkMTUyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWRhMTExOWUzN2Y4N2I0MzhhYTQzZTcxMDExYWEyZmQ5MDE4M2VlNDBiOGVjMDU2YTBiNmQyNzBhYjE1MDMyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODg0OTcwOWEzZWNiYTAxYTdkNWMyYmEwNjA2NWRiNDI0MjBmZDY1YzMzMGQ0ZWNhZDdlYTZhNTg4NjQ0NTQ4NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmI2NDMzMjM4ZjYzZDA1YTE5M2E3ZjZiOWY3Yzc0NjAzOTExOGFiOTc4ZDkzOTliZjM5NmJmNjBhODk3NmUwNCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L26-L35",
+          "version": "repo-lines-v1:sha256:c7b7429a8f385c6ce8088e537ce6ab257970923d141050ef7acce283599d64b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxMTFmMjM5YWM2NWM5ZmVjZDRmNzk3NWQ0ZWUwYzY3N2I1OGE4ZWE2Nzg1MmVhMjVkMjc5MjM5MjUxOGQyZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYjkwYjI1OGIwNGIyYTZkZWVmZTY2NWM4MjE3OTBmNjE4MmExZWRjN2ViMDE3MjRlYjY0MTRkNTJmODYzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZTI4NWIyZDczZDljMTI3ZDg3NDU4YjVjMjQ0ZDMwOTBlZjg5OTJiYjVmMzVmNzY5MmRiZGRjZTlkYzg4NjIifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L63-L64",
+          "version": "repo-lines-v1:sha256:adcc1ca4c26c166969f13c6834c7d782294e2661a78a3613f8b0d80145f82028:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTljZjQxOGExODIwYTQ3ZTUyMDM5ODY0YjhjNTRmY2YwMjI4YTc5Yjg1OWQyY2M1MzRiMzIyYWY2MTVkNmYwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjE5MmE5YWIxYzU4YmE2MjQwNzJmNjcwYTc2MTkwYTgxZTVhODUwYzFiNjFjOWQ1MDRiOTQ3MTZhNDc4MWFhYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmM0OTgyMTRmNDY1Zjc3YmM5ZmQ2Y2Q4MTlkMDc3MGI2NmRlMjg2YWRkZmI0YmE2Nzc4MDFiYWMzYTYzZDJiYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGZjM2VhMmQ3MTUyMTA0Y2I5YzA3ZDk4N2FhODlkYThiZDQwY2UwNmE1NmQ4ZWM1ZWQ4ODI5NmMwOTg0MzhlNSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L576-L599",
+          "version": "repo-lines-v1:sha256:1efed2f237b5e87aad728be01647006e8c410e0330e9ef79dfdb303187a10eea:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjMWVmMDdkNGVhNmQwZTlmZjEyZjBiMmMwOWU2ZjFjMjRiYWIyZTM0M2FjNzcxYmUyZmI1NmVlNjYyY2Y5MmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NDhlYTkyNTU4MTZmNDgzMDMxMzljODIyM2M4MmRmYjVhNGFjMDRjM2E3MzlmMTEzNjFkNjY4ZDc3ZTU5NWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzYmUzOTQxNDc1ZjFkZjRlODE2ZWZlMWNjZWFkNGVmYmExYjlkYTU5YWRjYjIzMjdmYTJiZDZiOTBmMTM5NmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyYWJmN2YwYmNiZjMwMTVjOGRjMDkxNDFiMWU3N2I2YzQ5OGU1N2ZjZTljZGIwNDZjYzBiY2MyMmZiMjcyYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_451a0eb7e7ad4ab4b51b40d42905ddc9",
+      "statement": "The annotated example's proposed target shows numeric order IDs, while its joined/transformed lists use string IDs and the order rule copies _id without a cast, so the displayed target does not establish ID conversion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L124-L165",
+          "version": "repo-lines-v1:sha256:01dfd9357a3a6947d8301487091ef3d8a215d68700b534ec674744b710cd41c8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmNzU0M2MwOWY4OTY1ZjM1ZTg1NWYyNjc0MWZiYTBjYTYwOTQ2ZGViZmQwODQzMjYyNmE3YWVmZWYzMjJhNGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjEyNDI5YzA0NWRiMjA4NDRlYmEyOTA5OGVkYTg4NzhiMGU4ZTdhYTc1ZGJkYThhMWU0MDUzZDA3ZmUxZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYjkwYjI1OGIwNGIyYTZkZWVmZTY2NWM4MjE3OTBmNjE4MmExZWRjN2ViMDE3MjRlYjY0MTRkNTJmODYzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwMDYwZDkzZjZiMTdhYjU5OWQzNzg5ZWY3ZTRkODBjYTM3NWQ2M2JlODZlNWRmNjY3YTUzZGY2YTQ0ZWNiMGEifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L26-L35",
+          "version": "repo-lines-v1:sha256:c7b7429a8f385c6ce8088e537ce6ab257970923d141050ef7acce283599d64b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxMTFmMjM5YWM2NWM5ZmVjZDRmNzk3NWQ0ZWUwYzY3N2I1OGE4ZWE2Nzg1MmVhMjVkMjc5MjM5MjUxOGQyZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYjkwYjI1OGIwNGIyYTZkZWVmZTY2NWM4MjE3OTBmNjE4MmExZWRjN2ViMDE3MjRlYjY0MTRkNTJmODYzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZTI4NWIyZDczZDljMTI3ZDg3NDU4YjVjMjQ0ZDMwOTBlZjg5OTJiYjVmMzVmNzY5MmRiZGRjZTlkYzg4NjIifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L66-L69",
+          "version": "repo-lines-v1:sha256:f1616596b10b103c3f962a79713ced6f24f1578932445ca716f36d375d77ad83:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGMxMGJmZjg4ZDcyNGFhZTBkODA0ZmM5MTdlZDcwMjU4NGJmYmFiZGJlZTA0MTBjODJkNzljODk1N2E2MWRlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFhZThhMGNhNzZmOThmN2I3ZGM3OTg0OTUxZDYzZTU3ZGIzYzY0NTU3OWNhNTFiYWQ2YTUzOWQ2MTRlZGJiZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJjODkxNWVmMDg5N2Q5YWNjOGMyM2UwZDkxNGNjODExMzM2NTZhZjQ4ZjQxYzAwNjA5MDJiM2E0MDhjNjc5YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTBmZDI1NGM1MWQwOTgxZjQyZjg3OWVkNTk1NTk0ODI0MGM1NWRkZThmZTYxMGYzMGI3Zjg4ZTYzZmIxMTg5NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_10d1742b3850432aa654b021bc24e5b5",
+      "statement": "The path overview's quoted-path equivalent contains an extra comma, and the dictionary path example contains a malformed list with a missing comma and None instead of JSON null; these displayed examples are not executable JSON despite the documented rule of ignoring non-string path steps.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L324-L326",
+          "version": "repo-lines-v1:sha256:9b169c391b598f73518e9c9ac0c307180adf6fec1912bd7241db83ac1db8191a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTE4OTI5ZDc3ZTAwMTIzYWNlNzliOTJjM2FlZGNmMjYwN2E3YTk2Mjc5YjhlYjdlYzRhNDg0ZjM0NmE1N2Q4MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQ4NjY3ZmVjNGY1OWE2ZTQ2NWVmY2FkODY4N2YyNTVhM2ZlZjA4N2FjZTJlYTA5M2QyOGU2MTBlN2JhYTEzZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzY1YjE4ODliNGUxYmNjYmI0ODdiNTc5NWNhZjM5MTM0M2U3YjY1NWMzMDYyOTBlMTk5M2UzYjNiYWE2ZTc2OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWI0ZmE3ZTk2NDY2ZjQ3MWQzN2NkMGIyZjdjOTAyMGM5NWUyNmMyMGMwZTE2ODkxOWQwNjdmNWU0NWU0MzRhZCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L350-L356",
+          "version": "repo-lines-v1:sha256:a16cf3dfb5dfb81e9016aaddb5466eebac50d07a6b91ff07fa0b20f7b552e101:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTc4OTI3NDA2M2JlYjdmODFjODY2M2JlOTQ1YTIzMTE1MTc5N2VlYTllMTgyNDdjYWRlOTQ4YjI2NjlkMzc1MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGI1NjRhMjVmNzMwMWZhNzg0NjQzYmRjMjJjZGViNDg5OGY0ODliNjFmMjlmODI1NmY0Y2VkYjJjZDU4ZDA2ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGQzYTI3M2Q4Zjc4NTQwMDVkMTliZmE1MTcwMTBjMWYyOWZjZmY1YzZmNzBmNTg1OTg2NTMyMzQ0ZGE4Njk5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlZjMzNTFjN2VhNGJmZmI2OTgzNzMyM2I5ZWZiZDljY2QxMDYxZDBmMjJhYTRkYTFkODEyZGEzYmNmMjAyZSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/paths.rst#L19-L20",
+          "version": "repo-lines-v1:sha256:79b463c340ea7567a62111dc0c2d6d4eef8bd9a78703452f9217a40de56bf4ee:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGVkYzVmZmMyY2YyMGY3Yzg1OTdiYjNiNmU4ZjVkMTc1YzcwODM3ZGE3ZWVmODkxNDIxZDQzYWNmNGNlOWMyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjViYWE2MGE5OTc5NTg5YjY2NWQ0NGI1ODNjMThkMzFjMDkyNTE1OTMzMzE1MjhiMWJhYmZhNmY2ZjA5ZTgwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjUzZjllMDJjZjQzNWU3NzlkMWRhMGUwZmVkNjQ3MTczOWQwYTVmZmJiMjZjY2E3YzY3OTU4ODE2MzUwOGJhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2EzNTdhMmJmNDBmOWE0MzdhY2MxOTMyMDgwZTc2NWIzYjU1Yjg3MjAzZDkxNjI4NzkxMDUzMGY0NDU4MjQ0ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6489d47e4c98483fbb84b9c8cf8dc790",
+      "statement": "tuples constructs products of argument values into tuple lists and is useful for composite join keys, which the join reference recommends over multiple individual joins for better precision.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-misc.rst#L128-L165",
+          "version": "repo-lines-v1:sha256:62d44fc9cd34d63cbd88e5cafccaa41834976e4b0d9d88587ba1412341fcd04e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4YmUyNGI5OTY3ZWU0OWUzMDBjYzY4MjJlZmZmNDlkNjY1YTQ3YTZiZmMyMTMxM2U2NTNhMGVmZjhlNTdmOWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwN2U1MWE1M2Q1NGI0YzhkM2RmMTA4NGQ4ODkzNDhkNWE3NTQ2OTAzZDlhZGRlOGY0NDMyMzQ3ODBiMTI5MTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMzljYWMwMmM0Mjk0NzhjNmFlOTNjYzE1Nzc0M2QxZmJlMWFmZjRjMzBhY2I2YzViNzFjNzZiZTdlZjJjYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L46-L46",
+          "version": "repo-lines-v1:sha256:6fdf332acd7124e4ffb34f55615e4324baf3d2900339aa362e8db8a86171ad02:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZkZjMzMmFjZDcxMjRlNGZmYjM0ZjU1NjE1ZTQzMjRiYWYzZDI5MDAzMzlhYTM2MmU4ZGI4YTg2MTcxYWQwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZkZjMzMmFjZDcxMjRlNGZmYjM0ZjU1NjE1ZTQzMjRiYWYzZDI5MDAzMzlhYTM2MmU4ZGI4YTg2MTcxYWQwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmNmMTgwZDQwMzIwNzA5YmE5MjRlNzk4ODI1NmY2ZDliN2FjNTYxOGZiMGNiMTcwYzc3M2RkYjhlNjE1NjFkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWY4ZGZmZjEzMThmMTM3ZDI0NjAxNzQ1MGI2MjcyODU5NjlmMjI5NTYxZGY5OWJiMmViNTFkNTcyNTY3YmIzZSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

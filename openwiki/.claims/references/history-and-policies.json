@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:b3734589478111044a1c8aa9240d39777dd05295a2436804df99d47c6f6b666c",
+  "claims": [
+    {
+      "id": "claim_6e7e273d043e497e9202fa2f1c41e888",
+      "statement": "The developer documentation warns that features marked Experimental can change or disappear without warning and must not be used in production.",
+      "evidence": [
+        {
+          "resource": "repo://hub/index-developer.rst#L5-L7",
+          "version": "repo-lines-v1:sha256:ac495a716263f67a1fef6820dd17defd57e31b181764e0b46913694b856e2244:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwYzZiZWUyZGEyMTA4YmUyMTRjZDhmYzU5Y2U0MGQ5NDM4MGM2NDhkM2Y5Mjg2MjA3MDZiMDhmOTBmODU1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjJiMjRjNDI3NGI3MzUyZDQ2Njc2MTQwNTZkZTVlMDdjNWI0Y2NiMTc1MWMyODc4YWFiNTY4N2UxZjRlMzk5NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2M2NjYxMzQ4ZDk2NGQzODFmYmIxZWMxNzkxMGFlNWIxMDgwMmU4Y2YzNzM1MTg1NmYxOTAxMTJhYWQ5NzUzYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWQ4MzY1NWI4N2YyMDg3MzE2OWJlNmU0YTNmZjcxNmVjYTNkMzVjZWU1NGFkMWIyOTQwZmQwMjMxMmRiNTcxMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1ecfe7d9ff274217a12a93cb5824f9ec",
+      "statement": "The developer entrypoint separates deprecated features from discontinued services, and both retirement indexes explicitly instruct readers not to use the features or services they contain.",
+      "evidence": [
+        {
+          "resource": "repo://hub/deprecations.rst#L1-L16",
+          "version": "repo-lines-v1:sha256:f36aee40e6ee5aa729e211a3729bbf5b503ee740aa87cba266f0cccd29ab35d1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NGI0NDUzMDY1N2I1ZTk4M2MyOGYzYjQ4M2ZlYzZjNzMyZjNlMTE1ZGVkNmI5YzgwMjZmNWU2ZjI1Njc0YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTM0NGFhNWE5Mzc4MjQ1M2ExMTAzODgwZDYyYWQ0NzZlY2I5ZDY5MmQ1ZGUwOWViMTBiZTQ0NmFhYTBiMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiNDYwYzNkNGY1YjI0Y2Y3Yzg5YjAzMDUxOGQ0MTZjMDYxYjFjNTYzOTk3YjQyY2VhZmM5YTdhZmY0ODVkMjUifQ"
+        },
+        {
+          "resource": "repo://hub/discontinued-services.rst#L5-L13",
+          "version": "repo-lines-v1:sha256:7ce02eb60e90239e34472c7fd96d1e0182d4550c25ca24fa183d40ee2cd3a36d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQyZDQ2ZDQwMjEyYjI3YTllOGRlMzQwZWIwODRiOTkxNjRmMDQwMTVlYmNmZDBkNjgzNDgwNmNlYzQ2YjMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzk2ZWIwZGU5ZTczZTIyZTNjNzQxOTE5MWUyYWYyNmFkMGRhZDFmYzkyY2RmYjViNDhlNWM0M2Y4OTdkNmZhNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZmOGZkZWFmZjBmMjA0MTIwMDNmMTRjZWRhYjQ0ZDJhZmQyMjMwODJmNjBkNmQ0OTFkMDdkNDczMWU5MjE2ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcyODBlYWVkZTBhZDA2OWFmYzM0ZjY4MjZmYmUzM2MxNmM2YjI4ZTEyNWM0MTY2Y2U1OWVlZTNkZWIzMDM4MSJ9"
+        },
+        {
+          "resource": "repo://hub/index-developer.rst#L16-L18",
+          "version": "repo-lines-v1:sha256:00060b943a9f88cb22070aa83c84e2a0e6d5b2330adc4e94f7cb40c1b028a6d4:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDVmOGRlMjA0MjVmOWYyZDJkMzgxYmE1YWNmOGIxMzRlM2I5NTRjN2NhMzU3ZmQ3MTVjNGJiMTRlMzMyNDk5YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY1OWYwYjkyNjFhMmIyMThhMTRkOWFhMGY2M2M1ZGQzN2QxNDY0MDVmNjU2YjNlM2UxZjFmNmI4ZTIyNDNmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWJmNzhjM2JhM2EzZjVkZjZkMmQ2ODVlY2Y5MTc2MWYzMTkzZGUyYzY4MjMxMmFhMWRkZjM1YWI3MmQyNjk3YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjNiZGJhZTkxYjRkZjIyN2E0N2E2MDBjNDlhZTM5YjlkMjQ0NzhiNGE2Yjk0MDIyYzM4NGM3YTI5YTExYmNiMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_020d499566ae45b9963fbb3a185e3da5",
+      "statement": "Sesam documents phased software rollout with weekly-prod recommended for production, weekly for staging, nightly for development, and latest only for cautious development use; promotions can be withheld, build dates indicate minimum rather than maximum age, and downgrades are unsupported.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/software-channels.rst#L9-L22",
+          "version": "repo-lines-v1:sha256:7fe9d23540bb19deaf029267334969507b04a32aa39368046c609719e5717f09:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2ZTFhMjIxNjZhNGFmYzA3YmNmNmY3NWJhOGE0YzM4ZGZmZDliMjFjODZlNmFjYmUwMzM3MDk5NjEzZGQyZDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3YTA4OTdkNjg3ZmU3ZmExOGJjNDg2YTk1MjRjZTUyNTk3MjAzOWY1MzJlMDg1OGMzOGY3OTgyMTE0OTRhMzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkMjEwYmU3Y2MwZjcyY2JmNjk0ZjZiZTc4ZTZlMDgxNjcwNDg5ODEyZmYyOTQ0ZmVhMWM1YTQ0ZTY0YTRkZjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f9801b6cb1bb4060bc0f6308bc5dfdd0",
+      "statement": "The changelog entry labeled changelog_2026-03-30 records addition of documentation for the replicated dataset sink, rather than explicitly recording its first implementation or availability.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L24-L29",
+          "version": "repo-lines-v1:sha256:07d9a2376bc856c90b757eac5d37901ce3b0d73a96e628a067fe4735ba792a21:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2NkMTYyNDlhM2E0YmE3NzJiNWIwNDIzYzBkYzQ3M2ZiMjlmMWEzMjhlMWYzMGM4NWU0YWYwMjI2MjVlZjk0NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2I3MDE0ZjkzZGNlMjFiYTIwNDNiNzZiNjZlNjViOTE0NDBmYmM3YzQzNjIyM2IwNzVhOWEzZmU2OTZlMDgxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWMwM2I4NzY4OGQ1Njg5NzUwN2VkOThmYTdlMDMyZGYzNTY2ZWVjOGVlNWVmOGUzYmQ4YmUyZWMwNjEyNjRiZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc0OTIxYzVlOWVjNmQ3N2Q0OWUwNTgxZDE1MTQwZTk4NDkzYzYxNzEyODUyNGYwOWUxOTA3NjlmZGNhMWM4ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_821c9bf5d2ef4e12b7eee16abfaac856",
+      "statement": "The 2025-12-22 changelog deprecates ni-collapse and ni-expand; their retained deprecated reference sections still mark them experimental and intended for global_defaults.symmetric_namespace_collapse set to true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L58-L62",
+          "version": "repo-lines-v1:sha256:b1a9eea97e30ef2630484bfeb8913ca567ae20984bb62a9f61778f4932f1be90:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFlY2JhMTM4NTcwMDI0NWI1MTQ5M2Q3NTVjZWQ0YzIzZTE5Yzc1YmQ1MDQ4ZmU0MDEyZWFjNzBkMTA1NzEzNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGFhMDMyOTRhZWJiYTQxMDljZjhmNjgyNzE5MDllMTMyOWJjYTIyNjRhYzdlNTI5Y2Q1ZDgzMGI4ZmE0NGJjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDI2YjA5NDM4ZjdiMTkyZWQ4YmZlMTNkNjBkNjljZjFhYTNiMDlmZDg4Y2RmMTg5MzQ0NDYzY2Q0NmU5ZDU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzdjOTAxOTA0NjdhMjI1MjkwZDhhZDdlZGQ1MmM2N2Q2Yjg2MTUwNjRlYjkzYWFlMjM1YTljOTgyNmY2NjNjOSJ9"
+        },
+        {
+          "resource": "repo://hub/deprecations.rst#L199-L220",
+          "version": "repo-lines-v1:sha256:d34dd71fd3842651c1964266b3a31cbf005308429a354b77bce9a14b70abccd2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllZmU3M2NlNjM4MjJjZGVhODRlYTA2OTM2OWU4ZWQ2MzM4MTg3ODJiMWQzYTlmNGM4MmRiM2ZmZmU3ZWQzM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYzYwZjRjMmVkMzE1NWY3MGVmYTcwOGY5OTAxM2M2MDMwYTRkNTE2MTg5OGY1MGRkMzUyNWNhMjEyNzEzMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY0ZTVlYjhiOWJlOTlhNmQwNDQ5NTZhYzc4NGM2NDNjNDM4NTBlZTk5MWJkZmJiNDhmYWIxNDdjNTA1ZWQ1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyYWI3YWUwNjNiZmE1ODc5YzkwYWFkZDVlMTA4MTY0NTQxYTZjMWYxMTQzMWQ5YjJkMWJjMzk4NDYzMmNmYzEifQ"
+        },
+        {
+          "resource": "repo://hub/deprecations.rst#L260-L279",
+          "version": "repo-lines-v1:sha256:6eb6058cc0a56c9dbe05984a6e8ca36b24ca6dad3d27fd7e2e7bc4d193116d9c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxMzliZGRkNjBkZDIxNTQ0NDQ1YjhlNmVjYTU2MDg3YzY5OTMxMDFhZjYyZjBjNmI3MjAzNDUyNjIwOTBmOTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYzYwZjRjMmVkMzE1NWY3MGVmYTcwOGY5OTAxM2M2MDMwYTRkNTE2MTg5OGY1MGRkMzUyNWNhMjEyNzEzMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjMzllMzlkYWI1YmUyYTkzNWQ4NDU5YzM5YTJlN2ZhNTE4NjNjYTM0YWVmNDlhMDQ0N2NmMTdhNDcyMmI3YzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyYWI3YWUwNjNiZmE1ODc5YzkwYWFkZDVlMTA4MTY0NTQxYTZjMWYxMTQzMWQ5YjJkMWJjMzk4NDYzMmNmYzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_00a04b1664234bda8b66f6fd434586c7",
+      "statement": "The 2022-01-25 changelog deprecates the lower keys, upper keys, and undirected graph transforms, but its DTL replacement advice specifically names the lower keys and upper keys functionality.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L966-L971",
+          "version": "repo-lines-v1:sha256:d4d76bc6ec1417cae213bbc39a4661bfcd414c58f568241177d01c305cb66799:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDI3ZTc4ZTAxYWFhNDMxMTA2YmNkOTg5OWRhNTU4YzA2YWIxNzYxMzA2MzJjZTI1NmY2MDgyMDIzYzdlZWUxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmNmMDAwMzk4N2ZhODk3OThjMGZjOWJjMWQ5ZDMzY2UxN2ExYWVkZmFkY2YzODM5YTE5NGE1NGRhNGQ5ZDcwZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjk3MDQ0OGRhOGEzNDljYzJkYTZjZDBhMTgyZTc1MmQ1OWY0YmVmNTdmYjVlZGNiNGVkYzU0NDRhMDY2OTVhZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmYwM2E1NDhhY2I1YjFiNzhlNGExMmUyZTYyODdmMTNiNDg5M2ZkMDA1ZGU4YzljMTI4NGI2NWY4NzYzODA1NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a42c62364088402fbfa2ebb023e5e5ec",
+      "statement": "The 2021-12-20 changelog deprecates hops prefilters in favor of subsets, directs new pipes to use subsets, and warns that changing an existing pipe may require a reset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L1006-L1013",
+          "version": "repo-lines-v1:sha256:82b2de5bfdfb2484be70300eace2477ebe77d835b0c3e5cf35ac40723db1bde2:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDM1NTRkMjViNmM2NzcyOTllMDliZTVkODI5Yjc5NWM5M2RmMGIwYWI1NTZjYWI2MjlmODM3MDEyNGU3OWY0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ2ODI5ZjFiNTk1Y2QzMmNhN2UzZTkzYjhhYzlmZmUyYTUzMjZkYmYyNGRmODU4MDE3MDNmMDk5MDUyYTk5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjY0MDA1MDgzMmUzMjM2MGY5YTMzYjliNDIwNTcxODRhMzJmZTYzM2ExOGQwNThhNTNkNjJjNzMwZWM0M2ZmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzYwYjdjZTRjZGQ3NTg1YjkzZGJhNzk5ZGUxMmZmY2Q4YzU2ZWYxNzY2YTZiMDhmZmI5ZmMwMGY4NWU3ZTUxNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3c79b59ad6d42dfa2a7aeb170360bf9",
+      "statement": "Although the roadmap retains selected-entity history deletion as a Q4 2025 plan, the 2026-04-07 changelog records compaction.retract; the focused reference limits retraction to earlier entity versions in the pipe's sink dataset, retaining the current version and deletion state and leaving upstream datasets and external consumers unchanged.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L17-L21",
+          "version": "repo-lines-v1:sha256:191903043e771524ddb9c9e841238e83d027d2fc29e33b07bcd65b59941566b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2IxZjE2ZWJkNmY3MGQzNTU4YzI5OTU4ZjY0ZjAxODk0OTYzNzdkMDVmM2UxM2YxYzA1YTMxYjk4MDgwY2ZiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTkyNGUyNDU5M2ZjZDM0ZWIyZmI0NWE5Mjg0N2NjYjhmY2E4NjBhNzc3NmRjMmJkZTU3OWYzNjAxOGNmY2MwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTY3NWQ4ZDFlOGNmNzFkNGFjYTNkZThmM2YyNGVhYzJiMzc3Yzk0MWU0YTcxN2ZkMTUwYjVjY2RjNWE4YjBmMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQzODY3OTQ5YzdmMWMyMTcyNjdjNTgwNzhlNzA3Nzk1MzljNGEyOGIwMDZhMDY0N2E0MjRjN2VhODY5NzllNCJ9"
+        },
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L120-L137",
+          "version": "repo-lines-v1:sha256:c1d69a90161ee079948048247a0f68607d14df2277df7cba065332c4aa8bf08a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyMDQzMWI4MWI0NTRiZDg2ZTdhODJjMDkzY2Q4ZjEwNDZiOWNiMWE5ZjlmNmJmMTNlZTI2MzFlZTFmMTc2MjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjFmMjA1OTU4YjYwZTViZWU5MDlkZDljYzRmMDk3MGEzNjY4NjA3ODRmOGI3MGVlMTI4MWUzMDI4Y2E3YWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2M2ViMTI3YjY4YzRiN2UwOGVjNTgwYWJlYjdiNzgxMTIxYmNhMGY2YmMyMzVjOTY1MDQzMDUxMjk3MmI1NzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/roadmap.rst#L27-L34",
+          "version": "repo-lines-v1:sha256:7dfb58a9ef506748a4dcbd91faa2e4791ca172edfe946bc58f225342de0f4162:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDQ1NmYzYWMwYmJjNGJlNDc2NDRlYWQyOTUzOTg3YzhkZmU5NDUyNzJjMDEyY2FlNDY3ZWJiNGY1NWQ4ZDNjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY3MjY3ZGEyNWJiYmJiY2M0ZjgzYjA0MzAzYjljMzhiYTAxOTljZGFiYzRlZjk3MTI2NGU2ZjczOGNlM2VkNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmRkYTEyZjVlYTcyYzE1MjM5NWFiYjk1ODg2ZWNkYWUwODlmM2QwNjBkYjg2MzVkYTM3YzQ3Mzg4YjQxMDVkZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNkNDVjZmQ3MjZkZDkxMjYwZjIzZWFkYTYxY2FlNDk5MTQxOWY5YzZiZTBiZTE2ODE2ZWQ2NWQ2NGFhNjg5MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a30bd851c9544ff79b462667109445a3",
+      "statement": "Databrowser's warning and the 2022-03-21 changelog announce end-of-life for December 31st 2023, and the changelog names Integrated Search as its successor.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L921-L927",
+          "version": "repo-lines-v1:sha256:179ddf71bf11d867092283f70d1e4dca826cf0d179b4650fcb3707888942c713:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgxMDExYzExNWE0N2E3NTgzMWM5NmM0ODYzYjQyNTdhMmFmMzQ4ZjFkZDMwZWVjNDNkZDc4OWVlZGYyMWQ2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjVhNDg3Y2YyOWQyOTZlN2UwYWY5Y2EyYzgzZjNkYTM2YWNmZjIzZTY5MWY2ZTY5MjcwNWEwNGFlOWNkYWE4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZlOTE4YjkyYjI2Yzg2YjE4ODhmZWY0ZDM1ZWZkN2JhN2FmNmY3NTc3YjE1YTIyNWI1M2EyYWVhZmViNmY3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGYzZTMxNDg3OTQwNTlmZjdlNmY4YjU1ZjQxZDQwYTUwNGE0ZTliYWYzYTQ3MjM3M2E5MmFhOTY3ZTEwZjcwNSJ9"
+        },
+        {
+          "resource": "repo://hub/databrowser.rst#L1-L15",
+          "version": "repo-lines-v1:sha256:d1b0f4913f843fbe06a42eef69d982f7f6f81383319e19c45de7ab4f84f19fc8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxZWIwMzI2ZjdhZWEyNjU5ZDE0YjkxYjMyMDNiZTU5MGU2M2E2ZjRiNjRjMDRiOTViZTI1MWQ2NjFjMmY0ZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNDI1MDA4MzdjYzRiYjA2Mzg4M2U5ZjFhNTFjN2QyMzcwNzZlODM3MzA0ZDVmMWE2ZmI4MDRjY2IwNjU5ZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a207548bae6e4620994bf708eaf7793b",
+      "statement": "GDPR Platform's retained warning and the 2025-04-02 changelog scheduled end-of-life for June 30th 2025, but the 2025-04-11 changelog records early retirement; those entries do not name a successor.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L151-L165",
+          "version": "repo-lines-v1:sha256:f8bb066876fa53dc6590eea59f944f183535f535d4dd3fc15dbe2997cfea101e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmY2I4OTRlNTZlZDZjYzMwNDhjNzVjNmNkZjUwOGU1ZGI3ZTQyMGJjNTc4M2JjMmFhZGRkOWYzYjUwMDI4MGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1ZWRhZjk0MTE2NWZmZWQ5ZWQyMmQ1NmQwYTFmY2JkZWVlNmZmNDM1YjRjZWZhYWJhY2I1OTllMzNjOTU0NWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3M2M1NTczMTcxN2FkMjEzMjVjNDNmNWU1MTk2M2ZhZGVhMjQ2ZGVhNjllODA5ZTM2YjA5YzA5ZjUxZTBhMWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4NTE5YTg2ZmQ1NDBlYmQ5Nzg4NzRkNjcxMzhmMTRiMzBmNmUwMjZjZjQ1YjMzODM3Y2IxZTFmMWYxMDdmZTYifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform.rst#L1-L18",
+          "version": "repo-lines-v1:sha256:578316095fb4e1f19528f4e573890feb160e19a3e64038f207c6e752d8bf862a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NzRlYTQ3NjY3M2MwYWM4NDU1M2FjMjIxMmI3OTM1YTk2N2RhMTZhMDEzNjY4OGYwZmZhZjg3ZmViNWJiZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzOTZiMGU3NTRjNWZmZWQ2NmM2NWY5YTkyZmMzYTE5YzhjYjQ2NmU1N2NjNjJlZWVhMTM5Y2YzNzM0ZjhhODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_86380e4de646407d98398b8060767186",
+      "statement": "The 2025-04-02 changelog announces that the Notifications feature will reach end-of-life June 30th 2025 and is superseded by Metrics; that entry is an announcement, not a separate report that retirement occurred on the scheduled date.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L159-L165",
+          "version": "repo-lines-v1:sha256:663a998602e50f1e3e04c874fa38c23b54b12bef8fa1bc9ad4c69755e2494b1a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU2ZGEyMzMwYmFmNzkyZjM5OGVlMTQ3ZWY2YzY1NzEyMjI3NWY3ZmJmMTFkZjUzZDJhM2JhNzA1ZTgzNzY4NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTVlZGFmOTQxMTY1ZmZlZDllZDIyZDU2ZDBhMWZjYmRlZWU2ZmY0MzViNGNlZmFhYmFjYjU5OWUzM2M5NTQ1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDI0ODVmMmQxZjA2YzM3YmE4M2QwYWQ2ZjJhZmY1NTU5MDc2ZDQxYjlmMDQyODkzMjVhMjRhNjE0MzA4YzM5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTg1MTlhODZmZDU0MGViZDk3ODg3NGQ2NzEzOGYxNGIzMGY2ZTAyNmNmNDViMzM4MzdjYjFlMWYxZjEwN2ZlNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_67b7aee7ef084c18ad0b533edf9f650c",
+      "statement": "The 2025-04-11 changelog records removal of support for multitenancy and the Management Console tool; the Console warning identifies it as part of multitenancy, and the roadmap marks multitenancy discontinued.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L151-L157",
+          "version": "repo-lines-v1:sha256:c16c9e9a5a8c4bd525a69e21ac67f7308f965efc9805f943d381c8110555452e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZjYjg5NGU1NmVkNmNjMzA0OGM3NWM2Y2RmNTA4ZTVkYjdlNDIwYmM1NzgzYmMyYWFkZGQ5ZjNiNTAwMjgwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjM5OWJkYzFiNjg4MmQzZjJmMTA1MWNhNTBkMzg5ZWEyMjJjZDA1ZTEwZjU2Y2VjMjllNjE5ZDQ3MGFmM2Y0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTczYzU1NzMxNzE3YWQyMTMyNWM0M2Y1ZTUxOTYzZmFkZWEyNDZkZWE2OWU4MDllMzZiMDljMDlmNTFlMGExZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmNiMDgyYTY5ZTUxYzcxODFjMGM3Yjg1MDM5ZjhjZjhkZDRhZjA4NmJkYThmNGM4ZjljODc2ZTlmOTE2MjViYSJ9"
+        },
+        {
+          "resource": "repo://hub/index-management-console.rst#L1-L17",
+          "version": "repo-lines-v1:sha256:518705b1acf1a7e9bd17325ceebbc33fdbc901d46e63686181fb45fc2331dbb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiNTg3MTU2MTJlOGIxYTg4ZGNhOWY0ZWYwM2FkZTA3NWRjNWU2NTI0NDgzOTUyNmFmZmM5MTNkYmIzYmI3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjOWRhNTA5MDFhNTEwOTY4OTdiZTc5ZGQzNGMyOGQyMDczZjY5NjViM2Y0YThkY2U5ZWE5ODhkZmUzMjUzNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/roadmap.rst#L178-L191",
+          "version": "repo-lines-v1:sha256:00e884f2e0fefc82d14bc8bbe157c36eb17f442e1eae7aebe8ee069259e9a0a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlZjMzZmYyMDc1ZjgzNmNjM2U4NmZiZjE4NzlmOGJkMjAwODkwZmQ0NTFlOWJiMWNhMzY5YTgxYTcyOWRiZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1YzZkMjI2ZDAwMWRiNTUwNjA1NWViNTdiMWFmNDI0ZWUzNzU0OTNmMDU3MTlkOGJmODNlZDgyOTJjYTA4ZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViZDdkYmM1NzMzYmVmNGY1NTg2NWFhNzM3YjZiMDM5YTU5NGJmYTAxYjIzMzUwOTNjYWMwNjM3OTg4YWZkYzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4a9288e9ed5c4183b271444d42c88926",
+      "statement": "Sesam Talk, documented as a Universal Semantic Data Synchronization service, was discontinued in November 2024, and its retained landing page says it should not be used.",
+      "evidence": [
+        {
+          "resource": "repo://hub/discontinued-services.rst#L15-L20",
+          "version": "repo-lines-v1:sha256:bae2d6823d3720fdc1fb30948fa46bdcc0840072c40bc1b4327f570f4a6219de:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTZjNTRjMDkzNDVlZThhZDEzNTE0ZTQ2Y2JlMDZlZTk0ZDIzZWNhYTg0ODA2ODg2MjIxMWQ4YTQ2ZTUzMzRkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWZlMzUxNTFiYmM0YzJkMDU4ZGI3ZDZlYjM1MmFlNGIxYzY2NmZhYjFkMDljYzg5MDMzOWY2Mzc0N2E2ZWY4NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmNlZGI5YjM2OTFmNDJkY2U4Y2ZmZGYwZTcyYjBkOWVkZmM0NTY1OGJlYjVhMTVhYTQ0NmVmODRjMDMwMWY4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDgyYzQwYzViMGExODBhZjk2MTc1MzFjZWE5NzMxMGM5Y2Y2NGMzNWUwMDk0Yzg1YmY4YjMxNDE1NGJlMjVhMCJ9"
+        },
+        {
+          "resource": "repo://talk/index.rst#L1-L9",
+          "version": "repo-lines-v1:sha256:2ca51bf6570990aaa7fbf8c7d6628d4aa9cca931fedf75d74ef970884a791ff9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzA0OGQ1YmY4ZDlmOGU1NDQ2NTMyNjZmM2I4MGFkNDg3ZDNhYTI1N2MzNzBhZDA2MmE0ZDRkMjVlYmJiNmU3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWVmNmE4NWI2NTU1OWEwYjU5N2RlMGIyNjYzNDQ2NWNhOWFhZjdiZGFjN2Y3NWRiZDY1MzUxYTRlOTM3OGM5MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmYxYzQ0YjcwNTQ2M2NhMWFjYjQ0YTViZGY5ZDBmZjY1M2I3MTk0NGJjYjkzZDg5NGY5ZDk5Mzc3NmQ4MDE5OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4fc3c214bd214bd3ad27c8be66ba4d07",
+      "statement": "Open Sesam is documented as discontinued and should not be used; its historical purpose was free hosting, enrichment, and publication of data, and the cited discontinuation notices do not give a retirement date.",
+      "evidence": [
+        {
+          "resource": "repo://hub/discontinued-services.rst#L22-L27",
+          "version": "repo-lines-v1:sha256:958bd0e96b40d31dd9f977b81eff2dfc7853d10810b73357fba678e36258318c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjVlZGNlODljYjVlZTVmYjUzM2M3NWFkYjMyOTZjOTRjMDI0NTc0N2Y3YmUxN2VlZTI4OTdjNDU4NTg1NjYwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI0ODI3OTgzMTU5ZGZiNGFmNDkwM2VjMTI4ODZiM2RmNjI3NjNjYTk3ZjdjMjJhNDMwZjcxNzQ1NDRiNmUzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzY1OGE2NGY1OWU2ZTZmZmNhM2Q5NjljYjEzZTQxOWRiOTU4MWNkMDliZDFjNzhiOWFjNzljNWE0NDgzMWY1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/open-sesam.rst#L9-L16",
+          "version": "repo-lines-v1:sha256:4324e1ef1bc1b3a7846775d23b785407f2514add75dbc7ba7f79793cca33d419:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTM3OTA2MDY1ODdiMzNjN2JjZWQ5Yjc3ZTFiZTg5NzAwMTY3NzEyOGMxMjZiODBjOWU2YzJhNDg0NzUyMWJmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTc2YWZhMTY3NDE0NTIyOWUyNDU5N2Q4ZDY0YzU3MTBkYzc1NDUyNjBmYzk5Zjc1ZmZiZDIwZGU0ZDJlYzI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU0ZGU0NGU4YmIwYTg1ZDU1ODk2YTk1MTA5ZTMyOGJjYTkxYjYxZWI2MGFiY2EyMDFkZDFjZTQzY2FmOGE4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmM0ODJiNTFlMDZiMGM3NDdmYzk2M2Q4Y2E5NzlkMzU0MjBhNjNiZjc1Y2E2MjgxZWU0MWEyNDMyYjk1MDM5MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5b0cbb5ea1764851bdb888642ae33d8f",
+      "statement": "The roadmap is explicitly subject to change and retains self-hosted clustered architecture (Q2 2025), multi-compute resource optimization (Q3 2025), selected-entity history deletion (Q4 2025), and high-level configuration (2026) in its Planned section.",
+      "evidence": [
+        {
+          "resource": "repo://hub/roadmap.rst#L7-L43",
+          "version": "repo-lines-v1:sha256:6eaf6021e076daade1e6c7566046444c4682e81a109923f43a9da6377efa7492:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmMDZmYjc3N2QyZjMyZmJkNGQzMDgzOGQ4MmViYWFjNjQ3NjcwM2VmMDdhZTMyNGQ4MDE4NDNmODgxYmIyMmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4MjM1YjE0MzllMTdhMTExYzJhNjQxYmFjZmQyOGUwNzI2N2U5MmJkM2NjZDZjZjBkY2FiMWE5NWYwMGNkODYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgyM2ZhYThkNDBhMDU3NzViZDE5YmU2YTU1ZDAzZDAxZWIwYTJkOTQ5OTcxZmVlMzE5Njk5Yzg5ODMzNTkyZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwNTEwOTBiM2E1Y2YzOTk4NjViYmEwNGNjOWFmODYzN2M0Nzg2ZGExYzIzYjlmNWRhOWRkNWJhMWQ4ZTU3ZjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e40b744bd358403a976f795fef123e29",
+      "statement": "The roadmap describes Public Preview as experimental use and retains exploratory prose alongside availability notes for TTL on deletes, webhooks, and connectors, with property lineage offered as part of Integrated Search.",
+      "evidence": [
+        {
+          "resource": "repo://hub/roadmap.rst#L45-L94",
+          "version": "repo-lines-v1:sha256:9bd1ba76a58a0d658b5030af8433a4575b846046ab676e7953fbf5fc8277df40:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwN2RkMWE4MTA4ZjYyZTZhOTYwMzFlZjljZTBiYjc0MzI2ZGM4Mjg3MWVmNTU5N2Y3N2U5NmVkNjU0MzU3YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2Y2Y4NmQ0YzRmMzhmMTQ0ZGUxMWU4M2NjNDkwNzU2Y2U4NmQ2NGI3MDM1NGY3MTkzMDM1OTlhNTg5OWRlNTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiYWI3NTYxMTc1ZjBkNDhkMmRiMzk4Nzk0NTcxMzYzM2Q4ZDgzMmE3OGU4ZGQzZTA4ZDBlZWZhMDYyODYyMzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2YWY4MWVjOWI5MGYyNWYyNmU4OGVlMGVkNDFmMDVhMWQwMGJlNTY1NjI1NWU5MzA0ODBjYWEyMmMwYWNkZmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d4c604312d1d45cf85c76c2e71a90b49",
+      "statement": "The roadmap's Generally Available notes qualify Metrics, Integrated Search, and self-service VPN availability by Clustered Architecture; this does not establish delivery of the separately planned self-hosted clustered variant.",
+      "evidence": [
+        {
+          "resource": "repo://hub/roadmap.rst#L13-L18",
+          "version": "repo-lines-v1:sha256:49d66c3f194467a11c7370549845aa5e30b3e8154258647b0a7208337101d0c5:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBlMTQ4ODk3NWIwN2RlNGFkM2M5NDU5OWVhYTBmN2Y5Yjg4ZjQ2M2U0MTllNDAwMWMzNTQwMGIzMTdhMDUwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGQzMjIxOTlhNjMzYTIwZDgwYWY5OTRiODY5ZTU4YmJjZGE0YWQwMDU0ZWE0NmFmYjQ1Nzg1ZDUyY2JlZTYwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTg1NjkxOTkxMzNmZjkyMzJmNzVjMDZlY2ZkMjA2NmUzMTAxNjRmOTE5MTJmN2IzNTQ0YjJiNDEwZTliOTQ2NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDllYzVmMzIzNzg4YTFhZDBhNTc2ZTBmZTZjMWIzNjI3ZGM4ZTdiZWJmYzZjNzUzZTNkMzNjNDVjODVlMDgwMSJ9"
+        },
+        {
+          "resource": "repo://hub/roadmap.rst#L168-L176",
+          "version": "repo-lines-v1:sha256:49c9be785a241cf8b8b31f5d298429cab8c0b7dc4c05e02e408c19d50d2ccb3b:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWRkNDI1YjU3YWIyN2FkYzhmNzZlNTQ1NzcyMTA2ZGIxZDJiM2NmNzRiMWE1OWRjNDFiZjdlMWI2ZWNjZmIxNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNhOTA1ZTYyOTE0NTU4NThjNGVlMWFmZDM0ODk4YjNiNmRiMWNiZGFjNDZkMmNhZDc3ZTc4YTVhNWU3NTNhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWMwZjgxY2QzN2Q2OWU0YTY1NTBjNTdmNTgzMGExYjVmM2MyMDkzMmRiNGNiM2M5YTJkMjZlMmFjMDkyNGVlYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWE5ZTJkNTRkNGMyZDBlNWU5ZjBhYzRjNTQxMWQ4MzliM2Y0OTdkOTJmNWY4MWY4YjVhM2FlZGMxY2VkNjdmOCJ9"
+        },
+        {
+          "resource": "repo://hub/roadmap.rst#L96-L127",
+          "version": "repo-lines-v1:sha256:83b32675ae0f24ba86f08247ea3c194723dfad4e303ec81a0d9a5c85939aa268:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNjIxMGIxZGNjMmI2YWFmYjc3MWI4ZTk2ODgyNWYyZmRlODQ4NmMxY2IxZTA0MzMwMjZiMDQ3ODM4MzMyNDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmNjc0ZjUwNGFmNjYyNWFjYTE2YzU2NDA4MzY2ZGFkYmJmYmJhNWQ0ZGU2YThjZDQ5NzU1Mjg3YmYxZmI2YjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5NDk2ZWQwMTQ5ZmYzM2E2OWQ2YzkxNzYyMWQ5OTJhZDhiY2E3YmMzMjlkZTVlZTZmMzI2NTk2NDEzNWRhY2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMyZGZjYzZiNjdiODZlZDRiMGIwNTBlYWRmNmQ2YmFjMGQyODc0ZjViMGE5ZTRkOTU3YjEyMDg2NjM5ZTRmNjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bdf8de53e49545a4a7b7a0933fe1ecac",
+      "statement": "The roadmap explicitly states that all cloud subscriptions now run on clustered architecture and that Durable Data is now available on all cloud subscriptions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/roadmap.rst#L129-L154",
+          "version": "repo-lines-v1:sha256:651392c1073aae01632f898f28547424a247b8a5f803e6d3940c923e2be5edc8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhYzJmOGI5NDgyMTY0Njc5MDU0MmNlOTIzZjYyOTIzMzM3MTc3ZWUyZjQ0ODJmZjUzOWIyYWE4ZjIwZGUwNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5ODIzNDE2NGQxOGRmYjgzMzBiZmI5MGRjMTJmOGUzOTNjOWNhODVjZjY4OTgyOWI3M2Q0YmFhMDI4MmNlYzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExMWI1OGJiNjhiMGFlMTA2YzFmMGRhM2MyYjVjNGZiODI3ZWNkYTJlMmMwZTFiY2FiMGQzNDM3N2Y0NDMxOGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2YWIwOTQzOGYzZTRiMWFhMWJkYjczNDcyY2Q5ZDFmNjU3OGVmYTkyYTlmYjZiMmM2MzcyZWQ4MGUzZWE0ZDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_327fb36449944545a522e5a5b3db05d2",
+      "statement": "The pricing reference restricts developer environments to a single developer or CI use, describes them as cloud-only without backup, VPN, or SLA support, and excludes test, staging, and production hosting; production/test environments document automated backup and SLA/VPN support, with geo-replicated backup included in cloud environments.",
+      "evidence": [
+        {
+          "resource": "repo://pricing.rst#L10-L17",
+          "version": "repo-lines-v1:sha256:0aeebf4a2eaf5a89396028128f357483ad541c4f00bbfb52b5950204f952c884:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBhNmJhNGZiNGE4YzBhYjM3YTY5ZDk2ODYzMDBiOWRkZTJiNzQzNDBmZDZiNjcwNjJjMzc0ZTdlZDg0ZjQ4ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQ2YjhkODEzYzU0NTZlNjM3ZDNlZDg2YmUzZjQ0NzExOTFhMmEwMDk3ZTg4ZjgxZWUxMWNlMTg1ZTJlNWM5NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODYxMGM2NjEwNmUzZjNhODQ3MzQ4Y2ExZGRmNjcxYmE5ZTk1NmJmMjQ1N2FlMmQ4MjkyZDdhODViOGU4ZDBhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGY3MzYzYmFlZGY0YWMxZDJkMGEzNGM5MzRlYmExZWMwMGVjODgwMTU0NGUxMmQ1MDIzNWUxZTdjYjQ0YjE1MSJ9"
+        },
+        {
+          "resource": "repo://pricing.rst#L30-L34",
+          "version": "repo-lines-v1:sha256:c2d8659b6bd8ec41123bea0fefb601046e2fccf6a8912487dac4134b90834e37:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQ0N2RlY2JhMjVlMjFhMGZkZDViYjM5Y2ZlNDdjMDk0YWFhNjRkYjM1MTVhMWRiYzY2YjdiNmMzYTUwYmI2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWU1N2RhOTUwMmJmMzFkZDVjZWRjY2M5YWQzOTM1ZWM4Y2QyY2YyNDc0NmZmYzJkNTgyOGEyNTIxY2ZmODI4ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmI3MzQ2MWE5NDA5ZTlmMTExOWI3MjZkMTBmYmY1ZjBlM2MzZjVkZTdhYWFjZmVjZjNkNmFkZmU1NmQ4MzAwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQ0NTBmZmE4ZmRlMzQyMDcwYmViYzNmNmNhYzk3YWFjNzY4ZjU1YjQ1ODM0M2MyZDJjMWRjYTQxMjU2ZTFkMSJ9"
+        },
+        {
+          "resource": "repo://pricing.rst#L74-L79",
+          "version": "repo-lines-v1:sha256:76311635aac8733fb1572a313e1681cb2299258965d68be69591107bac88555e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTc3OWRiMmMwODYzMWIwNTQ2ZDY0NGMwYjJlMTFlY2FiNDI3NzQ4NWQyZGJkNjk2MWYyZWRiMWU4NjExZjhkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRjMTI1MDBiZDY3MzYwZTQ2ZWFjYjcxMzA1MTEyZGM1NzU3M2E4ZDAzNzA0MDZjZTRjZWZmNTM2OTE2OTk4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzdkNjkwYWVlNTIwY2Y2M2MwMTdjNTYxZDA3OTc0MWNiN2VmNjgyZGJiYjdjYWZjZWUzMzI4OGQ5NWFmMTRmOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e45c0a59165e4476811fbdbb6476514a",
+      "statement": "Developer Pro's roadmap entry retains an estimated monthly price alongside its availability note, while pricing.rst supplies a separate subscription fee table and a Price adjustment section that allows subscription fee changes; the roadmap estimate is not a timeless subscription price.",
+      "evidence": [
+        {
+          "resource": "repo://hub/roadmap.rst#L156-L166",
+          "version": "repo-lines-v1:sha256:fdf7dae8444f1b2cf91296c28fe11b1880d782d84a327620d9ee16a69ee40d1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2OTlmZjgzNWM1MjMzNWNiYmE1M2RjMzU2ZGI0OWUyYTY2MTk3ZWE5MDY2NDM2NTBkYzk4MWQwNjQ2NGEwZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1NDVjYTY3MzkzZDkyNjVlM2I0NzBjYjE2ZWI5NTgwYjg5YTJiZjczOGQzMWYzMjhlMzZhMWQwMWYwOTIwMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyZTNhMzMyM2QzYTAyMDJjMjg3ODJhYTAxYTY4YzM2NGI4ZWZlNzY4Y2ZmNThlOTk0NDRjZmE5NDY5MjdkMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjMDQyMzk4NDljYjY0ZjhhYzc2MzM1YTg1OTY4Y2U2MmQ5MDI1YWYxNjBlOTg4NTdhOGZhODE2MGRjYzU5N2IifQ"
+        },
+        {
+          "resource": "repo://pricing.rst#L19-L28",
+          "version": "repo-lines-v1:sha256:fa307a486ef3ab13ff4839fd8bfb3636371d9b6ba26e0ccd5dd4578a4cfec84f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Yzk0Y2E0ZTM0NWY4MmZjMmZkZTRjMWFkYjRhNzhmNjkzNmY0MjYyNmZmYTVlZDkwNjhjMWE1ZTE2NDFjNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjZjMzQ5Yjc4YWY3YmFhNzc4Y2U1NTI5ZmZmYmE5MGU4MGRlYjNkY2VhMzM0MWEyMGI0YTlmZmViZjE3OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3NGZhNGUxM2JiODVhN2IyMTk4OWRjYTAwOTA1NjgyODI3ZmI2MzgyZmI1MzliYjUyMDNhMGYyYmI3YjQ0OWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5OWIyZThkNjhlNTY2YzNmM2ZjOWU0YzU1MGQxODEwZDM0OTJhOGJjZjFmZjc0NzBhNDAyYWE0ODgxNDQxOGIifQ"
+        },
+        {
+          "resource": "repo://pricing.rst#L97-L105",
+          "version": "repo-lines-v1:sha256:77b8bb3ac1bcffb62996cb6119c4693b23352131c29863be75ce0e9687b6e2e4:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBkZTNjYmNkY2E2MzNmYWY4NWZjY2U2NGZmODg2NTU2ZjA4NGE4N2NhYjk3NzdhNTI3NzY4NTJjYmNkMDQ3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ZmYmM1MTg4NGYzZDA0MjI3NjFhZDIyZGU3NDU4MzIyZTM2YWRhZGVmYmU5Njg3YTljNDlkYjI5ODQ0NTU3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzAxODg5YTNjNzQ3MGZjYzFmMGYwMjhjYjE3YTM3MDE0ZTA4Y2VmNGI4NjYwMzEwZmE0MzI4NjgzZTFjMTRiNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3843aa97d1754c1dbce793147c3f2bf2",
+      "statement": "Durable Data is documented as a paid, pipe-level feature with metadata.durable defaulting to false, and enabling it increases the data consumption of durable pipes by 3x.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/durable-data.rst#L36-L38",
+          "version": "repo-lines-v1:sha256:ef64a2ba6793d71e7405451a3c05186ad88d2a08ec717c3b3aec594e83ac8b6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODBkOTcyMjE0MmExMDcyNWYyYzBjMjkzZjA1NWE5M2I5M2E4NWRkNGVkZjk5ODBiYWRmY2U2NDI3OTQwZjNkZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzczZTUzYzJiNzc0NjFiOTJhN2U4MTc2NjZkZTJlNjkxMDlhMDdlYTEwNjkwMWE4M2RkNmYxY2NjYWQwYjNlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjM1MjI3OTJhNjdlNjM5Yzk0MjlhY2QyNjM5NzNmYjFmYzE2ZTJlYzE4ZTk2MzdjZDkxZmNhODYzMGM0ZTA2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTQ3MjJiNmQzZGY0Nzk3NjAxNDIyNWIxZGEzYTI3YzVmMmU5N2U1NzhiMzg3NTBkNjRkMTZmMjBhNWU3MWExNCJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L68-L89",
+          "version": "repo-lines-v1:sha256:1f8f661847185626f1978a092e3b5cd70cd952f3167a159907dd3e947fc1b9ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViMzU5YzVhN2ZjODU1ZDYzY2Q3MTI3MjZkM2RjNTY5OTcyZGI4YjVmZjI4YmEyYTc0YzM1YzIxNzk0YWQ2NzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyYzJmODkyNjk4MjY4YTFiMmUzMDQxZWU0YjliM2VjOTBiNGYyZGIzMjA1Nzg2MmMzNjBjNGQ3ZWY2MjIyOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmYmQwMDkzMTRiYzI3MDg0MTY3MzRhMDJhZTVmZjM5YTFlNDhhMDUwYmU5MWY0M2IyZmFhOTIwMDJjNjJiZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7e76b81cf958441bafc1e88f76868ef1",
+      "statement": "Durable Data documentation describes high-durability storage and replicas as reducing data-loss risk, contrasting this with the possible loss of the last 24 hours during recovery from cloud backups and highlighting pushed inputs and non-idempotent sinks as sensitive cases.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/durable-data.rst#L9-L24",
+          "version": "repo-lines-v1:sha256:507b2a2d9685e7fb977ded357edbcb1684e9f6bd7e7e1e184a20d6c666772d26:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4Y2YwMTMyZjM2MThhZDBkYTk2Yjk3MDk0NDVjZTM4YzA0N2NhNTI0YWVhOTFlYzQxNjdlMzhhZGEwNzkxZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2MzAwOGU4NmYwZDQ4YjI4YjFlYTJkMTgyYjMyMTEwZjI0ODk5NGRhMzFkZjJiNzllZGFkNzljMjQ1NGMzYmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJmZTEzNjU1N2M3OWNhZmNlZjUwN2ExNTc5MGYzNWZiYWVjZmVkMWE2YTZiMWQ1NzM4MDAwODUwZDAyODAzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljNDAxODRmOGZhZjQxMWUwNmFmODRlYWFjOTQ5OGY5Nzg2MjNlNTNhMDYzMDYzMTZiNzdhMDI3ODlmMTAwNDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5fe7396de92a48d5a8307b4daac9c163",
+      "statement": "Integrated Search is marked as a free feature but documents a 2x increase in data size for global pipes when enabled and availability for subscriptions with clustered architecture.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/integrated-search.rst#L1-L16",
+          "version": "repo-lines-v1:sha256:996e315a87feae8cf011c77e6cd73f57a9309c2f9f123b0c8c67e50a1365da7e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4YWY2MmFmY2I5NzM3M2E0ZDUyZDVmYjdkZTFjNDY2MTAyYjY5NTlmMzM5NGY4Y2FjMWQ0OWVlY2I0ODlmYjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NjdkNDEzNDczNWU3NjZlYWM5N2E1ZDg4OWI0NTExNjM4OWVmYjRmNDY1NDgxZjlhNjZmYjg4NDZiOTNjODMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2ZmQwNjE1ZTUwOTcyMDI0MzM2YTAxODVlYTY4Y2JjZTA0MWM2Y2QwMTAxNGRkNDI4OTBhMzIwMzUwMzViYzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_85fac872af4247d292fa00e570410643",
+      "statement": "Metrics documentation marks the feature free, describes an enabled metrics-and-monitoring bundle including custom notifications, insights, and the metrics API, limits availability to clustered-architecture subscriptions, and instructs readers to check the monthly-price effect through enablement steps.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/metrics-api.rst#L1-L31",
+          "version": "repo-lines-v1:sha256:28de54d5f12d8a3cbf21194c89757d69d7b28542c3139659c672ee0da36348cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNzE2ZDdkMmZiMTBhZTgzYTAwNDI2MzI2ODM2ZmY3ZWQ4NTAzODI4OGRkMzEyNGMyOWMxZTNiMzZkNWZhMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxYzNkZGY3NmU3YzI2NDA2NjQ0OWQ2NDFmZjgxNDRhMDFiYmIyYTA5YTY5YmRjNTJkNTk2YzJmNmQ4ZmExM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkOTMxZmRmMjI3ZDMxNDFlMDJhNDQ4ZGNmNmEyYWY5MjViNGFmNWU2NzE3NTkwNzBjYzkzNjY2NDZhNmI5MzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1655fb24704146e6a6e23991df28097e",
+      "statement": "The SLA reference states a 99.5% uptime target per installation and defines planned maintenance, downtime, and exclusions, so its availability target has contractual scope rather than establishing per-pipe success or request-latency semantics.",
+      "evidence": [
+        {
+          "resource": "repo://hub/legal-sla.rst#L5-L25",
+          "version": "repo-lines-v1:sha256:0edfc95a21ff5d27f2b53ebdd378a4312377f89ebd46c8c357924cf0ad9c5ecd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNzkwYzc1MmQ4OTE0YjA0Y2QwNWFmMTk3ZTgxNTU0NWNmMDkwZTAxYWUwOWQzYTlkMWRhMWU1ZTdiYjVmMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwZjAzMzVjZWVkNjhkNjI3MTMzZjdlZDAwY2FmMWEzZGM1MjFiMDE2ZmViMDM5NTNkYjgzY2I3OGU4ZTA2Y2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyNDRlZWY2NDE3MzI4Mjg1MTEyNjFkYmMxM2FkOGViMWNmZWUzYmM1Y2Q5Mzg2YzY4Mjg0MTEyMzE0Yjk4NTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1NTg1ZjY4Yjk1YzE0M2YyNjNjYzg4OTkzZTlhYTU1ODRlNGI2ODhiN2MyOTRjZGRkZjk5ZjQ4ZDAzNzI2NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a07a6e1a024040d2a0011ce81d4cce10",
+      "statement": "The SLA reference distinguishes reaction time (starting investigation) from correction time (restoring normal service), applies stated business-hour and holiday qualifications, assigns reported-error priority through the vendor, and ties the selected SLA level to the service arrangement.",
+      "evidence": [
+        {
+          "resource": "repo://hub/legal-sla.rst#L142-L162",
+          "version": "repo-lines-v1:sha256:502905fac1db64bfd54a0a8d71eb857b182d9c0b508b0b057d587ed54abb5c94:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0OGIzZWExZDRiOTViOTQ3MzljYWY3OTYwNTNkYTk4YWY5NDkyYTAyYWJmOTNlM2YxOWNmZDVkZDI0M2U2N2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YThjZmM0MjFiZDYzZGEwNDZhN2EyZjlmMTMyYjQyYzBlNzU4YjVlN2I3OWI1MzdkNGUyMTVlZDE2YjMzMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwMGMyNWRkYjk1NWM1YjIwNDNhMmI2MmNlZjg2Y2IxODQ1NTkxMWUxZDhlOGUwNGI3MmUwMDM3NjA2ZDY5MTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MTFlNmFlMWVkNDdiOGEyZjI0NjMwYjAwYjFjZDJkYWIzMjNjZjI0ZjVmNWE2NDlkOTU5YWU2MGFlNDVmODIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f9055c5f537d4d3aac0f442f7fce7eaa",
+      "statement": "Terms of Service section 1.2 describes access to evolving service functionality rather than a use right tied to a particular underlying software version or fixed functionality.",
+      "evidence": [
+        {
+          "resource": "repo://terms.rst#L46-L56",
+          "version": "repo-lines-v1:sha256:0cfc473f8ee3fd521f672ec65c18d1ecaa8147755f19d10e4c651c02bcd82123:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhNGZlMzY5YjJiNTQyMDY3ZjY5MWUzOTEyNjFmNmJkMzc1ZmNkNGViMmY4NzM1ZWI3M2RhYWVlODJlYzZlOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkMDM1MzY3YTFiY2I2YTJmZGNlZTg2ZDdhMTZlMTNkOTUxNjFlODIyMjU4ODNmODQ5NDE2NTM0MGJiNTc2ODYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2ZjE5NzJmMGQ4NjQ2Mzk2NGE1MDU2MzY4NGE4ZWNkMjA4MGUwYzJjY2ZlOWNiNTQwMzA1OTM0OTNiMmU5NGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRjMmVjMTAxMGE4ZDZjZjg3ZGQ0YTM1NTRlODUzNzJmYzliNWQzNGY0ZGJlNTY2ZjRmNGI3MjczYjdkYWZkYzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7773a730983a409b8f21b6bdb6d73887",
+      "statement": "legal-service.rst is a contractual service specification containing data-reconstruction provisions, customer network/access responsibilities, and the Service Desk error-reporting procedure, rather than a standalone runtime implementation reference.",
+      "evidence": [
+        {
+          "resource": "repo://legal-service.rst#L30-L56",
+          "version": "repo-lines-v1:sha256:f0d55e9185d345916d3c1ad286a2b46560eebd7f3399a7cb14a86274557f3ee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4ZTZlM2UxMGUxMmZkODZlOWQ3ZmJmOTdkZDY0N2JiOWUzZWVkYjk3NGQ2YzdmMjU1MTI3ZDUwMTlhNzg3YjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNzM2MmJiOTJiYzEyN2E2MjQxMjJhOWUwMGFmNDdmMDQwZWE2YTE4ZjE0MjdiNDJmNjQ3NDRkZDhjZTA4NTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjNDhiMTRhMmVkYTkwOGRlMjRjYzBiZjE5MGI5MzFkODE4YjAxNTQ3ZjUyOTNkOThiMzE1OGRjMzNjMmYyMDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmNzVjMzk4OTg1MTEzNTYwODk1MmMzOTgyOGE0NGYxOTU3MWJlODlhZDI1MzExN2JhODYyNTVkNzBlMjllNDQifQ"
+        },
+        {
+          "resource": "repo://legal-service.rst#L7-L12",
+          "version": "repo-lines-v1:sha256:a589471c3d262bc261b1e9cee5a390b6a0198d40a2538cb4ef29421a8eeb463e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWY1NDU2MjNlZTVhODk2M2I4OGRjMzgyMzFjZTE4MjI5MDY2Y2NiNzY1MGI4NmRiZjI2MzUwZGE0NGY3NDRiYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZkZTE2YTdlNjhjMjZjM2JkMTBjNzZkODEwYTU2OTc2Y2IxOTMyMWNiZDFiYjRiZmZkY2RkZDNhMGY2Yjc1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWUxOTBmMzViMDRmYjBhODAxZjU4MjQ3NTNhNzM1MGMzN2E5MjVjY2NlN2VkMzcxZjJhMDc0ZjEwMWUyOTc1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2FhYWZiZTZjOWNiZGVkOTQ3ZDI3ODAyZTZmNGNjZGIwMTE3YzAxNTdlMzkxYTNiNmZlMzA3MTQxYjMxYjhkNyJ9"
+        },
+        {
+          "resource": "repo://legal-service.rst#L78-L93",
+          "version": "repo-lines-v1:sha256:7ce48ba319070bc6f1cacc2716a6c2168fc38d59e03b55f70dfa8b609d0b2e72:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0YWUwMWY0ZmNjNjhkMjlhMGM0MWEyNzI5YWM2MDI5NDU2MGY4MjYyNDUzNzRiMTc0NWQ3Mzk1MTlkNTcxYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjZjMxYTU1ZjY1ZjU0NGQ2OTFkMDRkZGJlMmE5NTA2OTUxNjhkZjhiZDYxOTM2NmU3ZTBjMGUxMDU2MmFlMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3Y2ZjMmM0MTUwZTY3ZjlkZWJjNjQ1ZjAyN2MwMDllYjVjZmM2YTk2OTE4ZWMwNTQ1ZGZlNGI5Njc3YzAzNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9555c93d54674c6d96ef4135b7c28480",
+      "statement": "The Data Processing Agreement applies if and when the service processes customer personal data, forms part of the Terms of Service, and defines the Customer as Controller and Vendor or Subprocessor as Processor; this applicability is not stated as dependent on the GDPR Platform product.",
+      "evidence": [
+        {
+          "resource": "repo://legal-dap.rst#L38-L42",
+          "version": "repo-lines-v1:sha256:172c7401f726c004d7617e2957606789d15d293c4b7ec43baf4c98c517ad624d:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGE4YzFjZDlkZWU5NzNmNGI5ZTRhZGIzMzdjMjgwMDgyMGI5MGFkZmIyOGRkZTAyNDJlMGM3Y2U2ODJmM2FjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTY1MDVmMjFkNjA3MGFlOGI5YzI0ODNlYWMxMDkzOTY0MjM3YTk5OWY4NGM5NDE1MmNhMzlmODQ1ZGUzYzdkMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTgxZTE5NjI4YmI4OGZhMzc0NjkzZWExMTk1YWY0NGU2YmQ3YzAyZWNlNmY0ZjIwZDIzMjE2YThjZTFjZmM3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDVjZjRmM2MyYzA0ODAyZDhhOWY2ZjUyYTcxNmQyMWQ4Y2UxMzNlNzJhOTg3OGM1MzQ5MDkyYjFjNDg4NzI0NCJ9"
+        },
+        {
+          "resource": "repo://legal-dap.rst#L65-L85",
+          "version": "repo-lines-v1:sha256:cc768de9520cfe44e31a978cb8923ba25b67ad3381b432a710a4b25d01ea651a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3M2UwMTgxNjUwMmM5YTAyMTY1NTRlMzlmYzEwZjVjYWY0OTk0MDk1NzhhZTYzYWE1ZjNlZDc0OGFhNDhhMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhYzE3ODg5NjA3ZjM5ZmYxOTg0MTM1ZjQzOGExMWViYTVlNjg0ZDQ0M2I0YTNmMzc3MGViMzYzY2I5ZmVlNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlMTQ0MzQ1MjM5YTRhMmRjYWY0MDlhMTEwODkyZDk5ZTdmZDJhNGQwYmRkMWJjMzhiNjViZTY4ZjhkOGY4OTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjNzliZTMxOWQ5NGVhZGEwZWE1ZjhlOWQxZWU5ZWRjYjMzMjFjMWYwN2ZhMzdiNDkxNDEyZWUzNDZlMTg1NjUifQ"
+        },
+        {
+          "resource": "repo://legal-dap.rst#L7-L16",
+          "version": "repo-lines-v1:sha256:a69c9ea625db2d814e6d045d9842fe025bbd01253bb1c970f9b556fb44a1d6b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhZDU4ZjkxYzViZWI2NWY1YWMwYjQwZjQ5ZGZhODM3NGU4NDI4OGVkMmMyZGI5Yzc4ZmNkMTA5NGQyZGI0NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZjA4NWZiYWQ0ZDgxODEzZWVmMWNjY2QxYWIyMTg0YjMxOTI3ZGFhMDdmMmE4ZTY4ZDhmYzRkMTEyOGZkMDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwODJiOWUwYWZmZGU5NGNjNmI3OWY0Y2I2NjA0MGJmOGZlYWMzNmRkMjkzYjhjY2M1MGZkN2I5YTEyNDFhZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiNDg5ZWQwNmY5NzRmNTU4N2Q4ODI0MTA2MGY5YjAzZTJlZmFlOWI2NTJlOTIwOTEzMmZjNWRiMmIzMjNjZGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b02da70547db4eac899e58d9162c7a11",
+      "statement": "The DPA's deletion/return section is tied to cessation of services involving personal-data processing and includes legal-retention qualifications; it is not the dataset compaction configuration for normal runtime history retention.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L90-L118",
+          "version": "repo-lines-v1:sha256:d420c274ccff8f1b2336afddff9ceef46e9597df0cdb96d4172297853e192329:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmYjZlY2M4NjVlYzEyMzc0NzUxZGFjNWE3ZjQ3NDAzOWMwZDI1ZjNhZDEzNTM5NWY5MGFmOGJhODYxMTdkNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyMGFmM2JlM2ZkYmQ3YmQxOGU3MDMxNTFmNmNiNWM1MmY2OTFlMTQzMmM0NDEyNDg2NGFjMDRjMzlmNTEzZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhYzg0YjUzODYyYTYzMzVkZjgwMTcyMDcxNGIzMTBkMmVmOTZhOTdhMGVmMWIwMThkN2I4NmU0OGJiZDVlNzYifQ"
+        },
+        {
+          "resource": "repo://legal-dap.rst#L378-L408",
+          "version": "repo-lines-v1:sha256:761b680534b81acda8dac04b62367b487b748f060d5da0aba025af213750298f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxMmUxYWM2MDA1YTA3NmIxNmJiMzAwZmZiYTBmYjI2OGM0MDVhNjQxNTY3MDg2ZjM5OWIzZWI2ZTc5ZWNkMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlZDU1MWRiY2VhOTkxMjRjOGY5M2VjMjVlNWFmODI0N2ExNDZlOWUyNmE0Y2Q0MWMwNTg2MzA5MzFiZDkxNmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5MmEwYTkzMDdiOGMwMDMxNjNhZjNjNzVlMGZjZjk0YjEzMGFkMWRjNjU3ZmZkYTJhZTI3M2U1N2RkZDJhYjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQxYWVkM2FjODk2ZmMxZWU0OWNiODY3MWJkNmZlM2ZmZWE0MWMyNWJmNzE2NzFmY2RkMGQ5OWFjZmJjY2YxNjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8c5307014d7b46d09f7d037824536a9b",
+      "statement": "The privacy overview explicitly says its policies were last updated September 2020 and separates collection purposes across notices, including seminar registration, general visitor/customer contact data, service personal data, and recruitment data.",
+      "evidence": [
+        {
+          "resource": "repo://privacy-policy.rst#L126-L145",
+          "version": "repo-lines-v1:sha256:522c2ad846dbc73eee70f24e03a9d4711d55acc8ce8e391e48cb840b35481447:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2ZWY2ZTJmNDM3Y2JkMjU5OTlhZGNkZGY2NDkyMTQ3NzIwMTM5YzQ2NDY2MTNhOGZlZDE4ODA5YTliZGEwZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5ZThlMGE0OWY5MjFmYjQ5MzQ3YjEyMmQ5MDQyMGFlYWFmZDMwMDdiZjI3OTU0YmMwYmNiOTk0Y2Q4NjUyMmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjNmM3OTNlMTAyYTk5NDljMWU2YTc0OGRmMWUwMGRiYjFjMDRlNmE2NzFkMzkwMGU0MTViMDhiOTliYTY5MTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyNmZhYjExZTg4OTNlMzVkMzZhYjgyZDNlM2RiZjUyMzA0MGIxYjU3YTJkZTM3Mjk5OGIxNjJhYTA4MTVkMjgifQ"
+        },
+        {
+          "resource": "repo://privacy-policy.rst#L308-L353",
+          "version": "repo-lines-v1:sha256:c9baab603be5989eed40cb5c65210691c2dcc405dd367310f8de083ac71c3c29:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiZTEyNTAwYTdiMGMxZTMzYTRkYjIwMzRhNDhhNzRkZGZjNmRmMDRkM2IyZjg2NzIwYjA0NTY5YzNiZDEyMGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMjQ3NzUyZjRmMjJhZTQ1NzU2MDljMzc0ZTYxY2YzNzhiMTU2YTBjYjgyNzg2MDI3MmZjYTUzYTBjZWZjYzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjNmM3OTNlMTAyYTk5NDljMWU2YTc0OGRmMWUwMGRiYjFjMDRlNmE2NzFkMzkwMGU0MTViMDhiOTliYTY5MTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzMTVmOWJlMGQ5OWNkNDZhY2E1M2JkMjRmZjg0Njg4ZWU3NzNhODk3MjBkMWQ1MTQzNDMzMzBjY2ZhN2VlYmIifQ"
+        },
+        {
+          "resource": "repo://privacy-policy.rst#L5-L35",
+          "version": "repo-lines-v1:sha256:e5217a0dfd65cb379601e2fb692d4cb9b5261093901930b29915070943d4afd7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2YTgwNTUxYmQwZTI0NWE4YmY0OGQ5YzcwMDZlNDIzZmE4NjJiN2ZkNTNhNzc2OTQ3NTk0MGFkYzUyMGU1ZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4MzBjN2MxZTM2MmUxYzc0ZDVlZjk5NmE2NTYwMGI3ZmQ1ZDVhNGNiNmU4YzI1ZWE1NmU2MTg5ODJmZTA3YjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhZWRlYzJlMjBkNWViNWJmNjAxM2E4Y2ViNWRkMjZmMjUzMmJiNjIyNzNhMDMyOTJhMTA4ZDE3YmJlM2UxYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmNWIzMWZjOWJjZDIyMzk2ZTVjNDJjMDE4ZmFjZmJlNWFlMjk0M2JiNDhiMjU4NWQ0ZmYzZTMzNDk2NjFlMGUifQ"
+        },
+        {
+          "resource": "repo://privacy-policy.rst#L523-L529",
+          "version": "repo-lines-v1:sha256:1362a147b5b8d2cb2f86f7b853f2c2725c992064d0f09a77136f8d1676a1a47c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODlmMzE5ODYyZjZjZGMxZjFmMGQ2NTM0Y2I0NjBjMzE0ZTVlZWI1YmViMTI3MzAwOTAxOTA2MmY3NTNlM2NiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzcwNWYxNzE5MzczMzYyNTMwZTI4NGIwMTlkYzUzMDkyYzM3OTI0Yjc4ZGUxZGZkMTJjMTFiOGE5YTYzNTJjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODk5ZGJkMDYxYmE2NzNiMDA1Mjc1OWM5MDlhNWRiNWM1MzMxYzdiZmQ2NWQ2NGJmY2UyZWU5NmM2NGU3ODhjNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzI1ZDAxZTU1N2E2NDQwZTQ3MjY5MmJmMzcwNTNjMzNlZTIxOThjNjMyY2E4NzM1YTA0MzQyMDJjMmYxMGFhZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2c2a9f987855477698218d6a86d78b4c",
+      "statement": "The Service Privacy Policy distinguishes general customer/contact data from Service Personal Data and states that relevant privacy provisions of the Terms of Service, including the DPA, take precedence in inconsistencies.",
+      "evidence": [
+        {
+          "resource": "repo://privacy-policy.rst#L308-L353",
+          "version": "repo-lines-v1:sha256:c9baab603be5989eed40cb5c65210691c2dcc405dd367310f8de083ac71c3c29:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiZTEyNTAwYTdiMGMxZTMzYTRkYjIwMzRhNDhhNzRkZGZjNmRmMDRkM2IyZjg2NzIwYjA0NTY5YzNiZDEyMGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMjQ3NzUyZjRmMjJhZTQ1NzU2MDljMzc0ZTYxY2YzNzhiMTU2YTBjYjgyNzg2MDI3MmZjYTUzYTBjZWZjYzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjNmM3OTNlMTAyYTk5NDljMWU2YTc0OGRmMWUwMGRiYjFjMDRlNmE2NzFkMzkwMGU0MTViMDhiOTliYTY5MTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzMTVmOWJlMGQ5OWNkNDZhY2E1M2JkMjRmZjg0Njg4ZWU3NzNhODk3MjBkMWQ1MTQzNDMzMzBjY2ZhN2VlYmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_602ef57ab95f49fe9149deb42e9f1b3b",
+      "statement": "The partner agreement assembles both source parts to govern commercial collaboration: part 1 covers purpose, collaboration, and collaborative results/discounts, while part 2 continues with partner/vendor obligations, financing, intellectual property, and confidentiality; these are commercial/legal inputs distinct from connector runtime contracts.",
+      "evidence": [
+        {
+          "resource": "repo://partner-agreement-part-1.rst#L108-L146",
+          "version": "repo-lines-v1:sha256:5abfd6310946f8cbf0372ecb7ef90d567d67b11cdeca7ae2f05b046484c09d76:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjZGZhNTI4NDNkNmE1ZDcxYTRjNDUxYjc3YWJjZGVkYjg3M2NhYTU0MzY0YTE1YjcyOWJjMzcxNzQ5YjMwNWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3ZWU4YmEyNjFjM2ZlOTEzOTczMjhiN2Y2ZWYxMmUyOGIyZmRhNTdkYjJiYWFkZDA3ODM4MDU1ZDRjMWIzMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyNTAyMzZkYjhjZDczOWIyZGMyMTg0MDJhNWNkOTdkNzE3MTc5ZTRmYzkyYTk0YWFkZjllZTk2Njg2ZDk4ZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyMDZlNDBiMDE2NWY5YTJhZTBlOTAzM2U2OTg2ZjE3ZGQ1YzBhNDhjOWE0NTkxOTM2MTlmMzY5YjI3NjFhMzMifQ"
+        },
+        {
+          "resource": "repo://partner-agreement-part-1.rst#L36-L85",
+          "version": "repo-lines-v1:sha256:18ffae0c9a823c72063bf6de481687e0f8b0bb090909dbfcfb765358ad50e8a9:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1YWYzOTE0OGQxMzZjNThlOTc4OTllYTVlMDNiN2YwMWYzOTlhODFjMzY4MWEwZTlhMDExNTk2MDQ2YTczZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMzljMjU0ZmJkZmZiMzZlYzNjM2MyOGQ1ZGU5MDNlMDdkYjUxZWJkMDU2ZGM4OWViN2JmMWEzOGRhNzEwNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkOTVkNDZjYzQ3MTM3MzAxZWM2OGViNDY5NmQ3MzUxNzAzZjcwYmUxMzVhMjk4OTliODViNjdhNjgxNDBmMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjNTMwYTM1MTg1ZjU3MDZkZjlkNzM0NmRkNGUwZmMzMjg2OGNjZmQ3YTJmNDBiNWVjMTc5NTMzNDE5ZTkwYTMifQ"
+        },
+        {
+          "resource": "repo://partner-agreement-part-2.rst#L104-L180",
+          "version": "repo-lines-v1:sha256:bd9084dba21b959c1959417ee4e1c46ed486740431dd233703ec72310977565d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiNzhjMjhiNTBiZjA5ODljNTQ2NjdjYjliYmU0ZDM0MjUwYmY3Y2U5MTY4OGY2NGQ2Y2JkNmEwZTY0ZDAzY2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0N2FkYjM3ZDMyNDZmZmFiZTgwMGViOWZhMTg4YjRhOTE4ZGIwYmRlZmEwNzNiN2Y5ZTI5ODI4NjlkM2FkM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MGY0MWE3MmIyMGRlMDZmMjVkNjQ2ZmMzZjI4Njk2NjExZjYzOGY1Yjc2ZDA4MWJlMzc0YTc1NzhmMzZhMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmYmU5ZDMwMDA5MWI2MzdmMDA3NjFkNjQxMDk1MWZlMmQxZGIwZTk2YThlOTdhN2NhMzJkZjYxZDcyMzBlYTgifQ"
+        },
+        {
+          "resource": "repo://partner-agreement-part-2.rst#L19-L102",
+          "version": "repo-lines-v1:sha256:b5f10cf65f3575b38fe61adb80ff0407e7e45054a476c5ab1580d2620848d91c:eyJzZWxlY3RlZExpbmVDb3VudCI6ODQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNmUyMWI0ZWQ4Y2U1NTUwMTJlMzU5MGY4MzA4MmM3NzA3ZjhkZWIyZWNjYjUwNGZmMDc2MDk2NmM1ODM1NzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyN2QyZjMzZTlkNDEwOTk4OTdiZWViZmY0OTVjZTQ4MmVhMDkxZGI5NGI0NmNlYzg3NWExYjZkYmVkZDlkODQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwNmI5NzZlZjJlODI4MDdlYmU3MTExMTAyNTI3NGU2YWZhOGE3NTk2YzNkYmQ4ZmJmNTQwMzQwZWNlYWJlODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4YmZlNmE0ZDAzNzU2NGJkYjRiNzVlMzA0NWM2NDY3YzcwNTgzMzczMGVkOWM3ZWIyZDkwODhiODdiYWY1NDIifQ"
+        },
+        {
+          "resource": "repo://partner-agreement.rst#L1-L5",
+          "version": "repo-lines-v1:sha256:6340f290c3fb78caa5c0efa4f18d7a20b05ef40ad86d8790d27fe6b836e17f28:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBmYWIwZWQ2OWY3YjkwNDhhOGU4OWM3ZDRhNmZjMzE0YTI0NmQwZWVjNDE4ODc2ZDNhOWMwNDVhYWY4YmUyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTUxNWJkZDkyMGUxNTI0Mjk0NjJiMzNmYzNjODA2YjEzYjJjMjNkMDQ2NzM1MWI1ZWYyMzc4OTUyZTY2NjZkOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8437be3f666242f2bfa6b011326d44d4",
+      "statement": "Sesam Community is described as an open connector ecosystem and points to sharing guidelines, connector repositories, informal Q&A, feature requests, and unofficial Slack discussions, which are separate from contractual Service Desk and SLA review inputs.",
+      "evidence": [
+        {
+          "resource": "repo://community.rst#L9-L42",
+          "version": "repo-lines-v1:sha256:c40ce1314ac3c0ec4c130efe8e18530c747287bcd1daaa07a2cd1704469eef17:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmYTUzZmMwZGFiOGVmOTZkMDVkOGZkNGM3ZTQxYjQ5MDE4MjgwMzcyNWM2N2I4NmE1MzFlMDllZmZjNWZhNzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNGI0ZjQ4ZDliMWVjOTg1YWYyZjc5NWY2YTExMTY0Yjk4OGQ5MjY1N2FjMDFkMDM4NDcxMzA3NmVhMzNmMGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI2MDAwMGIwNjYxOWRiYTAyZDRmMzQ0ZDYwYjgxMzllZGY0MmU5NTZmMjM3N2U2NDg0ODFmMGY0MjJhY2JjYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/legal-sla.rst#L142-L162",
+          "version": "repo-lines-v1:sha256:502905fac1db64bfd54a0a8d71eb857b182d9c0b508b0b057d587ed54abb5c94:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0OGIzZWExZDRiOTViOTQ3MzljYWY3OTYwNTNkYTk4YWY5NDkyYTAyYWJmOTNlM2YxOWNmZDVkZDI0M2U2N2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YThjZmM0MjFiZDYzZGEwNDZhN2EyZjlmMTMyYjQyYzBlNzU4YjVlN2I3OWI1MzdkNGUyMTVlZDE2YjMzMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwMGMyNWRkYjk1NWM1YjIwNDNhMmI2MmNlZjg2Y2IxODQ1NTkxMWUxZDhlOGUwNGI3MmUwMDM3NjA2ZDY5MTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MTFlNmFlMWVkNDdiOGEyZjI0NjMwYjAwYjFjZDJkYWIzMjNjZjI0ZjVmNWE2NDlkOTU5YWU2MGFlNDVmODIifQ"
+        },
+        {
+          "resource": "repo://legal-service.rst#L84-L93",
+          "version": "repo-lines-v1:sha256:36e4918283e3563cc8760107674970ead00ac1eb8b6367b4a48f578bc9ae42c0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzM2FiMjQxNzQwMDU5MjdlOTY4YzM5NTVhZTAwOTA1ZmQ3NWI4YWVkYjJkZjcwYWVhN2M3Yjg5MTJmNmZhZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjZjMxYTU1ZjY1ZjU0NGQ2OTFkMDRkZGJlMmE5NTA2OTUxNjhkZjhiZDYxOTM2NmU3ZTBjMGUxMDU2MmFlMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0ZWI5YjQwYTVjNmJiOGFhNTViZGZjODg5MjBhZjdlN2E3NmU2OTk0YTgxMTMzMjYyZDFkNWU1MDAyYzBlNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

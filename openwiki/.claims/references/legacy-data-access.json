@@ -1,0 +1,810 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ba0fd7f9c491a690dc1a36af4d415dc1ab0567f673cdb9a0546429be0764a088",
+  "claims": [
+    {
+      "id": "claim_86515f8954e94362875b3b10640b105c",
+      "statement": "Databrowser's warning documents end-of-life December 31st 2023 and references the 2022-03-21 changelog, which identifies Integrated Search as its successor.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L921-L927",
+          "version": "repo-lines-v1:sha256:179ddf71bf11d867092283f70d1e4dca826cf0d179b4650fcb3707888942c713:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgxMDExYzExNWE0N2E3NTgzMWM5NmM0ODYzYjQyNTdhMmFmMzQ4ZjFkZDMwZWVjNDNkZDc4OWVlZGYyMWQ2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjVhNDg3Y2YyOWQyOTZlN2UwYWY5Y2EyYzgzZjNkYTM2YWNmZjIzZTY5MWY2ZTY5MjcwNWEwNGFlOWNkYWE4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZlOTE4YjkyYjI2Yzg2YjE4ODhmZWY0ZDM1ZWZkN2JhN2FmNmY3NTc3YjE1YTIyNWI1M2EyYWVhZmViNmY3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGYzZTMxNDg3OTQwNTlmZjdlNmY4YjU1ZjQxZDQwYTUwNGE0ZTliYWYzYTQ3MjM3M2E5MmFhOTY3ZTEwZjcwNSJ9"
+        },
+        {
+          "resource": "repo://hub/databrowser.rst#L1-L15",
+          "version": "repo-lines-v1:sha256:d1b0f4913f843fbe06a42eef69d982f7f6f81383319e19c45de7ab4f84f19fc8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxZWIwMzI2ZjdhZWEyNjU5ZDE0YjkxYjMyMDNiZTU5MGU2M2E2ZjRiNjRjMDRiOTViZTI1MWQ2NjFjMmY0ZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNDI1MDA4MzdjYzRiYjA2Mzg4M2U5ZjFhNTFjN2QyMzcwNzZlODM3MzA0ZDVmMWE2ZmI4MDRjY2IwNjU5ZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_566a70e528a14deabf4e380797018c6b",
+      "statement": "GDPR Platform's warning and the 2025-04-02 changelog document scheduled end-of-life June 30th 2025, but the 2025-04-11 changelog records early retirement.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L153-L165",
+          "version": "repo-lines-v1:sha256:fde3caa3ea3393c971d374056b4c7caf5ffa14749a31f641fb32ad475e2e1a9e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiMDIzYzBhNjg0YzU4MmNlMzgwMDc1NmRkMGE3MDZhNmQ0ZjIxNjJkYTc2YjdkNGQ3YTgzMTEzOTQ4MTllNWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1ZWRhZjk0MTE2NWZmZWQ5ZWQyMmQ1NmQwYTFmY2JkZWVlNmZmNDM1YjRjZWZhYWJhY2I1OTllMzNjOTU0NWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZTA3ODAwZDllNjBiODNkMzE3N2E1YTkwN2U1MWJmYzRmYjNjNTA4Njg2NzIzZmI5YWM1OGViNzRhODhmNWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4NTE5YTg2ZmQ1NDBlYmQ5Nzg4NzRkNjcxMzhmMTRiMzBmNmUwMjZjZjQ1YjMzODM3Y2IxZTFmMWYxMDdmZTYifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform.rst#L1-L17",
+          "version": "repo-lines-v1:sha256:ac11dacb3aad599e7aa5b36d029e23d0b4c6a5e17c1b77c1536ede7f1d20e06d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NzRlYTQ3NjY3M2MwYWM4NDU1M2FjMjIxMmI3OTM1YTk2N2RhMTZhMDEzNjY4OGYwZmZhZjg3ZmViNWJiZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5ZDVlMWIyNGM2MDdmMmNmMzFjOTE1ZmVmYjE2MjgzMzU2NTdmOWYzY2ZmMWIzZmU5ODBmYTU5ZjI3YTgxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhYmUxYzJlNTIzZGE0ZDk1Y2QwNDU0OTZhMTkwZGY5MGMwZjExZjc5MWNjZGMzNTJlYWY4NGQyNDAyYTRmYjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cbfcb913bbee4823ae0a5fda9ac18903",
+      "statement": "The deprecations document lists Databrowser and GDPR Platform and explicitly instructs readers not to use deprecated features.",
+      "evidence": [
+        {
+          "resource": "repo://hub/deprecations.rst#L1-L16",
+          "version": "repo-lines-v1:sha256:f36aee40e6ee5aa729e211a3729bbf5b503ee740aa87cba266f0cccd29ab35d1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NGI0NDUzMDY1N2I1ZTk4M2MyOGYzYjQ4M2ZlYzZjNzMyZjNlMTE1ZGVkNmI5YzgwMjZmNWU2ZjI1Njc0YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTM0NGFhNWE5Mzc4MjQ1M2ExMTAzODgwZDYyYWQ0NzZlY2I5ZDY5MmQ1ZGUwOWViMTBiZTQ0NmFhYTBiMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiNDYwYzNkNGY1YjI0Y2Y3Yzg5YjAzMDUxOGQ0MTZjMDYxYjFjNTYzOTk3YjQyY2VhZmM5YTdhZmY0ODVkMjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2cf7ac803e8d4935bcf6f5ef73c17b25",
+      "statement": "The Databrowser guide embeds swagger_databrowser.yaml, whose declared endpoints are internal-only and may change or be removed at any time, rather than a stable public API commitment.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L712-L717",
+          "version": "repo-lines-v1:sha256:ac4f4fe48508f8a19735188efa151215a198bb984832c17f2149642e218a37e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJiMjUyOTUyYWI0YjczMjU1OTI3OGE0Yjg5M2RmZDNjZDIzM2MzNDY3MmVjZTJjOTE2ZTFmYmUwOWFmOGFlZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjcwNWY5YWZjNjZkMzhmYzQyNmU5NWE3Njk3M2UzNGU2N2EzMDdlMmExNDBjYzc2YWYyMzNkZGE4YWM3NzJkZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjE1YmNhMTI0Y2ExZmFkYjM2NThiN2RlYzhiOTdhOTEzZDFlNWYzNzhlZmE0NTczOTE2NDA4OTc3NzJiNmYzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L2-L6",
+          "version": "repo-lines-v1:sha256:b3eac5a9b75b4574fd9d6331c2e4df2e3f05c3aa14c8cb8548772c35b6782a1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRiMWI3YWI2ZjRiZDc2NDUyYjI4Yjk3NzdiOWYyMTRkNmI4ZjkwNGM1MDk0YzA1MDhhNmZlZGZhMDQ2Yzg5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2NjZjcyZWNkNjQxODUyOTE5ZjBmMDgxMjU2MDQ1ZmU2ZWY2NGQ3NjU3NDUyMzBlNmY4MmYwODU1OThhMjc0YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0ac4859384d04752ab35e131a04bd6d9",
+      "statement": "GDPR Platform is documented as Management Studio for configuration and datahub access, a datahub for collection/connection/storage, and a public subject-facing DAP for requests, data, and consents; management access is through the Sesam portal subscription.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L7-L26",
+          "version": "repo-lines-v1:sha256:26ec52c6579a61beac2fbc4897fe0f6f7f8eabf280b3d630d18d3b3614be9393:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiZDJmMjlmMDg5MTFmZTA4NjVkMWRkMWU4YzNhOWNlZjQxN2I3ZDJiYmQyZTE5Zjg5ZWUzNDMyNGZjNzVmMzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiYjIxYTM5ODQ2MmEzZmU3OTZiM2ExNDFlMmYyZDk2NjNhYTAxYWNlNDk2MDZjM2VkMTZkZjY4NDY5MWNmYzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1YTNlNTc4NDJiNWJjMzM0NWZhNzIwYzFiM2IxMWZhZGJkOWM1M2JmNzhiMDM5ZDY1MGU0YzJmZDI5OWFkNmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzYWZjYmRiNDQ0NjRhNmUwMTcyMzEwYzlkMWY3NDI4OWVmOWU3NzllZWI2Y2NlYTdkNTAxNDU0NTI1ZGU5OTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_27f84977aa0a46bf8063613302593be5",
+      "statement": "Databrowser's narrative file configuration processes uploaded numeric layers in ascending override order and the end-user /sesam/data/databrowser.ini last, overriding /sesam/conf/databrowser.ini and numbered layers; the extra layered upload API is not exposed in the end-user GUI.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L13-L31",
+          "version": "repo-lines-v1:sha256:85812e3b5dd57a0b2722564bfd06124031e403dd37ff5744f1fd74f31e2568f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0YzZlYzEyNzQ0MmU2Njg3YTZlNDIwMTRiZDE3ZDYxM2UzYTQ0YWZkYzFkOWEwMTAzZjY5MjQ0YmU2MGVmNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxOWY1Nzk2Nzc3NDczMTllNjUyNjY5MDZlOGViODIyM2QzOTRlMTkwZDk1MjZiNTdhOTA4MjQ5ZWM2ZmY3MjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NjA0Yjk2MTA2NDI2ZTNiZGU0M2MzY2JlMDEyYTQ4YjBmNGIwOTE4YWQ3YTM5ZjQxN2U4OTczZTJlOTMyYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0OGY2NzQ3ZjJhNThlYzgxMjY2Y2NlZmQ5YWE2MTI1YzQyNjZjNjUyNTU0Mzc1ZWRkNWUwNTlkYjgzMGFlY2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c6450cb2dcdd4871b311b9a567520d2b",
+      "statement": "The Databrowser guide distinguishes shared defaults, installation-specific files, and Redis-backed GUI changes, and supports bulk Redis configuration editing/copying; these descriptions do not specify Redis precedence against every numeric file layer.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L13-L31",
+          "version": "repo-lines-v1:sha256:85812e3b5dd57a0b2722564bfd06124031e403dd37ff5744f1fd74f31e2568f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0YzZlYzEyNzQ0MmU2Njg3YTZlNDIwMTRiZDE3ZDYxM2UzYTQ0YWZkYzFkOWEwMTAzZjY5MjQ0YmU2MGVmNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxOWY1Nzk2Nzc3NDczMTllNjUyNjY5MDZlOGViODIyM2QzOTRlMTkwZDk1MjZiNTdhOTA4MjQ5ZWM2ZmY3MjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NjA0Yjk2MTA2NDI2ZTNiZGU0M2MzY2JlMDEyYTQ4YjBmNGIwOTE4YWQ3YTM5ZjQxN2U4OTczZTJlOTMyYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0OGY2NzQ3ZjJhNThlYzgxMjY2Y2NlZmQ5YWE2MTI1YzQyNjZjNjUyNTU0Mzc1ZWRkNWUwNTlkYjgzMGFlY2YifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L590-L612",
+          "version": "repo-lines-v1:sha256:e605070d5e1e1b25792edd184469a19797d4d4a57deef824921beba1ac5f21d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjZGJhZThiOTQ3YWU1YTdmOTlhZmI2MmE1NDE2ZmNhNjVhM2E0YTRmNzU4ZGE1NTM2NDczYThjZGI5YzY1NzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZGI3NTBhODY5ZGQ0OGNkYTE3OTVhNzYzYWQ2MmFjYjcwZmRhMTNkMGMyYTBkYmRhZGIyOGQwN2YyNDc2YmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFiNzVlZjg4YmNmZjY3NzI0N2E2ZDgzOTkxMzNmODFjYjVkMzcwYWVhYzZiM2RjMDgxMjY5ZjA4NjMyMmY0M2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxOTkxODJkYTQyNjMzMTViODA0ZTA4MWM2MGVjOGVlMWQ4ZTNlZjM1NmJiMzhkNmNlNjhkMDZkZDZhZDQ5NTgifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L692-L710",
+          "version": "repo-lines-v1:sha256:ce3ed76fd5404e4589288aa634932862a495bba7f5b0bc86d5be66d12e17d9b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhYmFhZTc3ZDU5Mzc2NTJhODYzOWZjYzNiZmI2MTAxZmY3ZWNlOWZiM2VlZDUyZTI1ZDBkOGUzNWM0NGRiOWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyMzYxYjdkOTkzZWY5MWFkNDYxMWM5NDk3NjA2N2IxZDAyZTg2ZTllYTBhZDgyOTEwNzgyOWM5Njg5ZjQzNzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2MzMwNGM0OTdlYjZjMjhhNGM4NmYwMTkyYWY1NTE2NjhkMDhjMjk2OWIxZDljMGFjNmUzMGJiYTI0ZmM5OTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3ZjcxOTM2NGIwYWNiNjk0NTIwZjdjMDkwMDJkZTkxOTdjZDlkYzU4OTU0YTY0MzY3MWM5ZDExZTIwMzM0MWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99e4b2a2bbb549519188ce16a50fcf19",
+      "statement": "The narrative Databrowser configuration-file API requires JWT authentication enabled, an Authorization-header JWT granting Admin, and describes its example token as generated for the configured subscription.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L48-L61",
+          "version": "repo-lines-v1:sha256:19fd44bf668563e6aa44d2244bcc78b9fb415d4d4090e2989640003bf40f817d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNDU4MTYxMDI5NjUzZTlkM2M3ZTBmNjU2MTZlN2JkZjQzMmUyNjRhMDJkNTA5ZjcwZDJiMmRkYjkzOWY5Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0YWRiMmUxYWE2ODc3YjQ3YjJmMTU4YTM1YWFkZWM2NTU3MTUxZjQzMDljNDQ0ZTkyOGM2MDJmYThlNDNkMTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk2MWQzNWFkOTQ0ODg1NjU0YzA4N2NlM2U2NzViZTE4OWYwM2Q4ZDI4MDkyZDVmNTUxZGZkOTU2ZTliZGQ0OWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3YThkODc4NDlhOGExOTU5NDQzMTliNjEwYzY3NGY5YzM1NGYzMzJjYzY3NWM3OWU3YWFhNDY5NzE2ZTU3MzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_840495bc8e33404db4e4411275e07b22",
+      "statement": "The Databrowser configuration narrative declares /configuration/<confignumber>/databrowser.ini but its example uses /configuration/conf/1/databrowser.ini, consistent with Swagger's /configuration/conf/{config_layer}/{config_file_path}; the documentation therefore disagrees on the layered route form.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L33-L45",
+          "version": "repo-lines-v1:sha256:51028ce229905346112bb45367c0dabecf1be5467718a8efcf55cc43ce14fb16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlMmRkMThlZmE5NDgwZTlkYzZiMjgzYWJkMzVlMzBjM2YzZTM4YzNmYmE5ZTZjZTc2NGMyMzg2NGZmNTdjM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NmEyZTA2Yjc5NDUzNjgxM2VmNDkzOGZhODg2YjFjNGU3ODA0MzRmOWVmZTkzOTczMTlkZjJhZjJhNjM2OTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRmYTQ3M2I2MGIzYzA4NjYzMzNmZTFlNzFjMDRiZmI4ZGZlMjRlZTk1ZjhjZTJjZDU2NTBlMzk2MTI2MmFiYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2YTM5YzQzYjQ5MmNkOTFlMzY3OWY1NDczOTc4MzU1Y2FhYjA4Nzk3YTdmNWI1YjFmN2Q0NTRkYmEwNmUyYmEifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-api.rst#L65-L69",
+          "version": "repo-lines-v1:sha256:1b0fb5614e6e9d62a907c9c3fd6f4695d79168e55c20f533bd8bc9b4c5260036:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjZjMjgyNmE5ZWE3MDA0NDBkNDI2MWYzMzdlYzkxMWM4MTE3MmY1OTgxMmNmZjMzYWNmYWI2NWIwNTZjYWMzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc1NzBmYmZkZTVjMTlkN2E1MDkxZDczOTk3M2NhZTlmNmJkYmUyZThjNTE5NGJjZGI1ZTMyNjkzZTNjNmE0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTdhOGQ4Nzg0OWE4YTE5NTk0NDMxOWI2MTBjNjc0ZjljMzU0ZjMzMmNjNjc1Yzc5ZTdhYWE0Njk3MTZlNTczNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L430-L435",
+          "version": "repo-lines-v1:sha256:94d43d70a5fb5e19704207f469b53a10670231410919e3aeaa7c4243806ac7aa:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWU4YWEyYjQ0MDMyNTcxODI2MmJkZmVmYmUwZDkzODNmMDFjMDlhYzdiMmRmM2EyNTY0NmI3NjFiZWJjMTk3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA0YzBhMDQyNjg3MTI2OTJkZDllMjBmMDM1ODg0MGNiZjAyZmJjNWRlMjM4ZWY2Y2VlYWNjMDM5YjQxNDZiOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MDY4ZjcxOGNiY2ZlY2U5ZWMzYTVhMzI1MzliMDcwYmJmMTMxNjUyYzIxMzgyZGE3ZmQ4MTIxZTkzNjhlNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRjNjA1YzM1ZDg0MGFmNzQ1NjA0NTg4ZTdlZWYyNDNkMDZkZjlkZTY0N2JlMjgzNTY4Y2FmMjA0MmQ5ZmI2YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L495-L501",
+          "version": "repo-lines-v1:sha256:6a169736db02870349cfc86250c919aff634ccc27ddfc1936de94fa666bb0338:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhhODYyMTkwZGIyODgyNjgwYjVhZGQzNTgyZGVhMDhjNjNlZGE0YzBiYmU0NzE1Y2YxNDQ0OGIyMmJmZDBlYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBkYmVkZDY3N2E2ZGFjODg1NjU1MGQ4ZmE0MzAzY2MzYTBmMDRhZDRlYjVmNWViMGQzOGI5YzA1NzhmMzRhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2FjMmRlOWI5ZjQ2NWE3Zjk0MDhmZmU1MmNmNGE2MjE2MGQwMzNiNGNkZjlhZDE4ZTc2NmEzMGIyODM4ODMzMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2JiMmI2MjM0MTliOGI3ZTJhZTk4ZGUzZGZhOThmMzA0YmU5YWUyNzFlOTA0MTI1NGRkMTI1MDkzN2JjMzUwOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_76e58d6604df40c6ba7b7bd77475a8fa",
+      "statement": "Databrowser's internal configuration-file GET specification returns an empty response body when the requested file does not exist.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L430-L445",
+          "version": "repo-lines-v1:sha256:3164b1818f4b69efdb2211f973f7bad5719fcb2bb2f50f99fd90d31ba0eb3377:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlOGFhMmI0NDAzMjU3MTgyNjJiZGZlZmJlMGQ5MzgzZjAxYzA5YWM3YjJkZjNhMjU2NDZiNzYxYmViYzE5NzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0OTgyYjM2Njk5ZTdjZDU1MmM4MjA0NjhjOTk3YjViNzIxZjA5MzFlNGI3OGQ5NWNjZTIyMzkxNTAxY2YxYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3NWYwZWIxMmQzZGI0ZmJlZTU1NjJiZDVjNGI1MmVlMzlhNWFhNWRiOWVhNzI2NzJlOTBhODQwNWEzODA2YzkifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L507-L521",
+          "version": "repo-lines-v1:sha256:9a86f17418fbee05c8e3916ba35ff798f126691788886d020bba1a4bb967c805:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMzMxODkzODlhM2I3MTNkYmQzZTMxYTEwZjMwMTBhYzg5ZjFkMGJlMTczMTQ2NjI4NGRiNjZhODc2NDA1NzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0OTgyYjM2Njk5ZTdjZDU1MmM4MjA0NjhjOTk3YjViNzIxZjA5MzFlNGI3OGQ5NWNjZTIyMzkxNTAxY2YxYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY2ZDM0MGFlZTE3MmExZTM2MTg0Yzg3Mzg4M2JmOWYzODMzOGNlY2NmNDk5ZGJlMWQwOTZlODU1NTg0MGI4YTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a03d3dbff40c4f3d9c2ee1dc957a17be",
+      "statement": "Internal Databrowser configuration PUT/DELETE can return HTTP 200 with configuration errors; the response contains is-valid-config, current-user-would-be-locked-out, and config-errors, and errors concern the full configuration set rather than only the changed file.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1109-L1148",
+          "version": "repo-lines-v1:sha256:67efe42f281094c2f28a9dfef52e146011f75fa53f4cbeca4a266ed1d11ba836:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyMWViMjE2ZDFhODgzODEyZjk5OTUwZjUxYTRhMjI2ZDdlOWY5N2YyNmEzM2ZkNzM1YzY5NDUyNTdiYWNjYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiYzQxYjkzYjYzMWZmNGQ0Mzg2MTVjZTAwNzUyYzc2MDIxY2RkYTIzMWEyNDJmN2ExOTNiMWVmYTNiYjNjMjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmY2M4ZmFkYzlmYWMxZjE4MzZjMjgxN2Q5OTQ2OWJiMjE5Y2VmNWIxMDdmNzRjNjNmN2ExOTIzNTEyYjIyYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc1MzY2NzViMDNjYTNhNjk3M2IxNzliNTRlMWNjZWU5OTJkNmQzNjNlM2FmNDk0YmIzNjQwZDRlYjMzODhhZGYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L447-L485",
+          "version": "repo-lines-v1:sha256:e60c4b53b6d44e36bc6cbd693ab9a8b0749547a1170ecc27f90bda69df26d498:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MWE1MjE0M2UyNWNiZTYzNWRhY2Q4YWZkMmY4NDFlZjY5YzdmMjQ2ZmQwYjMwNTg0MjQwZWQwMTdlZWEyMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYmEzMDJhODkzZGI3YjZhNTNiYWNlMTEwOWE0OWMwYTJhZTdjYTA4NDIxZTFmZjUyNzE2YjdhZDk4MzY1OWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwYjgwNWRmYzhiNDkyODM0NzA0ZDkyYWMzM2Y4NWJhN2NkMzk1YjBhZDk1ZTk3MDIxNGI4NGEyNGFkZjBlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyMjY0MzEyZmZlZmE2MDYwNjFlN2MwYzAzMjc3OWQwYWMyZGJkM2Y5YWMxM2VkOWIyNzQxNzJiNThmNDJiNDAifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L523-L562",
+          "version": "repo-lines-v1:sha256:d153c903f0310a83035de833c119f7aae66b0add35cc8d73a33cbe9d3645d3aa:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MWE1MjE0M2UyNWNiZTYzNWRhY2Q4YWZkMmY4NDFlZjY5YzdmMjQ2ZmQwYjMwNTg0MjQwZWQwMTdlZWEyMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYmEzMDJhODkzZGI3YjZhNTNiYWNlMTEwOWE0OWMwYTJhZTdjYTA4NDIxZTFmZjUyNzE2YjdhZDk4MzY1OWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwYjgwNWRmYzhiNDkyODM0NzA0ZDkyYWMzM2Y4NWJhN2NkMzk1YjBhZDk1ZTk3MDIxNGI4NGEyNGFkZjBlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyMjY0MzEyZmZlZmE2MDYwNjFlN2MwYzAzMjc3OWQwYWMyZGJkM2Y5YWMxM2VkOWIyNzQxNzJiNThmNDJiNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_609f4f6b75cd46d2b6caf692e6851183",
+      "statement": "The internal configuration-file API specifies HTTP 403 refusal when PUT or DELETE would prevent the current user from making further configuration changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L464-L492",
+          "version": "repo-lines-v1:sha256:bd6d93a0f25f32a9d443940c7bbf78b0cea46a1297df9374fd3afa8103e31820:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmMzM0OGQyNTM4YWQ2MDlhMWFkOTJiNGU1MjlmNWJlMjAzZDY3YTdkNDEzZWU5NmQ4ZjljODA1MzQ3NWQzNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYmEzMDJhODkzZGI3YjZhNTNiYWNlMTEwOWE0OWMwYTJhZTdjYTA4NDIxZTFmZjUyNzE2YjdhZDk4MzY1OWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzNGI2NzRmMjA4MWY1YjFlYTYxOTNkNjRkNDdhMTM3MTNiYjBjNmExODliOWI3YjlhZmFmNzljMTA4YjUwZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2YWZkZTI0YjY5ODFhZTgzN2FjYWZhMjhhNDU3ZjllN2U4YjhlZjZjOTM0ODE5MWYzYTkyZGZjZjhiNTI2ZTAifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L540-L569",
+          "version": "repo-lines-v1:sha256:79686105a998a63217d5939939f8f3860d685a3d3c70dd44f255f04f0507ac0e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmMzM0OGQyNTM4YWQ2MDlhMWFkOTJiNGU1MjlmNWJlMjAzZDY3YTdkNDEzZWU5NmQ4ZjljODA1MzQ3NWQzNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYmEzMDJhODkzZGI3YjZhNTNiYWNlMTEwOWE0OWMwYTJhZTdjYTA4NDIxZTFmZjUyNzE2YjdhZDk4MzY1OWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzNGI2NzRmMjA4MWY1YjFlYTYxOTNkNjRkNDdhMTM3MTNiYjBjNmExODliOWI3YjlhZmFmNzljMTA4YjUwZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwMmJlNjY0MGM1YmRkNDU2YzAyODRiNTZmYTM0Mzk0OGFlYzE3ZjIwZWY2NGUwNzhlMzY5MDFlNmE1MTU3YmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_558606b6a8504cbca716029a75d458da",
+      "statement": "The internal configuration-file validate_only parameter defaults false and, when true, performs validation without changing configuration.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1248-L1256",
+          "version": "repo-lines-v1:sha256:2908586b0debda8406d2d642d71f72922288b62b6d9150aa05dabe07efd55928:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA4NDA3ZjQwZjkwMGYzYzJhMDIyYzhhNTM0ZDc4NDUyOTZhNjQ2N2E1MTRhNTU5MDBjODFjMjg3YzgxOWVhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNjN2Q0ZjU5NDRmOWFlYmNhODlhYzk5NTU4ODJjYzMyN2E0MzM0ZTQ1NmFmOGZlMDAwNWJhNGI0YjBiZWYyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2I1MDM5YmViYTI5Mzc5NjI2N2Y2MmY0ODJlMjJiYTRiZjNjMjcyYzBhZWZhNDAzYmUxMTA2YzE4YmVmZWE0ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDc1ZjdmNzEzNjIyMzU3YThmMjRjYmM3MTA4MTVmMGI4MTJiNzg2MWUxYzBkYzBiMTAxYzliZTE1MTdlZDM4MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c7693dd10687414e91b82f1972d1feea",
+      "statement": "Swagger documents config_file_path as an inaccurately modeled remainder-of-path and explicitly says it should not be URL-escaped, illustrating nested file segments under a numbered configuration layer.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1236-L1246",
+          "version": "repo-lines-v1:sha256:67715635061a45f8cde91af347b4b81652905a406d7d4377cdbc35290bcacb52:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1Y2NmYmY4YjNiYmEzYWJlMThiNmMzZmRjYjNhMWI0MjViMzljMzhhZTExYWMxNmExM2Y3ZTg3NTgxMWUwN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNjZmOWFjZWRmMTM3ZmIwYzk3MGI2MDFmNmQxNGYwNjRmY2RmYjE2MGQ2OTE3MDI1YjkxZDkyZTVhMzFhNWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0N2YwODAxYWZkOGE5MGM2YWRjZjI0ZTlhNjVjZTVjZDU1MThjOWM4NGM2MjI2NTY0ZjBiZGNiMTFlMmQ2YTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxYjI4YjQ0MjYxMDM5NDU3NTI3YmYyNjI0ZjYyYTNjMzhmMTQ1ZTE2NTRmNTJhMGU3YzQ5NDEwZmE5NGM4MzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8835acd1646c4819a987f754c9a2d7ac",
+      "statement": "Databrowser's /admin_index exposes administrative configuration, data-type, and logging pages; GUI logging changes reset on server restart and permanent changes require installation-specific production.ini.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L560-L644",
+          "version": "repo-lines-v1:sha256:f81a35d41ab90a5f5ba44a4c3f71ee32966a74720544a9b0fb1375429694f9d9:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4MjBlYTVmMWE1NDZhZTNjMzRmNzJhMjJhNmQ5NzI5N2YwZTdhMTA1NjEwNTkzZjA2NzY0NmI0MTNkYjEyZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjYmQwZWU5ZGUzYzNkZGVjN2JjZDhhZDNkNDk5OWUyOGZlZDFiMjdhNGMzOTg2YzExNDgzMDczNTM3YTJlMGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkNzEzOTk3MzA5Nzg4YTAzNDVlMjA3ZGZlMWJmNzMxZWZhOGYyNzFhMjJjMjEyYWM2N2U0NGM1OWE4ZTZmZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYwMTZlMzQ2NzJlZGZjYjcxZDJiZGNlNGVkODQ5ZmYyYmFiMGZiNjExNmZjM2E3NzRhMTRlNGNiOTAyN2Q3YzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3902e3ece8364c4aae954cbdb315f8e9",
+      "statement": "Databrowser's use_x_remote_user_header selects external OIDC when false and trusted X-Remote-User authentication when true; the latter is documented as safe only behind an authenticating proxy that sets the header.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L26-L42",
+          "version": "repo-lines-v1:sha256:05ee15214ac7d6b293986efb4ae68e9dff62fea8173dfb0ab90343cfc3a02b41:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyMGJlMmIyMzhjYmJiYTYyZWZiOWIyYjlkNTNlNjA0ODQ1MGJkNzMyY2UwOTE2YWUyMWEyNTM2NzhmNGEwNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3ZWYxMGU5NzBmYzU4ZTc5NzcxZTk0ZGFmMThjYzhhNTY1NjliYzlhYTc5NTU4MmI3YjcyNGI2NzhkMDhlYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNmJmMjQ3YjdlZDdiMzA2MWNhNmE0MGVlYWUzOGZhMzQxODhmMWQ3YzRjYmY0MDRjNDg2NTE1OGI5YWZkYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzNzczYTQ4Y2FkY2QzZjM5N2FlNGY5NDYzOWM0MzFiZTAxNDk1YmZhOWUzZDhkODcxMTJmNGI2ZmFkYTAzY2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_faa63f86be6e4f758bcbca6fe9b5bf5e",
+      "statement": "Header authentication maps a username to a session email through Solr fields configured by x_remote_user_username_psi and x_remote_user_email_psi, falling back to an email-like username when no email is found.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L44-L63",
+          "version": "repo-lines-v1:sha256:51112217e712a15b9442a68104f873dad905bbc210886354cb7879bf5b5e4d91:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlZTkyYjEzYWU5MThkMGI3MzJmNzc5ZTQxMzgwYmM2YmRiOTMyMzA5ZmI3YzViNTFmZDYzYzIxMjlhMGEzN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxOTNlNWU1NjMwMzc4NzIzMTMzMjQ0ZjIwNGYxMTdhMzRjYzdmYzQ3MWZiYmI0ZmQ4NzgwNGQwZjFjNGJkMWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhNTY4Y2UwZWIyNDNiMDVkNWE3OTQyZDMxZjRiNTZiMTQ2ZjBiODUxZmYyZDRiOTMwNTgxMzkzMDE0MTZjNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE5NDgzMGNkN2I4YTMzMmZiMzQzMmVkMDBkMWIxYjBmMzg4ZTg0ODdkNDlkYWM5ZWUzYzMzOGRlMTc0OWY1YzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b541b0e03d7243afb904a490fd379645",
+      "statement": "Databrowser authorization searches configured email fields for the session email and stores matching item IDs plus IDs referenced through psi* fields in session psis.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L78-L96",
+          "version": "repo-lines-v1:sha256:7b9200684957e52fea6de8c2eaff22ed21cfa68081f58189bec9d496415abd4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNDU4MTYxMDI5NjUzZTlkM2M3ZTBmNjU2MTZlN2JkZjQzMmUyNjRhMDJkNTA5ZjcwZDJiMmRkYjkzOWY5Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyODc2OGFiYmMyMmIzOTA4OWFhMmJiOGJmMDE4ZmUxZmI5MDI5ZDZjYjIzZGU0M2Q2MGZjYjJhMzI2MTdlMTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMjhlZTY5OWIyMDM0N2Y4NWE2MDQzZTVhNmE4OWI1Y2U0YjIzNGZiNjJhYjE2NWM3MDMxZjBhZDdmZjkzZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRhYzYyN2Q3MzdlNmY4YzMzOWM3Yzc5Yjk1MTRjNmFmNGFmYjcwNDFkNGI1ZmM0NzNmN2VkNzE5M2ZhMzkwMjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae89a89265b944c7b574a17f605bc64c",
+      "statement": "In Databrowser OPEN mode items without configured AUTH_FIELDS are available to all; AUTHENTICATED restricts this to authenticated users, excludes anonymous users, and both modes exclude items containing configured authorization fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L98-L140",
+          "version": "repo-lines-v1:sha256:c0c0eb0773117bca34167668cc80f884f547618cb005c6af29bd474af2f31f96:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmMDIwZDlmNDQwMjdlZWQyNmM1MjgxYzVhYjc3YTQ4NGUxZDAxZjAyMjZmOTA2YzhhNmVjMTQ3YmZjMDFlNTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiZTEwMzVjZGQ4YTAyN2Q2NmFkYWUxZDhlMjU2ZjkyMWI3ZmQxOTE1ZjQyMzE3Y2YxNjk1N2MxNGQ0ODUzZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxZmJlMjEyYTk0NzY2NWE2NzFkN2Q0OGY4YWQzNTYwMTg4OTFmM2ExZmE4OTk3NTgwNTdiNmJmOWNhNmFjZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmNjEzOGY4Mjg4Y2JiYmQwMGZhMDg0NTNiYjYxMzVlNGU2NDdkMTk0ZjlhYzU4NGYzYzJmMjI3Mzk0MzEwNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_09da36e98c3841d4a97f2d2d6cb682b7",
+      "statement": "Databrowser AUTHORIZED mode requires AUTH_FIELDS and restricts authenticated searches to items with the specified authorization fields and authorization or ID fields matching the session psis values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L119-L151",
+          "version": "repo-lines-v1:sha256:b16f00675dab3704e2eeafbfc2b2a565d2197cb87da2bd5db187ea773d36d9f7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjYWM5OWNiYjZlZTI0M2NjOWExYTlkOTU4YjdmYWJhOGE3YTM3YjZkNjE4NjFlZmY5YTIxYWI3ZjIwMDVhZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0NGE1YmY1Y2EwZDcyNDE2YjAxZTYyYTBjNWYxNTQwMTYyYThlYzk3NDRjODI3YWMwZGFlOWVjODVhNzcwMmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YjAyM2Q3MjkwMWMwYWE1MDEzZDYxMDY1ZGU1NGU3OGVmY2I4NjMwMTUzM2E2Njg5MjBiNzM0NGE0Nzg0MmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMwZTE3NTljMzQ0MTg0YzM0ZmRjODM3YWYzYTczM2MxNmQ0ZDRkMzE1NjgxOTZmNWVhOGFjOWU4YmU2MTI5ZjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c2a46e68eb7446badde7a9efdf6fa80",
+      "statement": "Sesam-portal JWT authentication is enabled by jwt_authentication_subscription_ids, listing accepted subscriptions or using * to accept JWTs from all subscriptions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L154-L179",
+          "version": "repo-lines-v1:sha256:c0b80f971c0c39ae4400109fba00489e653709a134afdd030bace2cbed9cbcbd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiNTk5MmFmOTk2ZWQwMmQ1MjM2ZjJlZGM3YjEwOGRmNzFkODI4ZGY5YjAzMGNkNWRjYjI1ZmZlZGFjMTQ4MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5NGYwYjljODJkM2I4NmZlNTZkMGYwMDViNTQ2Yjk3M2MyMzY3YTU4YzY3MzJjNGQ1NjU3NzUzZTg3Y2RhOTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhNmRjY2ZjNzZkNjJjOGJmOTdiNmU2NDYxNjVmZDM3ZDg4NjI4ZDNjMzUwMGVjODFlM2Q5ODMzYTQ4ZjU4M2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExY2FhNjU5MzI0MzgxNzFlYWQxOTljYTI4NjM1MTA4NWQ1OWRjZTg2NTQ0MzlkNDkwYmMxYTQwYTVjNDcwNDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7e0e04a4d0c34e29a3cf3ad4dd5e9bb5",
+      "statement": "Ordinary Databrowser JWT users remain subject to Solr authorization, while JWT group:Admin grants access to all Solr documents and configuration editing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L181-L185",
+          "version": "repo-lines-v1:sha256:8149045c579dca010236b6ba0657188f3c3d486a22706f38ac1d3e795d2b4d55:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYzNmExNDkwZTg0NmNlNGQyZWE4MDY1NzMwZmQ4OTBlOTczMWUxNDg0YTE1YWU4MTU1ZjhmZGNhYjljYTY0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDY0MDY2Y2NlOWVmM2FlYzM4NDc0MmJlZDc4ZDVlM2QyZDcyZWQ3NDE2OGU1ZTkwMDczZTljNjkwYTU5NTkwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjYyMjE3NDhiZjg5ZjQ4N2Y5MTg4ZGJhM2NmZDE4MDFlYzRjZGU1N2EyMDAxMDEzMTJlMmE1MzQ4YmVjMDQ4MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjU0YzAyNDU3NDEyMTU1ZGM1OTQ1Njg3ZjU0YjY2YTc2YThhMjc0Mzk3YmFlNGU4MDg3NTgxMWZjYjcxNWEwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fc473626abb4034a9203aeee57fc9ed",
+      "statement": "The JWT narrative describes /jwt_login GET as a token form and POST as storing parsed credentials in a server-side session then redirecting; Swagger labels GET development/testing-only and POST as Management Studio access.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L187-L195",
+          "version": "repo-lines-v1:sha256:b6f279967407cce1bdbf3bdede2c5d4f7074881d89ddfc35359eeb14ba154d66:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmU4ZjA5ZDBmNjY1YzY0NWY5ZWVlZWUwODYwZmVjODY3OWM3ZWI3MzJmMDE5NDdlOTM4MjAxOTllZWRhNDdkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTFhNzE5MGVjODgzZWM1Y2M3NTUxM2EwMGIxNzY4ZWY3OGRkN2ViNWUwNTNhOTVhYjVmOTNmNzk0MzUyMmE3ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDlkZjRkOGEzM2UyZmEyZTIwMGQ4YTU3MmMyNDk4NDNhOWExZWJjZTc5Y2Q5YWY2NWEyZDM3NzM3NGViOWNmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L70-L84",
+          "version": "repo-lines-v1:sha256:96d12fbd174cd64f0443ba6241383e61c598d8c0eae2d07a826ffc9ac44278ec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiZTM3MmRmODIyMTIyMGVhZWQ0Y2Y4MDU2MDBmNDI4OWQ0MTg0ZDkxYjI3NGQ0ZDg0MDNmMzAzNzY4YjllNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI5ZjgyMTVkMWM5M2MwMzUzYzE0NGZlOWQ1NDA3MzAxZGQzNmUxMjkxYWFjZjhmMTRiNzJjYTA2NDlmZjI2NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_053a5b0936714ac0bf93271c9205c25b",
+      "statement": "Databrowser authentication and GDPR Platform configuration share the same OIDC provider include, which itself carries the Databrowser end-of-life warning rather than GDPR Platform's distinct warning.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L65-L74",
+          "version": "repo-lines-v1:sha256:91433e4621e7fa8ce93f10b543c908cdb052b04ad5c7218eb93e7463cd954a16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllMDkxYjI1NmRlNTAwYmM0ZGMxZDYzYzkzYmI4YjRiZGE4YTQ0Mzc5NTk2MGEyMDhmZGYwNWIyM2RmYmU0YTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YjI1MDdiOTY5ZTExYTA2MzkyNGNmMGM0YzAzNjQ4NDZjNjBmYjk5ZTdkNDJmOWNmZTIxZDg3Nzk4N2ViZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2ZjkxZDgwMmUwMTg0YTc2YTMwMmJiYjNhNjFiNzllODliNzNjZDc3Y2JiZTYzNjljOWU4ZDJhZGY4M2QwNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjMjhlZTY5OWIyMDM0N2Y4NWE2MDQzZTVhNmE4OWI1Y2U0YjIzNGZiNjJhYjE2NWM3MDMxZjBhZDdmZjkzZDkifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L1-L8",
+          "version": "repo-lines-v1:sha256:a28ac5b65a68d85f6e499dd3c040b2b6e08829e4b1072bb8185342ee0557b495:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlNjQzYzdlMDAxNTU2NGZmYjgxZDNiNmYzMjgzZDhhYjdjNjNkNDAyMzA4ZTY0ODJlMGMxOTZlNzRmOWI5MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ2MjIxMWRmYzdlOGJmMzU2MzVlNDczNGFmYjlmZTVhZjBhYTZiOThhNzYyMmMwMGM1MzU0ZjU4MWUwMDQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjU2ZTc0ZjE3NzZiNzhlOTJhOGJjMDdiMDBkNTlmNjFiZTJmY2Y1NTU2NTkzOGQ0ZTZmMjJiOGFhZjlkYjhkMiJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L180-L194",
+          "version": "repo-lines-v1:sha256:37d77951bf18cdab76aa6ed64c3e3bffa3f0a20f0c2b9dd4bce5fbfe711cac9f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5OWMzOGEyNDliNDA1MjY1NDYzMjg2YTQwYjc3M2JmMDVkMDYwOTMxNDg5MmJjNzZjZjM2NjBkNDNlMGVjZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YjI1MDdiOTY5ZTExYTA2MzkyNGNmMGM0YzAzNjQ4NDZjNjBmYjk5ZTdkNDJmOWNmZTIxZDg3Nzk4N2ViZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NjFhZGU4YTAxNzA0MjkxNWE3NTVkNGVlOGE0YjJkNzdjMmY5ZjY5YjEzYzBiNzdhMTIzMmJjOGFmOTJhNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwMjY5OGEzMTY2NmZkYmU1YjAwZWUyN2JjZWZmY2JkNTk4NGYzNzE0YWUxNWVlNGRhMWNkYmMxODc4MTRjZDEifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:79f1086ca57b9e9bc7b56faf32c588957b57b49d1722ad40d36e8bb91102d202:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY3NGVhNDc2NjczYzBhYzg0NTUzYWMyMjEyYjc5MzVhOTY3ZGExNmEwMTM2Njg4ZjBmZmFmODdmZWI1YmJmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQwZGE3MzczNTg4NjU2OTAyZDQ2OGRlZWM3NzQzZDM0NDU4NzVjZmQ3ZTU5MjUzNGExY2QyNWFlNjU1ZjM0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTA5MzU2NmZlNDhmY2ExMzg2ZmY0ZDdkZDE4NWY5OTAwZTNmNWY0ODA2MDU5MTE3YTM2ZTU4YjliNDkxM2FkNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d0f98ab404a44cd695d2c76cbdee1691",
+      "statement": "Shared OIDC configuration requires unique provider_id values, consumer_key and consumer_secret, and discovery URL or inline metadata; the docs prefer discovery metadata URLs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L7-L56",
+          "version": "repo-lines-v1:sha256:9ee4de2a1e739fd076b53ad19cbd2c0e2c9c8c875d3d22ecc2cab452f09ddf9d:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3NGQ0NjRhNTIxZTgyNWQ0OTM1Y2Q4YjNhOWM5OWI3YjY1ZTQ0YmEzYTQ5Yzc2YWYxNGVkNTcyMjFjZTA4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlOWQzY2RhNjJiOTU0ZmU4ZjgxM2EwYTJmYjZiYTgyYThlZWEyZGMxOWE1MGQwNzlhM2YyZDM3Njk1OTBkZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhOWQ2MWViNDA3ZmIxYjczNjNhZGM1ZjRjNTE3YzlhN2NmMmVlZWVkNWUzMzcwY2IwN2JiZjdjYzBmMzNjOTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiNDJlZmUyMjE2OGI0ZDRmNmY2NDhmYzYzYmNlYjQyNmYwZDRiOTExNTQwZGQyYTgxNjNkYzg5NGQxZWE5N2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bbcdd3eae81342ad9094ca29b08976c2",
+      "statement": "Shared OIDC options default user_id_attribute to sub, contactinfo_attribute to email, and scope to openid profile email; userinfo can be disabled in favor of IDToken extraction, and the docs recommend Google email and Microsoft upn identity claims.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L58-L80",
+          "version": "repo-lines-v1:sha256:3b036fcd42079dbb17de7b86251b1694dc82547f55c64330f32a10cefe73e926:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzYzY2ODQzNjlmYmY0MDgzYTAyYmE0Y2E4YWU2NmI0MWY5NzljNTBiMTUzMmM3MjRlYmFjZjA3M2JjMzUzZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1MTQzZTc1YmM3ODRlMjJjYjQ2YjRiYWZjNjVlN2JjN2Q4Y2QzMWExYzU1OTQ3ZmI2Y2YwMDA1MjY2NGZhZDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMjQ5NzQwODA3OGQzNGNkYWQxZWI1MWZlMTkyMTAzZTUzMDY3Yzc4ODkzYzYwNGE1OTE0MTliYjIzMzgwYTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1ZmU4ZGJkMzE4ZjQ1MDJlMjNjOWFjODVjZmE0Zjg3ZDU2NGMzNDU4YzNhN2U3YzU2NTM3MzIyYmQyOTg3N2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_358c19449ce44703a429a0ae2e46789d",
+      "statement": "The shared OIDC allow_unverified_email option defaults true and can be disabled for email-based providers that do not already verify addresses.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L69-L72",
+          "version": "repo-lines-v1:sha256:5000c10944962157cf86176b01ae1525986bed65bff09097bda35ff88574083a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQzNjc3YWUxMmM3NTY4NTA3ODQ0MTNjNGMzOTY1ZDhmODQ0NWRhZjM5NmNiNjNiMDI3YWRiY2E0MDdlMGZiOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJlZTdlNjVhNDI2MWJjNzkyNDk4ODRmNThmNjFmMjgyZjc1OTBhN2UzMGUyYWM1YzIyMTI2MDhmODc4YTYzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MmMxNjYyNDZiMjEwNTkzMDBmYTkwOTY1YWZmNWYyMTkyNjZjNmRmNWE4NWFkZDY2OWYyN2U1NzliMTY4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWVmYjJhMTE0NDQ0ZDQ1NWNkN2FiZDBkM2M0MzdhM2MzZGIwMmEzMWQ2OGMzMzQyNWRjZTZmODA4YzM1MDI1NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_95529f2a8f0c45a2ac84c2c753b8c49b",
+      "statement": "The documented OIDC browser flow returns an authorization code to the DAP backend /login_callback/<provider_id>, using the configured provider ID, and post-logout redirects use the backend base URL.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L83-L115",
+          "version": "repo-lines-v1:sha256:3e4e97685249ac7ad0252924d5df2c21d8557a6b83a2191c450b12973a87a3c3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2MWRiOGYxN2ExYzZiM2EzZDMxNDgwM2Y5NDY1MWFmM2U2OGM0MjUxZWY5MmYyNjYzZGI3MTk0OWY4ZjA5YzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZTI1ZmU2NjM2MTA5N2RiMzdkNzRlMTNkMGIzYTNjYTM5MWQ3NTgwYzczMzRmNGYzN2FjNmMzODkxOGNjZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiZDVkNmE3Nzc3MDlmY2ZkN2RhOWJjM2JiZTA4NTMwNjQyODE3MTkxM2FhNzI1MTAxNDg2MDBhZWJkNTRkMWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9005846506c847998ba65c79796805e1",
+      "statement": "The GDPR Excel setup uses Purpose and Data type sheets; purpose metadata includes activity, legal-ground, source/sharing, retention-day, criteria, and language fields, and purposes appear as subject navigation tabs with opt-in/out for consent-type purposes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-types-purposes-configuration.rst#L12-L107",
+          "version": "repo-lines-v1:sha256:b4a1f0453ddcbd726cd2930d86998795a986e2ec95a9597209e9a33d51ffa76a:eyJzZWxlY3RlZExpbmVDb3VudCI6OTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhNTg5Y2VhNWQ2MWVlZTQyNzgzMmI3ODEyOGQwOThmNDMzNWE4Y2FlNGViZjAxOGQ5MzdiNzIzM2ZjYWU4NzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhOWE3ZDE2YjE2ZDg4ZDlkMzE3ODY4M2I5NDE5NzZkMDIxMjkzN2Y0NjE1YjI1Yjc2ZDI3ZDJkMTE4YmJiYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRkMjFmYTIyNmU3NjE1ZWRhNTI2NTFmZWI0NmY5ZTBkNmVlMGNiZmVlY2E3ZmZhY2RlZDUzZjFiMTEzMTlmZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyYmU0NDRmMmQ4ZmZhM2FlMmY5NmI0MDk0ZTMxY2U1YzE4YmZlY2RlNzQxMjY4ZWI3MzA0ZWExYzYyNzc3YzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_277950768be241bb8b804234d089b0aa",
+      "statement": "GDPR data types describe type/system, description, Personal or Related level, notification contacts, and a generated x-mark matrix allowing multiple purposes per type; contact email lists must not have whitespace around commas.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-types-purposes-configuration.rst#L109-L162",
+          "version": "repo-lines-v1:sha256:5e912decc3a03e01606fed16d87afa09f4d6bce3390a45de34594bc44d81b51d:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlMGM0NWEyNDkxYTdmODhiOWU1MzU1ZmVhNDAwMmVmYjYxZDc0YTNjZTVlNDY0MDBkYzlkMjM5NDlmZWMwZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhNTI1ZDY1NjNkNTcwZmJmZTdmMTY0MjUyM2VhZDhhMThmOTUyNzk0NzUwMGU5ZTE4ZmNjYThjOGQzNmZjYmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViMjFmMGNmZjE4NGFkYTIxNGM0MzJkNDdiZDIzMzdlNjkxZjY0NDU1M2ZhYjYxYzAzM2Q4ZjAwZjlmZTNjZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZmE1MDdkMjFiMzVmYTRhODUwNGZlZmZmZTRlYWIwNjc4YzVjNTU5MWQ3MDE5MGExYzhkODZlZjBkOTI1NGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_44be845e5fa6400c804e78d68e6df8ca",
+      "statement": "Purpose and data-type spreadsheet IDs are computed and must not be manually edited; the data-type ID description allows a maximum of 32 characters while Type/System descriptions require their combination to be less than 32 including whitespace.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-types-purposes-configuration.rst#L134-L145",
+          "version": "repo-lines-v1:sha256:c8351ebde1385e8df98c4f8448fc1838471035fccd309697c303ad474e9d5c79:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0ZjI5MTZlMjEyZGNhNTUzOWJkMjZmYWU1MmEyNDE3NzQ3YTA2ZGQ4NWI5YWEzZjQ2Y2Q5MjIxODhiY2JjYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZTg5M2QzODJjZjQ5Mjc3Y2EzMjUyNjBiZTBlNTUxOTMyZDZhMWUzNDMzNjU5NjE3Mjc1NTgyNGViYjJjN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk2NGQ4NWFjZTRkZmU4NzYxZDBhMGNjYjZiNTAyYTgzZDllM2FlYjExZWZkNWZkMzcxMDk0ZWNjOTY0MWRjYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwZTY0NGIzNzllMDQ2OGUzNGY5NjNhNzUyNjZhMzhiNmUwNDI5M2UwNDE0MjA0Zjg4YmM5MzEzMGU3NjNjMzcifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-data-types-purposes-configuration.rst#L48-L49",
+          "version": "repo-lines-v1:sha256:591010f2c1e798ed2b6cae79883e786e4f6cfebe7c20eec73a3121a534e771ea:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTRmMjkxNmUyMTJkY2E1NTM5YmQyNmZhZTUyYTI0MTc3NDdhMDZkZDg1YjlhYTNmNDZjZDkyMjE4OGJjYmNiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg5ZDFlN2Y1YTRjNGJmZTI5ZjFhZTJlMTI0ZTczMjBmMTNkN2RhNjNlYzM2ODk5ZDA2MDM3YThkOTM3YjE3ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTY0ZDg1YWNlNGRmZTg3NjFkMGEwY2NiNmI1MDJhODNkOWUzYWViMTFlZmQ1ZmQzNzEwOTRlY2M5NjQxZGNhOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWFiZmFmMTZhZWY1NDFjNTk4ZGVhOGIyMjY4ZTUxNjJkNTkxMjM4OTgzMmE1ZDA3MjFjZDcyODBjMTM2NTliZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_221f2b4eda5e47a59042b69cad9ab040",
+      "statement": "Uploading the GDPR setup updates platform structures and DAP types/purposes after potentially a few minutes, inspectable in gdpr-data-type and gdpr-purpose; shared-URL setup retrieval has configurable cron scheduling defaulting to midnight UTC.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-types-purposes-configuration.rst#L165-L178",
+          "version": "repo-lines-v1:sha256:ed3e5d90b9908e30c591ce5adf21293f8a8da8ba5399c6ab15187fb402209f16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkYzNjNTY4MWY5Y2I1YzEwZjIyOTIyNTI3YTM2OGUzOGNmYzhiOWFkYmI0ZmVjMTcxYTdjOTNhM2I0ZmVjN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiM2E5MzllMTQ0ZjY5M2Y5NjhiYzFhNzYzZDJhZGVjM2FjNDRjZGRmZTEyZGIxYjcwZjlmN2FkYzRkNjhhYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3ZWMyYmQwYjY5MTE4NWI3NjU2ZWVjY2JkMDgyNTNhYzYwNWZiYmY0NjEyOTVkMmYzZDVhZDFiZDcxMzUxMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L58-L101",
+          "version": "repo-lines-v1:sha256:e3e7b8f63043a3b5135d9ddf4020387ce5e7bf5e9b2077fd705ae6a508f82cb6:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxMGY3ZTc0ODdkZDFmMzE4NTgzZTY2YTJmMzRjMzQxNmFiMzRkOTk2MDU4YmRiMGVhNTM2OTQzZDhiMGY3ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjYTE2OWJiNTAwYzIyOWM4NmFhM2E0N2E5ZWFhZWI5ZWVhZTVkMWEzOGRmODQ5ZmRkZGI2NTc0MzZlODRlMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJmMGQyYTVlYjA0ZDI1MTYwMWQwZmVlMzJmYjE3MTkxZjExYjJiOGE1OTAxZDA2NzEwNmEzNWZjODljMWRjYmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0MWY4ZWUzNmMwMTY4NGM5YjgzNGNhMTYyOWU0MzkwOTExYzU2MzU2N2YyMzhhODQyODk1Y2ViNjhkMTM4MzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7fc229491cde487d9ab71c0be4c5da9e",
+      "statement": "Default GDPR subject login sends an OTP to an email address or phone number, and the portal guide says it expires at session end or after an unspecified idle interval; OIDC is an alternative.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L23-L29",
+          "version": "repo-lines-v1:sha256:edab3e153f7fffd66448093207bfdd0b6377a9290ca271ba2a2d077404e17a69:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzExNTM4YWQzMjU4YjFjYmVlYzIwZDYwZGM1MmQzODlkZGNiMWFhNmIyN2IxNTU1NWQ1OTY0ZDVhN2Q2ZmM1MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTQ2MzVhNGI3NDhjZDg5NGQ1ZWIzZWRjMjZkY2I2OTAxZTE4YTYwOGMyMjMzZDhhNjhjOTM2YjBhZWQzOGRjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjcyYjg3OGY4NWQ1OWQwMDI1ZmI1MDViNzQ0MzRkODAwNDZkNDg3NTcyMmY5YjA2YzNkZTUxNzYzM2VhNjg2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzkzYmMwNmU3OTA5MmE0MWU2NTczZjViOGUwZTI5N2ZkMTJmYmFlOWFmNWQ5ZTI0NjRjZjg1ZGU3OWU3YmQwZSJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L180-L194",
+          "version": "repo-lines-v1:sha256:37d77951bf18cdab76aa6ed64c3e3bffa3f0a20f0c2b9dd4bce5fbfe711cac9f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5OWMzOGEyNDliNDA1MjY1NDYzMjg2YTQwYjc3M2JmMDVkMDYwOTMxNDg5MmJjNzZjZjM2NjBkNDNlMGVjZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YjI1MDdiOTY5ZTExYTA2MzkyNGNmMGM0YzAzNjQ4NDZjNjBmYjk5ZTdkNDJmOWNmZTIxZDg3Nzk4N2ViZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4NjFhZGU4YTAxNzA0MjkxNWE3NTVkNGVlOGE0YjJkNzdjMmY5ZjY5YjEzYzBiNzdhMTIzMmJjOGFmOTJhNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwMjY5OGEzMTY2NmZkYmU1YjAwZWUyN2JjZWZmY2JkNTk4NGYzNzE0YWUxNWVlNGRhMWNkYmMxODc4MTRjZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8d0261d948424df9ae0c49b3a01f2cab",
+      "statement": "GDPR access_request_contactinfo can require a notification destination at request time when authentication supplies none; supported configuration types are email and mobile_phone with user choice for multiple types and validation by the OTP email/phone regex options.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L197-L236",
+          "version": "repo-lines-v1:sha256:c8d337a99d5f85b674bb8f364cf05daf706d5b726e9c0c06c6bee007075f4f42:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwOWY1ZTIwMWVmNzRmM2I0ODZmNzM0ZGRkNGYxY2UwMTk0ODc1NDFkZDM3OGRiMjg1ZmJiOGYwOTM0M2U1MTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwZTIxYzU2ZjQ5ZGY5MjEwODc0ZDhiOTc2MGVmYzgxY2EwMjY5Zjc4MDJkOTEzNzQxYzZjMjIxOGUzNzZlNjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU2ZjRmNjViMWZmYTM1ZjRhNjM0MjU1NGI1ZTA3NWUzN2I0ODQ1YTg1MWMwNDEwMDBmMDIxMmU3YTc3ZmEyOTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyYzEwZDQ0YzA2YjQyZmZmODg5YzQzZWVjNjFmZWFkMGQ0MzUyYzk5OGVlYThkOGEwN2VmYmM1YTc3YmJkNjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_86107ad369b94255b4d0edcae92c9321",
+      "statement": "GDPR extra_access_request_fields is empty by default and adds required unique subject-identifier fields whose headers and tooltips are resolved through localization.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L239-L278",
+          "version": "repo-lines-v1:sha256:9b26331438617c280c1df843c2bf96bc5f7a45f5019690ecdf0bc723c3c1e123:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZGNhMTZiNTA0N2Y2NWQ2NGUwMTNiNTIxYzU2NDFkY2UyYzI4YzI5MzQwMzdhMDg5Nzg1YjFmYTlkNjFhZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MTE0ZmFhZjBlMjY0ZTg2Y2VlOTg3YWYyMTE0NjU4NTg0ZTc0ZjUxMmI2MjU2YmY2OGUxNTI3ZmRiOWQ1YmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmNzAzMzNlNTFiNmEyZGM0ZGM3ZjEyM2Q3YjYxMDg0MzEzMzk2MDZiZWFjNmY3NjY2ZGU5YTA1NGVlOWIyNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c207c600f67c427a8e6573774858a65b",
+      "statement": "Historical GDPR documentation gives both selected-domain-name.sesamdata.com and gdpr-dap-subscription_id backend URL forms, with the portal guide directing operators to Network for the backend URL; these examples do not establish one universal hostname convention.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L7-L20",
+          "version": "repo-lines-v1:sha256:07c7687ebde9a2e8bae8fd6123cb4a2d4c5aa93447d312ee2c1541d187f30746:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4OWE5ZDFjYzJkNTNjNGRmNzE1NmI2NzVjZGYyOWE1YjZjMzExMWVkMWM1Zjk5NDNlMDI1ZTEzODViNzExZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3MjM3Y2Q0ZmRjODM2MGRhYzRjZDQ0OWQzZmQ4MjVmOTk3YmE5NWNhYTFhYWFiYmJiMDBiOTU3YTc2NjU5YjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ2N2UyMGI5ZmUyZDZlNGY3ZmYzZjJhNzlkZjZhYzNhNTY2MjkyMDM2NDI4ZTk4MjRlNTg3MDUyNjM1ZDFhZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmYjVkNjdlOWFkMmNjY2Q2MjQzYmMwOTA5MGNkOTY3MzM4ZWQ5OTM0ZTUxMzdlMmUwMGYzMjhmZDQ1ZjAyNzcifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L49-L56",
+          "version": "repo-lines-v1:sha256:2831863ee2035c8e921e3aafe7ab96b55eb8148dd3315ea8ca0a29cfd8086058:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWZmODNkMTBkYTI3N2Y4NGFhYjI4NmE1ZDc2NDkzZDRiMzg2NzBmZDk5ZWUzNDk4YTIxMTAxODI3NDc4YmIxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTAzMzNkOGQwM2I3N2RjOTY4ZmY1YjA2OTliMzQxMzdiYjdlMzEwZjMzOWNiNjUxNjQ4ZGI2MWRiMDhiMTEyOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGMyZTY4MGVkNTJiOTRkNGQxYmMzOGMwOGI1YTAxOGJhOGM1OTg0YTk2NjBmOTE0MzNlMzlhYmIyZThkMjNlMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzRjNDg3MTE3ODg5ZDEzYjczMGFmMTQzNzY3NTExNzc2YWFlYmZmMGQ0ZjA5N2IxMDYwYWMxMTMxOTZhMDI1YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_04100662c33e4ebc8bfff1ffe13fdbd8",
+      "statement": "A manual GDPR access request notifies all unique spreadsheet contacts, and handlers must be registered Sesam portal users, GDPR Platform members, and granted GDPR operations to access the request template workflow.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L31-L52",
+          "version": "repo-lines-v1:sha256:8153323564eda4bb777475ba53e7f3272551875f45c6ecfd3665f589104c679a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjNWI4M2JjZTI2NzM3MWVmMWIzODk1NDlhZjcxOTk1Yjg3ODVlMTY0MjIyM2E2MTdiZGEzM2RmZDJlNjRjM2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjMzcyZDNiNGFmMjMxNzNiYzYxODYwZGYyNGNjYjM3NTdiYjExNGRhYzM4ZGQxYWJlYTMxMzRmODliZGE2ZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMjE2ZTFmZmFmNTViZjc0YTI0YTM4NmFkYzc5ZTY1OGZmMzVkYzQzMzlkOGMxODZiMzJmODM5ZDcxYjU2ODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBkYjUwMmE1Y2Y4ZjA3M2U2YmFkZWVjNTE1NDlhYTZlZDM0NDlkN2U5ZmNiZWE5MGZlY2ZjN2Q4MmJiNjYyYzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_70e3baa4201b4993bf1b16444ae7e1db",
+      "statement": "The manual GDPR request template's DataSubject identifiers and UTC request timestamp must remain unchanged; data-type/system sheets require a unique id column and one row per source-data row, followed by upload through the Access request template form.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L54-L78",
+          "version": "repo-lines-v1:sha256:20ca1958c0d6d0c213aeacb5ed953c277ee87fff38152199b4b3398eebb1da2c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MzZlMjJjNWIwOTBjYmMzYjFjMmU1MTk1YWE1N2U1Y2JiMDRkODdlODcxMDBmYWViYTZmMTExMjk1MzQxZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1ZmNkN2JkNTNkOGQ3YmY5NTBjMzc0OGFiMmZjNjQyNTNhNTFmZGY3N2U0NDVjYTNhMTk4YWY1ZTEzMzZhOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MGI1ZDY5OTlhYTAzNzIzNDdkODAyN2Y4N2ZmZjM3MWU2ZTM1Njk3ODAxY2VhMjkzOGVjMzVhYWU2YzRmMWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzMjI4ZjRhZjZmMzA0NDFjZWYzOTgxZjViN2U2MDljNDBjNzYxYTFmMzdhZTM2NDVlNTdhYTFkZWZjOGE4MjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_16a35e2451dc48d4b0800c8ffa54a73c",
+      "statement": "The documented manual request upload encrypts subject data with the subject public key, stores it in the GDPR datahub, and sends it to DAP for decryption with a private key stored only on the subject computer; the automation guide separately describes importing copies of source data into the datahub.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L80-L87",
+          "version": "repo-lines-v1:sha256:9564655ab1edd85da3d2c12acd432553118d2f80c9237b845c7699e33691aa03:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY3OGQ0NWM0Y2I2NmI5MTliNGVkYTk4YjQwN2IxNTkyZTM4MTI4MmU1NGNkZTcxNWY5OWU1ZTE5NDZjY2I5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzAxZThjZmQwM2I5YjM5NzIyOGRmYzZjMGM5NzRlNzEwZDM0ZjZlZjYzYzlmMzU5ZDhkMzYwOWU0MjNmZjkwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2U4ZGM3ZDlmZWU4NmY5MDUwNDEzYTcwNWI5NDc4MzgyMzNmN2JjZjc5YzBjOWY3ZGE3NmM3MTU3MDNlZGFjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTQzZGZiOTAxNTkyNGM1ZTAwZGU0OWFlODdjNzg0YjI2YTkzZmE4YjYzZTEzZWE0ZmZlZWYxNTZjZDNlMDg0OCJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-getting-started.rst#L138-L152",
+          "version": "repo-lines-v1:sha256:b6edde4cefb236302d495d756d47162c18530b1625557ce48bd822a20d79e50d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4OTk5YmI4NjFhYWNhMGQwZDEyOWMwOWEwM2E1YmU0Yzg5MDFkYjlkMGQ4ZjJjYWUwNTdjOTVjYzdhYzE2NjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmMjRmMmYwMzU3NDdhZjcxMTc4NGY1NjRmNWUxZTBhOWEzZjAzYTY0Yzk2YzJlODBmMGM4YTVjN2E4OGE3MDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4YzRmNzY3YjhlYzA2YmZjZDFlNTQxZDY4ZWNlZDVlMzhiZGEzNTAzOTQwZGJkMDM0ZGEzNmM4MTA4YmE1YTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhYmE1ZDc0ZTA0ZDk4NjlkMDQ2NWJjMGJjMjU5MmFkMjE5MmViYWFhZGZiYTM4NjkxNTMxOTg2ODg2MjY4YTQifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1350-L1353",
+          "version": "repo-lines-v1:sha256:a539ce786f16e3d9575f330c267b57a788b62610da0753c61198f17a05696796:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUyMDYxZDRmYzg2ZTU3MjRkMDhlNjhmODQ1NTUyZjk1M2YxZjQ0OTRmNzMzYmZhMjJhYmY3MGQyNjMwNDdkOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWM3ODgzNzM3Y2QzOWIwNzg0ZDAyMDMyY2Q3NzU3NDliN2M3ZmI4ZTIzMGY4ZDBmY2ExOWU0ZGQ2YWIxZTk4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2VkZDlhOTBmZGUxNjYzNmU3MDc2OTc3MjRmYjE5ODc4YzU5OWYzMzljODQ3NmU1Y2JmOGYwYmIyNWY5YzJmMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNmMjExZTYyMTc1MTIxMGQzZDE4NzQ0NjgwYjYxYzg1N2IwNzE2NzdjMTQ4YjRmYTFlOGM1YTFkNTQ2ZWYxMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9c52263c0737440a9d03f33ff322265f",
+      "statement": "Manual GDPR uploads notify subjects with registered email addresses after a half-hour delay for DAP propagation, and each separately uploaded completed spreadsheet triggers its own notification.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L80-L90",
+          "version": "repo-lines-v1:sha256:0467e9fbba77aeb4edf1ac9832fa632a0c8119b6955ace62a4d42b5a4dc9b3c7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2NzhkNDVjNGNiNjZiOTE5YjRlZGE5OGI0MDdiMTU5MmUzODEyODJlNTRjZGU3MTVmOTllNWUxOTQ2Y2NiOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4ZjM4YjhmYTY2MDBlYTYxMjJhNjhiNTM1OTZlNmZkMzc1ZDgzOWJjZGRlZDkwMzZkN2JmMjljYTVlMWIzZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlOGRjN2Q5ZmVlODZmOTA1MDQxM2E3MDViOTQ3ODM4MjMzZjdiY2Y3OWMwYzlmN2RhNzZjNzE1NzAzZWRhYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4Zjc4M2FhYWRlOWRhZjJhNTA3ODY1YWY0OWRlODA4OWY3ZTVmZmRjYTYxMDhkNjNhNzk1MjM5Mjg4N2YwYWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6782ed50d71147c2b5aad647d6200bd8",
+      "statement": "Configured subject data edits and consent grant/revocation generate GDPR change notifications to originating data-type contacts; downloadable lists include subject/data IDs, old/new values, and timestamp, and manual accepted changes require source updates and refilled/reuploaded spreadsheets by GDPR operations handlers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L92-L118",
+          "version": "repo-lines-v1:sha256:b19472d59984f1d4427537c1bc2f7d8c8b18c39c946f8b524365dc2154cede33:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkM2JmYzM0OGI4YzFmOGYxYjdhODNmMTdjOGEwNGMwMGUzN2Q3Yzk3MTgyYTQzNTZiNDE1MGY3ODlmMWZlOTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmZjBhMTIxNTk0M2Q1MjA0Njg3NjRlZDdkNzNkZjJmZmRkOTI5ZjA4NWY3ODA1ZTE3NmM5ZTBlYzk1ZmQyN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5MGVhOWNkNzc5YzhhY2RmMDkwOWNjNDZjY2Y2ODZhNTlhMDMyOWIyYmQzNmM4OTU5ZmEzZTVmZmQyYjg3ZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhNTc5ZmNiNDY3OGY5MzE4MjQ2MGM4ZjRjYzMzYzZkYzRlZGYyNTc2NWRiYjlkOWFkMmZkYjliZDM4NzZmNDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_31b5c4d0a4aa4b848c42ccf50b7281e7",
+      "statement": "The GDPR portal narrative treats whole-subject deletion as revocation of all consents and a special change request; manual handlers must delete linked source data then upload an updated spreadsheet, and the narrative says data pertaining to revoked consent should be deleted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L110-L135",
+          "version": "repo-lines-v1:sha256:ca3c9d5016e52bb9a7e8413a83a48e2bf84fb53ef4a0da6cef273975bdb1728a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MWE5ZWY0Mjg3OTc1NDQzZjZjMGVmMzY5ZGZjM2RkNWViZTY1M2I3MjUwMDdlZDAyNTBjYWQ0M2UyZmFlZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmZjBhMTIxNTk0M2Q1MjA0Njg3NjRlZDdkNzNkZjJmZmRkOTI5ZjA4NWY3ODA1ZTE3NmM5ZTBlYzk1ZmQyN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjMTljNTU4OGZjNjFhYzQ3NTBjMTBmOWJiMjhmZDA1NjE2NDhiYmQ2MWNmOTlhNDU2NDdmNTNhMzM3NjM0YTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f4f9b0d492d49e0a117aa65ce02065a",
+      "statement": "Historical GDPR guides permit automated change/deletion integrations that trigger mutations directly in source systems, rather than documenting requests alone as completion of those mutations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-data-access-portal.rst#L112-L135",
+          "version": "repo-lines-v1:sha256:c967fe4c5962aac7484d907bfc5a060de1dcab7620087cae89afd71855bbc34a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YzViYjc3N2NhMmUzNjY0N2RjNTc4MTBiYzk0MjI1M2FhZmI5MDczYjA4ZDhmM2UyYjI2M2M5MWJiYWQxMzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmZjBhMTIxNTk0M2Q1MjA0Njg3NjRlZDdkNzNkZjJmZmRkOTI5ZjA4NWY3ODA1ZTE3NmM5ZTBlYzk1ZmQyN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVkMTEyYzQ4ZjZlMTZmYzZkNzEwMGM2Y2YxOTUyMDQyNTljZGEzMWZhNTc1MmIxNWYzOTU3ZTU0ZTJjNzViMDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-getting-started.rst#L234-L241",
+          "version": "repo-lines-v1:sha256:99490ca0bb535a7b3171e1cb0d927927d126ee5898ea7574b249509f9871f6c4:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmVlZDZjMDhhMmY0YzljMDZkZjIzZjYyNWFiOGYwNzhlNmE3YjcyZTRkYmNkNTE2ZTczN2QzNWMxNjdjYmY3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY3MTE2M2Y2NzE1YTRkZTllMmQyOTQ0NjBlMDEwN2M5ZGU2ZWJiZjEwNmIyNWE4MzFiMDczYTcxMTJlOTVmMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWFiNGYzMzE3ZmEwNTgzMzk5MDk4MWY5OWM0MGRiYTQ0MTE3YTg2YjlmYjVmMzZlZWY4MTlhOWNjMWVmZTI3NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmE4ODgzYzkwOGQwZDZkODY0ZGNmYWI3Y2E3YjdhNWM2YjA3ZTBmMTBiYjg1NzZkMWFmNDgyZDJkMWJkYzBkMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4cf2dacf29e94fc09c35e62a3f4ffadb",
+      "statement": "Internal Swagger POST /accessrequests requires publicKey, boolean deleteRequest, and lang, accepts configured extraFields and contactinfo, and returns an empty JSON object on success rather than subject records.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L219-L269",
+          "version": "repo-lines-v1:sha256:2bfcadb2cd3bfbfb97d4ef7f3c1fe84eb660b976e1cddac44d54d1bc39c3baf5:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1ZWZlOWJmMTRlYTQzMjc0NzJkZjFhMWJkZDgwZjA5YWRmZWU3YzU2YzZiYWU3OWE2MWVmNmYwNTRkNmYyYjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmNmEzOWM0YTlkNTE1YTRkZmQ3MzI3NjJjNjM3ODc1NjE1YTg0ZjA1MTg4ZDA1N2M3OTU2NTliZjljNTI4ZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzMzJlMzI2ZjcyZDJiM2I4ZjAzYTM3ZjA0NTE2NTEyMGJiMmIyYWJlN2RhY2ZhOTBkNjJjMDVkOTE2ZGRiMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_63b50f36572545e1a08069f1ebfb95d4",
+      "statement": "Internal DAP /accessrequest_login is called after login for a prior request and associates readable request data with its original publicKey; /accessrequests_update takes that key with update, delete, or add-purpose-to-access-request actions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L281-L333",
+          "version": "repo-lines-v1:sha256:2dcb23f4f30fcbcccfe507a4d983c840d3359f9ae86bcb3ebaa296a0b0bd2988:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MTUwNDc5MzQ1ODE5YzNkMDY3MWJhN2JiYTYxYmM0NWFlZmNhOGZmMTY2NjRmMGViOWU1YWVkNGM4MTFiOTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjZWI2YjNlZmUzN2NiZTZmYjJmYmEwOTBhNzBkMTA5YjIxZDA3MDA1NTY3NjIyZGUyNGNhNWEzODQ0MjcwZjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlODgzM2Y0ODRhYTcwMTZhMzI1NTAzNjNlMjRiODI2YTliZmY1MTc5N2ZmNGI0ODcyZTJmMjAzYjliOWU4ZTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5NjMzM2IwZWVmNjVjYzk5ZDUzNWNmZTUxZjcwOGQxZTQ0N2JlOTA0MjA2OWNjOTQ0NDAzMTJmNWQxYzMwNDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cff6df6915bc4705aca2c2c5f5912f05",
+      "statement": "The internal DAP specification provides document-specific GET /changerequests plus search/item-detail, GDPR download, and client field-formatting routes; field configuration supports client-side formatting of decrypted fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L335-L374",
+          "version": "repo-lines-v1:sha256:2350a7367fb097cf914920d455f770aebd571a76aee5e33e34e6b05867e5d061:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViMWQ5OTc2NWEzZmUzYzQ3MDcyMjdmODljNDdhODJjN2RlMzk3NmJiOWY4OWI3NjQ5MjIxMmZjYjZkMmRhZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1YmIxNGFkZWU4NGY1NzE3NTA5Y2IyZGQyMDJhODRiMTlhZGJlMDY1NDkwMTE3ZGNlZDdmMzZmMWU0ZmQ3Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyMjE2ZmUwZmI4ZWYwZjNhZjk5MmM4Mjg3YzAxODNlZDQxMzNjMjQxMWNlZDJmNWJlMWFjNmJhMjg2NTQ4ZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM2M2JmM2JiNDU1NmUzZWU5M2IyMmI5NzEwNTQ1YTlmZWI3MzMxYjZhNWFjOGY3M2I0ZDVlMzMxNDkxOWM3OTAifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L647-L718",
+          "version": "repo-lines-v1:sha256:291b5e823def0e31cc2aefefc5df08e8a816d1f646b444f8b9ee0391b187ada7:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2MWI2MWZlODE1M2Q2MzM1ZDAxNjcyM2Y5NGJlODk4MjEyOGEzNGRlOGYxZGQ0YjI5Y2I4MThkZDRiMGIyZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0YjE4MWMwZGNmM2FmMThiYzhiYTY2ZDQ3MmIxN2ZkOWY1ZDNkYjI5YTA0ZjZhMGRlMmU3OTEzMmYwMjJiM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmZmJkNTRhZjg5YmFjOTY1NDdjYWMzYzBlZmU1MzUxMjAxZDNhMzU2MGEwOWU2ZDNhOTJmZjE5Mzc5YzkxZjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dea54a776581452dab588ec216c74492",
+      "statement": "The GDPR developer integration APIs are defined datasets with JSON Push receiver/publisher endpoints, including gdpr-subject-in/out and gdpr-access-request-in/out; these are distinct from Databrowser's internal UI routes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L10-L25",
+          "version": "repo-lines-v1:sha256:ec326188cef56e1657918cbf140528d1217a33290f7adb888680f41eb8730d60:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjNWU4ZmZjZDYzZGE4NjkzZTUxM2MwNmUyM2U3ZjU2Yzc0OGM3YTlhNDMxZjBiNmI4MzVkZjkzYTVkYzk2NzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjYmZjOTdjZTk2NTRiNTBlZjg3N2ZkNWY1NjgyNWIzMzg0ZDE3NDMxNjVlYjNhN2JmMGM0MGVjYTdjNWQ4NTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1ZTJmZTZlZDYxMDM2ZjY3NWVmMzM4ZWI5OGM2MzgxYjcyNDk3MTFhYzVjMzMzZDkwODMzM2QyZGNlYTQ1NGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1YmU5NjNiNjRlNWZjNzNhZDIwOWVlNzcwZWZlZTJlNDM0MTAzZDEyMjkzODMzOTA4NTNmYzdmMzFmMmQ3NmUifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1274-L1296",
+          "version": "repo-lines-v1:sha256:e7acad75ed4ed0a6a92d929bcdb1ea4ac26ef35372684069f03ae0303d8a8091:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjYyMGU1NmIxNjhjYmNhZTYwZGZjODY0NzNiOTQ2YTM5MTVlZGUxZWJhNzdhNzAyYWViODU5ZTZiNWU1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5MGYxMjgxMGE1NzVlODZiNmU4ODgxM2Q2OWQ4YjQyZDk2YzgzZDk4YzBkNjFmOGU2ZDdmYWY4MjI2MzdhOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkZTBmM2VmNDUzMGZkNmVjNTg0NDZiZjBmMGU5NDczNzExMWNmNTg5MzhhZjlmZTFhYWMyOTc1MWNiNTUwYzYifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L154-L176",
+          "version": "repo-lines-v1:sha256:c13dff7c912bdec0d08b6dd490dfe136399aa55d0fb2ca68b87e3ef2aa0052dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjYyMGU1NmIxNjhjYmNhZTYwZGZjODY0NzNiOTQ2YTM5MTVlZGUxZWJhNzdhNzAyYWViODU5ZTZiNWU1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5MGYxMjgxMGE1NzVlODZiNmU4ODgxM2Q2OWQ4YjQyZDk2YzgzZDk4YzBkNjFmOGU2ZDdmYWY4MjI2MzdhOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZmJjYWI1ZTFkNDA2ZjdlNWQ0NmY4ZTEyZjQxNTdhNzM2ZWU5N2Q5Zjk2OGI0NzMxZGFkMDQxNGI4ZThlYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0OThlNzk3ZDE3YjFhZDQ1MThiMjI2ZDVkNWEwMTVlN2I5Nzc3MGI4ZDNjYWE5YmM0OGI4ZTZhYjk2MzUwMzEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L2-L6",
+          "version": "repo-lines-v1:sha256:b3eac5a9b75b4574fd9d6331c2e4df2e3f05c3aa14c8cb8548772c35b6782a1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRiMWI3YWI2ZjRiZDc2NDUyYjI4Yjk3NzdiOWYyMTRkNmI4ZjkwNGM1MDk0YzA1MDhhNmZlZGZhMDQ2Yzg5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2NjZjcyZWNkNjQxODUyOTE5ZjBmMDgxMjU2MDQ1ZmU2ZWY2NGQ3NjU3NDUyMzBlNmY4MmYwODU1OThhMjc0YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4229eca07df843f2a6e9b7059791c299",
+      "statement": "JSON Push uses HTTP POST, batching, and JSON arrays even for single entities, supports incremental/full synchronization, and defines full-sync sequence conflicts with 409 and restart behavior, unlike DAP access-request creation's single object schema.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L8-L88",
+          "version": "repo-lines-v1:sha256:e56f2f2f06cc1db3aa77601c80340b8d2f531263059d697084fd575f1620c4d2:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzZTQ5OTcxMTE5MmZhODc4MjhjYjgzOThkOGU4NDJiNDY5ZmFiNGM5MzA1NzI1M2I4YmFlODJjNGY5ZWRhODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlOTY1ZjJkMDk5NzNlZjNiNzk2MDk4NDYyODhlMWQxOTUxMWU4MWE3YmM0MThhMTQzMzlmYjI0MjM1YzI2M2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkMzg1YzkxNzc4OGQ5NDY5MzcwM2QxOGY3ODIwYmVhZDVmYmU3YTQ4MDgzYzQxYTQ3NTIzZjAwOTg1ZmFkYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3M2M4MmI2MmVlOTMxYTBkNjJiYTg2ZWY5Y2Q2ZmIzMWJjMDAxYTc0M2VlMGZmNDA5YzRkZTdkM2I4MmFiY2QifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L225-L269",
+          "version": "repo-lines-v1:sha256:8b1b26b7b531777aabaa488b1785f8432fcf1f3972692ad4184556dbf6e04779:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4YjFiM2EzOTY3ZDY5YzUwMTg5M2ZjYzcwNDc1NzkxOGY3MDhjYWU1MDVmOTI3ODkxY2I1YTliNGE1NDUyMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmNmEzOWM0YTlkNTE1YTRkZmQ3MzI3NjJjNjM3ODc1NjE1YTg0ZjA1MTg4ZDA1N2M3OTU2NTliZjljNTI4ZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljNDZmYWUyZTBhMzg4MjA2MmRlODZiYWRhMzFlYzc3NjVhMWIzNGMzY2U4ODMyNjU5ZGY3YTlmNmJhM2Y5YmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzMzJlMzI2ZjcyZDJiM2I4ZjAzYTM3ZjA0NTE2NTEyMGJiMmIyYWJlN2RhY2ZhOTBkNjJjMDVkOTE2ZGRiMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8bbb7e4383874b73aa5a9651d82c8a6c",
+      "statement": "GDPR automation adds TypeID, Identifiers, and Exclude while leaving the purpose sheet unchanged; Personal identifiers match subjects directly, Related identifiers form parent chains ending in Personal records, Exclude filters properties, and registered custom-subject-data source datasets feed request matching.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L32-L109",
+          "version": "repo-lines-v1:sha256:737ec804e5c7bad186ea797c266c23bc9c2795a94e8d8db934efe20daff695b2:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzZGNmMjYwNzFjOGNlMjBkZDg1YWNhM2JlNDk5OTBjZWE3MjM4NTAwZDM5NTczMDgyMzFkODMyNmUxZjAxNTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1YmIwYjRlYjNjMmM3MjUyNDA2ZDg0NDFhZDFiODM1OWM5OTU1ODE3NzM1N2Y3N2UwMDU5OTk1ZGE1MDQyZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlmMjliM2ZlY2MzMzA0MzhmNWJhNzk5YWRlYjk1MmE4N2EyMjZhMjczNDFmZDMzYWMzMDY0OGNjZGQyMWE5N2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBmNDM0MzNlNzVjNGY1YWNjOGI4Y2FmZmNmNTIxYTM4MTMwODQxNTc4Y2NiMjc2MDk5Yzc1NzQ5Nzk1NDlkMTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_93f5695160024df9ac1b7471c864ebcb",
+      "statement": "The GDPR developer guide says TypeID matches dataset ID, while the getting-started guide says TypeID matches rdf:type, leaving a material configuration-description discrepancy.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-getting-started.rst#L163-L175",
+          "version": "repo-lines-v1:sha256:6a33145c995da3c135f0276cf528c495b545fee4c990b72e142367bf13486ddb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2NmUzNTY5NmM4MDBmYjA3ZjI5MjI5NjBkYmZjMmI4NmVkMjFjOWVhNDYzNDRlZTAzMTc1OTdlZTg4MTNhZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZjVjNmM2YTAxM2EwNzgzMzQzYWM5YmY5Y2ExNTEzOGU2NDhlZDhmMzdkNzgzNjk5NGJkNGI3NDM4ODYwOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3YmM3ZDc5ZGI2Mjg4OWU2ZWU1OTZiZTQzMzc3ODA4Y2Q0YjgyYTQ2ZGE0MjA1MzNiMjdhMjE4ZTJkNWVlMDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkMzM4NDYxMGVjYTY3Nzc1OGQ3MzFlMjE1YmU3NzRjNjljMjAxNjg4YmFhY2FmNDA1NmE5MWQyNDc5NmM3ZjkifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L51-L53",
+          "version": "repo-lines-v1:sha256:92ae804d69d5418950fcb70ba88c023363568c82a593d75a2fb8782614659e39:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY5NTQxOGJlOTdhNjE3YjhmM2M4OTNiNGMwMWFkNzg2ZTQ0NGYyZjc4OTk1OTg1ZTkxZjVmODc5OGJmMTgxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2M1ODIyMTZmNWQ2MGU3MjNmMDU3NzE2MTVlYjZmNTgyZTJiNzI0YTVkMzZkMzM0MDkwZDY5MzFmZTNhNzJmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTY0ZDg1YWNlNGRmZTg3NjFkMGEwY2NiNmI1MDJhODNkOWUzYWViMTFlZmQ1ZmQzNzEwOTRlY2M5NjQxZGNhOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjI5M2UxYjRiNzViOTcxZjk2MjIzYmUxMWE2MDk4MzU2YjFiMGYyN2RkNmZjZjM1ZDIxY2E2N2I5M2RlYTQ2OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e2036b4f8cae4d67855fb801f3ad437c",
+      "statement": "The GDPR subject contract requires a unique subject-id and nonempty identifier list for matching instances of a subject; custom-subject merges with receiver input into gdpr-subject and is externally exposed through its publisher.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L111-L186",
+          "version": "repo-lines-v1:sha256:4bed91f66f0f1f0181176f01f2ab78409a0793adc4ed97bc608563023c0e22ee:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5ZjdmOTAwNWNkMzc3OTc2Y2QyYzVjZTAyZTA1YTFjNzFkOTY4NjlmZjljOWE5N2U0NGQ4ZmI1NWJmM2UzYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkYmEyYmM5YmQwNDZiMGM0NzAzOWU1Y2M2NzFkZmViMjBmZDE5YTg5YjRiYzhmYTUyZTJiNTgxOTdjZTIwMGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiNzA2OTliYTQ2OGFlOTk2NzA5OWZkMDQzNzEwNzdmOGQ2MDRlMDM4ODU1ZjVkYjE0MjVkZDZkZDFiMmVhYjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIzNzg2NTVjZjY5MzM2MWIyZGY2Mjk0MDM2MGU2MmQ0NTBlMWZhMzIyZDFjZGE4NWM2NWFjMmEyOWEyNzVkOGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa740ea1a8274e9b8bb7ac1e28032581",
+      "statement": "GDPR developer contracts merge custom-consent, custom-subject-consent, custom-purpose, custom-purpose-type, custom-data-type, and custom-policy datasets with corresponding receiver inputs into platform datasets exposed through publishers; purpose-type explicitly chooses the newest version for matching purpose-type-id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L336-L339",
+          "version": "repo-lines-v1:sha256:f262c3c60044d3095e0c8efd07578b39f5e40fa6aee1c6fa558ca070ab946a5d:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODM5ZTI1MTY2MzNjNDQ3YWQzMjk5ZWJlZjYyOGI1MTVhNmE5ZjQxZDAwMjlhMTcwMTkyN2I3OTJjZTkwNTAwNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiYTJiYzliZDA0NmIwYzQ3MDM5ZTVjYzY3MWRmZWIyMGZkMTlhODliNGJjOGZhNTJlMmI1ODE5N2NlMjAwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWNkOTRhNzYyZDA2NmFlMjIwMTlkNzAzY2FkYWMzNWM0MTFjYTVlYzliNjZhN2EzYmQxYTI0NGVmOTNiYjQzMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmM0NmMwYTg0NWU5MWNkMjU4NDEzMjVmN2FmYzQ5NGEzNzJmMTYxYjVmZWViZTAyMDEyMmIyMDJmMDJkMTM0NyJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L437-L443",
+          "version": "repo-lines-v1:sha256:ded365ce34c014b9bc0ed9339e172c525b67a6e18ae7b09167a55098d70501b8:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiYTJiYzliZDA0NmIwYzQ3MDM5ZTVjYzY3MWRmZWIyMGZkMTlhODliNGJjOGZhNTJlMmI1ODE5N2NlMjAwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ1NDMxNDQ5MzkzYTAxZjY0YjE5NTkzMDhmN2VmZTliNGI1MTQwMzgzNGZlNWJiM2U0ODZmNDdhZWQ4NWJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTJmMWZlMmJlNjRiYzZkMWNiODNiZjI2ZTc0MzIyNjk4YjE5ZGUzZDc0YTM0NzY1NGNiMWI3ZTVjNTQ0MGJiYiJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L599-L605",
+          "version": "repo-lines-v1:sha256:fb709a0bae81d2ba9bdaaeb77c3a9542b27a5c35674ea3237db13f59f00c3712:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiYTJiYzliZDA0NmIwYzQ3MDM5ZTVjYzY3MWRmZWIyMGZkMTlhODliNGJjOGZhNTJlMmI1ODE5N2NlMjAwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ1NDMxNDQ5MzkzYTAxZjY0YjE5NTkzMDhmN2VmZTliNGI1MTQwMzgzNGZlNWJiM2U0ODZmNDdhZWQ4NWJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmM3NjhmYjk5MmFjMTgxZjE2ODRmOTdiYjA3NTMxZWNjMjAzZDBlZTYwNmY3MjMzNmY5NDE5MDNhYzEzMmFkMSJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L700-L708",
+          "version": "repo-lines-v1:sha256:073651f6b884364d870ade9ad3158170523742aa98f60b7cb479ebfe10b2fa9d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI2NDMyY2Y1MGNmYmE2ZjNjNjVlODNmZDcwOTc3M2MxMGI1ZWY0Yjg1Nzg5ZGRmMDk0ODc5NTczZTE4NzA1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ1NDMxNDQ5MzkzYTAxZjY0YjE5NTkzMDhmN2VmZTliNGI1MTQwMzgzNGZlNWJiM2U0ODZmNDdhZWQ4NWJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTE0YmNkMWE2NWE1ODdlOTZjMDQ0ZGRmZTg0ZjU3NTlmNGZmOTNkOTJkOGRkYjY4YjEwZTE3MWNmYzBjODVhYSJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L826-L832",
+          "version": "repo-lines-v1:sha256:0ca627f38ff5f503a19070ac77e06d94cd8d44c7a39e299838ac5125c1013ef9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiYTJiYzliZDA0NmIwYzQ3MDM5ZTVjYzY3MWRmZWIyMGZkMTlhODliNGJjOGZhNTJlMmI1ODE5N2NlMjAwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ1NDMxNDQ5MzkzYTAxZjY0YjE5NTkzMDhmN2VmZTliNGI1MTQwMzgzNGZlNWJiM2U0ODZmNDdhZWQ4NWJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzc0M2Y2MjI5NDkyZTgxZWU1Y2JhYTVkNWIyNGEwNWIyYTU3MGRiODM3NWUzYzcwYzVhYThkNDhkMmU0ZTIwZiJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L952-L958",
+          "version": "repo-lines-v1:sha256:bdc9007695f5e70590fe791fb6fc843b56c1cff57c94f233bc614151596109e0:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiYTJiYzliZDA0NmIwYzQ3MDM5ZTVjYzY3MWRmZWIyMGZkMTlhODliNGJjOGZhNTJlMmI1ODE5N2NlMjAwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ1NDMxNDQ5MzkzYTAxZjY0YjE5NTkzMDhmN2VmZTliNGI1MTQwMzgzNGZlNWJiM2U0ODZmNDdhZWQ4NWJkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JmMjM0M2Q4MmM5YjVlNDc5MDA3ZTdlYjYwMTUyMDUxMGU0YTQ4ZTEwZTlmYTk3NzQ0YWM2ODUwM2I0YWI4MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_82ebb520216649c2b097d5354a11d52c",
+      "statement": "gdpr-subject-consent records subject-specific affirmative/negative consent choices and selection time; its prototype names gdpr-subject-consent:valid-from while its property table names gdpr-consent:valid-from.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L341-L399",
+          "version": "repo-lines-v1:sha256:b4005f70553e663f64ffd4e2c98b9fd678ab9c5b8069d11be00a55f99ce66c2f:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkOTA0OGE0YjdjNzQxNTU1NmQ1M2Q3YjY4MzI1MTUzMjkzNDllZDJmN2E0ZWE3YWYxMTQ3NDQ5MWFlYzFkNzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxZjUzNTEwOTlkMTYxY2U2ZWIwNzNjOTA4MGExNzE0NDNiMTNiZTc4YTAzMzNkODZjMDQwNzMyOWQwYmM0NmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjZDI3MzNmN2NhMDI5YjQ1ODAyZmE2NjE5OTY2ZWVhMjU0YzdkNjU0MjI4NzNiZmRlNDk5NmJjNGJjNjQ3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYWY1YWNhZjdlNTIzMGQ1ZDg4NmYxZWJjZTc3YzFjMDk0YWYyYThkMDljZmQwZjkwMGIxNjZhNmM2MDA2OWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4ee9af1537d04610820ea1f82cd05cc2",
+      "statement": "The purpose-type input API paragraph names gdpr-purpose-in while the accompanying URL names gdpr-purpose-type-in.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L676-L686",
+          "version": "repo-lines-v1:sha256:d9c004c67e229b06f570f9c06136e8bec1b0ff072205b05885c95b23c7f86648:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjYyMGU1NmIxNjhjYmNhZTYwZGZjODY0NzNiOTQ2YTM5MTVlZGUxZWJhNzdhNzAyYWViODU5ZTZiNWU1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MzViMmIzZDhjMmEzMjUzNTZkMTg3MmNkZmM4MzFhOTg4OWFjOTVmNTY3ZGEzYzRjZTY3MmE0MGVjNTdlNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEwMTJkMWFkOTg3Yjg0MjZlNjA3Mjg3MjQ1ODk1MmU3MzJiYzA4YzYyNWE1ZWFjZWYzNzAwNWNhYzZhZjJhNjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_46aa3590c7c84fe0b209125e95e66e05",
+      "statement": "The GDPR data-type prototype uses language-prefixed description keys such as gdpr-data-type:en-description, but the property table uses suffix keys such as gdpr-data-type:description-en.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L724-L779",
+          "version": "repo-lines-v1:sha256:006ad79cdc3da4ab331440f31c3e7f6163777f72be71772b5045166bec77b534:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4YzFkYWZiMzE3MzRkMGNlODM3MDcwN2IyZTExZjBjZGIyY2NiMGYxYjgxM2Y3OWI5NzdlMWE4YWFmNGUxOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwZGZiZTQ5M2Y4YzA2NmIzY2E5ODdiYTAyMmNjOTJhM2MzYWQ0ZTI2ODhkNmZmYzlkZTQxYTVhMjY3YTdiZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4NTU2ZDEzMjcxZmYwNjU3MDNmOWZmYmVhOGEzNWFmMTJhMjczOGI2NmVjMDVjMTM3ZGVlZDFiZjhmNzJiNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_490b060aec9f45a29e3822a22cd2f6e0",
+      "statement": "Dataset GDPR access requests require access-request-id, user-id, and PGP public-key for encrypting collected request data before storage/processing; contactinfo-type chooses email or phone_number, delete-request is a string false/true default false, extra properties pass to output, and platform-assigned outgoing UTC timestamp overwrites input.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1173-L1270",
+          "version": "repo-lines-v1:sha256:1d9db66fb97eb050c4367fa3f0dbb06a73798b06fdca95f71bf1326fec8c4712:eyJzZWxlY3RlZExpbmVDb3VudCI6OTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4NGI2MmZmNWE3NzM0NjdlYmQ4OGFkZGM0YTQyYjg2YmMzOTQ1NTE0Njk4MGU1ZWMyMjRiNDc4OTRhODY5ZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjMTM1YzhkNDczZDkyZDFmOWZmZTA2NWVhNWUwMzI4OTdmMzExNzE5ODNkN2Y4YWY4NTM3NzJlMmQyNmQ5MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0MTIxMzY0NmJlOGUwMjExNDgwYzdjNDkzNjY5ZTYzN2NjNGFhOWFiZmVhMjYwOGFmN2I4ZDBkNDM2NjcwNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_74051f51cb5c4344bac12496e0e19c4d",
+      "statement": "The experimental gdpr-access-request-subject-data-in receiver may not be available in all installations, requires an existing request ID/data-type ID, reporter and entities with unique IDs/data objects, encrypts with the request's subject public key, and has no output API because decryption is on the originating device.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1298-L1411",
+          "version": "repo-lines-v1:sha256:051acb7a0f488bf8ed367faa5e105fb5cf55f6faaf5174aaaecd450ae97b42bc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI2OTdhNTE2ZTYwYjZhYzY0Nzg1ZGJjNGRiZmI4ZGNlZjMyNTUwYTU5OGE2Mjk1N2IyMGEzNDVlMDk4MWNmOGQ3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiMGQ5NmE2OTgxZGY5MjEzYTFlOWI5OGI1YjcwZjgxODMyZjFiNjliYzMyNmVmNGRlMzcxNzMzNDcwZjBjMzM0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4ZDU0MzE0NDkzOTNhMDFmNjRiMTk1OTMwOGY3ZWZlOWI0YjUxNDAzODM0ZmU1YmIzZTQ4NmY0N2FlZDg1YmRkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5MTVkYzc2OGNlODcyNTdlMDI0YjlkZGJiYTk2ODgzMjFhMmE1ZWY0YmJhYTAzMTc4MjBjNWQyOWRiZWViNzQzIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_bb8c22837fb24dcb82a632d816fc293c",
+      "statement": "Unstructured GDPR document-source microservices provide metadata and binary-download APIs normalized by importing pipes; custom-documents merges sources for extraction, and the index stores extracted text/properties except metadata without storing original files in that indexing process.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1434-L1457",
+          "version": "repo-lines-v1:sha256:f69c249f915e55141e8791f282bf115b709b223ba5a0b9dd78730f3f0553a4d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjN2E0MGQ2YjMxMGM2NzBjNjdmMjk2ODUwNGE0ZWRiMTQyODQwZjMyNWEzZDk4OGZlYWYyMGIyOGNhYmYzZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwMGRjNGI2YTg1MDg1ZTFhOTEyZTg2YTk0ZjI4MzVjZjdlMDkzYTU0NTY3ZjcxNDBiOGIwMWM0YjdkZjNjNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhZDA0ZjljMDUwMDA5Y2VhZWVhNzgxNjgyZDBiMDE1NTQzNmYxM2Y1MmE3NGJkNzQ3YThlYjk5OTQ5MTc0YTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTNjYzhmYjIxNWQzNDU5ODA0ZWQ0MTM5ZjhlMjIxZjRjZWFjN2I4NDNmODk1OGI5ZmI4YjQwZDc1ZTRjYTMifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1550-L1568",
+          "version": "repo-lines-v1:sha256:30791be8266c766876c796e6993ec3cab5d2adc5856754b4906a9a401ff7be87:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0ZDhmNTQ1ZmFkNmMxZWIyMDIwZmFiMGQ0NGMxOGExYzY1NzA5OTVmYjI0YTcxN2Q5MDRmMjJlNzU4YzQ2YmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1MGFmOGZiMjdmMzc2MmE3NmIzZWYzNGQ5Yzk5ZjIzOTIxM2YxMTE4OGRlOGEyNmUyMzk4OGIxYjNlZjhkNjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1MDhiMzg4NDkxN2E2MjA5YWEwZjNjYWQyNzhkN2E2NjIyNjRmOTRkMTBlZTM4NDI4NzcwNjM4YjI2NzM5NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkOWFhNzZkZTE0NWI1ODliZWE3MzhlN2IzMzE5YWFiOWM1Nzg1MjNhMDMzNjg2MTRlZTc0MzY4MTlmYTA3ZTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae6358543b5b437eb00abba00bb7da05",
+      "statement": "Unstructured GDPR searches run at new access-request creation using subject properties, are point-in-time, and are not automatically rerun for newly indexed documents; the search paragraph spells custom-document singular despite the internal dataset being named custom-documents.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1550-L1555",
+          "version": "repo-lines-v1:sha256:ea1fcd34b1b55bdf1ef2e1267a92420798f94d5b53a17f62c47f265897ecd7f0:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRkOGY1NDVmYWQ2YzFlYjIwMjBmYWIwZDQ0YzE4YTFjNjU3MDk5NWZiMjRhNzE3ZDkwNGYyMmU3NThjNDZiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmQxZTMzNTQzNjMwMzVmNDM0NzBjN2FkZDVmNWEwYTgzYzUwYTQyMjg3MmNlYzhjYTZiZWQxOTg3YmNjNzQxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzUwOGIzODg0OTE3YTYyMDlhYTBmM2NhZDI3OGQ3YTY2MjI2NGY5NGQxMGVlMzg0Mjg3NzA2MzhiMjY3Mzk1OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmQxODQ5N2VkZWU1YmY5ZDhkMTdmZTBhMzY3YWFiNDllZjllMDcyNTYxNTVjZGVjNWM2NjAwMDM2OWZiODQ1MyJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1570-L1580",
+          "version": "repo-lines-v1:sha256:def00f706cce64f5831399e7e6162728d9a1d3f7d61bc380e3dfabeac9a477bf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwODRhMzM3M2ZmZTVkZTIyYThlMzU1ODkyOTg4NzU1ZTg1ODAzZWQyYmJlNjRjMjgxMDNmNjUxMTJlMjY1NTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0OGExNWFlOTdjYjIwMzY0MjIxMmY5MGJiZjlmNTU5YjlmOGNkN2E2NjkyMjhjN2ZiYzRiZWJiZGExY2MzYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQwNzkwOTMyYjQzNzRlODI2OWI2MmIzMjRlNGVjNTA0ZTE0MzcxMjIwYjFiM2VjOTcxNmY1YTJkMTYwZDE3NmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2YzhiZWJmNWQ4OWY1ZTI2YTg1MjRmN2Q4OTdkZjQxNzg2OTZhNzY3NTA1YTE2NWZlZTRjZWRmZTY4NzllMjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f60351cb4bb345b88c7cf85d0805b7b9",
+      "statement": "Every unstructured GDPR search match requires manual vetting before DAP disclosure due to false positives or other subjects' data; reviewers can remove rows, withhold files by removing extract-content links, and replace text/metadata before uploading the reviewed spreadsheet.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1425-L1432",
+          "version": "repo-lines-v1:sha256:5c9f6994c55697aeb40e2f5867c359135469375164863c774993e6306697bda2:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY2N2FjMDgwNmY4Njk0NjYxZTJhODQwYjRiODYzOTZiMGQ3OTkzNDg1ZTg5M2JmZTgzNTZhNzE2OTE4Y2NiMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGVmODI1MWY4ZGVmYWQ0YTdmYTRiMGMxNWYxNGRlNDIzYjFiNDA5NmI4NGJmOWNjNDM2MjgzNjE5MzhlZDczMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGZlYWYzZTI3ZWQ0MTY0OTEwM2NkMzdlYTgyNWJmYWJhZjkzODRlYTFlMWZjNGQxMTAxYjEyOGJkMjk4YjI1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzUzMTAwODI0YjFkMTI0Y2Q5YmVkMDkzMWFhM2VlNjM5NzJhOWEzNWVhNTYwNjkxMjg5YjRhYWU5ZjIzOWIyNyJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1582-L1596",
+          "version": "repo-lines-v1:sha256:c5428affb3bd9f176d68327ab74a9d3141c1fcf7b75f248f3eb2de978f37e11d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlODQwNDJmNjg1ODBhZmYwZTNhMDY2OWNlZjY2ODQxZWRhMmQ4MzJjM2U2ZTI0ZjliYWUwZDViMmRhNjlhMDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1ZTczODY5ODI2YjVmMDM1OTZmNjAyNzhjZTYwYjU3ODE4Yjg5Njg5MzE3MzA2Nzc1NjExMTFhZTg3MjQ1YmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxNGI1Nzk4ZDcwMWU2MmM3OGRmNDk2ODVkOTM1MjU0MjQwOTgyM2UzNzQ0NTg0YzYwZWRjMTk0NmVlOTgxZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM4NjUxZWVjNzczODEzYTNlZGJiNjgxNmNmYjljMzFhOWE3ZTRmNTcwZmI2NmUwMzQxOGQ3YWU3ZmEwM2ZjMzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dd22e79affa64626a3d4d48cbc9e8874",
+      "statement": "After unstructured GDPR vetting, document metadata is encrypted with the subject public key and transmitted to DAP; a remaining extract-content link also causes the file to be fetched, encrypted, and transmitted for client-side decryption/download.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1598-L1606",
+          "version": "repo-lines-v1:sha256:7cab8f751d81350fed5d37254a2ef25987a510d94285bd40fa4d1a90e962984d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQ5MzBmMGU0Y2NmOGNlZmQ5YjllOWU0ZTExMzY3MzdkZTE5YjU5NmE1OWViN2RjZjgxY2Q5MDNiNjcyMGUzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRhOWJjMjMxZmMwZTRlODlmZjhkNjY1NDlkZWViNTZiMjU2Y2VkZjI4MWU4Njg0NDVhNmZmNjljZDYxODAzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDMzNjFlZjNhZTIyMjVkYzkzYThlZWI1NjExZDI5NzM2MTBlMDBkMGRhNjA1MzNiYmY5MGY3YzYyNzQzYTQwMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f6ba6ae150314d2d943624c437ba07ce",
+      "statement": "The unstructured document extract-content URL is documented as not challenging for authentication and restricted to a local network reachable only by GDPR Platform, with the microservice proxying backend credentials; original-url must challenge for needed authentication and be reachable by human reviewers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1503-L1508",
+          "version": "repo-lines-v1:sha256:aba85eee2991af7bdcf2707d965a244ace0bf6cde94b0b64b2972143eb508385:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDViOWI5ZTU2ZGJlNjNlYTE5ZTBjZjkyMTY4ZjQxNGY0NjEyZGMwMmU0MmJlNWQxNjgyYjY1MzFlYWU0NGRjMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2M1ODIyMTZmNWQ2MGU3MjNmMDU3NzE2MTVlYjZmNTgyZTJiNzI0YTVkMzZkMzM0MDkwZDY5MzFmZTNhNzJmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1537-L1542",
+          "version": "repo-lines-v1:sha256:23a2d6c8f6f1d023f7755244d308e312e6f487569e8cf4d9d4fd82be8d83a659:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTVkN2ZhMDczNzBmM2E0ZGMyOTlkMzdmZTZhNDY2YzNhM2E2ZjgzMjAyMzA2MDI5YzM0NGZiMWNhNzQxZWYzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2VkNDlmOTI1OGM5ZTIxYTE1NWE1MWUyM2ZjODBjNDIwYzY3ZGJiNjg0Mzc3MDQzN2RhYmE1NGFlM2VmMTY2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_43d84dc4b74842d4a3b2337e2827910f",
+      "statement": "GDPR custom-translations changes require preserving template and environment macros and starting the saved pipe; affected notification/object translations apply to new emissions rather than already emitted objects.",
+      "evidence": [
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L165-L177",
+          "version": "repo-lines-v1:sha256:51b899ab05b7ffa4221128c356a5e5392bd964c64862820c1660d6db886be482:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxZDFhMjkxN2Q3ODgzNGI0MzcwMWIwMWZhZDRlOGVjMGRhOGM0MTJmMjBlNjQ2YmExNGI5MGE1OWU3Nzg3MTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmNDRjMWJmZTUxMzk3NmE1MTczYWFmODAyNjJjYTdiNWRkNTM2YjEyMWIyMDM3MTRhZDYxN2E2ZDA5ODEzYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxNWE1ZmJiYWYyNzU2YjJiNmJkMjdmYjQyNTQxZjAzMTM5MDc0Yjk4MTdjODI4MzBhNTM4OWZlNDg0NmZiNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI5ZWM2ZDgyMGIwMDViYjI1YTMwNjZlZDUzNzQ1MTcwMTdmYjJkNzRhNTNhNTBhZTc4YmYyZWE4MGM4NDhhNTEifQ"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-developer-docs.rst#L1164-L1170",
+          "version": "repo-lines-v1:sha256:b9db1678d64684d09fb6217a8a1688183eccb70de3cb6b04f0c1d58d4b07ab06:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFmOTMzMjk1OTJiMzhkZWZkYWQ5NTUzZmMzMmQ0MWRkMjc5ODRlMDQ0ZTVlMWNiMmQ1MTc3OTJhYjk4M2QzZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmM0YTVjMmZjZmQxNjhkNjM5NTY0MGZlNDlkOWYxYmY2ODdkOTFjNzFkODY0Y2EyOGU0NTE3Y2Y3YmI3ODNjZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDRiOWEwYjE2Yjk5MTBiYWE1ZDBhNGRjYWZmOGE2MGM0Mjk2MzNiZjJhZTNjYmFjYzgyMDI5MDc1ODBkMTBjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjAxZDAxNDg5MzQ2YjNiNTIxMWFiZmQyZWZmMDRhZDZlYzJhM2IxMGZlMmU1MWJiOTFhZWVkYzEzNjVhMjQ2OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_32a479dd2e5f410aa22968eff783e241",
+      "statement": "The inspected repository pull-request workflow builds documentation using make html, and README documents the same preview command; this does not establish runtime legacy-service integration test results.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L1-L24",
+          "version": "repo-lines-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZTM0NDY5ZTI4OTkzNDNiZTBhYzNkOWEyMWM3ODI0MTY3OGVjMzU1Y2M2NWUxNWE1YjJiNTE3ZGYwMjRiYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMjgwNmI3MTI1NjI2NDA4NTU0YWFlMzE2MTkwYjYwMDk2YmE4NWJkNmMwYzJkN2EyMDRmYzlmNmYzZTYxNDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://README.md#L1-L25",
+          "version": "repo-lines-v1:sha256:446ef5080a2a970dba92129cb8359028ffdec908524220257a860419123707a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhNmRmM2U0MmQ0MGU2OTM5MTQ4ZGZiZDNjY2E2Y2M2YjA5Yjk2N2Q4NGJkZDk5M2EzNzRkZDUxYzU2ZWI3MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MjIwMTYzZWRlMjA1MDJiMjhhNjYyNzY5NTA2YTllN2I3YzVkOTRhN2ExZDhlYTFjNmE1NjFhOGQyMzQ0OTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2MjhlZWFjMzJkOTQ1N2QxMWFkOGVkYjk3NDRiZDdiMzIwNGRjNWVhZDA0NWY3Y2NjNTY3NzljMDk1ZjFkNzMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

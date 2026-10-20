@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c565996d0cce710a11aa5ba77eb70dd222b6895114e9a22cd26dc544078adbb7",
+  "claims": [
+    {
+      "id": "claim_ac77b96eb7504407b75e06c4e3652a47",
+      "statement": "The documented Sesam project lifecycle uses API features with external development tools for version control, local/CI testing, and optional automatic deployment rather than a built-in project configuration-management suite.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/configuration-management.rst#L5-L15",
+          "version": "repo-lines-v1:sha256:547f0732f5451d851e40b7e5d1828a6b1103469062f9869c0c91067c794238ae:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxZDFiYjBiMWMzN2M2MTYxOGEwY2QzOGMxODRjMzYzNWFhNjAzYTBiMDcxOGU3NDY0N2FkMWUwYzBiYmRlYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjNzlhMjVkNDY1NzgyOTBiNjc4NDVjNmEwMTFmY2UyM2IzZDc5ZTJjYTFjYTgyNTE2MzQzMGY1M2U1NDAxMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4NWEyYTBiZjZjN2FkNzVjYzAzMmY2M2QxMjA1NWQ5NWE2ZTA4NjJmODQxNTAyNGIyMGZlMjU4MzdiOTgzN2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/setup-environment.rst#L39-L56",
+          "version": "repo-lines-v1:sha256:8b4c4a7be7f377120308d847badff67e697ad2991d2e9aed09ed59b127fa2172:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjOWRmOWVlMTFkYjhhYmViMjUxNjBkYjJhY2NiNGI0NjU1YzhlZWZlZWU4OTk1MzRkZjZjNGFlNWEzNjNhODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjZmZlNDJmYjIzYzE1N2VlMDg4NDg2ZTcyNDliZWU0ZmM4MmRiMDBiMzVmNTM0ZGM5ZWI3OTA4NTQ3MTc4NGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1MDdjMDE3ZTYzNjFjMTgxNDc4NTRhYTQ2OWI5ODZkNDk5MzE4ZDNlMjcwZmY5ODI0YzYwZmQ1MTZkOTg1ZjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllNmQ1YWU3MTM2MTIyNWM1ZDA4OWRjMGNlZjA5YzZlNjc3MWJmZDM2MmNkNjZmYmE2MWUzZjAyOWE2MjE1NGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e28a86aa074a4992bfba1642af8b55c8",
+      "statement": "The Sesam client is documented to download and upload JSON configuration, simulate pipe runs from start to finish, and compare actual with expected outputs; installation and usage are handed off to the external sesam-community/sesam-py README.",
+      "evidence": [
+        {
+          "resource": "repo://hub/sesam-client.rst#L10-L24",
+          "version": "repo-lines-v1:sha256:084dc77d3b6c2173dda73a5c2f2505ec09036c931a7ceb2bf1d2513a611f80e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiNzc5YjQ2Zjg2YWEzZjQ4YTNlOTQ1Zjc3YjBjMDJkYTA1ZjJhMjQzNDM0NGYxMmM3YzIwMjViMWZjMzE2ZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MTllZjVmYWViNTA1N2ViYTQyZGM1ZWIxNjI2YWRjNDkxZTVlNzUyYjJiNDk5MmYzZWNhOTNmOTI4MDgxMGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiNjQzMzIzOGY2M2QwNWExOTNhN2Y2YjlmN2M3NDYwMzkxMThhYjk3OGQ5Mzk5YmYzOTZiZjYwYTg5NzZlMDQifQ"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L38-L53",
+          "version": "repo-lines-v1:sha256:a923202e8a9dbea5422ea134e811e5cd37f8a7d9cf9c4f8663ccbf39790446eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MGU0NWQwOTExZTg0ODBmNGE5ZDM4YmE4ZGI0MzQyNDAzNWM4ZGIwZTZkNTE2Nzc5NGRkODg1YmMwOGUxNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZGI5OGFhM2MwNWZhYzE4MWQxNmI2YTgzZTEyNmM0NjBkNmQxYzBmMzliMzEyNmYwNzBhMTQ2NmRlZDU3NzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzZDdmMjE1ZTYxMGNkZjkzN2M2MDNiNWIzNjQxMDk1YzhmYmZkNzFkZjAzMTdlMjVkMjNjOTA5ZWE0ZTVjNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b10ec55a4e874ef68413e649b0d0317e",
+      "statement": "The client is intended for personal testing subscriptions and dedicated CI/CD testing subscriptions, and its documentation explicitly warns not to run it on production subscriptions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/sesam-client.rst#L21-L36",
+          "version": "repo-lines-v1:sha256:a50b2ae619290e67be7b102eaccddc74ba64dba970c76db18a24b5691f49cf3c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNjk1ZjU2YmU0YjlhNzczYjhjMjVhNDgyOGYxMjdiOWZjYTY4M2EwYjMzNWYzN2VlZTI0YzkwN2Y2N2MyZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxMGQ0ZTdiNmYzMmYxMzMzMGM4ZTE0YmU4ZGI0MTcxMjMyZjI2ZGQ1MWZjYTU4MzNjOWFlZjhiNjBlZTdiMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljZjRlNGRiODMxY2M2ZmQ5MThmNmQzYjZkNmYwNjg2MThlMzQzYWE1MzhjOTRjZmU5MzIzMTdkNWE0Y2IyNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MDExNWIxZGU0OTU2YjM3NTA3NjE2NzkxZWRjMjA3OTBiY2M4ODc0M2Y4NWZmYzIxYWI5ZmRlOWJiYzk5ZmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8805a5c755cf41969e760e49f40b361e",
+      "statement": "Only one client instance may run commands on a subscription at a time, and manual changes while the client runs are warned against because they can produce undesired results.",
+      "evidence": [
+        {
+          "resource": "repo://hub/sesam-client.rst#L26-L36",
+          "version": "repo-lines-v1:sha256:82c2180101a8e94ea8b9774205eb8c69fdd9bd5f1a740e177cec8a4ef7a3f367:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzNzkwNjA2NTg3YjMzYzdiY2VkOWI3N2UxYmU4OTcwMDE2NzcxMjhjMTI2YjgwYzllNmMyYTQ4NDc1MjFiZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxMGQ0ZTdiNmYzMmYxMzMzMGM4ZTE0YmU4ZGI0MTcxMjMyZjI2ZGQ1MWZjYTU4MzNjOWFlZjhiNjBlZTdiMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0YjA5MGY5OTYxMWJmMzY0NDUxMGEyNjhhNWZkZmVmZGI4YjE5MmMyZDA4MmU5ZDE0YjdiYTY5NTMyMzI2ZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MDExNWIxZGU0OTU2YjM3NTA3NjE2NzkxZWRjMjA3OTBiY2M4ODc0M2Y4NWZmYzIxYWI5ZmRlOWJiYzk5ZmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4659f517dae9416b9bb502099d21294a",
+      "statement": "The environment guide separates per-developer development subscriptions, a CI-test subscription, a production-sized test subscription, and production, and recommends test data for all incoming data types so developers can test independently before propagation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/setup-environment.rst#L14-L25",
+          "version": "repo-lines-v1:sha256:690003c1a7dc82bf4e2685454b6d042e03e66fc7854720ed9502166acfda19e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzYjZlNDAxNWI0NjliMGJiMTFkNmJjNDA5YmIzOTU5ZWI0ZGY2MWZkMWQyYjAzZGMxNmVhOTQwY2E0MWU2NTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwNTg2NDJjOTQwNTRkODRmMTc4YTk4OGViZDQyY2VhYzhiN2E0MTE4OTYwYzYzZmU1Nzk4ZDliZDNiZmJhM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMzcyMThkNDk0NGE3NDc3OTg0ZGQxYWRlNTcxZWE4YmNkMmE0MThmZjk4ODVkY2U4YWJmNWU5OGVhMzBhNDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4MGJlYWZjN2I2Yzk3MmE3YjkzZThhMDk0ZjFhNjQ4OWU2NzFhOGNlYzdiMDE0M2Y2OWQwYmZjOWM2YTMzYWYifQ"
+        },
+        {
+          "resource": "repo://hub/setup-environment.rst#L42-L56",
+          "version": "repo-lines-v1:sha256:608baf31fa484a6c9a6a154fd53eea6792fd5aa3a05189a9e6348109c6e80975:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3YWM0N2JhODJjNWUwMjgyZDMzOWMzYzM1ZWEwNzllNjQ1MjdmNjQxNGM1MmI3OWExNWYyYTQxNmIwYmI2MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjZmZlNDJmYjIzYzE1N2VlMDg4NDg2ZTcyNDliZWU0ZmM4MmRiMDBiMzVmNTM0ZGM5ZWI3OTA4NTQ3MTc4NGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxMzVlNGNmMjI0NmI3ODBjN2NmNWI0ZTMwY2VlOGQzNDg0MmE5YzAzZTc5ZWM5ODcyMGVkMzZiMGVhMTE4ZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllNmQ1YWU3MTM2MTIyNWM1ZDA4OWRjMGNlZjA5YzZlNjc3MWJmZDM2MmNkNjZmYmE2MWUzZjAyOWE2MjE1NGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_61e15574c9524f02b09f02b0011d708d",
+      "statement": "Documented local testing requires output pipes to be disabled or unable to send to their systems; CI must be unable to write to another system and should not contain the variables or secrets needed for usual output connections.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L20-L24",
+          "version": "repo-lines-v1:sha256:fcd7c8f6d710e3415c41b1d007ee6de9d623798834ee28cf5cfdfd8800131ab6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmRkMGJmMGYzMTI0NjRhYzY4M2M5MTQxMDhjYjhhNjcyMzcyMDBhYzc0Y2Y5NDE5NDFjYTRjNGJjZDM5YzcxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTNmM2FhNTdlNGYzYzc4ZGZkNWRmNGE3NDk4MmJiNDJlM2U2YTc0OWVhOWExODE2ZTUzOTAyODFlODI4Y2FkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjg0N2I1NmQ3M2UyNGE1M2I2ODQ0NjZkM2IyMDk0MGUwZGY4Y2MwNzdmNTZkNWM4NWIzMGViZjVjZjg5MTM2NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWJlZjA1NGIyMDEyMTA0ZmM0MTVlOGUyY2I1NzJiZGQzNmFjMGJhZDgwYTgyOWZiMjliNjNkYTZhNDQ4NmZiYiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L9",
+          "version": "repo-lines-v1:sha256:bd64e696390e5fc902c522bbd9dc446b7baadc0ff24dfc204a731c810c699c20:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOThhYmRjZjJiYzkwODIwNDYxNTkyMjY2OGU2NWJkNmQ4YjdmMWM5YTRmNzE0NTcwMjY1YjhlNjdiODdhMmMyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTkyYTJiODM3ZDY1MDE4ZDA0OWM4MmE0ODBmZTgyNWU1OWZiYzEwNGM3MGUzNTIwM2Y0OTA5NmVmODg5YjFkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE0YzI4N2VlMWJiZTAyOWNkMGQxYWE1M2E3YjI1NGIyNjY5Njg3OGU1N2NmZjVlMjM0YzIyZTAyMzZhZGVmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7bc220a2bbee4277bb262d2f884f8bc1",
+      "statement": "Disabling a pump prevents automatic execution but still permits a manual start, so pump disablement alone is not an absolute output-write barrier.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L548-L573",
+          "version": "repo-lines-v1:sha256:6745b0cf2c2046108d25e13fe54cf674b72d0356ba50811d2df6fc7515a8d19e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ODc2YjY2NTkwYjliOTNmYTNjMGU4NjY2YzQxYmJmNzU2YmUwNmVhNzNmNTM4ZTNhODkxYjgxOTE0OTVkMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOWMwMjZiOTM1Yzg4ZDRlZTdjNTVkOGUxZGIzYTM1N2JmNDM1YTM0OWM5ZGFlYWQ4ZmU3OGVjMWZjMjcwYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmNDc2MDU5NGVlYTI5OGIzNTEzMjcyNTUxNWMwNzM2YWJmMThlMmNiZDQxODVmOTM1YjBkOTZhZDhjZTUwYTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwNmJjNTA2NGFmNTQzZjcxN2Q2Y2E4M2RkMzQ5NDU3NjBhNGFhMTQ0N2FjZjg1MzE5YmZkMzNmZTIwMmViZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_10ef0e173a3b4cbf8bc9897dc8072450",
+      "statement": "Conditional sources and sinks select an alternative using a key typically controlled by an environment variable, resolve the selected component when the parent pipe is created, and require every possible condition value to be present in alternatives.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-conditional.rst#L7-L61",
+          "version": "repo-lines-v1:sha256:bc04184c373b468a6e6ebaca449a7eedaaeb2c99f2dfc4dd6463ca7458352d54:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkMWM5NjZkNjc5ZDk3ZjI1MDg5YTIyOGQ3ZjE2NGYwYjM3YjJmNjViNjExMWU3NmQyYjE4ZDAyNWMxMTRlYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3ZTMzYThiNjE5ZWYwMzJmOTA3YzgyYjFjYjE0ZjMwYzljYjgwODZhY2Q2NWFiZmMyNmNlOTVkNjIxZjQ4YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-conditional.rst#L7-L61",
+          "version": "repo-lines-v1:sha256:5bcae0be1092978765843fe74a8d84083920a34fca4f5ab1f7111fbd898c0691:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiYzhhMWJjNDg4NDI3ZTRjYjg3N2JhOWUxZTY1MDQyY2Y4ZTYwOTIyYzY2NzJlYjE3YjBhYjkxZmRkNWI2MmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlNTY4ZTdiZTZlOGQ0ZDliNGY3M2E4MTg2NjUzNGQwNjU3NGRkMGQwYzg4ODlmZGZiOTVhMTk5MTJlMjE3OGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f95c35c6e4d4dc2b14d4b0f527c9f0a",
+      "statement": "The documented development isolation pattern uses conditional sources for anonymized embedded inputs and conditional sinks with a development null alternative; a null sink discards written entities and does nothing rather than writing to an external destination.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L310-L331",
+          "version": "repo-lines-v1:sha256:90371c8b9e34f8c824aa82e2a37b47f2fe80878ed8d2fbbea5b52c2ac0464821:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2OWVhMjFmYmFjNGQ2ZDQ4MzY5MjUyMGU1NzRjZTRlNjU3YjBlNTdhYzI5OTMxNWZlNWQzMDc4YWQ0MWZlYTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjZTQ4NjkwM2M2YjM4MzUzMjcxMTA3NDI1ODQ1OGFiMDE1MjIyNjU2ZmNmZTY3OWRkZjcyMjQxMmMwNDE5MjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYyYmJhNmVhMWRlMWM0MDIyNzc5MDljNzM3MDQwYmQzYjEwNGE4OGJiZWU1ODg4MzhmOTgyMmVkNTA5NmNhMDcifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-conditional.rst#L18-L35",
+          "version": "repo-lines-v1:sha256:708573b1ebd933268ca87a9b2ba8582df539645c436f593ea682fee8d40c215b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5Y2E4OTFiZmY3YWMxZjdjZWFhZTQwZWYwNTEwNjZiZTllZmU0N2I0ZTQyODFlODZjMzE5YmUyYzU1ZWJjZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4NTU2ZDEzMjcxZmYwNjU3MDNmOWZmYmVhOGEzNWFmMTJhMjczOGI2NmVjMDVjMTM3ZGVlZDFiZjhmNzJiNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-null.rst#L4-L17",
+          "version": "repo-lines-v1:sha256:dcf3f25dc758152b80abbb987ea3b6cf8144b07873f6c4865e3df022ace95a10:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5ZGE0YWE0ODQ1Y2M1ZDMxYTkzNjU0YzgxNWFkZTFmN2FkOTkyMjJmY2IzNjQyMDQzZDZmNzhjNzQ1ZmY0NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2ZjUzNWRhNDFkNTcxNDUwY2QyMGUyMjkyM2Q2YTQ5Yzc5NjE1OGE0Y2MwNzZlZDBmYmM3ODA1MzBkNDk4NDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_91e79565d0a44c51a2e4a8c3d7341652",
+      "statement": "An embedded source stores input entities inside source configuration and is intended for small, static datasets, not a large number of entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-embedded.rst#L4-L26",
+          "version": "repo-lines-v1:sha256:88d513a7e7eeed39ceb59f31f0b5e9f847a0821ff639edb5af426f6d34b4aca4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5NWZmZWVjYmQ2ZjQ3MDNhZmE4YzU3YzNiOGRmMzI3YWFlMDk3MWRiNmMyZDRjZTVhZmE1ZmNmZTVjOThhZmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4YzZkZjc2NWUzMTEyNjliY2U4MzgyNGYyMTQ3MmIxYWM2ZWJjODllNmJlNjI2NzM3NzQ2MDQ4MDA0MmFhOTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3ODg0OGRmYWFiMjI4NDM2ZDRhZmRmOWUzMDlhYTE3NGM0ODQ0ZjUwNmU3MTg1MGYwYTUwNTQ3MDA3NDIxNmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_43863be8e7e24105ad5135ae02b0c357",
+      "statement": "The version-control guide recommends exporting configuration through the client, API, or portal into a VCS working copy, including pipes, systems, expected, and variables directories, and using GitHub Flow with semantic-version release tags.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/version-control-system.rst#L14-L46",
+          "version": "repo-lines-v1:sha256:b55c26e6cec5ae2e08b925feddbf89c95f894b8292697ad9e54722586d84e909:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NTEwYmYwMWY5ZDUwZDY4Yzg1MTU4MmE1YTcxYmMzODg3MzAyOTNlMzgyZDg5ZTA3ZjY2NGQ5MWIyMzBlNDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhOGNiNzcxMjkwNmU2NjM4ZjdjNTE1NTM1ODE3YWQ4ZWI3ZDc3ZTdlNzcyMGY4OWY2M2VmNGNkNDYwMTFlMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3YTBjZWMyNTIxYmYwMDFmYWNlOTA4MTQ3OGJjNWJiZjlhYzZlZDdmODNkZWE4ZTIyZjgwZjE0OWJkYWQ5OWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7792e381e0894743a4e4020ef93d1de4",
+      "statement": "Sesam retains uploaded pipe/system configuration versions in system:config and exposes previous configurations, but the guide explicitly says this history is not proper project version control and recommends a separate VCS.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/version-control-system.rst#L7-L12",
+          "version": "repo-lines-v1:sha256:264b31b62d4087fd6344bfd4d94a6fc43e92fee78b5c355d4f944233ceecf8e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmQzZWZhY2RjMjBjOTUzMDgwNzU1ZDg5NjNkMWQxYzBlZTk1OGI5ODI1NTQxNGViZTM0MDQ5ZjcxN2M2MDBmZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGNjMDBmYmUxM2FlZDgzMWNlYzMwYWVjOTY1ZDgxOGQ3MjczOWUwZjA0Nzc4ZmEyZDQwZDAwMmRmMGVlODg4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM4NWZjZGQyZjM4MWM1NzY2ZjNkOTBiNmE3OTg5N2IxYThlZDA1OWRiMWU4MmUzNTY2N2FlNTMzYWRhYTg0NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzM3MjUyN2FkODg4M2IxYjcxODA5YzNjYzRjOTNjYTY2MDY5NDNlNGU0YjBhMDVhMDZjMjliMmNhYjAyYjM4MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6e9018ac38024e6a99f58f8a3aa77098",
+      "statement": "The documented default endpoint-test contract places expected beside pipes and systems and requires a <name_of_pipe>.json expected-result file plus a <name_of_pipe>.test.json test-configuration file for each endpoint pipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L241-L250",
+          "version": "repo-lines-v1:sha256:8a80982d8e834ef031f50dd50480bdc484074bc7e57efdd5b592dce1218c29ad:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NTQxOTlmMTIwYzgxMTJlZGE0YzY3OTM4MjZlODY0YWFjOTNkMzRjMzRmNmM5YzIxNjZlYTYxZmI1ZDYwMmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkNDQ5NjhiYzZmMDVhMjY5NTBiYjY0Yjg1MTc1MmEwYTQwOTNlMmE0MDQyYTY2OTc2MTA2M2E2NmI5NmE2MmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg2ZmVlNDUwNTRhMjQ0Nzk1YmRkZWMzZjNlOWZiYjlkN2RiMmMwMWNiM2U0ZGExYTE5OWY1ZTllOWIzNzcwYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L11-L21",
+          "version": "repo-lines-v1:sha256:440f2be615a541f66d5e9a7b5fb2663a362d7704f6d728297930e137835916cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyNGU4NjA5ZGQ0N2JhNTMyYTJmZWNiNWI5NTZkNDI5ZDZhOTJiNzkzMGRhMjY2NWI0ZjI4ZTExMzFkZmE1NzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljZGE1NGMwMDFhYmFkMzIzZWY2M2Q4OGRmNzQ2MThjOGY3MmE0OTE4Yzk4NzdkODFjY2QwMzg4Mzg0OTQ1MWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8f197d3f24f44a83b0f21bd37d578b10",
+      "statement": "Test configuration offers optional naming/type/description, pipe selection, and expected-file selection; foo.test.json defaults to foo.json, while the authored pipe-default description repeats the expected-file wording rather than clearly specifying a pipe-name algorithm.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L33-L49",
+          "version": "repo-lines-v1:sha256:7d383cc22a0605d9c9e79378b653aae8de52b4ebc712ef4a8d1c557084b5e275:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMTc5OTJmMmQ4ZGM1OWM5NWIwYWVhMDU0OTcwYTdlN2NhMWVmZmNjZmRhODg3MzlhZDcwYjMyMzQ3YjFmMDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4MGMxZDQ4MjBlOGE2YWExMWIxOGRkMjE5ZWM3YjU2OTU0ZjM4NDEzOGEwYmM5YzYzMjVmMmZkN2JlODYzYzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMmMwMDY4NjI0NzVhNjZlY2UwMDMzNDc3ZjQ5NThiNjVmOTQwZTRiZGEwNWY2YmMyMzU5NmJiYjA3NGY4ZGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3NDNjNzFjZmFmN2EzYzYyZjg4MGM2YTlkOGFiMGQxY2U2YzJlYjMyNGZiNWVmMzA5ZTQyNmI3ZjUyYzFkODQifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L69-L79",
+          "version": "repo-lines-v1:sha256:a175ccbff946a0c733a7a462bb2080248e0cfc93090971f9e6b92ce26376a6ec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExYzgxNTllODBjYjM0YmY0YmE4ZWQwOWEwMDE0MGFjMmYwMTA0ZjhhNTg1NzBhMjk2NTg5NTM0ZTlkNGRiNGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmNWU2OGNkZmFiNTE2MDBlZmQ0MDAzZTEzNTFiNmU2ZjI5OWQ5YTkwNzVmOGQ4MTY1Y2Q0YWRkMTE0OWU5YmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMjIyZGUxZDkyMTJkOWZkOWViZjAyY2UxY2YxYTlhNWY1NGExYjZhMzI4ZGRmYjc0YWJmNzljYzExYWUwMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0YTg4OWIyYzY4ODE5Y2IzMTlhMDFhNDhmZTQ2MDE4ZDM0ZjJlMTg3Zjg1YjdiYTZmMTY1YjgyZmU4MmFkNWYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L97-L105",
+          "version": "repo-lines-v1:sha256:978bd5c2254e9db4be861cbcd5c1c264ab420c3faa44faf31234df2271bb405d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjljYTg5MWJmZjdhYzFmN2NlYWFlNDBlZjA1MTA2NmJlOWVmZTQ3YjRlNDI4MWU4NmMzMTliZTJjNTVlYmNlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTZiMDQ0OTE0Njk3MjJlODM2M2E5NGU0MDQ0NTM4ZTAxM2EyYTIxN2UzNmIxZTU2OGJhNjBhY2I3YjRjOGYyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjg1NTZkMTMyNzFmZjA2NTcwM2Y5ZmZiZWE4YTM1YWYxMmEyNzM4YjY2ZWMwNWMxMzdkZWVkMWJmOGY3MmI1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTlmN2U5MmJiYTUzYjhjNzYxMGVkZGEyNTJhNmUyZDc1MjRhYzVlYWFiYzk2YmEzNzE0Y2MxMmJmZDk2YmVhZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2991ff87ea504f6990bd983adfd433c8",
+      "statement": "The documented blacklist ignores selected output property names and defaults to an empty array, while ignore controls whether an output is ignored during tests and defaults to false; neither is documented as a destination-write isolation mechanism.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L51-L55",
+          "version": "repo-lines-v1:sha256:349abc5175d6477c5b13c17b846b9c7cdcb4e19866210b797efcad9e0a1c9ee7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhkYTUwOGUyYTQwMDA1Y2QxMDAyOWNjNjFhZGMzZjYwODAwMzc5NTNmY2U3Y2E3MjM0MjBiNjRhNDMwZTMzNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjdhYjVhYWFkMWYzZGE5ZWJhNzVlZGQ4NjUwYmQ0MGNkZTZhNzY4YjU4ZWMyYmNhM2I1MDZjZmQ4MTQ2ODk1MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTYyN2Y3ODBlYWQ3OGIxYzJmODkzYzExZWY4YmVmZjM3MmVmYjU1NWU5MThjNGQxMDY5NWQ1YzhiOTZiMDcwNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDVmZWNjZTkwYjUzYzgwYzZiYjA0MjUzYjgzYjIyZTZkY2Q2ZWZkZWI2ODhhNWEyMGU5NWZiOTYwNmM2M2M5MiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L81-L91",
+          "version": "repo-lines-v1:sha256:457239ca7c2d780b92bf929cd50a5e113c4527d0c93a720cc24ab6f1b82d52b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwOGIyMzI2ZjQ2NTE2NDNjMmZlOWRmYWRlM2Q5MGVkNDA0ZmExMjBmNzE5MDBmZGRmY2QyZDQyZjBlZDk3ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjExOTAwMjM3NTFhM2M5MWVlYTM2ZTUyN2UwMzRiZGRhZmNhMGY2NzFmMTE4NzY5NWViNDI3MmI4NTAxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5MzczMjIxMWI2YzZiZTM1ZGJiYmU2MzQ5YTE5M2E1ZTY3M2VhMTExMWFjZjBmYzAxMmQ5NzVhZGMxYjhjMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L9-L9",
+          "version": "repo-lines-v1:sha256:b886ceae11eeea8cf0aac6923089574e100889f155a0b14519fa4932575a1940:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTgxNDQ5ZmM5ODZhNTNjODQ4NzlhNzlmNDQwODEwZjc5ZDJjYzZkZGMxYTcxMzFlYmY4YjExZTQzZjJkMjNiYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE0YzI4N2VlMWJiZTAyOWNkMGQxYWE1M2E3YjI1NGIyNjY5Njg3OGU1N2NmZjVlMjM0YzIyZTAyMzZhZGVmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c4eeddd9c344e6b97fb405e6127b2cf",
+      "statement": "The test guide defaults to /pipes/<my-pipe>/entities and describes endpoint selection as a published /publishers/<my-pipe>/<endpoint-type> read that requires the pipe to publish the chosen endpoint; expected files can be XML as well as default JSON.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L146-L163",
+          "version": "repo-lines-v1:sha256:2abedd188a1ae1cfb90a9f42d05e9994fb898099d67748032e1f5f180fee7811:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3ODJkMjFkZTM0NDMyZTFhZDBlOGU4MjhkZmE2MDA5ZGZjMzY0Mzc1M2NiYmViZWQ5NzVjNmZhZTJiYjgxMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4ODMyNjYxYzYzYjkzMmI2N2FmMjc2MTkzNDZiNmUwNzAxZTVjNTEwMGU3ODM2ZDQ4NWVjYjM3YzNmYTU3YmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMzYxMjc3ODcyZDQ4YjNmMTdjNzNiNjM5OTM5OGI3MzI3OWE0NjYwMDg3YmY5ZGRhNmZjNzcyYTk4YjY0OGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L57-L61",
+          "version": "repo-lines-v1:sha256:e9b13b871e64acc646c3e69ae7a8ddee489fc0447eb1b41039d5d1112389ae47:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjZlNWYwOWY0YTRhMmQxMjJiMjk3ZTdmNDUzNWIwODQ5NjZlNDM0NmVjZDE2NTllMzU5MWY3MWE2MDFlMmFlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmY2MTJjNjhjMTZhN2RhODU3YzhjN2M1MmI5MzllNTk0ODIwZDM2N2EzMTQwMGYwYzViNGU2ZjYwMzllMjY3NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjQwZjZhZTQ5MDFjZjU1YmYxMzZiMTUzNmQ3YmY2OTdiMzI3NTg4Yzc5YmY1M2FiZDNkYmFlYmRhOTE3MWFhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2MzNjNjMzMwNGUzODkyMGFkMmU0OGJmZWI0Zjg5ZWVjODY1Nzk4Y2QwNWZhMDk3ZWRiZmMxYzgyYWMxODQ5MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3605a978e8354098abdeb70d585118f1",
+      "statement": "Bound parameters in test configuration are documented to work only with published endpoints, default to an empty object, and support separate test files for parameter combinations such as comparing /publishers/foo/xml?my-param=A with foo-A.xml and the B variant with foo-B.xml.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L87-L139",
+          "version": "repo-lines-v1:sha256:70fce9aefecc52ade26c9e45b7b90985a9cb597bba189c1f63fc285a5dd2a06e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMTQyOWQ5Zjc4MGNjMzBlZjUyMTFiOTM5NTMyMGUyNDIwNTk1OGY3NzI4NjZjMjEzNGFiMjc0YzU3YWFjOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzNTBkYzY2Njg4M2Y2Yzc0YzRhY2U2Mzk1MjY0MWVkYTRmNWQ5ZDQ0MzI2Y2Y3YmU3ZDQzMDMxNTZkZTA2OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY0YzkzM2U0MDI1MzU0ZjYzN2JhNTBmNzZiNTNjNzBjMjg2MzgyZTU2M2FkNGQ3ZDU5YjJmZjEwNTEzMWFjZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ODA4Yjc3MjQyMmI5NTA4ZGQwYjU2ZWNjMzJjYjFhY2Q2ZGJiOGVjOGRjYzlmNDIzM2Q4ZTQ2Mjc2MDBlNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_720324c7123a4868a6f17a200c5fb83b",
+      "statement": "Stage selection defaults to sink, but the local-test table spells intermediate stages before-transform/after-transform while the public entities API spells them before-transforms/after-transforms; the documentation does not establish client aliases for the difference.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L63-L67",
+          "version": "repo-lines-v1:sha256:7358af66a028f4d2e9b0ba5be3c1f72485419ed8ed61c60c37f941dca90263e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGQzN2I0NzFlNzA5ZTA0ZTVmZjAwYjczZjkzM2Y2NjVlYzIyNjJlZTVmYzQxNzQ2MGIwZTNjNThjNmRkZWQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGU0YWRkNDA1MTlmMDhiNzlhOGRmNzRiMmU4N2Q0ZWNiZDM5YTg2YmQ4OGFjMDdkYzAwZjcwMGRkMmMxMmExNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGExM2VmNjg1YWU3NzljODhkMmFlOTE0MWY3OWExM2JiNDFjYmUyYTEwODkxYjg1Y2Y4ZTBmODRkMWY3NWQyYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjhhMzRiNTRhZmU4ODA3ZTAzODhlNTI2OWM2OGVmZmI2OTZhYjMyNjExNDFkMTNjMTJkZWU5MDJiNmI1Mzc2MSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L305-L342",
+          "version": "repo-lines-v1:sha256:42a82370d2959c3d0ffb0b486b599c7b4a5b78b63899c990b71e49e5bbb7adfe:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxNmY1M2VjNGNlYmI0Yzk3MzcyNDJjNjkwNjdkZDcwNGFmOTc5NGFlZGExNWE5ZjA0NTUyMWJiMzA2ZGZlZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkMGFmOGQ5NGU2OTY4ZGQ1NTY2Y2VmNTljODcwYTAzNjc1MzgwMjEyZjAwMzU5MDVjMmMzZGNlYjUxMTIzYjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiYTU4NDA4MjRiNjUyODI0ZjkyMGVmNWI0OTAzZDRiZmU2MTJhMTJjNzE3YmI0MmYyMTYzMjU5ZThjOGVlZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiYjJiNjIzNDE5YjhiN2UyYWU5OGRlM2RmYTk4ZjMwNGJlOWFlMjcxZTkwNDEyNTRkZDEyNTA5MzdiYzM1MDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6c1d871f677c45f2856351b502bec815",
+      "statement": "One authored test example sets endpoint=json and stage=source but describes an entities-route read, contradicting the guide's general published-endpoint rule and leaving route precedence for that combination uncertain.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L149-L176",
+          "version": "repo-lines-v1:sha256:d06919cc6a5ca2288b11bcc1a53e559bc3dbc66e9197441a5bde4aa2897cf3a6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YjgxOWM0ZDljMDUzMDM2OGQ4ZTczNmUzOWIzYTQ3NTA2NTkzZjM4ZWQxODU5ZThkN2YzYjllMDc5N2RlMGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0NGFmMjFhYTk0MzM2NGI2YzU1NGQ2OTc5ZTBiNDlkNGQ2ZjVkNGE1OGNmYmQ4MGU2ZjFjNjBmYzkxM2ZkNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyMDA3NDlhMGIwNDk4ZGE3YWYyMWFjODQwN2Q1Nzg0ZTE5MDU3MmUzNjhlMzAwMWFmOGQ4NDkwZTg4Y2VkOWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRhYWU1OWExMWM0YWQ3ZGQ3YTI1MTJhMmE1ZTkwZTBkYjdjODM0NWY4Y2U5NzY1NjEwMjRjYjU5NTNlN2FjMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a6283ac13c0347b78b9d1ad9bd1b6974",
+      "statement": "The authored foo.test.json example is not directly valid JSON because it contains a shell prompt and lacks a comma after file, and the parameter examples wrap shell transcripts and separate objects in surrounding braces.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L113-L137",
+          "version": "repo-lines-v1:sha256:efa8c4c5cacf480c9e194f8eefdb9e80604214f277f4a91664e5f1ecd68b2bd9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1OTZiNTkwNjlmNTljNmI2NDNlM2Q1NjUwY2VjNzJmNDY2MTUyYWEzMDY5YThhZWVjODhjZDZlN2I4NDFiNTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3Y2RhODJkYTYwNjIzOGUwNWU2MjM5OTU2OWM1ZWUwMzk5MzQxOTY0OGFlNWQ0M2EyYmY4Y2Q2MzQ3ZjgyNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyM2E5Zjc3ZjlkMGU4Mzg4MDczNjk3MGEwYTM5MDZiNTc0ZDg1YjYzMGEwYTRhNTdiMmVlOGU1ODk0ZmE5MGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0M2Y3YjFlNWJkODM2MWI2N2RhZjFjNGZiOTU2NWMyZDFhN2JkNTU3NTAxYzY0OTRiMWZmZTJjZDgwMWJlMDMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L93-L106",
+          "version": "repo-lines-v1:sha256:029f918db3c07c5db3e6ff7112ea25b56fe4f4ab5d864e8e5dd7670ab407d6ef:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1OTZiNTkwNjlmNTljNmI2NDNlM2Q1NjUwY2VjNzJmNDY2MTUyYWEzMDY5YThhZWVjODhjZDZlN2I4NDFiNTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxZTA1MjBhYTM2ODg2YTNhMWI1ODBjZDc5ZGEyYTJkOTczMTg1ZTZiMGYxNjE4YzA1OTQwNzNmNzM4NWU1NzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVmYzFmZDM5MzEyMzc4NjM4NTlhM2UxZmQzMWYwYjU4NzFlZDNmN2IwOWViZjNkZmVmOGY5M2NjNTE4MzU1MmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_96286444d9c74b21807b81830fe61725",
+      "statement": "The local-test guide says internal properties other than _id and _deleted are removed and entities with _deleted=false are removed, but this is an unverified, suspicious client-normalization statement because Sesam deletion tracking documents _deleted=true for deleted entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L141-L144",
+          "version": "repo-lines-v1:sha256:89506b668ea86ed7cfc1df98d73995ad754d532bab9f4bd6e2227ef9aabfd51b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM3NTIyMzE5NGYyYzlkY2RlODIxMjQwOGE1NTBmZDM0YmZiZTdhNmI4YzQzMmM5NTAyNGE3Y2VhZjYzNjBiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzlmZGY0YmI5OGVjMWQ5ODYxYjRiMTViMWU5NDc0NTVlZDI3NmU0MmFjNzI4NTU2MDliMzAzNDZiOWZlZDgwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQzZjdiMWU1YmQ4MzYxYjY3ZGFmMWM0ZmI5NTY1YzJkMWE3YmQ1NTc1MDFjNjQ5NGIxZmZlMmNkODAxYmUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjY3YTUyNzAxZGQ2YWMzMTEyZGNlMTI5N2ZlZDdlNDRlNjUzYTk3MTFjYzEzOTRiMmJmYWFkNzlmYjAwOTMzMyJ9"
+        },
+        {
+          "resource": "repo://hub/features/deletion-tracking.rst#L5-L8",
+          "version": "repo-lines-v1:sha256:10d1d72a13ee739ede1b2dbdf1e72292c41f6d9b7934a0a5ecd494c7f0ca4b30:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc5N2U3ZGJiZTg1MDVkMjRiODMyNWNmZWIyNWIxM2UwNGFhODg3OTU3NzY5MzFiZDNlMjlhZDQ4NDVjYTIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzZhNGQxNWFhZmZmZjQ2OGUyYTViMGU1ZTdhYjk3MjE3YjVkMjZjZWM2MDgzZTQ3YTY2ZDcyYTA0MTY2MDE3MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L53-L53",
+          "version": "repo-lines-v1:sha256:7cdb98aa3c05fac181d16b6a83e126c460d6d1c0f39b3126f070a1466ded5778:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTRjMDZjY2MzZjM0ZDdjZWQ2MmNjNTdjMDExZjVmNTBiMjIwYjQ2NzQyNTkyN2I2N2NlM2Q4Y2I2NjY5OTEwZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fa924196d624196a4b450d1fd9555c0",
+      "statement": "The inspected local-testing guide does not specify sorting, comparison tolerances, or a complete normalization algorithm, and its client behavior descriptions are external handoffs rather than an inspected implementation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst",
+          "version": "repo-file-v1:sha256:f030c39ca615557b92ae2eabbb973f82776694e0cb4e29962364c8466331d228"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L53-L53",
+          "version": "repo-lines-v1:sha256:7cdb98aa3c05fac181d16b6a83e126c460d6d1c0f39b3126f070a1466ded5778:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTRjMDZjY2MzZjM0ZDdjZWQ2MmNjNTdjMDExZjVmNTBiMjIwYjQ2NzQyNTkyN2I2N2NlM2Q4Y2I2NjY5OTEwZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1f8ea51125ca405dab740d861a8ed471",
+      "statement": "Service API paths are relative to the instance's API base, which for a cloud instance is typically https://instance-guid.sesam.cloud/api.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L10-L20",
+          "version": "repo-lines-v1:sha256:2b0dfaa70c6101b550419fcfa76cdb41f3f0d33fb46a65e8181904f073f16263:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MGRhMTJiNTFlZDQwYmIxZGE5ZWY2NDUwMjFjMDY3Yzg2MmM2NDE5ODljOTY1NWY4Y2FmM2I4NjZjY2JiZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Y2VmMTRmZDIwNDllZWMzNjJiNTVmNWE3N2I5ZTNiMzdjYWI0YjA0NzUxZWQ1OWY2OGNlOTM5NDQyODA5M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ1MWU2YmExYzAzOTdkOGM3MzI5MDNhY2E0NWE4YmVhMjNiOWUxMjkwNDg1OGRkMzllM2MwZDBlZDI3MTRlOGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdf5a7afb93c4fb6ac2cb9c9edae0ccf",
+      "statement": "The client setup requires a personal subscription and a JWT, with the subscription URL available under the subscription name and JWT generation under Settings > Subscription > JWT.",
+      "evidence": [
+        {
+          "resource": "repo://hub/sesam-client.rst#L38-L53",
+          "version": "repo-lines-v1:sha256:a923202e8a9dbea5422ea134e811e5cd37f8a7d9cf9c4f8663ccbf39790446eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MGU0NWQwOTExZTg0ODBmNGE5ZDM4YmE4ZGI0MzQyNDAzNWM4ZGIwZTZkNTE2Nzc5NGRkODg1YmMwOGUxNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZGI5OGFhM2MwNWZhYzE4MWQxNmI2YTgzZTEyNmM0NjBkNmQxYzBmMzliMzEyNmYwNzBhMTQ2NmRlZDU3NzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzZDdmMjE1ZTYxMGNkZjkzN2M2MDNiNWIzNjQxMDk1YzhmYmZkNzFkZjAzMTdlMjVkMjNjOTA5ZWE0ZTVjNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c520f8e3b3f74d79aac39c73c19dd43b",
+      "statement": "The documented local test command is sesam -vv test, and the test model runs non-output pipes until their queues have no remaining entities before comparing endpoint output with expected results, rather than starting every pipe only once.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L9",
+          "version": "repo-lines-v1:sha256:bd64e696390e5fc902c522bbd9dc446b7baadc0ff24dfc204a731c810c699c20:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOThhYmRjZjJiYzkwODIwNDYxNTkyMjY2OGU2NWJkNmQ4YjdmMWM5YTRmNzE0NTcwMjY1YjhlNjdiODdhMmMyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTkyYTJiODM3ZDY1MDE4ZDA0OWM4MmE0ODBmZTgyNWU1OWZiYzEwNGM3MGUzNTIwM2Y0OTA5NmVmODg5YjFkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE0YzI4N2VlMWJiZTAyOWNkMGQxYWE1M2E3YjI1NGIyNjY5Njg3OGU1N2NmZjVlMjM0YzIyZTAyMzZhZGVmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6258477e37bb4523b884aeefefa18df2",
+      "statement": "The local guide documents notification of invalid/missing endpoint tests, an all-passed message on success, and failed-test/pipe identification with expected-versus-received comparison on failure; it describes support for updating intended expected outputs but gives no update-results command.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L9-L9",
+          "version": "repo-lines-v1:sha256:b886ceae11eeea8cf0aac6923089574e100889f155a0b14519fa4932575a1940:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg4NmNlYWUxMWVlZWE4Y2YwYWFjNjkyMzA4OTU3NGUxMDA4ODlmMTU1YTBiMTQ1MTlmYTQ5MzI1NzVhMTk0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTgxNDQ5ZmM5ODZhNTNjODQ4NzlhNzlmNDQwODEwZjc5ZDJjYzZkZGMxYTcxMzFlYmY4YjExZTQzZjJkMjNiYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE0YzI4N2VlMWJiZTAyOWNkMGQxYWE1M2E3YjI1NGIyNjY5Njg3OGU1N2NmZjVlMjM0YzIyZTAyMzZhZGVmMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2220c6dd0e0a46d6886b71533f708c16",
+      "statement": "CI requires a designated testing node, runs the same configuration tests as personal testing under CI orchestration, requires successful tests for validation, and recommends peer approval before PR merge; small test data usually permits a smaller node than production.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L7-L24",
+          "version": "repo-lines-v1:sha256:2bca9d22996e089efc3c41270a559bc9639ef5c0894312477915e1887d36bdc1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5NWQ0OTIyYjgzZGRlZTFkODI2ZWNhNWFlZGYyNTUyNTVhYjZhOTlmYjljZTBhNTcwYTE4MTFlNjZmZDQ4ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzZjNhYTU3ZTRmM2M3OGRmZDVkZjRhNzQ5ODJiYjQyZTNlNmE3NDllYTlhMTgxNmU1MzkwMjgxZTgyOGNhZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MjMyOTcxYzUwMTJkZjU1ODc2MDZiOTRlMjVhOWI0Y2VlOTA4NDQ1MzUwODlkNTEyZjkzMTk5YjA0MDQwY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiZWYwNTRiMjAxMjEwNGZjNDE1ZThlMmNiNTcyYmRkMzZhYzBiYWQ4MGE4MjlmYjI5YjYzZGE2YTQ0ODZmYmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7b85ad7e5a2846a0b2bc1bebbda92f21",
+      "statement": "CI tests against a shared node must be serialized because the client overwrites configuration, causing overlapping tests to fail or not finish.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L18-L20",
+          "version": "repo-lines-v1:sha256:0a71474d80306658abf0a9514859d68f90cf99798e6fc39c09fb8455e95afa1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWE0ZGIxMTExY2VmNDUzMzYwYzYzNTQzY2FhNmZlMzI5ZWEzMDFiNWQ0M2FjZDA3ZTA3OGI0NzVmZmM0ZjU5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmRkMGJmMGYzMTI0NjRhYzY4M2M5MTQxMDhjYjhhNjcyMzcyMDBhYzc0Y2Y5NDE5NDFjYTRjNGJjZDM5YzcxZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQyYjRjYzIwZmM4YzJiMzI5YzkwN2YyNTBiZTE0MDhlZmJiMzY0NzE4ZWE4MDU5NDhlN2ZlNzdkZWUzOTVmYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODRlZTc2NzE2YjI3Yzc0YTFkMWU1NmMyMDg1YjQzYWUzMjFiZDBhZTUzN2VlMDU0MzM5NjIwMGIzNTc3MTE5MiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L33-L35",
+          "version": "repo-lines-v1:sha256:af6131f504a5e438eaf49da47f253debfe692f006da51e146ec4c4316b5c2760:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTlkNGYzNGY4YjcxY2U5OTViZDE4MmU5YTE4ZDYzMThhYTU1YmM2NTI5NGE4Yjg3NzkwODQ1NzgxNjc5N2U0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTE0YTZhZjJiNTY0OTQ2YzdlYWU2NGQwMTExYzM2NTI1NjE2MTYzN2Q2YmEwOWRiYjUwN2Q5ODU3YjIxNGFiNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTAzYTBlMWU0NDRhYjBlNGUzYTUzZDc5ZjdmMGYwOGQ0NmNkMWFkOWZlZTk2ZDJkMzgxZjFlOGY1MGUyMzE3MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTFmYjA2NGZhMjhmNTg3YzUwY2ZkZjMzZDk2ZjJlNGExM2NhMmE3NWNjNjYxY2Q1M2YxMjMxNjU3MWU2N2FkOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6386af0e8fb943219a4e1c79eff7fbbc",
+      "statement": "The documented Jenkins template uses a Kubernetes client container, disableConcurrentBuilds(), a Jenkins credential for the CI JWT, version verification, and a test step exporting NODE/JWT and running from node with -print-scheduler-log; its container-build example pins client version 1.16.1.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L140-L177",
+          "version": "repo-lines-v1:sha256:d00dcadfbea0273ade9592228e239a96f02936ece70ff4686a6267559ebe8333:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3Y2FmNTU4NDhkYWRkZDQ2MmFhZTY1ZTBjYmIwOTBhMzBlOGU4ZjU0YWJmYjBmMTg4ZGJhNDMzNDU3NGQzZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4YWE4ZDJjMWQ4NTIzZjY3ZjYzMDMwMDIzMmY3NWFlNjQyMGNkMDkyY2UzYzU0YTRiYWI4YjE5OTY0MmZmZDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4YmYwY2M3Y2M4MmVlMjVhNTAzYzNmYWMzOTI3YjE0Y2U5ODM4ODlkMmIyNTQ5NDZjNmIwMWNmNGU3ZGY5ZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlOGU4NzRlYTZlODhhNTUwYWQ0ZGJiYmVlYTcxYWZkY2I2Nzk1ZWUyYTAyMDNjZDAyOTQ2YTY0YWJlYWIxNzAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L56-L131",
+          "version": "repo-lines-v1:sha256:66eb7f71930db67b58a84feda8e4abe0ff6cbce9186422ca8efc579de498c66a:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiYjNlNDU0OWM5NzYyODZlYjRlMDYxMmJmODBmZWE4ODJhYTJjZjJiMjgxZWVlNjVhZjBhMTIyZGY0NWFjZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2NzY0NTgyMGNmNjc5NzQ5ODRiODRkM2Q2ODJmOWEzMTJmNmE5Y2MxZDQ4ZTVlOTE1ZDdiZDNmNDFkMWEzYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllMDQ1ZDBlZDYyNmQwZDM2OTBkZTY1MDU1NTM0YmY3MzJhMjFiNDI2NjQ0MjA1NjAwYzE1NWZhZTVjZDAxZDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a0965d3746c482c8f3f22671745e87c",
+      "statement": "The Azure DevOps example downloads the sesam_cli_version release, verifies the CLI version, exports node/node_jwt into NODE/JWT, and runs .././sesam -vv test  -print-scheduler-log from node.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L179-L216",
+          "version": "repo-lines-v1:sha256:72e38a58da7857353862e61a3f2a3e83c7ff8f1a6b92fb8a7eb4fa6c4c3f7ae7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4ZmU5ZDBhMmRkYzg3MzI3ODE1M2MzNzE1OTNlYzFjMDlhOTJhM2FlOWMzZWI1Zjk5NDJmYmQ2OGE5YWEwMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViOGI3MzE0YWNjYmRlMjRjOTUxMWM3ZjYxOTZjYzE3YjQwZTViZDJiZTZmYjgxY2JkYzQ4MjA4YTIyZTExMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlYTYxODFmMjNiMDdlMzU2NTM3YWNkZWExNzQ5NjZhM2YyYzhmYjM4NzQxNzkyNTA1MzU0ODQ4ZjhkYmY4YTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyZjdlNTkyNzFmZDI4MmQ0Y2Q2NTZlYTg4NTQ0NmVhYTJlZjExNmYyMDllZjk1MGU1ZmYwYjQzMjc2YjBmNzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4dd431bc8e0e40909bdc7b7aadea476f",
+      "statement": "The Azure guide pairs trigger:none with branch build policies, one minimum reviewer, and linked work items on develop/master, and separately instructs disabling parallel builds and queuing the second build, illustrating a Limit=DisAbleParallel capability and matching pool demand.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L188-L188",
+          "version": "repo-lines-v1:sha256:e3281fa00cb9991b6a55a0312830e863a5dc2a15874895067830259a4df6eb59:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMyODFmYTAwY2I5OTkxYjZhNTVhMDMxMjgzMGU4NjNhNWRjMmExNTg3NDg5NTA2NzgzMDI1OWE0ZGY2ZWI1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMyODFmYTAwY2I5OTkxYjZhNTVhMDMxMjgzMGU4NjNhNWRjMmExNTg3NDg5NTA2NzgzMDI1OWE0ZGY2ZWI1OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjExN2FmOWI2MGUzOTJjYmM2NmZlMThlMjE0YzUwYTZlMmFkZmJjYzYzMmYwYmJmOTU0MWEzZTg2M2M5ZTQ0NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWVhMjUwMDFhZGQ2ZjFiYWVjYTc5M2NiNjNlYWE2OWNiNjU0NjNiNWRkY2E0NDhkZmRhMmVhOTZkNzY3ZDUzYiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L219-L239",
+          "version": "repo-lines-v1:sha256:5327084b676c75b12c3d81ec27024dad27cb8e13229732676a02a0ae4505e4c4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmNTZiZTFiOGI3MWQwMTVjNTcwMGFhZDI3OTkxNDY3M2E2ZmU3M2QzNTc1NDMyYWRiMzdjYjc5ZDVlOTIyYjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmMzM0MDMxNDZhZjU2NWI0MzJjODVjZjI2YmU2NGViZjU5ODE5YmYwNGY4NjM5ZDJjOGM3OGIxOWNjMTExMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwNDNiMzMzZWJmNTk1M2U0NjljZjY4ODIyZmQ1ZmZjNDQ4ODE1NGQ3NTg1NjkyOTgwMTA4MGI5NjVkZjE1MmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5YzAwNDY3Y2JmZTZjMmQyM2E1Mjg0NWUxZjFmNTcyNDIxMTc5OTE4N2FiYTNkYzRhZjhkNWQwNmFlNjkyZDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ff097e4b0284ced9df20f38d6d1453a",
+      "statement": "The configuration API scopes GET/PUT /config to the default empty config-group, GET/PUT /config/{config-group} to the named group, and GET/PUT /config-all to all groups; the PUT operations overwrite the complete configuration in their scope.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/api-config-groups.rst#L41-L46",
+          "version": "repo-lines-v1:sha256:fe519e3df9366b3dde7458610ec71c69e2c6ab6ee1f1f7a99baf6d507c6f57c9:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU2MDE2NjhiOTg2YzBiNjBiZTU1ZGQ2OWNhZDg1OWU2OGM5NGRkMDUxZDgyNTIxOWQzYTc2ZWVkMzUxYWVkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE1MzRhNjZjYWFkYjA4OGVkNjkwYzlhMDM5MzQ2YjViMzkwY2JiM2QyYjE5Mzg3ZWJlYTRjNGJmNDQ1ODYzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDRiOWEwYjE2Yjk5MTBiYWE1ZDBhNGRjYWZmOGE2MGM0Mjk2MzNiZjJhZTNjYmFjYzgyMDI5MDc1ODBkMTBjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1226-L1348",
+          "version": "repo-lines-v1:sha256:f892acc1bec8eb1a8d9a186fe4014047f65ad0d045514e229a39e3ab001e5046:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYzk4MDc4YTM2YjgzNDY2YWU5MThiM2UwZDUzMDg5OWY3NmQ2ZjNmM2JiZWFjNWEwZGI1MTU2ZGVhNmI2ZjM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDgwNjhmNzE4Y2JjZmVjZTllYzNhNWEzMjUzOWIwNzBiYmYxMzE2NTJjMjEzODJkYTdmZDgxMjFlOTM2OGU0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjA5NjkwYzg3NjlhMDE4ZjJhYjg3OWU3NDk2NjIyNjE3MTM3MWQ3MTJjMzdlNjIzMThiODA3ZjRjNjE1ZGRkIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_a791281682e5416195a8fc80cb9629fb",
+      "statement": "Individual pipe/system configuration endpoints express group membership through metadata.$config-group, whereas group-upload endpoints select the group through the URL, with no explicit group placing components in the default group.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/api-config-groups.rst#L8-L46",
+          "version": "repo-lines-v1:sha256:23221ef34edcdd6abb876b01875cfe69dc8036de0703907118d2fab01d31c32c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzOGQzYzJlN2NlMDBmMzJjMjFkNjU1ZDhiYTc0NDE0Y2RmMDNjNjhjZTUwNjNlZGUxYzI2OGIwNmM1MmNiNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNTM0YTY2Y2FhZGIwODhlZDY5MGM5YTAzOTM0NmI1YjM5MGNiYjNkMmIxOTM4N2ViZWE0YzRiZjQ0NTg2MzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMzMDc1MzMzNDI2ODg0YzVkNmQ5MDRkMTcxZDdmZWEwN2Q4NWUxN2Y1MDM2MWZmZWQ0YzNlNzVjNGM4YjdjODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a5f0166f36f84b228f0d6cadc3eea281",
+      "statement": "force=true on PUT /config and PUT /config-all forces acceptance of configuration errors and best-effort application; the API describes this as rarely a good idea.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1243-L1258",
+          "version": "repo-lines-v1:sha256:229e0ae01a594d6255fa41f366b3b0c6ab5dbc0fa4aac9cd5d093ecbc8951cfa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MWE1MjE0M2UyNWNiZTYzNWRhY2Q4YWZkMmY4NDFlZjY5YzdmMjQ2ZmQwYjMwNTg0MjQwZWQwMTdlZWEyMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwY2E4NzEyMDQ3MWE3YzFjODNkYjk0ZWVjMzkxN2Q0YTE3MTFkYTEzZDlkNDEyYWRlMzhiNWI4OTY5OThjMmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYWRmNDk5NmM3MDI0ODFmOTc5YjNlMTYwNDY1OWY4YTM4ZTJjMzJkYWU5YmFkOWE0ODk2YWRjZWJhOWFmOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkMDhmMmYwZTE3YmJkODc0OTlhNTlkNDc5YTI0ZGY0NTU5ZmIwY2U5MTcwMDExYzhlMTc0YzBkNDAzY2E0ZmIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1329-L1345",
+          "version": "repo-lines-v1:sha256:0283033c062489598cc53108f93f7add2ac107b6bcc51ba9cc09539aee397f45:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MWE1MjE0M2UyNWNiZTYzNWRhY2Q4YWZkMmY4NDFlZjY5YzdmMjQ2ZmQwYjMwNTg0MjQwZWQwMTdlZWEyMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwY2E4NzEyMDQ3MWE3YzFjODNkYjk0ZWVjMzkxN2Q0YTE3MTFkYTEzZDlkNDEyYWRlMzhiNWI4OTY5OThjMmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYWRmNDk5NmM3MDI0ODFmOTc5YjNlMTYwNDY1OWY4YTM4ZTJjMzJkYWU5YmFkOWE0ODk2YWRjZWJhOWFmOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkMDhmMmYwZTE3YmJkODc0OTlhNTlkNDc5YTI0ZGY0NTU5ZmIwY2U5MTcwMDExYzhlMTc0YzBkNDAzY2E0ZmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad725af7fea54024bec4f3b2f70ae8f2",
+      "statement": "The documented GitHub Autodeployer periodically checks repository configuration for changes, can select a tag or branch, and uses the branch setting with a default of master when no tag is specified.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/automatic-deployment.rst#L9-L14",
+          "version": "repo-lines-v1:sha256:96db6ec56445e247e3b1cf191d5de5ed155be218a3a47db01d3f31d335cbef8f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjMDg1OTNmN2QzMWVmMGFmZGVhMzg3MzkzMzQ2YzAxY2VjNDlkYTg0MzE5MzI5MzY3ZWQwYjRkM2JmNmU0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTY0ZDEwZmRkMzg3Yzc2NGM2MzViNDMxYjIyNWUyNDJkZWM3OGE1ZGEyMzA3ODg2ZGU3N2FkOWJmMjU0ZmY5MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjI5NTBjMGJkNWU2NmQ0MmM1NjllODEwYjQ1YTA2YzgzMjlhNTI3YjBiYWEwNGU2NzliYmVkYzM2OWQ1MjUzMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWU2ZWE3NjU0OWM1YjcxMzQ4YWY5YmUwZDM1ODA0OGIyZGFiOWQxMzkxNjI0NjIwYTM0OTE1NmMxNGU4Y2ZhMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_edccf747d1594162a8e03c823064affb",
+      "statement": "The autodeployer documentation warns that deployment overwrites existing pipes and systems and removes node pipe/system configurations absent from the selected repository branch; the guide hands implementation/configuration details to an external repository rather than specifying the API or config-group handling.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/automatic-deployment.rst#L16-L20",
+          "version": "repo-lines-v1:sha256:c3f1b43953727cf8060c8779bf2447131d62f23d5c3a18c37a901f1b0941c01c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2IxM2NiNTg5OWRkYzY0OTViZmRjYjBkZGI2N2VmMDA0Yzk1NzY4NzYyMTA1NjMyZGQyN2RiYmNjOTQ3ZmVkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk2NzUyOWYzNDkxN2Q3ODBmYzhlOGZjNGQ4ZjIyMmYzOGE1Yzk0ZjkyNDBlYmM3OGVmMWJlY2M2MTMxNzdmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWIxNzNhYTBhZWZhODNmNGIwZGMzMTFkNmMyZGZhNTMwMjhmYzRjMjY5ODFhZTI0NzZiMjU0N2QxM2NlZmQ5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjM1N2Y3Mzc4MTI4OTA5MDk3NjNjMGVlZDZhNDA2NTQ4YjUwZTYxNzJhN2QzZWI4NjRkNjBhZTQxZGMzZjg0OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_640c39cec1894ba6b7d435f9554935f8",
+      "statement": "Automatic deployment is optional and the guide cautions that business-critical installations often need release-timing control; the autodeployer only deploys configuration and does not start or reset pipes, leaving required actions manual.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/automatic-deployment.rst#L7-L18",
+          "version": "repo-lines-v1:sha256:6ff079c7e1b82755fb38a2ea85b05192e2db0c0d9db8638c0a7de98295354536:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YjVhZDNiZTIzMzc5ZmY5ZDkzY2Y0MGFjN2QwYmMxZWE0NmNhODg1MGI1MzcxMTc2NzkzN2YwZDY4N2QzNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkYWIxNDNjYzI3ZDFmYjcyZGIwZjdjMDljZGRjMjM5NTliMTYwYWIxYzFhY2JhNTk4ODU3YjliNjEzYTBiZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwNGM2YTcyODIwOTIxZTcxMjBkZmFhN2RiODUzY2I3OThjYjI2MDI3Y2NmNWRkMTM3ZDkzMmQ4NTU0MjAyNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlhMmU5ZTU3ODUwOWY3ZTE4MTAzMGJjMDQ4ZTliMWYxYjg2NGZhZDQxZDJjZTE3ODQyYTkzYzNkYjYzMzQyZmIifQ"
+        },
+        {
+          "resource": "repo://hub/setup-environment.rst#L54-L54",
+          "version": "repo-lines-v1:sha256:f3b4fd18e4bcea3c0f2ee3939dc596eb89a641419c1e17a7079e0d0b43030a02:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjNiNGZkMThlNGJjZWEzYzBmMmVlMzkzOWRjNTk2ZWI4OWE2NDE0MTljMWUxN2E3MDc5ZTBkMGI0MzAzMGEwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjNiNGZkMThlNGJjZWEzYzBmMmVlMzkzOWRjNTk2ZWI4OWE2NDE0MTljMWUxN2E3MDc5ZTBkMGI0MzAzMGEwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2U3MzllZTZkYTdkYTI4NGNkMjY4ZGQ3MzQ2MDA4N2MzZTU1YjQ3MzllODkzYjMzZDBiMTI5ODg1MGUxNWVjNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDIyNzQ5NjNiY2Y2MTRmMGY2ZjY2M2RhYTQ5MTgwZDkyMTQzYTZjMDhiODAwNjJiNmU5MGZlMDAzODViYjk1OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d7896e7f023b4a24931b0bd5cb90a18b",
+      "statement": "The deployment guide proposes replacing CI test steps with release-parameterized deployment steps in Jenkins/Azure but delegates exact client parameters to client documentation, while the client page explicitly forbids production-subscription use.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/automatic-deployment.rst#L22-L27",
+          "version": "repo-lines-v1:sha256:902dbf2f6a0a00da847c6129c3bdd0916f090b733474260597d280eb885a011e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODkwYTVkYjk3NDM4NzUzYWFkZDY2OWMxZTg2NzBmMDc3NGFiMjIwMjVjNjk3MjQ1MzQ1N2EwNDEyMGQ3MDAyOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTcxNWI4MmQ0NDI5ZmRjNDcyMGU5NzA3ODFlOWM1ZDg1MGIxNTIwMWRkYjQ4MTcwYjZlNGNmM2YzZjAxNDE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWEyZTllNTc4NTA5ZjdlMTgxMDMwYmMwNDhlOWIxZjFiODY0ZmFkNDFkMmNlMTc4NDJhOTNjM2RiNjMzNDJmYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L34-L36",
+          "version": "repo-lines-v1:sha256:86af45df34273572977bd31ff64cacea741d4d982462772035dad9011c21d763:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY3NGVhNDc2NjczYzBhYzg0NTUzYWMyMjEyYjc5MzVhOTY3ZGExNmEwMTM2Njg4ZjBmZmFmODdmZWI1YmJmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjEwZDRlN2I2ZjMyZjEzMzMwYzhlMTRiZThkYjQxNzEyMzJmMjZkZDUxZmNhNTgzM2M5YWVmOGI2MGVlN2IyZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDc5NmI1YmZmMzk0MTMzOGE4Nzg3ZTE3NTgzYmFkNGMwY2Q5YTJkZGQ5YTY0ZjZkYmY2NjA4M2JjZmFhNDA4MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcwMTE1YjFkZTQ5NTZiMzc1MDc2MTY3OTFlZGMyMDc5MGJjYzg4NzQzZjg1ZmZjMjFhYjlmZGU5YmJjOTlmZSJ9"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L53-L53",
+          "version": "repo-lines-v1:sha256:7cdb98aa3c05fac181d16b6a83e126c460d6d1c0f39b3126f070a1466ded5778:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NkYjk4YWEzYzA1ZmFjMTgxZDE2YjZhODNlMTI2YzQ2MGQ2ZDFjMGYzOWIzMTI2ZjA3MGExNDY2ZGVkNTc3OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTRjMDZjY2MzZjM0ZDdjZWQ2MmNjNTdjMDExZjVmNTBiMjIwYjQ2NzQyNTkyN2I2N2NlM2Q4Y2I2NjY5OTEwZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d15a230c492c462ab623153fefc4466a",
+      "statement": "Pipes can become out of sync after configuration changes, dataset deletion/recreation, source truncation, backup restoration, new joins/pipe inputs, or deletion of datasets used by hops, requiring reprocessing to restore correct output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L24",
+          "version": "repo-lines-v1:sha256:687fcd682be89321b60a595df9986db7ca2ec1146bffd73b73ca41a9aa09ad73:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxMjQ5MmZjMWJkOGUyZWYwNGNhZjBkNDgxMDI2NzRlNDc0ODY4Mjc2YTI4YTM5MjFmNzM1OGQzMWQwZDMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5ODU3ZWJlMWY2Y2QzMWQzM2FjYzc3MzQ5NTNhYmNiYzdhMmJkZjhmNGRhY2UwMzE5MTRlNmFkZjQxMjY0MzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_854ffa9e31b24ca9bd20bbf5983946f0",
+      "statement": "The default reprocessing_policy is continue: the pipe keeps processing without an automatic reset despite desynchronization factors, and the feature guide says affected datasets are tracked.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L29-L51",
+          "version": "repo-lines-v1:sha256:b16b848cb9adf03cb641001cb664aaf4aa0f08f04e17170c2fdfaa4c3c14e82e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3MTVmNzJjZDM4NDBiMjE5NGMwZWU0NGZhOWUzZDYyYzUwODcyZDQ3M2ZlMTQ0NTg3YWRlNjQ1MGQzNWI0NTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxNWUxM2NjMWQzNTQxODQ5NTk5Njk4NzkyMWI5NjU0YWQzMjE4MDFhOWEwMDg5MWU4ZmUzM2EzYjZkNzMzN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1e4457139d864e5182ac021520b1d850",
+      "statement": "With reprocessing_policy=automatic, the pipe detects desynchronization and resets/reprocesses inputs, normally with a full rescan but in some situations with a partial rewind; this is pipe/service behavior rather than an autodeployer action.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/automatic-deployment.rst#L18-L18",
+          "version": "repo-lines-v1:sha256:7dab143cc27d1fb72db0f7c09cddc23959b160ab1c1acba598857b9b613a0bf7:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2RhYjE0M2NjMjdkMWZiNzJkYjBmN2MwOWNkZGMyMzk1OWIxNjBhYjFjMWFjYmE1OTg4NTdiOWI2MTNhMGJmNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2RhYjE0M2NjMjdkMWZiNzJkYjBmN2MwOWNkZGMyMzk1OWIxNjBhYjFjMWFjYmE1OTg4NTdiOWI2MTNhMGJmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWU2ZWE3NjU0OWM1YjcxMzQ4YWY5YmUwZDM1ODA0OGIyZGFiOWQxMzkxNjI0NjIwYTM0OTE1NmMxNGU4Y2ZhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWEyZTllNTc4NTA5ZjdlMTgxMDMwYmMwNDhlOWIxZjFiODY0ZmFkNDFkMmNlMTc4NDJhOTNjM2RiNjMzNDJmYiJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L51",
+          "version": "repo-lines-v1:sha256:49721936dbd9f05108f09516247ef781b0bd5696ee2ef2a777179e7839ff1d65:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcxNWY3MmNkMzg0MGIyMTk0YzBlZTQ0ZmE5ZTNkNjJjNTA4NzJkNDczZmUxNDQ1ODdhZGU2NDUwZDM1YjQ1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L24",
+          "version": "repo-lines-v1:sha256:687fcd682be89321b60a595df9986db7ca2ec1146bffd73b73ca41a9aa09ad73:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxMjQ5MmZjMWJkOGUyZWYwNGNhZjBkNDgxMDI2NzRlNDc0ODY4Mjc2YTI4YTM5MjFmNzM1OGQzMWQwZDMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5ODU3ZWJlMWY2Y2QzMWQzM2FjYzc3MzQ5NTNhYmNiYzdhMmJkZjhmNGRhY2UwMzE5MTRlNmFkZjQxMjY0MzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c76c97bac89a4673bb24d25124b7e91a",
+      "statement": "Reprocessing policy can be set per pipe or as the service-wide default global_defaults.reprocessing_policy, whose documented default is continue.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L205-L214",
+          "version": "repo-lines-v1:sha256:7cf277abc90a23038d7b5f9d16f7f38b2bafb172e0353d21633709bd7de89042:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1ZDU5ZDQ3NGU2ZTAzOTQ3NmFjN2ZiODA1M2Y4MmQwYjNkZDI5Njc5OWQ5MWJmZDQwMTVhMjNhYWZkYjdjZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3MTVmNzJjZDM4NDBiMjE5NGMwZWU0NGZhOWUzZDYyYzUwODcyZDQ3M2ZlMTQ0NTg3YWRlNjQ1MGQzNWI0NTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkYzBkZTMwNmY2NTY1OWFjNWQ3YWIyZWJmNDRiODQ1ZmEyMDIxMTMxM2FlMzNjNzI0M2E4YzkyZTJhYzdhNzMifQ"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L51",
+          "version": "repo-lines-v1:sha256:49721936dbd9f05108f09516247ef781b0bd5696ee2ef2a777179e7839ff1d65:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcxNWY3MmNkMzg0MGIyMTk0YzBlZTQ0ZmE5ZTNkNjJjNTA4NzJkNDczZmUxNDQ1ODdhZGU2NDUwZDM1YjQ1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1e33813fd5a41069a87d8025fe3d4ab",
+      "statement": "The pump API separates starting a normal run, starting a rescan unless already running, and reset-rescan, which makes the next rescan restart at the source beginning instead of resuming an interrupted rescan.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L519-L555",
+          "version": "repo-lines-v1:sha256:8255e0a94c33fabc4c00a5823c1f82d4db794f762cc291b74b59d2d6b6c8a66d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjN2Y2NWM0MDNiZGM1MzRiZmQ4NGU5YTNmYjEyNzhiYTFlOTUxYjQwZTUwOGZjOGM0NmU0OWQ3OTc4MDhhNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1MmQxZjM5MzYyZWIyZGU2YjJjZjM4YmM5NDIwNjVlYmY5NzdiNTY2MGNkZWU1NmQyYzNkNzBlMThlZjRlYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3ZTNhYmY1ZGVkNzBhZGM1MzRkZGE1MTNjNDY4MmI4YmYzZmZhMTE2NTNkNGVjMGY2ZmFmYjcyNWQ3YzNkNmIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L607-L611",
+          "version": "repo-lines-v1:sha256:ff499046dfe5b11221599b3d5d151d7a446f9cce10cc54ee11c09d159a4381d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNkYmZiODA5NTE0NThhZDhmNmNlMzNmNGYzNzY3YWUzNDAwNGYwOWY1NmJmYmEwYWVlOWVlNzRiNjMyNGU0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGE4YWQ5NjU4MWUwNDU4MDUwYWEzYzc4NWE3N2E3NTQ0M2ZhOGY5NDkxZGRlYWM5N2EzMGQ2ZjhlYTZiMmI5MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTQyNzE2NDJkNjA1YTQ2NmUzMjUwMDcwZDVjZWY2Y2UxYTBlZTZkOTFmYzMzY2FiMzFjZDg0ZDU2NWRjYjBmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNkNDE4OTgxOTU1ODI1M2EwMDkyNDNlZGNiZGIyODRmZWFjYTY0OTE2Njg2OGJhMjkwNjE2YzlkYTJmMjA2NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_66b0575d60764303a61952f8a9a175ff",
+      "statement": "This repository's PR workflow installs documentation tools/dependencies and runs make html; the Makefile uses Sphinx with SPHINXOPTS defaulting to -W and generates contract documents for the HTML target, not node-backed Sesam client tests.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L1-L24",
+          "version": "repo-lines-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZTM0NDY5ZTI4OTkzNDNiZTBhYzNkOWEyMWM3ODI0MTY3OGVjMzU1Y2M2NWUxNWE1YjJiNTE3ZGYwMjRiYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMjgwNmI3MTI1NjI2NDA4NTU0YWFlMzE2MTkwYjYwMDk2YmE4NWJkNmMwYzJkN2EyMDRmYzlmNmYzZTYxNDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://Makefile#L10-L26",
+          "version": "repo-lines-v1:sha256:d5b2b2d704e37ab68b30143b7fc2ccdbcac80e58733d4c48f04fa3e49941cb1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1ODY4YTM3NWYxODBkYTFkM2Q0OGI1YjE3MzFmMzY3MmM5MDIzMDRkZjhjZDMxMWY4Nzg0OThhNTIzOTE2MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2OGZiOTMzNmE3N2E2YzBlM2NmM2Q0NjBjZWMyYWNkOGNkMzMxNWNlZDE1Yzc4ODQ4MDI5YzAxOWY3MGNiYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjMTRkZWU0MmZkZjU5NzgwOWFiMWU3MGRlM2IzYzI5NDg0MzEwZDdjYmMwNzU0ODdkYTRmNjBmMjMxYWQ0M2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExMWEyMjgwYWQ5OGVjNzNjNjYzMGYwZWI0NjIzN2NmMmRjMjE4OWRiMmE1YjYxMGE0YmY4NDkxMzgyMDUxODcifQ"
+        },
+        {
+          "resource": "repo://Makefile#L62-L101",
+          "version": "repo-lines-v1:sha256:c398193f412c09dc91d89bdcb05a981d96ca60a61b39618abf4045996f140918:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OTM4OWVmMmRjYjE5YjZjMjRhMjU4NTU4YmZlMGMwM2E4MjY3N2M0ODU0OWU3N2U3YWNmM2M3Mjg3ODI1NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzlkOTIyM2U4MGYyNDkwNDhmZDk2YjQ2MTExMWQ2MTVlMDVjMGZmNmE5MzZhOGUxMjYxZTk4MTRhZjZmMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODYxOGM5NmZhZWNlNzBhMzkyOGVjMTYxOWZmNDk0NmVhNDJjZGViZWZjOGE5OGI0NTc1NmJiZTcxNjhmNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNDEwM2Q4NTEyYjA5NGZiZDY0ZTk1NmIwN2NiZDg2YmNkOWRjZjliYTI0M2JjYzgyMjFiMjE1OThkOWFhMTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c91dae4c787c405582931fa10eaca57f",
+      "statement": "The README's documentation preview workflow uses make html and _build/html/index.html, with SPHINXOPTS= make html_no_saas as an alternative preview command.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L35",
+          "version": "repo-lines-v1:sha256:ae44a4ec5abe7bba90c99290987dce31ebb624e26dd6054616c728fa550544e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhNmRmM2U0MmQ0MGU2OTM5MTQ4ZGZiZDNjY2E2Y2M2YjA5Yjk2N2Q4NGJkZDk5M2EzNzRkZDUxYzU2ZWI3MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkN2E1MTVjNzRmOTkwYmEwN2FkNjcxMWFkOTY2YTU4NzIwNDYxYzAyNDZkNjAzMjdjYmUwM2ZmYjU0YTIzOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_97f3cf0e2f3e42c9a6ad48815d8de7d1",
+      "statement": "The repository's master-push workflow builds and publishes a documentation container and deploys the docs Container App; neither that workflow nor the PR build workflow invokes the Sesam client to validate integration fixtures or drain pipe queues.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L1-L66",
+          "version": "repo-lines-v1:sha256:962057d689690ebd65f24686ccc8984844fa1548a615094446ee787cbc8414db:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyNWM4MWI2MzJkNWI1YTYwMjJjNTliNGI1MzE2ODAyNTViMDUwYmYyNWIzMjE1Nzg3MzI0NDVjNzMzMzhkNjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiZmU2ZTMzNDIzNzcwMDA0ODA1ODNjNjMyMWJiNzNiZTM5MmIxZDZmZmNmOTA2NDAzOTQ0ZDljMDNhNDIyZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L1-L24",
+          "version": "repo-lines-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZTM0NDY5ZTI4OTkzNDNiZTBhYzNkOWEyMWM3ODI0MTY3OGVjMzU1Y2M2NWUxNWE1YjJiNTE3ZGYwMjRiYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMjgwNmI3MTI1NjI2NDA4NTU0YWFlMzE2MTkwYjYwMDk2YmE4NWJkNmMwYzJkN2EyMDRmYzlmNmYzZTYxNDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

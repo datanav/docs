@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:64a4ca0aebb6f09eace36fee9ffa5df06d2e1636a92ea6f7fe70724ab4ad0acb",
+  "claims": [
+    {
+      "id": "claim_778c922dab1545529b4940b0906239a7",
+      "statement": "A pipe's optional transform configuration is one object or a list forming a chain between source and sink; transforms can reshape, filter, and construct entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms.rst#L6-L14",
+          "version": "repo-lines-v1:sha256:8b604dcad1b39b3c6d9108615e5bb9bd670163f50190f233671085a57b58c155:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ5MmIxNjdkMTZlNjQ4ZWM5YTYwODVkZGFhODg2MTZiNWNjMDQ5ZDIwNWIyN2RkZDMwMGQ5NzE4MWRkNGI1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTM2ZDk3ZjU3NmZmODdhMWRjMjkyNDM5YThmOGNiZjRlMTZhZDIyZmYxOGQ3MjgwOWRmNDQyOGExMmUzMDczZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWFkNTc2MTIzMTFhODE4Y2UzZDZiZjM4NWIxMmIzMmIzOTg0MDlhM2I5ZTZlYmZiYzYzZjU1ZWExZTY3OWE2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE5NTBlZGE4Y2MwZWYyMGU0MWJlMGM4ZDAzYTg2YmYzODc5NzJmYWQxMzllMzhlZjhiNzBlODQzMGFlMTcyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1a04ee5e7b64b34a1a3e5b98f9b7365",
+      "statement": "A DTL transform requires rules.default as the rule applied to source entities, and other named rules can be applied through apply and apply-hops.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L23-L27",
+          "version": "repo-lines-v1:sha256:3827ce86a4c0614af5c827694e2ccd057b1c8c1a183ee856b7dc9aabb33e65d0:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU5NDhlMmVkZjZlOGYyNjA5MGVmM2I3YWM3MGEwNGNiYjY1ZTkzODE1ZDY3M2EwMTNmNWExZTgzNjcxYzFlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjA3OTY2OGNiYTNiOGQ3OWNmODlhOTRjYTZmMzkwZTZjODYxMjAwNGE0ZTA0MTg4ZWJmNGQzZjJkNWM4YWU2YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_672f25b9dbd1404ab63cd5c61ebd8c5e",
+      "statement": "DTL _S and _T identify the current rule's source and target; apply makes each supplied value a nested source, while _P contains the parent source and target context.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/variables.rst#L9-L55",
+          "version": "repo-lines-v1:sha256:f288c4a6ad2278ece1f40780e2fb9e432a78b18419c1e84711fe5b862974b458:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmZTU1OTJjY2Y2MGNmM2QzNmRkY2E4M2RhOGNmZjU0NTdkZTE3OGU0ZjBiYjU1NTg2ODIwMWZiZjUwZmUyMzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ZTgwZjIwZTY2MTAwMWQ0NDMwMWM0YjY5MDMzODg5ZjMyN2MyYWQ0MjY3MzU4Mjk3ZDBhOTBmNjkzOGM3OTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1NWY3YzZhMzk2MzQ5MTk4ZDNhMzhhMDA5OGI5Yjk1MTVlM2MyZjhlMDM3NDI1ODU5NmU4ZTY1OTMyMDg3MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY1ZTg2NzEwZTMwZjQxMGI3OWMzOTI0MzJmMzkxY2MwODkwNzQzZWRiN2Y2NWYxNjFhYjNkOTcxMjNjZTgxNmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9764deaf8e114c5b971a0a43bf4293b5",
+      "statement": "Recognized DTL joins use value overlap for scalar-scalar, scalar-list, list-scalar, and list-list comparisons, including functional join arguments.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/joins.rst#L25-L44",
+          "version": "repo-lines-v1:sha256:6f139fdf39330e735bbb4edcf11e2735840db3ef0d45da25cdac7139e29249ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTlhYThmMTYyMGFlNjM2OWM5YTMzY2Y5YzMzODAwNWViNWY4YmQwZThlODljYTA0ODVjMTIxOTc2NjE2YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3Zjc2MTQyNDQxMDE4NTI2MWZiNDQyYTkyMGEwZWM4ZjQ0Nzc4MDIzMDk3ODY0NDI0NjZkZDRmYWNlODFjMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZGMyMGIxN2ViMzljMjVmZmMxMTc0NmJkYzY5NjE2ZjdlMDEzMzg3ZjhlZmRhMDg3ZmZmNjYwOTUyYTgwMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0NjdiODcyODcyZDNhYTAxMzZlZjRhN2M5ZjgyMmYyOTlhMmI0NDQ0ZTE0YzU2MjkyNDE1ZmViM2ZhOGRmYmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8743e3c74964585badeebdace310555",
+      "statement": "Ordinary eq coerces arguments to lists and compares them exactly, unlike join eq which uses intersection; intersects is the ordinary predicate for overlap.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-comparisons.rst#L16-L39",
+          "version": "repo-lines-v1:sha256:427d692ab9b13e0b2e0cc8bd9445f5fadfbadab6ab61a23e35d54881d696cff2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4OTVjNTBiMmJiZTBjYjk4NGZiY2ZiODVjN2U5ZmVlZjg2NzNiOWI4NGRlMDAxNDRmNWRjYTQyMGU0NDY4MGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxODEzZTNiMWNiNjFjZTI2ZDUzYWQxMmEzYmQ2ZTBhZjgwY2FiNmNmYWRiZmFkNDc3ZDZkN2NhYjdiMjJhYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0YTc4YWQ1YzBlMzRjZjllMDMxZDgyNGI2ODZlYjhkMWIxZjYyOGQyZGVkNmFmMzYyZTQ2NTZjM2YwZGM5ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fef144821b3a4f05be9fd01e585861ae",
+      "statement": "The in expression requires all values from its first argument to exist in the second and returns false for a null or empty first argument.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L333-L383",
+          "version": "repo-lines-v1:sha256:e275cf9e05a59d8e5d7062f547e32ece47655e96b0c9d2689e9834fbd5e1b7f7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNmJhNzdlMjdiNmNiMjBmNWEzY2JmMDIyODhmMGRkZGE4ZWE5NTRiNmMyOWUyZDQyZDc1ZDkxYmY0NGE3ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGZiMDBjNGEwNDRkNzZlNTFlZTQ0MGUwZTBhNzRiZWM5ZjY1Y2JhNTAxOTUwNjQwZTFjNDc5MWI2MjllNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0NDZkNzdkYTU2NzNkYWJiMmViMmMwZWQ4MTFlNTAxOTNhMDY4MjQ1NzBiZDZhYjJkNTBjZDA4NGJmZjM1OWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkZTNmNjg5N2Q1M2I1MzAzYWNhMWU1MjQ5MWZkODA2ZDFiMjg4ZTkyMmNmNjJkZTM1NGRkMWI5MzViNjkwOGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f94c7efc5d6a4f0888e025ee2975f8f5",
+      "statement": "Null values and deleted entities are not indexed and therefore are not traversed by joins.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/joins.rst#L48-L50",
+          "version": "repo-lines-v1:sha256:b022b18aff150ebec1adf63ef873e2d322e45b9a6907b63356976b5a7539a525:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E1NTc0YTUyYzM5Njg3YzI0YTBhNzk1ODhhZTUyOWFkYzcwZDUyNTUwMWY2ZTU3ZTM1NGY0NDE5NDlkNGUxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNiNzI5MzJjZjFjNzRhZDI0NGU2NDFkYmVlNTY3ZDZhN2E3NGMxNzM3YmYzMmMwODM2NWFiYTRjN2Y0NjcxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ2N2I4NzI4NzJkM2FhMDEzNmVmNGE3YzlmODIyZjI5OWEyYjQ0NDRlMTRjNTYyOTI0MTVmZWIzZmE4ZGZiYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlYWJiMjFhYTBlOGRkNDU0ZjkyN2ZhMjE0MGZlNDM4YmU2OTI0ZDA4NDViZmFhOTNkZGUzMTg4YWU5NjQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_91edfa1e28b941ae8e09fe892ec838d7",
+      "statement": "The troubleshooting documentation identifies blank-property joins and excessive equality-set cardinality as dependency-tracking failure risks, recommends tuple-based and more precise joins, and recommends rescans for pipes still prone to dependency-limit failures.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/troubleshooting.rst#L61-L95",
+          "version": "repo-lines-v1:sha256:d5e617710df836f122243d2e85e56350849518ded826f9685818383e54721b70:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5YmU4YjY4MGY3MTdkYTBjODNmNDg1N2M2YjA4ZWJhNzAxMjJhYTZhNjJmZGVhYmM0YmQ1ZTdmMWRmMDRhODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyY2FlZTJjNjc4YTVhZWM1OTA5N2FjZmE2NzY0ZjM5ZDgwZDgyZTU2YTlkM2U5NTRiNDRlNGEzODA4MDIyMTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY5MzAxZWY2MTEwMDVmM2Q3NDE5MTAyYzkwYjQwZGIwOWJiZTkxZTVlYTQ3MWU1Y2JkZDVhZDE1MDJiMWE1MmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBjMTFkY2Q5MWFiMWJhNjdkZjIyZWVlNDNkNGJmY2IwODA4MDVjNmQ0MTZmNjEwMDU3YTVlNTgyM2VkODRmOTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_39c796da74c442f8be44ae9fbf44ea45",
+      "statement": "Only eq expressions referencing exactly one unique dataset alias in each argument qualify as join functions; alias-to-literal predicates do not connect dataset aliases.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L118-L134",
+          "version": "repo-lines-v1:sha256:c88983b9cbe1d65c5501f182f1f834cd921985b1436743ef54c809e149145855:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZDMyYWJiZDA0MGFlZTYxODA0MjM1NTI1ZWY5NzBhZjUxZWFkMzkyMGYxYWY5NmU2NmYxZjI2ODc1YWFiYzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1ZWFiNTFhZDM2NTAzMjI0YmZhMTQ4ZDNlNGVmYTYxYmVkYTljODJjOGU0YjgzM2FjODM1MjY5NmFiMGYwZjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjNzkyZDU3YWUyZWVjY2YxYTdhMTdmZGVhMDQyYTczYWY4NDY1NWY4NWZiNGVkY2Y1NzIxMzlmMmE4NGIyZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwYmM0Yzg3YTBhMTI1N2E5ODZiNGRmOTJhMjJhODdmNjljYTRiOWJmMDE4YTkwYjNjMDgxMzE1NzdiYjZmYTUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L52-L56",
+          "version": "repo-lines-v1:sha256:41cd83504175b516234df4adfc8a5cbe33699a75c3f58b632edf1107c6c7a5a6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWM3YjYyMWIzZWQ0MTZkNjBhY2FmMjNjMTgwODdiYjY3MzM5OTQ5N2FmN2YzOWZjZDBkMjYyNDZlZGM1ZDg2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxOTYxZjRiMDhkNDg4OGYwYWNlZGI4YjJkNTVhMjZkODI1NTIxZjlmMDMyNjA4MDIyNGFhN2NhZGUxMjYwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a188b2c068b447cfbecc90894e276a1f",
+      "statement": "Hops declares dataset IDs with aliases, implicitly combines a list of where expressions with and, and raises a compile-time error if every declared alias is not joined and navigable from the source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L21-L31",
+          "version": "repo-lines-v1:sha256:a1120be182ba6b0e6260495033b1073d5a9f6ac9f462bff4a6798ec23bcf04fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjNmVjZDUyMjkwOWJiOWNiOTViZWQ5NmNmMDEwNjM4Yzk5ZDY2NTNhMDZmODg3NmYzOTVmYTUwYTJjMDVjZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkYmU3ZTVlNDg0M2RhOGFmZGYyY2I2NGMxNTRmNGYyZDMxODExOWNjYjBmOTlmMTUwYWEwOGVjYjczMDY2YTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhYTgwMWY3NDhlMDU4MzFjZjNhNzlmMWQyMWI5MDk4M2U5MWExNDVkY2Q0NThmNDE0NzFkN2FlZDU2ZTI0ODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmOGIwNGZkMTk1YjhhZjI0YmIwMzQ1MjIyZWNhZDBlMWY3MzA3NmI2MmNiOGU3OWFiMTFkNWU4NDA3ZmQwYzAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L93-L97",
+          "version": "repo-lines-v1:sha256:e130d32e1a7a12d84d8e07e1dd2026da0b52359c9b253d54bd2e86357d51be67:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTAxZDg0NjU3YjVkZmQ4NmVmNWE5OGUzMmRiYmY0NGUzMGY5ZjFmMjU0MDVkNWE5ZDcxM2Y2NDM2NzBiYzVhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFlNDI0NWNlYWMxMTdmMDcyZmU2MmYxNTdiODdiZTBjNzAwMDcwMjkzNjg3MjlkNjYwMDNhNWVjYjBkNGYzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGEzMmNiNzcyNTg3MjNhNzIxNjBkMmEyNjg4Y2I2NTRiYTdkMWVkOTExOWU1ZjIyZTNjODRiMzA0YWE1ODBmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRjYjk3YWQyZDBkNWIxZjU4ZWFiY2M4MTRhNDEwYmRjZjAwM2IwN2NiMjk1NjJiNTk0YjZhZGNjNTI0YWU5ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_be6fb609a3fe4726b102a2cfa5952e1e",
+      "statement": "The documented DTL compiler warning says that with multiple join expressions between the same two aliases, only the first is treated as a join and the rest as ordinary equality comparisons; tuples can combine them into a composite indexed join.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L1764-L1791",
+          "version": "repo-lines-v1:sha256:4a79b0e2307de5aa7b8c03de2b41aac94e342a4c71852f208e01fe632db4b002:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1YzZkYmQ3NjBiOTA2ZTRlODIxMGEwMjJhNjU0NmYxNjMyYzZiNTJhNDdjZjBmMGI3NWI5NzQzZGY0NzVkYTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlYzJjODU4ZGY3NWUwMWQyNTIwM2M2YWQ3ODU0MjU1OWRhN2VkMTVmY2IyMWNmNTgzMGM0Y2JlZWI2NDI3ZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlZDg4NDRlMzRlZjE1YzA1YWVkOGEzODlkNWQzY2Q0MThkMTJmODc1NTExMzZjZDM4ZGRmMmVlM2UyNTc5NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZTVmYmU4OGZiZDlmNTc1MGVmMzYzNDVhYWY1Zjc4YjIxMDcxY2ZmMDg1MzdkNWU4ZmM2YTY1ZWZkM2U1ZTEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/troubleshooting.rst#L89-L93",
+          "version": "repo-lines-v1:sha256:6d7d56fa543289c2ffa8ecdeaf78d2660b7f1a10c406ecf413caa2697f6c5bb8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRkMzQ2ODlhNGQ3OWZlOGY2Y2QwMjNiZWE4ZDJiYWI1MjBkMTcyNTkxZWNkMjQ2NjYzZjA2Zjg5MGJiMGEzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWRlYTA3ZWZlYzE1OTQ2OWZlZjJlMjc0NWUxZmY5MDczOGU4YzM3OTg2ZTVhM2RhNTM0MjljM2NjNTcwMWFlMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWFhYjE0NTRiNWY1ODBhMWFkMzM2ZmZlNGRjMzZjYjgyM2QxMTgwMjU0YmY2OWMwOWExNzU3ODE0M2Q3MTQyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmJhNTRmZjY5NGI3ZWFlMzJhNjJiZTQxOGU0Yjc5ZTYyOTU0ZjE0NjE2OTVmMGI2NmVjNDU2MWM1OTU1YTM5MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_05008559bab5474787e08b98e906d6b2",
+      "statement": "Tuples constructs the Cartesian product of argument values with tuple length equal to argument count and ignores null values; it is intended for composite join keys rather than positional zipping of lists.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-misc.rst#L128-L165",
+          "version": "repo-lines-v1:sha256:62d44fc9cd34d63cbd88e5cafccaa41834976e4b0d9d88587ba1412341fcd04e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4YmUyNGI5OTY3ZWU0OWUzMDBjYzY4MjJlZmZmNDlkNjY1YTQ3YTZiZmMyMTMxM2U2NTNhMGVmZjhlNTdmOWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwN2U1MWE1M2Q1NGI0YzhkM2RmMTA4NGQ4ODkzNDhkNWE3NTQ2OTAzZDlhZGRlOGY0NDMyMzQ3ODBiMTI5MTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMzljYWMwMmM0Mjk0NzhjNmFlOTNjYzE1Nzc0M2QxZmJlMWFmZjRjMzBhY2I2YzViNzFjNzZiZTdlZjJjYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L46-L46",
+          "version": "repo-lines-v1:sha256:6fdf332acd7124e4ffb34f55615e4324baf3d2900339aa362e8db8a86171ad02:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZkZjMzMmFjZDcxMjRlNGZmYjM0ZjU1NjE1ZTQzMjRiYWYzZDI5MDAzMzlhYTM2MmU4ZGI4YTg2MTcxYWQwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZkZjMzMmFjZDcxMjRlNGZmYjM0ZjU1NjE1ZTQzMjRiYWYzZDI5MDAzMzlhYTM2MmU4ZGI4YTg2MTcxYWQwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmNmMTgwZDQwMzIwNzA5YmE5MjRlNzk4ODI1NmY2ZDliN2FjNTYxOGZiMGNiMTcwYzc3M2RkYjhlNjE1NjFkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWY4ZGZmZjEzMThmMTM3ZDI0NjAxNzQ1MGI2MjcyODU5NjlmMjI5NTYxZGY5OWJiMmViNTFkNTcyNTY3YmIzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4da4d619ad7f402a98a47c45bb6f9123",
+      "statement": "Dataset secondary-index maintenance is automated; indexes are implicitly declared by hops joins and subset definitions or explicitly declared through dataset sink indexes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L17-L22",
+          "version": "repo-lines-v1:sha256:4d9492c457665a0015fc301bb767c068bdbfba4281c3b6bd9a9cd0139085d682:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBlYTRmMWQxMzhlNjAxZTJmNDhkMmYyMDk3ZjJkMjM3OTQzYzY1YWI5MjYwOWJmYWYxNmEzYzllMDFlYTEzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjZmNTJjNTE3MmVhZDQwZTE4MjNkZjk5N2Y3ZmJkNTZmZjFjOGQ1MjhlNTIxMzZhZDFhYzY3YTdjNjY0N2YxYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWI1Y2EzYjE1ZTYwMjNlMmQwYTRmMjc3Mjk0OGE3NWQ3MDY0NTZjNjM2OTdlNGNmYmMyNGRjYzFkMGM3MDFiZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmI2NDMzMjM4ZjYzZDA1YTE5M2E3ZjZiOWY3Yzc0NjAzOTExOGFiOTc4ZDkzOTliZjM5NmJmNjBhODk3NmUwNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L65-L75",
+          "version": "repo-lines-v1:sha256:c8964b9df210679b3defe846065782ec7d9d00494fc3abd03866aa408983aa31:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNjdmMWMyZTM2YzM4MzlhZDEwYWY3MjMxNTJlMDhmYWI3YjgzYzUyOTgzZjdlOGY3NTI2MTQ1MmVjYjVhNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MDcwODEwOTVjYThkNDQ2ZGU4NmE2MTlkZjQ0MmZmODllN2RlNzdlYzg5NzE2MGFmOGNiYzE5OTM0NjU1NWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhNzRkZmVhNmVkYmNiOWM0MGU0YzUwOTQzZjA2M2RiMjViODY5NjQxMzExMWU4NGQwM2E1YTJlM2E0ZWYzZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyMmJhOWJlMzRkZjM5OWMxNThiZmY2YmQ5MGEyYTRhZDY2MjhkY2YzYjZkM2RiNWJiNzVmNGFlMGZiZjQ4YTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_38565b9a5415403bb2410753bdebf127",
+      "statement": "The dataset documentation warns that orphaned indexes currently must be removed through the user interface or API.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L24-L26",
+          "version": "repo-lines-v1:sha256:263167554f5e768ad553b3c0f1583911e5cb81a810a565bdf377100f85a72b26:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTM3OTA2MDY1ODdiMzNjN2JjZWQ5Yjc3ZTFiZTg5NzAwMTY3NzEyOGMxMjZiODBjOWU2YzJhNDg0NzUyMWJmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGI5YjVlOWY1YzI0ZmFhYjgyOGY0MzNlNTA3ZWRmMzZhYmJhNjViNDVjZGNiMGNjMGMzZTQ0NzU4MDFhZTAxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTA1ZWZjMWNiYjdmZWE4MTZlODJiYjQ4NmY5ODA3YjUwMDgzNzUzNzQ3M2E4NjI3OTgxZGEyZjM2OGE2ZDI2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2E3NjA5YWMxYzYwMjM5YjdmMmY2NmRhNmEwZWUyODRiNWQ0NjI4ODEzNDZlNmI5ZGU0MmI4NzQ4YjExNzRhYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7e2f1640515242ec9246bbeb988b4edc",
+      "statement": "Dependency tracking reverses hops and apply-hops traversals when referenced dataset entities change, locating entities in the pipe's source dataset for reprocessing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L11-L11",
+          "version": "repo-lines-v1:sha256:7738951777d98b7c1c751a64c462a9bdb9d07c34867b6cd3a05c195aa14459e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODk1MTc3N2Q5OGI3YzFjNzUxYTY0YzQ2MmE5YmRiOWQwN2MzNDg2N2I2Y2QzYTA1YzE5NWFhMTQ0NTllMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODk1MTc3N2Q5OGI3YzFjNzUxYTY0YzQ2MmE5YmRiOWQwN2MzNDg2N2I2Y2QzYTA1YzE5NWFhMTQ0NTllMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTZkM2Y1NjlmZGNjZDk5Y2UxOWU4ZmQ1YTcxOGQ5ZDE1NDFmM2YzODgyNjNjOTI0ODI3M2QyMzYxMGRlN2M4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:c72c8aa0c47791e1b192d80c8bbe07e13eeebdcbf64a6e8c95af3fd5894d7313:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGExYzE4ZjFmMDJkN2Q1MzQ1YTY5ZWQxYjM3OWYxNDAwNWZmYmRmZjZlZTEwODY1ZGFiNjk4NDY2YjhhMzMwMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlYWJiMjFhYTBlOGRkNDU0ZjkyN2ZhMjE0MGZlNDM4YmU2OTI0ZDA4NDViZmFhOTNkZGUzMTg4YWU5NjQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6b558c85bcc44fbe8c9b1a69a48c1402",
+      "statement": "Dependency tracking supports only pipes with a dataset source; a merge-source pipe using hops or apply-hops must be split with a dataset boundary to obtain dependency tracking.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L9-L9",
+          "version": "repo-lines-v1:sha256:0317247381f14f68a0bf596da8d57ac2d9f4e89e9b1b24b2fd2918e111cf6618:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0NmY5NjM5ODUzY2I2ZGZiOGMzOWYzMTZiZDQ0ZDg4YjYyNjc1NmMwZTM2OTI3NzM0NTAwNzNmOGNjYjg5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L12-L14",
+          "version": "repo-lines-v1:sha256:575522e2ead826951cfe9c2e534169ad7008885b7a3ff1e59df8a3d5f0b2b530:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzBlYjY2M2M0MjgxOTdkOTYzMzM1NDFjMjRlZTI4ZGQxODZlZGFhZjk0MjVmZjU4ZDI5YzA4ZDdiYTg5NjFkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fad5e274bf54416b9c4d7a65cea3c16b",
+      "statement": "For hops in a DTL transform later in a chain, dependency tracking requires join criteria to evaluate to the same values as on stored source entities; preceding transformations must not change the source properties involved in those criteria.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L13-L13",
+          "version": "repo-lines-v1:sha256:eb5380bf17c2eaf9414afcec15dc10a616e2bb31a5bd3420ee159b38f98aa7f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI1MzgwYmYxN2MyZWFmOTQxNGFmY2VjMTVkYzEwYTYxNmUyYmIzMWE1YmQzNDIwZWUxNTliMzhmOThhYTdmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI1MzgwYmYxN2MyZWFmOTQxNGFmY2VjMTVkYzEwYTYxNmUyYmIzMWE1YmQzNDIwZWUxNTliMzhmOThhYTdmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjc0ODZjOTIzMGMyOWEwM2RlM2E3ZDBjZmY1NjA0MDE3ZDY3NDYyNTljMTJkZGM5NDc4OTc0ZGFlOTIyYTUzOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9d88c95b9d674ed79def079f4912b893",
+      "statement": "Add_namespaces adds identity and property namespaces before the first transform, which can invalidate inverse dependency joins because they match stored dataset-source entities rather than rewritten transform entities; the caveat calls for effectively stripping namespaces again where necessary.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L15-L15",
+          "version": "repo-lines-v1:sha256:f67c1f0a1bf342fb143c2e71e84ca80c7edde11218faaf086bd804dd7130983a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjY3YzFmMGExYmYzNDJmYjE0M2MyZTcxZTg0Y2E4MGM3ZWRkZTExMjE4ZmFhZjA4NmJkODA0ZGQ3MTMwOTgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjY3YzFmMGExYmYzNDJmYjE0M2MyZTcxZTg0Y2E4MGM3ZWRkZTExMjE4ZmFhZjA4NmJkODA0ZGQ3MTMwOTgzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzI4MDk2NjdmNTAyZGZlODQ4MDcyOTgxMjhiMDBhNDBlN2YzOTdkZDUxNzUxNTM5ZWIxYmJhODg4NTY5MTZlYyJ9"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L79-L84",
+          "version": "repo-lines-v1:sha256:299d357b87e2589cce04d23719419bcb73406b2722d90c86c62b9924f6768bde:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWE5NmExNTRkY2ViYzlkYTcyZGRkYTczYTJiZDQ1MzhiMDk4YjMxMGZkNDkzYmY2OTQyMDkzYTkyZjYxYWIxMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGM0MzcxNTYwYjZkMzMwYjc1ZWVlMWY5MTQxYzc4MmQ1YjhkZWFlMGY3MGExYjMyYjk4ZWFjODdiZDgxODA0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDJhMzZhMDJkNDFmZmVkN2Y4MzVlYjA1MjY1MGQ2ZWE5MmJmZjcyZmIyNWUzYzFhNWUxODZiNGYzNTJhYTliMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2FlMTMxNWM3ZTY2ZmI3MzZkYWNkZTdjMGVkY2FiMDM2NmM5OTNhNGVhNWQ2Y2Y0Nzk2ODZmMWI0ZjUzYTZjMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e27c8d7621ac4cdf9757234a5c379b50",
+      "statement": "When namespaced identifiers are enabled and a source entity lacks $ids, dynamic _S.$ids includes _id wrapped as an NI with the pipe's identity namespace, which can interfere with inverse dependency join criteria.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L17-L17",
+          "version": "repo-lines-v1:sha256:00f8dacf8ef774fb298c7d44128942ee9e6b9c81ac155dcf2bf40109e259b384:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjc0ODZjOTIzMGMyOWEwM2RlM2E3ZDBjZmY1NjA0MDE3ZDY3NDYyNTljMTJkZGM5NDc4OTc0ZGFlOTIyYTUzOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f63a5681a9634ad2a71c3c6c0bae6925",
+      "statement": "HOP_SPEC track-dependencies defaults to true and can disable dependency tracking for that particular specification.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L65-L68",
+          "version": "repo-lines-v1:sha256:c446769fdc9b5114136499d75c51b2797afaec9c0b529e4114e7e22be04cc34b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ4ZDZjNTYyNzk5NzUyOTMxN2RjMDc4MzUxMmJjNmIzNTg2NGEyOWZkYmJmMDgwMTAxOWEyYjJjNTMyMTdlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGFmZTBjOGQ5YjRjYTgxNGJmYzQ0YmZiNTYxNDVmM2QyOTgxNDllYjhiNmQzZWQxOWJlMmQ0MTZkYzhlNTc1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2ZiNDZmMDFiZDcyMTQyMWEzYjY3MmI3ODI4YTBlODkwNDk4Yzk5YjQxY2VkZWZjMmYyOGVlMWFhMDMwZWM0MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjQ3ODNjOGQzOTY3YTRiY2EyN2I3ZjI1ZDgzODVhMDVmZjMwZmQxYmM5MTNkNzZjMjIzYzQ4ZGM2MGYzNDk4NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8ce2d3527314ecfba42563fc1e0b84b",
+      "statement": "Lookup-entity retrieves a dataset entity by _id, requires the referenced dataset to be populated, returns null when the entity does not exist, and does not automatically reprocess output through dependency tracking when the looked-up entity changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L173-L200",
+          "version": "repo-lines-v1:sha256:d14bab3df9a4c3366addbea9bfac10fcb4822ca568300ac92af3a2fa06ef7862:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MzBmMDBmMzVmYWUzOGY5OTdiNDc0NDFlNDE1ZTAyODMzMzc5ZDU2N2ZhNmFhODg0MzRiYjQ4ZGYzYzNkZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1Y2E1ZjVlYTNhYTFhMGE4MDViOGFiZTVjM2Y5YjExYjNkYmYwY2FhYTY0NDZkOTZlOTA2NWU0OWFiMzg1NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4NWRlYWZhZDIyNmY1YjA3OTkzMmNiODZmYTE3YWNmNDFkZGY1OGY2ZjE0NTRjMDIwNzlmMjFjMDM1YjRhMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d2a33cbe21ce4df8b0997be723a2de64",
+      "statement": "The entity model identifies _tracked as a marker from an older dependency-tracking implementation superseded by a mechanism that does not require modifying entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:ec396663ffedd310efc2e71ab2c5a7f929ecece32fd40d805e5e2528baad0403:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MWMxOTY2YWExMjA5MDZjNjNjYThhZmVmYjgyZTZlZDJiMmUzODY0Y2JiNWQ5YmQ2ZjMzNmU0MjYyMDk3ZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNWU0MzlmMjY1NzU1NDU0ZWQwMTBlN2M0YzU5YWZhOTI2YzVlMDQyMjdlMDNjNzZjODQ2NTRkMDcyODQyYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MDU2NTIwNDA1OTAwMWQxMGUzNzZjMWQ3ZWM3MTllNDRlZWVkMmExYjI3YTdmMjE0ZWFiYmExYjkzZDBjMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViN2NjY2I5MWE3Y2RlZjg5NjZmMmMyNWIzN2EyOTIyODI2NzQ2M2YxNzdlYmE3OGRiN2IyYmMyMzJmNGNjN2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e425bd7c5d094191a58e405f4bd0b6de",
+      "statement": "Apply-hops evaluates hops and applies a named rule to the result; calling apply on a rule containing hops or apply-hops is not allowed, and apply-hops is required to preserve dependency tracking for such nested rules.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-dictionaries.rst#L405-L469",
+          "version": "repo-lines-v1:sha256:8d4524c9bcfbf5d84fceaa57608c8deb08c38048068f7163b1e09a24ed9cdf9e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5ZjE1ODk1YTMxYjk4ZDQ3ODNmOTg5NzQ4Njc1OWZkM2U3ODc2MTQ0YWJjYzIxYmMyZmE5N2Y3NjYyYTFmZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkZDM5ZTQ1NTZhZmUzZmUwYjJhYmEzYzFjMGMwMzEzMGZmN2JkMmY3NjIzMjVjMDk1YjAxNmQzZjAxODhhNGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1OWFjMWQ4YTMxNjViNzFiMmZmM2M3Yjc0N2VkODM0ZmUzMmJmMTc5NmFlYWQxMDYyYTExOGU4ZDRhMDUzMjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_604ea2c8488a4a539160682ccf9a1094",
+      "statement": "Hops subsets maps declared aliases to subset eq expressions with an index expression on the left and a subset-selection value on the right, replacing the deprecated prefilters property.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L157-L171",
+          "version": "repo-lines-v1:sha256:64b6f23c70d1ffaebaa2528006de391016c0765854957d6d80743d39b5dd92e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxNzFjMGQxMTNhN2VmM2Q5MTVmNmJlMTU1N2Q0NmIwZWI2NmZhZTllMzI2MzVlYWU1ZjQ5MzAzMjdhY2VjMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjMTJlNWJhMWU4NGQ2ZDg4OGI0Zjc3YjlhMmNiZTc3YmExNjQ4Yzg2MDRlZDQzZjVhY2VmYWU1ZTRhNDc3N2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjMGFlYzM4ZWJlY2JhOGVjN2U5MjMwMzhjMzc2NTg2ZTJiODgwZGViYTk0NTA0MzNkOWI3M2Y2MWRmMWM1ZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxYTA4YWEyY2IwOTYzZWNhNzM2ZDRlZmVlYTkzMjU4NzM0MDk3YTYwOTFjMTgxZTVkNTNkMTJiNTk5ODc3ZDAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L80-L86",
+          "version": "repo-lines-v1:sha256:20f8a1caf0a227e8f616e426428e31cb964f9ff015d09ac44a0a6a12191fe4b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDM3NDUzM2Q1NTczMTI0YjUwZGY3OTU1M2I5NmI1N2MyZGNjZTAwNDYyZjhhNWIyYzY5NzU3ODQ1Yzg3NWJiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGVkNGVhNDljZjZiZmZlNDNiNmIyMWFjOTBmYzFkYzE4NjQxMTg0ZTlkNDE3NjRmZjNkZmRiMDNjOGY1MTdlYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdmYTAxNjAxMTI5Y2RlZWRlZGNlYTcxNGZmYzA4ZThmYTgyNGRiYjMzOWI3NjRlMmQyNDgxNjRhMWE1NDdjYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBlMzZlNjZjNDM4N2FjNGZkZTc3ZTM1NDg5NWQyZmFiMGI3NzFiODU2OWI3MjZhMjc5MDc3YWI2ODc3MmFmOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e879b1cc005472bba97bdfc4a356e8f",
+      "statement": "A dataset source subset reads only indexed subset members, uses join-style overlap eq, requires a literal right-hand argument, and requires version-2 indexes for delete support because version 1 does not support deletes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L41-L49",
+          "version": "repo-lines-v1:sha256:dcbbc90dcec0546dbdaee717ab484e6768f95fb92f3f2d746686384e4e04f185:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ0YTQ0NjY4NzQ1ZDBlM2E0OTFjOGFhMTY2NGZjOTU3NDQxYTdiNmU4ZjA3MzdmMGQxYWQyMTcwNzkzNmQzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzE2N2NjYTNhODczMDdlMjkzZmQwYWNjMGFhZjhiMDU1YzAzZTkzOTNhNDdiYjg5OWFlYjVlMzgxZWE3MjZlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2bd6088697654a2982c0dd2232bc2ce8",
+      "statement": "Dataset subsets behave as dataset-like slices backed by secondary functional indexes, supporting almost all expression functions except non-deterministic ones or those referencing other datasets.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L28-L37",
+          "version": "repo-lines-v1:sha256:e5635dd8b480fec5a5bedac32e611791c72429a7cb49b17ce0c04eb7b784b10f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2OThkYjNhMmExMjRkODc0ZGQwZjQzZmU5NDJiYzUyOTJkZWIyMjhmMjAxYjk2ZTkwNzM2ZjZjNjY2ODdmZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4YmZmZmZkMzYwNTI1MDgyYTI4Nzk5OWUwNmM0MmZmYjQxMTY0ZmI2YmU0YjljNDQ4OTViMGU5NmRkNjQxODgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlNGQ2Njc0M2Y5MTZmNzJiMjdlYTlhNmJhNjNiZTg2ODg2MThjZWZkZTg5ZjM5OGJjNzc1MGEzYmZjZDRiNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_25d6cf672912448481d2e7f396f22b35",
+      "statement": "Hops produces an internal table with one column per alias and projects a list using return; return defaults to the last alias, can select comma-separated aliases or an expression template, is allowed only on the last HOP_SPEC, and cannot be combined with recurse.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L53-L63",
+          "version": "repo-lines-v1:sha256:821dc65b7cf7c65e2e904c2297158642e27952f7d44834b8ab7a94e1ad74de39:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYzA2ZWRmMDI2MWMxZTdmNjZlZGU3MjkwMWNmZTA3ZGI3YmRlYzZlODZhYzJmZWZiYjk3NzM5OTIyZWY5M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5Nzg4OTk5OGM1YWJmYmMyNjU1OGE4MjU1OGQzYzhkY2NhN2M5YmI4MWQ5MDc4OGE5YjgyM2ViNzQyMDM1NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMmViYWJmOTAyMGFmNWVlMzUwYjYxOGU1ODg2ODBhMjhkMzY4MjM3N2RjOWQ3Y2M0MTQxNDgxYjU3OTAxNTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiODlhMDU3OWYzMjUxNjNhNWQ0OTJlYzQxYWI5ZmYwM2Q3YzFhOTc0OTAxYWQ0Y2YzMzI3YTBjNmU5Mzk5NWYifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L99-L108",
+          "version": "repo-lines-v1:sha256:b4a92877b241f0d453e3396aef24e8d0d1e5c839bd059b8d43dfb7883ae856c3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwYWY0ZmYxOGQ1M2EyY2E1ZjgwZjJkOThjMGRmZTc3Nzc3OGVkNThhMWE1ZDQyODE1MzlmNDYwMTI2YWVjMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MmIxYTU2NmEzOGVlOTkwNGRlZjRhY2RkYjQ3YjU4ZDVhZjk4NGFhN2MzNmQ4OGUxN2NmMWEwYWMxM2NmNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MTA1NzE4NjlhNTY0OWNlNzRmMTU4OGJkYTk5Yzk5ZmUwYzUxYjBjYzcxY2NhZWI0ZmZmNzdlYmQ2OTEzMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBhMjg0NDg3MjhkMWQ5MmRiZjM1YjA4NjQwMmFiOWE1YWFiMTMyNmQ0NmQzMTZiNjFlOTAwNTY1MGI0OGI3ZjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_557a2006ca5b4984b57631fcd7982504",
+      "statement": "The hops reference guarantees deterministic result order based on entity _id values for identical input entities, but requires an explicit sorted function for a particular property or projected-value order.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L104-L108",
+          "version": "repo-lines-v1:sha256:d0e6d02c03dd48cf6313627a2d23575ac90829cf384a6727b40368b22a7b3ee7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGJlM2Y0YjNmMDRiMWVkNTdlOTJhNTIxZGQ4ZDkyOWVlNDAzZDNkODExN2I1OTc3OTUyOTg4ZWY1ZTIwN2Q0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgyYjFhNTY2YTM4ZWU5OTA0ZGVmNGFjZGRiNDdiNThkNWFmOTg0YWE3YzM2ZDg4ZTE3Y2YxYTBhYzEzY2Y1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTAzMWI2MDdmOTg3YjhmMzBkZDNlNmJkYzJkMDQwYTU5NzRlYmFhNzE3MDljMGI2ZWFmZDc1NWU1ZTRlNDEwMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGEyODQ0ODcyOGQxZDkyZGJmMzViMDg2NDAyYWI5YTVhYWIxMzI2ZDQ2ZDMxNmI2MWU5MDA1NjUwYjQ4YjdmMiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L151-L154",
+          "version": "repo-lines-v1:sha256:eee2c5b87339fccfb6d63ced0331960f0f2ab8e85b7078774f42248045021f65:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBkNzg2YjZhYWE5OGZhYjdmYjZiOTVjMmM4ZDRjMDdmMDEzYTY1MjJiNDBiZWQ5MGUzMDk0ODVmZDllNDQyNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmY0ZTI5MWVjOTVhZmE4MDI4NTIwOTJhYjhhNmFjMmMyMWM4NDgzZmZmMjAzMjEzMTFmOTEyMjkxMjZiNGZhOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2E2MjBiNTc5Y2FmNjhhZmQxMjFlNTE4OTRmZDZhM2JjNTczNGU4YWRjMTNmOTIzZDI2MmVmZGE4OWZhYTc3MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGJhOTE0ODQ5ZjRlMTk2M2VhMGRjY2Y1ZTBkYTgxNGI3NDI4ODI0NmI2MmQ4ZmM4NDdjYTc0ZGMwNzQ3N2JhZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7da5cbcbe9dc4a648eaa2b43ad4e0df5",
+      "statement": "Sorted and sorted-descending support per-value key expressions and return the original values in the requested order without removing duplicates.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L845-L945",
+          "version": "repo-lines-v1:sha256:2baba55489ae75ad41af020f07d7318f19346a25d7d1077906b6b699b8e9da4a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwNzMwNjBmM2M1MjFmNDNmOWIxOGZhYjdiYzg3NmEwZDA1ZTlhOTM2YjA3ZDYxZmQ3ODY4N2E0MjNjN2RlNDg4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiMzI5NDg0OTQ0NmEwYjA0Y2VlYzMxMjcyYzQ4Zjk3NjIyYTllMjZmOGQ5NjUyNDlkZDUzNGJlNTcxYTliNDBmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2MmZlMzY3YTMwY2U1ZGRiM2ZmOGZiZjVjYWZhMTI0NzczYzVkNzBjNzNlN2I2YjdhOGIwZDI0ZDQxOGJiNDgyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmNmMzOWVhOTBjNWU1NGNmNTkxODgxNWMxNGY1YWI4ODQwN2MxZGUxMmMxYjBjYmUzMTQ1Y2E1ODU2NTJmOWNlIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_83636054ea7443b5a5b9e56d1f6b1809",
+      "statement": "First returns the first value, returns a non-sequence input unchanged, and returns null for empty input; the troubleshooting guide warns against assuming a first hops result represents a unique entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/troubleshooting.rst#L76-L76",
+          "version": "repo-lines-v1:sha256:2ad6d5817e54ca70724e22f7c43378b6a5bcc64106b2942dd3a7fe12ca3be0c4:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkNmQ1ODE3ZTU0Y2E3MDcyNGUyMmY3YzQzMzc4YjZhNWJjYzY0MTA2YjI5NDJkZDNhN2ZlMTJjYTNiZTBjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFkNmQ1ODE3ZTU0Y2E3MDcyNGUyMmY3YzQzMzc4YjZhNWJjYzY0MTA2YjI5NDJkZDNhN2ZlMTJjYTNiZTBjNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg4MjUxODg2NmQxM2I2YWE0OTY0ZGQ0ODVkNTQ0YjU0NDEzODlmOWVjZjQ1MDM2ZjQwZWNmZDMxN2EwMGRjZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTBmOTI2NmEzYmZiOTI1OTY5YzlmZGM4MWE4NDlhMGYwZDVmNzBlOWI1YmNiM2UzMDMxNTJkNWUyMmI4MDU3YyJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L176-L204",
+          "version": "repo-lines-v1:sha256:7f8f87ebb193f1ccc078ee00b0082b3aaa4eedd1fee6e6a88e539d9f9c622acf:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNWZjOTg5YTJkZGM0MzVlMWIzNTVhOTg5ZjQzYjZmMGRiZjgxNDNhNzMwYTkxY2JhYzQ5NzZiZmMzOTFhNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlOTNmNjQ5YWNjOTQyMTViNzcxZmNlZWU2ZGU0YTZlYzBmYjMzNGQ3ZmEwNzMyNTA0YWY0MmRiMWIyYzUzMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiNTAxMTc1MTI0Y2ZhNzcxYmYyOTY2NzA5MzQ0ZTZjOTJkZTIwZDBiMjUyNDkxNzViMmIwYTgwODcwYjZjZmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2MmFkNjYxYTRkNzk4ZGQ2ZWU4MGViZTc4MTZiYjNmNjA3OWZjMTNjMTY3YjFlYzNlMTE5MmFlODk5ZDk4YTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f97baaa75d9d4ecdbcb62636b76dd5db",
+      "statement": "Recursive hops feeds output into subsequent evaluations until exhaustion or its depth bound; recurse defaults to false, max_depth defaults to 10 with null requesting exhaustion, and exclude_root defaults to false and controls original-input inclusion only for recursion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L33-L51",
+          "version": "repo-lines-v1:sha256:dad61681257284ec2c1a3d62017d9e549b0acaf58ef898e186b7316eaae82689:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1MmQ3ZjUyMDYwZTZjNTY0ODM4NTJkODcwN2Q2ZDVlZDE0M2Y4OWQ3ZjZiMzA2YmRmYzFhNDE2MTE2ODY2OTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkNjczYTI3MTJhMjZmOTk5NzdmZTU1Nzc3MmEwMjQ1M2NlMTQ3Njc4NDdmODllZGRhNTIyY2UwNmQ0YWY3YjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxYzU4MGFlN2U0YmU3ZDMxOWIwYTFiZmM3ZDBiMDk4MGJhOTNlZGQ4NTJkNTY0ODViMWU3YzYyM2M3MTlkNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2Y2NjZmE1Y2ViMWJiMmI4NmY3ZDU5OGI1MWNkMDg1YzdkMjFlNzhiYTI0YTFlYjc4M2FlOTYzMzYwN2QyMzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_490dd7f04e884381b970801b6f1b4056",
+      "statement": "Multiple HOP_SPEC arguments pass each specification's output to the next, supporting a recursive phase followed by another lookup; the hierarchy pattern recommends an explicit max_depth to safeguard against never-ending recursion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/recursion-hierarchy-pattern.rst#L1-L7",
+          "version": "repo-lines-v1:sha256:9fec516aa32947ff16971c9a5b40d8ba2e4c73b235c61e8c2675b5728e502c80:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzgwODQ0NGM0ZTNmODk1ODcyZDg2ZTg1NDhhZGEyODkzZWIyM2NlMTRjNmEyNzEzZDI2OWIzMDI1YmQzYjYxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjNiZWM0OTRlZmU4OTlmNGYxNWEyYmVhOWI5ODFkN2ZiNDgxZjAzNDMzMDI4OThmM2IyMWZiMWFkZDY0YzU2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L88-L91",
+          "version": "repo-lines-v1:sha256:931652b6289431c6f472d9a81885e8db4e9a20fb5af7363ee704582e17f0d981:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWY5NDIwYTJkYWJmN2E5YzMxMWM5ZTk5YTRmZmUzYzU1MzQ4NjgyMTI5YWU3ODZlNjAwNjFhYWE2YjZiYjQyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMxNWRkODA2OTZmMGQ5NmU2YjdjYWQ4YmFjYTcwM2I3Y2VlN2JlNzE2ZGYyMDZjZDNlZjNlMTE3NTJiOWRhOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTBmMGNmNmQxMmUyZjRlNzBmOTljMDY2MzMzMDQ3MWY1ZGQxNTVlZTI3NDNhMTlmZDFkMTlkZDY1ODFjM2Y4ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmZhOWNlOWQwNWEyOWNmNGU5ODFkNDVhODU4Y2VkMGFlM2NmNzNiYjAwMGVkYTY0ZjE2ZWU1Yzg4NWFlOGM3MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_803785b710164b79804b17ed095d506e",
+      "statement": "List-expression filter returns only supplied values whose functional predicate evaluates to true, with _ representing each current value, rather than acting as the target-emission transform operator.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-lists.rst#L149-L174",
+          "version": "repo-lines-v1:sha256:2209e9e146c3b4ec271305f773a6d7b0756b1cea873ae8eec78409424e3811ac:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwMDUyNTdiYzk5N2Q1ZTVmOTE5ZTdiYTRmY2Y1ZWZjMDU1ZmYzYWM5Nzg0YmM1NzBkMjRkZDJjMzI0NDg4YzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNjgyNWVmM2Q4NWExNTQ0NjhjZWNmMjcwNjkwNGJmMDE4N2E1YjMzMGY0YjBhYWJhMWVhMjE1M2NmNzgzNTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZDg4OTY2OTYwOTY3MTk4YTYxMGY3N2E0Mjc0MjY0OWYyMzcyZjU3Y2I3NjgyNmMwMDFiNDJlOGQ0MzEyMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1NDk2MDk0OGM4MWQ3ZWNjZjlmY2JkZDllYjllMDJlN2RiMTY5NzFmNTk1ODlhNDgwMTY0YzMxMGI5NmNkZjAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L573-L595",
+          "version": "repo-lines-v1:sha256:5f244497bef90a360d6640691371b801fa2c10a19f6d32eb4a67a7eaf7a5398c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5ZTYwMmIyNWYxNmM1NmY4ODI3ZmNkZmI0MmQwZDVhNjlhM2YyZDIxYTI2YTY0NmMyOGYxNGI1N2UzMWFiNDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlNmQ2NTRkZDc5YTk4NzBmY2JiZDE1Yzg5ZGNlZDE1NTUwNTU4YTQ1M2YyY2VhMDhkZGJmMDY3Mjc0YmNiNTcifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/variables.rst#L93-L105",
+          "version": "repo-lines-v1:sha256:a7d27050989724e8d7e9000c5882084ea0aea91db2dbff47c69e383cafaac349:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYzMzY2FlYzJmODY2NGRjZDBmYjA1NjdhYmEwOGM4NzUwYzM4NWJjNDg3MjY3YjZmNTRmOWQ1YTUzYjEyOGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YzViZTI5OWM2NTlkYzUwZDliYTY5M2IxMmIzYTQ3OTIwMmJhNTFiZGVlMGI1MmUwN2FkZTI1NzQ0ZTllZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2ZTE1YjE3OGQ1NDFlYTU3ODU5MDE5YzFhMzZkMmM3NDY3MThmNDI0ZWExYWEyZTc2ZjViZTM0MmUzMzE3OTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_80be0d1f4eda4f5f8cd8a3cf0ce32526",
+      "statement": "Transform filter stops further transformations on a false or omitted condition; for a dataset sink it emits an _filtered target so an existing non-deleted entity with the same ID is deleted even during incremental synchronization, while sinks without support discard that entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L113-L121",
+          "version": "repo-lines-v1:sha256:95c243f019475e68797591a4e93e297c67063758f4363e381114aa886bb78a79:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTMzNTQ2OWEzNjlmYzViZjlmMGZiMzRjYTdiYWVjYWI5MjBiMTNlNTY3ZjNjZWZiYjY0MjZjMDQzYmU4YWRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZkY2NmMDJlZDk4OThjYmQ3ZjM2YjMxYTExMTA3NjczMDg4Y2U5YWRlOTdjYjk2YjRmMzNlMjc0ODMxYTMyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVhMjlkOWMyNjQ0MjdiMTE0NzE0ZThhMGQxMThhNWE3ZTdmZjUwY2Y0MDM3NmI0MmViNGIxZGMxNjdlZDU1NCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L573-L603",
+          "version": "repo-lines-v1:sha256:264e62f32e88406cb624272e24b7e3e9233dbe1e6fa24e84db1b7d37df5b84b6:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5YzhiM2ZkYTY4MWNmZTBhZDM2NmVkNDg3ZDFhNjU4NWI1ZTE3NGM4YTUxN2YzOGI3ODdiYzQyZDU2ZmZkYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyOTFkNzQ5MDY5ZjExNTA0OGFkNjJmYmQ1OWI5ZDIzY2U1MTQxZTI4Yzg2N2U4NWQ4YTJjODYyNzE4MzM5OWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_17de12a0f7e0451b90c71472ee498072",
+      "statement": "Discard stops transformation on a false or omitted condition and drops the target without a sink deletion signal; the documentation warns to use it only when the same ID has never previously been sent if stale sink entities must be avoided.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L514-L558",
+          "version": "repo-lines-v1:sha256:f84e2bc284951494f02cd900b32171a2c4085e8594eff7e32077bfd593048060:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0ZTljYjU4YTdhNjkwYmZmYWI1ZWMyMDY4MzExYzhkYmVlYjc1OWE2NDg0NThjY2FiY2U0MjMzNWMyZDFhYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5M2U0NzZjYWJlZmViYTIyNmM2Y2Q1ZWU0ZGUwYTcxMGUxYjU2YWUwOTg0N2Y1ZGJjNTY0YmFkZjc4N2I3OTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMTczNmViNDM2MGNhYmYzMGM2NzU4OTEzNDkzNWUxM2VkODVjYjg4NDE1NDkxYWEwMzIzN2FlZDI5OTE3YTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMjkzZDEwMzk4NDAxM2IwYmI3OTk1MjM3ZWFlMDQwNzhjYWNiNjQwZjVmMDc4MGEyN2EzNDQ2YjFiN2ZiMmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a63c5d5d403a434bba05e858aedbfe12",
+      "statement": "Create emits additional entities directly into the DTL output pipeline; the troubleshooting guide warns that using create without rescans can leave orphaned children.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/troubleshooting.rst#L82-L84",
+          "version": "repo-lines-v1:sha256:85df337894285ae4b2c519827107e67f535991648bee09e1a57bf193aee6f75b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDAyYzEwOGUwNGI5MzY4NGU2MWQ2ZjNkNzU0MzkyMDA1ZjU3MGY0MGFiMzNjZTRkNWIxM2FkNmY3ZmZmOWQ0YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTViYTA1ZWE4MDA2ZmNhZGZlZjExYjUyOTJjN2IxYzgyOWU2ZjVmY2VmMmFkNDUxYzY2MmFhZDY0YTU3YjljNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2E1MTNhYzMwZmY4NGNiNGY4ZTUyNTU5M2Y5NTA2MjY0YjNkNWQxN2RhZjIwYTkwZDRkMTVkZTI2ODdmOThiOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjkwZjljOGUxZTFkNTc0Yjg5YTYwZjE3YzUxZDI1ZWY0ZWZlMTk0N2NhMTFiNTllYjFjOTQwYjNiODRhNzUzYiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L365-L381",
+          "version": "repo-lines-v1:sha256:a93ad45a6ac170e519e4313300e3399228f393d3be01db255bdb909620978603:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiYjZmNmI3OWE0MzA1Yjg5NzU0OTlmYzZjOTU3YzcyZDk2MmVmNDJlMjVlYTdlN2EyMTg3MDE0YTkzNzY0YWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YTI4OTA0MWU2NDJhOGNjZTEzMTFhZGY1ZDIxZWQzMzZmNjIyZjU2NjFiZmNhMDJkMmZkN2Q5ZDMxY2VjNTMifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/variables.rst#L37-L41",
+          "version": "repo-lines-v1:sha256:7f02f586a0d6943219b5c893611a2e3f60c259e509cb924788e3cf8a1180ddbc:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFhNjA1ODJhODllZTYyMGE1MTczODc0YjhhNTc3OWZmZjJlZDhhZmY0ZWQ0NzViZWQxYTZjMmJiZTYwODVjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzg1ZmIwMTA3MWE5YjBhYWZiOTM0YTEyZjA5Yjc1OGYxMTM3ODNmMjhkZjYyODEzYzgyMWQ2YWM3ZDk2NzhjZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWZjYzlmYTk4MGU4YjM0Y2M5N2ExMzQ2MzdkMGQ2ZDdiNWIwZjZkNDgyNTQwNzU0MzQyMmNjYzUxYWU3ZjY1NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNThkNDFkMTZmOWNhODFmMzNmM2QzOGRhNzQ2MzRlMGMwZTJkMDZlOTg1NDI5MjAyMzNlYjY0NmJmNjIzMjU1NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_75b1fd4bde404bd3b50f2e508d3dce12",
+      "statement": "Neither filter nor discard cancels entities already emitted by create, so rejection must occur before direct creation when it must prevent all emitted output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L533-L537",
+          "version": "repo-lines-v1:sha256:ae32e7694bcd69874fcc030d7195522ace609cfbf242be668946501c376bce53:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxZWYwN2Q0ZWE2ZDBlOWZmMTJmMGIyYzA5ZTZmMWMyNGJhYjJlMzQzYWM3NzFiZTJmYjU2ZWU2NjJjZjkyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUyZmVjNzgxMTFhNmFkNDNlZTYxNWRiYmQwMTQ3MzI5ZTE1MmQzZjAyNzRmNmZjMmJjMzdhOWM2YTQyNDIzZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTE1M2NmZjUzMmY2ZjUxNGRjMTdkMmY5ZTRhYWZlNWY2ZDhmNTlkOGVkYzQ3MWVmNjg3YmI3YjU5MjVhOGUyYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTFmMWU5YWZhZmZkYWU2MWY3OTg0ZmUxMmMxMDk1YmJjYTVkNzY0ZDI5M2Y0MWIyNGY3NGRjOTg1MDBkNDNhZiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L576-L580",
+          "version": "repo-lines-v1:sha256:99bc1cfe8c8efe0d624cfe2d09a43c34634eea29c09ec18a2e5cc6088ad66239:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxZWYwN2Q0ZWE2ZDBlOWZmMTJmMGIyYzA5ZTZmMWMyNGJhYjJlMzQzYWM3NzFiZTJmYjU2ZWU2NjJjZjkyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk0ODA2ZTY1ZTJlZWYwZjQxMDVkYTU1MmY0Nzc4NzBjNzM0MWExYWFkZGZjOGFmNDNhN2IwOTk4MDhjNTdmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNiZTM5NDE0NzVmMWRmNGU4MTZlZmUxY2NlYWQ0ZWZiYTFiOWRhNTlhZGNiMjMyN2ZhMmJkNmI5MGYxMzk2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWRlZGEwZDM1NGM5ODc0MWEyZGZkMTc5ZjJlZjI4MjVhZmJmN2JlMDdjZGMwNzQ0YTdiMzVhMGJmNzc1YmJiNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8704850493ca4fb2bd68dbcca7bb6bef",
+      "statement": "Create-child adds entities to the target's special $children property and is intended for dataset sinks, which can compare it with the previous parent version and add deleted-child information before storage.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L395-L417",
+          "version": "repo-lines-v1:sha256:86d1fdb86b127a607610828e057660e82816291ed4e5c2a06376b5ad24d2dfb8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMGI0MWI0ZmMwYmYzZTg2NzQ2NjllOGI4NTE4OTliMTMzOWRiNDFhOTRhZjc2YTVlZGE0ZjMyYjU4NGI5YjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwOWE3MGIxMDQwZWZjODU4NDIzNTVjOTVlMTU0N2JjOTc4YzlhMDliMjUwNGFjZmZkY2MxZWEyMTEyMGE1YTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_556fe9d32f6547a581d949aebf60d0b2",
+      "statement": "Dataset sink track_children compares $children with the previous entity version and updates it with a delta immediately before persistence to detect removed children in incremental synchronization; it is inferred true when a transform uses create-child but can be explicitly overridden false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L78-L93",
+          "version": "repo-lines-v1:sha256:ad6fb55d97566c397623de989bd93ab4d0a209f80cdafd718bff19af24ecdc37:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNTQ3ZmIxYTEzOWFlMjRkZTQzYWNkNzBlODI0NWJmMmRlYWY0NTk3MzYwZmMxYWY1N2Q2YmNmMjJlNmUzZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYWQ3YWJiNTc1OGU4OTBmMmE4NWYzZmM5MmE1ZTZhOGUzMDkzMjFlYTM1OWVjMjA1OWMwMzJlNGMxNWZjYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MjVjOTVmMzQ4Mzk2ZjJmZTZkMTQ2NjY2YTI1ZjE2YmNkODRkODAxNGM3ZDQyNmVlZWYwNDMxODMxMDkwODMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NzdlZGU3NjY4NzZjYzgwMjE4MDE2ZDIzNzg3MTkyZjcxODJlMjZkYWU5YjlmNTMyYzNlYjhkMGY3NWM1MWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e94adfa9ca844de9b7781d2af3439d4c",
+      "statement": "Emit_children emits children in $children having an _id and omits the parent; it must be used in a separate pipe because chaining it removes the parent from the sink and prevents deletion tracking for emitted children.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-emit-children.rst#L7-L17",
+          "version": "repo-lines-v1:sha256:453fee2f4f0c210d54ebf2f612e3ed587c08829687d049f04261ba4854c6861d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2ZjU4YTczMzMxMWMyNTY4YzhmNmI1NzVkYTFlNWRhMGVmNTU2OWMxZjkwZTQzZDVkYzc0Y2VhNzYwOWQwYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2NDg5YjE0YTI4M2Y4OTQ4ZDI4OTY2MmVlNjlmZTc0OWI3Y2IyN2Q0MmU4YWRmMGUwMDZiNDBjMDMzNWQ4ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhMDIxZDQxZjRjNjlkY2Y3MTM3YjIxNDJiZmU3ZGQ3YTYxZDkwMzg0ODRmOGM2Y2ZlNjAxM2I0ZDBiODEwOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_35f19639f7f04b26be69f34e38e6ac30",
+      "statement": "The splitting-sub-objects pattern recommends create-child followed by emit_children and including the parent ID in the child ID.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/splitting-out-lists-of-sub-objects-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:1465ffcee2a63235e4792ccf23b3536fc653544d2c04259ea9711ad2724a0311:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRhNTc5YzIyZjMxYjc0MzQ0Nzg0YmE3M2MyZWIyODNlYWFiOWE5MTYyODI5ZTBjYmIyMjQ3YjFiZGFkMWFjMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiODU4NGM1Mjc5ZjQ5ZDA3ZDI4NzhhYmFlNTIzOWExNWU2MTdjOWFiYmQ0NjEyYTRiZjk0ODdjMDQ2ZGVmNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3a9e966077044b18a3875a7fc2e51352",
+      "statement": "DTL id_required defaults to true and fails on a missing/non-string target _id or invalid create/create-child values such as non-dicts or missing/non-string IDs; setting false instead ignores invalid values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L29-L33",
+          "version": "repo-lines-v1:sha256:a3e79fbe316d0d702677ecafb014eb9c734b1126e3a6f1f25510a3cde738f1ef:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkYzdiZWUwNTk2NjNhMzNkZjM3MGY3ZWI0ODc1NTQxZGE5YzM4MWRjMDBmZTk5MDM1MTFkZTI1ZmYxNDgxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDA5YjdjY2ExM2M0ZDFlY2RmZWJiMjQ0N2VmYjlkMzAxM2YwYjVmZjY1NTZiOGQwNDgzNTZmMmE1NTZhYjBiZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2a0887d0d9ba43ecad953630287b7e75",
+      "statement": "The transform reference recommends explicit _deleted rather than filter for controlled deletion, and the documented filter guard against deleted input is restricted to dataset sinks where _id is not rewritten.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms.rst#L62-L64",
+          "version": "repo-lines-v1:sha256:134e7272cbb331c3353f4a0285ba81f8ca79459bd45fc983d06d37615667fe71:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTM3OTA2MDY1ODdiMzNjN2JjZWQ5Yjc3ZTFiZTg5NzAwMTY3NzEyOGMxMjZiODBjOWU2YzJhNDg0NzUyMWJmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzNlYWRmMDNmNDAyMDdlM2RlODExNGJlNzhjZThkZGIzNmZhYjExNmUzYTJlYTJkZGM5NzUxOTNkNjZmYzJjOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjZlZGU2NTc2Y2IxYWNiM2ZhNTA3Yzc4MWY4OTI5MTcxMzYzMTg3ZGM2ZmI5MzA0NDgxOWNmMzE2YWM2NTY5MiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L601-L607",
+          "version": "repo-lines-v1:sha256:97faef703832427f28626964f41d6b6b32c93d34a4058039aad8befb6f2940ea:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJmNzRiYTI0Y2I2ZTJiYzFlNGVmZWE4NDYxMWZhNTlhY2EzYjQyOWVmODcyNWM4OTYyYWYxNTU5MTM4ZThjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTMwNWUxM2Y4YWZkY2RiOGJiNTEwMDJkYTIyMmI2NTg3YTJjNWY3YjhiOGYxNzA0NWJhM2FiYzU0NzViZWUwNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDE2ZDU0NzU2ZGEwYWE3ZTZlNTliOTI1YTUyNDc0M2ZlMDc1M2UxOTcyNDBhZDIwZmM4YmY1ZTQ5MWI3Y2RkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTU3NGMxMTRmY2MwYzhmMmE0NzE3YjQyZThjZmQ0N2Q4MjdhNDllMmZjOTMwZjRhYmM4ODUzODI4ZGYyMjMyYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6339566da4e6476283248d42641c070a",
+      "statement": "Dataset sink deletion_tracking defaults to true and, after a full run, deletes entities that existed before the run but were not seen during it; this is separate from incremental filter deletion signaling.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L154",
+          "version": "repo-lines-v1:sha256:4660c0413816fd340ada65a8913903b61ff8d82e72f4e2a94ff2dc9105e7ee3b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4OTE3ODg4ZmI4MmRlZTk4MGJmMmFhMjMwMTkxNWQ5NzA0NWJhNzUxMWFjZWMzYmExZDI0ZGNhODk1NjFmZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4ZDNiOGRhNmMxNWU3Y2QwNWEyYjZhMmE3MmNmM2VlZGIxMTQxZTc4ZjVhNWJkZjg4ZDIyNDRiNzA2NDRkZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkYTMyNjE2ODUzMWIxY2QzYzJiYmE2YzVlYTdlYmQwMWQxMTM2ZDhmM2ExYTA2Yjk3NWY4NTE0ZGU4Mjk0ZDAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L585-L599",
+          "version": "repo-lines-v1:sha256:000ef6a5392524912aa2d48af9818fea3d1c18f0fe5ef9fd2fe9f65963ebdfed:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1ZThkZGFkZjJhYzUzNWI1N2JhNTkyMTM4MjdiNTc3NDA3ZDU1MGMwNWJiMzAyMDg1YTViMDNiYTQ4NDM4YmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NDhlYTkyNTU4MTZmNDgzMDMxMzljODIyM2M4MmRmYjVhNGFjMDRjM2E3MzlmMTEzNjFkNjY4ZDc3ZTU5NWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg0ZjMwNTg4ZGY3M2YxYjRjZjQzMDBhZGU2ZWNhZmJjOTVhMjRjMmZkMmE2MDg5ZWNmZDJmNTFlYzdmYzJkYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyYWJmN2YwYmNiZjMwMTVjOGRjMDkxNDFiMWU3N2I2YzQ5OGU1N2ZjZTljZGIwNDZjYzBiY2MyMmZiMjcyYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b9ea0596d1d446f9ab1b4e86c3b9efb9",
+      "statement": "Dataset sink suppress_filtered is an early-suppression optimization that should be used only when output produces exactly one version per _id, with a documented special default for full synchronization from a latest-version dataset source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L170-L174",
+          "version": "repo-lines-v1:sha256:22a3ddd0e5f466b6ad6a15446337a715c1f1311ef82d3c42515d6460415e98dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQ1YTE4ZThiNDNmYjBjZTRjMjczNTY5ZjRhNDQ4M2I3OTUyN2JmYjJlOTcyOWEyZDk0ZGE3ZTk1NThhNGVhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWU1ODJlMGExMTQ2MzcxMzZjOGI5ZDllMjkyNDA4MzRjMjk0Mjk3MTM1MTM2MmNmNjM2Yzg0NjAwMGFlYmRhYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjYwYmIzNWI5OTllZWZiZjU1MTM1YmQ2ZDk5YjNkYWM0MThlZmFkNmViMGY2YjQ5OTUyNzNhZjg0NmNkNTAwYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e85d27e82d0c4ef6b57a5235749d11fd",
+      "statement": "Hops trace uses a unique string on the last HOP_SPEC to gather maximum join-statement cardinality statistics available in pump-completed and pump-failed execution-log entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L70-L78",
+          "version": "repo-lines-v1:sha256:9405af1d05bbdadcdbd0f4e9f36164043a013c2e058e2bba5914ba9e5aaec35e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGEzZGIwODEzZDlkODZkZjRkYWUyY2EyNDI1N2MzM2ZmZmZkYjdjMTQwYmVhNTk5YWZhMjc3ZmRkNzk4OTgyMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc5YTQzMGU1YWU0M2RjOWJmZjRjMWNhYWZjZjg1MTExNjVhMjA3MDYwMTExMzVhNjU0MDk2MGNjMjViZjllMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDJkOWY5MTExNTdiMWNkYWU0ZmZlZDllYTgxMmY0M2UxODU4ZjgyZWNjNGQxM2UwOWQ3ZWE0MWM1NThjMmY4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDQ3ZmE2OGEyYTU2MGQ0MjViNGFkYjAyNDQ1MWY1YTk3ZWU4YTViOTVlNzMxMDg1NzhiZTFmYzU5YTA2YjI3ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_54d9cb56b51c40b49ee62559e3499f21",
+      "statement": "Pump execution history is stored in system:pump_execution:<pump_id>, is not a stable public application API, and exposes hops maximum-cardinality and total-row metrics, with each row potentially containing entities for several bound aliases.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L1-L13",
+          "version": "repo-lines-v1:sha256:ece7c4449f76a01e3d7e86ebd43975b694ff34b70887b423333806a8134f0251:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZmFjMDAwYzI0ZWNiMmRmYzBkZjA1MzI0ODkzZDc0OTcxZjhiNWQ4ODVlOTAxNjQwYjc1ZTZhMTA0YzA5ZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0MmVjZmIxNWRiZTkxZjQxZDViMmEzOTljYTg5NDVkOWVjZjdjYmE2MTc3ODgwYmE1ZGM0Njc3NzNkNzkzZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA5ZWI2NzQwYjJiOTAzNzgwNjljOWExNGY5YWQxMDc1MjM2NTk1YjQ1MjkyNjE1NmIwMTQzYTE1NmRmMzY4ZDMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L711-L721",
+          "version": "repo-lines-v1:sha256:a8eb2aa26f7970f1923791a44ba71e90689726517d1e932fa2e155a3054e2124:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczMzdkYmI5YmE2ZWUyZTQyNDgyYWJjODQwNDI1NzM0ZTM4ZGYxNDc5NTIzMmMyMjliZTlkYzIzZjg3YmJkYzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkOWFhY2VmYWYyMmVmMmVkNDYzMTMyMjRiZTIzODc1YmZkMjFmZDY2YWM4NzQwMDZiYTczNzg2NDY2ZDc1NGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1NzgxYmE4YTI0YWRmZjc5N2ZmZmE5NWVlOTdiYjBkYmIxNTBiYjZjMTE3Yzk1ZmJiNjdkNWQwOWU3N2NmYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0NGM3NDZhZDI5OGQzY2EzNzY3ZGZiNGQ5M2QwZTJmODk1MWMzOWIyNWNjNDRmZGFkODEzZTMxZWQ2ZjZjYzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c570f17f8532459f83e9646f540165d1",
+      "statement": "Pipe dependency_tracking count and byte thresholds inherit defaults from service metadata, log warnings at warning thresholds and fail the pump at error thresholds; excessive error limits risk memory use, and enable_hops_thresholds applies the same limits to ordinary hops and is recommended in development.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L206-L233",
+          "version": "repo-lines-v1:sha256:0ded7eb1db2773717757fab01fa3b7dd3dd5d688d6308ddebdf7c75110db967f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNTAzZjYwYWNjM2MyYmVkNDkxYTFhYzIxNGM4YzZjOWJmMDAyYjA5MmRiZDJmZTAyMzY3NDQ1Zjc0ODZkZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2OGQ1YmQ5OGRmYTFiZTdlNGY0MTQxN2MxZTQxYTZmNTU2ZDM4M2NhN2QzY2YyNmM0NzU2ZmM2MGRkMmQzYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ5ZDljNzY1NTI3NDQ0ZjQzZjAxOWMzYWMyYTk3YmY3MTM5MzlmNzNkODMwYzE3MTZkMjk4YjcxMjRhYjk5NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5ef2c2c08d2742c3838ae181916c89e9",
+      "statement": "Hopping to the pipe's own sink is discouraged; batch_size must be 1 to guarantee visibility because unflushed batch entities are invisible, and sink set_initial_offset must be onload to avoid waiting for its own population.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L60",
+          "version": "repo-lines-v1:sha256:6a70484c5f3e8b8e11c620da768637e3aa50e54aff71191506e805c2e1970f56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiN2FhOGZiYzk4YjhiYTBmNzhhNTIwYWNlZjA4ODE4ODJkNGM2NGI3OThiMWFmM2M0N2IyZjI3ZmRmMDk0N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YjQyYTM5ZDRkMTU2OGZhNDYzMTgxNDZjMjhlNzYwN2ZkM2NmNjkzNGM0ODE5NzMyNDI1MGJhMDY5ZTdhYTYifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L110-L114",
+          "version": "repo-lines-v1:sha256:8d32ec827f5f7dee45c45cd4f3852bef552101f13596fa6b3bdb4442a3e629b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJlNDE0NDRiZTBiNzM5ZDgxOGYyNWQ3Yzg3MGNjMWU3ZWE3MTU3N2RhOGViYTgzZTM0OGFhMmY1ZGFiODUyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTU4ODgyZTcyMDE3ZTA1MzhjNmUyOThmNDhjNmU3MThkYjkyYmM4ZDBmNTVjNTMwZjFiNDRjNzNiODA5ODRkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNkNDc5MjQwYjBmOTc4MzQ1ODQ1OGY0NTJmZTU1ODYzNzVhY2FiOWM4MzE0ODZjOWY2NWU1YThkODJiODY2YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM3OTJkNTdhZTJlZWNjZjFhN2ExN2ZkZWEwNDJhNzNhZjg0NjU1Zjg1ZmI0ZWRjZjU3MjEzOWYyYTg0YjJlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f01c26f0e56346bb8948173e8268230c",
+      "statement": "The documented local configuration-test workflow drains pipe queues while output pipes are disabled or unable to send externally, compares endpoint output to expected files, and uses expected/<pipe>.json plus expected/<pipe>.test.json descriptors with pipe, file, and source/before-transform/after-transform/sink stage selection, defaulting to sink.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L91",
+          "version": "repo-lines-v1:sha256:cb5714a06383fc4b8f600f642b4174c551a732bf39857e6949303f674581d519:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjExOTAwMjM3NTFhM2M5MWVlYTM2ZTUyN2UwMzRiZGRhZmNhMGY2NzFmMTE4NzY5NWViNDI3MmI4NTAxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf69a3ed34574a1c92adfdc7ebe9be83",
+      "statement": "Sesam -vv test is the documented local test command and reports missing endpoint tests or expected-versus-received output differences on failure.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a7ad4e2537ca470dab199a696aaa19ef",
+      "statement": "The local-test documentation says internal properties other than _id and _deleted are removed from comparison output, so normalized comparisons alone cannot assert markers such as _filtered.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L113-L121",
+          "version": "repo-lines-v1:sha256:95c243f019475e68797591a4e93e297c67063758f4363e381114aa886bb78a79:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTMzNTQ2OWEzNjlmYzViZjlmMGZiMzRjYTdiYWVjYWI5MjBiMTNlNTY3ZjNjZWZiYjY0MjZjMDQzYmU4YWRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZkY2NmMDJlZDk4OThjYmQ3ZjM2YjMxYTExMTA3NjczMDg4Y2U5YWRlOTdjYjk2YjRmMzNlMjc0ODMxYTMyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVhMjlkOWMyNjQ0MjdiMTE0NzE0ZThhMGQxMThhNWE3ZTdmZjUwY2Y0MDM3NmI0MmViNGIxZGMxNjdlZDU1NCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L141-L150",
+          "version": "repo-lines-v1:sha256:c2662fb7be75e233b9932769e022d534efa796261d761533d05eccaf78646003:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzNzUyMjMxOTRmMmM5ZGNkZTgyMTI0MDhhNTUwZmQzNGJmYmU3YTZiOGM0MzJjOTUwMjRhN2NlYWY2MzYwYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkOTBiMWUxZjMwZTk3ZjQ1YWRiMmY4ZmE3YmUwN2VmZmQxYjBkOGZhYzNlZTEzNDQyODNkMGI4ZGUzMDJhNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0M2Y3YjFlNWJkODM2MWI2N2RhZjFjNGZiOTU2NWMyZDFhN2JkNTU3NTAxYzY0OTRiMWZmZTJjZDgwMWJlMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_054103697d15498ebce6559a516a4e5d",
+      "statement": "Configuration CI uses a designated test node, requires serialized test runs because the Sesam client overwrites configuration, and must prevent writes to external systems, including withholding outbound secrets as a minimum safeguard.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L7-L24",
+          "version": "repo-lines-v1:sha256:2bca9d22996e089efc3c41270a559bc9639ef5c0894312477915e1887d36bdc1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5NWQ0OTIyYjgzZGRlZTFkODI2ZWNhNWFlZGYyNTUyNTVhYjZhOTlmYjljZTBhNTcwYTE4MTFlNjZmZDQ4ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzZjNhYTU3ZTRmM2M3OGRmZDVkZjRhNzQ5ODJiYjQyZTNlNmE3NDllYTlhMTgxNmU1MzkwMjgxZTgyOGNhZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MjMyOTcxYzUwMTJkZjU1ODc2MDZiOTRlMjVhOWI0Y2VlOTA4NDQ1MzUwODlkNTEyZjkzMTk5YjA0MDQwY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiZWYwNTRiMjAxMjEwNGZjNDE1ZThlMmNiNTcyYmRkMzZhYzBiYWQ4MGE4MjlmYjI5YjYzZGE2YTQ0ODZmYmIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

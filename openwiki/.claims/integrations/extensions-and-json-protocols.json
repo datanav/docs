@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:2e17dee8677819039d9c06ca98e2de33d7fa6128b5af2affabbe11d8ece7a3dd",
+  "claims": [
+    {
+      "id": "claim_864f3bbdb0f44a09975c48c086f73a12",
+      "statement": "Custom source, transform, and sink logic lives in HTTP services referenced by pipe components; URL systems connect to existing services while microservice systems also provision the adapter, without changing the role's protocol.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-transform.rst#L11-L17",
+          "version": "repo-lines-v1:sha256:69a0dac1e7c8fd20e90459a505c4a17f4b60b550c15951d612fdae64807367a2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ3YWMyMjY0MTZkNjExZDUzOTBjMGUwZGI0M2Y1OTkyZTkyM2EwYzk1NTZiNzQ5MDI0YjkxNjlmYmQ3MDZkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIyNTkwMWE5NTQ0NTEyZDRkZDU4Zjk2YTg3ZjZiYmE5YWRmYWNmODFkN2IzMGVlNmQ3YmU5YjJlMDUyNWViMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTk2OWRkYzhjNjc0YTE3MWMxOGVmMDU4MzA1ZmVjM2NmMThmMjkyOWY5Y2M4MTY2Y2YzYmIwYzRkNDBhNTMwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2FjODk4ZDVlYWM3YTUwYjk1MGZkYzJkYzFlZWU5ZmVlZDhjM2VhMjBmMDAxMjBiYmNlZDQyYWFmODk3NGUwMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L6-L14",
+          "version": "repo-lines-v1:sha256:13bd8b12ef2fd66e858e1ec1faca02cce088f2c5ecdc01b8951dae39aec606ed:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjkzZTc0MjJjMTgxYjUzNjdiOTIyNWIwZTkwMjk4NjVkNjEwZDhiYzEzYTRiNjQxZTIyNDA0NjU1OThmNjg0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MGIwNjI0OWI0MmEyYmMyNTFmNzM5ZmNlZTQ2MzY2ZWYwNWVhY2Y1N2Q4MjNkNWNmNDBiMjE2YzA0MGU4ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmU4ZTFhNWRjNzU5ZmUxNTAwZmNhN2E4NDk2OTliOGNjMGJjODkyZTIzZGQ2Yjk3MGZmYzU0MGZiZmQ1YmVmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjE1OTA1YWMwMDYyODc1Yjk4Njg2NmIxODFkNThmNDQwMzRhZjdhZTljY2E5NzFiNTcyNzc1YTQxZjA3OTFmNCJ9"
+        },
+        {
+          "resource": "repo://hub/extension-points.rst#L7-L19",
+          "version": "repo-lines-v1:sha256:686fc2c5cde95f5fff5365d60c34f6df1d2798c76e0ac0c29a2487ab4a793a38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhY2EzYzFjNDFmNmViNGY4ZDdlYTgyNGViNjI0ZmViYTMzYmVkNmFhNTk3ZmExZjk4ZDZhYmI1NDgwOTA0ZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4Y2IxOGFkMjhiYmQ5MWFiOTNmMDU1ZmQ1MWJkMWI2NWJlMzNiMmEzMGRjYzRkZTMwMGUzMmI1ODE2YTc5YWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0OTUyNzlkMzQ0MjQ0ODcxODU1NTJiZTg0YWM3ODg5NTkzNDkxNmJlMTAwMmMyMWIzZjEyNTAxY2UzYTI1ODMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmMDJjODQ0Y2I1YWU2NWI3ZjQ4Njc4OTMyZTVkZGM1ZmZiNmVmZWZhMTA4MjVmY2I2MjU2OGJkZTA3MzVmNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_26468335a1634ac1bbaea3cab2c28396",
+      "statement": "A custom JSON source retrieves entity arrays with JSON Pull GETs, while a custom JSON push sink POSTs JSON Push batches to a URL or microservice endpoint.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L14-L78",
+          "version": "repo-lines-v1:sha256:7c9ccfbc8248a65fedbdf8154702d30de0b97e5a55fa9e0945f45a5d20c166c6:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NWI0NmYyMTM0NjE0YjYwNTc1YWJiYmY4ZTZlNTcyZmUyYmE4NWYzNzdhNTU5ZWU2ZWQ3Zjg2YjBiNDUyYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4MzZkNmE0MDE2ZDA1NjBmZjI4ODNmOGI0N2IwM2QzZTRlM2QzN2ZlNjgyMjM2MDA1MjU4OWIzZDhiMDI5ZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlODIzN2UyMGI4NjAxMDkwZTNkYThlMGVhZGM0ZDM1MjYzYmU4ZjAyMDI5ZDQ1N2YwZTQyNzEwNGIxMWFkMWEifQ"
+        },
+        {
+          "resource": "repo://hub/custom-data-source.rst#L63-L108",
+          "version": "repo-lines-v1:sha256:fd8c929aa0a7dff34b7df6fe0b4bffb6d5063a0cde3936a5af1ad6cbfd627fc2:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiZGYxYjUyMTFjZGFmN2NlZGMwYTMyMTNmNDQzZmQ2Zjk1MjJhOTZmMDY1ZWNmMDcwNDg4ZDBmNWU2NTQ4NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3ZmFkYTE0MGU2NWUwNjg0ZGM1NTRmZDM3MGQyNDJhZDZkODdkN2Q4MWNkMTFhNGU1MTk0MGE3MTJkYzc4OTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhODJlYmU5ZWQ0MDdjM2E2YmE0YjAwMzQyOTJiYWE1MmMxMWNlNWFlMjg2MTA3NDAyZGU0NzkyZWVlY2FjZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmZjFkNzcwZDQwYmUzZTA0ZDI3MmQ3ZTc5NTc4YzA2OTJlY2NkMjVkOGM5ZDY0YWY4N2M0MGMxMjJkNjJjMmMifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L8-L15",
+          "version": "repo-lines-v1:sha256:ab65408abf2b4530ca1a73deb3c7678497b2af1103afae69107e1fd3ec8b4b1a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRhZTJhMTRiYzQ3Y2VmYjU2MTgxMmU3ZjNkYTNlODE1YTU4MzdkMzY2ZTk3ODdhMmM4MWVkMzUzZjRkZWJhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGYxMDc4MGM5MzAyNmU0NTg4MDA5ZDg1YWUzZDY2Y2YxMTFkZWVkNTNiNDg4ODRiNjI5ZGU1OGQ0MTZkMGE4MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQzODVjOTE3Nzg4ZDk0NjkzNzAzZDE4Zjc4MjBiZWFkNWZiZTdhNDgwODNjNDFhNDc1MjNmMDA5ODVmYWRhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODZmYzcwNmE3OTU1ZDlhNTQ1NDYxZTMzZjRmZmFmNzZmN2IxMjU5YmVkNDUzNDE5MDExZTY0MzIxOTMyMGY3OSJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L8-L16",
+          "version": "repo-lines-v1:sha256:00b08cf395905c1ae93b8a07c73a2661927ca58c418c22218eb36f90725330f5:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjNlNDk5NzExMTkyZmE4NzgyOGNiODM5OGQ4ZTg0MmI0NjlmYWI0YzkzMDU3MjUzYjhiYWU4MmM0ZjllZGE4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODc5NjA0MzY3N2IwYmJkMTdkNGZmMjQyMGM3M2IwYWM1YTFkZTkwNzg3MWE0NjI5MGFiYzc1MGE2ZmNmNTNkYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQzODVjOTE3Nzg4ZDk0NjkzNzAzZDE4Zjc4MjBiZWFkNWZiZTdhNDgwODNjNDFhNDc1MjNmMDA5ODVmYWRhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODZmYzcwNmE3OTU1ZDlhNTQ1NDYxZTMzZjRmZmFmNzZmN2IxMjU5YmVkNDUzNDE5MDExZTY0MzIxOTMyMGY3OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6aadf92853bf427f8499f6178bb0397c",
+      "statement": "The HTTP endpoint source registers /api/receivers/{pipe_id}/entities and writes incoming entities to its pipe's sink; no pump is configured and POSTs are the only way entities flow through that source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L6-L24",
+          "version": "repo-lines-v1:sha256:3242606c9f1afae4a8806354f245c8aa1c4ab9abb20dba881a5122c2544f1341:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZmYwNTZhOTkwNDM0ZDcxNjc4YTE3NjQ2YWZmYTM1ZjNmNTBhMGI1MDNkM2Q4NzViYWJiMzBiYzcyMWJhMDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhZjg1NWI3MWMwNTM5Nzc0NDRhMzQ4ZjExNzI0YzE1YmVmNTA3Nzk5MWY4MTEyNDU4MWVkNTRkYmYwMzMzZjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyNTQ5MGVhMWVhZDA0YmVjZGRiYjUyNmY2Mzc1MjM4YzJiNDhjYzUwNzY0ODlhYjBkYTA5YzZiODA4N2E1YTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBhYjZhZTNlMWMwZDZlMDk0ZGQyNWY5MTVjNTI4ZmI5MDlkZjM5MDliNGUyYmMzMDUwYjMyZjM3ZjAwNTkzYWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8fd2f2d188cf43ba83b0dcd52baa5f43",
+      "statement": "The HTTP endpoint sink registers /api/publishers/{pipe_id}/entities and has no pump; entities flow through it when clients retrieve them, using the protocol compatible with a JSON source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-http.rst#L7-L38",
+          "version": "repo-lines-v1:sha256:5fb57f3aaba5ff986cd95918eb6ae05fd2fb5bb63c10a3c4bf26a4987dfdbf23:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiMzUxYjk3NmVlMjg5Mzc2YjhjNDRhYTgwMGNhYmU3OTM2OGEzZjhkZGUyMzBjNDU4ZDVmMWU0YzA4YjY1ZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5M2Q3ODIxMWY2ZmZkODhlYmNlZTk5NmYwMDhkYjEyMDI4YjZhZWU1ZDFhYjNjZDg2Y2JhYjYwZTE0ZDUyZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjOTkwZjU0MmQzNmI1NGM0Yzk3MmRhZDdiNThjOWE3NTVkZWVlNThhNmNlN2Q5ODU1ZmE0NTE5NGYyNzRlMTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRjMzVkN2Y1MGQyZGM0YTYxNmMxNzE5MzliMjA5MWM0NWI5MzQ5NWE1YmNiZGY5MTY5NDhlNDQ2YzcwOTE4NDgifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L8-L15",
+          "version": "repo-lines-v1:sha256:ab65408abf2b4530ca1a73deb3c7678497b2af1103afae69107e1fd3ec8b4b1a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRhZTJhMTRiYzQ3Y2VmYjU2MTgxMmU3ZjNkYTNlODE1YTU4MzdkMzY2ZTk3ODdhMmM4MWVkMzUzZjRkZWJhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGYxMDc4MGM5MzAyNmU0NTg4MDA5ZDg1YWUzZDY2Y2YxMTFkZWVkNTNiNDg4ODRiNjI5ZGU1OGQ0MTZkMGE4MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQzODVjOTE3Nzg4ZDk0NjkzNzAzZDE4Zjc4MjBiZWFkNWZiZTdhNDgwODNjNDFhNDc1MjNmMDA5ODVmYWRhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODZmYzcwNmE3OTU1ZDlhNTQ1NDYxZTMzZjRmZmFmNzZmN2IxMjU5YmVkNDUzNDE5MDExZTY0MzIxOTMyMGY3OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a3e76e729cbd4f8e8279d5aff8763a67",
+      "statement": "Publisher URL query parameters are bound to the DTL variable _B, allowing publisher transforms to use request-specific values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-http.rst#L40-L42",
+          "version": "repo-lines-v1:sha256:bbff73f0393ad2e6d2d0eed7dcf67b00578a06a8dd488110defc56706ae44d07:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODY1NGVmZDU3OGY5MDM3ZDZiMTU3NDkwN2FmMjNlOGIzOTE2M2M2YzVmN2E3OGVjZDNlNDJhNWQ1ZTQzY2E5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk1ZGVlMWQ2OTY5YjAzZjM5ODY3NjJmZjA3MWU4NmE4ZDNiMDQ1ZTY0YTk0NDgzMTFiNGZhMTA5NGMxZDA1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM0MGE2ZGU4YzA1MzkxZTMyYTAzZTY3NjQ2MDE2YTIzNDdlMTk2ZjQ2ODRiYWYyZGYyYjZiZjc2ZDZkN2YzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjIyNTI4YjBmMzFlOTc3ZjJmZDc2Y2JiYjlmZTUxYjBiY2NlZTE0Y2FkNTE2ODViZTBmMjQ5NjIxOTIxNGJiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c65c14e011364a2f9c25c084cf5fe372",
+      "statement": "Dataset entity reads at /api/datasets/{dataset_id}/entities support JSON Pull, including indexed subset retrieval.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L343-L396",
+          "version": "repo-lines-v1:sha256:a2d6b01030ee5f5dc4d291a7ec4a322f76183825ba1a2e6e1422f307dcbe68a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzN2JlYzQ5MDk3N2U3NjYzY2JiYTkyODNjODc2NzI5YjBkNGZmZjA1NjQ5ZjBhMDgzMjUzN2NkOGNjYmZiYWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1Nzg0Y2FlMDU3ODVkOTI2MGZmZDRhNzA5ZGQ4NTFmYTJmNTM3ZjU5NWVjOTM3MWEzYzEzYzMzNjVmZDk0OTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMGYwNTIxMmI5MDBlZjUxMzI1ZWQ4ODFjNmI3NWE4Y2NiM2FmN2NkYmZjZGNlMmQ5YWVhNjEyMTA0MGQ1YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1NzNjYWM2MTZkYjBjOGU4MDYyMDAzODcyNDU5MmEwN2MyYTA4Yzg3NzlmYTM2OGRhZTI3Mzc3ZDU2ZjhiMDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8b31e9ef919a4cac97aa29fe4f489b57",
+      "statement": "URL systems represent remote HTTP/HTTPS servers and supply session handling, connection pooling, and authentication; a custom source service may run anywhere reachable over HTTP from Sesam.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L63-L64",
+          "version": "repo-lines-v1:sha256:7c665ae9f310342131e415ed747a1e2009f44efee5cc81f4e6ba12949a157191:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWJkZjFiNTIxMWNkYWY3Y2VkYzBhMzIxM2Y0NDNmZDZmOTUyMmE5NmYwNjVlY2YwNzA0ODhkMGY1ZTY1NDg1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcxZDVjYmFjOTQwZjg0ZDliODI5NzJlN2EyYjI0YTRlMTBjZDgwYzk0ODE1YjVlYzRmNTM0YjM3ZDg1OGJhNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWE4MmViZTllZDQwN2MzYTZiYTRiMDAzNDI5MmJhYTUyYzExY2U1YWUyODYxMDc0MDJkZTQ3OTJlZWVjYWNmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjEzZDc0OTRiOGI5OGJiOGUxOTZmMzYxZjQyNzViZmUwNWZiMTFjOTI1NzJiMWIxYmU3MzNhZTg5NGE1NjE1YiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L6-L9",
+          "version": "repo-lines-v1:sha256:e99ce376b340573badc32d907dd59f0d30dbefcd445fe5daf959363ae249e813:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDlhMzlmYjdhMWI4MGJhNmQ0OWYwZTViYmNjYjNlNDgxNzAwNGIwZmZhODE0NjYyNmVlY2JiNzhiOTI2MzVhMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDIxMjJlYmJhM2NhYWEwYzA1MTI4ZDhjOWQ1MGY3OWI0NTM0Y2Y1MjkzZTY4YmMyOTE3OGY2OTUwM2VmZDk3MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDk0Yzk4Mjg4M2U2YzYxOGY5ZmYyMGE0MzU3NTM5ZWViNTE4YmExYzViNjQ4ZTM0MjI2YTE4YzMwMTA1N2E4NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2RiZjhhYTMxYWI2ZWVkNWM5ZGIxMzM5NDNlMzdiOTM1Njc3YWM1MTczNTlhYmY5NzQ5MjM0NjljOTEyYmMzOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_dec94b670a7a42638f0945bc54d6893e",
+      "statement": "URL system url_pattern substitutes relative URLs at %s, or appends them when %s is absent; base_url is deprecated and exactly one of base_url and url_pattern must be configured.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L216-L216",
+          "version": "repo-lines-v1:sha256:98c3b908373f4aa22b63ec7480086686f1d61761a861036b427e11b1445f0420:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOThjM2I5MDgzNzNmNGFhMjJiNjNlYzc0ODAwODY2ODZmMWQ2MTc2MWE4NjEwMzZiNDI3ZTExYjE0NDVmMDQyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOThjM2I5MDgzNzNmNGFhMjJiNjNlYzc0ODAwODY2ODZmMWQ2MTc2MWE4NjEwMzZiNDI3ZTExYjE0NDVmMDQyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTIxMTUzMWYxOTZhY2NhZjAyYzEwYjc2YWMwNjg2NTQzZmY1NzJjZTIxYzMxNTg2NWZiYzJiODg3YWRlN2NhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGQyNGI2NTllMTQyYWUxMjIyYzgyNGZjZTVhMjFlNDdkOGY0MGQ3MjU5NjQ5NmUzNzE2YjExNmJiMTM1ZGMxMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L74-L82",
+          "version": "repo-lines-v1:sha256:47846e0ab98117917dbb3368dca23fb6311f4f7fd63ff69a976ac0140c137f80:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODNiYTAyYjBjMDI3YmZmYzA3YjZhYTJjMWJjODdmYjI2N2QwZTNiMmIxNDIwZjQ2YmY1MDhhNzYyMGM0MTdjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzdiNDlmNjBkMWQyYTVmMjEzMjVhNGZiN2ZhNWI3MDY4YWE5MTQ1MTkyZTYwMTdkM2M1ZjMzOWM4NDZlZWUyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_57c87b34e96940e487aaf0e4f3196c7c",
+      "statement": "REST systems extend URL systems with named HTTP operations and mapping configuration; REST components are recommended for non-Sesam APIs, and REST sources support body or link-header pagination and continuation in query parameters or headers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-json.rst#L14-L15",
+          "version": "repo-lines-v1:sha256:57b99e0653a236515636870fb25759653d9448c0bb5a30cd1db83c1fb066b850:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTEzMTAxZTZkYzg0YWE3N2VmODM0MmVhMmQ1Zjk3MGM5YWM1NTg2NWNkNzY0Mzc4NGMyZDM4M2FmZmY0YmQzMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDIxMTJkZjJlYjU4YTI4ZjE4MTc1NGMwOGZjNmZmYjNiOTMwMGEzMGQxYTk5MWRiNTc0NzUyNmIwYTEwODQ2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTBkNTVmZjAyMjdhM2I0M2ZiOWZjZjMxNmFkM2MyYjE2ZGRkNDg1NmMyY2FlOTkwZjJkMmI1ODNmODg0N2U2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYyZjU2MzNlN2ZhMmY3ZmVkNzM5YTQ2NmQwMzI1NGRhNzExNjA2ZmY0MGEyMWJjYjJkMzEwZjBkZjNlMTY2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L7-L12",
+          "version": "repo-lines-v1:sha256:913501ed898483938895666ade2c7881e80157c7b4717b79591074747d87f16e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmZhYTg4ZjNkZDE1ZjhhNzQyZmMwY2E2MGYwN2U5NDRmMmU0MmIzMTViNmVmYzBmZDMwMTQ5OTE3ODA2YzA0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTM3NGI4ZDNiYzk4YWZmYjczYjE4MTEyZjU5N2Q4NGU2M2M3ZmY4OGIzYWFkZTAwNjhmODE3NTUzMjAyNGNjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI5MTMwZWVmNmRiZDk0ZWM3NGI0YzU2MTVmODg5NmI5YTMyODQ1NGYxNzEyNzQyZDEwNDY5NzdkNDgxNTdlNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWUxZjc0N2E0ZWM2OTUxMDc5MTNlZjU3YmZiZTM2NzkxM2I5MGI4MjliMDBhNDYxZDhjN2E3ZWQwMmM3M2UyNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-rest.rst#L6-L9",
+          "version": "repo-lines-v1:sha256:862f64ba0dcf1658079f4ffa12dcde3ff854d77c6af303a29436d66ab994a686:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTYyMDEyMTY2YThjYzc1OGFjMTM5YzA2NTRiM2YwM2Q4MTljNjA2Y2RmODM5ZjhmOTkxZWQyZGViMjQxMTkzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDBiZDdkMWZmZTc4MTA3Y2JkMmJhNWI1NzA5NDdiZmY4YzBmOGJiZTBkNjA0YTg1Nzc3ODhhNzIwZTljZWY0NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTk4ODRjNmU3YmMxNjQ3NGEwYzM2MmQyZDAyNzZjMjc0Y2Y5ZjlmOWE0OGI3OWZlOWYwZmU4Mjc5NTIwYmQ5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGE2Y2U2MzE5MGIzNTE5OTU3OWEyNzRkZWU2OTdkNDcwMGYyZDcyZWFmNjEzNGNiNTg5MDE3MDUwMWE0MWUyMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-http.rst#L21-L21",
+          "version": "repo-lines-v1:sha256:fa1bc4b2af4f1788adae0ee972d2191c1d5fb330025d9ac362fd0aa9772f51d9:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmExYmM0YjJhZjRmMTc4OGFkYWUwZWU5NzJkMjE5MWMxZDVmYjMzMDAyNWQ5YWMzNjJmZDBhYTk3NzJmNTFkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmExYmM0YjJhZjRmMTc4OGFkYWUwZWU5NzJkMjE5MWMxZDVmYjMzMDAyNWQ5YWMzNjJmZDBhYTk3NzJmNTFkOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzgwZWFlMjgyOGFmYzU1MDcyMTViNjY1MDYzMzhiMjc2MDc2M2ZmOGE4MTQ4M2YwN2UyZDU3NzhiNmZkYWE0YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-rest.rst#L44-L83",
+          "version": "repo-lines-v1:sha256:3a8b71f54ef6c0acfb55c4efdf666c5f796e87f73c1dea888be212551d094105:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkZjFjYjhlY2RkNjEyNzdiOWJhNTU4ODEwMjEwYTUyOTU1NjY3MWRmMDE1ZWRkZTAyYTI1Y2UxZGU1OTIyYmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYjg4ZTQ4ZWY1YWUxZDY0MDE0NjM0NmRhYzM0YzA2MWIwOGI3ZGZlNTgwM2Q0ZWY0YjMyYTkzN2IyYzQ0ODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3MjVjNjVhZTJmMmYzODc3ZWJmMjczYmU3NWZiMTMyNWYwMDYyMWJmMjE5OGFiNDViYjVkMzUxNDhhMDFjMzYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-rest.rst#L6-L16",
+          "version": "repo-lines-v1:sha256:3b15c042c198bb110faf27b8c5570c99aea7ab59e86d74c71c6873042505ed26:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNGZmN2JmMWQ2NGQ1MDI0ZjU4NzA2MzE2MTEzOWIxNmE2ZjY5ZTdhNmQ5OWMwYjkwYzg1NTQ5MDUzNzBlY2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyNWU3YzFkOTdmZWFkMjYxZWI4NjI3NTk4MzgwYmU0NGU4NTUzNzA0OGRmZmE5YzEzMjQ5YmZjMDRjZmQ5MWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzODVlY2E0MjYxNDlkN2FhZTIyN2YwZDY2NjA5OTA4YzVkNmQ5ODhiOThlY2FlYjg2MTk3ZjZiOGMyM2I2NjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTNjYzhmYjIxNWQzNDU5ODA0ZWQ0MTM5ZjhlMjIxZjRjZWFjN2I4NDNmODk1OGI5ZmI4YjQwZDc1ZTRjYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2eb93fa1ffa04a1b926b6f90d400592c",
+      "statement": "REST operations may be defined on the system or source, sink, or transform, with component definitions taking precedence; secret-bearing operation definitions must be on the system.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-rest.rst#L71-L79",
+          "version": "repo-lines-v1:sha256:4166af129fb688d46b7e0af237d0913a9353eb53dc411446a5c4afa3b6984489:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzMyMWZmMGQwMThlZjBjNmRhN2YxMzUxMmVhOTdiODE2MTE5NzEzZjhmMzBlY2Y4Yzc2MTJmODZmNDJkNzAzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2RkZDRkZGZkNTkyYzYxNTAxOTJmYzU2MzM1MDA2MDM3YTM5NzhmOWQxZjM0MDJhZTUyZWYxOWY2ODk4N2NhYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-rest.rst#L114-L119",
+          "version": "repo-lines-v1:sha256:9a07a6e06006a9d1e9cd524d7e48e3c41447735569c601f68cf32d7991a61a46:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzMyMWZmMGQwMThlZjBjNmRhN2YxMzUxMmVhOTdiODE2MTE5NzEzZjhmMzBlY2Y4Yzc2MTJmODZmNDJkNzAzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjAzMDBhM2I3ZDg0MWI5OTRhYmU3ZTU4Y2E4YTY3YmUwZWU3YzRjNDk3NThmNTczMTQ4MWI2NmJhN2FlNjllMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7e203e0bbf424241bd1cd246875510b1",
+      "statement": "JSON Pull and JSON Push specify array bodies even for one entity; the Sesam HTTP receiver additionally accepts a single JSON object and requires Content-Type application/json.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L32-L41",
+          "version": "repo-lines-v1:sha256:9b91256732df377edc2e8b234f7d02da3d10adc7179f28c833810b573e7b51a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4NTE5YTA1YWZiZTIzZTdiNWYzYzEwYmZhZDczYjBlYjhhMDg4MzgyNTJiMmQyMGNiYmU2NmM3YzJhNzViNjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhOGE1YmNlZTcxMDMxZDJlYTYxNjY2MWJmOTkzZDgzNTkyNmI4YjhmMGJlY2I0ZTQwZGExMGIxNzRlZGNkZjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiMTMzNGFlZGI0NTY1M2UwMzYwY2Q3ZjBiMjhlMTdkN2VjNTMxZWRiYTlhMDk1NjJiOTRlMmVkZDRjNmRiNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjNDgwMWVlYzY2NTYxNDVkNzIyYWJiYTZjNDk5NGY2MWRhNGMyY2M0YTMzZjExYmRlY2I1MjliMWM3ZGE3ZTQifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L59-L62",
+          "version": "repo-lines-v1:sha256:26a1a66abcd54864ec92ca9418adb01e507ab3c043453907ddc0c8cb09af0f3a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI1ZTc4MjY2ODA1MWM3NTZmOGJhYTA0Y2NkZDNmZGQzOGEzODA0YTlmYTE4NDZkNmJhOTkwOTgwZTU1YWYwMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYzNThkYTE3YjhlOTA5ZTM3NDllYThmYjFlNTQ0ZjFkOTIwZDJjNmY3ZTAxMTNhNGI3MDMyYjUzNGIwN2JhMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWI0OGI1NGNhZGQ4MTRmZTkzMTdmYjRjYWM1YmE3NjI1NGE4NzRiNTA3ZTRjNDZjMzBmZGQ1ZjMwZDNiNWUzMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjg1Y2E4OTViNzZlYTJiNmI1NTMxMDA0YzcyM2EwNDc0MGFkMjFiNWI2ZWY2MWY3YzhiMmQ0YjcyOTdlZGQxOSJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L56-L59",
+          "version": "repo-lines-v1:sha256:26a1a66abcd54864ec92ca9418adb01e507ab3c043453907ddc0c8cb09af0f3a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI1ZTc4MjY2ODA1MWM3NTZmOGJhYTA0Y2NkZDNmZGQzOGEzODA0YTlmYTE4NDZkNmJhOTkwOTgwZTU1YWYwMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYzNThkYTE3YjhlOTA5ZTM3NDllYThmYjFlNTQ0ZjFkOTIwZDJjNmY3ZTAxMTNhNGI3MDMyYjUzNGIwN2JhMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FjYWQxODRlNmQzMDZiNmE5Y2NjYjgwMzk3ZTM1YjAxM2M4ZDdkNGEzZjVhNWE1YzMyMGU2ZmQ0YTE3ZmI0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzdiMTMzN2NlMDNiYTYxOWRmMjY5MDQ2MGM0NDRlOGQ3MmNhODA4MTMxNmMxZTk5ZDlkNGUwZmMzMTY3ZmE5OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_212ef890b58c42e8a463209c5568085a",
+      "statement": "Entities are string-keyed dictionaries with literal, list, or dictionary values, and require a string _id unique to a logical entity within a flow, while multiple versions may share that identity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L61-L64",
+          "version": "repo-lines-v1:sha256:9391fcabe00f85ec80ced902e72cdf4fca38f1b03a20e3d9c7da0942c51e47e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTExNzk5MmYyZDhkYzU5Yzk1YjBhZWEwNTQ5NzBhN2U3Y2ExZWZmY2NmZGE4ODczOWFkNzBiMzIzNDdiMWYwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDEyZTY1ODQ0ZDZkNDEwZjc5OGUyOGFiMWJhMjNlNWY4N2FlNjEwNWQwYTJjYmMwNDNmOGRkNjg3OGEyMDIyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDY1ODY3MTg5ZGQyMDRmYjU3MjM1M2M3NzNmNWJlMjQ2YmYyNjlhNDEzYjY0ZDlhMDI0N2YyNDE4YjVhNzMyNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L7-L7",
+          "version": "repo-lines-v1:sha256:2d763bc20df5f8b2dd34c995a180ee6785dd8e85f083ed9ad9b45d385c0e057a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ3NjNiYzIwZGY1ZjhiMmRkMzRjOTk1YTE4MGVlNjc4NWRkOGU4NWYwODNlZDlhZDliNDVkMzg1YzBlMDU3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ3NjNiYzIwZGY1ZjhiMmRkMzRjOTk1YTE4MGVlNjc4NWRkOGU4NWYwODNlZDlhZDliNDVkMzg1YzBlMDU3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTAyNjE3Y2U5YTUxYzNiMmE3YWRkZWZmMmZlNmY0NThjNGU2ZGNkZGE3NGVhZTNkNzMzNGQ3MDJlNGY0ODJiNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDdiMzk3NzA5MmM0MDA3NmQxODAzYjUyZTM5MDQ3MmQzYzVlYTgwOWVhNDNiYmFmZGEwMjVmYThkN2JmYmI0YiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L6-L12",
+          "version": "repo-lines-v1:sha256:757bdd56d4a14110d293f7d0fad47fcb06ecd8ae5f22c83656806e730bae5afa:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDQwOWE0MGY0NDk2ZDdkNmFlYjllNjkyYTFhNmVhMzIwMzAyMTYxMjg1MjdmYzM1OThhZjMxNGVjMjAyZmYxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg2NmVhY2RlOTE4MzAzODY1MDFhOWM1YTViZjYwMDg4ZmM5MTBhZTYyZjAyYWVjODViODhiOWE3YmFjNzBkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGI5MmYxOTU1YjZjMmFkNDUzNmY1ZTRhNTU0MDk0M2M1OGI1YWM4Njg4MGQ0YTNmY2I0ZDE3N2NhMTc3OTBhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE5NTBlZGE4Y2MwZWYyMGU0MWJlMGM4ZDAzYTg2YmYzODc5NzJmYWQxMzllMzhlZjhiNzBlODQzMGFlMTcyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e6e8180d38824cd0a0d0b5ce6da2c971",
+      "statement": "A source entity may omit _deleted, defaulting to not deleted; Boolean true marks it deleted, and the entity model interprets other values as not deleted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L18-L22",
+          "version": "repo-lines-v1:sha256:883588cf38265811acbb393ac5fdb6779b52f6a3255d48c48d21e061f654124a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWE0NTQxNDI5MGFiYjgyMGRhMmJlY2U4N2QxODIxMzEwNjE1OWVhOTcwODA4OGY0NjJlN2NkNjFiODQ0ZTdkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc0NGVhOTI2YmY4NGIxOTY3MTc0MDcyYzEzYTdmNTJhYzZkYTc5NDM4ZDBkYTA3ZTE3N2I4NDcyOThlODhlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmIzMDYzZDcyZDQzMzU2Yzc4OTc2NjQwMjI5ODE5NThhNzE0MGJlZmVjNWI0NGJjNTAwOGNlNmYzZjdmN2VjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2MwMjEwMjExNmRhMDFkNWFhOTZmYmNjNmZhNDRkMzNmY2VmNmJjODk2YmE4NWMwMzJkNWE5ZTZkZWRhYjQzNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L66-L69",
+          "version": "repo-lines-v1:sha256:a574df90b87759a646d3776fab95d9f0c53e2c4b71acb987d9c0f0aacbff3ffc:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdmZmE2MzUxNzAzYjlmMWVhYzJmOTM2NGY4OTEwZTdkZDI3NDVkNGNjMjdkMDA4ZjA4YThiNjk2MzA2NmNhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmRkYWVkNWYyOWI4MzM3MjA3ZjMxNDViZDEyMmI2ZGNiZjQwZDM0OGE4MDQ2NmI4OGM3YjMwNzMwYzE0ZTAxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzY3MTUxN2RmMzI5YTlkNTA0NjE5ODRhM2Q1MzcwMGZkNzBhZDdmZWJiMGViNzgwNmE5ZDllYWY1NTAzOTdhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTdhZDc1OWZmNmQzYjA4N2RmZTcyOWZjNmNjZmU2OWQ3Y2VhYmJmZDZmYWQ0NmY0N2YxN2IyZGY4YjM0OGUyNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e2a413d66d834c5a92b3cbbef9b984c0",
+      "statement": "An entity's _updated marker must be a string or integer, is opaque to parties other than the producing source, and can be passed back as the since query parameter for continuation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L72-L79",
+          "version": "repo-lines-v1:sha256:ef9d11140cd9b18c16ebd5ffe115f213641977af53a37431b7c1eb326143301e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhkYmQwMTk5MmQ2ZDhmNjRjNjRlYjEyMzg2NzkyYjJhMmYwMjlhYTBmYjNkNWU1OGE1ZTdlNDc3MTQ1YTZiMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkNWRkODMyNDM0MTEyNTA1YTlhZTRkMTAyY2I2NWFmNDMyMWIxMmI5YTVjZmQ2N2Y1MWRlNjIyYmM4MDA0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIxYzBjYTdmYjRkYWFhYmNjZTlhZWQ0NTY1N2MxMTQ5YjUyZTk5MDJlOWU2OWEzNjc0ZDZmMTE5MTYxYzZkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUxN2E4Y2QxNGIzOTM3YjEwODgyMDkzMGI2OTllNTg1ZGRjNjY5MmE4MzYyMWJjNWM0ZDAwMGE5MDYzNjczZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L60-L65",
+          "version": "repo-lines-v1:sha256:a2de7b6c3c045ecd1e9a7138ef6df9488ded34f74457580034ae2b98a312b20c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjJhNDBkYjIxZWU2OWRmNWU2MjY0ZTVkZTEyMWZlZWMyZTFiODQwZTI1OWZjZjI3Y2M2ZWQ0ZmI4NGFjYTA4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjBjNWY4YTQyOGEzZGM4NjRkNDdmZWVjMmM3YmQzMjg4NTBjMzg4YzQ0NTQ0YWY3Mjc4MjlhMWQ0MGYxYTQwMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzkyNGQzZTllYTIxMTI0ZjhmYzdiNDRkNDM3ODBkMTYxODNjNjI3NGZjNzJjYjU3MDVmMmFlOTM5YmMxN2U1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBkZDdlN2YyMWQwYTExN2UyNjBjZDg5NjA1NzMzYWJkZjg1YTJiNThhY2ZiMTdhNmViNDRhZDhmM2EzMjZlNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7146ed708b384a77af7a7b5fc051bcfa",
+      "statement": "Root-level underscore-prefixed fields are reserved and, except for _id and _deleted, are ignored as stored input when writing to a dataset; nested child dictionaries are exempt, and source _updated is still usable for continuation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L18-L22",
+          "version": "repo-lines-v1:sha256:883588cf38265811acbb393ac5fdb6779b52f6a3255d48c48d21e061f654124a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWE0NTQxNDI5MGFiYjgyMGRhMmJlY2U4N2QxODIxMzEwNjE1OWVhOTcwODA4OGY0NjJlN2NkNjFiODQ0ZTdkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc0NGVhOTI2YmY4NGIxOTY3MTc0MDcyYzEzYTdmNTJhYzZkYTc5NDM4ZDBkYTA3ZTE3N2I4NDcyOThlODhlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmIzMDYzZDcyZDQzMzU2Yzc4OTc2NjQwMjI5ODE5NThhNzE0MGJlZmVjNWI0NGJjNTAwOGNlNmYzZjdmN2VjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2MwMjEwMjExNmRhMDFkNWFhOTZmYmNjNmZhNDRkMzNmY2VmNmJjODk2YmE4NWMwMzJkNWE5ZTZkZWRhYjQzNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L44-L49",
+          "version": "repo-lines-v1:sha256:e237ceeb7a0e7bc6a6be80b995f72704b772bdcd7468683a681b773ae4579c40:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg2ODVhMGJlMWZlNWZhZTQyMDRlZGEzZTZhNWVkMjMwN2ExNTRhZTNiMmZlNWMxYWRjNzFiMjgwYTRmYzJmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFhOGE4YWE2M2NhZWUyMTg2MzVjYzFkMWYzMWQxMGRmYWU0ZjRjYTBmNjVkZTJhMWZkMzRlNDg3MzEyMTA0ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgxY2E3Mzk4ODk4MDJjMThmZDM3MjVjM2NlZWJkZDU3OTY3MGIxYmM5YTFjYzJkZDI5MTBhZjY2N2MyODRhNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQ0NTBmZmE4ZmRlMzQyMDcwYmViYzNmNmNhYzk3YWFjNzY4ZjU1YjQ1ODM0M2MyZDJjMWRjYTQxMjU2ZTFkMSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L60-L65",
+          "version": "repo-lines-v1:sha256:a2de7b6c3c045ecd1e9a7138ef6df9488ded34f74457580034ae2b98a312b20c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjJhNDBkYjIxZWU2OWRmNWU2MjY0ZTVkZTEyMWZlZWMyZTFiODQwZTI1OWZjZjI3Y2M2ZWQ0ZmI4NGFjYTA4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjBjNWY4YTQyOGEzZGM4NjRkNDdmZWVjMmM3YmQzMjg4NTBjMzg4YzQ0NTQ0YWY3Mjc4MjlhMWQ0MGYxYTQwMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzkyNGQzZTllYTIxMTI0ZjhmYzdiNDRkNDM3ODBkMTYxODNjNjI3NGZjNzJjYjU3MDVmMmFlOTM5YmMxN2U1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTBkZDdlN2YyMWQwYTExN2UyNjBjZDg5NjA1NzMzYWJkZjg1YTJiNThhY2ZiMTdhNmViNDRhZDhmM2EzMjZlNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d5024c9c8edc4ef28909269cc33dc88b",
+      "statement": "Exported dataset entities contain generated metadata such as _updated, _hash, _previous, and _ts; JSON push sinks include reserved fields, so target adapters may need to remove metadata while interpreting _deleted as a deletion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L87-L89",
+          "version": "repo-lines-v1:sha256:ccbf5082877c835b23177c28e33cbc6451fbe86750621c5f1131038a20100a5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY4ZDZhZTNiZDZkZWYxODEzOGJlM2EzOGM2NzJlZjhkOWNiNDMyNGM5NWI0ZWJkZjU4YjQ0MTM4ODJkMDRhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ4YmU0ZWExMTg1MjZlODZhMjJiZjMyOTEwNzY0NDZmNWIxZTIwNWI4NDk1ZWJkNmY0NjkzMTRjMzk4Njk3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmQ5NWYxYmM5MjY4MTNmZWQ2MDc3NTRjYzViYzJkZmU1MDllMDkzMmMxZmFkMjM5MjI0MTFiZjJlMjhiMjBhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZkN2IxMDMwOWE1OGZlZTczZmZiY2ZkNGQwMGE1NDBhNGQ0Y2UwNjNhZjIzNTIwYTRlNTY4MjhjZGM4ZThlMCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L72-L110",
+          "version": "repo-lines-v1:sha256:18c32fa650af9e348cc9deeff3cf66239382020b37aa44698902ee25894fe6a3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4ZGJkMDE5OTJkNmQ4ZjY0YzY0ZWIxMjM4Njc5MmIyYTJmMDI5YWEwZmIzZDVlNThhNWU3ZTQ3NzE0NWE2YjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmZjk5MjRkMWQ4MTRkOTJmYTVjN2E3NTc3NDdkMWU1MDRjZTdmOTZmMTVlYzY3ZjhlMzEyNmYzNzM1MDM2MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRiMWMwY2E3ZmI0ZGFhYWJjY2U5YWVkNDU2NTdjMTE0OWI1MmU5OTAyZTllNjlhMzY3NGQ2ZjExOTE2MWM2ZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ3ZTQ4ZmJkNWI2MmUyNzY4NzgyYjUxNzA0OTBkYjVkYjBiMjRjMTY4NWM1YTg4MzI3ZGMxZDdmN2U2OTBiNzEifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L181-L230",
+          "version": "repo-lines-v1:sha256:286518f5d7e84f88a6b7982286c65b161e7374537c130c4616a0bc1813b05755:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyYmYzZjZkYzY0ZTAyMzg0OGJhYTIyNDRjYTFlZTc5YjI2OWMxYzYwNjM1ODQxNDQ2MmFkMDViMTdlNDA3NDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk1ZGI4YzZiOTc0ZTNjYzg0NTM5MzQ4ZjIxNmI3YTkzMmI4ZDI1NDJmODBlNGIyNjU3YzkwNWNhMGEyZDQwMzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4NDI3OTc5YzY1YjRjNDA2NmY0Y2Q1MjQ2ZDNmNmYxNDhiYjE1NGM5Y2I0OGI0MjYzMDljMmMzNDAxNjRhNDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_484d5fac6e76449587730ce0f5f49e06",
+      "statement": "Sesam's JSON extension types use Transit-style strings: ~: for namespaced identifiers, ~r for URI, ~t for Date and Datetime, ~b for base64 Bytes, ~u for hexadecimal UUID, and ~f for arbitrary-precision Decimal.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L249-L298",
+          "version": "repo-lines-v1:sha256:427208eaa5ea5c46f134481d03b4e33a9d10ac4065d01322b38bc8cae5e6e9f5:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMGQ5YWE5M2RjYTE2ZjVjYzYxNDk0NGFjN2E3MjJjZTUyMTM5YzM2MDNhY2I3YzMyNzY4NWRhMjU2NDNlMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjNzBkNTBjMmYzYTc5NTgwNmJlODZjODA0MTc2ZmI5MDEyOWM0ZjQ0NDIxMWNmMDM5MjI3NTM4YTdiMjEzMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNWY3OTExMjE1ZDk5ODNlZmM2OTlhNTI3ZWExMDEzZjY0OTRkMDA5YTZiYzNjZTBkOWJiY2IxNDU3NWU2MTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1MzgzMDViZWJmZThhZTVkMjQ5OTgzZGNlNjljMTVmN2UyNzQ5OTYwNGM0ZGQ4OTY1NDYxMDRkNjcxNGRkNmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ecefb75216ac42d7b362dd8748ef9275",
+      "statement": "Unrecognized Transit tags are treated as strings, and the entity-model documentation states there is no escape support for literal strings beginning with ~.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L249-L256",
+          "version": "repo-lines-v1:sha256:4421b579035b9daec3681f206b96c3acb10bcd450ff9e91d32ea887a4d8e96cb:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIwZDlhYTkzZGNhMTZmNWNjNjE0OTQ0YWM3YTcyMmNlNTIxMzljMzYwM2FjYjdjMzI3Njg1ZGEyNTY0M2UyMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDk3MTYxZDRkMmIyNjJmMDFmZDY4YjZhMWQ1NTM2YjdmY2ViYmY4YzY1MDhlZWY1Mzk1YWY2NmNjMzlmYjQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjA1Zjc5MTEyMTVkOTk4M2VmYzY5OWE1MjdlYTEwMTNmNjQ5NGQwMDlhNmJjM2NlMGQ5YmJjYjE0NTc1ZTYxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ecd47883f9004d52bdbb2318e5fa2cf5",
+      "statement": "Transit Datetime values require date and time in UTC with a final Z and support optional fractions with up to nanosecond precision.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L280-L286",
+          "version": "repo-lines-v1:sha256:dce7192fc9adbed9ff95a8c7551139ad0f1399af541afc11727d038456f48427:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBiZTc3NzVhZTQ0NzU2NTIyMWIzODc3MjkxOTczYTBkMWU1MGFhNDZhNmM0Y2M1YWJhNjJkYmM0Nzg4YjdjNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZkZmI2NWRjZWI5ZTdiNTBkZTJhZTg1ZDkzZmQ1YmQwMjI4ODRiZjkwYWFiNGE5ZmRiYjExNDYyMmYwMjJiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTIzNTQ5ZDNkMzUyZDhmNGE1M2M5ZGYwYmQxMzJjMmEwMTU5MTU2NTQyMWM0YjIyZmQ1MTE5NGM1MThlOGQ5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2IwZWVkODVjNWQwODMxMmQ0NTJjYjcyMWZmMmI5ZGQ2NjgyODFjYWY1N2RlY2Q1MGMwZGQ0MjVlNjI2NWJjMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_75c0f3df01a44f4eaf8953bc24b9ca6a",
+      "statement": "Decimal values have arbitrary precision while Float values use IEEE 754 binary64 and may lose precision; HTTP receivers default do_float_as_decimal and do_float_as_int to true, converting fractional numbers to Decimal and zero-fraction numbers to Integer.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L223-L234",
+          "version": "repo-lines-v1:sha256:9396ffa52c4d51f4e49ce4880c12d07c1522765ee1a2ad1c26a64b3a7d021eb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1ODY2NTVkZjc4NDNiNWMxMDQxMGYwZjAwZGZmMzhhYjk0ZTQ1MTEwNDkwNDYwM2M2ZjI4YmY2OGE4ZDYwMzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyY2VkODc2Mzk0M2FhNWJlOWRhMGQxNjQ1ZTRjYTEzNzQ0ZjcyNzBkOWQxYTdlM2UwM2RkNzIyZjZmZWQwZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1ZjhmNTRhY2Y4NmE3ZDY1YzMzMjYyYzgyNWQ1ZTRhNGI3MWQ3ZWY2ZWNhOThiMjlhYzRmYTZjMDUzODMzMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwZDJmZTAxY2RjODg1NWYyNzVjNWJjZDg5ZGNlZTJmY2RiNjUyMjI5ZDJlOGE1ZDM3YmQzNGY3ODgyODE5OTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L90-L103",
+          "version": "repo-lines-v1:sha256:73c69bbab75bc3e30027d796439f0ed07c3295a1fb09ab025eb7a98dec33e991:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MTBjZTU4NjAwMWQ0MTBlZTQwZTdiMWM4MTBlMjgwMTMzNDhhNTdmMTQ5MjBiZDkzM2NkYTcxMGQzN2RlODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMmYzYjhlODgwMmQzNGUwMTRlZDk2Y2E0NjQzODk3MzRiOGQyMWM4YTI3N2FhNWE2ODBmMGY0ZTUwMDE1MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMwNGIyYjM4MzQ5MTIxNDNkMGIxNmUwNjIyNjdjNDJjMTQxZWI4ZjZhMzQ1OWViMDczM2VkYjQ2M2RmMjgxYjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_43754e76b4c4444d826309caeab6a296",
+      "statement": "JSON Pull since requests entities after the _updated token supplied, omitting since requests the beginning, and ordered-stream continuation can use the last returned entity's marker; the documented since=21 example begins at offset 22.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L236-L280",
+          "version": "repo-lines-v1:sha256:7904ede179c4b8e414cc161dd17897c04966444a43fb31d14d28ce744b33eace:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNmYwZjViOTU1NjgxMWNkNmQyN2I2OWRkZDI3NTlhNzliMWM3ODI3NzYzMmVhZGM4MzE5YTEyMjI4MDRjZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlYmMwYzEwOGZjYjFiZjNiZGE5ZTlkNjgzNGQ4NTlhMjM3ODNkZjlmZDVlMmExODY1MjIzMjFkNmQyYTRjY2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5NGNkNjAxNDY3OGYxYWZlMTlkNjRjYWMxYWEzZTkzZDk5YTlkMWJkYmI5ZjJmMGI2OTFhOGExYzdmMGUyNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlNDcyNzI0Y2RlM2U3YjVkYTZjMjc2YTViNDgyZmI5OWY4ZGQ4NzU4ZDkzMDQ2Y2JiMWZhNGE4YTMyNjE5N2IifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L29-L41",
+          "version": "repo-lines-v1:sha256:9d43239c0f8b1191647f430a3b278b256b31c59c009247e41b0d3d4937c5f319:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NjBjMTg2YjliNTc5M2JiYmE0NWE3YWEzNmUxNDkxZWQ3ZmYzOWQ1Y2VhMGQzMWQ0OWQ4N2ZlMzk4NmZkZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NDM4MTQyNjg3MWI2MGY2ZjNkZWY0YzI4MDQ3NDBhNmZkMjU4ZTFlM2NlZDg2NjIzYmRjZDg5YjllMTdiZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlODIzNGEyNGY3ODUzMGMxNjhlNGJlZDBlNzE4NzIxMzlkYjk3NDU2YjUwZDgxZGMxYzk5OTcyNzNkN2ZhNmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhMDU4MTU5MGNiYTNkMTY2ZWE1ZDFhZTVmNDhlYzFiMmNmNjkyZjdmNThlYTg5NzFhMzMzMjYzYzk5ZDg5NmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_05d488eda5484539bb2a7b825470c161",
+      "statement": "JSON Pull limit is an integer entity-count cap for splitting streams across requests, with no protocol limit by default although endpoints may choose another default.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L43-L50",
+          "version": "repo-lines-v1:sha256:d9ee1af54c86f2cd20f3549455f8f4ce764aad79dad10f634cf6ec5b77e59036:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDI2ZDg4NzliMDI5ODMxOGE4ZDYyNGQ0ODhjMjY2N2Y4MjEwYjlkOTUwMDQ3NmEwN2RlNDc4Mjk4ZDFiNjEyMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMzYzgxOTJhM2Y4YzUyMjY3NGY0Y2U5NDRmNjI1MzUxY2RhYjk3Yzg1OGI4NGEzZjE2ZmIxNGU3YzdjYjUyYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDAzNDE2MTQ0ZmMyOWViZTVkMDYwN2MzYzE0ODI0OTlhNjhlN2M4ODEyOTNjOGFjNmQ2NDNjNzgxMDVkODA4NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGJkZjNlZDYyZDYxYWQzNjg3MTRkN2I0ZGNiNDk3OGVhYjAxMGMzNTk1NDI4MWUyNTgxOWRkMGE1NWYwZWFlNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a9bbc5b05f34a98b04c7c4fd6dd1099",
+      "statement": "JSON Pull subset is a JSON-encoded optional expression: a supported but missing subset returns 404, whereas an endpoint without subset support may ignore it; documented indexed subsets use an eq expression and query values must be URL-encoded.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L74-L80",
+          "version": "repo-lines-v1:sha256:e91f207bb47fa8997f8fab592ee9354548d0691202e7f106be4a9a51ea9b2b56:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ0YTQ0NjY4NzQ1ZDBlM2E0OTFjOGFhMTY2NGZjOTU3NDQxYTdiNmU4ZjA3MzdmMGQxYWQyMTcwNzkzNmQzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ0ZDdiMjRmMTBiZmY5NGRlMWFjMTAzNzYzZTdiNmFjMzM3MWYyMjEzZWQ5ZGMwYjZiYzJhYzg0YTFhZDAxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmJkZGYzZDkwZjJlMmRiY2FjZDM5YzdhMzUyMGU5NWE0ZTI5YWRhZTZlZWZkMDJjMWFjMThmZDEzYWZmMmU0ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCJ9"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L390-L396",
+          "version": "repo-lines-v1:sha256:dd64672a3c2ad98cd417354ff9cca0ebd243c6a913317c9393cea1b39c3b3aba:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDhkZDc3ZmU2ZGY4MzE4OWYwY2Q2YzdlNGNlMDI4NzRiOTgzOGI2YmQ2NDA2NjM1ZWZkZTkxYmY4ZTY1NmJmMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODU3ODRjYWUwNTc4NWQ5MjYwZmZkNGE3MDlkZDg1MWZhMmY1MzdmNTk1ZWM5MzcxYTNjMTNjMzM2NWZkOTQ5NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTkxZjFjNjQ1OTkzN2IyMjJhYWE5MTQ1ZTg2ZjJkNzQ5Yzk5NWZiNmExYzFiNzVkYzc3MGM0YTUzNWRhYjM2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTU3M2NhYzYxNmRiMGM4ZTgwNjIwMDM4NzI0NTkyYTA3YzJhMDhjODc3OWZhMzY4ZGFlMjczNzdkNTZmOGIwNCJ9"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L52-L57",
+          "version": "repo-lines-v1:sha256:96be02373299f741bab313918f89f01e766cdb5658ed2ece4d254c8a92d5e7c4:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ0YTQ0NjY4NzQ1ZDBlM2E0OTFjOGFhMTY2NGZjOTU3NDQxYTdiNmU4ZjA3MzdmMGQxYWQyMTcwNzkzNmQzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI0ZmMxNDM5YzJhMjIyNzZhY2ZiMTU5NjAzODgwMGU0YWRhYmVlNTk2YTAyYjJhNGViMmJkZWIxYWZiYmQ0ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjBmNWZmMzdiODQxYjkzZTA4MzZkYTgxZjJhOWFkNDkxZTBmZDJiYjJhNWUwZTViYjRjNWM3MjQ3YWMwOWEzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTViNDE1NzhiNWFhOWVkNTQ0NjMxOWNjODhkYzhjYmNkNDA1ODU3MmIyY2FiY2Y2MTZjNTg1MTU3NjZlYzc2ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_766fab51d3364c4480aa6e90dbff6c21",
+      "statement": "The JSON source defaults supports_since to false, is_since_comparable to true, and is_chronological to false; enabling supports_since adds the since parameter to requests.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L104-L123",
+          "version": "repo-lines-v1:sha256:aab4f52759ca8bde4941a8a498b746a6f6a4fd16c8bb1f0d75d528fa13d5d0f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkNzVkZDRmYzkyZTRhOWI2MTE0Nzg3OTg2NmI0MGRkYmI0Y2FiNzc2OTM3NDc0YzViZjE4MjBhMTVkZWJiZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiZGIwOTAwMjJiNmUyMzYzZDA4Y2JhYjYyMzQ4MzljNTJmY2RjNTFkNjNkZDYyYTUyZmM1ZWQ4M2NkYjVmNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMGNhZjczZmFmMDUyYjFlNWYxYjFlM2Q1ZDI4M2IyYjBlNDBhNGI1MGVkNGE0MWM0ZGEwYTQxMjNlMDAzYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L14-L15",
+          "version": "repo-lines-v1:sha256:a5933c4a35ada5c89cb6f8b3408a6e5265db970c23aa6ac508c93f5142c16dfc:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRlYmMzYmY3NjljOWNlNWQ4NGY3YzAzMzg3NWNjZjdiNWRjNDZkOTNiNTI0Zjc1MmZiMzMxZTZiNTRlYjMyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2U1N2MwMjEzNTAzNDBhMmNkYzM0ZjI5NTc5ODZlNjU1MzZiZDM3YjM0ZTU0ZmQ4N2E3NWMxZTk5MzRmZWU0MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGU5Y2RkNDlkYjBkM2U0MDFhNTgwODEwNGY1MDYyMWM2NzhiYmMzYmI3NTAzNGNkZjkyYTRjZTYzMzkxMWY0YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdlM2NjOGZiMjE1ZDM0NTk4MDRlZDQxMzlmOGUyMjFmNGNlYWM3Yjg0M2Y4OTU4YjlmYjhiNDBkNzVlNGNhMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f340920fb764960b757c75629fb9a57",
+      "statement": "Continuation tracking prioritizes a chronological strategy when supports_since and is_chronological are true, otherwise uses the maximum marker when supports_since and is_since_comparable are true, and otherwise disables tracking; chronology permits checkpointing within interrupted runs whereas unordered sources require rereading the failed request.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L129-L140",
+          "version": "repo-lines-v1:sha256:138a08661c50ab8d5b5727425882e15eed247731802b9e7ea771aeb9a2403caa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4ODA4ZDdiMmY2MGU4NDE0MGQyMjJiYTNkYTFkYTZkM2ViYjYzZmM4NWE1NjQ4ZWJkNTUwZTkwNjMyNjJiYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYzAwNGQ5NjgxM2E0OTA2YWZiMmQ5ZjdjNTM0YWU4ZmIxOGU3OWY3MmIzOWJkODZmMjExZmQ4ZDFkY2U2ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NDZiZDY4MDllYjNjMWRmM2NjYzc3MTIzNzc3Y2VjZmM4ZTE5NmRmMzAxMjM5MTI1Y2RhZmZmMTAyODBjMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5ZjAyZTZhMDFhNDA0Y2Y2Y2Q1MzM4YzhhMDlmMGM0ODg2NTU4NjYyMGZiNmM2NGI3YzFhYWYyYzI3NTU1MDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L189-L196",
+          "version": "repo-lines-v1:sha256:14e32068988e0f15279f8330b1ed9aebcf4c88314d221b665c042929052e9091:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDU5NWM4MjA2YTBjZjUxYzJkNDcxNzllOTI1ZmI2ODczMDQ1OTA3ZDY5MzViZWUxMjRhMjI5NGYyY2E1ODFhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQ2YmZlOTg3MzllMTNkZjQ5NmI2YTFiMzc2NDhjMzQ3NTBjNWFmZTgyYjc2ZDQyYjI0N2JlYjgyNjc0OGVmNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzViMDJlNmRiMmY0YTNlZjAzYjViYTU0YzllNWRkNTNmZjU0ODZhMmNmOThhMjlhN2MzZjhlZTBmMDYxYWEzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWI3YWZkZjllMTlmMjlkOTNiYzhhY2Q5Y2NmMWQ4NGM5MjNkNmFhOGI0MGRiMWNlMjI1YWYwZWUxZjJjMGYyNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L342-L342",
+          "version": "repo-lines-v1:sha256:215e8220a8f5665588d03cab51e8be9cb13e7148cb03b13f570080cbee5a0226:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE1ZTgyMjBhOGY1NjY1NTg4ZDAzY2FiNTFlOGJlOWNiMTNlNzE0OGNiMDNiMTNmNTcwMDgwY2JlZTVhMDIyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE1ZTgyMjBhOGY1NjY1NTg4ZDAzY2FiNTFlOGJlOWNiMTNlNzE0OGNiMDNiMTNmNTcwMDgwY2JlZTVhMDIyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTIzNjQzODFhMzM0ODY4ZWYyZDc4Mjk2NmYxMDU2YmM2YTExMDdlNTQwN2YwNzg0NzZhNWViMWRlMjZlNjZlZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a2e0cf15b183408cb4c4566af33017db",
+      "statement": "Continuation state is stored in the pump's pipe_offset and can be read or manually updated/reset through the Service API; initial import or reset normally starts without since, but initial_since_value can override that starting point.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L180-L184",
+          "version": "repo-lines-v1:sha256:f4039160812b74e8936e24a05a5c20e578430a89ac6dafa7b7ead8a9d0aa8340:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZjMWRlYzU0YzQ0N2Q2Nzc5NTdiMGU3ZDVkYjcyZjY2ZDI3YWE4NjlhYzQ4OWU3ZDI1OTA1YjcyZTQ4YjQ3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4ODQxNDA5MjQ2MDAwZGRiYTBhMWYxOTMwNDZkMTQzNWFiODI5Yzk5MWYyN2Y1YmU2ZjQ2YmQ4ZTQyNGQyMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGIxYTIwYmQ1YzE5MGIyNGVmMDM4YTEwZTM3MDBhZjJjNGFhODkxM2ZhMGM4ZTk5YjEwODU4MWRhYzhhMWM1ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmY1MDZlNWY5NjYyNzNkMDNmZDNmMzcyM2M5ZDY2ZWQ5MjNlMDgzZTg2OWJiMDMzZTJmYmZmY2NlNjY3YzM2YyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L249-L256",
+          "version": "repo-lines-v1:sha256:3a1a8f087316117fdbee8324beeaddab4ca34e9bfee06ceac4cf709ca7c9c5ff:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U0YjYzNzlmOGIzZmNlYmNkNThmMzU0NmI2ZTM3ZDgxMTBiOTdmOWVjNWM5N2NkNWQ2ZTc3OThkZGFiMzk3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2UzNTBiNjQxOWQwZGQyMDk2ZDg4Y2QzZTU2MGM0NDQ4YzUwMzFlNjE2ZWFkYjk0MWEwMWQwMDg4ZjY2NTc0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDM2NzJhNjA0ZmUxNWJkZDQ3NDc5MDIyZTg4NWUwYTkxYjU3Y2ZlMTc2YmQ3ODMwNGJjNzZhY2YxMmZkOTYzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2QzMDdlZTY2OTJmMjgzMzFhNGQwNDVhZjY5ZTg5MzRiY2I4NDZhOTlmZWVhZjU4NDU2N2Y1OTk0YjI0NWJlNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L303-L305",
+          "version": "repo-lines-v1:sha256:be4f0e65ae6de37d301bb7a630e5f137e2ea2311c18a32e7d21bf68030572ff0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzAxZTZkODYwZGIyZGE5MzhmZmU0NWVmMGY3NTNkNmIyYzBiMmZhZTZhY2I5NWIxYTMzZmUwMWI1ODlmNmU0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTEyYzk5ZTMwNmIxNDlkMmZkMGViZmYyYWY0MjU4ZjNiMjNlMWQ5MTNlMDVmNDc2OGM3YTlmOWZlODI1ZjU2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f57dcf3db409495586c15b1a5ed173cc",
+      "statement": "JSON source page_size must be at least 1, is sent as limit, and makes the source request pages until no more data remains; paging requires supports_since, is_chronological, and is_since_comparable all true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L64-L71",
+          "version": "repo-lines-v1:sha256:7fa2966222af3e845d7c6cb76cbc6d8a7790647c8c5e3d69418ed92ac368cd55:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzdjZDhiZTVkZjVkMTMyZWFhYWFiMDhlNzJlNGZmZDM0MTZkNjE2MTc5MzBhZGZlYWE5MzlhODQ2OTQ3MGY5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQyZDNlOWVkNjJmMTUxYzIwM2VjNTZmYjU1OWYzODZjMWE5NjhiOWFmMDE1Yjg0YzEyYjFlZjFkMTkxY2U3NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWU1Y2Y4N2NlNzllYTU5ZGQ0ZTM1ZGQ1MDk3OGJkYjE2NjIyYjc2YzY0ZWYyMTY1ZTJmNDE2YzhhNDAwMjM1YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f665e65c904040dfbe7bab1725f47a32",
+      "statement": "The continuation tutorials demonstrate mapping a remote modification field into _updated and translating incoming since into an API-specific changed-record request; the unordered example uses max tracking and cannot claim chronological support.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L303-L342",
+          "version": "repo-lines-v1:sha256:3ac5d1a683fc6ae310511116ffed5261f5047fa9d9e4f152a33bf0f4379b1a06:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwMWU2ZDg2MGRiMmRhOTM4ZmZlNDVlZjBmNzUzZDZiMmMwYjJmYWU2YWNiOTViMWEzM2ZlMDFiNTg5ZjZlNGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxNWU4MjIwYThmNTY2NTU4OGQwM2NhYjUxZThiZTljYjEzZTcxNDhjYjAzYjEzZjU3MDA4MGNiZWU1YTAyMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjYmEyZjk4MjhjODBhMmMzOGUyNDk2Njg5ODRjZGNiNjMyZDc2M2Q2OGZhZGRmOGZlNWU4ZWMyOWJkMzRlZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyMzY0MzgxYTMzNDg2OGVmMmQ3ODI5NjZmMTA1NmJjNmExMTA3ZTU0MDdmMDc4NDc2YTVlYjFkZTI2ZTY2ZWUifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-microservice-continuation-support.rst#L94-L131",
+          "version": "repo-lines-v1:sha256:beb5a91c9c3d7ddd33857f738634efc8ce7188907d6bcebacd430d2099e3392c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlMzhlNTg5ODZjODJiNDQ3ZmQ2ZjA1NjlhZDAzNmQ3NTE1NGNkOWY1MGQ5ZjY2MzE1NTBiYjRhYzZhNzNkODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZGFiYTZmYjBkNDkyNjA2NTcyY2ZmNmU1Yzg4YzkyZjEyMmY0NjUwMTM2OTBlNWQzY2Q5ZjY0ZTlmOTczM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3MTIwNGM2MDUxMTUzOWFiYWMzNTViZWU3ZWZlMmRmOGZkNzA4YjQ4MmFmN2M1MTExZDU0YjY2OGRlYTNiNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmNDFjYTEwMWM5MjgyMTM5N2RjOWY4ZjI0OWMyMGI4OTM4NTBjYjVkMjU5YmJmNDUzZGMxNmIzNzk0ZjM1ZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_03d87b0001fd428db8bfe40cac01d345",
+      "statement": "JSON Pull X-Dataset-Populated conveys true or false, and an absent header means the populated state is unknown rather than false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L75-L76",
+          "version": "repo-lines-v1:sha256:04affa181032058f27367981048cd67593717c50dc73ed3c132956de1c60df69:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU5NWI2OTAyMzg5Y2JmMDA0ODJiOWYzYzlmZmIyNWU1Y2I3NjIxNzYwNjVlNGFkYTJlM2Q4ZjBiZjQxMTM5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1ZmVhYmNmOWQ1ZTQ5N2QzYzU2YjNmZTI2ODI5NzBkOGE3MGM3OTA5NGVhYjNmMWI0MzE5YjE2MGRiYjA0NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTlmMTE2YWUwOTY1MDk0MGQwZDdiMmYwMjc2ZThkZjA2OTc4NjdkZjQ0NGRlYmM3OGQ3ZDRiYWUwN2Q5NzBmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODIxMDQ4N2VlODFlODU3MGY4YjY2NDY1MWRhMmQ4YmMwODllNTkzZWNhNzRiMWQ2MzAxNDAxYmFkNGI4ZTQ5OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_43307ab4b8dd49a99d9bc4320c5b98d7",
+      "statement": "X-Dataset-Max-Updated is the JSON-encoded highest committed offset and should appear in the last entity of a complete retrieval, except a stream marked X-Dataset-Filtered true need not include that entity, such as a publisher with a transform.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L78-L82",
+          "version": "repo-lines-v1:sha256:32d6a9eb238eaac8b89318f5eea082d481c846f201c01a191342f312c6c59f5e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdjNGNhZWVmYTgxYjIwZGFlZmIxOTQxMjU4MTc3ZDI3NTg2NjU1YjQzNjY0Zjg0MjNjZWNkMjhhZjIxYzhhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTU4YTkwMGFkN2UyMzg1MjQyMzQzZTQ4OTIxZmFkZjE1NjUxYmIxNTM0MmFmZGMzNGFkMTY3YzVmZWJkMTE4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTViZjU2Y2FhMjFmMzgyYTQ5OWQ5MGYwYTE5NDE3YTVmMmZkM2QyOTVmOWMzYWEyOTBiYmYzOWVjZTlmNjE1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjkwZWU5NmQzMTFhMzdlZTE2YmFhYzRjNDhiM2NhZDA3M2NiNjMwODdkNjZkMGU5ZGZiYmMyMjM4NDlkZDIxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_18a2c2b267684e36987c8e849217e04d",
+      "statement": "JSON Pull X-Dataset-Generation identifies dataset creation and changes on delete/recreate, while X-Dataset-Restore-Uuid identifies a restore and X-Dataset-Restore-Offset gives the JSON-encoded highest committed offset at that restore.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L84-L94",
+          "version": "repo-lines-v1:sha256:0a8246b1db4ec7b0ebdab5ca50133daf585aa7bd5d6ac8353895ac2dd1a254f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMGY0MTdhNDc2ODNiMDBkMDI1Y2YzYjEwYzgzODliMGQxNTQ5ODA5ODU1ODVkYjdmZjIxNWIzNzZiOWNlMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlYmI5ZDkxNTRlNTgxNjUzZTM1YjY1NDAyZDlhZDk4ZmYxMDNkNTY5NzIyYjBmNzgyM2FjMjU4YjUxYzcxNzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ1YWU3Y2QzZDE5Yjk0M2Y4NGE1MGExNTllOWE1ZDFhYmI4YjAwNTIxNmI1Y2RiMDU0NjBmZDIzODliNWU4YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ZDFjOTA3MjAxOTEzODUyNTAxZmNkODA4NzIyNWQyZjQ1NzU2ODE4MmY0ZjZjMWRlMDE0MjUxOGM3ZjVkZDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c36096059764d7f8c232a3a0c61e355",
+      "statement": "JSON Pull X-Dataset-Completeness, when present, is an integer number of microseconds since the Unix epoch representing dataset completeness.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L87-L88",
+          "version": "repo-lines-v1:sha256:35ecc62001f5c1f453ab78677688503ac1d26139b21411f5f24f034f7c0fb5ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTlhYzYwNTE5NGNkNTBhNjZjZTJkNGEyZDY4OWE5NzIyY2E4M2YwY2U1OTljMjk4Y2FmOTk4OTQxZDhmZDU0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNThhZDQ2ODllYjRjZGY1Y2RhNzUzN2E5ZDJkMjg3YjJmYTA2Y2Y1NTQyZDQwNzA4NDI1MDQxNDYxMTExYTdiZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmZmNTE3NWQyZjA1MjI2ZGZjNTg4NmJjZmY2YTlhZDkwOWY3MGIwYjA2MDRlNmNmNTY1NmM0YmE3YjNlYmU2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2ZjYWVmZjgzMDJhNjViOTVkOTk4OTcwNjc2NTQxZTUzMzNmNjZjYTU4ODljNWI0MTIyNzc0MWI2YzgwZGM5MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3aca3c3fd16a46d8b47258fbffdddfc9",
+      "statement": "Automatic reprocessing uses JSON Pull dataset-state headers to know when to rewind or reset, but the default reprocessing_policy is continue rather than automatic reset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L51",
+          "version": "repo-lines-v1:sha256:49721936dbd9f05108f09516247ef781b0bd5696ee2ef2a777179e7839ff1d65:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcxNWY3MmNkMzg0MGIyMTk0YzBlZTQ0ZmE5ZTNkNjJjNTA4NzJkNDczZmUxNDQ1ODdhZGU2NDUwZDM1YjQ1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L29",
+          "version": "repo-lines-v1:sha256:a4b946ddb36e387d4a22d297c148b62823304265c2176c1fc46d4042a5bf3e60:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L96-L96",
+          "version": "repo-lines-v1:sha256:cbeed1494f8a691f5a3cb26d60e52df789a4d10d3cd2230554bcdf3c5a09067f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JlZWQxNDk0ZjhhNjkxZjVhM2NiMjZkNjBlNTJkZjc4OWE0ZDEwZDNjZDIyMzA1NTRiY2RmM2M1YTA5MDY3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JlZWQxNDk0ZjhhNjkxZjVhM2NiMjZkNjBlNTJkZjc4OWE0ZDEwZDNjZDIyMzA1NTRiY2RmM2M1YTA5MDY3ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzFlM2VlMjQyNDVjZmQ2ZjA1ZGE3YzAyNWQ1OTBhMmVkYmM1ZWRhMzg1NzViYTMwYWYwZGE3YzUzYTg2YjExOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzljZDdhNmNlOTU2YTk1YTY0ZmE4MjUyZTIwZWQzN2NiZTE1YThiYzgzZjk2NGU4ZWNjYzUwYzNkODUwMTQwMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_131fd4d3ca03440e92d02c41e43d6a66",
+      "statement": "Continuation imports cannot infer deletion from absence in a delta response; deletion entities or periodic full rescans are needed to account for records disappearing from the source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L18-L22",
+          "version": "repo-lines-v1:sha256:883588cf38265811acbb393ac5fdb6779b52f6a3255d48c48d21e061f654124a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWE0NTQxNDI5MGFiYjgyMGRhMmJlY2U4N2QxODIxMzEwNjE1OWVhOTcwODA4OGY0NjJlN2NkNjFiODQ0ZTdkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc0NGVhOTI2YmY4NGIxOTY3MTc0MDcyYzEzYTdmNTJhYzZkYTc5NDM4ZDBkYTA3ZTE3N2I4NDcyOThlODhlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmIzMDYzZDcyZDQzMzU2Yzc4OTc2NjQwMjI5ODE5NThhNzE0MGJlZmVjNWI0NGJjNTAwOGNlNmYzZjdmN2VjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2MwMjEwMjExNmRhMDFkNWFhOTZmYmNjNmZhNDRkMzNmY2VmNmJjODk2YmE4NWMwMzJkNWE5ZTZkZWRhYjQzNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L67-L69",
+          "version": "repo-lines-v1:sha256:a9b320b2818e6e5dbc84dff5818e591fed436ace75f4e4565a2f17e49347a8ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwYzZiZWUyZGEyMTA4YmUyMTRjZDhmYzU5Y2U0MGQ5NDM4MGM2NDhkM2Y5Mjg2MjA3MDZiMDhmOTBmODU1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODYyZjc5YzNhMGQwYTE3ODU4MzliZDVmMmJjYTZhZjE3MTExOWEyZGMyZjM1MjA3YzQ0ZmQ2M2NhMWVhODIyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTA3ZmI1OTFmZjhmMjZmZDA5NWUzOGE2YTBhZTcyZTIzYjhlY2I5MDA5NjMzOGFhMDAzYmE1MWEzOGNmN2VkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-microservice-continuation-support.rst#L191-L218",
+          "version": "repo-lines-v1:sha256:ae6b325055d8b76d61b1bc4e7aa296903c96c8c84b65dc36d38a7f3a642338a7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2ZTBkMGIwMTFlNmQzZGI3MGVkM2M0OGY3NGY3ZjcyMmQ3MjAxMTFmZjhmZjU5NzgzZjEwYWU4NDM4NGExODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwMjBiOTNhNDQ3OWRhZDQ2NDI2ZmViOGE3ODgzM2E4NmM3NGE5N2JjYzRmMmRhNGM4OTM0ZmQ0ZTE2MmM3ZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0MjEwNGNhMTM5ZGNhODI5NjUwMmEwM2U3N2M2NjIwNGVmOWE5ZmM4N2I0OGIwOGNlZTc2ZGM5YTg0MjNjYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkNTNiZDg2ZGUyMjA4OGZhYWM0MjBkOWIyOWUwNDAwZmEwYTMzZjQzM2VmNTFiMTEzYTA4NGU1ZDFiZTM2ZjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_584072d80d3545cda56a75c83cce9150",
+      "statement": "For JSON snapshot imports, if_source_empty defaults to accept, allowing previously synchronized entities to be deleted by an empty source; fail instead fails the import and preserves prior entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-json.rst#L91-L101",
+          "version": "repo-lines-v1:sha256:26ce5fd228290782b0b8a5e9b79d83d2b2cec4890662ad0b90039a37aa380d1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwM2NlNmRlOTYzOWNjYWU4Y2EyZDkxYzZjYjQ3NGM0ZmUwMWMzYjZhYzMwNTc3OGRhNGY3ZWNhMTNkZmQxZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_400c640051934ff6914ebf2cf73fd624",
+      "statement": "A source adapter must expose upstream errors as failures rather than successful entity arrays, because Sesam may otherwise treat the import as successfully complete.",
+      "evidence": [
+        {
+          "resource": "repo://hub/tutorial-custom-data-source-microservice.rst#L94-L109",
+          "version": "repo-lines-v1:sha256:ffde6cc0099398256b74f8516a9a1c423128d31c1db109a17db35cafba0abadc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmZTM4NDA2ZjNkODdmM2JlZmY0N2E2ODYyODBmODJkODQ2NjNhYTY1Y2NlZTkzOThmYmJlY2Y4YjY5NmQxMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlMGNhYTU1M2E0NDllZDM0NDIzYTBjZWVmYzA5ZDFlMGY0YmZiZTU4YjQxY2ViODg4NDFjNGIyOWNlNzlkZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5YTU2ZWE1OWFkZDJkMzBjYTZhNjYxNGRkMDFjOGI4MmRhMWQ5Mjc3MDg4ZDJlOWJjYWUyYTdjYzk2YTQzNTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmNmFmYjliZjNlZGRiMjhhZTI5N2Q0MGM2MTg0MDE5YmE2N2Y0YzUxNTZkNmJjODRiZDgxOGQ3OWI1YzEwOTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_93e6f69dc760489a8e1e21f0d239caed",
+      "statement": "An HTTP transform is a POST request-response operation that must accept and return application/json arrays, can return zero or more transformed, filtered, or newly created entities, and raises an exception on non-2xx responses rather than acting as a JSON Push synchronization session.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-http.rst#L7-L19",
+          "version": "repo-lines-v1:sha256:593a581936d372361171c71831e0f5c9d53a038ad9fa3823dcbaa07b1d0ba9cb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwYjUwNDI4NDZiMTdlMjhhNTU5NTJmM2FjZTEzYjhhMGZiZTc5NjFmOTRiMzE3Y2NhMDVlNGI1ZGVkMjViYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhNTIyNTJhZDU2M2RmNDk3YWFmMDg5N2EyNjk5NjE1YTZiZjZjODM0YjBlYjI3YzVmMWM2MTU1MWMwOWUxYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRiZDIyNjE0MDA3Mjk4Yzk1MzFiODM3NzFhYjc5YWY1NzRhMTEzYWE4NmIyYzE3NTFhNzc2MDhjMTcxZDU2MmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzNmUwYTEzYzE4OWUzMGM3ZTRlZmIzNGYxZTY1YmQyMzg2ZDRmMWVkZmEwMTgzYzUzYzFlZGQyNWM2ODg5OTMifQ"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L8-L65",
+          "version": "repo-lines-v1:sha256:c9022c209b4e28beafb4883a710e993941ba719132b80b3fd3e678fa1a09d1e0:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzZTQ5OTcxMTE5MmZhODc4MjhjYjgzOThkOGU4NDJiNDY5ZmFiNGM5MzA1NzI1M2I4YmFlODJjNGY5ZWRhODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjM2E1MTViM2Q2Zjc0NzI1YTFkZmFhZGMxMjYzYzE4YjBmN2U1YzM4ZWRlNzkzYjhmN2Q1NjI3Yzc0MDA5ZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkMzg1YzkxNzc4OGQ5NDY5MzcwM2QxOGY3ODIwYmVhZDVmYmU3YTQ4MDgzYzQxYTQ3NTIzZjAwOTg1ZmFkYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1MzViNzc0MWVhNjI4ZDM1ZWVmNGFhM2VmMGQ4NWU0YmNjNmZlMzI1YTE4ZWMxNmUxZWQ2M2NlMWQ1M2E0ZWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f67ae7bd81b47c380916fc52c95818c",
+      "statement": "HTTP transform output is passed to later transformation stages and the sink; documented configurations use a later DTL stage to copy the returned data and supply _id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-transform.rst#L17-L54",
+          "version": "repo-lines-v1:sha256:ec8b68686d7e289dfa7d8b0fd12b7e21e2931d730c3a4252f190a8396ff4926d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyMjU5MDFhOTU0NDUxMmQ0ZGQ1OGY5NmE4N2Y2YmJhOWFkZmFjZjgxZDdiMzBlZTZkN2JlOWIyZTA1MjVlYjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjMTU0ZGUyYjEyYWJkNDE2OWJjMWMzYzRhZjdkZTIxZjg2NTFiOGZmNDcyMTc5NDcxNTQ4ODcyNmQ2OGFlYmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2NWM1OTFlYWI0NTk1NzAxNDlkZWYzNTM4YTliOWFjYjk0ZDBmYzk2NTMwNDQ3MjEzYWMwZjgzZDI4M2FhOWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyNDViNzQ2OTljY2RjYWQ4NGU3ZGNiZDYxZmU4ZDg4ZGUxZTUzOWZmYTI0NDJjMmUxMzMwMWYzOTkzZDliODIifQ"
+        },
+        {
+          "resource": "repo://hub/custom-data-transform.rst#L74-L74",
+          "version": "repo-lines-v1:sha256:0e36f7b6265d594e0681c497aec869ea88b6406d950137b2d8c99a0d4bf34834:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUzNmY3YjYyNjVkNTk0ZTA2ODFjNDk3YWVjODY5ZWE4OGI2NDA2ZDk1MDEzN2IyZDhjOTlhMGQ0YmYzNDgzNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUzNmY3YjYyNjVkNTk0ZTA2ODFjNDk3YWVjODY5ZWE4OGI2NDA2ZDk1MDEzN2IyZDhjOTlhMGQ0YmYzNDgzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmE5ZDc2ZTExNTc0YTI1ZjFkNTIwNDBlNmI4YWQ3Y2ZiYWJiZTUwZTUzODhjZTgyODYyNmMxMjg4MzQ2NTI0ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9a08c1181684b8cb5969b1f6884db54",
+      "statement": "HTTP transforms require system and url, support string-valued request headers, and split requests according to batch_size, whose default is 100.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-http.rst#L36-L61",
+          "version": "repo-lines-v1:sha256:4e4ce9407b3b5adb93f89dbb96265248afd4680b11b55a8b2c5ddc46e62a8c7e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiYjNjZmE0NjI3OWJjZDhlMjlmZWVhYjhjYTc5MTM1MWZlMTQxMTVlOTg1NTE4NWQ5NDBkZTRhZmRmNWJiZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlYjRmY2IxN2VmNDQwZTA2ZThiZTVmNzk3NjQ5YTY4Y2FmNTQxMzlmNDkwZjUzNjIxZTIxZDgwNzBlNmEzOTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7164b6d3991a4f328482fbeae82c36cc",
+      "statement": "HTTP transform side_effects defaults to true to protect against unintended external changes through features such as pipe preview; false is appropriate only when effects are absent or explicitly acceptable.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-http.rst#L63-L67",
+          "version": "repo-lines-v1:sha256:a31cef4586133152b28e5b5149f66a54b8d64a3ab34a874fcc78f85e7e553317:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDhlMjI5M2E5NDI0Mzc5YTdlZmU0NzJlZTMzYmY4NmI5ZDQ1M2ZlNTg1MmRlMjc1ZjhmNWQ2ZGQyMWQyY2UxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWFkZDE1ZmNlODcxMzYzOTI5YTRiNTgwYjBjZjIyZjczZjJlOTZiNWM4Nzg0M2NhZTZkYzAzZWU4NjAxODY2YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_084b1f484bd540fca1ddf98453e2cf81",
+      "statement": "HTTP transform trigger_on selects entities by a property and value with substring wildcards and default key _trigger; missing or nonmatching values pass through without transformation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-http.rst#L69-L75",
+          "version": "repo-lines-v1:sha256:6c0c15b1361fc827b6bc6303b18d7eff9d5b4e4f51c66c5644d2ce966e031ec0:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWUwMGEwNzU0Y2ZlZTM5ODEzNmNiM2FkYmE2NTgzOTkxMjdkZTRkNzA3YWM3YTdiYmNlMmE3NzQxMTNhMWNkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTRmY2YwMTEzYjRmZjMxOTBkMjJjYWI5MTk4NTVhZjQ4ZWU4ZTFmZjQ1YWI1MjJiN2ZiMzBiMGMxYTVkNzM0OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWExZjcwNzQxNzUxMzRiMDU0M2ZiMzUwMDQyZmMyYmE4MTEyNWUwNWYyNTYyNjI2MDg2NzE0N2E4ZDUzNGE1MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_05667e5f85ad4d2fadb29db2138515c5",
+      "statement": "JSON Push uses a string sequence_id per sync, a string request_id per request, and previous_request_id referencing the preceding request except on the first; sequence IDs are recommended to be UUIDs and request IDs are local to the sequence.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L225-L237",
+          "version": "repo-lines-v1:sha256:06d09b174523a132bb3a630964337f290521d0ef8debb449a162e7952fa51f28:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2N2E3ZmQyNzg3OWMwN2M5YWE2NjQyZDZlN2IyMjJjZDk3MzY1N2U5ZTkyODJiYWM3NzA1NTRmZGU4OTdlMDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliYjVlOWU2YjMyMjU0YTg0MDFiZjY2YTk1M2JiY2I5MDYwZmFjN2JlNDk1YTgyODhkZTM3ZDdhYzQ5ZTFjOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMzMmIzMzIzZTI3MDE0ZjkzNzY0OWM4ZGMyMjg2YTllZTdiYzY3ZjVhYWQxNjEwZjMxOThkMmM4NDA3NzUzNzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlM2ViODM5YjU3YjY5OWU0M2U4ZjY2MDUwN2NjODQ4N2Y2ZmUzMmU1ZjAyYTQxMTllYWE4M2M2MjZjOWE1MmEifQ"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L31-L46",
+          "version": "repo-lines-v1:sha256:b54b4d73ae85dde9d7eb914e1782b56fec4c3c269f1183eb3c6d7e551c8f5791:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MWU3OWU2NWU0ZmMxYzliMDE1OWE0NjYwM2VhNjA2ODIyNTEzNWZjNTJmNDgxZmJiMWFiNjYzMWQxYzk4MzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5MjEyNzNjNmY2NGE3MjIzZTE5MDExNmIxZWIzMWIwNjUwY2I5ZTQ4ZTQ5MDMyZmU5NTQxN2I1YTFlMzNkNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlODIzNGEyNGY3ODUzMGMxNjhlNGJlZDBlNzE4NzIxMzlkYjk3NDU2YjUwZDgxZGMxYzk5OTcyNzNkN2ZhNmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyNWFiNTlhODdjYTM2NDVhYWIxNWYyMWNhOTMwMzQyZjVlMjlkN2Y1MGUyN2FmZjA1ZDYxNzM4MTE1ODhiNTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2b799ad4859a4bf08eed1401dfccbfdc",
+      "statement": "JSON Push is_full is a Boolean included in requests and defaults false; is_first and is_last are true only on the first and last requests respectively of a full synchronization.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L35-L54",
+          "version": "repo-lines-v1:sha256:f3e662ad99f637aa33303227b7ae1fa9331e2e13a5218f49750021dfbbeeedd0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0ZWRlZTA4NzM3ODJlOGE0YzQ0MTBhY2RmZTg1ZjQyNTJjYzc3MmZmYzcwMTlhYzEzNjhmMjAzYzc0MWYzMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhOWI0ZTBjN2QyM2FjNmU4MDIwZWM5MjZhNDM0YTVhZWI5OTEyOGY0MDNhNDM4ZDMzMGUwNzVlYWRhNGE3NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhNTVhODM1MWMyMmRkMjA1MDljYmE0MDIwZTA2ZWRhNTczMWY5MzNkYWQ4M2Q3OTFjMDM4NDI4N2YyNWY2NGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1YjQxNTc4YjVhYTllZDU0NDYzMTljYzg4ZGM4Y2JjZDQwNTg1NzJiMmNhYmNmNjE2YzU4NTE1NzY2ZWM3NmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_243323a3ccaf474db1dab5de3e46d71c",
+      "statement": "Incremental JSON Push accepts supplied entities and may ignore synchronization parameters, with omitted parameters treated as incremental; it does not infer deletions from records no longer included in pushes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L237-L241",
+          "version": "repo-lines-v1:sha256:59e9c1da4a78da36ed465bc2e5a93cac4d57697a8b5007130f829a42601795e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwYzZiZWUyZGEyMTA4YmUyMTRjZDhmYzU5Y2U0MGQ5NDM4MGM2NDhkM2Y5Mjg2MjA3MDZiMDhmOTBmODU1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmOTRmNmZlYzU5Y2NhOGU0YTY0NjY4ZmZiZjg5YzcxZjYzYzQxMjFhZWJjZmNhMzU3ZmE1ZDFmZTFkMTE2MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTBiMTczMDEyMTBkNTdhMzA1MWUxOWFhYjYxNmM0MTlkOTAyMjg0OWJlZDA1NWY2NmI4Yjg5YjY2N2QwMmI3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L66-L69",
+          "version": "repo-lines-v1:sha256:a574df90b87759a646d3776fab95d9f0c53e2c4b71acb987d9c0f0aacbff3ffc:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdmZmE2MzUxNzAzYjlmMWVhYzJmOTM2NGY4OTEwZTdkZDI3NDVkNGNjMjdkMDA4ZjA4YThiNjk2MzA2NmNhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmRkYWVkNWYyOWI4MzM3MjA3ZjMxNDViZDEyMmI2ZGNiZjQwZDM0OGE4MDQ2NmI4OGM3YjMwNzMwYzE0ZTAxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzY3MTUxN2RmMzI5YTlkNTA0NjE5ODRhM2Q1MzcwMGZkNzBhZDdmZWJiMGViNzgwNmE5ZDllYWY1NTAzOTdhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTdhZDc1OWZmNmQzYjA4N2RmZTcyOWZjNmNjZmU2OWQ3Y2VhYmJmZDZmYWQ0NmY0N2YxN2IyZGY4YjM0OGUyNSJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L145-L153",
+          "version": "repo-lines-v1:sha256:06bf9ad7fe27f488c00db0d40823a5fd0e9c36d823eb8eb39e711f3ff50a122a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQyMDRkNDQ2MzRiMGE0ZTdjZWQzMjcxYWQ5MDkxMzExYzRmMzUwYTZhNWI1OWM1NTRjNjFmZjQ1MGNjNTc3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDMwNTYzOWRhYmVlMGQ5M2Y4Y2Q4ZmExYmEzNDUxNzY3YjMxZWRmODcxNzhhMDBhNGVkZjk5MTQwNDFhYWUxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjVmNGRlYjNkYmJmYmU0NmI0N2NmNzliY2RkYzM3OGU3M2QxNzNjZDA5Y2JlZDdmYjljOGEyY2IyN2Q2NTdmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTM5MmRjMzVmMjRlNWU5YzBkNmUzZDg4ZjExNjEzNjFkZjc1MzI0YmE4YTY2YjVmOTU0ZmZmMDczZTE0NzE4NCJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L71-L72",
+          "version": "repo-lines-v1:sha256:a3e8f97712f475abcccea8add8f71f7dfd36be0b8da8508d198b05957de9df05:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmU0MTlmNTA2OWVhYWEzMjUzMWU0Yjk3ZGM0ZmExZWUxMjNiYTllZjIyYTVkMmVjNmZhZDZlMjc0N2U2NDNiOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmM5NTNhOTVhYzhjN2MwZDJlYThmMDc3ZTgzNDY3ZDZmNDc4N2ZiODc0ZDYxN2U1ZWU4ZmU4MDYzNDI4MzgzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmZmZGQ4MzcwODU0YjYyOGYzMzVjNTA1NzQyODBiNzhkNjZjNmJmNGU3YjIyNDYyZjU0N2MxZTFmOTIwYjg3NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjc1MGQzNWQ1ZTdkMTM5NzMyYzViYzEwMDE4NGRlNzAzMjY5ZTFiZWFlYjMwODUzMWUxZjkzZGVlZTNlMzhkYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_414a2088bfaf4315b932cef7cf50eb38",
+      "statement": "Only one full JSON Push sequence should be active at a time; a different full sequence_id replaces the active one, is_last ends its scope, and incremental requests do not affect the active sequence.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L61-L65",
+          "version": "repo-lines-v1:sha256:c8204998923024b49528a3ee87fe1bbbed30caf22691727ab71167e730930c32:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU0MDU4OGE5NGNkODE5ZTYyNjQwZDFhMjU5NDM0MmQ2ZmRlOTNhZDYyNGE1ZmU0ZDIxN2Y2NWZkY2E5MzNjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMzYTUxNWIzZDZmNzQ3MjVhMWRmYWFkYzEyNjNjMThiMGY3ZTVjMzhlZGU3OTNiOGY3ZDU2MjdjNzQwMDlkNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmZlMzZlMmE2NTY2YTY2ZjVmNTZhOGZlN2IzODQwMWUwZjRlZjI4ZjJhODMzODE4MGQyMWNmZjljYTY4NjQxNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjUzNWI3NzQxZWE2MjhkMzVlZWY0YWEzZWYwZDg1ZTRiY2M2ZmUzMjVhMThlYzE2ZTFlZDYzY2UxZDUzYTRlYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_98c94186e1e14e19a362334d0a52e31e",
+      "statement": "A completed full JSON Push sync marks previously existing entities absent from the supplied complete sequence as deleted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L220-L223",
+          "version": "repo-lines-v1:sha256:4a940a3a23e2a81e69a379c36b3fb5ba9f44ea3335e9157d0788c37227c56081:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQ0YzZmYjI4OGE2NmJlYjg5NmY3Nzk2MWJmMTA1NzY5ODVjYWYwYzJjN2FlN2U3MzE0MTk0ZGI0Y2ZlMzQ4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2IwYjc4YjBmMjJjZTdmMGJjZDE2MmU0MTM2NjYzZWM3Nzc3YzcwMzBlN2I2NjlmYTQwOWYyOTdlMjgxNGFlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmVmNTQ3ZTdlOWFjM2U4OWE5YThhODYzZGYzNmI4NzQxNzkyYzhhOWUxYjc3ZTliZDU2NDRjZTNkMGNlNDMyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGJhZjZlNmYxMzQ1ZWY2ZWNkMmExZmI2OGVjMTAxYjA0Nzg1MjAwMDA2MzM0MGY1ODJjNjE1NWVjY2U5OTI0YyJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L418-L421",
+          "version": "repo-lines-v1:sha256:7bd8b30a3c78a6d0cab6abe8c6958e77d8ee616ae3413de5ec534e6edfe023be:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJmZGE4MjhmNzdmNGU1ZjJjNThhNDA0YzMyYzA2ODVlZTIxMzFjMWJkZGU5ZmMwMzM2M2VkYTY2OTc5YjgwMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzYwMzhhYTJmYzRlYWU0MDM5MDkwZDA2NzM1NjUxMWM4ODUwNWZhNThmMjk2NWQ4OTZkZmVmMzBmOWEwMWY2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTNkZWVjYzJlOWE0Nzc2N2YwMzk1N2FiMDVmMjgwZDk0YzUxY2VlMDZhZTc5YTk1MjE1MDY3ZTA5YTdhYTRlYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGUzZWI4MzliNTdiNjk5ZTQzZThmNjYwNTA3Y2M4NDg3ZjZmZTMyZTVmMDJhNDExOWVhYTgzYzYyNmM5YTUyYSJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L494-L507",
+          "version": "repo-lines-v1:sha256:7e557266151050fb7749ee50d3681328e58fffd505fd4047cff1c3b2581ba9ec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0YmY2YjAwMjUxYjg3MjcxZTE5NmY4NWM5OTk0NTAwNTBkMjRlNDg5OTlkZmY2YzJlNGRkNmExZmMwMDRjMTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmODA3Y2FkZmY2YzMzNjgwMzJjYWNhZTA2YjBmY2UzY2RjOTA2OTc2NzNkMzNhOTlmMjk5ZDM2ZDE5NjFiODgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyNmZiN2E4NTAwM2U1YmQ3MTIxYTE2MWY4Y2NhZjRkZTMxODlmYmRkNDE5MjMwNzg2MzAwNDg1MjYwNDE2NWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3Yjc4MDc1MWFjMzY0MTZkY2Q0NDE4ZDg2YzNkNzVlOTU3YWIzOGY5OTU4MmFiMGUxMjQwYTE0ZGJkMjUwYzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0139a1db93db4cea9f30d924ade844a2",
+      "statement": "The documented JSON Push full-sync examples expose dataset updates between batch requests, so the contract examples do not represent an all-batches atomic commit.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L239-L250",
+          "version": "repo-lines-v1:sha256:9969c112aa5e6b26854763b7dd884c253284f34b86a4b17c826373280ac9cf51:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxMjU0MmMwODNmZTllZGVhYmVlNjg1MTE0ZDgzZDYzNzQ0NGVhMGU2ZTUxNzI5NDg2ZjVkNjAxYzA5MGM3NDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxY2UyMmIyMWI3ZTJjNzJiZGYyZDUwYjFiZDYwYzQ5MzBiNmYwOWE4YWVlZjVjODRmNWQ3ZmYxYmNiMTA5ZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1YzdiNDA5YmMyNTNmOWNmMjczMGYzM2U1NTVjOTI5MTJhZGMyY2IxYTQzZjFiMDU0YWQ5ZTBlMTdjMWE1YWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3Yjc4MDc1MWFjMzY0MTZkY2Q0NDE4ZDg2YzNkNzVlOTU3YWIzOGY5OTU4MmFiMGUxMjQwYTE0ZGJkMjUwYzAifQ"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L276-L285",
+          "version": "repo-lines-v1:sha256:6e6fa8b2e985a47bae856e965ffef0bcb1f27a534aeb1a0d8e447a2ee62299ab:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2Zjg2M2EwOTU4OThmZjAzY2IwNTViYWQxZjc1OWVmZTgwYzBkYzVjMGVmNTc2NGJlZmRlZDNjZjUxNmNhYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZGU2OWEzNzBhODU1YjljZWFmNTgxNTlmNmY2ZjhhMDBkNWMxMDM0NzYxODFjYmQwZjQ3Y2JkYmUzMmViOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMGYwNTIxMmI5MDBlZjUxMzI1ZWQ4ODFjNmI3NWE4Y2NiM2FmN2NkYmZjZGNlMmQ5YWVhNjEyMTA0MGQ1YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4NTU2ZDEzMjcxZmYwNjU3MDNmOWZmYmVhOGEzNWFmMTJhMjczOGI2NmVjMDVjMTM3ZGVlZDFiZjhmNzJiNTgifQ"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L329-L338",
+          "version": "repo-lines-v1:sha256:a51d3109671703c12775a9651faff60f519c1220c416ecc1911a5855c1688579:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhZWYwYzMxNjU2ZDBhMzhlYmRmM2NjY2JjMjUzYmExNjA2Mzg1NzdmNzhlNWM5OWUxMWEzNTQwODhiZmQ3MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhMWNhNTRkNzgwZTU1YTI2YTMxYmNjY2RhMjhmYzM0OGU1NTkxNTAyNGM5ZGM4YWFiYmY0MWRjYjU2ZmFiNzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyNmZiN2E4NTAwM2U1YmQ3MTIxYTE2MWY4Y2NhZjRkZTMxODlmYmRkNDE5MjMwNzg2MzAwNDg1MjYwNDE2NWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyZDJlNjU3YzQxMWM1OTc2Y2RjNGQzNzk0NTIzOWFiOTBhNzA5NTU5MzdmNmNlMGFiZjg5ODkzOTY0OGFhODMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c0f690211d248b59b2108b5c5c876c5",
+      "statement": "The Sesam JSON push sink defaults batch_size to 100 and always sends a final empty batch, so sending 150 entities produces batches of 100, 50, and 0; protocol clients may alternatively include entities in their is_last request.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L91-L91",
+          "version": "repo-lines-v1:sha256:3be0aa23fc2771c724ac9e6dcf938ec9925da9bf0bec38d752c2a114cb3779cf:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JlMGFhMjNmYzI3NzFjNzI0YWM5ZTZkY2Y5MzhlYzk5MjVkYTliZjBiZWMzOGQ3NTJjMmExMTRjYjM3NzljZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JlMGFhMjNmYzI3NzFjNzI0YWM5ZTZkY2Y5MzhlYzk5MjVkYTliZjBiZWMzOGQ3NTJjMmExMTRjYjM3NzljZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTM3NjhjMmI2NzhkZmYyODFjZWMyYTAwYTVkOWQyZTI1NjVlNDA3NGY3YjU0ODMyNDdhMzNiNDliMWMyMzkyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-json.rst#L62-L67",
+          "version": "repo-lines-v1:sha256:5747bb3973879236b445ff100e639d4b07c03f495556e608e2f0de1d5e6c9627:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTlmZmE1NzFkYmFjNWVkYzhkNWUyMWM3MjIzNDZhZTdlMWI1OTg4YWU0Yzc1ZmIzOGM2YjlmN2RjMjA1YmY0YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGMyYmVlMWVhNWI2ZDFhOGI0OGY4NjgzN2IyYTdiNTQwYjhiMjkzMmQ4ZDc1MTNkMTQ5MDMzYzRlZjg4M2E1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzBlYjFjMGZlMTQzMjY1ODlkNDM4YWFhMjlmM2YxMjExOWJmOWRjZjg4NTEwODNkNTNjOTMyMDYwMjk1ZjhjZiJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L329-L335",
+          "version": "repo-lines-v1:sha256:99779dc6b0e33cc5e13f495bf7467ec07db31934d3a5731221d38f7862df56d9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGFlZjBjMzE2NTZkMGEzOGViZGYzY2NjYmMyNTNiYTE2MDYzODU3N2Y3OGU1Yzk5ZTExYTM1NDA4OGJmZDcxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWZkNTNkYWZiM2FkNjAzNDZkOWJlZjgzMTc4OGU0MjhjNzQ3NWYzYWFkZDhjODJkZGE0YzcyMzE3OGFlNTM5NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzI2ZmI3YTg1MDAzZTViZDcxMjFhMTYxZjhjY2FmNGRlMzE4OWZiZGQ0MTkyMzA3ODYzMDA0ODUyNjA0MTY1YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y4YjgzOTFhNjBmMWExNmQ3Y2NmODVmZjQ0MTkwZWJhM2FkODM4MjEwMWU4OTZhMmYzNGMxM2Y3MmE2YTJhZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f6c19e889534258a8652c8213b32abf",
+      "statement": "During full JSON Push, the server should return 409 for a predecessor request_id mismatch, a changed is_full within the sequence, or is_first true when it knows the request is not first.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L74-L84",
+          "version": "repo-lines-v1:sha256:c22768f5fdacab284d7c03262230c085c3925de9453ceadf8f8fb91b9244d14b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlMmVkZGJhMzlmZWQ1OTgzODg5OGUzMTU1ZjNhZDY0MDVlYmMwOTExYTVhNmRmMDhiN2UwMTczNWRmZjNlNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1OTQ2NjEzNGMwOWU4OTJmNTdiMWRmODBmZTUwZWFmODU3ZjJjODY1ZGZlZWY0OTI3MTVhYTA2Mjc2NjAyNDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjM2Y0N2QyOGU2OWU0YzczZTljOTg0YTJhZDdkYTVmZGQ3OGIzNmI3NjViNzc3YzE3YjliNjY0ZDQ4MTU1MzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjZTVkM2FkODEwYjZjZjBiMDQ4ODgzMTI3NGI0NDA4ODk3NzA4OTg1ODVmZDI4YzExMzUzMmM4NjIwNGZlMzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0bccacfc37634e9294ad7d2265d3f29b",
+      "statement": "A JSON push sink receiving 409 must stop the active sync and try later; a full sync must restart from the beginning with a new sequence rather than just retrying the disputed batch.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L86-L88",
+          "version": "repo-lines-v1:sha256:dac24793f1c6c91e8a24bc939c86b289df0e9e45d004b6829a53d3556ea69912:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDYxOTBmZGJiNDFjOTJmZWRmNjliNGQyNzAwYTkyM2M5ZWM4MDM2OWIzODRmODQzNGE4MTUyYjYwZWJkODgwOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGU5NjVmMmQwOTk3M2VmM2I3OTYwOTg0NjI4OGUxZDE5NTExZTgxYTdiYzQxOGExNDMzOWZiMjQyMzVjMjYzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWY0MzIyYzhiZjQ2YjQxYmYxNDY4NDcwNjc2NDg3N2JiYTliZDdiMjJkMjkyMjNhMmNjZTRlMjJmYzRmZjBjMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjczYzgyYjYyZWU5MzFhMGQ2MmJhODZlZjljZDZmYjMxYmMwMDFhNzQzZWUwZmY0MDljNGRlN2QzYjgyYWJjZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8f3fb9f422d4d13b0d0800284176c3d",
+      "statement": "A custom sink's responsibility includes making a legacy target appear idempotent and handling deletion metadata, because repeated non-idempotent target writes can produce different results.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L7-L10",
+          "version": "repo-lines-v1:sha256:2df310d5a2140054f78a3221eb88f1051b7ad5758221295bbac27f85f0fb91b0:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcwNjE5MWVkOGUwNjk1NmUyMjhlOTYwNWJlYzc3OWE3NDI5ODRlMjJhNWJhMWYwYzU2NjNjMzRlMDc2MmU3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjRmM2NhN2MzMjBjZjBiOGNkYTY4YmJkMzk0ZjBjZGFhZDM3YWU2ODQ2YTc0MjQ3ZTg2MDdhYmI1YjczNzFkOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTJlOGU2NjJmNzJmMWYwZGQwNDdmYWQzYzY1NjQxYjMwODRiMmFiZTEyZDlmM2FkYTFkZjg4MDg3Yzg0NzI0MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTgzNmQ2YTQwMTZkMDU2MGZmMjg4M2Y4YjQ3YjAzZDNlNGUzZDM3ZmU2ODIyMzYwMDUyNTg5YjNkOGIwMjllNSJ9"
+        },
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L87-L89",
+          "version": "repo-lines-v1:sha256:ccbf5082877c835b23177c28e33cbc6451fbe86750621c5f1131038a20100a5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY4ZDZhZTNiZDZkZWYxODEzOGJlM2EzOGM2NzJlZjhkOWNiNDMyNGM5NWI0ZWJkZjU4YjQ0MTM4ODJkMDRhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ4YmU0ZWExMTg1MjZlODZhMjJiZjMyOTEwNzY0NDZmNWIxZTIwNWI4NDk1ZWJkNmY0NjkzMTRjMzk4Njk3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmQ5NWYxYmM5MjY4MTNmZWQ2MDc3NTRjYzViYzJkZmU1MDllMDkzMmMxZmFkMjM5MjI0MTFiZjJlMjhiMjBhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZkN2IxMDMwOWE1OGZlZTczZmZiY2ZkNGQwMGE1NDBhNGQ0Y2UwNjNhZjIzNTIwYTRlNTY4MjhjZGM4ZThlMCJ9"
+        },
+        {
+          "resource": "repo://hub/idempotency.rst#L9-L25",
+          "version": "repo-lines-v1:sha256:c145851ff05d7cd1f28482c88c75aa53621a2605292f1de3ee2957fcda33ea4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2YTdkYmUzODg0NmUyNjgzYmRkZmNjMDAxYWQzZGQ4YjhlNDY0MmQyMjc2OTliOWE1ZjY3ZTdjMmUyNTVjNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2MjI5NmY5Y2Y3NWM3Y2U2NWJmZDUxMjczOTE0Mjg0ZTc3NWM1ZDgwNzk3ZjAzMDFmNDRhZGY1ODdkZTQzZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVjMGI2Y2VkYzkyNjc1ZGZmZDU5M2U3NGU4ZjFiNzA1NDVkODQ3YmJjNjc5MmEwNTIwMzAyYWY1YmZjZWI0Y2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzYTI0YTEzY2RmYjFhYTZjZTE5Y2Q5YTViNWE1ZGFjYWMxOTVkZGE4OTM5ZDYyYzBiYjZkZTE5OGJiMTQyMWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9e9b8d0038c34c03a4c53e240776505a",
+      "statement": "Microservice systems require docker.image and docker.port, determine their own base address, and support private image repositories using docker.username and docker.password, separately from HTTP service credentials.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L112-L140",
+          "version": "repo-lines-v1:sha256:b88410db1b8c9d63124604993559308755677aaebe78330803139d5823d542be:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhMDVmOTYwYTE3NjZkYWQ1N2VjYzFkNWVjMjM1NWJiZGJhYTUxMjQzMjIyNTExNWM2OTc2ODRhZjU3ODYzYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyNjBmNWQyZGNlMWFhMzhlZWE5MWUyOWU0OTI3ODZiMDk3NDEyYjkxN2U5ZjRiMmE2ZWJiZmIzZmJjYWYyMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L197-L214",
+          "version": "repo-lines-v1:sha256:9a153dc43ac6753e30cbaabc3fbb95e26e70f79397a346834e1f25d5128da779:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4ZTE5YzU0YTQ0NmM5NGEzNDcxNjMwODIyMjE5NzA2MGQ3ZWJmMGFmYWJlYzk3MWY1ZGM5MzU1YWY2MWYzZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlZTg5NmY4NDUyMWQwMTU5N2E0MDE5ZDA5MTg0MjVkMzI5YmM5ZGFmMmRlMmU0MjljOTA1MWM0NTYyZjhjZWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L6-L14",
+          "version": "repo-lines-v1:sha256:13bd8b12ef2fd66e858e1ec1faca02cce088f2c5ecdc01b8951dae39aec606ed:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjkzZTc0MjJjMTgxYjUzNjdiOTIyNWIwZTkwMjk4NjVkNjEwZDhiYzEzYTRiNjQxZTIyNDA0NjU1OThmNjg0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MGIwNjI0OWI0MmEyYmMyNTFmNzM5ZmNlZTQ2MzY2ZWYwNWVhY2Y1N2Q4MjNkNWNmNDBiMjE2YzA0MGU4ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmU4ZTFhNWRjNzU5ZmUxNTAwZmNhN2E4NDk2OTliOGNjMGJjODkyZTIzZGQ2Yjk3MGZmYzU0MGZiZmQ1YmVmMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjE1OTA1YWMwMDYyODc1Yjk4Njg2NmIxODFkNThmNDQwMzRhZjdhZTljY2E5NzFiNTcyNzc1YTQxZjA3OTFmNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4bcf8015ced0488a82e9ca04fb59ed88",
+      "statement": "The documented single-machine architecture provisions user microservices as individual Docker containers, while the clustered architecture provisions them as individual Kubernetes deployments; the self-hosted Kubernetes installation guide is marked draft.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/behind-the-scenes.rst#L27-L41",
+          "version": "repo-lines-v1:sha256:0614a154580f2e371001c6269f3513fdab5d108f5294bb55bf7369dca611b245:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3MDMzNGVkYWZjY2ZkMDhjYWVkNjBjYTBkNDk5MzhiMDUyYzZhYjUyZmQ2MGRlMzNmMjEwNGY5M2NiMDFmOTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhODNkY2Q2MmRhMDY5ZTQ1MWEwNDFlYzJhYjIyNWU3OGM0ZDFiZTZmNjFjZmRhMWZhMjVkYWFhZmJiYWY2NDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0Yzg1ZTc5YzM1NjViYmFmOGU2ZWM1NjQ1ZGE1NWY4MWNkNTc3MTY2ODhhMWFhOTRiZTIwMTYzNjU5MDVjZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhZGI2YzI1M2IwYjFmMjM2NDMwZmExYTdjNjdhNDEwZDhmODc5YzljZDg0OGZmODRjNTU4NDAzNDM3ODI4YjQifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/behind-the-scenes.rst#L55-L76",
+          "version": "repo-lines-v1:sha256:7511dc9ab37e846b032cb2b8f6aaa689a9e6e114d619d9f2d0d3e04a976510b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZWYzZjlmNjQwZTYyZDk0NWQxNjNiY2MwNThjZDQ0YTFkNjZkZjYyMmFiZWIwYzY3ZjZhYjMwM2JiYTA0ZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzZDE5OTQ5ZThjZTJhMTMxMTI0YTk4NGNkMDJjZWYzOGRhYWYyYjE4MzA2ZmQ4OGZlMDljZjg0YTBmNTlkNDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlZWI0MzU2MGYwYTQzYjdmZWRhYmY0NjM0OTZhOGE1OGUxNmUwOTdlZjc0NzE4NjUwNGNkMzVmZDM2NGMxNGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2NjU0ODJmZjk0ZTExNzlhZmMzZDNhY2I0NTk1MTljZWY4NjI2MjBiNjU1ODU0NGY0ZDRmNzlkNjcwODJjMTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/self-hosted-k8s.rst#L7-L15",
+          "version": "repo-lines-v1:sha256:ab329771d88db0b72eb5f8569f98a95fb04ff2ae6ac02c42c6917903129824b5:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2Y1MDYyYmU0OWI2MGZhNjI0Zjg2NDY5M2IzNTBkZDkwNjEzZWZmNzgzYWMzMDQ0NmE5MjIzNzQ0YmQ2ODA4NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzNkNjk2YWQwYjBjMGU5MzMyNDE4MzlmMDk5M2Q5MjY0YjA5ZGQ1YjhlZTZiYjU0NjllY2FlNzA2ODhkNTIzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTAzODE2Yjg4YzM0NzQzYzU0MjM4OTVkNWE3M2Q3MTBkMjUxZTJkNmU3YjJkNzM0ZGEyOGI3NmJhNDdmNzY4MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2MyNTRkMjlkMTllZTU4MGY0ODZhZDg0OWYyMWI0MzEyNjUxZDRmMjMzYzQxMjA4MDMwZmIwMzgzMzYwNTQxYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7414e4882b2462ca83cab84578c9314",
+      "statement": "Managed microservices use HTTP by default and use_https enables HTTPS; URL and microservice certificate verification defaults false, and URL custom_ca_pem_chain supplies verification certificates when verify_ssl is true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L184-L194",
+          "version": "repo-lines-v1:sha256:a47729788ec8663af61e7d41a26aeff6c6958a9300c725329937fc48cb1bc7eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YjVlNjg1ZDU1MTliZDY5ODY1NzhjNmUzZmM4ZGY5YjM3OGM5ZTJlMmUwYjc1N2EyNzUwODg1YTY1NmViMDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1NTg5OWZmN2NkNDVlMTJmZWU4YzAzNTdkMTNmYjE1MTVhYjIwZTY3N2NhNTQ3ODk3MTkxY2JmODEzOTQ5ODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiYWJhOWViNjA4NWJjNDdlNGI0Y2EzZDgwZmFhZTgyYTQ4YjNkMmE3YjdiMGVmZjEyNDYwN2ZmMGFiMmMwMjAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L86-L97",
+          "version": "repo-lines-v1:sha256:261a57a04c1daf72643c05df723a612f3338d12c0aa633951b81b59091ff98e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1YzFjODk0MDBkYzVjYjE5NzM5NjM2ZWMzM2YzN2Y1ZDBhMTY1MTY5YzAxODE3ZjdjYmQxNTBiMDA4NmJhODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNGIyODEyMDY2YmMwOTAwOTNjNDU3MmE4ZDRkYTMwNDM4NGRkMWYyY2QzYWM1MmM1ZjBjMTY1ODgxZDQxODkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7afd53a4e0874bf5b9c0c468ba78c5c9",
+      "statement": "Microservice IDs are local-network domain names constrained to 2–63 characters, an ASCII letter or number initially, and letters, numbers, underscores or hyphens thereafter; lower-case letters are advised to avoid DNS lookup errors.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L90-L97",
+          "version": "repo-lines-v1:sha256:a80925d34453c27b769a11ac62c8fb56a4405b5d3d6543323fa2837c535dda96:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWU1MmE1YjlhMThiZDdiMjZkZTBlYmQ5ZTZhODAyOTJmZTkyOTkyZjk1YzI3NjJkYjIzNTZmOTkzODFlNGI0NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNjOTI2NTRlOGNkODUyOTQyYzc0YmI0Y2IwMTQ4MWVmZDQ5MzEwNmYyMTJlMjJjZGYyYzY5MWFhODg5ZDE1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjc5OTY5ZmEwZjE0YWI3ODEwMWY1ZTllMTY5MzdlZDYwNTYwZGU5MzNiMDBmNjU4MTQ0ZjFjNjkxZjZkNjRhZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_97458699bb2449cfb378b875e10be039",
+      "statement": "Microservice docker.hosts provides container-local hostname/IP mappings, URL systems support HTTP(S)/SOCKS5 proxies, and the Service API proxy forwards requests to managed routes at /api/systems/{system_id}/proxy/{rest_of_path}.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L162-L166",
+          "version": "repo-lines-v1:sha256:de4ee79b6459b024e9ee465c9521cc65692379cca1724c6ec459d6d8d7051520:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTc0NmIzZmQzMDdjMDgyNGEwMjllMjYzNzZmMTZiM2JhNWIzMTE0NDI1NWMxMWEzOGE2MTg3MjI5ZjQyODQzZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQwNzBiOWMwZTNjM2FhN2M5ZmUwMzIxMDcyYmFlM2Q2OTY3ZGFiOWViYWY4N2IzMDkzYjQzOWI0YTU1NzZlYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTRlZWExNmZhYmRkYjRhMDZkZmQ5N2VhZWI3OGI4NDU3YzlmNzIwZDdlMDZhOGZkNDM2MTVjZTE5NTJiZTAxZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDE5ZTc0NWY0ZWQ0ZjEzMzQ3ZTcxN2ExMTkwNjNhZDhmMDM1MGRkZmZmYTRjZTU4YjA1MzhkNGExNTFlOWIyNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L167-L174",
+          "version": "repo-lines-v1:sha256:c7ed218f4357937be9f96123fe11e0826d6ceb57a877c1fe62583e21225b81fa:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTAxMTVkN2U3MTRhOGIzM2Y3ZmNjZTdmYmM1NGE1MGYyOWU3MDU1ZWNmYmU3OGY5YjYxZTFhYzY2NTg4ZTBmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U4NjlhYjY5N2UwZmZmZWJmNjkyOWNjNTQ0YmZiNGFjNGUxMzk0NDA5NTY0ZTNmNGY1MGYwODRjNGQwZjE2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2401-L2440",
+          "version": "repo-lines-v1:sha256:7d47477b296e00ffb7e4f41f0a397295c66cb49383f5eeb9ae1fe02e50fb01df:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1ZjBiNWIzMWYzNWFmN2EzNjJkN2I5OGM0NmZkN2Q4MWRiOWNiZDBmMzA5ODE1ZjY2ZTE4Yzg4Yzc5NmNkOWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlM2U5ODBkYzc4MjE5NGFmZmVjMTk1MDc3Y2JmZTE3OTc4Y2I0YTFmMTNkNDY5NzdlZGZlOTQ0M2NkYzQ0ZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2Y2IwOTY1YWRlYmUwOTZkMmJjMTBlMTUzZjA0YTdhN2VjNDdkMWE1Y2JlMDdjMTQzMzJkMjc3ZTI5ZTc5MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViYzQwYTc4NTcxNjhlNTYyODYwYWM3Njk1OThkYjEyYTNhNmFhMWU2MTE2NDI0Y2I4MDYwMWM2MDM5MDZjNDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f2583b1d8f184068802515d15376dbb7",
+      "statement": "docker.skip_pull defaults false and microservice restarts, including configuration changes, attempt to pull an image; docker.pull_image_cron_expression schedules image pulls and restarts the container if a newer version is pulled.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L169-L181",
+          "version": "repo-lines-v1:sha256:14939252847de3ce2797c5b488ae37372cb3830458850e6663c814c65ffeaea1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFlMzhiNzhiMTMyNzVkNGZiZTgwNWM0ZTYxYTFhZWQ1ZTg3NzgzN2ZlOGRjNmUxZmZlMDA0Y2M3YjFkZGUxN2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4N2E5YzQ5OWE0YmZjNjA0NTIzZmY4Mzc3ODZlODlkNTE2OWIwZGJkMjMwMzY3NTM1MGI5ZmU2MmE2MzJkYzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIyNDdhODI5ZThkMGM5YmQ4Mjk1ZGExYjE0NzU0Y2YwNjQ3NDBiYjU0OGJlYzNmZGM3YzhjYzZhYzZhNWNhNGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ4YjhhZTQxYWUyNmM4ZDYyMjg5ZTJmYWIwYWE3MjdlODk3M2YyNGRlMDIzOGQ0MTdiOGY3NDhlM2ExNjUwZTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f73ed0dbb1f4b5baf92b929da6bb318",
+      "statement": "Microservice eager_load false permits delaying startup when no pipes reference the service, while true forces startup and overrides service metadata; its documented default is true except false on developer subscriptions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L230-L237",
+          "version": "repo-lines-v1:sha256:a08f70875665743a29d5a149374b012b597ec4c3de64c99701c67036fc15ccb7:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2QzNmZlZWQ2NjI0YjAwMzllYjEyODgxYWU1NTQ5ZThmOGZlMTg2ODc4MmNlOTBkYTFlYTgyNjAyMmUzZjc2NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGFiOWQ5N2Y2YjdhMzJhNTIxZmNkYzA1ZDBjMzY3NjYwNjk3YmE5NGYyMzg1YjcyNjY3MTU1Yjc4YjgwNGNiZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTYxY2JjMDQ3NzU3NjgyNGQxMDQ2Yjg3NTU4ZTI4YWY2MWIxMTI2ZjA5ZTY3ZmE5MzE2ZTU4ZTE5NDljMjMxZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fd6120655c3b41e29da479d7b8483850",
+      "statement": "Microservice docker.memory defaults to 128 MB, and the documentation warns that container resource use affects the node and recommends small containers and streaming rather than storing complete transfers in adapter memory.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L144-L147",
+          "version": "repo-lines-v1:sha256:6574de099a17b4c48f9722f4b4c35056a6fc8132dc1f15c789476940a0637b1e:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDkzODRiZDk2MjU5MDUyMzRkNGZiY2Y0YTBiMjk3MzE2YjI5MWNlYzMwMjUxYmM1YmU5MzA0NmRmMjBiMmY2MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDVkNWVkNWVkYjhiYzQ3MmUwNmU1MGEyODgzZGEyODUwY2UyNDhkNzc4ODliZDBmMjY0MTVjMzc0MzFjZGE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjU4MjljNWYwZWMxMmQyYzhhZjM3MWY3ODJhYjAwY2I1ZWFiZWQ3ODIwOGZkM2UwYTc1NTMyMGJiNzc2NGM5ZiJ9"
+        },
+        {
+          "resource": "repo://hub/microservices-in-sesam.rst#L31-L36",
+          "version": "repo-lines-v1:sha256:c15db431391b4cdb7bb282f2327f3f099233113a152d00f867200f6eb29b34cd:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBhZmZkNTk5YzVkZjE3MDExOTZhMjJlNjhmYjc3NTlhYjQ5ZTNlOGVkMzEwN2JjMzZlYThlNTFmYTk3MjdjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI3MmY0NDA2OWY2NWQ0MjMzYjAzY2QwMjg2NmYxMWQ3YWVjY2Q3OWY3NjYxMzBkMWJlOWU1ZjQ0NDUyZGNjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI5YmIwMDNmYjI2MTVlZTQ3ZTJkMTc1MjBmMGRlYWFmMDE5OWIxYWY0MzdhMDRjMjM1M2I5MjFjMDQ2YTE0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWM2YTYxMzgzODYwYTJjYjJlYWRjOWIzNzI0ODgxM2Y3NjgzYzkzZjg5NGIzYzg4NTg5ZWQxODhmN2MxMDMzYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8720be2fd2834e648b274a7763cc5aac",
+      "statement": "Configuration values can reference $ENV and $SECRET, and docker.environment passes strings unchanged but serializes non-string values as JSON strings; adapter-wide values, endpoint-specific URL values, and protocol state parameters serve distinct configuration scopes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/secrets.rst#L6-L8",
+          "version": "repo-lines-v1:sha256:dc8c2cbde8550b40bb113bfaf8b31dd020e2ca274ae05bbf41854ae63cf39364:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ5MWUwYmZkNDQ1NjVhMzE2NGNjNGQzNjE0ZjJmM2I3YzAxZDQxZTcxY2IyOGJjNzdkZTdmZTVkNzZjNjQ3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzI4NWJhYjBhY2ZjZGMzNjdmNGMzOGQyMjNkYmZjZmFiOThmMTEyOGQ2MGZjMjM4Y2UyYTgyNWYzODRmZWE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjhjMDNhYzdiNTgzNmNmNTQwMTRjMTBlNzlhNDZlOGY5ZjJjODdkZTUzNTE4ZjdiZTM2YjcyMmZjYTg2OWMwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjIyN2E2ODA3ODQ3NWFkZjMzZjQ5YmQ2NDQzMWJlODMzZTI2ZmM3MDY3YTExYTBmOGIxOWViM2EwYjE5MDMzNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/environment-variables/environment-variables.rst#L6-L7",
+          "version": "repo-lines-v1:sha256:22e6498fc33987acd7fde82f619ba8dc2e9811dcf0b14f0ebd5f898f41c56b26:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWFiM2MwNTZkOWJmZDk0NGQxM2FiZGI3YTEyODkwNjBlYTc1MGUzMzhlMWFiZWFjYzgxNjIwZjdkNGQ2ZDg0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRmMzg0ZTlmYTZhMmYxMDg4ODAyODQ5ODhlNmQ2MTkyNmJkZWFhNDVmNDAzYzQzNmQ5Mzc3NDA0ZjY0MDRlNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2QxM2Y5YzdjYTVlYjQ2ZTFkZjZhMzVmOWYwMjk2ZTZkZGIyMDQ0YTczOTlkNjY1NTNkYTljMTcxM2I3NWNiNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWRlZTkyOTFhZWZlYTM4ODcwZTkxNGRjNmY0OTBjOGEwODJiYmZhYzI3ZGI2NDAxZmFkM2NiOTgyMmI3ZGJjZSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L124-L128",
+          "version": "repo-lines-v1:sha256:2d02254198821d395f8601dd8f0e46757f9dfc18378f00efd480a9bb0078c7ee:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODUzZjUxOGQ5MTdjZmY1M2I3YmJlMDNiMDA0MDAwYzFmNzlmZGVjZjIwNGFhNDM5YWVkNWZkOGEwZDQxYTVlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBiMTAzOWUwZWUyZDE1OWQ1NGY4ZjhhZTk3MTg5NGNiYzQ4OThiY2YwOTdmZDBhYjRiZmM3Yjg5ZGZhMDBlMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/microservices-in-sesam.rst#L14-L24",
+          "version": "repo-lines-v1:sha256:7feea41159109da62ba3e2996d5d4de6d76ab349a2e384532dacb56eef887cd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjNGU2ZDNkZGQxZWYyMTY3ZWUwYWY0NTljNzY0MTNkMmE0ZGQwMzI3NDJiODA1OTE4YzdmMDg2ZGU3YmM1ODQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MzNhZDc5MjNkZmVjYTg0MDRhMTUyNjg5NzYwOGJhM2Y2YTMzODI4YWExMDljMTUyNGJhYWJiOTIzOTA2NzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1MWUyNWMyZTcyN2M0MmYzM2Q1NzA5NjI2ODM3ZjQ1NmQxYTE5ZmQxMTk1N2YzMjhhZDJlMDEyMjRkZmY1MTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMjBiYTExMjEyMDA5OTFmMDUwODhjYTBjMjE5YjI2N2U5ZGIwOTQwZDVlZGFkOTdiYzliMjdjMDU2ODA2MmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_96cdbc85dc444b7babf066181ca5f8e9",
+      "statement": "Secrets are write-only and intended for credentials, with local secrets recommended; deleting and re-adding a system removes its system-local secrets, requiring re-upload.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/secrets.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:d22d17c95c8159d3de42a67f87a74605774655a02fc85a60c296e52cd9fdb56f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ5MWUwYmZkNDQ1NjVhMzE2NGNjNGQzNjE0ZjJmM2I3YzAxZDQxZTcxY2IyOGJjNzdkZTdmZTVkNzZjNjQ3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc4MmY0NjRkZGYwN2RjOTZmZWUyMTNhNDdhYWE5MDZhNDFiMzA0ZWNlMzMyOTMyN2EwMGViMmEwOWEzOTY1MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjhjMDNhYzdiNTgzNmNmNTQwMTRjMTBlNzlhNDZlOGY5ZjJjODdkZTUzNTE4ZjdiZTM2YjcyMmZjYTg2OWMwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L176-L187",
+          "version": "repo-lines-v1:sha256:8a699b0ffecb2619d78e0b1d761b1416fd79b6cc24f6cab5b8957a93789bbe26:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5YzdkMTU5M2NkMTViNjEwNjY1Yjk1NDI3YWI0ZmMyYTE2NzM5MmVmM2U3ZDYxZTAyZTRlYmQxMDRhZTEwYjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNDE0OTczOGE3ZjJmYTgxNTU2ZGYzYWNmODE2YjIwOTRmNTVjMGJiMDYzZjgzM2Y5NGE4MzU2ZjI3MzA5ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxNGE2NjA3ODdmYzdmZjVhMDYyOWQwY2ZmMWE0YTQ3MGI4ZmU2Y2RlMTFjMDRkZGUyMDBjNjYzMjg4MWM0NDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwZmQ0ODNkOGQxYzVkOTVkMWE3NmNkNGY5ZDM5ZWRhOTZmODcwYjNiZWJjY2YyYzZkOTNjYmI3ZGViZTUxMDgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b185da0c3f64d858c45349923534c47",
+      "statement": "Most Service API calls use a JWT supplied as Authorization: Bearer followed by the token, and actions are controlled by permissions; Pull and Push examples use the equivalent lowercase bearer scheme.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L22-L49",
+          "version": "repo-lines-v1:sha256:6ee3c279afa2d38047b73da7bb7607f03baf346d71a271a2f9cc871794bea2c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhNjEzYjEyMThmN2UzMThiYTM0YzdlMmFhZWEzNjQxMDJiMDAwYjY1YzRiZTViMTA4MzA5Y2VjZGJkMDU4ZTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkNTNjNzhjZDYzNGZmZjlkZGFkMjEzNzYwNzBlMjQ4YTk5NjBmODdhYTk5ZjU1MTc4ZTU3OGQ3YTE5NmZlM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEyNGI0YThiMTFlMGJjNzEzNTc1MjIxMGEyYmNjZWJmNGY4ZTVjNDc1Y2E1YmE0NzlmNzFlMTUyODFmYjA3NmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4NTU2ZDEzMjcxZmYwNjU3MDNmOWZmYmVhOGEzNWFmMTJhMjczOGI2NmVjMDVjMTM3ZGVlZDFiZjhmNzJiNTgifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L30-L63",
+          "version": "repo-lines-v1:sha256:83bd6116ee75641a1e3d9e3e68ced8121415062033cb33a7b008e13447ecdb59:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNzMwZjc0MjE0MmViMzM5MzU1MDM5ZjU5OGJkZTU1YjY5MTRhNWFkMTY5NTVkYTIxYTk3OGY5Yzk0OGZkN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2ZDg2YjdjNGIyNmE1MGU1YjVjY2Q3ZjRiZTIxNzdkZGNkY2I1OTU0MjY1ZGYyYzQwZmY2Zjk1MGRiYzk3NDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzNTkwYjRhYTAwZmU2NmExZTJlN2Q0YjdlMWU1ZDU3OWRjMTdiMjc1NjU0NGU2YmRjYjhmZGQwNTE3Nzg5MjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiOTc1Y2Y3OTBiNGMwNTRhNjQxMTFhODgwM2UwNWExYTk2ZjU0NWNlZWRhNzUzNjAzYTU3ZDA1OWEwNzIwMWIifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L166-L172",
+          "version": "repo-lines-v1:sha256:002f91c2d81b7405190e1eebaaebc0cdf3ce119857a4adba40a5e5159e409547:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTYyM2FiMzI1NGVhZmRmYmM2YmVlYmM4N2M4OTk0YjI1MjZmY2M1Zjc4ZTg1YjdkYjY0YTY4NzcwNDdlNmZjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTllNDA4NGU2MjFiOTViNTNhMTJjYTI0NWNiZjUzNTRmMWM3MjA1ZjllMTcwODk0Zjk2ZmFiNzg2Zjk2MGRhMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2E2ZmNjZGEwNzIyNzU1NzJhZmZhM2NkM2RhODhhYTY0ODhkNDgyZGZiMDRhMjlkNjIzNGQ0NDE2YTA4ZGE1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmZmN2QwMTdhZTI1MjhiZTE4ZTA3MzA0YTIxY2IyODE2MWY5Yzg1MTgxNjUwNGJiMzcxNWU0ZmMxMDFhZjhkMiJ9"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L117-L123",
+          "version": "repo-lines-v1:sha256:67beb743bfbc9ef8f90a5d2c26d7e26d685879b5c5714e76b5bd734435c793fc:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTYyM2FiMzI1NGVhZmRmYmM2YmVlYmM4N2M4OTk0YjI1MjZmY2M1Zjc4ZTg1YjdkYjY0YTY4NzcwNDdlNmZjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTllNDA4NGU2MjFiOTViNTNhMTJjYTI0NWNiZjUzNTRmMWM3MjA1ZjllMTcwODk0Zjk2ZmFiNzg2Zjk2MGRhMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmU4YjM3MDZkZTU0NDFhMjU5YzIxODY2ZDVkZmVlMTg4N2M3OWY3MGIxMzYzNDgwNThkM2IzYWU2YmJhMTJkMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTc2NDE3ODg2ZmYzNWE0M2Y2YzZmMzBlYzFkMGIyNDk5Yjk4MDc5YTY3NTU1ZTU5MzgyMmM5YTgwMmE5ZWQ4OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_482f68da18dc480dabc286c689dc896c",
+      "statement": "URL authentication is opt-in with basic, digest, ntlm, tripletex, or jwt, requires scheme-appropriate credentials, and JWT authentication requires jwt_token and overwrites Authorization set through system headers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L101-L135",
+          "version": "repo-lines-v1:sha256:cc6b1414b03523c7f4947281c87866289028f1b609e960bb0b6589951cfa6857:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4ZTE5YzU0YTQ0NmM5NGEzNDcxNjMwODIyMjE5NzA2MGQ3ZWJmMGFmYWJlYzk3MWY1ZGM5MzU1YWY2MWYzZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1NWNhMjJlMzY1Y2I4YWQ0NjkzMmY0ODY3NDVmODllOWEzMmYyNmJkN2IwZGE1YjFlY2ZiNGNlZWNjMmMwYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6d56f1c9ff52413ab76b9ba890361395",
+      "statement": "Microservice HTTP authentication is opt-in with basic or digest, and username/password have no effect without selecting authentication; adapter upstream authentication remains custom implementation logic supplied with its own credentials.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L197-L214",
+          "version": "repo-lines-v1:sha256:9a153dc43ac6753e30cbaabc3fbb95e26e70f79397a346834e1f25d5128da779:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4ZTE5YzU0YTQ0NmM5NGEzNDcxNjMwODIyMjE5NzA2MGQ3ZWJmMGFmYWJlYzk3MWY1ZGM5MzU1YWY2MWYzZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlZTg5NmY4NDUyMWQwMTU5N2E0MDE5ZDA5MTg0MjVkMzI5YmM5ZGFmMmRlMmU0MjljOTA1MWM0NTYyZjhjZWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-custom-data-source-microservice.rst#L120-L136",
+          "version": "repo-lines-v1:sha256:7fe9a631e5063b3854984b61eee737ce6a0632a10879be8aaa499e00d688bd81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MTMxMmM1MzcyNmNlOWQzZTIxYTc0YWMwMzM3ZDA4NWMwNjlkOGM0ZDRiODgzMjg0ZmIwM2QzZTlkMGQyNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZTgyZjljNzYyMjcxMTRlZGQyNDljMzRmOTc1NGE2ZDNjMTUwNDkyOTg0MDQwMTRmMDlhMmQ4MzQwMDBhM2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU4NDRiNzYyNTA1MWQxZGNiZTEzYTI3MGQxMWQ4Yzg1NGI1MjkxNzRmOGQ2NjcwN2FhN2ZmODliZWMzZmI2NGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMzMjJlNWQ3OTliMGVhYWU1NTg3ZDI5YjhiYzNkNWJhZmU2MTI1MzY0NzAzM2RmNTY4ZWU2YTFjYzVhMmYzYTcifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-custom-data-source-microservice.rst#L70-L76",
+          "version": "repo-lines-v1:sha256:2491898a2e190d4c148b63d8d928d292564ad955297d76a3a157f63a3f28ee09:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY3MGQ1NjU0OTc5YzQwNDYwZWUyMmY4YzUzOGYxZmZkMzMxMzU2ZTQ1YjE0ZjYxOWY3ZDJlMjE5MWIyN2NjMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTM1MWM1MzBlM2IzNTg3N2ViNjM3YzkwMjVjMzI2Mjk4NGViZTQwZjMzMWJhMGRmMDRkMTI0NTYyOWFiMDczZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGNiN2NkOGQxM2Y4NTM3ZGNkZDU5NTQ2ODAwNWFiYjg3YmNkYjQxYjE0NTI0MjQ0ZmFjNDI1ZmFlMDViMjgzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGU0NTYwNmE3NGQ3M2E0N2JjNGZmYzc4YWU0YmMyYTg0MzU0YWIwMDkyNmE4NzYxMzI4ZWRmNzYwYjNkZjk5ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c58d4b212a8645a0a2baf817674f9468",
+      "statement": "URL OAuth2 supports client-credentials and refresh-token grants, cannot be combined with JWT authentication or jwt_token, requires TLS token and target endpoints, and defaults refresh_window to 30 seconds before expiry.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L141-L152",
+          "version": "repo-lines-v1:sha256:adf67eadf978b476846d16488df9b9a689238c4d347beaaa01618283617d7f05:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMDQyZDI4MDc4NTNiYTQ3MDNiN2EzNzUxNzBhNzIwMTUyYjMwZjVkOGVkMThiNTM0MjRhMjg3NzNhMzkxODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxODk2MmVjMTM4YzU2MTg3YmY3MzJiZWI1NzljMWEwYjhhZDI4ODY4YTU1MDQ1NTUxN2JiNDIxYTdhN2VjNjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzYmEyOWMxY2ExMmQ1YmM3Y2M5MDUyZTUwMTk0ODhmMzk1ZTcyYTY0MGViYzNhNDRlY2FiZTQxMjk2MmJhZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_269e0a10cc1243f8ae5118b42fc21fdb",
+      "statement": "Receiver validation_expression renders a Jinja template on each request, accepts empty output and reports nonempty output as an error, and exposes url, request_params, request_headers, secret access, and filters such as decode_jwt.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L153-L168",
+          "version": "repo-lines-v1:sha256:9f5bda6ee8f5424cc3eb3d91e9c2ffaa43bbc370d3671dea46ef956002fff410:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyZTQyNTU0NjNlNjY5NGMwZjk5ODEyZmFlMzVjY2I0YjkzZTY3YzYzMzA4MzllNTMzMjU1MzA3MjM5MjJjMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNTMyNDc3M2YxZjI1ZDYxNzBhY2UyMDRlNGEzZDc3MDEzMjdjN2MyZTAyZDUzYzkzODZjZDMzMDY1YTMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5YWQwNzZkMzdlNjE1ZWYyZGY2MThjNzk2NmU5Njg4M2I3ZWJmZDE5ODhhY2U1Mjg2ODBiMTM5YjVmMjlkNDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5ZjAyZTZhMDFhNDA0Y2Y2Y2Q1MzM4YzhhMDlmMGM0ODg2NTU4NjYyMGZiNmM2NGI3YzFhYWYyYzI3NTU1MDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_45726e2d80d74c1386c12cdae01d66e6",
+      "statement": "Receiver custom validation without JWT assumes write_data permission granted to group:Anonymous; system secrets take precedence over same-named global secrets, and using them requires the pipe to have permission to read the system.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L160-L172",
+          "version": "repo-lines-v1:sha256:c54e7d5c4ab7723c00c334e726296b49119b2725c27827beb89c4edd105c8fdc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiOGJiNzA4YTVlZGZiMmY2OTcyODIwNWZjMjg2NzM0YWRiYjg0YjIwOTIzM2ZlN2NmODZjYWZhNmFiZmZkZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwM2QzNTM5MzUxNGU3YzQyNjJiZTAxODM5NTVjYzgwMmUwYTk1ZmNiMmNlNzFjZjM5ZjA2ZDhjZDU0MTIzYjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNDA1N2MzOGVmYzE2MWE1OGQ2M2M3NzAxNGZjNDU0NGQwY2UyZjU3MzA1ODJhZTFiMDhmMTNiNjE1NTU1NmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8448927a94bf4ba3bbf633eeee9802cb",
+      "statement": "Receiver POSTs set sink-dataset completeness to current time by default, but a positive integer X-Dataset-Completeness header overrides it, with microseconds since epoch recommended.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L177-L182",
+          "version": "repo-lines-v1:sha256:fb8675dbe6d30c3a472fec1d08514645e2eda94ebd4737bec9a30f64330f97ac:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjg3OGZjNGUyNWU5NjYwNDEwNGE1NTMwNDQ4MmJmZWIwYjYyNzhjNTE5ZWVhYTkxODZmNTYxNTZmZmRkNTlmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDMwNjAyNzNhODNmYzMyMmE0MWQ1YTMyYThlYmU5ZTUzNTQzN2MwYjExNTE1ZDJiYmJhNzU4NTgzZjJkOTZlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGY1ZmRlZmRhMGI4NDY2NDRiMDE2MjNiN2Q4NGRhZGEyMmQ1ZTc2YTc4NzcyZjJlZjc1ZTYzOTM0MDI3NDk3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjJhYTcxZjM4NjY2ZWY3YjcyMGE4ZmIwOGNlMTQ4NzJlYjI3MWM4ZjU4ZjYzODY2NmUwZmUzMGE3OTI3MjgwMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2c312e555b3c4c908e1ed10c0ffc9e36",
+      "statement": "HTTP endpoint source auto_populate_dataset defaults true, initially marking the sink dataset populated, and can only be specified for dataset sinks.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L83-L88",
+          "version": "repo-lines-v1:sha256:deb684b57e3a791b937214bae05e880f06a4641b73c0b1c298d32e928bc2e27e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTZjMWExZTg1MmU4MmI3Y2M5YTg3ODFiYzM3YjFlOWE3ZWRjOWQxZDYyZjY1M2IxYTBkMmJlYzczNWQ3OWI5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzcxZmY4MTEzNzg0ODQwMDhkZjJhZWNhMWE3MGZkMjVkM2VkMzk3ZjQzMmU2MGViMzdmMjIwMDY5YTU3ZTY2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9f4c193eea1d46c6a1b0c61eb8ac4c55",
+      "statement": "URL and microservice systems default connect_timeout to 60 seconds and read_timeout to 1800 seconds for their HTTP connections to the service.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L218-L227",
+          "version": "repo-lines-v1:sha256:6dc9ee870fc9dcc609d0102c297192cf696bc1deadbeda8cccbad246c71d32f7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3MzQ3YzZlZDUwZjA1NWJkNmMxNDJhMGVjNGZkZjFmMjNmMDNlZTk0YTEwNmYwNWI0MDQzNjdkYWI4NjYxOWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlYjA2ZmFkNTc4NzIxOGEzZDBkNjNkNzI3NGQwYzc0MGI1OWQ0OTQ4NzljYzRjMjljMTZjOGE1YzcyYmRiYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmZTRjM2U0NDZmYjc3OWNmZjI4NGJlYjVkYTZiMTg1ZWViOTZlMGVmYWEwZmU3YjU1NWQ4ZmRkNjE5ODk0MzcifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L178-L187",
+          "version": "repo-lines-v1:sha256:9236741a4d00c18183293e32bcd517fac84c56f55152d3d057d3115da2b28c86:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3MzQ3YzZlZDUwZjA1NWJkNmMxNDJhMGVjNGZkZjFmMjNmMDNlZTk0YTEwNmYwNWI0MDQzNjdkYWI4NjYxOWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlYjA2ZmFkNTc4NzIxOGEzZDBkNjNkNzI3NGQwYzc0MGI1OWQ0OTQ4NzljYzRjMjljMTZjOGE1YzcyYmRiYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlYmMyMzI2ZmU3ODViNTMxYTg4NWY4MzAzMDM4OWM3ZmI2YjAyN2E4N2FiMzg1Mzg5NDhmNzIxZDJlYjRkMjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cb43d41f4213498c9e0f1bd17ae57cbd",
+      "statement": "URL retry_strategy, also referenced by microservice systems, sets status-code-dependent pump defaults using codes, ranges, lists, or default, with directly configured pump values taking priority; it supports max_read_retries, read_retry_delay, write_retry_delay, max_retries_per_entity, max_consecutive_write_errors, max_write_errors_in_retry_dataset, and batch_retries.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L240-L243",
+          "version": "repo-lines-v1:sha256:c167b24f8152a26a0113885c51a3cf29fe057a94274ea851a5c008492fbb07fa:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZhMmQ0MzVkOWZjOGRmZjRlZWViMjJjMWRhZDVlYTQxODM0MDE0OTY0YmU4MThmMzQ1ZjM0MjMyZmNhNzU1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzY4ZDViZDk4ZGZhMWJlN2U0ZjQxNDE3YzFlNDFhNmY1NTZkMzgzY2E3ZDNjZjI2YzQ3NTZmYzYwZGQyZDNjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTIxMTUzMWYxOTZhY2NhZjAyYzEwYjc2YWMwNjg2NTQzZmY1NzJjZTIxYzMxNTg2NWZiYzJiODg3YWRlN2NhNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L198-L208",
+          "version": "repo-lines-v1:sha256:e2234e1397e52e0ab1b48365d0df09d7c2ca8df2f8cdeba36984281fe9bec2b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2MjcyYzIxNWNhMjI3OWJhMmZmMTExNjkyNmRlMzVkNTdhNmNhMDQ2ZGZhNTg1MDM4NWQyMjg1ZGVhYWRkNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0YzcyYzA3ZmZlNzcwNDE1NzVkY2ZkNjk4ZmI0ZWZiY2IxM2I2MmMyMGI0NGZkZjc2YjE3YjY2ODdhZWZmNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiNDc0NDgxYjJiNDE2MzhhYzlhZjBlZmI2MDE3MWM0NzM1NWUwMTJmNjY1N2FjMDJhOWE5ZmE5NGY4MDA2YTYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L248-L277",
+          "version": "repo-lines-v1:sha256:873660eb7c8502df4d64683267b1dda99fb149d4120024710a9c6cc0aff58207:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZDdjODUxODVhYjUxZmY0NGZiYWYyMjgxNzUxMzA4NmE1Y2Y3OTI1M2JhODkxMTVkZDgxZjhjNzU2MmNiOGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhZDNlM2I2ZmQ2NTdlMDg2NjYyY2ZhMDk4ZDJiM2EyMTNkMzllODhhYTc3YWJlNDMwMDM0MjZlODJkZDg2ZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4ZDg2Nzc4NjE1ZjZhZjQ3YmIxYmM0ZjQwZmFjZTc1Njc0OTc2OGU1MTExZjExNGNmYTIzNGE1MDYwYzI1YWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9af0dd6c59534fc59045fecdd707c44c",
+      "statement": "The documented retry_strategy example disables retries for 400-428 writes, delays 429 retries by 30 seconds, and delays selected 500/502/504 retries by 60 seconds; these are example policies rather than defaults.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-url.rst#L248-L277",
+          "version": "repo-lines-v1:sha256:873660eb7c8502df4d64683267b1dda99fb149d4120024710a9c6cc0aff58207:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZDdjODUxODVhYjUxZmY0NGZiYWYyMjgxNzUxMzA4NmE1Y2Y3OTI1M2JhODkxMTVkZDgxZjhjNzU2MmNiOGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhZDNlM2I2ZmQ2NTdlMDg2NjYyY2ZhMDk4ZDJiM2EyMTNkMzllODhhYTc3YWJlNDMwMDM0MjZlODJkZDg2ZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4ZDg2Nzc4NjE1ZjZhZjQ3YmIxYmM0ZjQwZmFjZTc1Njc0OTc2OGU1MTExZjExNGNmYTIzNGE1MDYwYzI1YWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d00eb6e3dc8841049b1fca76ad93cc99",
+      "statement": "Pumps own entity processing, failed-write retries, execution logging, and optional dead letters; defaults include zero read retries, termination at the first consecutive write error, and zero accepted retry-dataset write errors, which effectively disables failed-write retries there.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L208-L213",
+          "version": "repo-lines-v1:sha256:5e657e9067929e0c0efbb2724239145e97034e3127aeb0f2bfa639cfe5feeda1:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTc3NTIyMzgzMDhlMzY0ZjlhOTMwMzdmMDA1MWNmZDI3MjZlMjFmNmY4Y2Q1OTAxMjc3OWZjZmRhN2RjMjVlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYyZGQ1NDRjZmQ4NDNlMjViZTQ3N2NjMjA4MjljOWViYzZjMzk3N2I1MWJiZGJmN2NjY2RlNTIyYjg0ZTAyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjcxZDlkZGI2MTk2ZWY2ZTQ5NzJlMjE2MWNkZTI3N2VkZTkzYzZjNWQzNTA1ZjI3OTQ4MmVkMDY4MTliMzRhOCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L244-L268",
+          "version": "repo-lines-v1:sha256:3f77f387f26fdb760c95dbc6874266d0e9493a6dfc050c6d6fd296184e86cc83:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkODI3MDkyYmE0OGU2YTJmM2NjYjZlOTVlZDg5NWE0NDUyYjQyODQ5MGIyZjkxMGQ1MTcwNGViMjQzOWZkMGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhOTE4ZTUyMGMzOGRmZTdkZTU0ZTU4OTYwZDlmODEyNGY0OTc3MTY1MGEzZjVmNTE4M2YyNDMzODE0YzE2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhMDU3Yzc1YmZiOWVlMWNjNDdlZjZhMDQzZjhmNGQ5YWRhMGEzYzc1NDgzMmIxODNjMTM1MTY1OTZlMjNhZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNzA5OThhMTI5ODQ3NjNhOTJhMDk2ZjNiYTVkMmUzZTMxZDg4OTdlMmRhN2NiNDc2MzYzNWY0NTI4MGQ4OGIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L6-L11",
+          "version": "repo-lines-v1:sha256:e4438d6c78f02bb8733dc5f3386246a7f2cd3df0c70d20ba92f3218fe3360be2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGExMTA0Mzc4ZmYzZjg2MzhlYTI1NzU2YmUyYjZiNmVjODM5ZjUyMWFjYjI0NzU2NDg3YzUyZDA3NzE3MmZlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjYyNDVhYTRiZjg3ZTc0NWFiNzZlOTcyN2RhZGFkMTE4YTZmNGMyYzEyMjc3YjZiODU0YzAxMDNhNGI3ZmVmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWEzYTVlODc3MDg1OGE4OWU1MjEzNzkyMDQwMzY5NzY2MjliNTM0ZTI2Y2E0MDI2ODYyNjBjMzdkOTI1MDdhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWNjMGUxM2U5MzYzNmZjZmI5Njk0NTU1ZTY1OTllMjBjYjkwY2NmZTRkOWNiNmRjZjRmZDRhMTczNWIyMjVlYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5161c7ca64749898e93f0c05b4d7bef",
+      "statement": "For batched writes, pump batch_retries defaults to 3 and fallback_to_single_entities_on_batch_fail defaults true, allowing single-entity fallback when a batch fails.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L271-L283",
+          "version": "repo-lines-v1:sha256:7fb971c3fb57a955cee5d0ea083c236be1e31b62981c84906b9abcb72a99af61:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzMDViOTdjZDYzMDI0YTZiM2FkNGMxYzE3ODE1ZWRiZGY2MzJhYzJkZjA0ZWFmNzc2NjI1MmY3YTJiNTBhMWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkOTk5YWI5MmNjMjNkZjA2NmM3YmY0NDdkY2NiNWE1ZmU0ZGZjOWIyMWMzN2I0NTJhMGVhYmFkNzRiNWVmZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhMDU3Yzc1YmZiOWVlMWNjNDdlZjZhMDQzZjhmNGQ5YWRhMGEzYzc1NDgzMmIxODNjMTM1MTY1OTZlMjNhZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NjlkNTFkNGM5YzhmYWZjZTlmNDc5OGYzZWQ3OGM0OThlNTJlYmFkYzFjZjEzZmQ0MDAwOTM0MGE4YjdmMDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9c2f4b44e93b4c4ca807c79ab7e92055",
+      "statement": "Managed adapter logs can be inspected in the system Status page, while system APIs expose logs, status, reload, and proxy; pipe execution logs provide failures and continuation diagnostics such as pipe_offset and processed_last_run.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems-microservice.rst#L250-L259",
+          "version": "repo-lines-v1:sha256:b110b1866f80374851ddd2f74852a3bbd5815c253c444f386128579884658a61:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhMTA5Y2FmMzRkN2E2Yzk3ZTNjNDY3NGY1YmNjMjI1ODQyZDdkZjA2MDMyYTUyMDcxYWEyYjViNjAxZGYzNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxMDE1MTBmN2U0NWQ4MWQxYWJmNjViNWRiZTI5N2EwNTg5OGMyNmYzNmYzNjEwNTY2MWU1ZWM5OWY4MGRmYzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliNzJkYmY3YmJmYTAxNDlkNWEzZTQ2ZDgxZGU4YTY3NTcwODViMWNiM2ZhZmE4ZTEyMmZkODk0MzE4NThiNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        },
+        {
+          "resource": "repo://hub/microservices-in-sesam.rst#L26-L29",
+          "version": "repo-lines-v1:sha256:1f645316770e64870f9ee9165b65eb58c338bbc3b899e9aaf1c10d27a7241c64:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTkzMGExODM1MzQxZTdhNjgxOTk0Mzc5MWUzZTcwN2IwNTVjYzAzNzYwYzQ4NGJjYTk0NmMwMjNhNWQzMWYwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBkODFiM2E3ODBhZTMwMmZhY2M0OGZiMjM4NTg5N2I3YTZjM2MyMjU4MWJlNmRmYTM5ZmE0NmYzZTg5YWVmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWU2NjQ2NzcwNjU1M2E2MGY3YTUwOTExMzBiMTQ5ODZiMWJiN2U1N2IyMGE4ZTg1ODlmMTNhMjA3ODYxNGRhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjEzNWZlOGYxNWY0OTRkM2I0ZmZmNzA3MWQyZDhjZDFhYTFkMWQ2Yjc4MzQxZDU3NjhhYWFkNTU4Y2ZjMGU5YSJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-microservice-continuation-support.rst#L226-L230",
+          "version": "repo-lines-v1:sha256:11550d4849f759699c0c8728a864db2c6d8c08c5d1f77101ef4f6d40ce205b85:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlYTg4OTZlNGQzNDdlNTBkNDIwNWUwOWZmY2E4YTU4N2NlNTdlN2RiMTNiY2Y0MGE0ZWJlOTJjMTUwMzljYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFjZjkzZmIyMTQxNDE4YzNhMDJlYzM2YmNmNjliNjc1MGEwOWJhYTAwYjU5YjUwNTMzNTQ3MDIwMDk5MDIxOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGEwZTRjMzhhYjVlNGE5Yzk3OWQwYjEyMzIyM2RlNzNhMDhjZTdiYTMzZmVhNDMxOGRlMTNlOWE5MmJiYTA3ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2M1M2IzMDE3OTMzM2Q0ZDY2NzQ3NWZkNjAxZmI0ZDQwMTUxOTdjNTUyZTM4Y2I5Y2RkZDU0NDFkYTdhMDIxMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f5e2945c798d45a18ca85f4efb7ac394",
+      "statement": "Receiver trace defaults off and can log request/response headers and body prefixes in execution events; body prefix defaults are 100 bytes, Authorization redaction defaults to 600 bytes, and log_secret_redacted_bytes -1 redacts the whole Authorization header.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L105-L150",
+          "version": "repo-lines-v1:sha256:f06cb180d887aabec167ba9408a4a50881977c90f6dcdd54952b9c4b43d3e126:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjOTk3MGI2M2RiYTI0OGVkMDBmYWJlZWMzNTFmODQ3NjQwMzZhN2I0YTVkMmRkMmQwZWRkZDhiMTQ5ZWNlYmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjMmJlZTFlYTViNmQxYThiNDhmODY4MzdiMmE3YjU0MGI4YjI5MzJkOGQ3NTEzZDE0OTAzM2M0ZWY4ODNhNTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMmYzYjhlODgwMmQzNGUwMTRlZDk2Y2E0NjQzODk3MzRiOGQyMWM4YTI3N2FhNWE2ODBmMGY0ZTUwMDE1MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjNzVkNzBjMTA1NGJjZGIxNTU2NDUyODIwYmQyZjQ1ZTA0ZWRkMjVjM2U1ODVjMWZhNzZiMzgxMzIxM2JiMzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f0e02886872462f8aa75416991af157",
+      "statement": "This documentation hands custom-adapter implementation off to external starter repositories, including Python source, transform, and sink templates and ASP.NET, Java, and NodeJS source templates, rather than providing validated current implementations in this repository.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-sink.rst#L81-L85",
+          "version": "repo-lines-v1:sha256:83ac32284f8bac61b44928a7fcfd6b527c45ac431a3c20ac7c7223c6e7977aa0:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODVmMGEyZDBkYmJhYTFmZmFjOGUwYjRiOTY4NDQxZDE5MWUzOTlmMjQxNDNjMWI5ZTY5MTExNTcyZmViM2FmMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJhYjkwOWVlNzE0MmJhOWQ3NWQ3NmFmYzg4ZDJlOTNiNDNhMTIzYjAyOTZjY2IxODgwODI5OGE4ZjIxYWFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGZiZDAwOTMxNGJjMjcwODQxNjczNGEwMmFlNWZmMzlhMWU0OGEwNTBiZTkxZjQzYjJmYWE5MjAwMmM2MmJmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTM2MGNjNDA1YTM0YjYyZjgzOTVjYzgzNDBhMTNkZDgxMTVhM2U0MzU2OTU3ZjZkYzdhZjhhZjY2MTY0YWZiYSJ9"
+        },
+        {
+          "resource": "repo://hub/custom-data-source.rst#L134-L147",
+          "version": "repo-lines-v1:sha256:b734509a5f1fe13b5055c28dec76ceb3fa3e633fcbfe389a1cd5e3e337c119ef:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkY2VhNDAyNzE1NzQyYjNhN2I4MTZjYTk3NmZkYjBmZTczZWNlOWNkN2ZlNjJmMTQ3NGM2M2JhMGMyZWU5MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzYmVjMDhjM2Q3OWVmNGQ2YmRmOGM3ZWNmZTkwOGIzZmJlZTRlZjc1ZTMxNzNhMmMxYzNlZDgwNzdkNTQyZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjYmEyZjk4MjhjODBhMmMzOGUyNDk2Njg5ODRjZGNiNjMyZDc2M2Q2OGZhZGRmOGZlNWU4ZWMyOWJkMzRlZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3NjcwNDYxOWMyNjRiMjk0YWY2YWQ2YWIzYzMwZjIwMGU0NjYyODY4ZWFhMmU0NDRjNDI4MmUwNGM5Zjk1OTYifQ"
+        },
+        {
+          "resource": "repo://hub/custom-data-transform.rst#L70-L74",
+          "version": "repo-lines-v1:sha256:d363673bfbf9889dd514736aec0f7b4cfad54d1b88144586b8e9bd7b44358df4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWZlMjExOTU4YWMzZDEwMzA0NTcxOTA0MmU4ZjQyNTQ5YTc5YmM4OGU2YWFlMWRhNGRiZDNkOTk5YTk3MmU2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUzNmY3YjYyNjVkNTk0ZTA2ODFjNDk3YWVjODY5ZWE4OGI2NDA2ZDk1MDEzN2IyZDhjOTlhMGQ0YmYzNDgzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDRiOWEwYjE2Yjk5MTBiYWE1ZDBhNGRjYWZmOGE2MGM0Mjk2MzNiZjJhZTNjYmFjYzgyMDI5MDc1ODBkMTBjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-custom-data-source-microservice.rst#L30-L31",
+          "version": "repo-lines-v1:sha256:a3f679c5a45bba838d4b8828504a0638c3e5951c3dee976431fdaae208227584:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwYzZiZWUyZGEyMTA4YmUyMTRjZDhmYzU5Y2U0MGQ5NDM4MGM2NDhkM2Y5Mjg2MjA3MDZiMDhmOTBmODU1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmM3MDhlMjUwZDk3ZDhiN2ZiMzRiMmNhMDM4OTdiN2EwZGNjZGNmODk4ZTMxNjcxYmUzMzg1NDlkYjkzYTZhYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTBiZGQ2OTQ2ZmM1OTVkZGMxMzNkNWI1Yjk3ZDJmMzc4NjEyMzVmMTJlMTU0YTMwMjQ1YjRhNDY4MTg3MDgwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmFlYTZiOTRhMjc2MTE0MDdjNWMxODMxNWRkZDMzODAxZWQxMGQ0MzEwYjRmZTA2ZTJkZDAxZjI0NDQ3ZDVlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c9def30d1cae4457a63f32ef4f0739bc",
+      "statement": "The documented Sesam client test workflow uses expected/<pipe>.json and expected/<pipe>.test.json fixtures and sesam -vv test to verify endpoint-pipe output, recommending that output pipes be disabled or unable to write to real target systems during tests.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

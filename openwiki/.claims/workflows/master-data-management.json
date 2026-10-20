@@ -1,0 +1,912 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:bc4c07381ec2e344a95213f35a14a58401032f3874a64b62234d2d5dd0299d3f",
+  "claims": [
+    {
+      "id": "claim_80f8ee86364540c8b55f343fac60a079",
+      "statement": "Global datasets group data about the same business concept across sources and can contain unmerged records or selectively merged records; membership and cardinality require business knowledge rather than a fixed universal global-dataset recipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L750-L800",
+          "version": "repo-lines-v1:sha256:84af2a70f0d102701a2d35f95a51fa8b8448ccdc4d79fe11a947031f9e42f9d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkNTMxNWJhODk3ODBkY2IwM2Y4YmNkNTMyNzM1MGQyZDgwMTIyNzZiNzMyNmJkMzgyZGUyNGI4NGYyNDNlZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZmI3MDI5MDRkNjliMWRlZjUxNDhjMTI4MjRjM2Q5NTA5OWMwZTMxY2ZlNTE0ZjJjYTk0ZGRiMGM5ODdiNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4OWFmZjYxM2M3MDMxYzcwYjUxNmIzZDg2Nzg4NDRiYTkzZDhjNmE5YjQ5MGExMzU5OTU0OTE3MDA0NGRjOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIzYjI3NzdkYzFiNGU4OWVlODNjNDczMzNhY2FmZDEzMGM5NGRlZDhlNDI1MGFkZjM1YTJlYTQ4MjMwZmUzOGMifQ"
+        },
+        {
+          "resource": "repo://hub/features/global-datasets.rst#L8-L16",
+          "version": "repo-lines-v1:sha256:986be1e2797d0c15f2667803eb24d33be43f71155873bb275cb07d4750662dfc:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjllM2QzMTNiZmZjMzc0ZDIyNjU2YjM3NjJkMTg3ODA4NjA2ZWEyMmFjN2Q1NDA4NWZkZTgyNTc5OWQ1NjgwNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg0YjllZTJiYjhlMjM2MWFjNjMwNjAzNjQ4MTU3YjBjMjVkMjdmMjRjNjRlYjFlZjQ2OWQ0OGNhNWE3NWQwYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmY5OWZmNDJhOGM5YmNhNmI1ZDU4MzcwZGNkMGU5NjM5N2FjYjQ0MGI4YjM4NTM4NzQwMzA1M2I5YjRlNmUxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDU4OTEyZWY3ZDlkNGQ5MzA0MzgxOTM0N2EzNzE2ZjFlMTk4NjBkNjIwZjYyNzk1MzA2NDVkYzdhMThhZjM2YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_15a384c040d347ddac557e9a9eb6ee8d",
+      "statement": "The documented data-management workflow recommends comprehensive, faithful collection, routing imported data into concept-based globals, target preparation in separate pipes, and sharing with little logic so prepared outputs remain inspectable and reusable; these are best-practice recommendations rather than requirements on every pipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L19-L31",
+          "version": "repo-lines-v1:sha256:a170b1e96d2484855fa4c5fc970736ebe43cb26b7dfe45159873c6dce6baaf01:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MTQwZTU3NTA3NTZhNzJmNzk2ODE2Yzc2OGVjNTczNTExOTAwZWJjMDU4NzYyZWM4OGY5NzAyMmQ3M2IyODQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxY2FiYzNjMmNiYzMyYzY2MThhYzYwYjIyYzVmNzFhNTRhZmVmNzIwZjU1NjM0MDU0YjY4YWM5YzE1MTM3YzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY5ODQxY2RjNThjMDYzNTBjZGIxZDIyOWEwNDE5MTNhOGIyNzBmODI1NzdmNWE3ZTk4YzU3OTZiMzA3NTMzZmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY1M2ZjYjViYzVhZTNlZWUzNmZhYzczYjAxY2FlZGZlMWMxOWNmOTY4YmYyMDdjOTdhNmZkM2Q1YWQzNzRhODMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L252-L269",
+          "version": "repo-lines-v1:sha256:a1bc76883acad49363ac578be170d2c5582745aa5d18d893591211ba6cd7e35f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwOWMzYWYxYzY4NDA5MTliZjM1ZmY5ZDA0MTJjODQzNDBmZWIzMTUwNzQ2NmY0NmIyZTZhNjU3MTAxMzkzMDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiNWM1MmUzZTk0ZDZjMDhkN2YxODE2ZTgyZDcxNjdkNWNiMTczZjBmMzkyN2M1OTVlODEwNzA0MmVjZWJjZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjYmEyZjk4MjhjODBhMmMzOGUyNDk2Njg5ODRjZGNiNjMyZDc2M2Q2OGZhZGRmOGZlNWU4ZWMyOWJkMzRlZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhYTEwN2I0MzVlM2E0NWQwOWNmZDBiZmZjN2ZlMzBiODk5MjFhZmM4NjQzZmVkNTFkNTMwMWYzZDFkZmEwMjgifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L784-L800",
+          "version": "repo-lines-v1:sha256:d2e61feeac3716917e61a4aacb3fa504302bf4020bd610af513b808b8ef0b6d9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllOTIzMjdjZmU2Zjg2MzM3YTg2MTk3NDc2ZDc1MzM4Yjg0YTFlMDNiODA2MzYxNGIzZDczZWVlMTg3MjhiOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZmI3MDI5MDRkNjliMWRlZjUxNDhjMTI4MjRjM2Q5NTA5OWMwZTMxY2ZlNTE0ZjJjYTk0ZGRiMGM5ODdiNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjZjk2YmE5ZjFkYmQwODBmMTY2MGQxZDI4MzkxNGExMjgwZDcwOGRhOTE0MTcyYjk2Mjc4YmZmYmVkYzExNGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIzYjI3NzdkYzFiNGU4OWVlODNjNDczMzNhY2FmZDEzMGM5NGRlZDhlNDI1MGFkZjM1YTJlYTQ4MjMwZmUzOGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e459acbe320b4465bcdfe64359650f9b",
+      "statement": "metadata.global marks a pipe as global in the management graph, while an omitted sink independently defaults to a dataset sink whose dataset id is the pipe's _id; global metadata does not replace merge or transformation configuration.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L432-L460",
+          "version": "repo-lines-v1:sha256:40aee21a7d571548ff1c41990df774f5262639c70a4337b7e46f70efa89e9330:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxMjBjNjY2YmE5OGY0YzUzMjQyZmNhOWMyYTYyZjQ5MWU2ODNjNzE5ZmVhZGQ4M2YzMDJmYTc3ZjJjYzcyY2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMDU1YTIyM2VmNjVhMzE0NzJjMDI5MmQwYjBlYjU0N2MxMzkzYTliMzM4ZDM0NzViYThmODU3ZTZjNzNmODQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhODM2ZTcwMDQzYTFjMGZlYTM0NGMyNDQwMzJkNWU1NzQ3NTk3OTFhM2IwYjAyZTkzOTI5ZjE4NDExZjM4NzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkYjIwZDFkOWRhNWNkNzIyM2JjMzNmZWYxNjllN2M2MmEyNjc2YzViNzI4MDNmMDE1NGVkZjI4NWUyM2NmNDMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L165-L184",
+          "version": "repo-lines-v1:sha256:a6e89e33c88cf591dfc2b7d4e3e388973d4272b8c78188a59878714777e02fa2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlMGJiNTZkY2U1NWM3M2I2YjA1MDM4OTU2N2I2MzA4OTExOTlmM2RmM2I5OTVjMjYxMjAyY2Y2NWM5NTAwNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczMTlmMjgwOWEyOTRhZTM0NmY2MWMyOGRkMjA0MjA3ZDhmMmYzMmEwZDcyODYxMTI1OTFlZDMwMTc2MGQ1NWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_48de7a0c26d6484e91df70cae9820951",
+      "statement": "Namespaces preserve the source context of same-named properties when entities are merged and support mapping global models to target models through late schema binding; source properties can coexist with selected global properties.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:4b058feae7cc5a4fe4d0969db69fdfcaf3cc840df9f5e87f4d6bd7c2c56f372e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg2ZTU1ZDcyYmUyNzE2NjIyMWU1NjA5MzBjM2VlNTIwOWRkNDQzYzVlMzQ1NDAyZjU5ZTFhNzViOWRhMDhiNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGEzM2U0MDZmMjk2MGI3MGZmZDZjODg0OTMwZWVjYjg2ODFlZWNjNGI4MzVlYjdkOGQ0NGIzZTZkMDljNGQzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDJhZmUwZGFhYzM3YTIyNzE1NTU1OTIyZDRhNzc4ZjY3ZTRlMTMzOTdmODRiNWM2ZmRmOGExODQ2ODJmOWFhZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjMxN2UxOTZjMjk3MDY2ZjkzYjc1MGEwN2FiMTQyZTI4Nzk0NTc0MGJkZDNiYTM1YTYzZTI4ZWEwYTRlOWE4NyJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-connect.rst#L46-L96",
+          "version": "repo-lines-v1:sha256:12584561e171558d0a890c5018bd8421d31314053d01482019c7a27113078364:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OWQ1ODIwNzBhMGRiZDI0Y2ZlZjE2ZjBkZjNiMGZhODE0YjBkYmQ4YmMxYTg4Y2NhYWFlZGZmNzY2N2M4MjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiNTI3ZmM1ZjUxZDZjODdiMzdmYjcxZjgzYzBjY2NjYTQ0MGIxMDk1ZTNkM2E1ZGExMzM0NzU4YjQwMDVkMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMGYyOWJlYzgzNTY0ZjQ0MDEwMTM2ZDZkYmQ4NTRkZmI0Y2QxNmUxN2I2YTZkZTBlYmI3NmRiN2E4YWVlZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMxYzRhOTY2MjI1NDE5ZTFjZmJiNmEwNThhODA3MDVjYzExZWQ0YWZjZDUzZjhmOWNkOGI5Y2Q4NzNiZTMzNjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_884a16e8524442b7ad90558da552c59b",
+      "statement": "namespaced_identifiers enables namespace defaults and defaults to false if not specified in service metadata; namespaces.identity and namespaces.property independently default to the pipe id and can be set explicitly for enrich pipes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L61-L76",
+          "version": "repo-lines-v1:sha256:513f8213dc790cb5f249628111e93456450bd3e9495bedd1d3c8ae478dcd006a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkZWEzNThiN2Q3MzFjZTQ2MjJjYjg0MGE2MjAyMjRkNWU3NWNjZmE1MDEzZTI5MmI2YjRhNzM2NThjYmNhZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZmNmZjY5YmQ4OGQ0NTUwNmE2ZTE0YmJkMDRkYWEwMzlkZTE3ZGNjNTQ3YTE1N2IwODhmNTBmYjdlYTgwZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjgyNWZlZmQzODYzMzE1NTM2YTQxYjMwMTMyMDUxZWM3ZTliZWY5ZDlhYzQ3Y2U2MDQ0NTA5ZDZiZGE5NDEifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-enrich.rst#L63-L67",
+          "version": "repo-lines-v1:sha256:fa0d916a7997f3006b7caa3d440caa2f2265a8fb51eaa4b962309a4ac8903eee:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjliOWU5ODE4MTcwOWMzZmM2NmVjYzljM2MyNDA5MTZjMzc4OTk5MjdjM2ZhZTU1Y2I0NTM5Njg4ZjZjYzc4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWI2MmY2MGQ4NTkwYTU3OWNmNDZmOGQ2NzM3OGM0YzU3MmI5NjJjZWNjZGI5MGM3YTVmN2I0MmI5NjA3ODJhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmRkNWZhMDZlMGNiYjcwZmZjMDE5MjI5ZDE1NzIxOWM1MGY3M2JiZGY3NTViMzhiMTQ0ZTI0Y2M4NzBhNTQwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjkxOGJjZjg3MzFiMzQ4NTk0ZDYyN2QxNDA0YTA1NzNmYzgyOWYwMGE1ZjRlZDRjZjdiZTkzZWRkN2I0ZTEwMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_94106ef9114c45baa8c16ef8a42c8e54",
+      "statement": "add_namespaces adds identity and property namespaces before the first transform, whereas remove_namespaces removes namespaces from _id, properties, and NI values after the last transform; source and external-sink defaults depend on namespaced_identifiers being enabled.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L79-L92",
+          "version": "repo-lines-v1:sha256:9e6bc1d03bb7142ef5394b21549a6d998663f9d12dda9c29a0d82a99fe831e7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhOTZhMTU0ZGNlYmM5ZGE3MmRkZGE3M2EyYmQ0NTM4YjA5OGIzMTBmZDQ5M2JmNjk0MjA5M2E5MmY2MWFiMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViZDAyZGY4MzRiMTMxZjBjNTdiZGU0MzE3MGI4MTZkZWVhZDdkMjJkMzRmOTdhY2Y4NTdmYWFlMWIxNTQwZWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyYTM2YTAyZDQxZmZlZDdmODM1ZWIwNTI2NTBkNmVhOTJiZmY3MmZiMjVlM2MxYTVlMTg2YjRmMzUyYWE5YjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_62d09f04e8b24d7295e507e64bf5eb13",
+      "statement": "Namespace-aware DTL functions generally match unqualified property references across namespaces, so qualified property references are needed when selection must be source-specific.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L6-L21",
+          "version": "repo-lines-v1:sha256:f9fa5b54c7276782d1b018c3ce5c28686a04d7acfcbeae0bdcd89738d1c5733c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1Njc2ZDhlNmNlNWJiMDYxZDYxYjhkMWRlZDM5YjExYWZjNmQ1ZjdkMTNkMzdhY2FjNDAzNzdmYWQyOWRhMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDZjYjJhNzBlNDM3ZjYwNGMzZGU2Nzk1M2EyZjdlYWQxOWI5MmI4ZTFlYjE2M2Q0NGE0NWZkNmYzN2ExZTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NDk2ZWNjMmY3ZDM5MDRlYTVkNjI0ZTI5N2E3NGU5YTlmNjFmZjYwMTgxOGFhZDNkODY2ZWQxMmEyYTIyOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyOGM1NmNjMDljNTJiYjg3N2Q4NWRiNDEyNTZmNGI2MjM4MGU1N2QzYzg2N2ZkN2YyYjc5ZjFjMTdmYzQzNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_aac00ab65baf4ea59e6ccc0d83af04ef",
+      "statement": "NI values are distinct from plain strings with namespace-like prefixes: ni constructs typed namespaced identifiers encoded with ~:, and semantic enrichment uses NI references such as those created by make-ni to relate source entities and match identities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L255-L255",
+          "version": "repo-lines-v1:sha256:54729e40a758cf471b01e94974bc518782698bc2543d32f9695cb3200b405ad6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ3MjllNDBhNzU4Y2Y0NzFiMDFlOTQ5NzRiYzUxODc4MjY5OGJjMjU0M2QzMmY5Njk1Y2IzMjAwYjQwNWFkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ3MjllNDBhNzU4Y2Y0NzFiMDFlOTQ5NzRiYzUxODc4MjY5OGJjMjU0M2QzMmY5Njk1Y2IzMjAwYjQwNWFkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDE3ZjM0Zjk1NTIzODBlYzY1ZTEzYTU3ZDc4OThiNTBkZWFlODU5ZGEyY2FjOGE5NjMyOWU3YzRiY2UzM2I3MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGMwYWYwZmYzYjFiNGY0NGM5ZGYyOWU3NTVjMGJkNzBkMzEwOTllZTRhMDVjNTkwYTQ3YzllZTg3NDNjYmM5MyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L73-L99",
+          "version": "repo-lines-v1:sha256:f6e91665a1068eb26f36a667cd2f376a43fd81a1031b8c342da80d5988aa28f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1OWZmNTYwZDNlN2FkNGM0NTY0MzkzMjNmOGUwZDUzZWMzYzExNGFlNjU4MzM5NjI1YmY2NTRiNDgwNmY4ZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MjIzOWIxYmQ4MmI4NWVkNTBjMThhYmU2YjhlOTk3ODc1NWRhYzZmZDgwNDA5MjRjOGE4ODBjNTJmMDY1ZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1ZDcxMThiYzhmYzU3NGQ3NGVjNjRhNjg1ZjA3OGI0ZjhlNWIxNzg2YzI5ZmZhMmEyY2ZlNGFmYWExZjM4ZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L19-L28",
+          "version": "repo-lines-v1:sha256:32a50ae84bbd419cc6d2069b5e16d63317849f185754862df0a7fd178f6dee74:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMzRlOTEyMTYyYjY5ZTU0YWIyNDIzNzk4YWMyMDJkNjRmMTE2YzEzODQ2OWZiNzNhZjM2MDM1MjZhYThmZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGZiMDBjNGEwNDRkNzZlNTFlZTQ0MGUwZTBhNzRiZWM5ZjY1Y2JhNTAxOTUwNjQwZTFjNDc5MWI2MjllNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwMDYxODRjMzgyNDI5OTgwZWEyYzY1YWE0ODI2ZTQ2ODg3YmQ3NzUwMTBlOTY5MWMwNjAyZjFkMDc0NTAxZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlMzQzMTUxYmZkOGNiMGE2Y2Y3Mzg2NzFjMmRhNzlkOWQxODY4OTRjMzE2MmY4ZjhiNjljMzE5MTM1YThhYmYifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L50-L76",
+          "version": "repo-lines-v1:sha256:fcb933e375a76fea30fb47b3cb6419d1e4790162eaefbaa5231ad5b4407d0d1b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5ZDcxOTY4MzE2OTQ2NWQ3N2JmZjhhYTc5MDUxZGJjOTgxZjNkMjM2MWE1MjM3ZmRiZWY2ZjljNjI2MWM2ZGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkMmI4NTQyMDJhODg4MGFkZjgyMTAyMGNkODU2ZGM0NTU5Njg2ZjE1ZjIyNzJjZmQ1M2UyOTQyNThjMjQxNGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_54fcafedd6fc46249d7b66221510f5ea",
+      "statement": "The type-information enrichment pattern recommends adding rdf:type or $type so relevant subsets can be selected from global datasets later.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/adding-type-information-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:d7b50c9a048a9722594ba8fca31a6a03ebe407c95fda2cf93719f67c79941204:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFiOWY5NTllYTUzZjZmMDkwMDc5ZjA4M2NjYzFhZmZlNTBlMDJlYTBiNmNjYzJmZDlkMDRiNThlNWVkZDhhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2RjZjYwMTMwOGYzYjYyYjJmNTU2YmFmMjQ1ZmVlOTY3MzY4NWJlNGNlNWFiYzJlYmVlMmQwYmE1Mzk2MjY2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9a2e71bb78e34e259410a0493fdda038",
+      "statement": "The reference-enrichment patterns recommend extracting reference or classification values into separate entities that can be connected across sources, and keeping foreign-reference namespaces local to the source's controlled data rather than pointing at uncontrolled objects.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/extract-foreign-references-as-extracted-datatypes-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:c3620e58a5086023aad82f1b3376e0c58dd49470c7ce165236dd96fcc17a5c2a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2QyZGZkMDU2YmNkOWQzMDMyM2U0NDg5MzIxOWFiMDc2ZjA0ODQzMThmYTRiZmRjZTM0Y2M2MGYzMzc4ZTljZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdhOTI0NDgxMTQ4ZWU3ZTg3MzFlMmExODAzZWM2NjYzYzcxYmY1MWI4ZGQzMGVkMzg0ZjcxNjY5Y2RkM2Q1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/extract-reference-properties-pattern.rst#L1-L5",
+          "version": "repo-lines-v1:sha256:9adf95ee33325f1bccc5dcc107af31df88c3a3e7739aa820fd93f9f7a2a3d9b1:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDlkZmRiZTdjZGZiYWQ4YjFlNWJmYzM1OGRjMDg3MzQ3OWMwYmI3ODczNzhhMWQ0NzQ4ZDg0MzVmZjUzMmZkYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjliYWI3ZjFhMjhiNjJiZjg4M2RhMWJjZmMzMGQyNjY0NTJhNGU2MmFhOWNmODBhYjg0YjNmOTY3ZGY0ZTAyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_14be9f14d6bb4ea9b4801b1d910c064c",
+      "statement": "The sub-object splitting pattern recommends create-child and emit_children for independently meaningful child objects and including the parent id in the child's identity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/splitting-out-lists-of-sub-objects-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:1465ffcee2a63235e4792ccf23b3536fc653544d2c04259ea9711ad2724a0311:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRhNTc5YzIyZjMxYjc0MzQ0Nzg0YmE3M2MyZWIyODNlYWFiOWE5MTYyODI5ZTBjYmIyMjQ3YjFiZGFkMWFjMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZiODU4NGM1Mjc5ZjQ5ZDA3ZDI4NzhhYmFlNTIzOWExNWU2MTdjOWFiYmQ0NjEyYTRiZjk0ODdjMDQ2ZGVmNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_15a3522ca45e43d5b4992b1879bb3a3a",
+      "statement": "union_datasets tracks each input dataset through its since handling and reads them in configured order, exhausting one before moving to the next, rather than resolving equality-based domain sameness.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:e742c9ea582e15ed1628e88f995be73c55a3cdd6c0200d53dff0e8f7ed4b8976:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRmMmJlOTdjNDRjNDNmYjg2MGYwMThkNmU5ZWQxN2IyMzFmY2JjODY2ZjU1MmY1NWY3MDllODc2Njc3OTI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NlOTFjNGU2ZmM5YzUxY2JmMmU0NDQzMDhmYzMwMzQ0Njg2MDA5Y2RiZmE4N2Q4ZjI3NjJhZDMyZjBjOGRkNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU2NDNiMzVkOGQwOTljMDcyNWM4YjgzOWRiNjg5ZGQ1N2VlYmQ4YTBlZWUwODU2MjNkMTI0OTE3YTlkNTZjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNiOTQ3YTE1Nzk5NzNiZjg0OWIwYzYyMWUzNDZiZjAwMmJkMTdjMzk2ZWYzYTUzNmViYjc1YjI1NDA5NDA5MSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L6-L9",
+          "version": "repo-lines-v1:sha256:a766bb1f6c523527023f6daeb7ef8f31b588b4252fdf5bc35427dfc7fa8e4fd7:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI0M2ZhYTllZDExYzc0MmRlZjFiZWEyZTVkZjIzNThlMDZmMWQ2MDAwMjUxNjU5N2RiMzcxMjdkYzdmNjM3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQwNTNmOWYxOTk1NGI3OTkxNmI2YjQ0NWM2ZDJkNTM2NWNlOTdlN2I1OTc4ZjU4OWExZGI3MzU2ZTc0MmRiOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTYzMDQwYTkxYjA2NmUzOGExZjFhMmQwYzI4NWMwMWJhZDNkNjI2ZTljYzk0NDFhZDAzNTIzZTc3YThlY2RkYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q4ZjQ3MjljZDNjZTUzM2JiYzhhMmY0YWExMzQwYjJkYTUwNDZmYzVkYjdjNGU1YTkxYzU5YWE1ZGFmMzBiMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ceea9be44144dc88308d9323333303f",
+      "statement": "union_datasets prefixes input _id values with the dataset id and a colon to avoid identity collisions by default; prefix_ids: false disables that prefixing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L11-L15",
+          "version": "repo-lines-v1:sha256:eb34f8b21b1dbae3d84059b029572537babe7b25edb53a1de5997cb2b13544f4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGIxYjI3NzdjNWYwOThkMjYxYjFmNTI1YmQwYzJmNTFhODNmN2NhMmE4ZTEzZGRmMTBlYzNkZWFhNWNhNzIzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTc2MTExZjA5MTYyOGJiYzI4NzQwMDcwZDdhMmRkOWE1YmZlZGI4MjczNGFiNDNkZjgzOTQ5YzdmYjMzZWFlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTIzYTdmYzM2ZDkwMzQ5N2YzMTI2OGVlMGJlMzg0ZWUyNjJjYjFiODQxZGJhNGU3N2ViMzEyZjEzOTdiODFjNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdlM2NjOGZiMjE1ZDM0NTk4MDRlZDQxMzlmOGUyMjFmNGNlYWM3Yjg0M2Y4OTU4YjlmYjhiNDBkNzVlNGNhMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L99-L102",
+          "version": "repo-lines-v1:sha256:c1e8ba618a5d4c5b4aabb0188a7d85078b2897014f538a56e113e67274561274:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRjNzJmNDU5OTZiYjM2MWY1NWE2NTdjM2FiZjRkMjNjZmIyMDZkN2RmNDI5NDdkOGE5NzM1YzI0NDJmNDE2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ5OTlhYjkyY2MyM2RmMDY2YzdiZjQ0N2RjY2I1YTVmZTRkZmM5YjIxYzM3YjQ1MmEwZWFiYWQ3NGI1ZWZmMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYyZGQ1NDRjZmQ4NDNlMjViZTQ3N2NjMjA4MjljOWViYzZjMzk3N2I1MWJiZGJmN2NjY2RlNTIyYjg0ZTAyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2RlMWJkNjUxY2M4MWQ0ZjRhZmM2Y2Q0NWU2MTM2ZTg2YjE4ZTNiYmY5ZjBjNmI0ODRkNzg3YTE3ZTdkMTIzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9fc1246f2d3e463da38ec3124e848638",
+      "statement": "union_datasets defaults include_previous_versions to false and returns only the latest version for each unique input _id in that mode.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L75-L80",
+          "version": "repo-lines-v1:sha256:0e09b058abfe8cf7e536e3561c31945270d9688efc055cffe8708156d7ba1c8c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdlMDU0OTNiMGZkN2M4NTVmMTViODc4M2ZkMGM4MGJlY2UyMjFmZmE5NjNmYWQ5NDljY2YxMGUyMmU3NmIxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjAxNTY4MzE3YmNlNTM4YmI0MTNlOWQzZGUzMzcwMWMyY2MwYTYzYmM1ZjNhZmUyOWUyMWM5MzJmYzcwYTk0ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDhjOWU4YTI2NmQwOWViZmQwZmZhMzNhNThmYTc3MjZlNThiY2FiNjUxZDM4ZTcwYWJiYTBkZjQ5Y2I3NjVhMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eed06608798448b7ac588accf4cabf12",
+      "statement": "merge_datasets leaves entity ids unchanged and combines already-shared identities across inputs ordered by _ts: latest chooses the newest entity version, while all returns the latest per-dataset versions keyed by dataset id; this differs from equality-based merge and per-property timestamp selection.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L17-L19",
+          "version": "repo-lines-v1:sha256:05d3d9d8a555569ad5015bbead022f7d9ee52e2c89d0600d84575e84814362b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjY4YWYyODExMDAzNjA1N2M5ZjczODI1MjM5MDVlMTFmMGMzYzhkOTU1MjljYzNlZjMwYjYzYjhlYjk0OTFhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI0MDBjOWRjMWQ5MmQ5ZTI5N2NhZmZiNWI2YTRhMWM2OTZiOGVkN2QwMGViOThiODFiOTM2MjZkZTJlMzJmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjJlMDUxMjgyNzkwY2MyMWEwOTAyYmY4OTJkYWU1ODA4YWIyZGQyN2Y2NTJkNjc5ZDcyZTFhODZlYzNmN2JkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc2OTgwZTkxNGZiOTc4ZjhkMzE4NTVkNzE4OTBlZWUzY2I1ZmVhZTFlYTgzZTkzZTJkZWMyOTgyZTBiMTg3NyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge-datasets.rst#L6-L14",
+          "version": "repo-lines-v1:sha256:5f32213bc3a5b86cface87c5083663f48918c9746e51a9cfe3fcc15c6d3363b9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTM5Yjg5OGZiYWUxYzY1NzAxODA5NGM3ODFkOGE4MzM1ZGI1Yzc4YjQ1MGJlMGUzNmIzZTI3ZDY3MTdiZDljNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQwYTkzZThiNTNiYjJmNjJmNzcyNGZhYjk2NmMzMDg2MTNmYzRiYzU3MjU2OWE0OTRkMGQ0OGFiYzBkM2Q4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODkzYTNkZmYzMmIzZDU2MTU3MmZkOTcyN2NmZTFhNTNkYjBjODljYjA2NTZjNzU5NmE3YTA1NWQ2NjQ1ZjRjNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdlM2NjOGZiMjE1ZDM0NTk4MDRlZDQxMzlmOGUyMjFmNGNlYWM3Yjg0M2Y4OTU4YjlmYjhiNDBkNzVlNGNhMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge-datasets.rst#L75-L90",
+          "version": "repo-lines-v1:sha256:8ad6b17cdabc3056a1523bf8fc0eb185f9676df3aaaacb0439d5ed3cb884d0da:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5ZGE1NmMzNzVlYTQ5ZjM3N2E4Y2FlNDI1OWIwNTQ2NjdmMTIxMTBkOTEzMGY1MmQzMmVhMGIwM2EwOGJjMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5Zjg1YTU3MWQ0ZTkxYzI2Zjg5YTNjMDE5MjQyZmUyODkwZjU5NWVmMjI0NzI2ZWRlNzMxMzYyZjRjYjU1ZmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNjODAyMWMxYzg0ZDE1ZWUxNzJkODMwYWQ5YzBiZjA1OWYyZjNkYzcyNWUwNWRjNWUxMjQ1NmZmYWEyYjBmNWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0319909cc9114569a057b952cb790969",
+      "statement": "The merge source infers sameness transitively: if A matches B and B matches C, all three form one merged entity even without a direct A-to-C equality rule.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:e742c9ea582e15ed1628e88f995be73c55a3cdd6c0200d53dff0e8f7ed4b8976:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRmMmJlOTdjNDRjNDNmYjg2MGYwMThkNmU5ZWQxN2IyMzFmY2JjODY2ZjU1MmY1NWY3MDllODc2Njc3OTI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NlOTFjNGU2ZmM5YzUxY2JmMmU0NDQzMDhmYzMwMzQ0Njg2MDA5Y2RiZmE4N2Q4ZjI3NjJhZDMyZjBjOGRkNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU2NDNiMzVkOGQwOTljMDcyNWM4YjgzOWRiNjg5ZGQ1N2VlYmQ4YTBlZWUwODU2MjNkMTI0OTE3YTlkNTZjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNiOTQ3YTE1Nzk5NzNiZjg0OWIwYzYyMWUzNDZiZjAwMmJkMTdjMzk2ZWYzYTUzNmViYjc1YjI1NDA5NDA5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8f6ff9663a164b2182c937a4d74fd27d",
+      "statement": "Merge equality uses DTL join matching, where any overlapping values suffice for scalar/list and list/list matches; null or empty-list equality results do not cause merging, and the join guidance recommends tuples for composite-key matching rather than separate individual joins.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L22-L30",
+          "version": "repo-lines-v1:sha256:aa1d41fe9324fee5e082f91848ddbde769d206487450aa8acae6695335572340:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmJjMzIwODY0MGJmMzFjNGNlNzgyNmUwODZkYmZkODFiMmJjMDRlZjVjNWM5OGFhZTA3OTkyMzdkODQ5ZmQyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzJjODBiZGIyZWQwMmQ0M2JiNzBhYTE3NjA2N2JlOTdkODg3YjQxMzM1NTcxNjllNWJlMGM0NThkMTYwZmY2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Y2MGMxMjJkMDcyNTMxNzgyOGZkMmI1NDUyNDFmYzkxMzZmMWM2NjdmNGViNzM0NjU3NGM0YmEyMmY5NmUyMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q2MTI3MTQ4OTlhNzU2YzUxMzJhNmQ1ZjY5YmEwYjU4ZmQ0ZDFjZjkxZWU4ODVjYTdmNzYzY2JmMmYzM2YxNiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L25-L50",
+          "version": "repo-lines-v1:sha256:45c0a2173bd231406f1fabf6c4036b1d104330d590e998926e17e84779199297:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTlhYThmMTYyMGFlNjM2OWM5YTMzY2Y5YzMzODAwNWViNWY4YmQwZThlODljYTA0ODVjMTIxOTc2NjE2YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzYjcyOTMyY2YxYzc0YWQyNDRlNjQxZGJlZTU2N2Q2YTdhNzRjMTczN2JmMzJjMDgzNjVhYmE0YzdmNDY3MTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZGMyMGIxN2ViMzljMjVmZmMxMTc0NmJkYzY5NjE2ZjdlMDEzMzg3ZjhlZmRhMDg3ZmZmNjYwOTUyYTgwMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiZWFiYjIxYWEwZThkZDQ1NGY5MjdmYTIxNDBmZTQzOGJlNjkyNGQwODQ1YmZhYTkzZGRlMzE4OGFlOTY0NjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_39dd4e730e5d475086d817602f35bdab",
+      "statement": "equality_sets is the preferred grouped syntax for merge equality expressions but expands into ordinary equality rules; both properties can coexist, and overlapping equality sets can connect into one larger set without a configuration warning.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L146-L158",
+          "version": "repo-lines-v1:sha256:c123b3e8d7f2bf0bacefed9a4a568aa9de72a937665f743e7cc5c79b6f189cd6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlZDdiZDQxOGEyNjc1YTI2OTkxMDllYzRjNTI3M2M4MzAzOTc0NmVkNmEyM2Y4Yjc1MmMxMmIxMDAxMGFmZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE5MDQzOGNkNDg5Y2ViNGJhMjc2YTA2ZGRmNzYyYzg3YjhiN2YzZjNmNDA1NzI0NjU4OGFmZDJjZjcwODA3YWUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L272-L325",
+          "version": "repo-lines-v1:sha256:e2fb13d971a4eb24efc902ee2697367eb6b28ee1e2ee941124b0d33e309fc737:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZWQzNWM5ZDBjZDAyOGNhZTZkOGE0NDQyNTQ0YjNkZDIxOWQwY2IyMTE5NGFkOGM1YWE4NWE4ZDkxMzQ5NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2M2Q1MzVjZTM4MDYzZDZiNGM1MWQ4YzM4NmE3ZjliM2U1ODBhMTRhMTBjMDdiMTk4ZGZhZjE5YzkzYTNiZmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjliYjgzMTFkMTIyNDU3MjVkNDg3YzNhNDkxOWMxZTBjNDNlZDlhNGI4MTk4OGIwYTk4M2M4NDFmZDc4MjVlM2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e1d0126995946fbbaac095ad74fd7ff",
+      "statement": "Merge output identity is ordered by dataset position and then input _id: composite is the default and combines all ordered ids with dataset offsets, while first uses the first ordered input id, so identity depends on configuration order and group membership rather than arrival order.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L160-L187",
+          "version": "repo-lines-v1:sha256:982b22595ebb27c855372fca289cddc4520ff4610828933e9ce9ca87bc61737e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4YTJlYTc3YmU0MTM3OTcxZGMzNzQ1ZWY1ZWQ1Y2E4MTljZDBhYzk0M2Y2YWVhN2Q3MTJiYzBjZjc3NTI4N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyODQ2YzIzZTVjYmIxZDRkNDFhZDEyNjRhMzM5YTFhZTUzOTE4Njk5ZWI1MzY4Y2MwMGIwNzQ2NGE3MzlkZGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_734a4695c5fb4cd5a98a7caa1554cb03",
+      "statement": "Merge collects original identities in $ids; if an input already has $ids, its intermediate merge _id is not added as another original identity, allowing downstream merge layers to preserve the underlying identity list.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L151-L156",
+          "version": "repo-lines-v1:sha256:a17f50b3df6dacaeb59862b97c2864ce4614aceefa80da5775365ae178e4135a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDk4NWRjZTMxYmFlYWNhZTgzYWNmYWQ1YzM0MmNlNmY1YzlkNjMxMzE5NzA1N2U0NjMxMmIyZGQ4NDdhY2UwZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWEyMjczMTE0NzRiNjA2NDBjZTllYzBjZjVkMjZiZWY3MDZjYTdjNWVkNzA3MTg2MTkyY2VkYmU1ZWMxOGFlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdiNTNmMmFiMzlmYmI2ZTNkNzhjMzg0ODY2ZmE4Yjc4NjI5MGNiOTY1YmU0OWFkYjRmODQwZTM5NjEwZmU0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzdlODk3ZjlmZjJiNDU3ZDUwYTIwMDA1MmQyOWRjMmMyMTk0MjhiNjg2Yjg1MmJlZDFjM2NjYjkwMjI0MWZiMiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L431-L437",
+          "version": "repo-lines-v1:sha256:73e0c9ded6abb42916c3ec8a4ed8b559bbb819ee8097a60ecbeb9dbaf7a47da2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjY3OWU3Mjk1NWUyMzM1NmI5ZmYwNzk4NTQwMGNlZmUyNjU4MjZiY2NkZjlmYzA4YzZlMWZlNWRhNzhlZTczNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFhOWY1ZTA3ZjQ5ZGYxMzMzNDFkZjg5ZWVlMTQzMzRlNGEwOWQ5ZTFlYWU0NjhlNWM0MmJmMzUzM2NhYzg0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmMwYWExNTcxYjgyNTU1YWQ4YjA4OThiZDQ1NmRhOWVjOTBhOTU1ZmU5YWJhMTlmODRiODljZmMyYjdmYTc1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a1bcca0faac848348fad6de1993aef13",
+      "statement": "With namespaced identifiers enabled, _S.$ids dynamically wraps _S._id as an NI if the source entity lacks explicit $ids, using identity-namespace rules; this rewriting can interfere with inverse dependency-tracking joins.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L15-L17",
+          "version": "repo-lines-v1:sha256:bf0ec01c5c56657ee3dc601fbe6150cfcf4006bf0371ff70722617b97bf5acd0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjY3YzFmMGExYmYzNDJmYjE0M2MyZTcxZTg0Y2E4MGM3ZWRkZTExMjE4ZmFhZjA4NmJkODA0ZGQ3MTMwOTgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5213d8364f5645cda1707e57f1c758ee",
+      "statement": "When changed merge membership makes an old output id inapplicable, merge emits a delete for that id with $replaced set to true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L167-L173",
+          "version": "repo-lines-v1:sha256:6c482e6bb444e324bca75249c2606467d7f546dd13912faaa0f5b95347d130eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTI4ODdhZjRmNWI1Y2FiZTQ4ZGE0MmJlNDIyMTAzZGM1ZTg1ZjdmODhmNjQxZTY4YzRjMjcyNjE1OTRkMmM5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWMwNzBmOTQ0M2ZlNTE5ZTg2YzgyMjk1Njk0ODJlODg4NTk4OWI0NTZmMmNlZWQxMzY1YmJlZjNmZmUwNDk1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFkMDhjNGQ2YzhiOGM2M2ZhNzg1OTc4YTM0MWY1YzkwOTQ3ZmUwMzQ3YTljNzYwMDMwNThiMDBmYzJlMWVmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTZjN2RjYTZmNmFhNWRhYWVkNmY5NzZmYzU1MzY3NTRiN2I4ZGUyNTVlN2I2OGM3ODQ0OGRmMjQ0OWI5YWU5ZSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L12-L16",
+          "version": "repo-lines-v1:sha256:834f38e9d156d3198d777e8e46350b746f8c68776c67d081cb17bd9523155eb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODUwMWUwMWJhNzYzNjg3MjdmNGExNWJhYzA1OGY5YzFhNTY3YWYzYzA1ZWY4MGNhNGEwYTJiNzU2OTc2NDY2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRiZDQ3OWIyNWI0MWE5MTBjMGM2OTFkYWFkZWU0MGRjOTNhMjcxZmIxZjBiYzk0NWMyMDg4YWY0N2IxNzk4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDA2MWZjOWI4NGE1M2U2MjE2YjM3ZTU1ZGYwM2FlNjk5MDIyMDA3ZmFjMjE5ZGQ5OTQ5MzE3MDU3ODEzNjczMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmU2YmJmYTJlOTQ0OTQ2MGJkZmYyNWIzYThmZmUzYTA3YzUwYTYzYTk5YzBkZGEyYzE2MDgwNjYzNWNkOWJiMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3cb74fd36c544cdf8d2eea8cc8af3f75",
+      "statement": "Entities deleted in a merge input dataset are not merged with live entities but are emitted as standalone entities with _deleted: true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L18-L20",
+          "version": "repo-lines-v1:sha256:0cee48225e0460b0800ff5142192196e627a04bc7cd6555143397de54e3a9704:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk3MmE5N2Q5ZmI5OTFiNGFhNjVmYzE3MzBlNjE4OTljYzM4MzYxODg0Nzc1ZmE0NjI5YTU2MDA2NWYyNzI0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmQ2MTNmYWE0MmIwNzBhNzZlMGY2ZDhmMzUyYTM3MzJhYzA5NGRkYWIxMmI5YzAxYmU5NTExZGJmMTRhNjRjYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGZhMWNiZDYxZjhiYzg4OTZhMzUzOWIwMjc5ZWU3NzBjMmZhM2I0YTAwMDEyNDZiMWU0NTI5MjYxYmJhZjkxNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTU4MzkxNjQxMzgxMjIyN2M2NTAzYjUxYjFjYzA4OTJhNjIyOGUxZTVmYmMyZWMwYmNjZTZmMzhiZWY2NDJiYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L412-L414",
+          "version": "repo-lines-v1:sha256:5f6814ab9340e1088f78255e8cf71ac499d9a08b17ae51b0a3ef90b067eeb89e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg1OTg1NjQ2MjE4M2YyOGUxYTY3YjkyMDIxNTI3YTRhY2NiZDc5NmYyNjhiMjc3NzgzYzMzNTU1Mzg4MDJjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBiMDA5MTJjNDJkYTUxNWQ4MzU4YTM2NmY1NjY5NDNhZTZiNWFkOTAxMzBhYzU3M2Q0ODBhMDE2ZjY2NTUwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2ZiZmE1NzZkODZhN2E4ZGNmNGZmMTA4ZDVmYmE3OWU5NDhlMmVhNTFjMjU1NjhjZDBmNmViMDE2NGJkNzA2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2I4OWU2YzNkYzBjZWM0YjkyZTFmNTc1OTIxNzg2NzhmNjAwOTczZWUwOTQzMmY4MDQ2YTM2NTA4ZTgzYmY0MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_59439a5349ff4a628f5bd9b19c3be23d",
+      "statement": "Merge version 2 with identity: first supports overlapping input entity ids only when equality on _id or $ids covers all datasets with overlapping ids.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L32-L38",
+          "version": "repo-lines-v1:sha256:15d61ed6dd4b06613aa45a4b70e93d5d007dfcb46a04cfd00e1b241fd85dd11e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDAxMjJiMjNhMzk0YjI2ZGE3YTdjODBkYTZhNTE4ZmE3Yzk0MjI5ZDJmOTk0Y2E2NWRjYjg5NGY1OWIwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJjYWY0YjI2NWEwYTAxZDVjMmI3M2U0NDAzZDQxMzQyYWZhOGJlOWQ3OTEwZjJhN2ZmZjlkNjViMzY3YTk5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Y2ZThjNmJlMTM0ZjJkZTUwOWRiYWYxNWUxZGFhMTQxNDkyNThiMDE2NGJjMmUyYTNjZDI1MDIzN2JjZmFiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q2MTI3MTQ4OTlhNzU2YzUxMzJhNmQ1ZjY5YmEwYjU4ZmQ0ZDFjZjkxZWU4ODVjYTdmNzYzY2JmMmYzM2YxNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f3c04be410f74f79b43b9c958f116570",
+      "statement": "Merge's default strategy unions property values without removing duplicates, while compact removes duplicates, drops empty-list properties, and converts singleton lists to scalars; these strategies control representation rather than business source trust.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L189-L209",
+          "version": "repo-lines-v1:sha256:fa8c8ea81210f332d5c43d9fbca91b0a358f534f2df3e243dcfad9f9de0f901a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5ZGE1NmMzNzVlYTQ5ZjM3N2E4Y2FlNDI1OWIwNTQ2NjdmMTIxMTBkOTEzMGY1MmQzMmVhMGIwM2EwOGJjMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwYTY0YTVkMzZhMjRlMjc4MDE5YTA3NzYwNmJjMGE0NWJlYTA0NTBlY2U4Zjk3YTQ2MDgyZGVjYTk1ZDdjYjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwMTlkYzJjNzExOWVjNTA3YzkxYzE5YWE5NThmNzE4MjZiMGRlMjE3ZWNjMmIxZDAzZjE4OWJkMTQ4ZWEyYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1MjlkMGM1NjA2NDQ4MWVlMTBjZWQxM2MzMzdmNzZlZjMzMDg1YTdiOTRjOWNlNDRjMjgyN2RiZWEwMTNmMmUifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-connect.rst#L88-L96",
+          "version": "repo-lines-v1:sha256:93555b7207447cdbd011f810a9e6dda7404b3fbd47d6c434d7524122fc28975d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkzNmM4YTViOGE1ZDFjNDg3M2E0YjY3YjZkNWJlZGJkMzhmMTQ1YzVkNTMwOTUyZDNiNzc2NDY1Mjg3NmY3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI1MjdmYzVmNTFkNmM4N2IzN2ZiNzFmODNjMGNjY2NhNDQwYjEwOTVlM2QzYTVkYTEzMzQ3NThiNDAwNWQxMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjczNmNjOGM2YzI4MzNhZjYxMDkyMGFkNzZmNTQzOGI4MThjMmE5OGQyODJhNTRiZDYwYTA1NWNmNTM5NTAxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzFjNGE5NjYyMjU0MTllMWNmYmI2YTA1OGE4MDcwNWNjMTFlZDRhZmNkNTNmOGY5Y2Q4YjljZDg3M2JlMzM2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_df24927b58e940b187959d2082ab578e",
+      "statement": "Merge strategy list exposes the contributing entities under $merged for custom combination, excluding internal fields such as _ts unless include_internal_properties is true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L211-L228",
+          "version": "repo-lines-v1:sha256:5172b8c55bd5e6e5199bba50edee3a2d657ee9f860dfc494221a17ffef375c69:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2ZWYzNmQzM2FkZDU3YTMwNGRiYzFhZTkwMmYzZTYyNzZkYmRlYTljZDkxMjUzMmFkZjllMzRmZGNmZGZjNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMTU2ODMxN2JjZTUzOGJiNDEzZTlkM2RlMzM3MDFjMmNjMGE2M2JjNWYzYWZlMjllMjFjOTMyZmM3MGE5NGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0M2I0NTNkMzE0ZThmNTUzMjg2NTliOWM0YTczYjZiNzQ3N2VhM2FhNjkzY2I5YTQ2YmUwMzY0MTZjNjFkMDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA3ZDc0YzliN2Q3YmQ0NWJiNjQ0NTg0ZTc4ZjgyN2MzZmUxODlmOTM0YThhN2RlZDJkYTQ1NzcwNDY2OWU4MjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_758bacf6525a485cb8a522df54db99bc",
+      "statement": "Golden properties are explicitly selected or composed reusable global values retained alongside competing source-specific facts; merely collecting data in a global or combining values with merge does not automatically select a business master.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L893-L898",
+          "version": "repo-lines-v1:sha256:24d52d5b14c736bc86ad6761937fd320eca2e18c7400298ca197d92382557cc8:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc4Y2ZlZjliY2I5MTdkNWQxMzg2Mjc5YTRkMDRmOTliZDVjZmFhZjM2MmJlNGEwNmVkNzlhZDg4M2Q2YWJiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWM4MWE4YTRkN2NjZTZkNDRkMmYyMTA1NmFkYzRjYzI0NGJjNTYyOTYxNmU5NDk1Yjg0MmJiMmE5NTE5MDNiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2YxNGJiZWFkZGMyMjY1OTUzZmQ0YjNiMWE4YmM3YzEzNmQ5NWU1Nzg1NDhlNGU2YzRiNTFlMTkzMzAwMTg2MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjg1NTZkMTMyNzFmZjA2NTcwM2Y5ZmZiZWE4YTM1YWYxMmEyNzM4YjY2ZWMwNWMxMzdkZWVkMWJmOGY3MmI1OCJ9"
+        },
+        {
+          "resource": "repo://hub/features/global-datasets.rst#L10-L14",
+          "version": "repo-lines-v1:sha256:98a45867cd21b08d2f67e84485f95dfbeca8e730ef6bfac6769df1c1ba0ab627:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTUxNWVlMGQ5YjdjZWM3MjZhN2Q3ZGMyOWE5ZTIzMTEzYmUyYjRmNTBjNzc1NzMxM2JhYTkwMDQxMGRmY2U0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZmMjUyMmY0Mzk0NjZjNmZlOGRhNmU4OGEzYjQwY2NiZWM5MzU4NThiNmYwOGI2NjU0YmUxZDkyM2Q4NjFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJiOWQxNGVmNmQ4YTZjNTQ5OTI4OTg3MjVjYmRhYTczZjY4ODhlNDQwOTRmMDJjZTk3Y2E4MWQ2ODVjMWI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWRjNTdhYTBiMzMwZDQ1NWM3MWEyMzhiNjY5N2FkYWJhMjI1MWM3OTA1MTUwOTFhZDhmNWVlZmI1MWMzYWQ4NyJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-connect.rst#L46-L96",
+          "version": "repo-lines-v1:sha256:12584561e171558d0a890c5018bd8421d31314053d01482019c7a27113078364:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OWQ1ODIwNzBhMGRiZDI0Y2ZlZjE2ZjBkZjNiMGZhODE0YjBkYmQ4YmMxYTg4Y2NhYWFlZGZmNzY2N2M4MjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiNTI3ZmM1ZjUxZDZjODdiMzdmYjcxZjgzYzBjY2NjYTQ0MGIxMDk1ZTNkM2E1ZGExMzM0NzU4YjQwMDVkMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMGYyOWJlYzgzNTY0ZjQ0MDEwMTM2ZDZkYmQ4NTRkZmI0Y2QxNmUxN2I2YTZkZTBlYmI3NmRiN2E4YWVlZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMxYzRhOTY2MjI1NDE5ZTFjZmJiNmEwNThhODA3MDVjYzExZWQ0YWZjZDUzZjhmOWNkOGI5Y2Q4NzNiZTMzNjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8823a541e414e77adf2e7bef0ca4c6d",
+      "statement": "The priority golden-property pattern uses coalesce with candidates in trust order; coalesce returns the first non-null value or the first candidate satisfying its optional predicate, independently of the dataset ordering used to select merge identity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-priority-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:7ebea2d444834b6f93f35da2463f5cf1bdd81b87a97157be2816077db997aad2:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzAwY2NlOWU4ZDFiZDcxOTYxOWEyOWUzOGNiNjliZjNlNWVhNmYzZjQxYjUzZWViMzE2Njk1ODliZWNmZjY3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjBmNjFmNDRiMTUzM2M2NDAzYTBiN2E1MmYyYzllN2MzNjM2OTY2NmNiY2E2MjBkYzAwOTM5ZjE3ZjZlYWZjMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L176-L183",
+          "version": "repo-lines-v1:sha256:9c6c51c09bf79d9b0d9fb67fffd68ab5a1697ac9d698067d1305fa3205d47c86:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTc4NjQwYTNjYmZhNzY1MjFjZTg1ZTdlMmUyNzllMGJlMzQxNmJiYTg0YTRkODMwYTZkNzk0OTNkMTU5OWQxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDliZDc2NDA2NmU1NGM0NGVkYTc3ODNiM2IyZWEwYWNlNDQ4YTUzMGRkOGI2OWY5NmFlZTMzNzcyNTk4ZGQ4ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmNmYjIwZGUwMGQwYWQ5MmI4NjYyMTkzZjhmNTk2NTQ4NDY5MTA2N2I4OGFhYzRmM2ZhY2U0MjdjMzVjY2UxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGYyMzE5NzU5NmNhNjFiMTE0ZmQ2NmI4MDM0MjNmMzg2MGU0YjRmMjkxZmVjZmFiZmRmODc0ZGI0YWJiYmU4YSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-nulls.rst#L18-L24",
+          "version": "repo-lines-v1:sha256:6ef1812bfb4a1eab392dc0edd71ecb3151638dea5048ae8a4e62a517f6d62f2e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE0ZmM1OWJlNDY2MDFmZTgwZjE4YmY3MDIyYzJiYjIwNzU1ZDE3MTA4OWYwYjc4MDFmNjJhZDk4OWI3ZTg4NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMzNGQ3YmY1ZjI5NWZhM2RlNWI3ZDU5NGUxMTQ0ZWQzMzhhY2Q1MDg5OWNjNmJhZWVmMTg1MjQzNGFmYzQxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FhZWI3ZWYyNjBhMTRmMWQ5M2MzZWRjYzc0YzAxZGRmYzhiOWE3OGY0N2NkYmViMmU4ZTE5ZTc1MTIxZTI4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGUxMTA0MjhmNGQ3NTNmY2YwNTQwYjkzNTE2OTk1ZGU5ZDA0YjA0OTE5MDJjMjQ4OTI5ZDIxOWU2MDdiZDNmOCJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-connect.rst#L93-L96",
+          "version": "repo-lines-v1:sha256:51cd8147548a693f38617f6066af6ef8b7fe0002d4d69a80b66990f41e40ce99:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUzNzA5YjE2NzM4ZDUzZDVlMDZiY2ExNWY1Mzk1ZjFmZTc2OWQxYzJhYmUzNmMzNjg0ZTRhZjQ5ZGFhYWZhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI1MjdmYzVmNTFkNmM4N2IzN2ZiNzFmODNjMGNjY2NhNDQwYjEwOTVlM2QzYTVkYTEzMzQ3NThiNDAwNWQxMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTEyZTcwYjM1MWIzZTlmYTFlOTViZDIxNTA3NjBhYjBkNjA4YTVkMDRlNjRhM2QxOGYxYjg1NTg1MzJlODNkMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzFjNGE5NjYyMjU0MTllMWNmYmI2YTA1OGE4MDcwNWNjMTFlZDRhZmNkNTNmOGY5Y2Q4YjljZDg3M2JlMzM2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_600644e272a8472da3f2ce83de71925a",
+      "statement": "The quality golden-property pattern recommends normalizing quality scores across sources and selecting the value with the most relevant score; it is custom business-pattern guidance rather than a built-in merge ranking strategy.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-quality-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:ef14061d1163a3b5a0a1b48d3682f945e890b9bfc748f581cbeb46c59ed63544:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDM0OTQ4YTgzN2I0Yzc0NWQxYWM2MDhhMzEyZTI3N2U1NDBmMjhhMThhYmQyNWViYWQ1MDczMmY1ZTY3Y2E3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg2OGMzOGUxOWIzZTNhMWZjNjQ4NTgyNjI3OGU5NTU5MzBiOTBjOWY5NjZkZjJkODQzN2IwMDAxMzUxNzhlYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L189-L222",
+          "version": "repo-lines-v1:sha256:a4ccd2a27bf091ff045c77f00e56d4885c5aba7c376098f8cf9641bad50a5c3a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5ZGE1NmMzNzVlYTQ5ZjM3N2E4Y2FlNDI1OWIwNTQ2NjdmMTIxMTBkOTEzMGY1MmQzMmVhMGIwM2EwOGJjMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwMTlkYzJjNzExOWVjNTA3YzkxYzE5YWE5NThmNzE4MjZiMGRlMjE3ZWNjMmIxZDAzZjE4OWJkMTQ4ZWEyYWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1MmZmNmViZGRkMmQ4MmQ4ZDk2M2M0NWM0YmFkNjdiNjgxYTJiMGQ4Y2MyYjYyODBmZTk2MzgyYTY3NzA0NmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8839a817bed94d2b9b2d722530179714",
+      "statement": "The last-updated golden-property pattern requires reliable propagated source timestamps, highlights feedback-loop risks when syncing back, and illustrates a per-property $updated dictionary as an alternative time-selection representation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-last-updated-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:9328e4bc39334d7999bb435994a974dc2659869ad5a19874532ba2d431c883d4:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTlkYmRkOGQ2ZmEwNDdiYTA0OTM5ODJmZDg3Y2Q0OTAyNWQ3YmFlOTA0OGE4ODBhNDExMzY3ODBmZDcxOTAwMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhmZDE3YmUwZDc4NWY0MjgzZTc3ZTc3NDdiM2NjMmQ1YTIzZmRmMmQ3MzI1MzQwMmZjYzQwOWNlYTA3NWQyYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjlhMmM3NmE2YjQ3NzlkMWQzODZmZDQ3YjNkOTNhZjU4NDJlYTljMjc4NjNiN2RmZjc4YjRmMzhjMWM1NzIzYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-last-updated-pattern.rst#L101-L150",
+          "version": "repo-lines-v1:sha256:64b2e32af98395f2d650c93cea42123735e08c223c24ad325ad8ab9d7b02e319:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzMmNmMjE1OGVmZTE0NzI5YTVmMTI3N2YyZTM0ZDBiNDJiZDNhMWI5NDQ2M2ViNWQ4ODk2ZTBkYmU1NzgxYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhYWU4YTBjYTc2Zjk4ZjdiN2RjNzk4NDk1MWQ2M2U1N2RiM2M2NDU1NzljYTUxYmFkNmE1MzlkNjE0ZWRiYmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIwMThkZDczNTM1MGQyZDIxMmNkYjgwNDM1ZDU2YWY5OGRkODU0NGVmNjJkMzU2OTZjN2Y3ZTBiNDU5MDIwNGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMmViZmNkMzEwNmQ1NWQ5ZjVlZjg2NzBlZjk5MWY5OWEyYTkwYTEyZjg3ZjE2YTk0MDYxZGI1MDRjM2FmOTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-last-updated-pattern.rst#L23-L53",
+          "version": "repo-lines-v1:sha256:3c9acf570d3713274d2906306586e7bcf24566b693a33206ae64758db56b77d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzMmNmMjE1OGVmZTE0NzI5YTVmMTI3N2YyZTM0ZDBiNDJiZDNhMWI5NDQ2M2ViNWQ4ODk2ZTBkYmU1NzgxYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyYmRhNzI3MWQxMzZhNGNhZDIzY2VkYzlkMDI2NmVhM2QzY2EyMDM1MThmMzcyNmYyYjE1YTRiMzFmMjlhZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIwMThkZDczNTM1MGQyZDIxMmNkYjgwNDM1ZDU2YWY5OGRkODU0NGVmNjJkMzU2OTZjN2Y3ZTBiNDU5MDIwNGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhNzdhN2VkOTBhYTY5ZTQ4NTkyNDBmOWI5NzE5MzdjY2ZlN2QwMTEwMzVmZDgwOWZhZjg1NzkxNTAzNzEyZjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_975e152c1c6a401bb7dae957e6c33712",
+      "statement": "The claims data pattern enriches a property into a dictionary containing its original value and metadata, while retaining the raw source data separately; time-based MDM can add $last-modified and end-time to describe property changes and claim replacement.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L17-L29",
+          "version": "repo-lines-v1:sha256:ac8f904508a686728b317c9405611285eb790e90d2960bd33b29a03011b46c40:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2OGFmMjgxMTAwMzYwNTdjOWY3MzgyNTIzOTA1ZTExZjBjM2M4ZDk1NTI5Y2MzZWYzMGI2M2I4ZWI5NDkxYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4N2U1MmRiMDA4NTYyYTFkZDBlNDA4NjZiNjg5MzE4ZmUxODRlYTUzYzgzYTYyOTRmZGMwYzVmOTE0N2Y3NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyZTA1MTI4Mjc5MGNjMjFhMDkwMmJmODkyZGFlNTgwOGFiMmRkMjdmNjUyZDY3OWQ3MmUxYTg2ZWMzZjdiZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2YTUwYWUwZTkwOGUxZDE4NDhhZGMyYTMyMGRlMTk1NGJiOTVhNmVhMzMzMzVjNmMwZTg4MmFjMjFjZjZiZDgifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/claims-pattern.rst#L6-L29",
+          "version": "repo-lines-v1:sha256:039f0e2f647a4994b255542239b357e63f353acb365c6088111ef668dca73ed6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2YzNkMjU4ZjU5OGQ0YWExYWM1MGY0ODhiMGQzMjJkNTZlM2M0YTFlMzJjZWMwMmIyODg2ZmU4YTA2Y2JlMjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyODMzYTJlMTYyZDcxY2RkNTc3YzdhZDQwMmE4OWJiYWNhODI2NWFlNTcwOGI2NDc1ODA5YzI0Y2U0YmRkZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQwYTk3M2Q4ODlmODQ5OThiZDliZDQ5MDVlMTFlY2Y2NTRmMDJhM2FiMWI0ZTkwOTE5YjMzODYyYWRjNjliYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2930d90801d64f2686003ea80a457212",
+      "statement": "Time-based MDM guidance prefers source property-level timestamps; if only an entity timestamp exists it initializes from that and maintains per-property timestamps on value changes, and if neither exists it initializes from the collect dataset's _ts and maintains subsequent property changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L32-L44",
+          "version": "repo-lines-v1:sha256:f587a4d737f4e0c4564e5875ec29cf85564edce9bdbd4731c208c3d748059f79:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzZTA5NmVmZTUyNWVhYzUzZmNkNmVmNmQ5NDBlYzFjYzJiMDRhOTc2Y2Q0Y2JiYmU2MWEwYTRjNjVlNDA0MWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2NmIzMDY2YzA0YTM5YTViYzA2NWQwODE0ZWY0Zjk2MDQxNDQ5MTYyYmZiMGM5OTcxZDVhYzRmOTEzOTkxOTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkZWE4MzkzOGEyMjU3M2VhZTI1ZjdiN2E2NWQ0MjAxMDcxODc5N2NiNDQ4MzNmZTgzNGFlOTBjNjEwMTVlOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2Nzk1MzI5MjRlMzVlYmNiZTc0NWRmZjllOWVlYTA4YzM5ZDcyZWE0Y2JiMzFmNjBlMzcwOTViYjFmMzI2YWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1ba3ef9c24dd4645b30adadae083158f",
+      "statement": "Time-based MDM selects the newest current property claim by filtering out ended claims and sorting on $last-modified; its fuller history example also guards against incoming data older than retained property history.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L116-L137",
+          "version": "repo-lines-v1:sha256:c685c386e9224be94b01b70fa0c2f8cfedd00728af0dc0a5cef908ae7e26b5ec:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxZDg2MGExNjE1Y2ZkMjBlY2M5ODRhZmMwNmVjZTZhZDNjYjBkMjg5NWNjYzlmYTliMWJkMTQ5Nzg3OWE4NTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljOTU1ODA0MmE5MjE5ZDZiZDRjMmY0ZTk5N2QwYzIzNzIzN2FlZmU4OGQyOTRkNTA3ZGU5YmZmOTFhNjFkNWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkNTEzOWI5YWFkNDVjNmU1NzZmYmRkYmNkNDBhNDcxZDkzNjExYzJmMmM5YTlkZWRlZTc1NGM4NDg3ZjVlOWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU0NTQ0YmM0MDg2NGZkMGFjNWRiMTViN2Q0MjlkOWVhM2I0MDM2YmRjOTI2MTUzYzcwYzBhYTAzMjI3ZTlhYzYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L204-L204",
+          "version": "repo-lines-v1:sha256:5dd93bef340098c42e69520521bbabdc96a67cae92ece502df428033249d4c0a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWRkOTNiZWYzNDAwOThjNDJlNjk1MjA1MjFiYmFiZGM5NmE2N2NhZTkyZWNlNTAyZGY0MjgwMzMyNDlkNGMwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWRkOTNiZWYzNDAwOThjNDJlNjk1MjA1MjFiYmFiZGM5NmE2N2NhZTkyZWNlNTAyZGY0MjgwMzMyNDlkNGMwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmE5YjYzMTRkNjJhYjM4YzY3NmU4NWE4NTllMjgzNDBjNDFmYmM5NDc1MDA2YWM1OGVhYWQyMDUzZWNiZGM4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDRkNjhmMTQ5OWQwNjc0YmFlNTc2ZWMzOTJmMDMyN2FjMjg3NWE0YjExMmJkMGUyZjBlNjEzYmFlZmY3Y2I2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L49-L67",
+          "version": "repo-lines-v1:sha256:72a145635233fd32de4e8bc74ba6212110dee97235fa58400e981812eb51b9d2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NTJjMTM5N2E3Yzk3ZGEzMmFkYmEyMWFmMWFhOGFlNTJjN2FhM2UzZWZhMDExOGFiNWJjZGQ4MjgwNWE1ZDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwNjQ4Zjc3ZmQ1YTljNjNiM2NkZDBhZjQ5ZGFhMTI5OTIyMGI3NTQxZTg4Y2ExN2VmZTFhNmExMTRiOWZmMmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwZmQ4NzYzZDM2NWU5MWRlNjU2NzFkZmFiYzg3MzczZGEwYTY4ZWZmMzY5YTk1YmRjNjBiZDNiMDk4MThjYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzNGYzMDc3YWRkYzY2NjU2MmYwMWYxZjQ4NWY0Njg0MTE4NzA0NzBkMTkyNmYwYTdmODZkZTg4YTdhNDZmZDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e3df6231a5144538a4d0f0817f37005",
+      "statement": "_ts records dataset registration time and is not a business-property modification timestamp, while _updated is an opaque source ordering/continuation token rather than a timestamp field for golden-property selection.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L103-L110",
+          "version": "repo-lines-v1:sha256:681f8687eb7bd55dfc1d42b81572af8069a01808487091c1176c7c7707537e12:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWUzZWYzMDRjZWQwNTAxOTg3MDhlNmYyMmZmNjVkMzEyYmE2MGE3ZDFkZjg4ZWQ1ZDViNTgyMmU5Njk5NGUwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmZmOTkyNGQxZDgxNGQ5MmZhNWM3YTc1Nzc0N2QxZTUwNGNlN2Y5NmYxNWVjNjdmOGUzMTI2ZjM3MzUwMzYwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDdlNDhmYmQ1YjYyZTI3Njg3ODJiNTE3MDQ5MGRiNWRiMGIyNGMxNjg1YzVhODgzMjdkYzFkN2Y3ZTY5MGI3MSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L72-L79",
+          "version": "repo-lines-v1:sha256:ef9d11140cd9b18c16ebd5ffe115f213641977af53a37431b7c1eb326143301e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhkYmQwMTk5MmQ2ZDhmNjRjNjRlYjEyMzg2NzkyYjJhMmYwMjlhYTBmYjNkNWU1OGE1ZTdlNDc3MTQ1YTZiMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkNWRkODMyNDM0MTEyNTA1YTlhZTRkMTAyY2I2NWFmNDMyMWIxMmI5YTVjZmQ2N2Y1MWRlNjIyYmM4MDA0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIxYzBjYTdmYjRkYWFhYmNjZTlhZWQ0NTY1N2MxMTQ5YjUyZTk5MDJlOWU2OWEzNjc0ZDZmMTE5MTYxYzZkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUxN2E4Y2QxNGIzOTM3YjEwODgyMDkzMGI2OTllNTg1ZGRjNjY5MmE4MzYyMWJjNWM0ZDAwMGE5MDYzNjczZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L17-L19",
+          "version": "repo-lines-v1:sha256:05d3d9d8a555569ad5015bbead022f7d9ee52e2c89d0600d84575e84814362b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjY4YWYyODExMDAzNjA1N2M5ZjczODI1MjM5MDVlMTFmMGMzYzhkOTU1MjljYzNlZjMwYjYzYjhlYjk0OTFhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI0MDBjOWRjMWQ5MmQ5ZTI5N2NhZmZiNWI2YTRhMWM2OTZiOGVkN2QwMGViOThiODFiOTM2MjZkZTJlMzJmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjJlMDUxMjgyNzkwY2MyMWEwOTAyYmY4OTJkYWU1ODA4YWIyZGQyN2Y2NTJkNjc5ZDcyZTFhODZlYzNmN2JkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc2OTgwZTkxNGZiOTc4ZjhkMzE4NTVkNzE4OTBlZWUzY2I1ZmVhZTFlYTgzZTkzZTJkZWMyOTgyZTBiMTg3NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_05ce009f248b4ae68394e34b9fe5c1f2",
+      "statement": "For hops targeting its own sink, DTL requires batch_size: 1 to see prior sink writes and sink.set_initial_offset: onload to avoid waiting on sink population; the last-updated enrichment example uses those settings and disables dependency tracking for its self-history lookup.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-last-updated-pattern.rst#L12-L38",
+          "version": "repo-lines-v1:sha256:c2f28fb7b578be726352acdb8f5ed0ae41d9570e6ef9117c2a1ecc5e56c13de4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmYWQ3YWNkNWZiYWY0MmNlNzJmZDgxODQ1MGMwYmRkMWFlYjc2YTlkNDFkNmZjZTI4Y2NkMzNlZTJiZjIzN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmOWQ4NDMzYzM4MGFkMjI5M2FhNjY1NzE4MDExODg2MDIyNTZiYzMzY2MzMjVjNzRjYWM1ODk1YWU3MDExMDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2YmZmY2U0NmQ4OTBiZmQ2ODcwNzI1MmFhZDIyNjFhNzQ2NzIyMzUxMzRhY2I0ZTZkODNjNWMxYjAwZGE5ODIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjMmJkN2ZiMDJhN2IzZTFkNTg0MGE3NDU4ZDQ5ODVjMjZlNGIyZGNlMDdiODQ1NWUzZWM0NDFkMjM0M2Q4NGYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/golden-property-last-updated-pattern.rst#L67-L71",
+          "version": "repo-lines-v1:sha256:6936fa91ed99af683bc837ef6d4b272d1af1d1c5de2fa2890f4598c005111cea:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODgwY2M0NzZiYThhMjgxMjM3ZGU1Mzc0YjYxYWEwMDUwOWUzMzRlN2Q2ODBkNWQ5ZjJlMzZjMTBiMjM3ZTc4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2EyZWJmY2QzMTA2ZDU1ZDlmNWVmODY3MGVmOTkxZjk5YTJhOTBhMTJmODdmMTZhOTQwNjFkYjUwNGMzYWY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzBiZThkN2FjNjIxNmYyZjcyZDUwMDE0NWRmZmFmMWI0ZDllMzVkNmQxMjY3ODVmNmY3NjZjMTAzZjEwYTMyMSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L110-L114",
+          "version": "repo-lines-v1:sha256:8d32ec827f5f7dee45c45cd4f3852bef552101f13596fa6b3bdb4442a3e629b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJlNDE0NDRiZTBiNzM5ZDgxOGYyNWQ3Yzg3MGNjMWU3ZWE3MTU3N2RhOGViYTgzZTM0OGFhMmY1ZGFiODUyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTU4ODgyZTcyMDE3ZTA1MzhjNmUyOThmNDhjNmU3MThkYjkyYmM4ZDBmNTVjNTMwZjFiNDRjNzNiODA5ODRkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNkNDc5MjQwYjBmOTc4MzQ1ODQ1OGY0NTJmZTU1ODYzNzVhY2FiOWM4MzE0ODZjOWY2NWU1YThkODJiODY2YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM3OTJkNTdhZTJlZWNjZjFhN2ExN2ZkZWEwNDJhNzNhZjg0NjU1Zjg1ZmI0ZWRjZjU3MjEzOWYyYTg0YjJlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cbed578c4a61406e95daea10168691ca",
+      "statement": "Late schema binding guidance maps target views using global properties or the target's own namespace, performs hops on global properties, and uses target-system identifiers; referencing unrelated source namespaces recreates system-to-system coupling.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L798-L800",
+          "version": "repo-lines-v1:sha256:fa22a5071fe08dd610db254fc1effeba3397fe9f1a4ba64c66b83320d0408b52:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzVlYzZjYmIzYjBlNGZlMDU1MGZlMzgwZTk0YjdiZWZjOWVlNTAwYTAwNmFiMWQyNDAwY2RiZDFhZWY2MzBiOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JmYjcwMjkwNGQ2OWIxZGVmNTE0OGMxMjgyNGMzZDk1MDk5YzBlMzFjZmU1MTRmMmNhOTRkZGIwYzk4N2I3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZkNWE2Mjk0MTljYTE4YTZjZDkxMDU2NDU1MWM3MDFjODM2OGNkZTZmMzkzN2MwZDIwOGQ0ZjJmOGRmZTM4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjNiMjc3N2RjMWI0ZTg5ZWU4M2M0NzMzM2FjYWZkMTMwYzk0ZGVkOGU0MjUwYWRmMzVhMmVhNDgyMzBmZTM4YyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/late-schema-binding-pattern.rst#L1-L9",
+          "version": "repo-lines-v1:sha256:3a93bf0a0c068e8999938d179769ff43499d1719966046c646349c245477f533:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODhmYTE0ODdhNTE3ODhjMGVhMDg0ZjAyYmYwZTFiZGE3N2JlMGE2MzYyY2MwMWEzMzNlODlhOWUxNzg3MDdkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDUwNWE2Zjg0MzBmNzMyMTdjOWIzYmZmM2ZkNTc0ODZhYmUxYTg1YmQwZmE2YmQ3ODNkM2M5OTA3YTBjNmZmZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjMyNGM5MjkxYjE2Yjk3NzE2NTI5ZTk2NjhlZjg0OWJjNjk0MzY4MjNiNzc5MGQzMDc4NTZlYTE3ZjJiYzQ0ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_83aafd0d0f2f4ac99b2d3ec8bd09ce66",
+      "statement": "Late-binding guidance warns that bidirectional sharing may require the original target object when patching is unsupported, and namespace removal may require explicit rewriting of _id rather than passing a namespaced or composite global identity through unchanged.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/late-schema-binding-pattern.rst#L3-L17",
+          "version": "repo-lines-v1:sha256:7edac0877acc1bdb1fcda191c5bd96b960428824896fae7049c937bf0bf23c6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2ZmU1MGM0MDIwNmY3MTc0NmUzODUzMjllZTg3ZmMxOTVjNzM0NGJkNDhlMDE4MGYyZGU2MDYyMTJiNDkyODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRlNzdmNzFiNjc1ODlhYTUyOTRiYzI2ZmMxNjJmYzEyZjRlOGE1MjkwZWY3OTU4MDBjNWE2ZmM0YWNlYjEwNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_73b9fedb55c045428f6be9487e823c53",
+      "statement": "Identity-rewriting guidance preserves $original_id for tracing and rewrites _id before filters; filters before the rewrite apply to the old identity, and using mutable source or joined values in identities can turn changes into new entities instead of updating the previous identity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/data-management.rst#L883-L889",
+          "version": "repo-lines-v1:sha256:98d7cc6f7b170dcec313e6d75e85dae883f103821e1941edaca08c8ece8bddc2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQwOTZiNWFiYzhmODc4NjIzZTI5MDhkODAyNWZjNmFlYjg4OThlM2RlMThkZmI2NTQ3MWIwMWIyMTYyMWYyOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjExMTk3MTBhNGFkODdmMDc5ZjFhYzI3MGRlYjA4OWZjNzFiNGJhOTZjMWFmYmRhMzczNzZkYzRmMWQyODhjOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWE4NDhiODM4MmIzZmIwOGVkYTQxNzkyODc1NjhjYmIyNzJhNjg4ZjdmMTRkYmNhY2JjN2I5MWVlODEzZmI2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2YxNGJiZWFkZGMyMjY1OTUzZmQ0YjNiMWE4YmM3YzEzNmQ5NWU1Nzg1NDhlNGU2YzRiNTFlMTkzMzAwMTg2MyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/rewriting-identity-pattern.rst#L1-L5",
+          "version": "repo-lines-v1:sha256:2195afb903030251526c3cd68b20539a8a39a284531451501f50b071fb00dda6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdhNjg4YjQ1MmIxNzQxOGFlZjhiNzgzOTI3ZTJhODRiN2MyNWFhZDQ2Mzc3MzI3MGQwODAwMmVmMmIwYzQ0MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWEzYTdjMGU3MmM1NjRiMGUwY2I3MmVlYjU0YzU4NzVjODA1YWY4NmE2NGYzNTE2OWM0NTM2OGNmYTUyZGU4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_441e3c979cfc4a77b2a82b8f76e8bde4",
+      "statement": "The documented connector-extension principle favors adding datatypes and properties over removing existing model parts to preserve backward compatibility; it is a design recommendation rather than an automatic migration mechanism.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/open-to-extension-closed-for-modification-pattern.rst#L1-L4",
+          "version": "repo-lines-v1:sha256:da88618910b2b097874f6765719d30d45291d41cf7e2c30c11e8b3c31f14fd06:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWU1YWU5ZDIxYWQ3NzA3ODc0NzE3ZTE2ZDY5ZmVjZWI2OWE0MjY4OTgwYmYyNjViYzkzODM5N2UxMGFlYTlkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI0MzA0OGE2ZWU2M2VlY2Y4YWYyZWZmNDY5NmU0ZDM0MWZjMzc1NGNiM2QyZWZhMTJjZGE5NmE2Y2ZmNmZiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_001115a13a4b43dc995be4d1331cb3d7",
+      "statement": "Sesam data is dynamically typed and schema validation is optional; automatic inference generates source and sink entity schemas, can be disabled per pipe with infer_pipe_entity_types: false, and has a documented default of false for developer subscriptions despite being generally enabled.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L194-L203",
+          "version": "repo-lines-v1:sha256:e2a88a6c3759bfe9b2d30b74d34e4fc54102f82c6812ee8c7b5c04df558b7d44:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwNmQ4ZTA3MDdmNWI1NmQ0YWU1ZWRmOTU2YTcyNmE1ODRjNjU4OTBmZGQ5ZWNmNjUyNDE4NDY5ZWU5NzgyZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MGIzNjJkODFjZDA4YzE2M2YzNTM3NDU0ODYyN2NhYzRlZmFkZDgwNzNkMmQwOGE3N2RkYTY3NzkzYjVhYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzMGE2ZTA1MzQxMTZiMDVlY2JlYjJhMjQ5ZTA2MTY4YzEzZmI5ZjkxYTMyNmQ5MDMyNmRiZWU2YWQ5OGNkMGEifQ"
+        },
+        {
+          "resource": "repo://hub/features/schema-inference.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:2442859eb3530d072d2b8b3fb52d4273af36d35f5236c8adcefe73a9a42b6969:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5M2I1YjgwZTcwZjM0MTRmNWJlZWUxNmJlMzg3MGJiYTZhZDJkMGQ5MjgyNzc5MmQyNjg2MjlmYzVlOTMyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk2MWU0Njg0ZDMxNjlmOGE2MDU1ODRlY2MxYmU1MGJkMDRlOWZjMmI2YTJiNGQ3M2Y1MDA1ODk1ZDFlN2I5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNkMDkxMGIxZTY2NTczNDYyY2Y4ZTA5YWI1ZmM0MmE1Y2Q0ZDYwYmE4NWU5NzU2YWU1NDI4YmI1OGI0YjA1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d1dda834183c4fd5bebda9e4a1363cc5",
+      "statement": "Schema models group JSON-schema entity types and allow property descriptions to be aggregated to Management Studio property landing pages; explicit models can be uploaded through /api/models independently of pipe validation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-json-schema-validation.rst#L7-L10",
+          "version": "repo-lines-v1:sha256:fbc9d2a24ba139ee9ca6f68bc0d7aed79c114bd37fa5e973e7695557204faa11:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY5YWJlNzY3ZGRiZWNmNGE4Y2Q1ZmY1OGUxMmU3MzU5OTUwYTdjMDZmZmIwOGNlMWE3NmJlOGUxYTlhZWRmMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDIzYjQ2MTk2MTcxMzE2MWNkMDY4YzNlMmE2ZWNjZTMwMzJiMzZlZWJjZWFjMGZjZGZjMDk1Y2RkYTA0NDQ3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODI5MjQyZWVjM2I3OTU1NGZjMzA5OWU3ZjQyZGVkNmMzMWY2N2VhMjNmMjEwYTUxZTRkZDcxODJlZTFhOWNlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        },
+        {
+          "resource": "repo://hub/features/schema-models.rst#L23-L23",
+          "version": "repo-lines-v1:sha256:7c245fffa63589061e14fa232208d6cdfe1ed1836db5e9c18655b87b5b0ccc5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2MyNDVmZmZhNjM1ODkwNjFlMTRmYTIzMjIwOGQ2Y2RmZTFlZDE4MzZkYjVlOWMxODY1NWI4N2I1YjBjY2M1YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2MyNDVmZmZhNjM1ODkwNjFlMTRmYTIzMjIwOGQ2Y2RmZTFlZDE4MzZkYjVlOWMxODY1NWI4N2I1YjBjY2M1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjVlNmI4NjM1YWUwZmM5NTczY2RjMGViNTlkNjlmMjRlMGUxNjkwY2U3YTk2MzgwYzFhZDVlMjE3MzJkZmMzNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/features/schema-models.rst#L8-L11",
+          "version": "repo-lines-v1:sha256:7ceba87dc63da30d65a6a19dc04c6811f31d78755ef53001171f91f890406003:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZkN2UxNjFhMmI1ZjRhMDdjOGJmMWUyM2MyZjU3OWY4ZDA4OWVhNTcwN2NjNTUxNjgyZTE4NTQ1ZGVjNTdhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFlZjhkODg1OWNlMDJkYzQ2YTFkMDMzZjQ3ZjNmZjE4OTFlZWQ4Yzc1YzZhMzA3ZTllYmU4NjkxN2I3NmQ3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkNzYxODdmY2Y5MDIxZTU4YWNjODczNjcyYmQzNGNhMjcyZDJjYzU4ZGJiMjlhZWFlNDgyMGQ2YzA5MGZkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWNjOTJhZDk2ZDcxZWY5Y2Q1Yjk5NTgyZDA3ZjM4YWExNGRmYzhlZGQ2MTA3NzQ2Mjk5NTZkOWRmNTRjNjEyOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9a1d92f14794e8d8e7da31687e1bc3e",
+      "statement": "Inferred sink entity types are assigned to implicit Global, Input, and Output models by pipe role and to pipe-id-prefix models; metadata.models customizes model membership, which can be browsed or used to filter entity types in Management Studio.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/schema-models.rst#L11-L21",
+          "version": "repo-lines-v1:sha256:36bc7efece2c6db2aa094d34a30e42691804ebeea12d42acefb9a0fa2cb015de:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZWY4ZDg4NTljZTAyZGM0NmExZDAzM2Y0N2YzZmYxODkxZWVkOGM3NWM2YTMwN2U5ZWJlODY5MTdiNzZkNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhZmU1OWQzNjMzMWY3MDY0MWM3MWIxY2QxMzM1ZmU4NmIyMjYzOTg1NmY3ZDRhYzc5OTQ2MjI3YWVmMTliOTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5NWM2NmYxOWJjZjE5NGM2MDYzZTI0MzZiMmY5NzhlZGFmNzJiNjhlZTNiNGI5MjQyN2FmYTZjZmJmNjg4MDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjODMxNzYzNzMxNTY2ZTFmNzVlMDI0ZDk2NjkzZTIzZmRlYzk3ZDkxZjkzYjAzZjQ0Mzk0Y2MxNzUzZmQ5ZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f2776b80d164fd89b79aff17c3571b1",
+      "statement": "The public API specification labels model list/add, model retrieval/deletion, and entity-type retrieval endpoints experimental; GET effective: true merges implicit and explicit models in responses, and instance API documentation is available at /api/reference.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L12-L20",
+          "version": "repo-lines-v1:sha256:15dd4c71860ff2f67c140456d9129e641f8f74a547177209863967b986aeb568:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTczZjIxZDUzMTFhOGM5YWU1ZDYwZTkwOGM2ZjYzZGZmOTAyZGRkMzM5Y2ZkZmY3MWQ2ZGNhZTU0NDMyNTI1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRjZWYxNGZkMjA0OWVlYzM2MmI1NWY1YTc3YjllM2IzN2NhYjRiMDQ3NTFlZDU5ZjY4Y2U5Mzk0NDI4MDkzZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWUyZmViZTZiM2E5NTdlZjNjNTNkN2VjOTA0NWRkODQ4OTI4YWMzNTJhZDI3ODUyMDMyZjljZmViMDkxYjMwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDUxZTZiYTFjMDM5N2Q4YzczMjkwM2FjYTQ1YThiZWEyM2I5ZTEyOTA0ODU4ZGQzOWUzYzBkMGVkMjcxNGU4YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L6-L143",
+          "version": "repo-lines-v1:sha256:027bc73a125643c6d5662f022334799c693b55ae6bf57179ab3fdcfa8b397f59:eyJzZWxlY3RlZExpbmVDb3VudCI6MTM4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwN2UxZjQ1ZmEzMzBmNDFhNTVkNDllZjhkZTlhNGZmN2E1MjdkMWYxNzFhYjI3MWVjYTY1ZTc3YTUwY2E5ODNhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMDk0NTU5MzBiNWFkNzgxMGVjZDUyYWEwMTkwMjA5NmI2ZGZjYmVjODIwYWMxNjkxYmI2ZjNhOWMwMmYxMzg5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3OTJjZTM0MWJlMjRmM2ZiNzU5MmNkNWJlODk4Yjk0ODBkMjY5MTg2NzU5NDRlNmQ3Y2QzZGYxMDlkNDhiNjQ3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIyZTkzOWI0YzQ4MzU2ZGJlZmViZDlhNWY4ZmNiZmYyMzI5N2VmM2IxNWQzZDAxMGZlMmI2ZTNjNTFkNDk0Zjk1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_a066f2220f8545c5b4c78937f2b9c712",
+      "statement": "The json_schema transform annotates entity validity and error messages using configurable key_valid and key_errors fields, defaulting to valid and errors, rather than discarding invalid entities itself; its experimental trigger_on selector passes nonmatching entities through without validation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-json-schema-validation.rst#L44-L65",
+          "version": "repo-lines-v1:sha256:b263c1f51a894af6b32bae5bd02922f883b1d254f286a92fa10171de6937da1e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjZWRiNDU5ZjZkOWY3ZDk5M2M5ZmMyZGY5MzYyNzkzMjQzYmNiMWU0MTJjYTgzYjVkMmVhZTRmMzExNzNhM2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjcyNGIwOGFhNmYxNTExYjMzYmFmZGE3NmFiMDEwZjMwMTY0ZWIyYmM3NjhlNjU5MDY1NjE5YjA0NmUyMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3NWFmNDhiMGMwNDgzYzkxM2FmOGMwOTcwYWU5ZmJkOGZmYmE0NGI1NzhlYTBmNWIwYmQ1YWQyNDUzYmI1NWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-json-schema-validation.rst#L7-L10",
+          "version": "repo-lines-v1:sha256:fbc9d2a24ba139ee9ca6f68bc0d7aed79c114bd37fa5e973e7695557204faa11:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY5YWJlNzY3ZGRiZWNmNGE4Y2Q1ZmY1OGUxMmU3MzU5OTUwYTdjMDZmZmIwOGNlMWE3NmJlOGUxYTlhZWRmMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDIzYjQ2MTk2MTcxMzE2MWNkMDY4YzNlMmE2ZWNjZTMwMzJiMzZlZWJjZWFjMGZjZGZjMDk1Y2RkYTA0NDQ3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODI5MjQyZWVjM2I3OTU1NGZjMzA5OWU3ZjQyZGVkNmMzMWY2N2VhMjNmMjEwYTUxZTRkZDcxODJlZTFhOWNlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7ef2dbbb6cc741329f320f340c7a44fa",
+      "statement": "Integrated Search indexes globals for free-text search and relationship navigation, increases the documented data size needed for global pipes by 2x, and restricts search results to data the user has permission to read.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/integrated-search.rst#L30-L32",
+          "version": "repo-lines-v1:sha256:4191bf3313681879059d256a6edfa87e788da7632516da779c1f61af1876a0d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA2NGJmZWVmMWIyNjI0YzVhMTIzZmY1ZmE5ZTU0MjMwZjg5MDM1OTg2ZTE3NWZiNGUyZDkwNjA2ZmYxNDgxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWE5NjUyZGM0MTY2YTNkZWViYmM1ODg0ODdmMTdkMDgxMDY0NGU5ZGVhYTEyNzRmYmYyYWEyNzQxZjE3ZDgwNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2M1ODMwMTg1YjJhZmI4OTc2ODlmMTkyYzRkZGE0OTBlNjAzYzMzODBmY2QzZjljYThmZTkwMGE2OTZlYWMyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWU2OThiMmE0ZDIzYjA0M2VhYzY0NmFjMGNhN2JiYTcwYmE4Y2E4ZGJiNDliOWYxMjA5MjAzNjE4ZDYyMWE3MiJ9"
+        },
+        {
+          "resource": "repo://hub/features/integrated-search.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:dac1365716d763b8bb58cc66af5279c4d6946d62dc75dbffff2b3b16d03e9e99:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ3NDAwNTcxNDA5ODJhMTEzYTNkY2IxZTEzOTY4OTg1YTFjNTQwNGJlNmIzNTE4N2Q4MGUzYTExMGEzYTY3NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjMDE1ZWFjZmMwMjQ2NzlhOGY2MTBjNjdkM2ZmOTdhYTRjZjBiYTViY2VlZWZmZmI0MWQ1MzI2OGQwZGQ5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzA5NmY1NjNmNjI0MTA2OTY1ZmI0ODAyZDVhZWIzMGM5MTE4MzI5MDQ4YzA4MTMxNDhiMjU1MDFjNWE4Yzg1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTBhZmRhOTZkMmQwM2Q3ZDkwNzI0MGQyZDExMzYwYWUwYTliYzA5ZGM2ZGI5MmNkZTIxMjMxNjFmNjAyOTVlMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_58edc6cccc6d41188e3de4be0233ac04",
+      "statement": "Integrated Search and property lineage are available for clustered subscriptions and are enabled by the payment method owner in the subscription Products tab; the feature references direct non-clustered subscriptions to support for migration.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/integrated-search.rst#L12-L28",
+          "version": "repo-lines-v1:sha256:d8ea45f7a065e632551d4682c3c09941eb902aa8fea3d37cd4333d3c8de0d4e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4MTQxOWU5ZGJhMmRiY2YxYmE2MDViZGU2NzY5YmFlMDg5ZWVmNzJiMzE0NmEwM2I1MWY4YmY5ZjU3MDBlMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3YjUzY2I4NDUzNjgyY2FiMmE3MGE4MzA3OWJlYjNhOGZiYjgzOGU5YmUyZTE1MWMyYWIwMDRiMTVkYjM0MzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiMjQxOThhMzRmZDQyYzg4YmU2OWZiZTU3ZmRmYjk1OTI2NDIzZWVlM2ZiMjNhM2Q2MjlkMjA1YmI3ZmM3YzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkYTk4NTA3MjkxM2EyYzNkYWQzMDI4NjRjZTljZGQzNGFhYTExY2NmNzdiMDRlZTI3OTQzYjBiMjk1NmM0NmUifQ"
+        },
+        {
+          "resource": "repo://hub/features/property-lineage.rst#L21-L40",
+          "version": "repo-lines-v1:sha256:306c336650243ac8a770ef07a77a4546d1e16e8a967c7820e37500faaa1b0cda:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZDk3MjIxNDJhMTA3MjVmMmMwYzI5M2YwNTVhOTNiOTNhODVkZDRlZGY5OTgwYmFkZmNlNjQyNzk0MGYzZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3YjUzY2I4NDUzNjgyY2FiMmE3MGE4MzA3OWJlYjNhOGZiYjgzOGU5YmUyZTE1MWMyYWIwMDRiMTVkYjM0MzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRjNmVhYmZjMDM3NWExOTY1MTFlZWZlMjBmODIwNjM3ODgwYzAwODM4YTAzZTEzMzFlNzNhNjI0ZDEyZWQxZjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_addf7390fb604b2a86edb2bae0820a09",
+      "statement": "Property lineage combines static pipe-configuration analysis with schema-inference observations into a best-effort upstream/downstream graph for namespaced properties, rather than proving exhaustive historical provenance for each value.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/property-lineage.rst#L8-L17",
+          "version": "repo-lines-v1:sha256:8f55fdae5f99ea8156f66caa2d3ef0ece6b462403ffe59903aa4249d955c9931:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2OGMzZGViNGFlNzJiZDcyZDhjNjZlNWIzNTc4MjNkMmNhYjJjZmZmYTIzZjVmNjk3ZjE4ZGU2ZDc3OTdmN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYmVlYzViMTMyZTU1NDg4MzEzOGJlNjhlNzVlOTY2ZWI3YzAzNGU4ZTMyMjZjYmU3ZjU0ZGUyOWY0NzExNTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5YmY5YTNkYTdjN2YzN2M2YmZhZTdlYTFkMDNiZDM4MmU1M2MzMjA2YzNjZTViZmYwNGFhMTAyNWZjMTQwOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea54e6059596458898e9068a94f9e11c",
+      "statement": "Property-lineage landing pages can be reached through Ctrl/Cmd+Click on namespaced properties in Integrated Search or pipe Input/Output views, or by selecting properties in pipe entity-type or Inferred Schema views.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/property-lineage.rst#L43-L52",
+          "version": "repo-lines-v1:sha256:aa47551e6e177f57c4f3526d17e1a40bd9a5ee026654e9909eb1317c80eb9236:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YzBiZDVmMjVjM2FjYzMxZmZhY2RiZWI3YzdkZTE1ZWJjZTc3YTRiMzE5MDA3Y2MyMzdiMzk1ODAxYzIyODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwYWRkYjdhYmU1NTFmYjFhYTIyOThjM2JiZDdjYWQ0NTkzZjNiMWI1ZjQxZDRiZDM3YzJmNmMzMWU0OWM5NzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0MTI5ZTJhZmY1NzIzY2U5MjE5ZmM2OTkzNmM5ODg5ZDFiM2RiOGMyZmY4NzVkMmEyMjhhZjExOWI1YjE5YmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJmMWM0NGI3MDU0NjNjYTFhY2I0NGE1YmRmOWQwZmY2NTNiNzE5NDRiY2I5M2Q4OTRmOWQ5OTM3NzZkODAxOTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b5e18331876643f1862d25dc9f99a228",
+      "statement": "Runtime dependency tracking inverses DTL joins to find affected source entities after referenced data changes and is supported only by dataset-source pipes; merge-source transforms do not get tracking for hops or apply-hops and must be split into a downstream dataset-source pipe when that behavior is needed.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L9-L11",
+          "version": "repo-lines-v1:sha256:a1bd2cf1485667322c1d314fe889c2b1f9886d19fe1d007a938a091067598872:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODk1MTc3N2Q5OGI3YzFjNzUxYTY0YzQ2MmE5YmRiOWQwN2MzNDg2N2I2Y2QzYTA1YzE5NWFhMTQ0NTllMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0NmY5NjM5ODUzY2I2ZGZiOGMzOWYzMTZiZDQ0ZDg4YjYyNjc1NmMwZTM2OTI3NzM0NTAwNzNmOGNjYjg5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L14",
+          "version": "repo-lines-v1:sha256:752f9ae994e38b757195dcec312457813f6ed823de4486cff9a14aae1b61267b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_32c1b419ebf1490d947169493f0ec27b",
+      "statement": "Dependency tracking requires inverse join criteria to match stored source-entity values; modifying join properties earlier in a transform chain, adding namespaces, or dynamically synthesizing $ids can interfere with those matches, regardless of any property-lineage graph edge.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:6419ac7275c07e7654cb59fe4c95097379760e036aaff57fd126603e42a284a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI1MzgwYmYxN2MyZWFmOTQxNGFmY2VjMTVkYzEwYTYxNmUyYmIzMWE1YmQzNDIwZWUxNTliMzhmOThhYTdmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/features/property-lineage.rst#L17-L17",
+          "version": "repo-lines-v1:sha256:9fbeec5b132e554883138be68e75e966eb7c034e8e3226cbe7f54de29f471153:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiZWVjNWIxMzJlNTU0ODgzMTM4YmU2OGU3NWU5NjZlYjdjMDM0ZThlMzIyNmNiZTdmNTRkZTI5ZjQ3MTE1MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiZWVjNWIxMzJlNTU0ODgzMTM4YmU2OGU3NWU5NjZlYjdjMDM0ZThlMzIyNmNiZTdmNTRkZTI5ZjQ3MTE1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjRlZjA4NmZkZWUxY2RmNjk4OTg1ZTIxY2YxN2I1MzMwNWM1ZWQxYzFjNmE0MGU3YjI0ZWVjMjQ0YTRhZjkyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_54d9def4f53e405eb503fe0d76f10ae1",
+      "statement": "track-dependencies defaults to true in a hops specification and can be set to false to disable dependency tracking for that particular hop.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L65-L68",
+          "version": "repo-lines-v1:sha256:c446769fdc9b5114136499d75c51b2797afaec9c0b529e4114e7e22be04cc34b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ4ZDZjNTYyNzk5NzUyOTMxN2RjMDc4MzUxMmJjNmIzNTg2NGEyOWZkYmJmMDgwMTAxOWEyYjJjNTMyMTdlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGFmZTBjOGQ5YjRjYTgxNGJmYzQ0YmZiNTYxNDVmM2QyOTgxNDllYjhiNmQzZWQxOWJlMmQ0MTZkYzhlNTc1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2ZiNDZmMDFiZDcyMTQyMWEzYjY3MmI3ODI4YTBlODkwNDk4Yzk5YjQxY2VkZWZjMmYyOGVlMWFhMDMwZWM0MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjQ3ODNjOGQzOTY3YTRiY2EyN2I3ZjI1ZDgzODVhMDVmZjMwZmQxYmM5MTNkNzZjMjIzYzQ4ZGM2MGYzNDk4NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_930ac6e2521542329ac870593f3e7b74",
+      "statement": "Merge source version defaults to 1 for compatibility, version 1 is deprecated, and new merge pipes should explicitly use version 2.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L110-L114",
+          "version": "repo-lines-v1:sha256:77c7cc90b77113b6396a1e55a52a0bd6671baf83d64481b4a84208f48a479ef6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjQ5NGExNTRmZDcxZDA3YTNhMmRmNjMxMzQ0YzBiNzUwZmU2MjE0Njk5OWVjNzMwNmM1ZTMxZjkwYzI4MzZmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDI0NmIxYTNmOWQxYTM0ZmM3OTI3NDJkYzczYTRkMjNmODlkMmM1YmFlYjViNWUyNjFiZWYxZDQ1OGQzMTFlNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aa6dcda7c42e4fb79e2f29ec3093fb8a",
+      "statement": "Equality rules added after merge has processed the relevant inputs do not retroactively merge those processed entities; reset/rescan is required if they must be reconsidered under the new rules.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L44-L49",
+          "version": "repo-lines-v1:sha256:0518d2b5f4f8d9ddc4992466de41a24cef93f2395d95bcc618f11bf799837d77:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUxNGVlY2M4OGMwYTY4ZThmYWZhNzc3NGUyYzJlMzA2ZTdmYzU2YTMwNGY3YzFlOTlmMGU2MjBhMzhkNzFjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzA3YzIxYTVhNWI4Y2JiMzdhODYyOWY0MzcwOTk2MjYxODlhN2U5Yjg3NTcxYWIzMDk5NmE5OGY3MWEzNDAxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJkZWZmZDEzNmI4NWMzOWRjMWM1NTBjZDQ2OTdhMjkxMTg5NGZkZWE5NWY3ODg0OTY0M2IwZDZlZWQyMDZjZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmZkYjgwZjI3NmI5YzVmMDk4NGVlMmEyZDExZDYzMDE3NjE0NjE0Yzg3OGIwNzZlZTliOGJkYzkxNjYxNWQwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf824a8d1c8147a6a9d3a37096e4f2c7",
+      "statement": "Reordering merge inputs in version 1 requires resetting the pipe and may require deleting the downstream dataset; both merge identity strategies use dataset positions, so version 2 does not imply output identities are independent of dataset order.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L164-L183",
+          "version": "repo-lines-v1:sha256:d3dbfc25e67a4c05d4a652a790236bd2612d6031adb384928d584e3f243938a4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5ZmIyNjIzNWFlN2NkYzkyNzQ5NmU0ZTY2YjEwMDE1OGI5Y2VhYmMwYmMwOTljYmQ2M2JiZjZmNTA1NjQyMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5YmQ3NjQwNjZlNTRjNDRlZGE3NzgzYjNiMmVhMGFjZTQ0OGE1MzBkZDhiNjlmOTZhZWUzMzc3MjU5OGRkOGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkYTE1ZDRiN2ZlMTQxNGUwZmU1N2NiNjFmZmMyZDkxNDE1YmQ2MGM3NzU1ZTBiN2ZlNDlhYWVhNTg5ZjhjNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmMjMxOTc1OTZjYTYxYjExNGZkNjZiODAzNDIzZjM4NjBlNGI0ZjI5MWZlY2ZhYmZkZjg3NGRiNGFiYmJlOGEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L51-L52",
+          "version": "repo-lines-v1:sha256:dc4e55447a841a38e3cc46373a6fe6a0e3061727d49f326d25380867b542ba59:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI4ZGQ0NzNhMjE0NWJlZTRmODIxYmJmY2RmODNkNjhiMjRlNTc2NTY1NjM3OTRmMmVjNDBmODM3Y2Q0OTFkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTE5MjdkYWEyOTgxZjQ5NmI5MzU0MjMxYjlkODVjMzBjNmE0ZGJkZDlhNzM1ZjYzMmRjNGJhOTllYTI4NjQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjYyODE5OTQ1MDBmMzgzZjE0MzBhYzZiMTg4OTBhNGVjNTViZTRiNmU0M2NlNzQ3NGE2MjQ3ZTEyZTMxNjc5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmNkOGZkYjk5YWJjM2ZlMDUwOGYxZjczN2FlNjhkOGMzYjliZTk3ZjFhZTY4YTY0ZmZiMjFjNTE1NzIwMDA1YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c5fe0dec32d84ff38a775c64436168ce",
+      "statement": "Removing input datasets from either merge version 1 or 2 requires a full run to clear the removed inputs from merge state; background incremental runs can continue producing results from state that includes datasets marked for removal.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L54-L59",
+          "version": "repo-lines-v1:sha256:984b0e494f962f49e8263fbb028c0e91eecbd47d2acb573a55621614befd7948:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FmNDEzOGJhYTBlMmJlNzdjODliYTE4YTY3N2JlNjY5NTA5N2QyMTZlY2QyMjJmMjkyYTk3N2U4NDU3Y2VhZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI2NWNhMGY5ZTQyZDRlM2VmMmQ0ZjQyMWJjZWEwZjVkMjFkMjFhZGFkMDQ4MmE4ZjE1NThhYzU5YzRiZDg1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGVjN2Y3MzdhODI2MGY1YTI1YmE0YjBlNGQxOTkyZTY0MWEwYjkzNWRlOGU2N2YzZmYwMThlMDE3OWQ3ZTIxZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDliMjkzZmQyNzY5ODllMTVjMzAwYzllN2U4ZjMzOGRkMjkwYjZhYWZhM2M2OTVmNTMyZmNmZDUwZjI4NjdhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8360e1b683e04fc2a2d7497117fae1ce",
+      "statement": "Dataset/input/configuration changes can put pipes out of sync; reprocessing_policy defaults to continue rather than automatic reset, and rescan_when_config_changes controls whether configuration changes cause automatic reprocessing or out-of-sync marking according to the reprocessing policy.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L155-L162",
+          "version": "repo-lines-v1:sha256:6ab3dea6e9c759844cf92a9b8bed60a168b9c0bc69e0b31bb09c92650285c455:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA5ZGVkNmZjOTZiYmE2NzU5ZjNiOTEzNWUzYzFkOTJlYzk5OTQxNWNkYjU0MDNmM2JmM2QyZjYyMDYxMGFjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmNlYjIyMWZjZTYyNWQxNGYwMjQyNTFlYmQzNjllMGUwZTU5NTllNjgyNThiMjA4MmFiZDliMTc4MTFkYzk0MSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L13-L29",
+          "version": "repo-lines-v1:sha256:fff67fd01afd4f8c4c096356267ab0f50f7b9245babc52c9409c2690a2d33ee7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1NGY3OTBjMGNjNDQyMGQwOTc2ZDQ4YmU3YzgyZGM2Mzg3YjExMDIzMGVhOTYzODRiM2EwZjQ2N2Y2ZmU5YzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4OGFhMWMxZjZiYjdkYjBiNjYxMDNjMTkzYTAyODU3ZWRjZTZiMjUxZjk1ZWQ4NjRiMzJhMmU4ZDg3MzZkMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L51",
+          "version": "repo-lines-v1:sha256:49721936dbd9f05108f09516247ef781b0bd5696ee2ef2a777179e7839ff1d65:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcxNWY3MmNkMzg0MGIyMTk0YzBlZTQ0ZmE5ZTNkNjJjNTA4NzJkNDczZmUxNDQ1ODdhZGU2NDUwZDM1YjQ1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_942c6f564d2d47628142f7e5bd19ccb4",
+      "statement": "Incremental runs process data after stored last_seen, whereas reset/full runs reprocess all source entities and perform deletion tracking; background rescans also reprocess inputs while permitting incremental progress, require dataset sinks, and are disabled by default.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L391-L422",
+          "version": "repo-lines-v1:sha256:84a263d2e240503424fffe926dbeb1b1af5e43f0f541035e0b8f10564e14df84:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5M2QzZTM4MGFlODAzMjVmNGNlZjI0ZDFkNzQzY2IxZWNhOTJkZjU0YjJhNmEwZDFlMTZjNWZhYTM1ZTk5Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjNjdlNDY5ODFkOGNiZGRmMDk3NTU3MWI3MzgyNDZjNmI5ZTNkNmRlZGY5MTBmNzUzNjYyNTg4NzdlZWEwODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkOWQyYTY4ZTIzNGMyZWRkYTliNjAyZmZhOWIxYjk4MTJlMjU0NDRkNTQzNmYxOWMxZWY3Y2RmMDRiNDNhZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwOWZiM2Q3NTNhNWI2Y2Y1YWI2YTJjN2Y1YWFlM2I0NDFlNDAyYjBjM2FiYTk1Y2NhNTZmOTEzYWIxZGU5OWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fdafb0e260ef4a0ab8d402d5cc842761",
+      "statement": "During background rescans after merge-source configuration changes, incremental runs can use old merge state and temporarily emit erroneous entities; rescan completion stops/catches up incremental work and deletion tracking removes those erroneous outputs, with ordering differing from a normal reset run.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L453-L468",
+          "version": "repo-lines-v1:sha256:a37349c49ce9c31b8957c50c095bc9369ad04888fecf4fa26c01125c16b17f8c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwY2Y0NWZjNjUxMDQ2Njc1MWU0YjNjZGQ4OWFlZGZkMmE2M2IwMDBiYjM2ZjRiOWQ2MGNkOWUxMTJlOGVmZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMDBlMDEyYjdkY2Q0ZDJmZDJkYzlkZWNmZmU1NTM1MDNkZDNjNzI0M2ZmY2JiZGVlNTg2YTA4MGM3NWFlM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhM2U5YzhhZGI3MzQ2YTU0MTZkYWY1Yzc0M2NiZDNjMDdiNDkzM2Q3Y2Q5YjQ3ZjQ3MzIzMGJkNGU3NDJmY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyYjZjYjk5ZjkwYjViYTNjNWNmOTZhYjljOTBhNWRhNzVkNWY3ZjA4OWRkY2IwZDcxY2ZlY2JiNjBjMDE4NWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c14478d363f4a289cb16cfa19db5439",
+      "statement": "Concurrent incremental runs during a background rescan can change output ordering and omit older versions that would have appeared in a normal reset run because the rescan does not overwrite entities already output by incremental processing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L429-L451",
+          "version": "repo-lines-v1:sha256:c39bd7ce57a57ffcff022750e51285a7387ab2c5183e0055993c8d10b4b33d94:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyNjI4OTk2YWZkZGNkMjRlYTk3ZTMzMjI5YjBlMjI3ZDdlOTgzOGViNTdlOGZhOTk1MmU5NWY2YjdlNzU5ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlYmY2ZWUzY2UyNGIzMWQ5Zjk0YWRhOGM4NmY0NzUwZjA5ZDRmYjViMDQ5YjAxY2NlN2ZkYjkwZThhODY4ZWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJjZjI4YTg3ZTZhNGZlYjBkMDVkOTk0NDM4MmQxODRhOWUxMzI3ZjU1YmI2NTlhNGNkM2RmYzUwZTZlYmM3NGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2NjE2YWIxZTdiOTJmMTBjM2ZhYmEyYzU3NWZjOThlZjU1YjBiYjMzNmUzOThlNWVmZDMzYmQzNTVmZjJiODkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9077ae78e6e34131ac886f42d4574e39",
+      "statement": "max_merged limits the size of one merge group in version 2 and fails the pipe when exceeded; it is unsupported in version 1, defaults to 50000 through service metadata, and is recommended to be lowered to reduce excessive RAM use.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L251-L259",
+          "version": "repo-lines-v1:sha256:65332de2be9faef306f41a5189a55a750c5d4f5e5109d1ee2af030396a85f78b:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI4YWVlN2Y1OTg4ZGU0MDcwYWI1M2ZlNGMzMzBjMGY1OTQ3YTYxMGNmMTNmZGYxMWM4MjJjODlhMjhmNGI4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNThkMGM2NjI5NzljYjlkYjUyZDQwMDU3ZWZkNzJhNTE2M2JiNzJmZjY2YTVmYzBiN2FjM2Q2NDlhZmU2ZDg1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmMwZWI5YTVhNjBkNzBjYWI5MDdhZGM2YzZhMjRmYjhjZmJjYWE1NWQ2NjgwYWFlODA2NmFlOTI2OTA3ODNhZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L231-L239",
+          "version": "repo-lines-v1:sha256:5ea4edca51a48028142eb6a74545502bd49116fdd3a6a825e712dc06e3b31232:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGEzMDk4Njc5YjY2ODZkNjk1NzVkODM4NTgyNWQyMTI1M2Q1MWJkMTA3OWQxMmMzMzhhNGRlMzE2ZGZlNGEyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNThkMGM2NjI5NzljYjlkYjUyZDQwMDU3ZWZkNzJhNTE2M2JiNzJmZjY2YTVmYzBiN2FjM2Q2NDlhZmU2ZDg1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYyZGQ1NDRjZmQ4NDNlMjViZTQ3N2NjMjA4MjljOWViYzZjMzk3N2I1MWJiZGJmN2NjY2RlNTIyYjg0ZTAyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjVlM2YyMzFhYmNkYmU4MThhNjI2NmMyMWQyZTlmZWZjMjE4MjczOWNmMTVkNDYyM2E1YzQ3MzRhNjYxZmE4ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_00a7c306e95a4d8a9c8369bec523ed5d",
+      "statement": "For merge and union sources, require_populated_input defaults to false and can gate execution until required datasets are populated; initial_datasets can narrow the prerequisite list, while ignore_non_existent_datasets defaults to true and allows missing entries in that list.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L122-L143",
+          "version": "repo-lines-v1:sha256:8723ea0243378ccccb21669e3e388aace90418a14d2090f00eafefc892d5d09b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMjNlMTM0MmY0YzYxODQ3YzgzMWJmZDlmNTNmMjE2YTQ2NTRlOWNiZWUwYjZlMWQ0ZjBmNzAwMTQwNWQ3NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZmJjYWI1ZTFkNDA2ZjdlNWQ0NmY4ZTEyZjQxNTdhNzM2ZWU5N2Q5Zjk2OGI0NzMxZGFkMDQxNGI4ZThlYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjYzk2ODMxODgxMDhmMDM0YjcwMDk5NGJkZTY5OWJhYWVlMzc5ZmY3NDU5MzAwZjY5NTg0MTM1YTRiNGQzMDcifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L51-L72",
+          "version": "repo-lines-v1:sha256:8723ea0243378ccccb21669e3e388aace90418a14d2090f00eafefc892d5d09b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMjNlMTM0MmY0YzYxODQ3YzgzMWJmZDlmNTNmMjE2YTQ2NTRlOWNiZWUwYjZlMWQ0ZjBmNzAwMTQwNWQ3NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZmJjYWI1ZTFkNDA2ZjdlNWQ0NmY4ZTEyZjQxNTdhNzM2ZWU5N2Q5Zjk2OGI0NzMxZGFkMDQxNGI4ZThlYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1YzFmY2Y4NDI0ZjQ0Y2E0YTI5ZGUwYTBmODZjN2U5NTMzNWU3NDU5NDJiYWY0OWQzNTY5ZjI5NTllZDU1NjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6cfa4bfee2c644539c3a7fe54fee7e8b",
+      "statement": "Merge and union sources default if_source_empty to accept, allowing previously synchronized entities to be deleted when the source returns no entities; fail instead fails the pipe and preserves prior entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L258-L268",
+          "version": "repo-lines-v1:sha256:36cb605ab7dedad5f50c0ad20b116458d015ed8dc10c7d3b114e3c414cb6d968:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2MmRkNTQ0Y2ZkODQzZTI1YmU0NzdjYzIwODI5YzllYmM2YzM5NzdiNTFiYmRiZjdjY2NkZTUyMmI4NGUwMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L105-L115",
+          "version": "repo-lines-v1:sha256:cc3655fa10832e5d4d2d0d7ba0041cab77d301d0eec1e1fba652bdf3c78adf6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1NGRlMmJjYjIyYjMyMzcyMmJjYzJmMzNlZDM2Y2EyOWE5ZWMxZjI5YWYzMDU5ZjEyNjA5NTA3ZTcyNGIyMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwM2NlNmRlOTYzOWNjYWU4Y2EyZDkxYzZjYjQ3NGM0ZmUwMWMzYjZhYzMwNTc3OGRhNGY3ZWNhMTNkZmQxZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_877a157655af4527811bd5f9aa3f5230",
+      "statement": "supports_signalling schedules internal pipe runs when input datasets change without interrupting an already-running pipe; effective enabling depends on source settings, service metadata, and schedule interactions rather than rebuilding historical merge equality state.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L242-L255",
+          "version": "repo-lines-v1:sha256:a6164d3cfd6076fde0ebb864ce370ca402039fba7bb45237f0cf024bec32e039:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxZGUwYmMyZDBkZTdlMWZkNzc3NmNkYTE5MmNlZjY2NjQzOTE4YmI5MjQ4ZTk0ZWIwN2VmYzYxMzY3YTkyZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMTU2ODMxN2JjZTUzOGJiNDEzZTlkM2RlMzM3MDFjMmNjMGE2M2JjNWYzYWZlMjllMjFjOTMyZmM3MGE5NGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzYWUzNWRkMDUyOTVlNzc1YjkxYzZmNDllZjQwZGI3NDgyODBjODhhZWY0MzA5MDlkMmIwZDc2NmRkNTg5MTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkZTFiZDY1MWNjODFkNGY0YWZjNmNkNDVlNjEzNmU4NmIxOGUzYmJmOWYwYzZiNDg0ZDc4N2ExN2U3ZDEyM2UifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L44-L49",
+          "version": "repo-lines-v1:sha256:0518d2b5f4f8d9ddc4992466de41a24cef93f2395d95bcc618f11bf799837d77:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUxNGVlY2M4OGMwYTY4ZThmYWZhNzc3NGUyYzJlMzA2ZTdmYzU2YTMwNGY3YzFlOTlmMGU2MjBhMzhkNzFjMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzA3YzIxYTVhNWI4Y2JiMzdhODYyOWY0MzcwOTk2MjYxODlhN2U5Yjg3NTcxYWIzMDk5NmE5OGY3MWEzNDAxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJkZWZmZDEzNmI4NWMzOWRjMWM1NTBjZDQ2OTdhMjkxMTg5NGZkZWE5NWY3ODg0OTY0M2IwZDZlZWQyMDZjZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmZkYjgwZjI3NmI5YzVmMDk4NGVlMmEyZDExZDYzMDE3NjE0NjE0Yzg3OGIwNzZlZTliOGJkYzkxNjYxNWQwNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-union-datasets.rst#L85-L96",
+          "version": "repo-lines-v1:sha256:ed5802517966ed3815e6e16fd57a99fd23b453dc75810d4994f1754f50caf7e3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxNGY3YzYzZDA3ZjYyYjg5YjAzYjMzZmY0MTBjNjhkOWM2NjM4YzkxM2FlM2MyZGNmZDExNzFhNWM2ZjMyNTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMTU2ODMxN2JjZTUzOGJiNDEzZTlkM2RlMzM3MDFjMmNjMGE2M2JjNWYzYWZlMjllMjFjOTMyZmM3MGE5NGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUwZGI2NWMyNTljZTZjODU3N2I5YmU1ZWQxZTA1MjI1ZTg4ZDE4ZTJjZmQ1YzA3ZWVjMDg4NjExMmRmNzNmM2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjZjcwYjlmODNiNzNiMjM4MGE1MWUxZjk3MzFiMWNmNmIxZTcyZjc4YzE2MDVkYjRjZDAzYzYzM2Q1NGU5ZjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_114c2ca454d64a73beb71434fa52636d",
+      "statement": "Global datasets can be large enough that configuration changes require expensive whole-dataset updates; the global-dataset guidance suggests separating historical and current data as one way to manage this scale.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/global-datasets.rst#L114-L118",
+          "version": "repo-lines-v1:sha256:81b54d92a4dc1bd698fa75213c7e60b5a4f4fe3ad7af6afff7953d38f7135b99:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjMxMDg5MGM2MjI5MTQ0ZmZhNWIzMjM3NTVlODUxMmJkNTc5YjdlMTUwMDA3MTU2NzExZWM1MWI3NDgyZjMwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmIxMmI0ZDhkN2YzMzQ1OTA5M2ZkYjRiOTc2OGFjMjc2Y2YwZmNiNjIzZDZmYTQzYzk5NDdkZTg1NDI0ZTc4ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzU0ZmRjYTEwZDA1NmZlN2M2Nzk3NTk5NTJkOTA5M2M0NzQxNjVhNjYxYjAxYWI4NzYyMDJiN2Q4ZTk1NDE5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd75f2f6555e419489f2ae0ec8855ae5",
+      "statement": "The external-merge pattern supplies link objects from manually maintained linking data or external matching sources; equality-based merge consumes configured links and rules rather than automatically providing fuzzy or AI identity matching.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/external-merge-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:5c617b72117073e4ef29a65d126c2f2eeb7eafea8b5fb3cb456ccd1b35425abb:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmMyYmZhNjk1Nzg4YzVkZjljYzZiZTk4MWVhMzZiMzdlNzdjOTgwOTlkMjg1NzkwZGI2NjVhMThlYjU5OWYxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODUxYjQxOWEzY2VmZWU1NGEzNTFmNDc5YzdiMGFiNGNhZTU4YTM3ZTc5MzIyNDM1ZDI3N2ZkZGNmMGNlNjE5ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:e742c9ea582e15ed1628e88f995be73c55a3cdd6c0200d53dff0e8f7ed4b8976:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRmMmJlOTdjNDRjNDNmYjg2MGYwMThkNmU5ZWQxN2IyMzFmY2JjODY2ZjU1MmY1NWY3MDllODc2Njc3OTI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NlOTFjNGU2ZmM5YzUxY2JmMmU0NDQzMDhmYzMwMzQ0Njg2MDA5Y2RiZmE4N2Q4ZjI3NjJhZDMyZjBjOGRkNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU2NDNiMzVkOGQwOTljMDcyNWM4YjgzOWRiNjg5ZGQ1N2VlYmQ4YTBlZWUwODU2MjNkMTI0OTE3YTlkNTZjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNiOTQ3YTE1Nzk5NzNiZjg0OWIwYzYyMWUzNDZiZjAwMmJkMTdjMzk2ZWYzYTUzNmViYjc1YjI1NDA5NDA5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_af90fa6e1464413ab72866f1871b05c6",
+      "statement": "Feedback enrichment can move expensive hops or external transforms into a separate flow, use merge-source identity to key feedback, and reprocess an entity when results return; feedback must be deleted when its originating data disappears or it can keep merged entities alive.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/feedback-loop-pattern.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:5b1a5cdbe98fedafd0ac81c19ebb52252578ebf508c3ddcfb648b166bc61d573:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzVjMWY1YjM2NDVhNjg2MzNiYzU3NDhlZjBhOGM2ZDJkYzBiYjdiNjRkOTNiMTAxNmY2YTNiOGI3Nzk1NjViZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDgzYzY1MGVmNjM0NzUwNzU2ZjBhYzdkYzIwNzYwMGI3ZWI0YzYyYjcwMzg1YWMwN2Y4MmFiZGJlYjMyMWVhOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGVlNGY3YTVkNjYxNDNjZDE4MmJiOTNkMGZjMjYzMmEyMGNjMWIxNzBmYTU1ZTY1YjM3MjUwZTc3ODY0MTBkNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/feedback-loop-pattern.rst#L59-L78",
+          "version": "repo-lines-v1:sha256:0c0a5aa5fb5bb6914aa85eb96f896c3be6cd8935bee7e39e7dd14c2e75233bc1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmZTYzNGI0MzQ2NjY5M2U4NGQzOWY4OTYzOGU2NWNjYTU5MWZiNDEyOTgyOTMyZmZiNmM1ZWZhZDIwZThkZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMTNhN2MzODg0MTlhOWQ1ZWEzNTVjYzllZWU0YTgwMzBmYjk0OTE5YWE3M2ViNTEyZmY5MGNmNzJkMGY4ZjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgwYzQ2NzA2MDQ0Yjg5Zjg5MWY3Nzg0MzFkNTRmY2UwNjBjNTMyNWMwMTUxOGMzNTMxYjA0ZDIwNjA2YjViM2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3NjY1ZjQ5ZjRiZjA4ZGNlYjczYTIxMTU0MjhmM2ViZTNhODk2MzY1NDhjMWJkYjZjZWNhMWRjYjFiM2YzOGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b45ac771389946af876004dec41a5b4f",
+      "statement": "The documented local configuration-testing workflow drains pipe queues with real output delivery disabled or unreachable, compares endpoint output to expected files, supports expected/<pipe>.json and expected/<pipe>.test.json with stage selection, and runs through sesam -vv test.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L63-L79",
+          "version": "repo-lines-v1:sha256:6864077a9f7336211107ba92bff79e66ea5296dd82c9de9cf4c2e1bd0856a874:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMzdiNDcxZTcwOWUwNGU1ZmYwMGI3M2Y5MzNmNjY1ZWMyMjYyZWU1ZmM0MTc0NjBiMGUzYzU4YzZkZGVkNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmNWU2OGNkZmFiNTE2MDBlZmQ0MDAzZTEzNTFiNmU2ZjI5OWQ5YTkwNzVmOGQ4MTY1Y2Q0YWRkMTE0OWU5YmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhMTNlZjY4NWFlNzc5Yzg4ZDJhZTkxNDFmNzlhMTNiYjQxY2JlMmExMDg5MWI4NWNmOGUwZjg0ZDFmNzVkMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0YTg4OWIyYzY4ODE5Y2IzMTlhMDFhNDhmZTQ2MDE4ZDM0ZjJlMTg3Zjg1YjdiYTZmMTY1YjgyZmU4MmFkNWYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

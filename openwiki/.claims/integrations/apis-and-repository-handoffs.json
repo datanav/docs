@@ -1,0 +1,1050 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:5278acea38c54b9af2f30eb0d1919ca9e41fabe32a87c8a00513b03ec8964537",
+  "claims": [
+    {
+      "id": "claim_51763f263f18442b9dc8b47b18ece723",
+      "statement": "The Node API controls instance configuration, data and runtime resources; Portal manages accounts, subscriptions and JWTs; Management Studio is the selected subscription's configuration/administration UI, not an interchangeable backend API.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L10-L20",
+          "version": "repo-lines-v1:sha256:2b0dfaa70c6101b550419fcfa76cdb41f3f0d33fb46a65e8181904f073f16263:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MGRhMTJiNTFlZDQwYmIxZGE5ZWY2NDUwMjFjMDY3Yzg2MmM2NDE5ODljOTY1NWY4Y2FmM2I4NjZjY2JiZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Y2VmMTRmZDIwNDllZWMzNjJiNTVmNWE3N2I5ZTNiMzdjYWI0YjA0NzUxZWQ1OWY2OGNlOTM5NDQyODA5M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ1MWU2YmExYzAzOTdkOGM3MzI5MDNhY2E0NWE4YmVhMjNiOWUxMjkwNDg1OGRkMzllM2MwZDBlZDI3MTRlOGIifQ"
+        },
+        {
+          "resource": "repo://hub/management-studio.rst#L9-L16",
+          "version": "repo-lines-v1:sha256:f77cb8d92961bfac8b28b4876fbeea9590d99695c4fa837b99aaeb7aa33ae419:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2ZhNTNmYzBkYWI4ZWY5NmQwNWQ4ZmQ0YzdlNDFiNDkwMTgyODAzNzI1YzY3Yjg2YTUzMWUwOWVmZmM1ZmE3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzg1ZGZkY2VkN2M1ZmRjM2FmOGVmNjQzNTA4MjVmNmNlZTUxYzQ4NzAwNjllMzg1MmY4NDFlNGQwZmNjYzQ3MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDUzYzQwYmIwMjBmOTQwODViMjg4MjZhNjFiMjM5ZjMxNTM2NmM4ODg3ZjkyOWY3NDE2MGMwYzQzMjliOTJkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzRjOGQwNzEyYjY0NGM0YjE3NDU5MDc3ZmFjYWFhNThmYjgxOTQ0MDk3ZWY4Y2YwZDY2OTUwOGNmMjVmMjVjOCJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L145-L449",
+          "version": "repo-lines-v1:sha256:844d2585aa8678b232bd8339edf24383f94b8b0ecbea0d54f2948628845e6a16:eyJzZWxlY3RlZExpbmVDb3VudCI6MzA1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmMzU3MjM0MjQ5NzlkYWY2M2QxMGFkMTFiYWJjYmRhMjFmMzM1OGRkZmNlZWFkZGFhODAwYTY4ZjZjOGIzMTY0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiNjUyZmY1NmZkZjczMjQyZWEyZGQ0NDEwZWYyNGU2YTZmOWFiMDJlMmQzMTU1ODIxNDc1N2MzNjNjMTY1ZjA3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5YjhmOTNjNmI2OWYxMzhlY2UxMGJkYTU2NjM0NWY4YjEwN2Q1MTI2NTFmOTFjZTEwNjdhMDNlNDI0NDVjOGIxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkMjk5MjNkMTM5MzFhMGYyMDQ4YmE4Y2I2MTdhMDFhYTg4YWFmN2IxOWM0ZjYzMDc5NWFhZTE2ZTI3YTQ3MTJjIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_7ae808d2ccf84a10ab3404517b0ba506",
+      "statement": "Node paths such as /pipes are relative to the instance API base ending in /api; Portal paths already include /api except explicit /.well-known/openid-configuration; DAP paths are relative to the DAP host. All three local Swagger files declare Swagger 2.0/version 0.0.0 without basePath.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L10-L20",
+          "version": "repo-lines-v1:sha256:2b0dfaa70c6101b550419fcfa76cdb41f3f0d33fb46a65e8181904f073f16263:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MGRhMTJiNTFlZDQwYmIxZGE5ZWY2NDUwMjFjMDY3Yzg2MmM2NDE5ODljOTY1NWY4Y2FmM2I4NjZjY2JiZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Y2VmMTRmZDIwNDllZWMzNjJiNTVmNWE3N2I5ZTNiMzdjYWI0YjA0NzUxZWQ1OWY2OGNlOTM5NDQyODA5M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ1MWU2YmExYzAzOTdkOGM3MzI5MDNhY2E0NWE4YmVhMjNiOWUxMjkwNDg1OGRkMzllM2MwZDBlZDI3MTRlOGIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml",
+          "version": "repo-file-v1:sha256:98bb8937f96c2b5b73d1b0fa6bd4f43e02cb3377c52dc869c1a8f2d5090cbb71"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml",
+          "version": "repo-file-v1:sha256:a5eacd8d653d58c81e0ff125e2f60c987eeffc9d7402694688eb340e1c3d9519"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml",
+          "version": "repo-file-v1:sha256:28f843da91545e5545adeab21dda35769d904904796495dfee6c676e696c2cc1"
+        }
+      ]
+    },
+    {
+      "id": "claim_8cb7b627937f4dac9ba74ea2109b09d5",
+      "statement": "Service API renders checked-in Node and Portal Swagger copies and separately points to running references at the instance /api/reference and https://portal.sesam.io/api/reference; narrative examples are not additional Swagger operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L19-L58",
+          "version": "repo-lines-v1:sha256:d960ef4b471e685b2ae751871303870f1f6bcf93ef597252322b19747dff0e7c:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzYWE5NzBlOTY1ZGQwOTFjYTUyNGIxNGE1ZjJjMmVkZjdiOTc1NDU2ZDJmM2U1ZGY5YzBiNDFhYTY3ZmZlNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODAwNzllOTgwNDFhMzVhNmEwMDJlY2U0OWUxYjdjZDZjNzM4ZGVmMGJmMTU3NDY0MGU5OTM5YzgxYmFhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjZDVhYzRhODE1ZWE3NDMzMzI0YTdkODRmNjU0ODQwOGU5YzZlMGI0MjNlMjZiZjc3ZTkwMGQ0NDJkMGQ3OWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZDFjNDM4NDc0MmY2NjYwZDRiYjQ1NjhhY2M5MjE0NTM5NWUzNWFlZGNmY2FiMjMwODcxMTU3MDY2ODMxYjMifQ"
+        },
+        {
+          "resource": "repo://hub/api.rst#L223-L244",
+          "version": "repo-lines-v1:sha256:c0af2843737b66421b0bb7625489f28ad075526062eec5316b67169e555f5b23:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4ODg5ZDM4OWU4Y2FiOWFlMWZiOTdlYzRhOTE3ZDBhZTIyYmM2NDA2ZjhkMzg5Zjg0N2NkNmFiYzA3MWE4MWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlMjg5Y2QzOWE4MDEwMTg0NTMwYTczNjdkZjAyOGIxOGEwMDk4NWM0YzBjNzFmMzUxMDYxMzg1OWNiZTI1MjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExOWYwZjQ1YjcwNmJmMmE5NTE0MTBiMTE5M2UzODhlNTViOWIwZWNiZjk5OTY0ZjQ2ZmE2YTM2ZDM5YTdhNWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlZWY0ZDA2ZWY2YWIwNzk0YzNkMzViNTAzZGQ4MzdlMGMwMGRiZWQ3OWMyY2Y3MGM3Yzk0MGQ4NzZiMWNjYjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0176f7d66fea44f6be2516dc862783e6",
+      "statement": "The narrative instance POST /api/jwt example has no /jwt operation in Node Swagger; email/password JWT issuance is specified in Portal POST /api/jwt, leaving deployment-specific instance routing unproven here.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L30-L58",
+          "version": "repo-lines-v1:sha256:3fe98ae58ad1a5fa3d8f12fa3d039d2ab33f146c0ca98569c0048b554fbcd0d8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjNTFkOTMxNTc2ZjU5MmE0YzAyYjg0MWViN2M3YjEzN2U2ZWEyMWJkZWNhYTA4NzQ1Mjk1ZGIyMTMxZGFmZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODAwNzllOTgwNDFhMzVhNmEwMDJlY2U0OWUxYjdjZDZjNzM4ZGVmMGJmMTU3NDY0MGU5OTM5YzgxYmFhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU2MGE2MDU0YTFhZjFmNGExNGU4MWI3YjMxMmJiMGIwMTYwZjAxYWQ2MDBlZDYxZmM2MmEwM2Y2MWFiOWU3MzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZDFjNDM4NDc0MmY2NjYwZDRiYjQ1NjhhY2M5MjE0NTM5NWUzNWFlZGNmY2FiMjMwODcxMTU3MDY2ODMxYjMifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L256-L315",
+          "version": "repo-lines-v1:sha256:b9620504c6b135cb45ddefb3fcb7169e02331efd85c05a45a5cf5d6d132406d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5YmZhYThlOTdlMGM3Nzk5NDE0ODMyYmNkN2RjNzhkYzM2YzQ0NjhlZWEzNjQ4OWE4MTM5NjVjNTIwYjUxNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNjN2I1M2IwOTg0Y2RhM2ZjODI5ZGViNGE0NjJlNmI0MDNmNDVmZjQ5YzRkMGU4YjRjMjA3ZmUxMDc5NzQ1NTYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml",
+          "version": "repo-file-v1:sha256:28f843da91545e5545adeab21dda35769d904904796495dfee6c676e696c2cc1"
+        }
+      ]
+    },
+    {
+      "id": "claim_889744c85e5a4766b71f83cbb35ac432",
+      "statement": "Node Swagger includes routes with api.view_utils._not_in_use_ IDs and sparse schemas such as Pump; those identifiers and omitted media types/error tables do not establish route unavailability or complete runtime failure behavior.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2401-L2500",
+          "version": "repo-lines-v1:sha256:21af650460197849c77e7f19db398493aaf0ff96590675aa73a06b9e4cfa9cd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjNWYwYjViMzFmMzVhZjdhMzYyZDdiOThjNDZmZDdkODFkYjljYmQwZjMwOTgxNWY2NmUxOGM4OGM3OTZjZDljIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4ZTNlOTgwZGM3ODIxOTRhZmZlYzE5NTA3N2NiZmUxNzk3OGNiNGExZjEzZDQ2OTc3ZWRmZTk0NDNjZGM0NGYzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NmNiMDk2NWFkZWJlMDk2ZDJiYzEwZTE1M2YwNGE3YTdlYzQ3ZDFhNWNiZTA3YzE0MzMyZDI3N2UyOWU3OTI4IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhMGM3YmMyYTgzNDZjYTMzZmQzNWFkMWU2NDg0MzhiMDRiMjdlMWQwYjk4NWE4ODFkNTY3NTdjNzUwNmY3ZjJmIn0"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2820-L2822",
+          "version": "repo-lines-v1:sha256:fbe3b15537412df2ad51be180d6c500f875b03014e36688d40193dab4804e2aa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTE3MjUwZDI2MDRjYTQ4NDI1N2ExMTg0ZTkyODRkMjg4YWVkY2JlZjdhNDA5ZjM5MjZlMWUxZGZlMDY4ODRlZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjAwYTAxZjE0OTcyMjM3ZDU1ZGQ3NWVjMTVhZmJmNTVlOGYzZTE1ZDg4YmYzZmFmNjI5ODU4YTRkNDhkMjZiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjI4ODlmMmRlZjBjOTkyOWIwMGQwMDJlZThjMTQyYzNkMTk0NDIxNzUxZGE5MDA4NDYzMTBkZTFjZGMyZGVhYiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L305-L350",
+          "version": "repo-lines-v1:sha256:d8e504d0cbae681e1590228a8e528185de3c751afea1126f85f494b14988ce07:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxNmY1M2VjNGNlYmI0Yzk3MzcyNDJjNjkwNjdkZDcwNGFmOTc5NGFlZGExNWE5ZjA0NTUyMWJiMzA2ZGZlZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmNTZlYmE1YzhmMzY4YjI2OWFhYjU5MmEwM2MwNDA0MTVhN2UyOTg2NzNiYzMwY2Y3NjU3YWQwMWViZWNlMDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiYTU4NDA4MjRiNjUyODI0ZjkyMGVmNWI0OTAzZDRiZmU2MTJhMTJjNzE3YmI0MmYyMTYzMjU5ZThjOGVlZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlZTFjMjU2NWQ2OWE2YWI4NWU4NmFkM2UwNmY5MDNiNjdjNzQ3MTY5OTgzNTVmZmViOWE0MDY4MGUwMmVmM2QifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L981-L1008",
+          "version": "repo-lines-v1:sha256:0658a370b5b3de3d2bba2875bbe39ea5c6b08da9daefae518f92b01dc132b0e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZWFhMjhhODgxZWFjYTE0ZDY5ZGYwZGZhNWVlOTBjNTliNjZmZDI0ODRkYzJmODY4MDgyZDliMzM1MTRjMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyZWM4YmY0ZThiNTJiYzNlMGRiYWM4YTdhMjU4NTA0Yjg2MDIxN2M1NmZkMDRmMzRiOTVlNGI4ZWU4MWVjNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7db3471a3e984a3a815476dcf95397f9",
+      "statement": "Portal roles are subscription-scoped; Portal signs JWTs carrying those roles, Node verifies with the Portal public key and checks resource ACL permissions, and denied dataset reads return 403 Forbidden.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L48-L58",
+          "version": "repo-lines-v1:sha256:5e4d36add28170c4a923232a297801f45e16cf3b6d291ea8e3cb0da49901fa6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4MDc5ODdkZmZiZDMzYzAyYzI4YWE2OTA3M2U5Njg1N2MyNGQyZGU2NmI5ZWNjOTc3MTQwY2NhMTM2NWU1ZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODAwNzllOTgwNDFhMzVhNmEwMDJlY2U0OWUxYjdjZDZjNzM4ZGVmMGJmMTU3NDY0MGU5OTM5YzgxYmFhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzODI2MjQyMjMyMWU4YzhiYmRiZjhhMDMxYTgxMjhmOTdhNWJjNDcxZTAwZmEwODdkZjUxOTc0M2YyY2JlOWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZDFjNDM4NDc0MmY2NjYwZDRiYjQ1NjhhY2M5MjE0NTM5NWUzNWFlZGNmY2FiMjMwODcxMTU3MDY2ODMxYjMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L23-L63",
+          "version": "repo-lines-v1:sha256:9796cfc071c9a087634c903a980006f36674e3f244db68b939763fdfad9b99d9:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhYzJmMDhlMjFiMTZmMDIyODFkMjU1ZDk2YjIxOTJjZDgxZGViMmI1NGExMTUxYWRhMzIwOGY1M2EzY2UzN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2ZDg2YjdjNGIyNmE1MGU1YjVjY2Q3ZjRiZTIxNzdkZGNkY2I1OTU0MjY1ZGYyYzQwZmY2Zjk1MGRiYzk3NDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxY2NjODliZjQ0Mzk1M2ZmZGIyYjdhMGQyNjQ2NTYwNzdjYTk3MWQxYjczMzZhN2M2NWFlNjI5ZjAxNDc1YTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiOTc1Y2Y3OTBiNGMwNTRhNjQxMTFhODgwM2UwNWExYTk2ZjU0NWNlZWRhNzUzNjAzYTU3ZDA1OWEwNzIwMWIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L300-L326",
+          "version": "repo-lines-v1:sha256:bd51f01d4a5f1729891066dbdc178765b7ec23bba6018e3222d705aaabf87f5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxODEwNTg1MWQ0YTFkZGU0NzFiYWIyNTlmZjZjMzg0MGZhNzhkYmUyOTMwOGZlYWZmNTM1MmNkOGUwMGM4MmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE5Y2M5YmVjY2U1YWViYzBlZDU0YmJjYjVhYjQ5MjQzYTNiMzBmMTIyNzA0YjA5YzY3Mzk1OWEyOWI0NTI2ZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce7a0e3b1fb842229d11f4d6e56514b9",
+      "statement": "New pipes inherit creator roles in configuration; runtime source-read/target-write permission checks can fail the run and display an error on its UI page.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L115-L123",
+          "version": "repo-lines-v1:sha256:ac711af17804cc1a25fb908dac0d27641c4fd8d0c5194b3a1ee3612766398873:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDRhZmI2ZmM0ZmU1N2YwNjVlZjMzZDliNjdiZjQ0MDNiYzlhY2UxYjgzMTAxMzNiZGI2ZWFlNmFjNzNkYjQzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWE5N2E2MGYyNmRhMmYzOWE1ZTE1NDQ0YjgzNTU1Yzg4ZDYwZjZmYzM3YjlkOTk0ODM3OTNmMTU1YTcwYjkwZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2VmYjAzMTcyYzJjN2QzYWI4NjVkY2JjNzg2YTI2N2QxYTcwOWIxMDY3ZGIwODA3OTZiN2JhNDg3M2ZhODdjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWFjMmRlYjMwZGJmNDQ4NTQ5NDkzNDY3ZGQyYTI4NzQ0Njc3ZWQ4MjYxMzQ4ZjNlODAyMjlhNmExZjdmNzNjZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a93477e626641bc999bdaaa9c60b79e",
+      "statement": "GET/PUT /config select the default group, /config/{config-group} one tagged group, and /config-all all groups; PUT replaces the entire scope. GET returns ConfigEntity arrays or ZIP; uploads consume JSON, ZIP or multipart/form-data, with 200 responses.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/api-config-groups.rst#L19-L46",
+          "version": "repo-lines-v1:sha256:c999d0781c13571aa17b156074089875ac8550317a0ee234bbe9044a87639670:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMDE5NDY2ZjdmZTc0ODQ5M2I2YTQ1YTE0NzNiMjg3ZjQ4MWY3ZTIwY2FhZTQ3N2FlYTA3Mjk1ZDU1ZWE4Y2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNTM0YTY2Y2FhZGIwODhlZDY5MGM5YTAzOTM0NmI1YjM5MGNiYjNkMmIxOTM4N2ViZWE0YzRiZjQ0NTg2MzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyOTM3YzA1MzY4NmRiODM5OWY1ZWEwMTE1NGJiNjZjNzljNDcyMjBmNTk0OTY2ODg5NDQ1NzBiZWQ2ZTYwN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1226-L1348",
+          "version": "repo-lines-v1:sha256:f892acc1bec8eb1a8d9a186fe4014047f65ad0d045514e229a39e3ab001e5046:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYzk4MDc4YTM2YjgzNDY2YWU5MThiM2UwZDUzMDg5OWY3NmQ2ZjNmM2JiZWFjNWEwZGI1MTU2ZGVhNmI2ZjM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDgwNjhmNzE4Y2JjZmVjZTllYzNhNWEzMjUzOWIwNzBiYmYxMzE2NTJjMjEzODJkYTdmZDgxMjFlOTM2OGU0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjA5NjkwYzg3NjlhMDE4ZjJhYjg3OWU3NDk2NjIyNjE3MTM3MWQ3MTJjMzdlNjIzMThiODA3ZjRjNjE1ZGRkIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_fcb33683c39e4a6c95a808acd4b828e7",
+      "statement": "Individual pipe/system grouping uses metadata.$config-group and defaults to default, while bulk grouping selects the group in the URL; Swagger calls the default group 'default (i.e empty)' and the narrative names it default.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/api-config-groups.rst#L29-L46",
+          "version": "repo-lines-v1:sha256:4f2734fae0d1257520157afff36c3279249b4eb9394a75d856beeeac2b419b9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjMTQ4ZWM4ODlkNzgwZGZhNGQ4YzYyODY1MTJmNWU4MTlhNWUzMWM2NjE4NWNlNzY0MzZhOWQ4YTVjZDY1ZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNTM0YTY2Y2FhZGIwODhlZDY5MGM5YTAzOTM0NmI1YjM5MGNiYjNkMmIxOTM4N2ViZWE0YzRiZjQ0NTg2MzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1MWEzYjVmYTE1MTYyOTIyNmViYTUxMTFhNThmNTVmMjgxMmQwYTVkMGJmNWQ2MGM3ODJiMjUyYzkyNWEyYmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1226-L1245",
+          "version": "repo-lines-v1:sha256:d8fdbedd4215b159ac3657afd59df256e0de8fc0417310e26315958160c330cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjOTgwNzhhMzZiODM0NjZhZTkxOGIzZTBkNTMwODk5Zjc2ZDZmM2YzYmJlYWM1YTBkYjUxNTZkZWE2YjZmMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwMzRmMjY5MDEyMGVkOWViMDI0MGUwZWQ5OTJmNGYyM2YyNjQzMTZiNzFjMjFiMjhiNGM3MjFkYzM5ODUwNTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkNzA3MDAwMWViOGE2YTkxMjllNDhiOGJkYjc1NzY0M2IwNjQ0MWZlYzcxZjZhNmUwY2NmYTlmZDM1NjE0NjIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2772-L2792",
+          "version": "repo-lines-v1:sha256:262f4a7ad1cdf2e344cd4f620aa162bdddbbc021ee528d08b916daf34e6d3b9e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3OTliMmVhMWIzNTVlOWI4OTE5ZmUxMjZhOGE0NGIwYzk3NGYyZmZjZTA4ODhmMzU3NDE2NzE1Y2ZjNzZkOWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MjMzNGYzZmZiNzI3NzE5ZDJhNDQ5MTFmZTdiOTIwMDc1MjhkZGQ2OGQ5NTY4MWUzZmQzMzM2ZTQ1YTQzNGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjZjFkMzE5MTY3YzU0YzFiYzY5ZTg0YjQ2YmIyODI3NTMzMjA1MTNhYzViODRhMzU3YWJkNjEyN2Q3M2I5ZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmNzkwMWJiNTBiNDM0MjA0NzJmZTI3NmM4ZDE0YjAxZmRiYTM4MGVmZGM2ZjY1OWQxNzE1OTFjMzFjMjFlOGEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2856-L2871",
+          "version": "repo-lines-v1:sha256:5e78fdcdac17c6b5081a557717e423c204aaea750e9381e3bab3ddb4a8fcefb8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5ODkzZDhjYTE5NThlMjlkNmMyMGZiYWJlYzFlNTRmMzdiMzRlZWRhYjliZDMxNmEzMmVjODg1ZTI3ZmEwYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MjMzNGYzZmZiNzI3NzE5ZDJhNDQ5MTFmZTdiOTIwMDc1MjhkZGQ2OGQ5NTY4MWUzZmQzMzM2ZTQ1YTQzNGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjZjFkMzE5MTY3YzU0YzFiYzY5ZTg0YjQ2YmIyODI3NTMzMjA1MTNhYzViODRhMzU3YWJkNjEyN2Q3M2I5ZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlMjNiYTE0ZmNkNGU4YzUwYWVkMzY4ZGE0ZTkwNDhkY2ZkYTMwN2Q3OTRiZDFkNzkxZmI1NjJlZTZhYmQ1ZTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_813eb580d7f74a34a2b1640de6312484",
+      "statement": "Configuration force defaults false where declared and true accepts errors for best-effort application; group GET declares force but group PUT does not, and /config and /config-all descriptions spell header selection 'Accepts'.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1226-L1348",
+          "version": "repo-lines-v1:sha256:f892acc1bec8eb1a8d9a186fe4014047f65ad0d045514e229a39e3ab001e5046:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYzk4MDc4YTM2YjgzNDY2YWU5MThiM2UwZDUzMDg5OWY3NmQ2ZjNmM2JiZWFjNWEwZGI1MTU2ZGVhNmI2ZjM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDgwNjhmNzE4Y2JjZmVjZTllYzNhNWEzMjUzOWIwNzBiYmYxMzE2NTJjMjEzODJkYTdmZDgxMjFlOTM2OGU0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjA5NjkwYzg3NjlhMDE4ZjJhYjg3OWU3NDk2NjIyNjE3MTM3MWQ3MTJjMzdlNjIzMThiODA3ZjRjNjE1ZGRkIn0"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2534-L2541",
+          "version": "repo-lines-v1:sha256:d2462ab9a091f961f03f5dbffae736478a22e753c3b76159f37575621ac0f7b0:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIyZTg0ZmY3ZTJmOWI4Y2ExZDllZjg3ZTNjN2ZiMGU1YzVhMDdkNjUyZDVjMGQwMjhlZGI2Nzc0YTBmZGI3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBjYTg3MTIwNDcxYTdjMWM4M2RiOTRlZWMzOTE3ZDRhMTcxMWRhMTNkOWQ0MTJhZGUzOGI1Yjg5Njk5OGMyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmJmNTc2NzFhNzdjMDIyODhkNmRkODFjNWFjMzRjNjVjYTEyMzU5MzFkNTVjOWZlMDk2OTE4MTQzZDM0YjAyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmE1NWM3NThlNzk5NTFiZWEwOTU4ZjU2MWFiZTg4MGUxMzUxZDdmZTY4Njc2NDdjZGZhYjkwNGFjODRiZTNkOCJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L283-L290",
+          "version": "repo-lines-v1:sha256:d2462ab9a091f961f03f5dbffae736478a22e753c3b76159f37575621ac0f7b0:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIyZTg0ZmY3ZTJmOWI4Y2ExZDllZjg3ZTNjN2ZiMGU1YzVhMDdkNjUyZDVjMGQwMjhlZGI2Nzc0YTBmZGI3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBjYTg3MTIwNDcxYTdjMWM4M2RiOTRlZWMzOTE3ZDRhMTcxMWRhMTNkOWQ0MTJhZGUzOGI1Yjg5Njk5OGMyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTA3Zjk5OTM2OTQ4ZGMwY2E2OGM2NzlkZDIyNDI1MTMwMWY4YThiZWRkNmE2MmYxZTk5MGNhNDUzZWNiNTg4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjlkMjM1ZjNjYjg3ZjEwYTFlMzFjNDZlOTgzMDA2ZmMzZjQ0OTlkMmM3NzE2OThmZGNlZjM5ODE4ODBjMThlOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_12fe8243a86b4115bcb736da6b8b7d92",
+      "statement": "GET /config-history/entity requires entity_id and returns JSON ConfigEntity history with optional limit (unset means all), opaque integer since, and reverse=false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1350-L1392",
+          "version": "repo-lines-v1:sha256:33a8c5669b1743cb09e9c4c710076a336796ae2acc5e653526f086b8b584dbe3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhNGJkN2JlMzZkZDg1ODQyZGU0Njg5OTI3NzNlZTY5MDUwNDYzYzI1YTFjNTYyZTc2NzBjYWQzNjc3MjM5NmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4YzM3M2ZmNmMzMTg4MzAxY2Q4MWIzNGRkNWQ3MjM5MzlhODQ3OGM4MWM3MWM2OWJjMzA0OGJhODE2NTQ4OGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwMDNlNTg2NzU1MTM2MjE2YmFlMWI5YThmN2M5MGU1MTg1OGJhYjYyYWNiNDg1NDY5N2U4OTU0NDMxODA1OGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f2ff48fd87e4aaa9a12be713af3105a",
+      "statement": "GET/PUT/DELETE /metadata return JSON ServiceMetadata arrays at 200; DELETE removes all service metadata and PUT has no declared body schema.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1608-L1645",
+          "version": "repo-lines-v1:sha256:7bf0a5cc1227de13a0e980ebc8c754ff1e917b25e3ae564e7352850349b5b559:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliMjkwNzljZWJhMTFmNjc4ODZlYjY2NDdhYzQ2ZDc2MGQwMGU0NGRiYTZlMTJhMTI5OWZlNTI5ODBjZDBiZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjUxNjkzZTc0OWYxMjMwZDlmMDhhMzZhODJlZTI1N2IzNzc0NzIxNTU3YjBlZGFjYTcwMzAzMjMzMjdiYzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0MDVkZjQ2ZmY5NDE2MGFkYzY3NjIxNTAxNmRiYzUzN2FiNzNmM2MzZjA4NGNhZjZkMzE2OWY2MGJiYjZkNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ODljM2MxMzQ4NzNkZTM5OGNkMzk1MGY2NzEyMTVjM2Q5ZDY3OWZkYjE0ODBiZTg1YzMzOWU0N2E4MjhlMTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fe784eb92f0f4b1997cf34964d311315",
+      "statement": "GET /pipes returns JSON Pipe arrays with verbose=false and optional fields config/runtime/storage/graph; POST takes required PipeConfig arrays with force=false and returns new Pipe arrays; GET/DELETE /pipes/{pipe_id} read/delete individual pipes with 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L145-L249",
+          "version": "repo-lines-v1:sha256:95bd3703fc0fcc3316d614c3cafb8befff6cb9abed4da3f0244210209a4141e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlNjUzODkyMjNhZmNhMTRhMzZiMGY5NDcyMDIzMmViZDVjNDlhNzc5MzEyOWZjYmMyZDFjNjZmYTg2Njk4YTJiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwMmZlMGQ0ZjcwNzgzMmNiN2RhZjgzYjBkOTFhMTJlMGM0NzMwNTFlZDg5N2I1MDM1OWI3OWZlZjVhZDVjNDE2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2Njk4OGM4MjExODIwNjE4ODg5ZGQ5MTViYjYyZjAzOWMyYzQ1YTA3NTgzNTk3MmVjNDliMDg2NzlhNWMzMGVjIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_43c1a36c32894225a3b521a0b4a9ecbd",
+      "statement": "GET /pipes/{pipe_id}/config returns JSON PipeConfig; PUT requires PipeConfig with force=false and returns JSON Pipe at 200, without a declared request media type.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L252-L302",
+          "version": "repo-lines-v1:sha256:b8d88fb5715625f9ce24cf4a73db0bc463a7a4e9a0b10cb46a3ddbed42a56f88:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1ZjdjOTUxMmQ2MTQ1ZTM2MDYyMzM5MTVkMWJhOTg3NWFmODNkMTlhZmQ1NTE0YmU3ZGVhYzRiYjI0MTEwY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlZGQ0Yzc4YTBiYTgzZDIwYzc5YmM3ZmM5MTA4YjI4YmM3NzBlZmNmN2ViMmYwYjkyNTJmYzc2MmE3NzFmZTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxM2MyMGVkZDAyNjcxZjg2OTEwY2QxNDYyZjQzNzExZjJlNTIwOTFiMjBiYTEwMzhmNjkyZjg4YWVjYmY1YTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_996d4c31b0464ab3b36628398d6d5530",
+      "statement": "Pipe responses distinguish original config from effective config after environment-variable/shorthand expansion and expose runtime validity/errors; PipeConfigError supplies elements JSON path, level error/warning, and msg.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2675-L2818",
+          "version": "repo-lines-v1:sha256:dadf2f7039481b7bb1912daffeecef625798602e5ea8d87e6564222d5839d950:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhMWYxMzJkMzNiYmI2NjYwNGUzZTkwZmQyNjQ1M2FiNDU1YmQwNGUyNmU0ZDkwNTdiNGUwN2ZhNDFiOWI3Nzg4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0NDYxNGRiZmM1MjAxMzAyY2Q2NzIxYTcyYWY3YmY2NjdlYmU5M2I2NTA1OTZjZDM1MTM3MDA2OGViMDlkYWZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0YTU4YTVhMWFhYTE4YjUyNzI0ZWNjMmMxMzdjY2E1NDg0YTY0MDJlZjBjMTU2ZGQwYjAyM2I1YjNjYzQ2NmZiIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4NTRiODVmOGEzMTU5ZDIzNjU5NGVjMjkyMGJmMzNhNDNkMDQ5OTdjOGY2YjdhNDQ5NGZmNWU5Y2Q3MTE3ZTRjIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_c1a6ec6198a74d1da54150ed842b275c",
+      "statement": "Multinode aggregators can return cached subnode information when a subnode is unresponsive, marking items with cached_response_info containing timestamp and age in seconds.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2643-L2664",
+          "version": "repo-lines-v1:sha256:e8498e4f72a100b83d0a01d55e5ac2217af6d83d5484ab4c143a1ecb8f7e68fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjZGE0ZWU4ZGM2YmIyMmNiN2EwMTgxZjNhNTE5YjAxOTlhMGViZmQwYjlhY2MzMmI0YzVmZGRkZDk4ZTgyMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0YWViODYwYjQ1NzAyMzVkODhjNGRlNTUzMWFkYzU2MzhiMmIyMDM3MzBlZjk2NjA3YmMxY2JjODE0OWI3MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1NDk0OTA3NjYzYjg2YzhiMDliN2MzNzc3MDljMTg0NGNlYjRlYzMzNjczZGZmZWMxMzFiNzYxY2M3MWM5MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlYjU3MTE5NDIwNTE5Nzk1NDMxZjQ4YThiYTFhNGIwNmQ0NTRhMzJjYmIwZGE4Y2RjNDgxYzMxYWYwYmFkNmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_36c86a89d5be4cd4baabd2b3ced43dcf",
+      "statement": "GET /pipes/{pipe_id}/pump returns JSON Pump; POST consumes form-urlencoded or multipart with required operation and returns JSON Pump at 200. Operations are capability-dependent; the narrative advises consulting runtime.supported-operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L104-L123",
+          "version": "repo-lines-v1:sha256:463c3c4322c33b097ec8c60a47b0e8b5bf9c83342ff1866ad7d1b92849ca9285:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5NGU1NDk2NGRhN2Y4NjZkYzdlY2VmNjZkNDRiZjAzZjU4NzU5NGE2NmY1ZWUyZDQ0Zjg1YmZlY2I5OWI4MDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZWRlOGViNjQ5NGM4NTkwZDNkYTIyOWYwNWVkNWE1MTEzZTQyNTM3Y2M4MDcxZmUxYjQ2YmJmN2Y5YmM4MjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L519-L669",
+          "version": "repo-lines-v1:sha256:875464f9c682cfc6667a60f3c35d15dfde201bbe9b3217e44f24c66282901972:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhYzdmNjVjNDAzYmRjNTM0YmZkODRlOWEzZmIxMjc4YmExZTk1MWI0MGU1MDhmYzhjNDZlNDlkNzk3ODA4YTRiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJlYjZmZTMxMWFiM2EzNGFiNGQ1ZTM3ZjRhYzdjZWY3NzkzYWFiYzIxYWU4MDQyYThhOWNlN2ViODk2OTkyZWJhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmMmIwZjczNmI5Mjc2NTM5MzZkNmE4ZDIzMjk4YmNhN2U5ZTMwMjlhNGUwYTY5ZWUxNzJmYjhhNDJmY2UxN2U5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2Mjk0ZWQyMzlkYTA2MjQ2Mjg3NmUwYjE5Y2FhNzIxMGQ0ZTUzMWY2NWU0YTk3MTRhNTA1NGQwZjM3NWU3Y2MxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_34dd779cc7914ed8b2ccae61606d2175",
+      "statement": "Pump start manually starts a run; enable permits automatic runs; disable prevents automatic scheduling but permits manual starts and lets current runs finish; stop stops normal/rescan runs or does nothing when idle.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L204-L217",
+          "version": "repo-lines-v1:sha256:e4b55d8a0c0d33d383ae2be8ee280af52975a12fd6632e729f07635f2d900a6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YTJmY2YwYWY3MmZhNDVkNjg0MDEyZDhhZWM2YmM3MDlmMzMyNmE4ZDdkZWRmNjNjMDYzYzI3OTlmYzZjZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwMmVjOTRlMTI0OTdlY2UwNjkzYjlhMmY4ZmYzODRjNjAwMjgzODY4YmZmMjg5OGQyNjlhMDk2ZWZjYTljNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3ZTIxYjYxNDI1OTBmMjI5YTQ4NzcyMmZmNzQxYzZhMjY5NGI3NzA4MWVlNmQ0M2M0MGNlM2E0N2VjZTZiMDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiOTUxMjg4NDFiMDIwNTJlMGZmNmMzM2Y2MjNjNDJlOTE0MTI2NjQ1ZWZhMjU3MDAyNTFiYTMyNjYxOWFlNDYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L548-L573",
+          "version": "repo-lines-v1:sha256:6745b0cf2c2046108d25e13fe54cf674b72d0356ba50811d2df6fc7515a8d19e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ODc2YjY2NTkwYjliOTNmYTNjMGU4NjY2YzQxYmJmNzU2YmUwNmVhNzNmNTM4ZTNhODkxYjgxOTE0OTVkMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOWMwMjZiOTM1Yzg4ZDRlZTdjNTVkOGUxZGIzYTM1N2JmNDM1YTM0OWM5ZGFlYWQ4ZmU3OGVjMWZjMjcwYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmNDc2MDU5NGVlYTI5OGIzNTEzMjcyNTUxNWMwNzM2YWJmMThlMmNiZDQxODVmOTM1YjBkOTZhZDhjZTUwYTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwNmJjNTA2NGFmNTQzZjcxN2Q2Y2E4M2RkMzQ5NDU3NjBhNGFhMTQ0N2FjZjg1MzE5YmZkMzNmZTIwMmViZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1f4c5b0f09f472b8d38378e8917911d",
+      "statement": "update-last-seen accepts source-specific string last-seen and empty string clears continuation; set-last-seen-to-end is source-dependent and can lose data by skipping unread entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L575-L593",
+          "version": "repo-lines-v1:sha256:ecba71a8491420054496095034bfb72340a391bf0317cc69b037bb3e58ca6a5e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZjdlNzQxOTEyYWQ4YWIyZGY0YWYyMDE1ZmVhNmVkOTJmMGY3NjVlY2MwYmEwYzRhY2FmNDJhYzhjMjc2MjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmYmUxZTBlZjAzYmM0OTdkNTYxNzk1NWJkYjcxYmNkZGU1NjQyYTY2ZWQxMDBmNTEyMWRhNWFiYWU3OGZhY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1ODI0ZTg5NGE3MmJjYjIyM2FhNzQzMWIyYzA3MjBlZjM5NmNhMzFkMzQ0NTJjYmFjNmI4ZDUwNzc4NWI4MzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmNjM3YmE4ZGQ0MzBjY2IwYjlmNmQ4YjRmNWNmNDE3Yzk4YTc3M2EyNGExOGQ1Y2QzM2I4YmJmM2YwMmNmNjEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L646-L650",
+          "version": "repo-lines-v1:sha256:d8d106387b8a4e07a9efb5a64ccf5e73cfdd9b144a6c843f3d85c8441e788ac3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhiYmJkZDZiMzE4MDI0MmNmZGJjNDJkNWUyYzA5ZWE4YzNlYzk3MWMwOWE4YzkxMWZmYTAzMTA1NTE2NmE4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTc0MDQxYTgzZWQ0MzIxMmNlOGNiNjNjNzI4MzcyN2FmNTRkN2JlNDFmY2QzN2E4OTM1Yzk3NDg5NTQ4YmZmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjYzZDRmNGU1ZjdjNzBiYmE1YzI4MjQyNTdmNTI5NDNmMWYxYzZmMTA3ZDE3NDZhZDVkNDBhODZmNzU2MDRmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWMyZGU1NWQwOTRkMWFjZTExNzNiOGY5OTE3MzVhNTYxYWZlYzlmZTJkOWVlZmJmOTg1YTAxNTNkNTMyMjJmYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_20785f7fc65341548224caf7c9070415",
+      "statement": "start-rescan starts unless already running; reset-rescan makes the next scan start at the beginning rather than resume an interrupted scan.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L553-L555",
+          "version": "repo-lines-v1:sha256:a171343c8293c02f752fbe2e4157b8b8c0942ca90f00d903e354a1cd2deb0edb:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE2NDAyMjY0YjlmZDhkZjJiODUyMzZmZTYxZTI3YTg3MGZhNTIwMmFlMzVhNzViMzFiMTgxOGZmMzRhMmMwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyZDFmMzkzNjJlYjJkZTZiMmNmMzhiYzk0MjA2NWViZjk3N2I1NjYwY2RlZTU2ZDJjM2Q3MGUxOGVmNGVjMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2VjNWNlNjU1ZDkwOWZmNTE4OWY0NTg3YjllNjE2OWNhZDQzN2ZiMDU4MjY3Mjk3NTcwNDYzNWE4NTkyYmM1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzdlM2FiZjVkZWQ3MGFkYzUzNGRkYTUxM2M0NjgyYjhiZjNmZmExMTY1M2Q0ZWMwZjZmYWZiNzI1ZDdjM2Q2YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L607-L611",
+          "version": "repo-lines-v1:sha256:ff499046dfe5b11221599b3d5d151d7a446f9cce10cc54ee11c09d159a4381d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNkYmZiODA5NTE0NThhZDhmNmNlMzNmNGYzNzY3YWUzNDAwNGYwOWY1NmJmYmEwYWVlOWVlNzRiNjMyNGU0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGE4YWQ5NjU4MWUwNDU4MDUwYWEzYzc4NWE3N2E3NTQ0M2ZhOGY5NDkxZGRlYWM5N2EzMGQ2ZjhlYTZiMmI5MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTQyNzE2NDJkNjA1YTQ2NmUzMjUwMDcwZDVjZWY2Y2UxYTBlZTZkOTFmYzMzY2FiMzFjZDg0ZDU2NWRjYjBmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNkNDE4OTgxOTU1ODI1M2EwMDkyNDNlZGNiZGIyODRmZWFjYTY0OTE2Njg2OGJhMjkwNjE2YzlkYTJmMjA2NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_10940dbdf3fb4b67a0305b68abe5e25d",
+      "statement": "Experimental reset-tracking is unsafe while running and resumes tracking at dependent dataset ends when the next pump runs, skipping offsets and potentially producing incorrect output; intended for development or followed by full sync.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L595-L605",
+          "version": "repo-lines-v1:sha256:2cbbabc20e2aca019bf31f82780d9062a3f4ba12ba74ca4c4a586394a023eccc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZTU0MjM1ZThlOWNlZTc5NWJlYjRjZjY0MDJlNTVkMmM0ZWU2NzRhMTAyNTMwMzk2M2Q5ZWMwMmFjMjRjNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNDQxNWIyOTgzNzIyNDk0ZWFjZGYzN2FjZTU0MjlkNWVkZTY2ZWZkYWE3NTdkYzFlOTliYzU5MzY1MmJmZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJjZmJiOTFjZmZlOTlmMTAyM2ZhNDRlMGRlZTE5MDAyMWExN2QwNTE3Y2Y3MDM1OTEwNjRlYThkN2RlZTgwYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJlZWQxMmVmMTFlYjU2YzFjNzliZDRhMWNiZGI3ZTVlNmE2Zjg2NGEwOWU0NjY0MjgzZGU2YWZmNGQzOTE4ODcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cd2c0118d39c40b7b76e7d812bbc505b",
+      "statement": "discard-retries records pump-discard-retries so pending write-error retries are ignored on the next run; discarded entities are not written to dead-letter storage.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L613-L617",
+          "version": "repo-lines-v1:sha256:527e4340071c0f73f529f50ff966912eaf540f5b5dfa606f0be27998315f270c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzM2ZGM2NjBjNWU0YzM1MzAxNDg1MzQxOGVhNWVmMzFkNzFjZGMyZWM2OGNmMjUzNjk0MTViOWE5NDcyYWIwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTQ4MDBjZWI1MTUwMWJmMTEzOGQ0NGMwY2M2ZTY5MDJhN2U5YTEwMzhmODRkYmVjZWNlNDMzY2Q3NzI4ZGNhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmNhMGE1MGMzZTQzODIxYWVjYTNiYmU5Y2E0YmQyYmI2NTE1MzFkODQzMzY5YWJlZDA1OGE3ZjFhZDNhNDlkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWQyOWNhNTNiODc0ZDZlY2VhYmQ1M2MwZDU5OWQxNzUzZjhiMWM5ZDdhMDhjNzhhNjhlZGZmNTY5M2RlZmY2YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c50aa3a681684d09a873da7e99f7ee08",
+      "statement": "discard-inferred-schema removes accumulated schema and normally should be followed by reset, particularly for pipes without continuation that do not automatically delete schema on reset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L619-L623",
+          "version": "repo-lines-v1:sha256:960693d0bd7d06fdac188f31112404b2fedc16b7f112eb0d116fb70827c52b4c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWZmOTk1YzYxMGM1MjM2NGI5Mjk3MTI0YWRiNjZjZTYxODdiODViZGU2ZWNhZGM0OTE5YTBjZDE4NmQ0ZTgyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZiZDM1ODc3MzE2ZDcyOGIxZDI4MTEwZWU5MzIyZWQ2MzQ5MDhmY2NiN2E5NjIxNWQyMTk2ZjVjY2EwNzcyYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGE0OTkzODA5NzUzODQxNmYyYTU3NWJkMDdhY2JiYzhmMDMzYTk1ODU4ZDY0NTZjOTJjMDhkODA2NzE2MTRmOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTg3YTQ1NWViN2Y3MDhmZWYyOTE5NmJkYjY3NzM3OGUxODVmNzBlYWE4NmQzMzRjZTk3ZTgwZGMwNTk4NTNmOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_03360fb9e61248fe9a7aa1f3fbd5afc8",
+      "statement": "Disable can persist a comment in the pump-disabled execution-log entity; dont-wait-for-pump-to-start and relation are deprecated form parameters for older versions/operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L572-L573",
+          "version": "repo-lines-v1:sha256:d7867a6fc08bf33bceafff2ffd269fed18ed6f06eb4aee75d047a788b103e51b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGUyYzA4YTQ4OWIyNzVhOWI4ZDlkYmQ0Nzc5NTJiYWRkNjkxOTAzZGQ1ZDRjYjI5NzRhZWYwMWIyOGYwNmViMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU5YzAyNmI5MzVjODhkNGVlN2M1NWQ4ZTFkYjNhMzU3YmY0MzVhMzQ5YzlkYWVhZDhmZTc4ZWMxZmMyNzBhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDAzZGE4ODJmODIzZjUzOTliNjQ4MmVmMDc4NzNhYjZjNzk5MWRiZjI0YzJmNWNmNTczZjEyNWY0MTdmNmE3NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDA2YmM1MDY0YWY1NDNmNzE3ZDZjYTgzZGQzNDk0NTc2MGE0YWExNDQ3YWNmODUzMTliZmQzM2ZlMjAyZWJkMSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L634-L662",
+          "version": "repo-lines-v1:sha256:569aff72ca3b3faeb9b4d885ecc9b3f3d7dfd80206134936854be5f12b41ec4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmOWI5ZDcwZGZhMDMzNjc5MzFjYmRlM2JiYWExOGFiMWIwM2NmMzM1NzJlZDIxZTNjMDZlMmMwOGFhZjQ5NGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4N2E0Zjg3NmJmMTM4NjJjNmVkN2QwOTk5NjJkZDAwYTJhZTViMzg2ODVlMmNjNTg3YTVhNWQ4Mjc2YTliZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI5ZWU2MzI1NjM1NjE5YzczNjFjMzNjNjEzZjI3NTMwYzZhNjg1M2I0MmE5ZWQwMjIzZmUzZGZiYzdmZTIzODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzNjI4MjY0NzE4YjM0ODk1MDhkZGNjNTEwNGE4YmFjN2ExNmY5YmM5MjNkOGJiODEyOTAwNjFjOWQ1YzEyZmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7980e2f18134492986be24e0a0ec262b",
+      "statement": "Management Studio Restart is reset plus start, Reset reprocesses from the beginning, and Delete sink dataset removes the sink dataset and resets since; these UI workflows do not introduce similarly named pump operation strings.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L210-L247",
+          "version": "repo-lines-v1:sha256:0578f99414cea60093cade776ccf3393f842af1879497cb83de71b3e8a544d21:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViOTc2Y2ZkY2U2YTc0N2U2Mzc1NGMzZmI3ZjBjNzZjN2NmNWUwMTNjZDBhMzIwYWE4OWUxODg4NTIyZDBjODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1OWVmMTJjY2UwNGJhOWRiNjNiMGU5ZDI0OWUwN2U1Y2FiMmI1OTQ2MmIxYWFhMzRiZjBiYTM2YzQ5NWQyNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlNzQwOWVkNjY0ZWU4NjJmZWRmZjY2YmM1Zjg2NDdjYjdlN2ZkNDM3NjBjYWIwZmFkMTYzYjI4MzIzNmM4MzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYTFlYjhiMGJkODQ2OWY3MTQ2N2UyY2ZlZTJmZTRmZTgyYjQ1N2E0MGFhZjNmOWQ0ZWYyOGQ2ODVjODEyYzYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L546-L623",
+          "version": "repo-lines-v1:sha256:b987964219c6ba3f315a4b3932a4ffc373a34fb1a5d0df74ce3f10982127a13d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5ZmQ2NTZlY2YyNDRmZmMwY2I1ZmVjMzZjYzkzYjM4NmQ5OTFhNzY5OTFhODZmNzI5ZjJiYjcxZjAzMGI2MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYmQzNTg3NzMxNmQ3MjhiMWQyODExMGVlOTMyMmVkNjM0OTA4ZmNjYjdhOTYyMTVkMjE5NmY1Y2NhMDc3MmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEyMzk0YzY2NjhkNWQ4MzQ0NDE5ZmJkZDBlNGIyYjhjOTcwMGMxZjJlZjE4NDQwYjhjNTJiOGRlYjZhOWM1NjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4N2E0NTVlYjdmNzA4ZmVmMjkxOTZiZGI2NzczNzhlMTg1ZjcwZWFhODZkMzM0Y2U5N2U4MGRjMDU5ODUzZjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f340c450df944079819272cd2f63a38",
+      "statement": "GET /pipes/{pipe_id}/entities returns JSON PipeEntity arrays with optional unbounded limit, string since, and stage=sink or source/before-transforms/after-transforms; generate-schema-definition GET returns JSON with sample_size and keys_only=false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L305-L350",
+          "version": "repo-lines-v1:sha256:d8e504d0cbae681e1590228a8e528185de3c751afea1126f85f494b14988ce07:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxNmY1M2VjNGNlYmI0Yzk3MzcyNDJjNjkwNjdkZDcwNGFmOTc5NGFlZGExNWE5ZjA0NTUyMWJiMzA2ZGZlZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmNTZlYmE1YzhmMzY4YjI2OWFhYjU5MmEwM2MwNDA0MTVhN2UyOTg2NzNiYzMwY2Y3NjU3YWQwMWViZWNlMDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiYTU4NDA4MjRiNjUyODI0ZjkyMGVmNWI0OTAzZDRiZmU2MTJhMTJjNzE3YmI0MmYyMTYzMjU5ZThjOGVlZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlZTFjMjU2NWQ2OWE2YWI4NWU4NmFkM2UwNmY5MDNiNjdjNzQ3MTY5OTgzNTVmZmViOWE0MDY4MGUwMmVmM2QifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L485-L516",
+          "version": "repo-lines-v1:sha256:67eb766860fdd87cc5c6215796c084be6f5615af0d8a50f6c92d7e18c44292c0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2ZTU5ZTg5Yjk2N2QwMWU0NzUyM2QxZWNlMGVhZjkzMDRlYTIxNzFlYWI4ZTYyMDgzMWZhN2QzOWJkYmVkOWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3MTQwZTUxY2U1ODQ0YTNlNjZjN2NjMWU0NjkxNzllMWNmZjJkMmU0ZmY5NTRlM2M4MmQ0MDAzZjcxMTY0ZmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_739c1eea84794ce9b40535f5f8a9e554",
+      "statement": "GET /pipes/{pipe_id}/log returns JSON DatasetEntity arrays with limit, opaque integer since, history=true, reverse=false, deleted=true and full-history deletes always included; OPTIONS returns text/plain and supports experimental webhook plus associated token or Badrequest.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L353-L482",
+          "version": "repo-lines-v1:sha256:90c723f799624e965b55db880afa3a9cc6ddc17adb777fb9a1ba0b6b703ad546:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzZDYyNDg3NGMyNGRmODllMDZkYmJiMjg3OGI1Zjk0ZDJiZjk1YmVkOTVlNzNkMzYyNmMzZjFmYmQ0N2QxNzNjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3ZjRmOGQ2NWIyYmM5ZmY4MzQzMmY5ODUyYjAyY2I2YzU1Yjc1ODY3MTJlMzhlYzg0ODdmOTIyZDYyOWYzNDkxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhZGY0YzFlYzliNzEzOTAwNjYxYWQ1NWRiMGY4OGNjNjk4NjE4ZDZlOGUwZWQ1YTllMTEyNTI1MGZjNzdhNWQ5In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_5ed7bea265f94374b46a0d733ce255b8",
+      "statement": "POST /pipes/{pipe_id}/webhook consumes JSON with the registered token and schedules a pump; unknown/mismatched webhook or pipe returns 404, documented as unregistering the webhook on the sender side.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L671-L693",
+          "version": "repo-lines-v1:sha256:9910156bb8970a1088c499ff55493c0091de9ec0940eb95f3e7b74ec2d9c25ba:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzYTljZTk5MjdjNTVmN2ZkMDU5ZjkxM2JkNjc2YzM2ZDdkNzg1MGUwZjlmNTVjNmMzODUyNWJmMzg2NDI5ZTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMTdlZmZmM2IzNjNhN2VjZWNmNTc2NGJlYTgwNDIwMjY4YTk3OGVkMjRjN2JhYjI5ZGQyOWFmMTNkNzQyMDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkZWI1YzdhMWYwZmI3MDQ2OWQyZWM5NTJhNDA1NWRmYzA3YTRlOWRmODM3MmZjMjMyYTk2NGMxZDJmMTA3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllZTc3ZWFkZTE3Zjg1YzBiYWU0ZTNjZDQxYmFlYTY3ZTYxMzgxZTYwNTAzNTUyZTRiYTc4NDAyNjM5NTc2YzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8bb7e460d78442e6ae57b03458e24925",
+      "statement": "GET /datasets returns JSON Dataset arrays with verbose=false; individual GET/DELETE inspect/delete a dataset; POST /datasets/{dataset_id} is a form rollback-circuit-breaker or commit-circuit-breaker operation, not ingestion, with JSON/200 responses.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L729-L810",
+          "version": "repo-lines-v1:sha256:4b7bf5fe686ae0c259cde8ba93dac6b148db7ed297df4a077124b91addac1439:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkZWVkNWIxMDY0YTYyOTA4YTgxOTI2ZWYwZTViNmYyMWRiNDBhYWVjMTdhMmM3NmIwMzM2MWExMjQyOGU4OGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM2NjAwZDQ4ZmZhZTA4NjMzZDQ3NmM2ZmQ5MTUwZTBiMWVhZTY1ZjA5YWQyNzI0NjEyNjFhZTllZWVkODNlMTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_302ff540dd164dbbac14da2a255fd0b6",
+      "statement": "GET /datasets/{dataset_id}/entities returns JSON DatasetEntity arrays with unbounded limit when absent, opaque integer since, history=true, reverse=false and deleted=true; history=false selects latest versions and full history always includes replaced versions/deletes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L180-L192",
+          "version": "repo-lines-v1:sha256:49408eb8f6ecf6601e22cd128b29e744da64e27491496c85be54b6d90ed4a6be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwZGYxZjQ2N2FkYjA1ZDk2NDE3YWE2MTAzNTQxYjhhMWU4MDBjZmUwMGFjYWM3ZjUwMzRlZDQ0YjIxZDk1YWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2OTczY2RkMmFhZTVhODQ1MTA1NWJmZTQyNjhjNjA2OWY1MDk2NDFkY2ZmMzkzNDZiNWZlN2RjNDdlOWNmNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjliZGZhNjAxNjFlMGY5NDFjMTk5NGMxMTY4NThhMmVlNjVjODlhNzFlNWFlNjRkYWJiMGM2MmM5MTRiNDQwMmQifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L813-L867",
+          "version": "repo-lines-v1:sha256:99d111a7e4ecd68531a8f3638f10b551c2e8e10f742c33ea8b3c636a06309e2e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwNTdkYjYwMjdiZTA1ODJlMDUzYjRlZTkyZGI3ODA5OTE1YzliY2EyMzhjYTg1ODAwMGYxYjc1ZDk3ZWUxMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMzI5YmMwNGJlZjdhNWI5MTFmZTYyOWVkMzgzMTUzYWZmZjk0YzcxYTkyNmExNjE5M2ZjY2M1ZWYwZDkyY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiMTFkNDQxYjY0YjExYjg3NzE4NTEyNjQzYmYzNDU1Nzg0ZDM3NzVjM2YyMDIzZjVlMDQ5ZTk1MzYzMjAxNTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a00bb1b0d204d2faad00753f324886f",
+      "statement": "Dataset-list populated=true adds 404 until a complete populated source view exists; unknown JSON-encoded subset gives 404; uncommitted=true can expose circuit-breaker-uncommitted data for debugging. Boolean controls default false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L869-L896",
+          "version": "repo-lines-v1:sha256:d4910f0e9b0b515e49428eb5ab242cfe276ec5ecc366dd4b42801fe0d41833f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlOTJjZDUxYzkxODY2NTQ0Yzg5NzMwNjViOTY4ZDlkMWE1ZTYxNjgzZDUzYWY5MDZmNWNmY2NkMmNkMWVkZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExYTU2YzgyNTY3ZTBkNmU0ODUyYTBkOTg5YTE1ZjA0MzkwYTk0Y2VkMTRjMzE1ZmM1YWZmOWQxMTQ0ZDdiZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1ZDNiN2QxODBiZDRhNGQzZjkyYzcxZjcyNTZjZjUxN2Y5ZGMyZTcyZDQwYTgyZmM5NDRjY2YwYmE0NGVkNTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiYjJiNjIzNDE5YjhiN2UyYWU5OGRlM2RmYTk4ZjMwNGJlOWFlMjcxZTkwNDEyNTRkZDEyNTA5MzdiYzM1MDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d27d95bd11644697b24a9038c4e4030b",
+      "statement": "GET /datasets/{dataset_id}/entity requires entity_id and supports subset, offset, uncommitted=false; unknown subset or absent/mismatched entity at offset gives 404. /entities/{rest_of_path} is deprecated in favor of /entity; DatasetEntity._updated is the integer offset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1011-L1092",
+          "version": "repo-lines-v1:sha256:3e01cfabe3810cbce5fd9b21b4851d70fcb9df17436cd7aa156bac98434daf73:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlZTE5NjYxYjZmMjU3YmRlYjAwMGNlYzFjNTYxZTUyNmU4ZWExYWI5N2FmZjBhMTZmZGYwMjQ2YjgyMGU0NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxNDAwYTI2MDVlMmYyYTVlMGRlMDhmZDVjNWQxYzA3YzY2YTk1YTM1YzE0Zjg2Y2ExZGI0MTFiMGE4ZWU3YjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ2OWJiYjdhMmMyODUzMDdmNmUxZTkyODQzMGNkNTRhMjEwMGM3MjM2YzVkM2U2NzQ0OWIxYjE2ZmRkOGZhYTkifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2884-L2897",
+          "version": "repo-lines-v1:sha256:848dbb6687b80defdbc140a61c02e6b3108e88fcc68484df494c738019840acf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyZjgwNTM4ZjkzYzQ3OTQ2YmQxOWY3MDlkYzFkNTdlNjdmMjZhODQ1MGQ1NzBlMDQzMDI3ZWM5NGZlODJjZDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4YzA1YWU4ZTlmMjVmYjcxYzg1ZjkxNDJhZmE3NjY5ZDFkM2FhZTcxM2FiODNkOTFlNDE0ZmYyY2ZlMzJlYzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjZjFkMzE5MTY3YzU0YzFiYzY5ZTg0YjQ2YmIyODI3NTMzMjA1MTNhYzViODRhMzU3YWJkNjEyN2Q3M2I5ZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5MTQ2MDMwYmU2ZDdlY2FjZDhkMGVkZjBiOWRmNDVkZjgxOTVlZWU0ZTM2ZGNmMjU1ZjFkMTRjMDFmMmIxMGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7f2471d3975b41eb803cc87d434f1945",
+      "statement": "OPTIONS /datasets/{dataset_id}/entities returns text/plain and supports since/history/reverse/deleted/subset plus experimental webhook and required token; missing token gives Badrequest and new data triggers a webhook POST after request processing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L905-L979",
+          "version": "repo-lines-v1:sha256:4c71f8e51855c47f99ffeb97486bfaadf76fee7a6cf73b46e74efc82d68a3e9c:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlY2Y1OTQ2NDE1NzlkZDU0ZjcwOGVlMGNmYzNhNjIyNTFlOTk1MzhmY2FmYzBhNDhjOGMzYTZjNTlhM2E2OWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2ODMwYzQ0MmI5OWM5ZTkwMWMzYTQ0ODhhYWFmMWI5MGIzNDgyNjZiN2Y2OTlhMDllMDFlN2NkY2IxNzVmODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmYjcyMGMzZWQxMWM0MWNhZjFiZjFhMjgwZDA1NWU0NDYxN2Q2MTljNGUyYWUwZDRmZDQxNmE5YTVkM2EwMmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cca2cb91297b495da8ac969110b20393",
+      "statement": "Dataset inspection GET /datasets/{dataset_id}/indexes returns JSON DatasetIndex arrays; GET generate-schema-definition uses sample_size and keys_only=false and returns JSON, both 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1150-L1169",
+          "version": "repo-lines-v1:sha256:cf3952ee420de97fb41f8f6f100fab39f5dd9a51c82877c9a81239aad7769541:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3ZGVhZDM1NmFlYjljYWIwYzhkZjczMmEyODc3YzkxZTQ5ZmViZGJiZGZjYjQyZWM4MjljNDliMjZmZjlkZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MzdmYWNlNzg5ZjNhZWI5YjA2YjE2MzA3OWE1ODZhNGMzZTUxNWQ1Zjk2ZGE2MjE0NGZiNTc5OTc0Mjk2NjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyNzc1NjhlNTA1NDdjM2YwMWVkNmZiNmY2NTcyYjBlOGRhMjRjNTgzZjIzNjUyY2Q3OTZlMTg3ZmQyNjA4ZDEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1193-L1224",
+          "version": "repo-lines-v1:sha256:3598fa25e942e1b35e418be76fa3ad19a974e260bece5cf1aa64b4843455f574:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMjkwZWI5ODgzZDMzMzUwOGRlNjdhZWVkNmRiZWJmMTJiYWExNTY3NTAzMDQ4NTM5NzJmYWE1ZDUyNWNmZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmYjI4M2NkMDQxNTE1MGFlM2RhYmUwN2E4YjYwNjc5YjRiNGU4YjRmOTVjYzU3MzVjY2YyOTJiMGQ3ZGM1MDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a836e57189f047199705f5d9c25c9a74",
+      "statement": "Dataset SDShare collection/feed GETs return application/atom+xml; GET /datasets/{dataset_id}/sdshare-fragments/{rest_of_path} returns application/n-triples for an entity, all 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1094-L1148",
+          "version": "repo-lines-v1:sha256:55a0e66e3c97143372c5370784c2c6f9f8adc60507a7b87c2fbf77450de4ce1b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwODYxMzk5ZWQ0NzZkNWVkODBhM2MwZjkyYTFhOTYzOGE3ZmMzZWE4NGViN2QwNzk5Yzg5OTM2MzRjOTY0MDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzYTFmZmY3YzBkMWQ1ODFhODI1MzM5MTYxYzY0YTQ2NDQzMmY5Njg3NzczMWJmNDFkOTA0MDM2ZWJlNDVmZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZDE2NGJiNWFlOWJkZWI2ZjI4MGJjZjllMWYxMzRlYTYwOTYxMjZkYjc5MGMzMDc5MGU5NWMwODhhYmY5ZWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2b3afc5a1a2541cb89e1fb37a8c21253",
+      "statement": "Service API explicitly prohibits production dataset-API writes and directs ingestion to an HTTP endpoint source or JSON Push, despite Swagger including POST /datasets/{dataset_id}/entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L150-L156",
+          "version": "repo-lines-v1:sha256:a71abf3960cce1e76b5f76e1b1d9317fa9b0b19ada7b37a8d31856731c7ab81a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTQ4MWM0NjIyOTA3MGNmZjdlYWQyMzBlOGI4ZGZhNDlkMjMyZjQyZTkwNDMyYmJiMDE0ZmMzZDQ1OWVjNTMwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZhYmI3NDE3MTllMzNjNWNjOWNhZGJjZGUzNjMyMDczYzg0NGE0NWQxZDYyMDU2NjA1ZDg2MWEwMDgzYjJiYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWY5YmQyZGI1MmRhNmM1MzQ2NDIxMTc4M2E1YTg4ZTk3ODY2YWNlNmUyZTk4YzE5OTdlNTZhZWEwN2EyZGEwNiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L981-L1008",
+          "version": "repo-lines-v1:sha256:0658a370b5b3de3d2bba2875bbe39ea5c6b08da9daefae518f92b01dc132b0e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZWFhMjhhODgxZWFjYTE0ZDY5ZGYwZGZhNWVlOTBjNTliNjZmZDI0ODRkYzJmODY4MDgyZDliMzM1MTRjMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyZWM4YmY0ZThiNTJiYzNlMGRiYWM4YTdhMjU4NTA0Yjg2MDIxN2M1NmZkMDRmMzRiOTVlNGI4ZWU4MWVjNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_66624d5019b644d18a426f4ffac44d67",
+      "statement": "Dataset entity POST consumes/produces JSON with 200; force=false suppresses equal-hash writes while force=true always writes, unlike configuration force accepting errors.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1251-L1258",
+          "version": "repo-lines-v1:sha256:d2462ab9a091f961f03f5dbffae736478a22e753c3b76159f37575621ac0f7b0:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIyZTg0ZmY3ZTJmOWI4Y2ExZDllZjg3ZTNjN2ZiMGU1YzVhMDdkNjUyZDVjMGQwMjhlZGI2Nzc0YTBmZGI3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBjYTg3MTIwNDcxYTdjMWM4M2RiOTRlZWMzOTE3ZDRhMTcxMWRhMTNkOWQ0MTJhZGUzOGI1Yjg5Njk5OGMyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGIzNDc1NTRiYWNhMWE4M2M5ZWExNmRkNmM1MDU2OTE4MzA3MTMyNDgzNTI5ZDIzYTNmYjZlZjM1ZTk0MGU0ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGQwOGYyZjBlMTdiYmQ4NzQ5OWE1OWQ0NzlhMjRkZjQ1NTlmYjBjZTkxNzAwMTFjOGUxNzRjMGQ0MDNjYTRmYiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L981-L1008",
+          "version": "repo-lines-v1:sha256:0658a370b5b3de3d2bba2875bbe39ea5c6b08da9daefae518f92b01dc132b0e5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZWFhMjhhODgxZWFjYTE0ZDY5ZGYwZGZhNWVlOTBjNTliNjZmZDI0ODRkYzJmODY4MDgyZDliMzM1MTRjMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyZWM4YmY0ZThiNTJiYzNlMGRiYWM4YTdhMjU4NTA0Yjg2MDIxN2M1NmZkMDRmMzRiOTVlNGI4ZWU4MWVjNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_68518a11cdc643e48cb64212ff6ad4e7",
+      "statement": "http_endpoint sources register receiver URLs without a pump; entities flow through their pipe to the sink only when posted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L6-L27",
+          "version": "repo-lines-v1:sha256:7a633424ffc6abef8a15b60cae8996cf6a08e1bb6803d3239b552187e65cac6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZmYwNTZhOTkwNDM0ZDcxNjc4YTE3NjQ2YWZmYTM1ZjNmNTBhMGI1MDNkM2Q4NzViYWJiMzBiYzcyMWJhMDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0YWM0MzE0YzM2NzFhYjJlYzg3ODBjNGE4YTM0NDY0NjY1MTAyOTk3MTZjNjczMmNhMmNiOTg3YTg4YzgxZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyNTQ5MGVhMWVhZDA0YmVjZGRiYjUyNmY2Mzc1MjM4YzJiNDhjYzUwNzY0ODlhYjBkYTA5YzZiODA4N2E1YTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMxZjI1OGE3M2RlZjkyMTI4ZDJiZTg3MmMzNDI1ZWI4ZDFhZjBkMmJjMzA3YzJhOWIyODkyMDY0OWVjYzY4ZTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7c97775167634f4792a1df74dfbfe18c",
+      "statement": "POST /receivers/{pipe_id}/entities is JSON Push for an http_endpoint pipe, consuming/producing JSON with a 200 object and optional Swagger query controls sequence_id, request_id, previous_request_id, is_full (described default false), is_first and is_last.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2154-L2218",
+          "version": "repo-lines-v1:sha256:211a669a57498643d467cc3344b2911cf977214ddf353c3a2a844a31c1f3750e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyYjAzYzg4ZjMxMWE1MmFiZDVlODM5ODQ2YTA3NGI1Y2ZlMjhkODYxZjQ0ZDk4MTFkNDYzMTMxMWVjMTk3OGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmNmEzOWM0YTlkNTE1YTRkZmQ3MzI3NjJjNjM3ODc1NjE1YTg0ZjA1MTg4ZDA1N2M3OTU2NTliZjljNTI4ZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2MTg2OTM0NGFiYjcyNjcyYzVjZWE1N2RiNGEyN2E5ZDgxYmExOGExZDk5NDY2ZmRkMWU4YTJmNGZjNDkzOWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_203037701c1e4e15bf8a8eb7051ed0de",
+      "statement": "JSON Push specifies an array even for one entity while the HTTP endpoint narrative permits single objects; full sync has one active sequence, a new full sequence replaces it and is_last closes it, whereas incremental requests do not affect it.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L29-L41",
+          "version": "repo-lines-v1:sha256:f9b72aa0f1c7378c3b0bcf27ff88d2c03ac84be95d1440673d05264306ea5e35:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MGYyNWRjY2NlYzNhZTlmZTAwNzM0MzlkZDU4NTA5YTFmOWMyMWI5MDAzNjYxOTM2N2IxYzBlNDRjYzU4MWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhOGE1YmNlZTcxMDMxZDJlYTYxNjY2MWJmOTkzZDgzNTkyNmI4YjhmMGJlY2I0ZTQwZGExMGIxNzRlZGNkZjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxNzIxNTc0M2RmNzM1YzM1MmU2OTlmYWZiMzY0NjMwMjIzZTJkZWYwOWQxMzMxNGE0ZTc1MWYwY2U5ZjI0MTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjNDgwMWVlYzY2NTYxNDVkNzIyYWJiYTZjNDk5NGY2MWRhNGMyY2M0YTMzZjExYmRlY2I1MjliMWM3ZGE3ZTQifQ"
+        },
+        {
+          "resource": "repo://hub/json-push.rst#L22-L65",
+          "version": "repo-lines-v1:sha256:560c6f5fd4ed9f4f9d05e63ae029137336b06838e7cb9918de7e497497fdbec8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkYWU5ZjVjODgxOWE3NGU3M2NhOTgwYTNhMDNhMDRjMDU5MDNmNDM1NWZiYWZiZTQwZDViMTU0OGE3NWMxYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjM2E1MTViM2Q2Zjc0NzI1YTFkZmFhZGMxMjYzYzE4YjBmN2U1YzM4ZWRlNzkzYjhmN2Q1NjI3Yzc0MDA5ZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljYjM0NDRlOTU1MDdlOWQ2OWE3YmRiYTU0OGM1NGY3YWZmY2E4M2E5ZWY5NWM5OWJkZTc4YmNkNmUzZGU0MmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1MzViNzc0MWVhNjI4ZDM1ZWVmNGFhM2VmMGQ4NWU0YmNjNmZlMzI1YTE4ZWMxNmUxZWQ2M2NlMWQ1M2E0ZWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_79a5292ec9b94db6a4cbf3e02bb2413a",
+      "statement": "Full-sync previous-request mismatch, inconsistent is_full, or invalid repeated is_first require 409 Conflict; the sink stops/retries later, restarting full sync with a new sequence from the beginning. Incremental controls may be ignored; these are narrative failure rules beyond Swagger's 200 table.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-push.rst#L68-L88",
+          "version": "repo-lines-v1:sha256:9773217ec895d4608d1ff7f7c446e6b35b4560f618a772331733358425261ca4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmODQyYzNlNzQ3YTc1MDg1ODc0M2ViMGY4YWUyZmRhNzEyN2FiNDZlNzU3M2ZjNGM1NWJmMzhkYzJjZmUxZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlOTY1ZjJkMDk5NzNlZjNiNzk2MDk4NDYyODhlMWQxOTUxMWU4MWE3YmM0MThhMTQzMzlmYjI0MjM1YzI2M2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkYzE3NmYzYzI1NjU1N2YxNjc4YjUzYTYwNTU0NGIxYzg4YmM3NThmZDlkZDFjNThhNmVkMTE3NDVlZjU0MWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3M2M4MmI2MmVlOTMxYTBkNjJiYTg2ZWY5Y2Q2ZmIzMWJjMDAxYTc0M2VlMGZmNDA5YzRkZTdkM2I4MmFiY2QifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2213-L2255",
+          "version": "repo-lines-v1:sha256:f6c6110ca9b859f97c3484ed7249e03cf4e76edf4e4448e16d0ba60d86ceaa55:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxY2M0OGNjYmYxZWY4NWNjY2NlNDFjYzQ1NDc0YWI2OTg5NzI1YTViYjZkM2MxMmY2ZWQyODE2ZjI3MjU4YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmODE4YzdjZjIzY2I5OGNmY2I0OWZmNzRkN2NiMDBlNzU5ZGY5ZWFiNzg4MjlmMWM4YWVjZGViMzczYTBjMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3MzlhNzI1MTBjZjgxNmM5ZWIzOGNjYjkxMzY1MzJlZTFlYTk5YTQ2NjI3ZTYxZDU5NmI5NzAyODBjYjc3MTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZGMxYzNkYjY0ZTNhYWQxMGFhZWI2M2YzOTQ0YzBhMTU4MmY1YTA1OWUxMDAwMDc3NWMxOTJiZjMyN2Q1YTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fb68a63143af4499b72b47974fe12e1d",
+      "statement": "With dataset enable_optimistic_locking, the receiver may return updated_entity for a one-entity post or input_entity/existing_entity/common_ancestor_entity for stale _updated input and three-way merge, as fields in its 200 schema rather than a distinct status table.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2213-L2255",
+          "version": "repo-lines-v1:sha256:f6c6110ca9b859f97c3484ed7249e03cf4e76edf4e4448e16d0ba60d86ceaa55:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxY2M0OGNjYmYxZWY4NWNjY2NlNDFjYzQ1NDc0YWI2OTg5NzI1YTViYjZkM2MxMmY2ZWQyODE2ZjI3MjU4YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmODE4YzdjZjIzY2I5OGNmY2I0OWZmNzRkN2NiMDBlNzU5ZGY5ZWFiNzg4MjlmMWM4YWVjZGViMzczYTBjMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3MzlhNzI1MTBjZjgxNmM5ZWIzOGNjYjkxMzY1MzJlZTFlYTk5YTQ2NjI3ZTYxZDU5NmI5NzAyODBjYjc3MTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxZGMxYzNkYjY0ZTNhYWQxMGFhZWI2M2YzOTQ0YzBhMTU4MmY1YTA1OWUxMDAwMDc3NWMxOTJiZjMyN2Q1YTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_32057809a0ae4b06a6381325ce3c226f",
+      "statement": "SDShare receiver POST requires an http_endpoint source and N-Triples body, consumes application/n-triples or text/plain and returns text/plain/200. resource is optional in Swagger but required in source narrative; no statements for a resource yields _deleted=true, graph is ignored and sink determines destination.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L43-L57",
+          "version": "repo-lines-v1:sha256:b3c5c71239d00895b34b7c7675b5631e3d165d4f6c9c4a97673bb6242be1c8a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiMGVjNWJlODgwZDFiZTIwMjQzMTFhN2Q4MGZiYzFiNWNkMWJkMWI1Y2IyN2YzODc1NGI2ZTk2YmUwNWUzYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhODJlMjA0ODg3YWVlMGM5YjRiZThkNjA3MjQ4MTZiOTI3ZTYxZGEyNmIyZWNjY2JhMDk5NWRjYWI2NDZjMDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5ODQ2OTYyZmViN2ZjYzIxMjg2MDFmNTVmYmRhNzA0YmNmMTBmNjY5MmJmNmY4YjE2MDMxNTNkYTM4MDhkZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5YjI5M2ZkMjc2OTg5ZTE1YzMwMGM5ZTdlOGYzMzhkZDI5MGI2YWFmYTNjNjk1ZjUzMmZjZmQ1MGYyODY3YTYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2116-L2152",
+          "version": "repo-lines-v1:sha256:2e6d547f1789eee316a01a1de67955d2dcfc7339f50ced2c4fd39c830e4a9197:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5NThhMTQ3NWNlY2I3NWJjYWZkMDNmYmQ5YjkzYTIzNDAyMmFlMjEwMWI0Nzk1ZTQwYzI2NjllNzRjYjdhM2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlZjQ4OGViZmE5NzA4MzVhZDcyYTczOWFhYzI3OWI4ZTM3MzhjMDgwMzU3YWEyYzU5ODkwM2RlOTI1ZGY5MGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9c712da61e3e412b8869f809e4c95570",
+      "statement": "Publisher GETs expose entities JSON, CSV text/csv, Excel application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, XML application/xml, and SDShare feeds application/atom+xml; since/unbounded limit apply except SDShare collection, filename variants set attachment names, and CSV linked_excel_file returns an Excel connection file instead of CSV.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L146-L163",
+          "version": "repo-lines-v1:sha256:2abedd188a1ae1cfb90a9f42d05e9994fb898099d67748032e1f5f180fee7811:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3ODJkMjFkZTM0NDMyZTFhZDBlOGU4MjhkZmE2MDA5ZGZjMzY0Mzc1M2NiYmViZWQ5NzVjNmZhZTJiYjgxMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4ODMyNjYxYzYzYjkzMmI2N2FmMjc2MTkzNDZiNmUwNzAxZTVjNTEwMGU3ODM2ZDQ4NWVjYjM3YzNmYTU3YmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMzYxMjc3ODcyZDQ4YjNmMTdjNzNiNjM5OTM5OGI3MzI3OWE0NjYwMDg3YmY5ZGRhNmZjNzcyYTk4YjY0OGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1647-L1805",
+          "version": "repo-lines-v1:sha256:a498c989bd1b3d7403bb43f68cdcd6d507ce9f3f8f8e625a83bb46bcb733826b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmZTM3MTUxNWNmZDNlMTk5OWRhNzkzNzZmNjg0NzE5NDg2MzM5MTQ1NDhkZGFjNjYwMGUyMWRmMTM1ZTQ5MGM2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1ZGQ3MDVkNmI2NzBlNjJmOWY0Y2ZlZGE3MjdhZDZjZWEyOTU4Y2YwYTk4YWZmZGMwNDVhNmJmNTk3MTg3ZmM5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NTA1ZjlmMWQ0OGQxM2VjNTE5Yjc1N2VmOWIwOTM2Mjg5YzdjMDliNzRlOGNmOWRmNjM1ODEwNDQyNTZmYzBmIn0"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1826-L2031",
+          "version": "repo-lines-v1:sha256:871f57a78f9f92f48e9f3f06827fca16bb1aba2c1e4c2e990decb28b0aef64eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjA2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZmViZmNhNDUyZTYxMjVlODNiYjJjZjFmOWM5OTkzZTBkZmQ5MGFhNzRjZTJkNmNlMWZjMzExOWNiODM1OGNmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmMmIwZjczNmI5Mjc2NTM5MzZkNmE4ZDIzMjk4YmNhN2U5ZTMwMjlhNGUwYTY5ZWUxNzJmYjhhNDJmY2UxN2U5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIyOTFmYTQ1MjdiNzkwNjg1ZjE0NTk4Y2JlODJjMDc3ZGMzY2JhNTg0MTAzNTkzOTA0M2ZlNDQ5ZjdhMzQwOGIwIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_f6a7bbe819d3479da2052c135c900c94",
+      "statement": "Office publisher OPTIONS paths preserve trailing slashes at /publishers/{pipe_id}/csv/, /excel/, /xml/, with text/plain/200 responses.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1808-L1823",
+          "version": "repo-lines-v1:sha256:76d9759993b008c429e5274edfa214293cffc39c0b9c1530b7be9b8f929e75b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5ZDJiYmQyNDVjNTM3MzU1NGMwMTVhY2Y3NWZlOGNmYzdjYWM1NzZjNzNjM2RmNTkwOTQyZDExZGNhMmU0YzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMzVhY2IxNGFjYmNiZDQwZDY2MWRiM2U1M2ZlYzRiNWEyZDllMGNjY2ViOGJhNzAzM2NiOTQ0ZDQ0MGNhODkifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1905-L1920",
+          "version": "repo-lines-v1:sha256:b888d46babd7a6214d61f18575de135a741ce9a8b33d7989ba4a06a85db12ba9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3YTVlMWFiNGM5OWMzZDhlMDI1MjM4M2JkMzgxOWY3ZDY3YTVkNDdlMDU5MjE3ZTM0M2UyYjIzODIzOTQyMzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1MDYyZWM1ZWM4MDg4MzI5ZDgwYWRiZWNlMjBhMmE3M2EyOWRjYzFiZDU3NzViMDA2NWRlNDc2OWRhZDRjN2YifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2033-L2048",
+          "version": "repo-lines-v1:sha256:d42b40c68a0e03adaed188670ec5f378687b4e8ad8ac85b7824fda5d690e301b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NjU0ZTZmY2ZkNTdhNTNkYWE1ZjI5OTFiNjA1ZjVmYTQxNTk0ZTdjZjNkMDhjYTljZWRmM2I1ZWE3MDhjZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlOWU1NjkzOTFlMGQyYWYwODM1OTY5Mjc4NThlNjdhODMyZGE2ODdlODNkYzdiYTU3OTc5ZjUwN2Q5NjZhMjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_98cf634d88654ec9821b9d7d13b1bd6a",
+      "statement": "Shareable links use GET/POST /publishers/{pipe_id}/shareable-links returning JSON ShareableLink arrays/record and individual DELETE; POST requires NewShareableLink and all declare 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2050-L2114",
+          "version": "repo-lines-v1:sha256:bac648120fe01d20e045b0147050f96925864ee2e01b0bc88fb8f8c6a68330b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZGVhNDdmMzYyNDJkOTMzNDI3MjI3M2Q3YzkxNzE1ODIwNzdlY2RiNTVmZDczODliNjY5NjFhODA5YTFiMTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwNzhhZDQ4YTk1ZGVmYWE1MTg5NDUzNTIxYTM3Mjc4ZjFkNGJkMjU2NTcyODA4Yjk2OWQ3ODcwNTNkZWZkYjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ab55e77e68944f4b5331652ea027668",
+      "statement": "Systems provide list GET verbose=false with verbose disk-usage storage breakdown, POST required SystemConfig arrays and force=false, individual GET/DELETE and config GET/PUT; config PUT requires and returns SystemConfig rather than pipe PUT's Pipe, at 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2258-L2341",
+          "version": "repo-lines-v1:sha256:d83f16ce2bc7c0499f63085b27255c3a4dd1aba7d3e5baf96d3444d8ae58261f:eyJzZWxlY3RlZExpbmVDb3VudCI6ODQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxOGU2YzVjNDQ1MmYyOWFiMmVmY2FmNzdkNjRiNmQ4YmFiN2Y4ODFhZDAwZWNhZmI5ZDdiYjBjYjU5OGQ2YjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4OTM0ODcwYzlmNDdjNGNhY2I3Y2IxNTU4NTQwOTI1MGIxMWQ2MzY3ZGQ0ZGRlNmIzZGI2MTY3OWE0ODBhNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4ZmJkNmIwZWQ5NmVlMTIyNDhlODRmMDUxMDNkN2ZhMDNmNTNmOWRhZjc3YzM4YjU3OWRkYzE3MDhkYjIwMmIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2502-L2553",
+          "version": "repo-lines-v1:sha256:3c23186cdb8727e051112e5fc4081f4bed334ce7fe90f3f95583a85ae3f512e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlYmVlY2NmZmIyMjIwNTFiY2E2N2JiNDcwZDliNWUzNjg4ODZmYWQxMmQ2MGUyODQxNzUzZDhlNmU5MjU3ZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxMjg4ZjIzZGViN2U1MjQ3MjA0NjRjODI0ODM2YWJkN2E1ODg2NThiOWQ2OGI2MTIwZjY4YTAxNDAyOTQ0N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwNGYwOWNkYzQ2OTk2NTE2MDIwOWNkYTdmMDkyNzU4NmRmYWQ0Mjk4N2M5MWIwMTBkNmEzN2IzNTk2ZDNiNTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlZDkzMmU2ZjFiZTg5ZTFkOWU5OTU2MjVmZjBmYzc5MDljNGEwZjM2NDgzMmU3ZWMxMDcyYTFhZjNhMzg0YzQifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L298-L302",
+          "version": "repo-lines-v1:sha256:afa771acddcda68e05dae19f81aca996578f56aebdbd47216ad59c83e913f83d:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjFjYzQ4Y2NiZjFlZjg1Y2NjY2U0MWNjNDU0NzRhYjY5ODk3MjVhNWJiNmQzYzEyZjZlZDI4MTZmMjcyNThjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWVkZDRjNzhhMGJhODNkMjBjNzliYzdmYzkxMDhiMjhiYzc3MGVmY2Y3ZWIyZjBiOTI1MmZjNzYyYTc3MWZlNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmIwZTI1MWIyNTRlYWJkMmI5ZDY0MGVhN2E1MWQzYzk2MTQ3ODBkZTc3OGU5MjBhMGIzMDc1MGVlZmI2NzUzYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzEzYzIwZWRkMDI2NzFmODY5MTBjZDE0NjJmNDM3MTFmMmU1MjA5MWIyMGJhMTAzOGY2OTJmODhhZWNiZjVhMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_452522b85027417d9d318c500972840e",
+      "statement": "GET /systems/{system_id}/logs defaults to 1000 lines and ISO datetime since selects all later lines; status GET returns system status/Docker inspect subset for microservices, both 200 without declared media type/schema.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2344-L2384",
+          "version": "repo-lines-v1:sha256:c0b557cef2efd3b959d5aac5047cae43310dc6df45bfad5d2505b7b231bcac63:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5NTdmOWZiNDA2MDRhYTY5NzNhOTVjODc5YjE2MmZiNDdiZjEzODg2OTliOGM4Y2I1ZTRjZjRiOWVhMzgzZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3YmRlYjc5OTU5M2Q4NzVhOTU0MDJlZjg0ZjdjMWM0N2YzNDRjNDRmYzJlMDgxNjEyM2NhOTVkNDMxYjk1ZmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlMGUwMjUyYzkxMTc0ODc4N2ZiZTc2NDdhZTgyMDcyYTE3ZGRjNjgxYmYyMzNjMmNmNzM5NDhhMDIyNzZjODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2a9c85863e3c40a39aa8354f060cf302",
+      "statement": "POST /systems/{system_id}/reload asynchronously queues image pull and microservice recreation and returns 202 rather than completed reload confirmation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2386-L2399",
+          "version": "repo-lines-v1:sha256:52824728a9447486d941d5e9e5636e9dd3d8a4772fa399e0870814f92f7cd6b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyMGI4NDQyZTk5MGI4OWU4ZmI3ZjEzOWE4ODdiNjlmYmVjOTI5NDQ5MzY0ZDQ0N2FlYjQyMmNhODg3ZTBhZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmYWJjMTA2ZjQzY2Y2OTg0NmIxZmY5ZGI5NDI2NDlmYzVlNGM0NDg0YjkwY2M2ZTQzNTAwYzEwMjViYTc2OTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhZThkZWY1Mzg5ZTRjNjhlN2M0OTM4YjcyMzJlZjFjN2I2MWJkNTMxZDQ3YmM5MWFkZWUzMDliMGY2ODk3MGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxZDg3YzA3NDQyMzZhYzYyMzFmYWMzMWVmMTZmYzJmNTQ5ZTZjYjNhNGU3YzMwY2IwMjY3MzRjOTliNWEyNTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a0b4e978e4bf4843a26742c1f7eaecf2",
+      "statement": "GET/POST/PUT/PATCH/DELETE system proxy operations pass requests to required microservice-relative rest_of_path and return proxied responses with 200 but no fixed media types/body schema.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2401-L2500",
+          "version": "repo-lines-v1:sha256:21af650460197849c77e7f19db398493aaf0ff96590675aa73a06b9e4cfa9cd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjNWYwYjViMzFmMzVhZjdhMzYyZDdiOThjNDZmZDdkODFkYjljYmQwZjMwOTgxNWY2NmUxOGM4OGM3OTZjZDljIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4ZTNlOTgwZGM3ODIxOTRhZmZlYzE5NTA3N2NiZmUxNzk3OGNiNGExZjEzZDQ2OTc3ZWRmZTk0NDNjZGM0NGYzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NmNiMDk2NWFkZWJlMDk2ZDJiYzEwZTE1M2YwNGE3YTdlYzQ3ZDFhNWNiZTA3YzE0MzMyZDI3N2UyOWU3OTI4IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhMGM3YmMyYTgzNDZjYTMzZmQzNWFkMWU2NDg0MzhiMDRiMjdlMWQwYjk4NWE4ODFkNTY3NTdjNzUwNmY3ZjJmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_f808dbc900d547d2a8a5eeae9883666a",
+      "statement": "Global GET /secrets lists names; PUT/POST use JSON name-to-value payloads overwriting matching values and POST retains others; DELETE removes named secret. Responses declare JSON/200 without consumes declarations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1504-L1551",
+          "version": "repo-lines-v1:sha256:28c8455799f20d9f89773a936389bfc100a7df01e2312618aeadcde39982acc1:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyODg5N2U1NzMxMmQ1OTg2NGI3MTkwZjczZmQ0YWU5M2I2NWQzYWYyNzc1ZTEzZTg0YTQwMTc0OGNiNWFkODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3M2MzMDhmNzA0YzdiOTQ2ZDg1YzgzNTJjOWM2MjYzMzA4Zjg5NmI2NjlhZGYwOGIwOWQ5YTUwOTFmNjVjNWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_24cadda31f2d4fee85b619a98af588ff",
+      "statement": "System secret GET lists SecretKeys, PUT overwrites secrets, POST adds/overwrites supplied values while retaining others, and individual DELETE removes one; bodies use SecretValues mapping and responses JSON/200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2556-L2640",
+          "version": "repo-lines-v1:sha256:0d11b5ffd400d283494e252684ec6b11ba845a5a9a71673d7c3989deeabbfe1f:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjZTZkOGQ0MzE1NjQ2NjAzZThhNDJlNGRlMjNhZjQzNGYyYjVmNjRjOGJjMzdhYzMzNWZhMTNmMDRhMjZiNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjYTA4NDJjZWEyODJjODQyMTdiYzIxNDNkMjRkMjllOWUxNDRjYTk2NmE5YTExMDUxNDVlMjk2MjFhMzNkNzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyNGQwODZmMTI0NDVhMTVlZGViMDcyZWU3YmY0YTdlOGUwMzBlYjNjYTQwZDdhMGEzMmZhN2QxNTc4YjlhMjQifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L2918-L2930",
+          "version": "repo-lines-v1:sha256:67ac23b5f76fc175fb134b9bbaed3bf11c15b7829e3e64ccac7560d26b373602:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ODA1NWQ3MDg5MDI1MjFiNzM1ZjI5ZDVhNDJlMjViYzA0YjM1NjY0NWIzNjE1ZGY5NzEwOWE2NjY3ZGVhOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhMGJlZjA4NDNjYTAyNzVlYTNmYTY0MmVjY2JjNjEwOGM3ZTQ3OGQ2OWUwODhjZGE5YmMzMTUwOGJmZDJlYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZlNGI2MjViNWFjZTQyYmRhMzkxM2Y3MjA2MTJjYTEzMGE0NWM3YzNjMWY5YzcyNzg3NzQxNzBjNDBlYThkYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkN2RkNzk2NzE2MTE5NzhiYTljOTgyOWVmNmVmZGViYWU5ZTg0Mzc0NmZjNTk0YzdjNjNjMDhhMzQ4YmE5NWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9097e50798964d3ea7baa90b70a1ea44",
+      "statement": "Secrets are strongly encrypted with an instance-unique key and unrecoverable in original form after upload, requiring secure off-site storage.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L162-L178",
+          "version": "repo-lines-v1:sha256:bfaf509d512395f2c155eb5a63d8e74f172058f667fb105eaa4a542c0656b37a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMmJjZjg0ZmM3ZDdhYjdmOWQzYmNkZGQ1YzM1NTBkNzhmY2ZlYzRlMTYwZDc0NTc5MTk2NDY4NGIwYTE2NGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMjU5ZmY3MDNiYTUwMmI5NDYyNjVkYWM1ZDJmOGE1NDY3MWMwZmFkM2NkMDUyZWY5ODM2NzEzYmMwNmRlZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzZGIzMjZhYWMwMjAxZGE4NjIxYmVmODFlZDc3MjJmOWQ0MTBmOTU4ZGRhOGY0MmJmNTk0Y2JhYTRhODljZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMyM2RjZjBlOWIxMjhhMzU5YTI3NTc1YWY3Yjc4ZDAyYTBmMzA0ZjgxNzVlMTQ0YzNmNmQ3ZDJkMzU1NDMwYzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5dd0d87f13354ad0a021ebdba671dcca",
+      "statement": "Global secrets last until explicit deletion; system secrets also disappear with system removal, requiring re-upload after deleting/re-adding a system.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L181-L187",
+          "version": "repo-lines-v1:sha256:ae0d79656aa9b5d00a553ed3cedec708e427f0e479000ff793544ef49c3f8eb5:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAyOWExMDBhZjA3YzcxOTFjYjAyYzFiMTFkODY5ZGIyNGRhMWJmYWU4NWM3YzU0NDlhODhmMjM2MWVhYjY0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ0MTQ5NzM4YTdmMmZhODE1NTZkZjNhY2Y4MTZiMjA5NGY1NWMwYmIwNjNmODMzZjk0YTgzNTZmMjczMDk4MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc1ZjVhMDE3MmNkMWY2ZGZkN2U1NjI0YjgzZmI1ODJlZjE4ZjczMmM3NDU3MGIyNWIxYTUxYThjZWU0Zjg4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDBmZDQ4M2Q4ZDFjNWQ5NWQxYTc2Y2Q0ZjlkMzllZGE5NmY4NzBiM2JlYmNjZjJjNmQ5M2NiYjdkZWJlNTEwOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_440ca08afecb4663a426d31f89a3b4e9",
+      "statement": "$SECRET(key) substitution applies only to System configuration and resolves as needed at runtime without exposing values in API/logs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L193-L235",
+          "version": "repo-lines-v1:sha256:171256ac6a33da2a69e9ddbd2c63d0aac76cb0710013532949303c9df8515d68:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1ZmY1YzY3ZGJjNjVkZWRmMTQ4NTM4NDdhM2FiMTE3NTI0ODdkMmY1ZjkwMmRlM2EzNzFlZWJmZTBlZGZmZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5ZDdmMDA1MzI5Y2QyNjNkN2I5Mzc1ZTE0ZWJkMTJmOTY0NGEwNjgzZTM1ZDA5OGZhNTk4MDRlOTg0MjhhOTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5ZWYyMDJiNTc1ZGRhNmVlYTU0Nzg4ODVkMWU0MDg5NGZkYzE0ZWM1OTEyMGJiZWQ1N2FmODU4ZDRlOWNmZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyNjVmMzQ4NGVhOTM1YWU2MDdhMmYyZTc1NWQxYWQ2OTJlZDgzNjc1NTdhNzY3ZmUzYmE5Nzk0YzJjNmY3NDIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L248-L253",
+          "version": "repo-lines-v1:sha256:431b75854766fcdf927e43a33d6e15ff47e3451c1ead05c2d1b0ebe6c14c94f7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTM3OTA2MDY1ODdiMzNjN2JjZWQ5Yjc3ZTFiZTg5NzAwMTY3NzEyOGMxMjZiODBjOWU2YzJhNDg0NzUyMWJmMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDI1ZGEwZjdlYTFlNGNiMDhmZDcyYjZlMGQ5Y2Y5YzU1OTQyMGE4Y2UyMTE4NjlhMDAyMWQ5NGY0Mjc3NGQ4YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDE3ZDU3OTg5ZTBmNzk2ZWQyOTI1ZDYxMWNkMzRkZTYxNTlhZmNiOTgzMDExMDJjOTY1ZjJmNDhiN2Q4NzIyNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_85ddc92e0dbf458cbc30dd646bd57b2b",
+      "statement": "Node health GET returns JSON 200 or unhealthy 503, ping GET returns JSON 200, and root GET returns JSON status with aggregated=true unless false is requested.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1394-L1425",
+          "version": "repo-lines-v1:sha256:10f02c3398e0d7cb1c6ccbf22444afc4be91b4efcb1fb74c79c8fe8b2db934fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiYjUxMmUxZDFiOTAwMGZiMGMxYTRmZWQzYmNhMWVjMjAzZDQ5Nzg3NjA5MmViYWNmOTE2NWMzN2ZiOGJhYTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ZmM2OWUzYWNmNWNhNDg3NDZiMDZkMzliMGVhYmU4NzE4YzdkZjczOTBmNzMxMmM0N2IzMDQyYzdjYjczNmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYWRmNDk5NmM3MDI0ODFmOTc5YjNlMTYwNDY1OWY4YTM4ZTJjMzJkYWU5YmFkOWE0ODk2YWRjZWJhOWFmOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY0MDYzNjliOTU5YWE1Y2Y1NDhhZjc3M2IyNWU1MGExMDkzYWRhZWYxMjJmYzY4Y2M2ODVlOTFjYWNiNDNmMzUifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1554-L1572",
+          "version": "repo-lines-v1:sha256:6ba1966f3a8755575234439c74f78e776460288894237debb1b2150b83903247:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3ZTViOTdiZWUzZTIyNjExZjllZmE1ZjQ4MWIwNjliY2NmZjYxMTYwNzY0OGMzZmZkZTQ5MDZiODliZmZlNjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYyNzMzZjE0ZDM2YTcxODdmNjdlMDg0MGRmNGQyODUxMjVjZWY2MTJhMDcwNmI5MzkwY2UxNDNlN2M4OWYyNTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8993b57548ca4f5ab3af4767eee86db1",
+      "statement": "Narrative /api/metrics is a Prometheus-compatible scrape requiring Metrics and monitoring enabled on a clustered subscription and an Admin JWT; Node Swagger has no /metrics operation. Pump metrics are absent for disabled/manual/off pipes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/metrics-api.rst#L10-L48",
+          "version": "repo-lines-v1:sha256:11cbc3dbb46655a104354485bc723ddba428b4a7a6a34b745ba1f8e4b2a0ef9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzODJlNzc1Y2E2YjE4MjIzNDY2MjdhYTEzYmFhNjQ0Zjg1MjlhZDYxMzYxZGQ2ZTAzZDBlYmIyYjZkMWRlMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhNWUwZDBhNDlkZWQzMTYzN2M4Y2UxNTY2NjZiODI2MTU0MzFhODA4NzdkZmZkYmE2N2IzNzhiMzE3ZmVkYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5OTlkMjJmN2UxYTJiYWEzNzMyYjdjMmM5YTVlY2Q5OTI3ZWUyNzUxYjIzNDkxNmIwMzk4ZjE2MzQyODM2NzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1YWFhYTA5MTg5YjZkY2ZjOWYxZjIwODE1NGUxMjFiNmNkMzJiZGE1NWVkMmI3NDQyNDhlYjkxMTcyNzM3M2UifQ"
+        },
+        {
+          "resource": "repo://hub/features/metrics-api.rst#L148-L151",
+          "version": "repo-lines-v1:sha256:9d882137a4e84a7db80165e672094c79e3ee54618328a47d21942be598d44bf6:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODM5MTgxYzJiNTc1MmJhZGIxMTdjMjc5ZWM3NmFkYjU5NWUwMmVhNTIyMzZkNTI2MGZmYjlhNDA1NWVhNmUzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2ViNmNkNmFhNzVkMzdmMGU1ZDYwNTc2ZGUxMGJhY2E0ODMwNTg3Y2RmY2I1ZTBjY2Y4NTQ2NGQwYTcyNTE1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTU2MWYxM2U2NTE4MTM2NDM2NTc4N2Q1MWJiNGUzYWYyOTc1YjY0NzM0M2M0YTE5ZjVhZTM2ZDA5OTJhYjc0NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml",
+          "version": "repo-file-v1:sha256:28f843da91545e5545adeab21dda35769d904904796495dfee6c676e696c2cc1"
+        }
+      ]
+    },
+    {
+      "id": "claim_3af6871b6bf64ccd9ba6b755bf3ae6bd",
+      "statement": "Portal standard subscription/pipe monitoring GETs return JSON standard monitoring information at 200; /api/monitoring/invoicing/{subscription_id} returns invoicing information rather than Prometheus metrics.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/metrics-api.rst#L33-L42",
+          "version": "repo-lines-v1:sha256:8a06bd426dcf04c86707e658a2e89d2b0bbca1fc11b7afa4a39292526d1764b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0MzAxMGNiNGFiNzk2YzczMGIxYWMyMzc4YjVmN2FmODNhOTAxOTFjMDJhOTE4OWU0M2NhODAyYjMwNzdmNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViMzU4ZjAxYWRmM2NmYTJmYjYwMTYxMjAzNGNlZDgwZTgxZjBmNWE4M2EwM2NlNjZiZTVmMDFiYjZjNzUwYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwYzdhNGNjY2M4NmIzOWRhMmI0NDJjMzMwYmJkNGYwNTJiY2U1Y2FmZTc5MTg5MjkzMzk2MDUzYmNjMTNhZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1335-L1395",
+          "version": "repo-lines-v1:sha256:e0a9285a3198fac84738a9a6138626660cfeb0d920b65c9265685976d7b81a88:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4NTk5Y2E3MzkzYWNlYmFiYTA1OGFjZmQzNWE3MTUxZDA4NGM4NjBiYjc1NmI5Zjc5NTgzOGJmODkzODc1MzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRkZDE0MGNhZTE4MGFiMWJjY2UxYjZmZDE4YzU2Y2NmZjQ1ZDgxYzI2YjdjYzNmYjcxYTE3ZDFkM2IzOWU0ZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhjMGU5ZGU0ZmEwMTNlZGZjNTA0MzMwYTE2ZTJlYzMwMDRkYmE4MTAzNjQyYjVjMDk5MzNhNTAwMDI4NGI4ODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99db628cd427440ea4864facf06f9da2",
+      "statement": "Portal root GET returns JSON status/feature-level and authentication providers; login POST consumes form email/password plus optional captcha and creates a session cookie; signup POST consumes required globally unique email/password/name plus optional captcha, returning JSON/200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1481-L1515",
+          "version": "repo-lines-v1:sha256:783ab69f1e33589aeaa0e1cc7c02f51f7cfb76378d0f821972217f805f47d521:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzZjI1ZjY2OWFkZWIzYjQ3NjEzZjg5ZDRiNzI4YWVjNDM1NGQzMGUyZWEyMDExODlmNDFlYWZmOGZjMzJmNjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4NDFlZmRlNTk0MDFiYzUzZTAxMmU3NDQyZDVmYThlNTFkMDI1ZmNkZTY1YTFkZjg2MzdiN2RjOWJiMjE3ZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgwYjZjMDdiNzYxMTQ0YTU3YWI5NDk0YTU0NWIxMmEyZWQ5NThjMmM3MjVhYzVjNTc3YmFkZDQyM2Q2MjA0OTIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1542-L1581",
+          "version": "repo-lines-v1:sha256:f1dbfc1bc9160e895744e791e0943f546afa21a22c378454d66b9a719bbda014:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YmU2ZWMxYTFlN2M3OTdiOTRkNDc2Y2I0N2Q4ZTRiMDRhN2YwY2M3ODM0MjM4ZjdhNjRmMzhmODNlMDQ4NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNWQzNGUyZjg2YzU3YTNhZGJmZWY2NzAyMjkzNDdiNzdmYjRlZTE4ZTdhMjViNDhkZTk0MjUwYmY5YzJhMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3YTY0Y2NhOGE2YzRmZjYwYjU4MTExNzUyNjQ2ZjgzMTBkNmUxZjZiYzI1ODY2ZWMxMDBkZWZlNTAxZTJmODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ5ZmJmNDAxYTk2ZmEzYzhjODNmYzAyMjdhMjBkYThjNWQ0NzczNzY0ZTIxY2Y5ZDJiMDVkYTljYTlmM2FkM2UifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L6-L128",
+          "version": "repo-lines-v1:sha256:a2c70a4e654c1ce6efcaf549e15aa141cb2497eeaa7d6286e2dc75b48ffdd04d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3NTc4NWQxYmQ3NzA0OWJiNWQwZWU4YTBjOTcwOWRkOGZiNjk5ZmU4M2ZkOGVjOTdmYzA2YTU1NDJhNWJiZTdhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyYmNjMTYxYTRiOTVkNWUxNWFmYTg2MWJmZTIxM2JlYjQwMGY3YmJkOGU3MzA3MWQ4NDcwMzdhNzY2YTAxNzI3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlZjIwODZjNzViMDc5NGExZTc5N2RlMGQzNjAxOTg0MGJmNjY4YjUyNzNiYWYyNjJmMTE1MzJlYWM5YjAxNjU5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIwYzZmZjY5ZDE5MDcwMzIzYjViZWQ0Mjc5MDQ3OWFhMzZjZDA4ZTE5MWZmNjcwZDMyMmQ3MTdhMmRmZDU1ZjAzIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_71044af80743435fa30e486b43965faf",
+      "statement": "Portal profile GET returns Profile; PUT accepts userInfo/profile sparse updates preserving missing fields and cannot change email; profile2 GET adds 401 when unauthenticated with replacement only a TODO; individual profile DELETE deletes the user.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L145-L254",
+          "version": "repo-lines-v1:sha256:0f883456d3bffcb158ad781c6ca32678e318db67f59553addeb1d09fdbdf18fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmMzU3MjM0MjQ5NzlkYWY2M2QxMGFkMTFiYWJjYmRhMjFmMzM1OGRkZmNlZWFkZGFhODAwYTY4ZjZjOGIzMTY0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5YjhmOTNjNmI2OWYxMzhlY2UxMGJkYTU2NjM0NWY4YjEwN2Q1MTI2NTFmOTFjZTEwNjdhMDNlNDI0NDVjOGIxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkMzdiNmQ3OGI5YjIwZDM0NGZkMmE2N2ZmYzg1NmY2YmVkMmQ2N2ZjY2Y4YjM1NTE0ODk4MWJlNjRmNWI2YTcxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_d436e909392d4bdab4c35e9b80df9d2d",
+      "statement": "Portal logout GET is deprecated legacy logout returning Profile at 200; logout2 clears session and redirects 302 to Portal or third-party logout.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1517-L1540",
+          "version": "repo-lines-v1:sha256:662f0d4e0f5794f624f3e4d213e4b6dbf2fce70ace50c3848a67c12b5303f1e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2MjYwZjM2MmYwMWUyMDhhOWI0YmZiMGI2ZjY1NTllMDZlM2I1Y2E5NzY2Yzg2MmFjNGVjM2IyYzBjMjk2MWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMzM5OGExN2Y3Nzg5ZjI1NTQzYzY0MDRmODE0Mzc2MDMxYjM2NDg5M2RlNzViOWI1NzE2NzAxNjA4MjY3YTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhjNTZmMGRmMGU1YzAwMjFhNjIxOWEyYTA5MTU4NGQyNzBhNjI5MGM1YTZkZDkwZGI4NGRiY2Y0ZGU1NWMyMTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d5452ce731948e6949a54189e00436b",
+      "statement": "Portal password PUT requires password/old_password; forgot-password POST emails a one-time link; reset-password POST requires password/token. Form operations return 200 objects requiring boolean success, with reset response media type undeclared.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1771-L1877",
+          "version": "repo-lines-v1:sha256:cdc6aad34da8a4023fdff0abb2f9f6752a534cb167f6764ff1801d5cf47ae31c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyZTlkYmVkYTg2Nzc4M2MxZTg4ZjM5NTMzMDY3ZmRiOTY4YzRmMzEwNDMxMGJiZmJlYWI0M2FlOTljZDNjYmFiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzNGIzZDY1NTY4NWJjNjkxZDgzN2JlMTgyNWU4ODlmZGVlZmY3MTRiYjg3OGI1OTFkNDgwZmY2Y2NiOWY3MzZjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2YTNjZjUxOTIzNTRmNzE2MTVhYzUxMDM0YjNlOTdjMjBlZGE5OTY0M2ZjYWY1YmJlNmQ0MWFkNTliZDEyMTY3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIwMjQwNDYxMDYxMjVmNGJhYjdiZDhmN2EzNjI0YjFjMDRkOTczOGVhZmZjMWZmNzJhNWVjN2RlZTJkYzVjZGZkIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_353992fc8013405f8f96ab0fd568a3bf",
+      "statement": "Portal verify-emailaddress POST requires token and returns 400 for invalid/used/expired tokens or 200 on success; request-email-verification POST returns 409 if mail is pending, otherwise 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1879-L1914",
+          "version": "repo-lines-v1:sha256:ac4993f1738bc193dc84898830a418f694f6fc79ffb972fefe54a66a7c0cfe1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4ZDk1OThhNDM2NjZjMTk4ZDg5MDFkNTZiOTBmYTU3ZTA3ODcxMTk0ZTdhODM0YjRjOGMxNGUyOTE1NmFjZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MzZjNTU3ODU1NGJjN2UwYzRhYmM4YzQyZDhmYzZmNmI1ZDAyNzU4OGViZjhjY2E0Njg1ZTVhOGYwOTQxODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3OTIzNzJiYzk4MDMyMjM1ZGUwZGVhYWYzMjJkYzQ0NGQzYzVmMzlmYmNiM2I0ODhjMjI3OGMxOWIwNjY4YTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2Y2RiYmMyMTc4YTc5OWIzNTQ4OWIyMzVkYTkyNWIyZTY3YzZjYmYwODI1NDEwZWY0ZmI5NWI0YWQxYzA0YzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f31bcff2a0d648a2814f025ed1ec998d",
+      "statement": "Portal provider login POST and login_callback GET use 302 redirects; implicit-flow GET serves HTML extracting fragment id_token and calling POST /api/jwt_login.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1411-L1479",
+          "version": "repo-lines-v1:sha256:32cb6de14a558bd9da8631de165e2a52af3fcf49a7939bb7fd1ebf5df76941a5:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjNDYzMjg3MzI2NTIwNmJkMWE1YzZkMjYzYThmM2U2NzY1NmRlNDYxZTU4MzdmNTU0ODFkYjRhY2UwY2I5NzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhYzE5MGNhOWM3N2U2YzQ4OTQyNTliYjkyMWI1NWU5MGU1ZGZmZTA0ZWViYzFmOTg4YWU0YTViYWRmN2I5MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjAyOWUyZTg5NzE0NDM4N2Y2ZDY3MTg0OTA1YjY4Yzk3ZTZmOGQxNzg4ZTFjYjQ1YjZmZWYxODZlOGYxNzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2db6c5a413564109bec5fd677a32ca8c",
+      "statement": "Portal subscription CRUD uses collection GET/POST and individual GET/PUT/DELETE, optional NewSubscriptionInfo creation body and required UpdatedSubscriptionInfo update body, with JSON Subscription arrays/records and 200 responses.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L353-L449",
+          "version": "repo-lines-v1:sha256:3d160143ebe47224a79cd56e31ebac020e9c846d178eab4c07d4651ada1360cb:eyJzZWxlY3RlZExpbmVDb3VudCI6OTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkODJmM2E0MmY5Y2E4OWRjOGM3Y2JmZWYwOTlmODJmNjIwYzQ5ZTM4ZDQzNzkzYzQ0MDg5ZDI3NWE5MTMzNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2NTJmZjU2ZmRmNzMyNDJlYTJkZDQ0MTBlZjI0ZTZhNmY5YWIwMmUyZDMxNTU4MjE0NzU3YzM2M2MxNjVmMDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkM2VkMmMyYjc4MmRlYTVmNjdiYmMwMmRkOTgxZTA0MDk2YjIwNWQ0OWE1NTE5YTljMTQ4Njg4MGU1NGJkZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyOTkyM2QxMzkzMWEwZjIwNDhiYThjYjYxN2EwMWFhODhhYWY3YjE5YzRmNjMwNzk1YWFlMTZlMjdhNDcxMmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_92a68b8370094edabf68c43eedcc141b",
+      "statement": "Portal available-roles GET/POST lists built-in/custom roles and creates custom RoleInfo; individual GET/PUT/DELETE reads/updates/deletes RoleInfo at JSON/200, managing subscription roles rather than Node ACLs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/security.rst#L26-L39",
+          "version": "repo-lines-v1:sha256:25dabc76de25b06390bffc3296a31a5d7c1607f05f2f8e70f85a1eae6591abbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwNTdhMTZhNjhjOWZiNGJiMThjYjQ2MjZiNDAwMTYyZTU0ODdiYzk5MjhhMTRiYTY1YTg4ZGMyMGUyOTIwODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwMmJjZjQ5NmVjYzJmMjU1NTZkY2M4MjUyNDdmZjNkZDU2MTEwZGNlZTFkODE5YmUwOWVjZmY5YWZlYzU0MjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5YmUwZTVlMmZkZDkxYTZjMDY0MzVkY2JmZDZiNzhhYjE4NGY0YjliODU0NjYyZGEwNWY1N2QyYTk2YjM4YmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxZDJkZGIwMWYyOTViMjEzNzE5MWNjNmI2NGQyNjJiYjVjNzJkNzgzM2JjMTQ2NWJjNTZlZDEyODc3MDZhNDgifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L452-L499",
+          "version": "repo-lines-v1:sha256:90102fc118f323bc7321d1c736eff363bf13782549ee60d0e8de3b46c80bea11:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3ZjQwODIwNThmOWJlYjRmYjhmMmFkNjgwYTFjNWFhMzExMDY5Mzk5MzBmNmIxNTQ3MWRhOTE5NTJhMzhmYmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4ZDQ4NTUxMzVhMmFjYjFmOWE5ZmZiMTcxNmVjZjQxMGM1MmY1NjU2ZGIxZTgzY2I1YWNjOWFkMmNlN2RhYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MzJlMjUzYjIxY2FlZjRhMDVkM2MzY2JlMmEyMTg3MzNlMGI4M2JmZTM4MjM1OGI3OTkwNzc1NzkxMjI4OWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjViMDM3MGU5MmRhNDU1ZWM1OGJiOGM5NTllNThlODg2OWM5NDMzZWQ5ZmE4MWJhZDg3MjdmMzE2YWFiNTQ4NTIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L695-L777",
+          "version": "repo-lines-v1:sha256:a0ffa66acd0870a3d600c5fd4b9e1b19e1bacf58d434021ece8e4197379395f9:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhYjk5ZTViNWUzY2FjODY4YzA4NGIzZjA0NjBkOGE5MzE1ZWNmYWY5NDc1NWJjNTBlYTA2NmJiNGYzNzVlZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4ZDQ4NTUxMzVhMmFjYjFmOWE5ZmZiMTcxNmVjZjQxMGM1MmY1NjU2ZGIxZTgzY2I1YWNjOWFkMmNlN2RhYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2NmQ4OGVhMWJjMDZkOGJjYjY2YjI5MjQ5YWQzZjcyMmRkMzdlMjVlMzU5MzY0ZjVmYzc3YmQ0NzdjOTA0ODgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_06b8d9ef38df4d7186536465a463ddaa",
+      "statement": "Portal members GET uses start=0 and optional unbounded limit returning SubscriptionMemberInfo arrays; POST invites with InvitedUser; individual GET/PUT reads/updates roles with UpdatedSubscriptionMemberInfo, all JSON/200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L780-L903",
+          "version": "repo-lines-v1:sha256:2451f1ffef2f44a62a6f7deb3fdc841faceb9a8a3e64452d00527f7f39683061:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlZDY1MTlhOTBhNWQ0ZDJhMDEwYWYyYTZmMDNlNDAyOGZmMDdhMGVmMjYzZDgyYTZkODAyZTMwZjZkZjRiNWQ0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJjMDExYzJlZjI3MzRhNmVlMTAyOWJhNDQ4N2Y3NjE4ZWI3YTJlMThlODQ2NDhlOTRkYTkyOTAwY2RmYjEwZTRkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MTIwZjhjNDNlNWM1MGQ5M2NiYzM4ODgxMjY1MDE3M2Q1MzEwMmU4ZjhmNTVlNGRmNDkzMDVmNjNiZDg4YmZmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJjMTJlYTM0MWJlMGQzMGU0MWE2ZTc4Mzk4YmM4MjFjYmNkMmVhMzY4MTYzMmQzMjRiNWIxNzBkZTM3MDJhODEwIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_3ad52903586b47ccb43e4945bf9ba266",
+      "statement": "Portal JWT GETs return current-user tokens as text/plain; POST /api/jwt takes form email/password and optional subscription_id defaulting to all user subscriptions; publickey GET returns RSA verification key as text/plain, all 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L256-L326",
+          "version": "repo-lines-v1:sha256:f7e6ffc2d44505daef50208177d9a0afde5446aa81c67b0e0f96ad94469a562a:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5YmZhYThlOTdlMGM3Nzk5NDE0ODMyYmNkN2RjNzhkYzM2YzQ0NjhlZWEzNjQ4OWE4MTM5NjVjNTIwYjUxNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE5Y2M5YmVjY2U1YWViYzBlZDU0YmJjYjVhYjQ5MjQzYTNiMzBmMTIyNzA0YjA5YzY3Mzk1OWEyOWI0NTI2ZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0cfdac1da52d4ad69641944f0e404858",
+      "statement": "Portal API JWT records use collection GET/POST/PUT and individual DELETE; creation requires jwt_settings exp/principals for script/cron tokens; update requires a body but no individual schema-required settings. Responses are JSON SubscriptionJWT arrays/records or OK at 200.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L521-L692",
+          "version": "repo-lines-v1:sha256:c1a24328090711682534573656fd4e90d642d2893af77de200ce387de5e0242c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZmQyODEzMjJmMTU1ZDdhMjM1NDdhMjEwZDA1ODA4NjEyZWEzNDM3ODU1NTUyNTM1ZThmMWNjMWY3MzhkMjk3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmMzlkYmJiNDBjNDc0ZjU4OTBlM2IzMzUyZGM5YmYyZTdmNDI5OThkMjM5ODE2NGFkMTNkOWYzZTZiZmY0MDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyYWNhNzhjMzI5NzEzZjkwODYxYzkzYmY1ZDMzYjU3NWRjYzNmZTg1ODM4NTUxZjRmOGY0ZmI5Nzk5MmFlMTI1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIyODMxZGU3NGI3MGFlNDcwZTZkYjkzZjFjZWUzMjhlODIwODRiZmViNmM3MWQ5NGFjNzYwYWY1NjdkZDNjYjJjIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f3e1d4908144576a13d31699e45a1c1",
+      "statement": "API JWT exp is seconds since Epoch; refresh_interval makes it the final refreshable time while signed expiry is current time plus interval. jwt_string/client_secret return only at creation; api_token_id supports Node invalidation checks and principals maps one subscription to its principals.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L4702-L4787",
+          "version": "repo-lines-v1:sha256:bf88a30888538fda2d13f85034cf17834f625a88ab8fbe5a16c45a52e8c41678:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4Njc5M2FmMzYzMDNmZWQxOTcxOTdmMzA5YjExNjRmNjA1M2VkNzMwN2YwMzk2N2NkYTE4NjhjMDEyZjQ3ZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3ZWFiOTEyMWQ1ZjU3N2UwMjhlNzc4YTMwODA4YzFkZWFiOTNkNjhjNDUyNjNkOWUxMzYyZmZhYmQ0YzU2MDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjZGVkMDgxY2EyNzg1MWNmYjFhMzM3YmJiZGYxZWQ5NDgwNDJkYTJiOGYyMTQxZTVhMzlmYjBhYTJlNGFiYWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzNjIxNTliNTZmNzlkZWFiMTgzOWYxNjQzMjUxMjhmMGU1ODlmY2YxN2I2NWNiOWI1YzhlOGU0NTJkZWQzZTYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L579-L596",
+          "version": "repo-lines-v1:sha256:2e38350cad2b37e81ea53cfde7d097b69e9c25a7d274a2e8001253096a8dc8e1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMTMyM2Q4YWQyMDhmNTRlNjIxYzM3YTg1YTUzNGIzYzZjYjI3ZTY4NDMxYWU3OTI5MmZlMzc1YzJkMDUxMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYWYwM2FlMjgzNGJmZWNkYjk3Y2VkNWEzZWZmY2RhN2U2MGFhZDI4NGQ4YjM0ZDIwN2E5OTM2ZTc5ZWM3NjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1NzJhYmQ2ZDUwYjFhNzFmMjcwYzRjYTU3ZThhY2I1ZTlmMzQ1MGQyNDMzZWZmMjYyZTU1YjFhYWY3MGY2ZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiYjJiNjIzNDE5YjhiN2UyYWU5OGRlM2RmYTk4ZjMwNGJlOWFlMjcxZTkwNDEyNTRkZDEyNTA5MzdiYzM1MDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2535bc2cfe15461289ab18aa629a4236",
+      "statement": "Portal discovery GET returns JSON provider configuration; token POST consumes form grant_type client_credentials/refresh_token, client_id/client_secret and returns JSON/200 without detailed response/error fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L2782-L2821",
+          "version": "repo-lines-v1:sha256:b15a9ded05cec2056945fbc21197bb8fc8a8ceca62bcf97fb956db3d768625b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4ZTM0MmNiNWE0ZmJhNGQyMDljMmI0MDg0N2JiY2FjMzE4NTY0NTExYjljNzUyODFmOGY5MTdhNzk4Y2ZjMmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZlZWQ3YTExMjA0MTRlMTQ4NmNlMWJiZmRjZjMxYjBmY2JhMjEzYmJjYmIzMTEzOThiNWVmZmRlYjYwYTM2YWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY5MWYzMmVjYTIwMTY1NzlhYTMwOTQxYzgzZmZiNWFkNjMyMDRiNDBiODhhMzM5YzJkYzFhN2YyY2E5YTFhMzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_332d4d3479144d30a9e2d914925e0c05",
+      "statement": "Databrowser end-of-life is documented as December 31, 2023 with Integrated Search its successor; DAP Swagger explicitly restricts endpoints to internal use subject to arbitrary change/removal.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L921-L927",
+          "version": "repo-lines-v1:sha256:179ddf71bf11d867092283f70d1e4dca826cf0d179b4650fcb3707888942c713:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgxMDExYzExNWE0N2E3NTgzMWM5NmM0ODYzYjQyNTdhMmFmMzQ4ZjFkZDMwZWVjNDNkZDc4OWVlZGYyMWQ2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjVhNDg3Y2YyOWQyOTZlN2UwYWY5Y2EyYzgzZjNkYTM2YWNmZjIzZTY5MWY2ZTY5MjcwNWEwNGFlOWNkYWE4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZlOTE4YjkyYjI2Yzg2YjE4ODhmZWY0ZDM1ZWZkN2JhN2FmNmY3NTc3YjE1YTIyNWI1M2EyYWVhZmViNmY3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGYzZTMxNDg3OTQwNTlmZjdlNmY4YjU1ZjQxZDQwYTUwNGE0ZTliYWYzYTQ3MjM3M2E5MmFhOTY3ZTEwZjcwNSJ9"
+        },
+        {
+          "resource": "repo://hub/databrowser-api.rst#L1-L8",
+          "version": "repo-lines-v1:sha256:c39feb1e6de868447e2f8a4c39d4d2421812585cc09bc8a9e5bcb5813aa0efac:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDY3NGVhNDc2NjczYzBhYzg0NTUzYWMyMjEyYjc5MzVhOTY3ZGExNmEwMTM2Njg4ZjBmZmFmODdmZWI1YmJmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzRkOGQzOTMyNDEwMjJlMTU5MWM2ODcxYTU0YWU0NGU3Y2E0ODc4MGM3MTUzOWUxMDUwOGJkOTM5N2FjYzZkMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjhlMDdmYjE2Y2M1MjVmN2Y1MTFkMTM0NTEyNzg4NDJjZmExNDQ0NGFjNzMxNWMzNjU1OTczODVhNGU5NTJkNiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L2-L14",
+          "version": "repo-lines-v1:sha256:f345e5e63f7c9203463e6701f7a54155301ef5fd69fab17d1f08f8d06173e9a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5ZDAzZjBmY2UzMDM0ZTEyNWMxMzQ3OWY4MDQ2MTI1YTE4NzA3Mjk4ZDY0YzdhNTQ4MjI4ODI4MWZlY2ZkNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3ZTEwYTM0NDZhMzdmYzRmNmU5YzI3YmFiOTk2ZjVkOTNmNWZiMzBhYjQzNWM4NmM4YTQxNmE0YmNhY2RmN2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoxLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2OGM5ODc0YTkwZjI3MDgwM2M1ZDk3ZTY1YjEwYTU0NDM0MzIxZDc3YzE1MDE0MDY0NGE4ZTU0NmJmZDQwNzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6d64ecc8437a4571876f5b2b502319bf",
+      "statement": "Legacy DAP config uses higher-numbered layers over lower ones, with /sesam/data base applied last over numbered layers and /sesam/conf; Swagger and narrative curl use /configuration/conf/{config_layer}/{config_file_path} while the narrative introduction omits conf.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L13-L45",
+          "version": "repo-lines-v1:sha256:94f8e97636823afb53d853fb729d5a2645bbcfacc2d0d4ee7c9bc790d9b89e4d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0YzZlYzEyNzQ0MmU2Njg3YTZlNDIwMTRiZDE3ZDYxM2UzYTQ0YWZkYzFkOWEwMTAzZjY5MjQ0YmU2MGVmNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NmEyZTA2Yjc5NDUzNjgxM2VmNDkzOGZhODg2YjFjNGU3ODA0MzRmOWVmZTkzOTczMTlkZjJhZjJhNjM2OTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NjA0Yjk2MTA2NDI2ZTNiZGU0M2MzY2JlMDEyYTQ4YjBmNGIwOTE4YWQ3YTM5ZjQxN2U4OTczZTJlOTMyYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2YTM5YzQzYjQ5MmNkOTFlMzY3OWY1NDczOTc4MzU1Y2FhYjA4Nzk3YTdmNWI1YjFmN2Q0NTRkYmEwNmUyYmEifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-api.rst#L65-L69",
+          "version": "repo-lines-v1:sha256:1b0fb5614e6e9d62a907c9c3fd6f4695d79168e55c20f533bd8bc9b4c5260036:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjZjMjgyNmE5ZWE3MDA0NDBkNDI2MWYzMzdlYzkxMWM4MTE3MmY1OTgxMmNmZjMzYWNmYWI2NWIwNTZjYWMzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc1NzBmYmZkZTVjMTlkN2E1MDkxZDczOTk3M2NhZTlmNmJkYmUyZThjNTE5NGJjZGI1ZTMyNjkzZTNjNmE0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTdhOGQ4Nzg0OWE4YTE5NTk0NDMxOWI2MTBjNjc0ZjljMzU0ZjMzMmNjNjc1Yzc5ZTdhYWE0Njk3MTZlNTczNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1227-L1234",
+          "version": "repo-lines-v1:sha256:b084abacc13e7db13b8945339b34b2568719356bcaa1eaeb86e329cfa43f3a0d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjExZjk5YWY2MzE5M2FkZGNiMGIzNzJmYWYwYzNkYmQ5OGJhMDQ0OThkM2Y1MTc3YjQ0OTFiOGQ0MDQyZTAyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIxODE3NDA3M2ZiOGU4NjE4Njc3NmY5NzFmMmU5MWMwMjBhNDlkYmFlODJlZWQxNTZjM2Y4MGFjY2NkODIwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzZkZTNmNDg1MjYzOWU0MGQzM2NhM2EyNzQ2NzYxZjA2YTA5NDhmYjY4Y2M5NWI2MDIwNjQ0MTNmMzVhNGY3NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWIxNzBlZTRhMmIzNTkxNWQ1N2IxY2M1MTcyNWQyZjA4OTljNDM3NmQxZjM3NDAyM2IyYjAxZDM5NWI0ZjhjMSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L430-L435",
+          "version": "repo-lines-v1:sha256:94d43d70a5fb5e19704207f469b53a10670231410919e3aeaa7c4243806ac7aa:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWU4YWEyYjQ0MDMyNTcxODI2MmJkZmVmYmUwZDkzODNmMDFjMDlhYzdiMmRmM2EyNTY0NmI3NjFiZWJjMTk3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA0YzBhMDQyNjg3MTI2OTJkZDllMjBmMDM1ODg0MGNiZjAyZmJjNWRlMjM4ZWY2Y2VlYWNjMDM5YjQxNDZiOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzQ4MDY4ZjcxOGNiY2ZlY2U5ZWMzYTVhMzI1MzliMDcwYmJmMTMxNjUyYzIxMzgyZGE3ZmQ4MTIxZTkzNjhlNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGRjNjA1YzM1ZDg0MGFmNzQ1NjA0NTg4ZTdlZWYyNDNkMDZkZjlkZTY0N2JlMjgzNTY4Y2FmMjA0MmQ5ZmI2YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L495-L530",
+          "version": "repo-lines-v1:sha256:3ffe60b242e2460bcc2b15d8a7fccaaba928491b26b241df7bf31d54a58656be:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4YTg2MjE5MGRiMjg4MjY4MGI1YWRkMzU4MmRlYTA4YzYzZWRhNGMwYmJlNDcxNWNmMTQ0NDhiMjJiZmQwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwYTYzY2Y0YTJmY2U2MmEzYTY4ZjU3YWE3MGI4NTk4YzdhZTk0YzAxN2RlMjBjMmJjODdiNGY3NWQyYjYzNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhYzJkZTliOWY0NjVhN2Y5NDA4ZmZlNTJjZjRhNjIxNjBkMDMzYjRjZGY5YWQxOGU3NjZhMzBiMjgzODgzMzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkY2FhY2IyNGI0MThmNTUxNjIyY2NiNDg0NTcyYTQwMWUwMmY0ZGRmNDliY2U0MzI2NzllZDk5NzY4YjU2YTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e38dab44629490e9e7403bb14282eba",
+      "statement": "DAP file GET returns text/plain or octet-stream/200 with empty body for absent files; PUT/DELETE return JSON with errors possible at 200 and 403 to prevent lockout. validate_only defaults false and true validates without changes; errors cover the full config set and response requires validity/lockout/error fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1109-L1148",
+          "version": "repo-lines-v1:sha256:67efe42f281094c2f28a9dfef52e146011f75fa53f4cbeca4a266ed1d11ba836:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyMWViMjE2ZDFhODgzODEyZjk5OTUwZjUxYTRhMjI2ZDdlOWY5N2YyNmEzM2ZkNzM1YzY5NDUyNTdiYWNjYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiYzQxYjkzYjYzMWZmNGQ0Mzg2MTVjZTAwNzUyYzc2MDIxY2RkYTIzMWEyNDJmN2ExOTNiMWVmYTNiYjNjMjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmY2M4ZmFkYzlmYWMxZjE4MzZjMjgxN2Q5OTQ2OWJiMjE5Y2VmNWIxMDdmNzRjNjNmN2ExOTIzNTEyYjIyYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc1MzY2NzViMDNjYTNhNjk3M2IxNzliNTRlMWNjZWU5OTJkNmQzNjNlM2FmNDk0YmIzNjQwZDRlYjMzODhhZGYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1248-L1256",
+          "version": "repo-lines-v1:sha256:2908586b0debda8406d2d642d71f72922288b62b6d9150aa05dabe07efd55928:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA4NDA3ZjQwZjkwMGYzYzJhMDIyYzhhNTM0ZDc4NDUyOTZhNjQ2N2E1MTRhNTU5MDBjODFjMjg3YzgxOWVhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNjN2Q0ZjU5NDRmOWFlYmNhODlhYzk5NTU4ODJjYzMyN2E0MzM0ZTQ1NmFmOGZlMDAwNWJhNGI0YjBiZWYyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2I1MDM5YmViYTI5Mzc5NjI2N2Y2MmY0ODJlMjJiYTRiZjNjMjcyYzBhZWZhNDAzYmUxMTA2YzE4YmVmZWE0ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDc1ZjdmNzEzNjIyMzU3YThmMjRjYmM3MTA4MTVmMGI4MTJiNzg2MWUxYzBkYzBiMTAxYzliZTE1MTdlZDM4MiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L430-L569",
+          "version": "repo-lines-v1:sha256:7bb3eb020c726dd5080800896cde2ed5347523a1e3b2157e97f4a19ed42cbe6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1ZThhYTJiNDQwMzI1NzE4MjYyYmRmZWZiZTBkOTM4M2YwMWMwOWFjN2IyZGYzYTI1NjQ2Yjc2MWJlYmMxOTcyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5MWJhMzAyYTg5M2RiN2I2YTUzYmFjZTExMDlhNDljMGEyYWU3Y2EwODQyMWUxZmY1MjcxNmI3YWQ5ODM2NTllIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDgwNjhmNzE4Y2JjZmVjZTllYzNhNWEzMjUzOWIwNzBiYmYxMzE2NTJjMjEzODJkYTdmZDgxMjFlOTM2OGU0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0MDJiZTY2NDBjNWJkZDQ1NmMwMjg0YjU2ZmEzNDM5NDhhZWMxN2YyMGVmNjRlMDc4ZTM2OTAxZTZhNTE1N2JhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_4a49a5c0114a456ea473121d8f47df15",
+      "statement": "Historical DAP file APIs require JWT-enabled configuration and Admin JWT; configuration GET serves embeddable HTML via content_only, and config_file_path is an explicitly imperfect Swagger rest-of-path representation not to be URL-escaped.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-api.rst#L48-L54",
+          "version": "repo-lines-v1:sha256:9e6cce12c6336943339c0a5ebe99c8759542517dddd7f60a70013af696c95a2f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ0NTgxNjEwMjk2NTNlOWQzYzdlMGY2NTYxNmU3YmRmNDMyZTI2NGEwMmQ1MDlmNzBkMmIyZGRiOTM5ZjljZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQwYjkwYTc2NDBiZTEzNjE0MjIxN2ZlZGNmMDRkMTYxZTYyZWIxOGM0MzJlNzFmNjBkOWE4YzZiYThmMDU0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTYxZDM1YWQ5NDQ4ODU2NTRjMDg3Y2UzZTY3NWJlMTg5ZjAzZDhkMjgwOTJkNWY1NTFkZmQ5NTZlOWJkZDQ5YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjljZjVkMjYwNDRkZmU0N2I5MTU1M2YyZTBiNWM4YWQxMDcyZDY0NzFiODUzNzcwZDJlY2I0Y2YwZGVmMTUxZSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L1236-L1246",
+          "version": "repo-lines-v1:sha256:67715635061a45f8cde91af347b4b81652905a406d7d4377cdbc35290bcacb52:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1Y2NmYmY4YjNiYmEzYWJlMThiNmMzZmRjYjNhMWI0MjViMzljMzhhZTExYWMxNmExM2Y3ZTg3NTgxMWUwN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNjZmOWFjZWRmMTM3ZmIwYzk3MGI2MDFmNmQxNGYwNjRmY2RmYjE2MGQ2OTE3MDI1YjkxZDkyZTVhMzFhNWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0N2YwODAxYWZkOGE5MGM2YWRjZjI0ZTlhNjVjZTVjZDU1MThjOWM4NGM2MjI2NTY0ZjBiZGNiMTFlMmQ2YTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxYjI4YjQ0MjYxMDM5NDU3NTI3YmYyNjI0ZjYyYTNjMzhmMTQ1ZTE2NTRmNTJhMGU3YzQ5NDEwZmE5NGM4MzkifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L397-L428",
+          "version": "repo-lines-v1:sha256:5f76c6cdff5019ec5d55017adf20bd39f5c7406c86681d8c7e13ca4abc5a72f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5ZGEwNTViMTU4ZDMyNTllYzdkMGNiMTgwZGQ2ZWI1ODc2ZmU4MTk1ZDg2MWNiMGQzZDIyZmRjOGMwMzA1MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOWRiYmI0MGM0NzRmNTg5MGUzYjMzNTJkYzliZjJlN2Y0Mjk5OGQyMzk4MTY0YWQxM2Q5ZjNlNmJmZjQwMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMzMjhmMjhkNjFlYmIwNzhjMDI3Y2ZmMDQ1NTg5MTAwN2M4MWNlODFiOWRkYmI4NTlhYTEwMjQ1Mzc1Yzk1MjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2fcef4a93b24425085408087beaa03e6",
+      "statement": "Connector tools document manifest-based system/pipe generation, expand on sesam upload, collapse after download, automatic OAuth 2.0 authorization or sesam authenticate, and link an external client README rather than define new Swagger operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/connector-tools.rst#L10-L19",
+          "version": "repo-lines-v1:sha256:e73127428159bb8e2772a18d4f652cb38d4f300471131051d699e7a0632d7076:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwNjg3ZTk4M2Q4ODM2YjM3OGFiNDlhMDQwYTVjYjgxMjRjY2IyNGU1NDk4YzA4ODhlMmNjZDkwNDIwZDJmYTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyMjA4Mzg0ZmFmYjk1NGMyYzY4Y2QzYWE0OTFmYmFlOTdiNjMwMTkyYWFiOGVmYTYzMjEwMTU5NTQ4NzFhYmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7dca64e877864078bbc1fa2a9b855e22",
+      "statement": "Configuration tests use expected result/.test.json files per endpoint pipe, drain queues with outbound systems disabled/unreachable and compare using sesam -vv test; default reads use pipe entities at sink stage and publisher tests can use configured endpoints/bound parameters.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L108-L139",
+          "version": "repo-lines-v1:sha256:0fb86541b0234d1c51be8c1686785f19cfd1cc1bc63dbf5f3b5de8e1aaf4cdeb:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlYmUyOGI4NzIxYjVhZTMzMzM4MjZkYzBlZTQ3ZGU0OWQwY2VmZjdkYWQ1NjVmYzkzMTVjNDdjMTYyYTNjNTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzNTBkYzY2Njg4M2Y2Yzc0YzRhY2U2Mzk1MjY0MWVkYTRmNWQ5ZDQ0MzI2Y2Y3YmU3ZDQzMDMxNTZkZTA2OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk5OWJkZWZlZWFjYTYzNDBlMDI5MGRjODZlODg5Yzg5ZDVlMTg5YWE1YmE0NGI1ODViM2I3MDczNGY0YTYyZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4ODA4Yjc3MjQyMmI5NTA4ZGQwYjU2ZWNjMzJjYjFhY2Q2ZGJiOGVjOGRjYzlmNDIzM2Q4ZTQ2Mjc2MDBlNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L146-L186",
+          "version": "repo-lines-v1:sha256:7f56230d6849e646229686c2e9986c5a17bfd2f448c5137acc81bad5efab369b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3ODJkMjFkZTM0NDMyZTFhZDBlOGU4MjhkZmE2MDA5ZGZjMzY0Mzc1M2NiYmViZWQ5NzVjNmZhZTJiYjgxMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3ZDRjMzA1ZDU5MjRjMjg5NTAwNjY2MzdlNzY4ZGNlMDMxNjdlYTQwYmQ2NGJhNjQ1YTc5OGJjZjAzNmU5NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMzYxMjc3ODcyZDQ4YjNmMTdjNzNiNjM5OTM5OGI3MzI3OWE0NjYwMDg3YmY5ZGRhNmZjNzcyYTk4YjY0OGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L57-L91",
+          "version": "repo-lines-v1:sha256:064a456505efaa5d13d932d2fa37176bcba7503dbaf96d4d927d469fd986ae6a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ZTVmMDlmNGE0YTJkMTIyYjI5N2U3ZjQ1MzViMDg0OTY2ZTQzNDZlY2QxNjU5ZTM1OTFmNzFhNjAxZTJhZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjExOTAwMjM3NTFhM2M5MWVlYTM2ZTUyN2UwMzRiZGRhZmNhMGY2NzFmMTE4NzY5NWViNDI3MmI4NTAxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY0MGY2YWU0OTAxY2Y1NWJmMTM2YjE1MzZkN2JmNjk3YjMyNzU4OGM3OWJmNTNhYmQzZGJhZWJkYTkxNzFhYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5baf46e93d0425aabbe336eeef2ddd7",
+      "statement": "CI testing requires a designated node and serial tests because uploads overwrite config, with outbound access disabled and necessary outbound secrets/variables absent; Sesam Client forbids production use, simultaneous clients on a subscription, and concurrent manual edits.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L7-L24",
+          "version": "repo-lines-v1:sha256:2bca9d22996e089efc3c41270a559bc9639ef5c0894312477915e1887d36bdc1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5NWQ0OTIyYjgzZGRlZTFkODI2ZWNhNWFlZGYyNTUyNTVhYjZhOTlmYjljZTBhNTcwYTE4MTFlNjZmZDQ4ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzZjNhYTU3ZTRmM2M3OGRmZDVkZjRhNzQ5ODJiYjQyZTNlNmE3NDllYTlhMTgxNmU1MzkwMjgxZTgyOGNhZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MjMyOTcxYzUwMTJkZjU1ODc2MDZiOTRlMjVhOWI0Y2VlOTA4NDQ1MzUwODlkNTEyZjkzMTk5YjA0MDQwY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiZWYwNTRiMjAxMjEwNGZjNDE1ZThlMmNiNTcyYmRkMzZhYzBiYWQ4MGE4MjlmYjI5YjYzZGE2YTQ0ODZmYmIifQ"
+        },
+        {
+          "resource": "repo://hub/sesam-client.rst#L21-L36",
+          "version": "repo-lines-v1:sha256:a50b2ae619290e67be7b102eaccddc74ba64dba970c76db18a24b5691f49cf3c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNjk1ZjU2YmU0YjlhNzczYjhjMjVhNDgyOGYxMjdiOWZjYTY4M2EwYjMzNWYzN2VlZTI0YzkwN2Y2N2MyZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxMGQ0ZTdiNmYzMmYxMzMzMGM4ZTE0YmU4ZGI0MTcxMjMyZjI2ZGQ1MWZjYTU4MzNjOWFlZjhiNjBlZTdiMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljZjRlNGRiODMxY2M2ZmQ5MThmNmQzYjZkNmYwNjg2MThlMzQzYWE1MzhjOTRjZmU5MzIzMTdkNWE0Y2IyNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MDExNWIxZGU0OTU2YjM3NTA3NjE2NzkxZWRjMjA3OTBiY2M4ODc0M2Y4NWZmYzIxYWI5ZmRlOWJiYzk5ZmUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

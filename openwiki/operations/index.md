@@ -1,0 +1,5 @@
+# Files
+
+- [Deployment variants, backups, compaction, and durable data](deployment-and-durability.md) - Documented Sesam service topologies and the division of deployment, storage, backup, and recovery responsibilities. Explains durable pipe data, compaction, deletion history, and deployment-documentation conflicts that require subscription-specific confirmation.
+- [Metrics, execution logs, lineage, and failure diagnosis](monitoring-and-troubleshooting.md) - A read-first workflow for diagnosing stalled Sesam pipes, source and target failures, dependency problems, incorrect output, and infrastructure faults. Explains Prometheus metrics, internal execution evidence, search and property lineage, and the risks of corrective operations.
+- [Authorization, secret lifecycle, and network security](security-and-secrets.md) - Explains subscription roles, node ACL enforcement, runtime pipe identity, write-only secrets, and outbound authentication. Covers configuration replacement risks, TLS verification, hosted network controls, VPN, encryption-at-rest limits, and security-focused validation.
