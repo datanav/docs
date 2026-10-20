@@ -1,0 +1,5 @@
+# Files
+
+- [Node and Portal APIs, public surfaces, and implementation handoffs](apis-and-repository-handoffs.md) - Locate the checked-in Node, Portal, and legacy databrowser contracts, with exact operation paths, formats, safety constraints, and authentication boundaries. Separate documented product behavior from backend and UI implementation questions that require another repository.
+- [Connector manifests, templates, and desired-state contracts](connectors-and-contracts.md) - Explains reusable Sesam connector configuration, template expansion, authentication and webhook validation, and the collect, desired-state transform, and share-result boundaries. Includes operation-specific entity requirements and warnings about inconsistent examples and discontinued onboarding metadata.
+- [Custom sources, transforms, sinks, and JSON streaming protocols](extensions-and-json-protocols.md) - HTTP extension contracts for Sesam sources, transforms, and sinks, including JSON Pull continuation and JSON Push full synchronization. Explains remote URL/REST services versus managed microservices, authentication, hosting, retries, deletion handling, and adapter test boundaries.

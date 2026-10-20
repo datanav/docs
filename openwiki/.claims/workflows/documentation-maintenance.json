@@ -1,0 +1,894 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:79b826952679f093615e1c4a1b05cf2346fc6ce87c6ddd0366b751a5af4e0c4a",
+  "claims": [
+    {
+      "id": "claim_be343efb9e4448999b41f50558a503c8",
+      "statement": ".openwikiignore preserves authored documentation, specifications, tooling, templates, and useful assets as research inputs while excluding rendered outputs, exports, local environments, caches, and secrets; OpenWiki documentation and metadata remain writable.",
+      "evidence": [
+        {
+          "resource": "repo://.openwikiignore",
+          "version": "repo-file-v1:sha256:3bfc9ec2bc33c775cd77135b4ee6f5ff716f59197248e8ff5927d12685152f32"
+        }
+      ]
+    },
+    {
+      "id": "claim_98e6f8e3fe6c41d59339d70b8cd6fb09",
+      "statement": "Sphinx recognizes only .rst sources and uses hub/index as master_doc; CommonMark packages in requirements do not enable Markdown sources, and the partner .rstx form is consumed explicitly by Pandoc instead.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L85-L91",
+          "version": "repo-lines-v1:sha256:d15c53b216991d783436198a3342d8f71cbad551bb2b058c9bfdba95b6cdb1ab:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIzMTYyZTQ4ZDU2Zjc2OTU0YTNhM2I1ZWEzYWVjMmE3OWYyMTU3NmZiNGMzNWQxZDdkMjkyOWJjNGI1MjBkZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmZiM2M0MWRkZGU1OThiZWZjNGFkNmE1NTY0NDE3YjllY2U5OTRhY2I1YWQ5NTAxOWNkZDFmNWU2ZWU0OTFhOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmIxZDE0MWQyNTBjMDE0NGYzODY1YjYwZDliNTI3OTJmN2EwNzk5OTdmMGYwYmZkY2IxNDIwOGI5Mjg3NjdiZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzA1NmFiNzU1NDZiNDkzNmRlM2UwZTY0NWI1MmFiNGMwYzBjY2QxYzIwNjUwMzNhOTcxMDEzMzAyZGQ5MjY2YiJ9"
+        },
+        {
+          "resource": "repo://conf.py#L29-L36",
+          "version": "repo-lines-v1:sha256:101036f64dc30b882886c4f36afcf1bbe0ac20d8bb00d6dd6f69f459536aa6ef:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA3MmVhYWYzNmNlYzlhNzkzMzAzYjNlYjI2ZmQyODU1NTI1OTFhNTliOTUwNWVmODY3N2UwNGYzY2RmNzhjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdjMzQyZjA2Njg4NjY3YWU0YWFlOGUwNmNiYjI3YzdjYjQ3NTMwYzNkNWUxYjEwNzFlZWZlMmQ4ZDE1ZDZjMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFkOWZkYzA0Mzg2MmVhMDNmYmFjOGQ3MjM2NDg2ZGFlNTMwNWZmYjhjMzkwNmY1Y2YwMGQ2N2Q0ODA2NGRiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjgwNDEyMWQyZGY5YjBiMDA0ODAzZTc5ODg4N2RhMjE4OGE1NTRjMzk1NTgyZTUxODI3MDZiOGFiMGU3MWFmYyJ9"
+        },
+        {
+          "resource": "repo://conf.py#L54-L66",
+          "version": "repo-lines-v1:sha256:05fd896e374f47ca520d423c1d3a3fa418dd3babc94f6fa69f76ec256281aeef:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhM2YzNDZlMTAwMjliYzAxZTI0MmU0MWM0NjY2Zjg4MmY4MGZlZGRlYjQ2NWU4MjgwZDRmMzI1ZTgwNjk1ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2YWExYjQzZTc4Mjg2ZWRhNjM2NzQ5MTdjMjQwZDNhMDMxN2IzYzNkY2JhMjliOGNjZTYwMjg1NzU4YmJhZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmYzVkOGVjN2Q1M2E5MTkzMzI1NjYzZGMwZTdjYmZiZDgzZTg3ZGY3N2UxYzk2NmI2NjU3ZmU2NTc4NDBlMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyMzY1MzYzNTYzMjdiNzIxZWRkYWQ3Njg2ZDgzZTlhY2I2NDdiYTkxYzc4MDFkNGY4OWM1N2Y5ZTE0Y2Q3OWIifQ"
+        },
+        {
+          "resource": "repo://requirements.txt#L1-L4",
+          "version": "repo-lines-v1:sha256:74bb9aa0a9bccde98fe92ab24b21529d061ab7cb3a34141930ff63236c98200d:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzZkYmRkMjc2NjRjNjlhNDBkYjQ5ZTkwYzc1MGRjNWYwMDMyMTFiNmZmYjM2Yjc1N2E0YTI5YTEwNzg2YjY3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjA0YzFjYzcwNGUzMzdhYjgyZmE3NjllZTY5MTUyMTY4NjExMTdiNTkyNTRjNzE4Njk1NTc0ZmY5NGFmNDk4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzE4NDM2OTYxMzYxZGE2Yzg3YWJmZWM1YTQyYjRiYzU3OGQ4NjlmZDZiNDJlMmFhMTBlZGNiOWJlOTA5NDkwOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_47836645156f4c6b85d3969cb12f2484",
+      "statement": "The site navigation is an authored graph: hub/index combines visible panels with a hidden toctree, index-developer routes to the main references, and learning/building-block landing pages also pair cards with hidden trees.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/index-building-blocks.rst",
+          "version": "repo-file-v1:sha256:814dce43767077d62e00731c043ffaa1e9e3438b50d3c0fbebe9814834866393"
+        },
+        {
+          "resource": "repo://hub/index-developer.rst#L9-L25",
+          "version": "repo-lines-v1:sha256:708a8a99dcb5134408f9045b0ff5af8796bfb83152c28ee55f398602139497dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4ZjdlNzE2MTk0MzU5OWJhMjQ5N2MxODQ4YTdjODZlMTJmYWRmNDEwZDE5OWU5YWJkMTg5OTRiMzg3NDFiMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiYzVkNGQ0YzJmMjcxZjI3YjlmYzg4Y2I3NDI5MjJlMWMyZWM5MDNjMTIyNzJiYWExMzc5MDNmZDBlZGQ0ZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk1OTJmMDI2NTJlYTk1YWMzZmZjY2YyNTc2MzdlNTA4NTg3ZjBjMGViMzE0MmIwNDcyYmJiYzFmZmU4Y2QwZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/index-learn.rst",
+          "version": "repo-file-v1:sha256:c3d29fba3af6942de9d0f1da79aba2f7414b1e3d43e8fbe5515ec1ef20bfcc97"
+        },
+        {
+          "resource": "repo://hub/index.rst",
+          "version": "repo-file-v1:sha256:f4efabc7bf8aa14b5a1d3d434d4f33c9e06b3b62ef68b2d2c5259675a0440a69"
+        }
+      ]
+    },
+    {
+      "id": "claim_e373a41571434fb78f7c8acfe940a891",
+      "statement": "Root index.rst is an orphan document rather than the configured master, and conf.py explicitly maps index.html to hub/index.html along with literal redirects for several legacy reference URLs.",
+      "evidence": [
+        {
+          "resource": "repo://conf.py#L40-L66",
+          "version": "repo-lines-v1:sha256:09aab1539630690601cc268ea7b4d08e1bbcc8cbf022951124429b3377f081b1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzNGRkNTJjYjFmM2NhNTQ4ODE2N2VhZTE0YTEzNDRhY2VlZmM4YWZlNDdjZmEyN2JjOWZkZGQ1MzkwY2UxNDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2YWExYjQzZTc4Mjg2ZWRhNjM2NzQ5MTdjMjQwZDNhMDMxN2IzYzNkY2JhMjliOGNjZTYwMjg1NzU4YmJhZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4MDQxMjFkMmRmOWIwYjAwNDgwM2U3OTg4ODdkYTIxODhhNTU0YzM5NTU4MmU1MTgyNzA2YjhhYjBlNzFhZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyMzY1MzYzNTYzMjdiNzIxZWRkYWQ3Njg2ZDgzZTlhY2I2NDdiYTkxYzc4MDFkNGY4OWM1N2Y5ZTE0Y2Q3OWIifQ"
+        },
+        {
+          "resource": "repo://index.rst#L1-L17",
+          "version": "repo-lines-v1:sha256:62c359504013a050d1dd28da48e9b1f9e55cbbeff414c05e9fbb2dfbdf777ad7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5MGUzZjcwNzgwOWRiN2Q5Mjk5OTk2ZTY4OWQ2MWE2NmZkMGJhYTg0NWUwYTExZGRmMDc3ODdiZjI2NzMxMTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0NzlhZjc5NjNjODk4ZWI5YTNhNjU5ZGQzYTkxMTQ2OGIyZDIyNjkzM2MyYjAxYWVjMGI5MzVmMTk2NGViZjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5YzcyMGYzZTk2Nzk1NDNhNjJiYjAwMjQ2MDAyOTRhOTIyYTVjODhiNzA3NzYzNDBjYzMxMzE0NGE4ZTRlMWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6fec9156282a4ec6a748ca5a94147d39",
+      "statement": "Explicit configuration and DTL labels connect reference definitions to :ref: links, quick-reference tables, and panel link-buttons, so label changes affect consumers independently of filenames and heading wording.",
+      "evidence": [
+        {
+          "resource": "repo://hub/data-transformation-language.rst#L1-L55",
+          "version": "repo-lines-v1:sha256:d70856572276aaae7483d432fb66c14af5e7d892047f2fd8d56a8d3bb53c1529:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MmExM2QyNzM1MjZkMmQzMzg0NDYwYjlmZjFkYzRhMGM1ZTRjNjJhMjdkZTk3MjFhN2FmNWI3Y2JhZjM5NGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3NTZkYjBlNmMxZjFiNGUyNmI0ODNjZGM1NjkzYjZhZGNmZjA4MjEyNTRmOTkzMmI3ZDA0MzI5ZDkwYWViYWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L1-L13",
+          "version": "repo-lines-v1:sha256:82ac7c98c3f330079a5634a8c6749b6c2c899385636a87409590b9f85f9ce197:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYjFiN2RhYzRhNjMzNWFmMTExODNiYzdjODI2NWNmNmZlODlhNWFiZDJjZWQ0Y2Q2Y2YwOTY2MjFjOThjOGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiOTQzZWRiY2EwNTMwOWIyNzEyNjM3NzcwZmQwNWRhYzRkOTEwM2U2ODUzOWYxNzgzZThiZTk2NjhhZmY4ZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkNjk4ZjEyNjRmNGJlYTI3OTNjODVkODQzYWM3YjE4MmJmOGFkMmIxYmEzZmJlMjRmODQ4MmE2MzFkZmM2Y2IifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-strings.rst#L1-L39",
+          "version": "repo-lines-v1:sha256:f02975e4c78aae9bbb59d6b2d048b8251081847ff6f4ae8310470fe7a365ce65:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxODhiNjQwYzM2NTdjZDk0ODlhNDU0ZmU2YmE5NDc0ZTgyZjcyOGM5OWMwMzRiNDQzNWJhNzk0NWFiNTcwMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllNTNlNDFiNzNhODMxZjA1MGY0Mjk1MjI5ODdhZDk1MDQxZGI0N2FjNThjMThjMmQ1OTlkYjA2ZDg5NWE3MmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE4NTg2Y2ZmNTdlMDU0MGYxMDk2ZjU0YWY4ODI5MGY3ZTQ0ZjI2MmM1YzRlNjhkN2I2YmQ0YWI0NjIxMzZhMWMifQ"
+        },
+        {
+          "resource": "repo://hub/index.rst#L91-L107",
+          "version": "repo-lines-v1:sha256:9157cd68936093e1cc216da8680af852b56ba1cc66e275d8711c1efafc9166d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViMzViNzIzNTc4ZjNjMDIyMDg1OWU2YmE5ZWJiZGVlNmZjNTNmMzc0YmY3MjVjMzQ0OWUwNjEwNzg1MDMzNTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwNTU2YmFjZDMwOWJmZTllMTQ3NTNmMzllNjMzY2I4YjM3NWZhOWQyNzQyYmVhOTAyOWRiMDk0YTE0MGU0YzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllMDUyNjhjNzhjMjgyZWFiYWE4MjcyN2NiZDQ4NjhmOThiMjc5ZDdhMDViOWIzNWViMDVkYzczZTQxYzE4OTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwMDM5M2M0OTRiMDJhOGRjMDY5YjA3MTg2Y2IyNjk0NWM4YjJkZTJiZjhiYTYzOWJjMjNkZGZlMTliMzYxODAifQ"
+        },
+        {
+          "resource": "repo://hub/quick-reference.rst",
+          "version": "repo-file-v1:sha256:ba68f7f0bd4fc8f8cded5c2932482b960d976c73328b3d61aa1b7af3fff0201a"
+        }
+      ]
+    },
+    {
+      "id": "claim_83ff0a7f3e2f42a3b8a05d097a317f83",
+      "statement": "Authored document links include relative :doc: paths as well as panel URL buttons containing literal .html filenames; navigation review therefore must consider document paths and literal URLs as well as section labels.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L2-L8",
+          "version": "repo-lines-v1:sha256:611ed70f7448d8139b51f7d1ff8757de497c94d6ad9f9bb229048b86f318d7c8:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzZiNmFhODU3NzI2ODk3MWI0MThmYjZlYmY4Mjk0MjMxYWNmMGZkODYyY2M3NWRjMDM4ZTMwZjkwMDk5MmZlYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTcwMDc2NWRiMDkxMmIyMTgzM2QxNjk1NTg3MDcxZmMzZGI5MmU0MzQ5YTU0YTkxMDdkYWYzNzlhYWViNTQ0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        },
+        {
+          "resource": "repo://hub/guide-getting-started.rst#L27-L68",
+          "version": "repo-lines-v1:sha256:3176eb9bc8989dce139f68661198ce6665874bd8106395a98d4c0b771c9fb6e7:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0NzlhZjc5NjNjODk4ZWI5YTNhNjU5ZGQzYTkxMTQ2OGIyZDIyNjkzM2MyYjAxYWVjMGI5MzVmMTk2NGViZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlMzQ1OWY4ZGE1ODhjNDU3Y2Q4YjdlMDQwY2Y0M2Q1YzJmNDdkNTQ5MDc0ZDE2ZWE0ZmI0NDcwYjQyOWRiMTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3MTc5NjMxZDFhZGFlZmIzOGM1YzhmMmZiMTM2N2IxOTA4OWRlNTI4YzgyZDRjM2Q3OGUyMzAzOTdkZjliNDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/index-learn.rst#L7-L8",
+          "version": "repo-lines-v1:sha256:e93f9e1e33bf0e7493c2d6eac623fa2f13fb270efafd8e5693524d09a5a5c029:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI3ZThjZTVjYzU3MGUwOWM5MzBhMmNjNTc1MmE2NjMyZjBiMGJiYjhkNDQxYzM1MGNlODk3NWI5MzhjODM3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjYwNjQzZWMwZTJlMmExMzJiZWE4OWM5YmQ1MWVlYjllMWZjMzRkZGIyYTY2MTUyYzBjMGFkMDI0YjZjMjIxYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWExMjk4MjdjYjVjMjI1ZDI2ZGFlNzRmNmExOTRhOTQ0MTg4YTIxMWU4ZjYyMWI3ZjU0NGUxMGNkZjJhNmY2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzgwNzNhNTgxYjVjNDA4OWE4ZjY1MzgyNzNjMjVkZTE0OGU2YWEwMWM3NzcxOWQyNjdkMTZmOTY5YTdiM2M0MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b5138eaa410d46c7afde9cd9d862a1c4",
+      "statement": "The web partner agreement and Pandoc partner form share partner-agreement-part-1.rst and partner-agreement-part-2.rst through includes, coupling website wording to the printable agreement.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L85-L86",
+          "version": "repo-lines-v1:sha256:9d1d9980b6db0523fdec1e7a55e2074c5ffad229ed063874713219d832a749f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIzMTYyZTQ4ZDU2Zjc2OTU0YTNhM2I1ZWEzYWVjMmE3OWYyMTU3NmZiNGMzNWQxZDdkMjkyOWJjNGI1MjBkZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDdjYWU0ZjZkOTQ5NjY3YzQ4N2E1ZTQ5M2VlM2QwYTE1OTkwZGMyNmYzZTllM2FmNjQ2ZjE2MzQyNWQ2YmM4YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmIxZDE0MWQyNTBjMDE0NGYzODY1YjYwZDliNTI3OTJmN2EwNzk5OTdmMGYwYmZkY2IxNDIwOGI5Mjg3NjdiZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDQ1NTEzOWM4ZDViYTg3NDMxY2Y2NDdkZDkxYzQxMGRlNDViZjNhODVlNzA5ODVmNjQ1ZGU2ZWI4Nzk2Y2EyYiJ9"
+        },
+        {
+          "resource": "repo://partner-agreement-form.rstx#L25-L38",
+          "version": "repo-lines-v1:sha256:eeccb8225b63ccf3c1d8f6acda1fff7b9163cf7582a4cfe028d66f37535e1dc5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViNWRlZjk2ZDQzN2I5NjY5OWQ3NGRiNTllZGZiMzhmMWUzMDJkZGMyY2YyMTM4OGFlYWI4ZmI5M2ZkYWVmMGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZjJjNDNjZjZhYTk3NjIzZTA5MTY3OWJmMzJjNGY4MDBmN2ZkZWVjMWYyNzg0Mzg0NzY2MDgxYjBjNDUzY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU4NDE3MTgxZWE0MWZmNGZhNzNlMzhiZGFiYzFjYTJlMzU1YTk0ZDFkNjNhOTg1NTZlODM0NTc0MzkyMzFiMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://partner-agreement.rst",
+          "version": "repo-file-v1:sha256:6340f290c3fb78caa5c0efa4f18d7a20b05ef40ad86d8790d27fe6b836e17f28"
+        }
+      ]
+    },
+    {
+      "id": "claim_5f25b2ab940842198f6aede13046385c",
+      "statement": "Databrowser authentication and GDPR platform configuration include the same authentication-provider RST fragment, which carries a databrowser end-of-life warning for December 31st 2023.",
+      "evidence": [
+        {
+          "resource": "repo://hub/databrowser-auth.rst#L65-L74",
+          "version": "repo-lines-v1:sha256:91433e4621e7fa8ce93f10b543c908cdb052b04ad5c7218eb93e7463cd954a16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllMDkxYjI1NmRlNTAwYmM0ZGMxZDYzYzkzYmI4YjRiZGE4YTQ0Mzc5NTk2MGEyMDhmZGYwNWIyM2RmYmU0YTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YjI1MDdiOTY5ZTExYTA2MzkyNGNmMGM0YzAzNjQ4NDZjNjBmYjk5ZTdkNDJmOWNmZTIxZDg3Nzk4N2ViZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2ZjkxZDgwMmUwMTg0YTc2YTMwMmJiYjNhNjFiNzllODliNzNjZDc3Y2JiZTYzNjljOWU4ZDJhZGY4M2QwNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjMjhlZTY5OWIyMDM0N2Y4NWE2MDQzZTVhNmE4OWI1Y2U0YjIzNGZiNjJhYjE2NWM3MDMxZjBhZDdmZjkzZDkifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-authentication_providers_examples_and_docs-for_include.rst#L1-L8",
+          "version": "repo-lines-v1:sha256:a28ac5b65a68d85f6e499dd3c040b2b6e08829e4b1072bb8185342ee0557b495:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlNjQzYzdlMDAxNTU2NGZmYjgxZDNiNmYzMjgzZDhhYjdjNjNkNDAyMzA4ZTY0ODJlMGMxOTZlNzRmOWI5MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ2MjIxMWRmYzdlOGJmMzU2MzVlNDczNGFmYjlmZTVhZjBhYTZiOThhNzYyMmMwMGM1MzU0ZjU4MWUwMDQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjU2ZTc0ZjE3NzZiNzhlOTJhOGJjMDdiMDBkNTlmNjFiZTJmY2Y1NTU2NTkzOGQ0ZTZmMjJiOGFhZjlkYjhkMiJ9"
+        },
+        {
+          "resource": "repo://hub/gdpr-platform-configuration.rst#L183-L194",
+          "version": "repo-lines-v1:sha256:0639240404fd505c11acdf8de69edbdbbd72d11894bcb604365ab577a87d99b8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmOGUxOWQxYzY3Y2YwNjVjZDEzYmMyZDBmZDFhMGVkNTJjYTA1MGZiY2ZlOGY4ZDgzNDU2N2MzMTdiYzEwYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5YjI1MDdiOTY5ZTExYTA2MzkyNGNmMGM0YzAzNjQ4NDZjNjBmYjk5ZTdkNDJmOWNmZTIxZDg3Nzk4N2ViZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5YjExZTRlMzVmOTlkNTg0OThmMzgxMTJkMzlhMjM2OTJhYmJjN2U3ZmU2ODI2NGMzMDVhNWMxNjA4ZmJlOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwMjY5OGEzMTY2NmZkYmU1YjAwZWUyN2JjZWZmY2JkNTk4NGYzNzE0YWUxNWVlNGRhMWNkYmMxODc4MTRjZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1b253398143f4ee985b10cae975cc1d8",
+      "statement": "Time-based masterdata management and parameterized datatype pattern pages use start-h3/end-h3 substitutions defined as raw HTML heading markup, making that presentation builder-sensitive.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L19-L23",
+          "version": "repo-lines-v1:sha256:0135ff11754dd3b6ae2fcf784078cb51815520dbd350d6b47dc32bf52c54fa2b:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI0MDBjOWRjMWQ5MmQ5ZTI5N2NhZmZiNWI2YTRhMWM2OTZiOGVkN2QwMGViOThiODFiOTM2MjZkZTJlMzJmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzdjYWY1NTg0OGRhZGRkNDYyYWFlNjVlMGNiYjA5MGEzMGU4ZThmNTRhYmZiMGYxODhkYmE0MzM0NTc0ZDNkOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzdhMzEwMTlhMDMzZWYyNjNmMWZlOWEwMGRjOTJiY2Q1NTFmZGVjOTdkZmI3ZTA0ZDI0YjdhMmRjZGE0MDAyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y3Mzk4YzQyMTZjZjgwOWI4NTMxNmE5NGEwODJmMzlmNTE3ZGU3ZmNlZmUxZDE1MGM5MmY0NTY1NzY1OGZlMSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/time-based-masterdata-management.rst#L206-L212",
+          "version": "repo-lines-v1:sha256:2035187abcfed363080794312b6c47420751c09743cff746485505b45811b7bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg4OWU3NGU4OWUwY2JiNjQ3NTFlOTNhMTk4OGQ4YTQwN2RkMDUyMTEzNGY2OTYyOWZjMmE3ZjhjODVkN2FmNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2I2YTIwOWVjMWI3MWUyMDAwZWQxMjU0YzQxNzM0ODIxZDZiM2FjMjU1ZjAwYjAxNWUxZGY0Y2RiNWI4OTMzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTIwOGQ4ZWYyOTM0OWQ0MjNjNTMzOTU2YzFiNGIyMzdhNzFhMzg2NmIxM2ZjNDVjMDQ0YzA4N2NkODRlN2UxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/parameterized-datatypes-pattern.rst#L180-L186",
+          "version": "repo-lines-v1:sha256:2035187abcfed363080794312b6c47420751c09743cff746485505b45811b7bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg4OWU3NGU4OWUwY2JiNjQ3NTFlOTNhMTk4OGQ4YTQwN2RkMDUyMTEzNGY2OTYyOWZjMmE3ZjhjODVkN2FmNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2I2YTIwOWVjMWI3MWUyMDAwZWQxMjU0YzQxNzM0ODIxZDZiM2FjMjU1ZjAwYjAxNWUxZGY0Y2RiNWI4OTMzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDQ1MTM1ZmQ0NWY4NWUzNzRjMzUwM2Y1NDk2MmY2NzEzODZkMzBlMGEyMGVhMjMyNzBlZDIwZmM2ZGEwYWNkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/parameterized-datatypes-pattern.rst#L28-L28",
+          "version": "repo-lines-v1:sha256:272f943d4f52a9c1b91dcb4de2d81ca01a0e3ce9eadf22ec6847ad3fa29deb2a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcyZjk0M2Q0ZjUyYTljMWI5MWRjYjRkZTJkODFjYTAxYTBlM2NlOWVhZGYyMmVjNjg0N2FkM2ZhMjlkZWIyYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjcyZjk0M2Q0ZjUyYTljMWI5MWRjYjRkZTJkODFjYTAxYTBlM2NlOWVhZGYyMmVjNjg0N2FkM2ZhMjlkZWIyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWNjYzhjNThiNWE2YTBjNDdkNjFjMzc1ZmU5MWY2ODhmYzBkMWM4N2I1ZTc2ZWJmNTViYzcwNDI1YjdiNzAyZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjg1NTZkMTMyNzFmZjA2NTcwM2Y5ZmZiZWE4YTM1YWYxMmEyNzM4YjY2ZWMwNWMxMzdkZWVkMWJmOGY3MmI1OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_07de49a4efc54315a73cb61cd4f309b6",
+      "statement": "Sphinx configures version and release substitution values as x.y and 2024; these are documentation configuration values rather than a runtime-version discovery mechanism.",
+      "evidence": [
+        {
+          "resource": "repo://conf.py#L73-L80",
+          "version": "repo-lines-v1:sha256:9004cb72d5bb25bea9638b47fc484c95c647cc74e1c3c04e17bca7c95eb42415:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDU3ZTRjYTc4YjA2ODNkYjE0MDkwMmFhNWVjNWI3MzU2ZDc0ZDVmM2U1OWQ4ZjA1MWNmNWM3NGViMzdjNDgwOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWFmYWJjNzQ4NTFkOTQ4OGFiODk0N2JiMjYyMjdmYmI4MDY3OTU2MDJkYTdmN2UxNzZiMjcxZGE3MDNiNjkzZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FlYWVlMjc4ZjI5MGU4MThjMTUyODViNTgwNGIxNGYxZmM5OWRhODk2MzViYTIxMjExZWE3ZTg1MTVhOGJhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDkyZTgxM2JmMDY1OWFjNWJlYmYxYzY4Y2M5NGQ4NmJkOGMzY2Q5ZmZiOTMzN2RjMDZlNzg2N2U2YWU1Y2EwOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc2e8435ee19484fb1a29abce8f7a34f",
+      "statement": "Service API documentation renders local Node and Portal Swagger 2.0 YAML copies through openapi directives, while the databrowser guide renders its own local Swagger YAML; the directives do not fetch live specifications.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L223-L244",
+          "version": "repo-lines-v1:sha256:c0af2843737b66421b0bb7625489f28ad075526062eec5316b67169e555f5b23:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4ODg5ZDM4OWU4Y2FiOWFlMWZiOTdlYzRhOTE3ZDBhZTIyYmM2NDA2ZjhkMzg5Zjg0N2NkNmFiYzA3MWE4MWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlMjg5Y2QzOWE4MDEwMTg0NTMwYTczNjdkZjAyOGIxOGEwMDk4NWM0YzBjNzFmMzUxMDYxMzg1OWNiZTI1MjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExOWYwZjQ1YjcwNmJmMmE5NTE0MTBiMTE5M2UzODhlNTViOWIwZWNiZjk5OTY0ZjQ2ZmE2YTM2ZDM5YTdhNWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlZWY0ZDA2ZWY2YWIwNzk0YzNkMzViNTAzZGQ4MzdlMGMwMGRiZWQ3OWMyY2Y3MGM3Yzk0MGQ4NzZiMWNjYjAifQ"
+        },
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L712-L717",
+          "version": "repo-lines-v1:sha256:ac4f4fe48508f8a19735188efa151215a198bb984832c17f2149642e218a37e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJiMjUyOTUyYWI0YjczMjU1OTI3OGE0Yjg5M2RmZDNjZDIzM2MzNDY3MmVjZTJjOTE2ZTFmYmUwOWFmOGFlZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjcwNWY5YWZjNjZkMzhmYzQyNmU5NWE3Njk3M2UzNGU2N2EzMDdlMmExNDBjYzc2YWYyMzNkZGE4YWM3NzJkZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjE1YmNhMTI0Y2ExZmFkYjM2NThiN2RlYzhiOTdhOTEzZDFlNWYzNzhlZmE0NTczOTE2NDA4OTc3NzJiNmYzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L2-L8",
+          "version": "repo-lines-v1:sha256:f7977f3543678098979cacaa96fdbed15be0ae857b2471858146dfce135d6e74:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU1OGRlZTg5MDNiMDBjOWIzNzMzNDJhZDcyNGIzZjQ4Y2UwNTM3NTljZWI2YzVmYTFkMWQ2MjIwMTIxOTFmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDJjMTY5ZGRmOTBiMmQxYjZhNDVhZWQyMWE0NDM2NDEyYTE1MTJhMDU0NjQxZDdmZGUxYzM0ZDg3YTNkZmI3YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_portal.yaml#L1-L5",
+          "version": "repo-lines-v1:sha256:75d8cb305898067abf80491afd9552d9109fabbb915627d82d0b3948e9b5d210:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU1OGRlZTg5MDNiMDBjOWIzNzMzNDJhZDcyNGIzZjQ4Y2UwNTM3NTljZWI2YzVmYTFkMWQ2MjIwMTIxOTFmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTIwMWY0YTVkNWUzYmNlMTQ0Yjg1MzQ1NWFiMzQ2YWQxZTcwYzQzYTY0ZWNmYzBlNmM0ZThhNTAwNzM5MmI2ZCJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L1-L5",
+          "version": "repo-lines-v1:sha256:0d545cbcc9ba81abbae30117f777aa271c014e1569aa1a5922f19ee4e62ba367:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU1OGRlZTg5MDNiMDBjOWIzNzMzNDJhZDcyNGIzZjQ4Y2UwNTM3NTljZWI2YzVmYTFkMWQ2MjIwMTIxOTFmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjNhNWM3YjZlZWVlZGFkZDlkZjNiNDYyYTJmZjYwYWY4OTI1M2IxYTFiYjI3MzBlMzAyYzM1NGJhYzU2NWY5YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdac6532058949148e403cb09ce5d718",
+      "statement": "The databrowser Swagger specification scopes its endpoints to internal use and explicitly permits them to change or be removed at any time.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_databrowser.yaml#L2-L6",
+          "version": "repo-lines-v1:sha256:b3eac5a9b75b4574fd9d6331c2e4df2e3f05c3aa14c8cb8548772c35b6782a1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlkMDNmMGZjZTMwMzRlMTI1YzEzNDc5ZjgwNDYxMjVhMTg3MDcyOThkNjRjN2E1NDgyMjg4MjgxZmVjZmQ2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRiMWI3YWI2ZjRiZDc2NDUyYjI4Yjk3NzdiOWYyMTRkNmI4ZjkwNGM1MDk0YzA1MDhhNmZlZGZhMDQ2Yzg5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2NjZjcyZWNkNjQxODUyOTE5ZjBmMDgxMjU2MDQ1ZmU2ZWY2NGQ3NjU3NDUyMzBlNmY4MmYwODU1OThhMjc0YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6cbfb120e28049ecacff7e84fb97f142",
+      "statement": "Orphan status does not make root sources unused: Community is linked by the navbar, Legal has a policy tree and download links, and orphan legal-service, legal-dap, and partner fragments participate in legal composition.",
+      "evidence": [
+        {
+          "resource": "repo://_templates/left-sidebar-bottom.html#L23-L28",
+          "version": "repo-lines-v1:sha256:8634d520ac95a02130766ae6819ee9d1ca45ccf00f39fbd22160531f1696d985:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjliZTMyNThlMzI0ZjA3Y2YwNTg5ZDU4YjRhZmMxNWI5MDg3MGRhOWFmYzVjOTEzZjk0MjI2Y2M2MzE3ZGRjNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjI2YTJkYmQ4YjliOTZiNmNmM2E3ZTE5MTk3NjM4ZmRlMTE3ZmQ0MDE2OTQ3ZTI2ZTVmNDMyMDkyN2I3OWJjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzExNjk3NzE0ZDM3ODFjNTdjOTc2ZWNjZDk1ZWE2OGQzM2Q1ZDk5NjM2MzMyZWRlZjIyNjAwY2I4ZjE0ZTNiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJjMGY4YjI2ZjZmOWQ1ZTg2OThlZjc5OGU1ZDE2ZWM5YzgyMmE0NGMzZmRjNTBlYTcyYmY2M2VlNjQzNmYwMiJ9"
+        },
+        {
+          "resource": "repo://_templates/right-menu.html#L19-L25",
+          "version": "repo-lines-v1:sha256:56310357cfedb36eccc54ee6419891f77273a15c62e50046405720f0dc3dde87:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2QyNzNjMWM3YTkyM2Q3YTM0MzlhZDM4YWNlNjU1ZDliY2NmMmJhZmYyZTc1YzBlY2EyY2RlZDVlMGU2Y2Y0ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWRjODg0YzEwMDdlOWVlMzdhMWU1Njc1YjMyOGM5ODNiZmFjNWI1YWMxY2JkOGI2ZGViN2Y4ZWU1NGMyYmQ5MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzUwMGJhY2ZjMzQ5NTVjZDE0ZTYwYjJkMmRlMzgwZTIwNzVlYjJmYWFhZDAzOWEwMDY0OThlMWMzNTViNmQwYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y1YWI2OWMzNGRkMjQ0MDhjYWFmOGQ2ODEyYjViOWMzMzE3NGRkZGY4YTIxZGE1NDdkM2NjNjQ2ZGQ5YzE4ZSJ9"
+        },
+        {
+          "resource": "repo://community.rst#L1-L7",
+          "version": "repo-lines-v1:sha256:1bb2fdc621ef05af48363b7fbe621f6e39ed6ae5e33193711db3928cc5bd9f7a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkwZTNmNzA3ODA5ZGI3ZDkyOTk5OTZlNjg5ZDYxYTY2ZmQwYmFhODQ1ZTBhMTFkZGYwNzc4N2JmMjY3MzExNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjExY2Q4MTNlZDI3NDc1NTVmNWM3ZWUyNWY0MGU3YjUzMTFhZGQyMjY5ZjczYWJlOGE2YThhMDNjMTRkMTk4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWMwMDViZjk4OTEwMWZjYjM2OWJjMTc4MzRmZjNhNTkwN2UxNjYxNGNlYzRiMzQ0NjM5YTI5NDY4ZGY4YWIxNiJ9"
+        },
+        {
+          "resource": "repo://legal-dap.rst#L1-L5",
+          "version": "repo-lines-v1:sha256:d34463f23713392b575ae8f5d55146fba93fd8a549a6134e2c1820319177e083:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkwZTNmNzA3ODA5ZGI3ZDkyOTk5OTZlNjg5ZDYxYTY2ZmQwYmFhODQ1ZTBhMTFkZGYwNzc4N2JmMjY3MzExNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDgyYWQzNDNjZDJjYTY5NjNkOWIwZDNkN2EwMjUyYjAwZmYyZTdlMGY5ODZiZmI2YzM3MzY5OGMxODEyZWQ4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDAzYTFlN2ExMzE0YmIwMDQxOWM1YmYyMTU5NjFjMjAyYTI1MWQzNDhlM2NiZjE5YjFlYmVmMjZjNGQyZmJiNiJ9"
+        },
+        {
+          "resource": "repo://legal-service.rst#L1-L5",
+          "version": "repo-lines-v1:sha256:dc78cdfa80a6630e67d5f40700fe2f1d741cda1d6d2423725645d8099c07590f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkwZTNmNzA3ODA5ZGI3ZDkyOTk5OTZlNjg5ZDYxYTY2ZmQwYmFhODQ1ZTBhMTFkZGYwNzc4N2JmMjY3MzExNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMwMTU3ODVjNDBkOTk3MDQ2MTQ3Mzc3NDU5MTlhMmFhMjk0ODk2N2ZjODM1MTgzMTQxY2QyMWQ5ZmQyMzM4ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmNhMTdkZGEwZmQ4ZWViZWYxMDExYjcyNWQ5N2JjODI0N2ZkYTIyNDM3OWRmOWEyY2U0ZDU4YWI5MDVlMjg3OSJ9"
+        },
+        {
+          "resource": "repo://legal.rst",
+          "version": "repo-file-v1:sha256:d695fac6d268c658c385f1771f7881c1d910eb097a65ebc6b24ade621dd051e3"
+        },
+        {
+          "resource": "repo://partner-agreement-part-1.rst#L1-L4",
+          "version": "repo-lines-v1:sha256:5a48a2c3a6e2e3bb953649dbc0e5d72f3a3a632012a2ce618dcbc8321fd6baab:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkwZTNmNzA3ODA5ZGI3ZDkyOTk5OTZlNjg5ZDYxYTY2ZmQwYmFhODQ1ZTBhMTFkZGYwNzc4N2JmMjY3MzExNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjgzZjQ3M2JiZjJiYjU1MjUyMjdkMGIyODVjMjkwOTc4YTVlZTlkNDEzMDliMTM3MDJlMmJjMDQyNmVlMWNlNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjY5MjlmMmI0MmJmNzFhMWVlMjUxZTMyMDk5ZWJlZjIzNmIwYjY5NTk5ODY0MWI0MmRkN2Q2OWJmOWViMTkwYSJ9"
+        },
+        {
+          "resource": "repo://partner-agreement-part-2.rst#L1-L3",
+          "version": "repo-lines-v1:sha256:25084a6929a69fc7a0a88cd9a51a322b0c93b9e1ff24d5ff487e637cd5dab44d:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjkwZTNmNzA3ODA5ZGI3ZDkyOTk5OTZlNjg5ZDYxYTY2ZmQwYmFhODQ1ZTBhMTFkZGYwNzc4N2JmMjY3MzExNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDliMzNmYWMxMGJmZGNiYmJmYThkZWM0ZjFlNGI5MjY0MmM4N2NiMGRjZmYxYTQ0ODcyN2ViMmU5YmQ1YmFlYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmNkYWYxYWRkOThhZTczZjQyOGUwYTQyYzFmMjNmYzk1M2MyYjdkMjY1ZTgyYzQ5OTVlNjZlYjc5ZGU4YjA1NyJ9"
+        },
+        {
+          "resource": "repo://partner-agreement.rst",
+          "version": "repo-file-v1:sha256:6340f290c3fb78caa5c0efa4f18d7a20b05ef40ad86d8790d27fe6b836e17f28"
+        }
+      ]
+    },
+    {
+      "id": "claim_2cde04b83741496d9ec3bcddace65ead",
+      "statement": "Configuration maintenance starts at index-service-configuration and follows general, pipe, and system guides containing common prototypes/property tables into type-specific source, sink, transform, pump, and system references; quick-reference and feature links are coupled consumers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/general/configuration-general.rst",
+          "version": "repo-file-v1:sha256:c9fe1a3229dbae2f0bb8b80d903fbdc7f9a48f61576d77f7d299c91a8ede5adb"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L19-L83",
+          "version": "repo-lines-v1:sha256:0d17a021a8fcd13a9011c3424acebb198183d13e6c8100391585f4dc71ca5c0a:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5N2YwNzJiYzE1MzJmNTI5YzJjOTRmYWQ1OGUyNWM4YzVlMjMzMWUwNWNiNTUzZjdmNjQwN2I0ZTRkYzNkNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiNzNjMDM1ZjIxNGE4OWNiNGI4OTE4ZDM2M2M5YTM3OWEyZGE4NTQyZjU1YjQwMzcwYjRmMzQyZjlhYWMzZGUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L269-L304",
+          "version": "repo-lines-v1:sha256:46d941c85debd35fa155dde09045e79fdd981cbb0bad02f76e1300372bd4d34e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiOTM5NjI4ZTljZWMzZmFmMTkzMWZjYWU1ZDYxMWE1MjE1OGQ0YzM5NDJkZTE3ZTdiNjIzNGFjZTA4ODgxY2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjZWI0N2MzMGVhMGMzM2JkNDlkYjhmOGU0MTM0YzZmODIyNDhmYjU3ZmU3NWI2Y2ExZTU0ZDkxMTI0ZjliYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5MDYyMTM5M2NiMWU4ZWFlYjgwM2YwMWI5M2ZjYzM3ZmMwMmQxNmJjYWM3ODBhMjkwY2E0NDJiOGI5MDMwYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L344-L367",
+          "version": "repo-lines-v1:sha256:6ffd266e830f4baba34c6d4f8bb6f58abb7f23fcd0530008980040a487818dec:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyZGJkZWI5NDY3MWM2NzU1MjAyNjYxNzkzMGM0NzdkOTk4MzBlODIzYWI5Yzk2NjRlNjI4NWY3NzRiZDliZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxNjU3MTAwNDIxYmUyYjE4YWY1MzA1OWU5MGU1ZTRmOTBlYWMwZTc5NGRlMzQwZmQyOWFhYjVlYzkxNDgwNTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkOWIyNmM3NDI1YTdkYzhkZmRmOWI3YTE2YWNlN2EyMzI1YWFkYzU1ODAzNmI2ZTkwZjllMTM0MTRlMmRkMzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/systems/configuration-systems.rst",
+          "version": "repo-file-v1:sha256:01b56b2e7d60db6476379e27835605ab772d57d108655b314c8ef477f5243781"
+        },
+        {
+          "resource": "repo://hub/index-service-configuration.rst",
+          "version": "repo-file-v1:sha256:aa7a16675b3f6c7f2405ecdb644954d1bcb25a919f915ac0434af0ab361d36d4"
+        },
+        {
+          "resource": "repo://hub/quick-reference.rst#L7-L78",
+          "version": "repo-lines-v1:sha256:c7498971df3d1200dc4125b83ca1045e245795386df2d0bbbe77fd9a8e05f168:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyODkxZTY5ZjJkMGEwMzFlZjZmMWFiMDdlMDZlM2UxOGIxMGRkZmViYjI0ZjJmMmU1OTY5OTVkMTgyZTFmZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwOTczYzE3NDlmNTM2MTAyOGEzOGVjMjkyYTE1YzhjNzJiMWY3ZmJkNGUxZmNlODU4NGFkZjFiN2U3ZWRjZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1YmFjZGE4YmJkYmM2N2UzMDIxOWRjNTFiODcxNWE3NmJiOTRkMTQzODBjZTkwNmY2NWJmOWQ1MzE2OWU4ZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVmNjE3ODNiMTMxNzUwYTAzYzVlYjk4Njk1Zjk0MjJhZTQ3NmU5YzUyOGVmNDFkYTUwY2YyZjgzYmEzNTdlZTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4ec31aa60db64b34b0e562484f146e6c",
+      "statement": "DTL maintenance spans the landing-page toctree, grouped operator references with labels/argument notation/examples, annotated examples, transform configuration, and quick-reference links rather than a single monolithic source.",
+      "evidence": [
+        {
+          "resource": "repo://hub/data-transformation-language.rst#L62-L96",
+          "version": "repo-lines-v1:sha256:95ce13d39a4228de2722cef33a0bb1376ccfe98e4707d297ae4641df08ba3acd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4ZjdlNzE2MTk0MzU5OWJhMjQ5N2MxODQ4YTdjODZlMTJmYWRmNDEwZDE5OWU5YWJkMTg5OTRiMzg3NDFiMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDRmNjQ3NmFiZmNkYWI4NTIwZDAyOTYzNmI0YTMzMWI2NmZiY2QwNmI0ZWJiNzgwYjE1ZDUwMzY1MDRkMTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0YjBjODVjMzkzZWM2MGQ4ZWFhYzdlYTg0Zjg4MjgyYjZhNGQ1NGJhY2YwODdhMzdmMTlkMWMzNjlhNDQ0MjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-dtl.rst#L2-L42",
+          "version": "repo-lines-v1:sha256:219bb68c1dfaa2403603de608e4ab32c62c9ffb34b64e73d8cffe5a4574ef4c5:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2YjZhYTg1NzcyNjg5NzFiNDE4ZmI2ZWJmODI5NDIzMWFjZjBmZDg2MmNjNzVkYzAzOGUzMGY5MDA5OTJmZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjcyNGIwOGFhNmYxNTExYjMzYmFmZGE3NmFiMDEwZjMwMTY0ZWIyYmM3NjhlNjU5MDY1NjE5YjA0NmUyMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoxLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/annotated-example.rst#L1-L35",
+          "version": "repo-lines-v1:sha256:402a4961159b5ff486bbaf171b3ac15bf9cba6a8dc6e4174e0243ec18cc25364:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwY2VjM2Q5NmFjNzViNTkwODUyM2I5NTIwZjEwMDU1MWZkZTM0NGY2N2MzODU3ODI4NmY2ZTQ3MGVlNmNjZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiZTI4NWIyZDczZDljMTI3ZDg3NDU4YjVjMjQ0ZDMwOTBlZjg5OTJiYjVmMzVmNzY5MmRiZGRjZTlkYzg4NjIifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-strings.rst#L1-L39",
+          "version": "repo-lines-v1:sha256:f02975e4c78aae9bbb59d6b2d048b8251081847ff6f4ae8310470fe7a365ce65:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxODhiNjQwYzM2NTdjZDk0ODlhNDU0ZmU2YmE5NDc0ZTgyZjcyOGM5OWMwMzRiNDQzNWJhNzk0NWFiNTcwMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllNTNlNDFiNzNhODMxZjA1MGY0Mjk1MjI5ODdhZDk1MDQxZGI0N2FjNThjMThjMmQ1OTlkYjA2ZDg5NWE3MmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE4NTg2Y2ZmNTdlMDU0MGYxMDk2ZjU0YWY4ODI5MGY3ZTQ0ZjI2MmM1YzRlNjhkN2I2YmQ0YWI0NjIxMzZhMWMifQ"
+        },
+        {
+          "resource": "repo://hub/quick-reference.rst#L80-L341",
+          "version": "repo-lines-v1:sha256:f85dcb204e185e73816e40d95d4483e4ad6c86ef0c6263b9273954d6be3718fc:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3YWU0Yjc3YTA1NDI2OGQ4MjQyZWYzMzVjMDZiZjcwODQ2NWNiYjdlNDhjMDU2M2UxODczNzE0YTFlNTI0NTdiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2Mjk1Y2ZlMWY4YzE0NDUxNjVkYWMzMjVjNGZiMDA2ZWU4ZWEyZjRhNDJlYjJjZjBiNWNiNTQ0N2Y3M2U0MmQ0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MjlhZDA3N2JlYzNiODQ4NjE4OGRiZWFlNjlhY2Y0YTU5NGZhNDhjY2U0MDE4NmZmOGE1MzQwYTEwNDFiZDU2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_965754737c7c464294b52dfc748b5f44",
+      "statement": "Connector documentation separates the connector input/output contract from configurable manifest, templates, and config.json building blocks, linked from the connector guide.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-config-file.rst#L1-L7",
+          "version": "repo-lines-v1:sha256:dda10dc6f168229d1228c24045b6cf0925302ce9c72ab50c8fdc70173e8b6554:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmM2YTc0MWY3NWE5ODdhYTUzOTU3NTUzODMyMDhhYWQyM2Q1MmQzN2RkNWRjZmI1YjZjNjczMWZlODkyZjQ2MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzg0MjM2OGI3OWU5ODQ5YzIyZDI1YjkwZGY3NGFkMDE2NmRlZWI0YTUyZTM4MTM1MjFmMjg1NWU2OGM0NzlmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGFmYjA3Y2FmZjNmYTc0YjAzM2VmZGVkZGVlZjc5ZWY4YTZlOGJjYzQzODMwMjU4MmM5MTZlMjFiMjM4NWRiOSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-configuration.rst",
+          "version": "repo-file-v1:sha256:b081e4d5a7b34cfb46e4561dd780ae2db39402425a2667ce71c5f3aeb7ac1372"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L1-L15",
+          "version": "repo-lines-v1:sha256:bdee8e655168439af6366dea22c16347b920b022b7c6bcabcaf1d7c66ce81609:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3Y2VjMTFhN2MyMGUxMjY3MDBkMWUyZTdhYzdjZmY4ZmJmZWQ2YWEyOGJjNmFjN2E0MGE0NDRiZGZiNTJhYTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNjU0NjdlMzgwM2FiMDcxZjI3YjY3ZjliYTgxMjkwNWIwNmRjNTI4MWU1MTgzMjdmYTVlODJiNDY5YWUzMzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhZGQwZTY5MmUzOWFmMTZiMWU4MWIxZDAyNjE4YWYzNzBiYzY0ZmMxZjBjYTllNzM1NWE1ZTNlM2MyODE5OGEifQ"
+        },
+        {
+          "resource": "repo://hub/index-connectors.rst",
+          "version": "repo-file-v1:sha256:03742d897699d6808c9e0a73314b52abbe7ee638cc7cb139a141a3ee6033279d"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c5b160cdf6d43babb9e0492f51301f3",
+      "statement": "Tutorial source changes can affect navigation and authored download inputs: learning/getting-started pages link tutorial guides, Collect Data downloads CSVs under hub/files, and baseline upload downloads JSON with an explicit configuration-overwrite warning.",
+      "evidence": [
+        {
+          "resource": "repo://hub/guide-getting-started.rst",
+          "version": "repo-file-v1:sha256:a89bbc78b117bc0375e7a57e0de655c3154ba7b5061045e8ca6b4e619bf945a5"
+        },
+        {
+          "resource": "repo://hub/index-learn.rst#L61-L69",
+          "version": "repo-lines-v1:sha256:63a39042e3140979f6b782d9ebe2c7a826cc022d3e367ed0b4abb38743ead915:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZThmN2U3MTYxOTQzNTk5YmEyNDk3YzE4NDhhN2M4NmUxMmZhZGY0MTBkMTk5ZTlhYmQxODk5NGIzODc0MWIwZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWIyOTBhZmEwNjA5OWQ5ZmZiODJmOThjMGIwZjQ3NzdlZGMzOGI5YTM5NmI3NDMxODI5Y2I4MmE4ODc0NmU2NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-collect.rst#L25-L35",
+          "version": "repo-lines-v1:sha256:7ac251deeab31485f626b61796913e1f6ae7ba3c6fff671d8dc5537eb0db836e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyMDAzYWQyNThkYmVjN2Y3Zjk0NDk1ZjUwOGQ5MzliODZlNjY0ZjFiMzRjOTZhM2JlMzQ3M2Y4MTViZTI0MjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjY2MwNjI1MGFhMWMyMmUyMDVkZjhmYmYwMWIxYWFiZGY4NWYwZDcxZDIzM2E3NTY0MDhhYzk4YTgwNDIyN2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5Nzg5ZmI0NzI2ZWQ4NjJkNjllYWVjN2U3ZGU1YzBjNWY4OTA2YzgwNzhlZWJhOTU4Y2E3MjBmZGJlNzc5NmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1NGRlNjE1Zjg1N2NmZDBmOWIzYjg1YjMxMDNhNTE4YmE3YTgwOTkwNDhlY2ZlZjNhMzE0YTRkZTZkZjllMjgifQ"
+        },
+        {
+          "resource": "repo://hub/tutorial-upload-baseline-config.rst#L1-L18",
+          "version": "repo-lines-v1:sha256:bdd18c81dced2065fa5825c9e1fb14c486d5b4573aceb60d5e922c24aa268216:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5MGUzZjcwNzgwOWRiN2Q5Mjk5OTk2ZTY4OWQ2MWE2NmZkMGJhYTg0NWUwYTExZGRmMDc3ODdiZjI2NzMxMTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMWNjODIwNmNmMGJhOWZmNjRkOGM0NTM2MDA0Nzg1YTJjY2Q1ZTA3MWMzNzUzODY0MTNiNTBlNzUyNjNkY2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmY2Y3MjZlZTMwNmJiNzhmMzZlNTc4NzAwMjk5N2FlNzliNDdkZDI4NjA5ZmI0ZTNhZmNjY2VkOTE2NTM0OGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2b83e173bad4ba3b5e8268451e05213",
+      "statement": "The local README documents creating and activating a Python 3 virtual environment, installing pip/wheel/requirements, running make html, and opening _build/html/index.html or using python3 -m http.server for search summaries.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L25",
+          "version": "repo-lines-v1:sha256:446ef5080a2a970dba92129cb8359028ffdec908524220257a860419123707a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhNmRmM2U0MmQ0MGU2OTM5MTQ4ZGZiZDNjY2E2Y2M2YjA5Yjk2N2Q4NGJkZDk5M2EzNzRkZDUxYzU2ZWI3MWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4MjIwMTYzZWRlMjA1MDJiMjhhNjYyNzY5NTA2YTllN2I3YzVkOTRhN2ExZDhlYTFjNmE1NjFhOGQyMzQ0OTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2MjhlZWFjMzJkOTQ1N2QxMWFkOGVkYjk3NDRiZDdiMzIwNGRjNWVhZDA0NWY3Y2NjNTY3NzljMDk1ZjFkNzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8c14f4aef0324a56b5fbb3b80e5adedb",
+      "statement": "The dependency toolchain is pinned, including Sphinx 4.5.0, pydata-sphinx-theme 0.8.0, docutils 0.16, OpenAPI 0.7.0, and panels 0.6.0; the README states a Python 3.7 theme minimum, CI selects Python 3.9/Ubuntu 22.04, and the root builder selects Python 3.8.12/Bullseye.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L8-L15",
+          "version": "repo-lines-v1:sha256:221e495ebab002060bdf64fdd21fe5f9043c11d3d13ed5ab5a13cde5dc85e890:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdjNDVlOTdhZjY2NzhjNjliNjlmMDBlMDdlZDc5NmYwM2I2OTlhZDQ5OGRkMjRjMjdiYzRjMjFiZmJkODQ3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhiNWE5OWJmZTM4MTkyZjZiMzgxNzVhZTk3NThiNmFjZDEyZmUwNjlmMzMxNWU5Y2EzZWExNjc3YmM0ZmIzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTExN2I3MzMyYmI2NTJhMDNlNzc4NGNhZjEwM2U5MmRlZjBhYTkwMmEwNmMwY2IyNmI3NTBmMDA4Y2IzMjU0YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDcwNjEwNGFkN2YyYjkyYmZlZmM2YTQ1MDliYTE1ZDRhMzY2ZTZkNWVlZWEwNWY0ZmJhYTUwYzdkYmQ3NzVhZiJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L5-L12",
+          "version": "repo-lines-v1:sha256:4477a61f6bf9d1ca442c2c3b88dcdc82862884d652e98e4c128f9d0d98282d70:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdjNDVlOTdhZjY2NzhjNjliNjlmMDBlMDdlZDc5NmYwM2I2OTlhZDQ5OGRkMjRjMjdiYzRjMjFiZmJkODQ3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhiNWE5OWJmZTM4MTkyZjZiMzgxNzVhZTk3NThiNmFjZDEyZmUwNjlmMzMxNWU5Y2EzZWExNjc3YmM0ZmIzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmM4MTA3NmJmMTFlZmM2YmM0MjU3N2IyOTJmODcxNjBjMTczYmQ4YmI5MzU4ODE5NTA0MmE1NDgyN2UyMWQ2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDcwNjEwNGFkN2YyYjkyYmZlZmM2YTQ1MDliYTE1ZDRhMzY2ZTZkNWVlZWEwNWY0ZmJhYTUwYzdkYmQ3NzVhZiJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L1-L1",
+          "version": "repo-lines-v1:sha256:c79a92e414fe402141b9309a689a365b29dae39ddd0d208d110e514b8405fb2e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc5YTkyZTQxNGZlNDAyMTQxYjkzMDlhNjg5YTM2NWIyOWRhZTM5ZGRkMGQyMDhkMTEwZTUxNGI4NDA1ZmIyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc5YTkyZTQxNGZlNDAyMTQxYjkzMDlhNjg5YTM2NWIyOWRhZTM5ZGRkMGQyMDhkMTEwZTUxNGI4NDA1ZmIyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDc4ZmE0MTRlYTViNTZjOWQ0MDhjYjkwMGJkNzAxZTNmZjE2ZWM1MDIzMzYwYjQ1ZDFhZTdmNjI2YTcyN2MyYSJ9"
+        },
+        {
+          "resource": "repo://README.md#L22-L22",
+          "version": "repo-lines-v1:sha256:2cbbad023662ea2bf67542337f2c08bb22caadf3e12a14709643516766ed8b87:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmNiYmFkMDIzNjYyZWEyYmY2NzU0MjMzN2YyYzA4YmIyMmNhYWRmM2UxMmExNDcwOTY0MzUxNjc2NmVkOGI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmNiYmFkMDIzNjYyZWEyYmY2NzU0MjMzN2YyYzA4YmIyMmNhYWRmM2UxMmExNDcwOTY0MzUxNjc2NmVkOGI4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzc4MDAwYjM5YjhhN2M3ZmY0YmNmZDkwMDU2OTJkYzdjNTVjYzI3ZDU4OTY4MTQ2YTU3MGVjYzQ5ZGVhNWVhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDg5ZTg5YmNmZjIxYjc4ZTM2MTY1OWFiMjY0YmU2YjBhZWU5NzQwYjYwOWUxY2ExMjIyZjhhY2I4ZWE3ZTYzYyJ9"
+        },
+        {
+          "resource": "repo://requirements.txt",
+          "version": "repo-file-v1:sha256:d5264c1fe66ef2057cd77c20aef1c9eeedafe4588dd2ab5972d1b399702c07aa"
+        }
+      ]
+    },
+    {
+      "id": "claim_3ba10d2af92d41e1a00d88dc7bf54ce5",
+      "statement": "conf.py directly indexes os.environ['VIRTUAL_ENV'] to build exclusions, so the key must exist even without a real virtual environment; CI supplies venv and the root Dockerfile supplies an empty string.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L29-L32",
+          "version": "repo-lines-v1:sha256:cc14f1578d31815f1bbbfc4b36ab7684a8cc20c6234d4f3c7a5ee3c745e61ed2:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJkOWRlMTUxOWYxNzc0MmM5Y2IzNjE0NDk0ZmFmMmNmNmQ4MzUyM2JkNTkwNDY3MWNhNTBlZTNjMDc2MzZkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczY2Q0NGUyNTU3YjEzYzY2MDc0ZjU0M2YxNzc0MGYwZDg4ZTgxNjFlMTBmMWU4ZmUzYWUyYjJiNzU0MzJiZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWVkMWFjNzViMTBhYzIxMjZlNmIxZjM0YWVkM2U3YmE2M2NlZjM0YmNjZWEzN2Y4ZTMxNjg5ZGJlNGE2ZDNmYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM4MDlkYjY3OWJhNGY4YTE0YzlkODljOWFhMzFmZGVkY2YzYmM5OGUxOGQ2NmNhZTFhMjQ3MmNjOTVjMWYyMSJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L21-L24",
+          "version": "repo-lines-v1:sha256:8cb2cc000725b9db2c51b9a91074ec10d384809cb73a5bdc2415246a941e190b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJkOWRlMTUxOWYxNzc0MmM5Y2IzNjE0NDk0ZmFmMmNmNmQ4MzUyM2JkNTkwNDY3MWNhNTBlZTNjMDc2MzZkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTAyODA2YjcxMjU2MjY0MDg1NTRhYWUzMTYxOTBiNjAwOTZiYTg1YmQ2YzBjMmQ3YTIwNGZjOWY2ZjNlNjE0MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWZjMGE1ZGU3MGI1NmExZWZjOTliY2ZhZDkzY2IyNjI2MDczY2ZlMmVmZTc0N2FlM2UxYTcwN2QyMGU5OGE3NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L34-L35",
+          "version": "repo-lines-v1:sha256:86d9bed10b6cdaa14254f130fa528c05e1694818ac84a7da5e43a8a1b22ca3be:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGY1ODg1ZWQ5MmM3ZmEwOTM0ZmM3NDZjMDI4MGI2MGFhMTY0ZDk3NjcwZDc0ODc5YjRmYmExMjQyNmU0MzYxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI4NWY2ZjU1Y2M4YTVkOGU5MWU0MjAyODBkZDcwZTVhOTg4ZTEwMTQwODdmYzQ2YWIyZDU2ZmFjODJmNTM4OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTkwMGM0NTI5ZGQ0NWMzYmNkNTJiNjI2MzgxYjdiNGM2MjIxNGZmZDQ1N2NjYWRlYTU4NGM2ZTJjZGY4ODkxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://conf.py#L95-L97",
+          "version": "repo-lines-v1:sha256:b3379627ee71bc3b01993028ffa391fb6d3f926176acba291cb8af7cefe3b129:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2FkODEwZGViMWVkN2Q2NmMxNWVkNjdjNDQwNmQ4NWEwZTA2MzFkNzZiN2VlYTg4YTA1ZTUxNWE2NTdiZWU2MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWIyODVhM2U5YWU0YzRkNzkwY2NlOTkxN2FjMzQwMDE1OGIwZTgxMDk2MzQzZjI0Njk3MTBiYzFiZTJkZDNhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzI5NjgzZTk2ZGI2YjEyZWRmNzE2NTQzZjdhYWE1NzdiODExNzQ3ZDc0MWZhNDU2MjQ0NjllY2E2NGY5NjI2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWFlYjY2Y2FlYWQyYTg0Yzg2YWFlNzBlM2M0ZWVmM2U2Yzk4ZTI3MmI0OTU2ZTJiNzIyMzcwNWQ2MjVlNzJjMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c7ed76a0d314fce97c9249ecb372fdb",
+      "statement": "Normal Unix make html requires Pandoc and TeX contract-generation tools in addition to Python/Sphinx; README platform hints differ from the CI recipes, which install a broader TeX/font/Ghostscript set and Pandoc 2.13.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L16-L23",
+          "version": "repo-lines-v1:sha256:5b3de661a3c8c13079ee3a33ddccad13ea621f097107ddef25f3bd82a7224767:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk5NjEyOThjNmU4MTFlNzA4NWRkNjIxZGNmMjdhZGEyMzU2N2NjZmU5YzY0ZGZhZTVkOTk1NjM0ZDg4Yjg5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNiYzc5OWRkZjhmNDU2YjAwOTIyNmE4ZGMwZmE0YWExNDA2MWYwNjhiNTAxOGNjYTU5OTdiMDk5NTFlMmIzNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmI0MGJlMWUyN2YyY2MyZGE2MTg3N2NjZDdiZWU1ZWE0NTQ3ZGI3ZTQ4OTU0ZjM3NTk0MmUxMDU4ZWNkMjIxZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmMxOGYxN2Q1ZjUyMWE4MjgxMGVkMGViZjBiMmVjNjQzMWQ1YWQ2Y2E5NWNhZTlkMDEwMWI4MDdjMTkwMWJhNCJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml#L13-L20",
+          "version": "repo-lines-v1:sha256:5b3de661a3c8c13079ee3a33ddccad13ea621f097107ddef25f3bd82a7224767:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk5NjEyOThjNmU4MTFlNzA4NWRkNjIxZGNmMjdhZGEyMzU2N2NjZmU5YzY0ZGZhZTVkOTk1NjM0ZDg4Yjg5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNiYzc5OWRkZjhmNDU2YjAwOTIyNmE4ZGMwZmE0YWExNDA2MWYwNjhiNTAxOGNjYTU5OTdiMDk5NTFlMmIzNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTY3NjNlZDQyMTM3MGM3MmMwMWE3MTE1MmRhYTdiNWY2NThlMTUyNGYzN2M4MjRiZjk2ZTdhZTE3NWM2OTM1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjU4MDdkODczMjExMTY1Mjc1ZTI0YjJlMDI2YWE2NDZkYzE1YTliMGI3ZmQ4MDE0NTQ5NmZjYjEwZWZkZmZlNiJ9"
+        },
+        {
+          "resource": "repo://Makefile#L62-L91",
+          "version": "repo-lines-v1:sha256:d9dbd0594190699d39deb687f9bddc72632a07ce2ae1750ed121d33316963097:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OTM4OWVmMmRjYjE5YjZjMjRhMjU4NTU4YmZlMGMwM2E4MjY3N2M0ODU0OWU3N2U3YWNmM2M3Mjg3ODI1NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmYjNjNDFkZGRlNTk4YmVmYzRhZDZhNTU2NDQxN2I5ZWNlOTk0YWNiNWFkOTUwMTljZGQxZjVlNmVlNDkxYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODYxOGM5NmZhZWNlNzBhMzkyOGVjMTYxOWZmNDk0NmVhNDJjZGViZWZjOGE5OGI0NTc1NmJiZTcxNjhmNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwNTZhYjc1NTQ2YjQ5MzZkZTNlMGU2NDViNTJhYjRjMGMwY2NkMWMyMDY1MDMzYTk3MTAxMzMwMmRkOTI2NmIifQ"
+        },
+        {
+          "resource": "repo://README.md#L15-L35",
+          "version": "repo-lines-v1:sha256:f475ff775913b2ea707f8ef0b11318376e0762e4764c056da58f14dca61a460e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExNjEzYjY1ZWNiMzFiOWYwOWRhMzI5MmRlNGYwYWYwMzc4MWI5NGJiZWNlYzE2NTRkNzI0YTNkNTM5NDJkZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkN2E1MTVjNzRmOTkwYmEwN2FkNjcxMWFkOTY2YTU4NzIwNDYxYzAyNDZkNjAzMjdjYmUwM2ZmYjU0YTIzOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0NmM4Yzg4Y2VmMjAwOTc1MWExYjRkOTg1MDgzOTVjNWZiYTI4MjZhNDk5ZDk4ZTUyN2ZhZjdlOWZjZTU2NTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6239f176889a42a7af2d7967534e2a45",
+      "statement": "The Unix Makefile defaults SPHINXOPTS to -W, checks for sphinx-build, builds from the repository root with _build/doctrees, and writes HTML to _build/html; explicitly clearing SPHINXOPTS removes the default warning-as-error option.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L10-L26",
+          "version": "repo-lines-v1:sha256:d5b2b2d704e37ab68b30143b7fc2ccdbcac80e58733d4c48f04fa3e49941cb1d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1ODY4YTM3NWYxODBkYTFkM2Q0OGI1YjE3MzFmMzY3MmM5MDIzMDRkZjhjZDMxMWY4Nzg0OThhNTIzOTE2MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2OGZiOTMzNmE3N2E2YzBlM2NmM2Q0NjBjZWMyYWNkOGNkMzMxNWNlZDE1Yzc4ODQ4MDI5YzAxOWY3MGNiYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjMTRkZWU0MmZkZjU5NzgwOWFiMWU3MGRlM2IzYzI5NDg0MzEwZDdjYmMwNzU0ODdkYTRmNjBmMjMxYWQ0M2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExMWEyMjgwYWQ5OGVjNzNjNjYzMGYwZWI0NjIzN2NmMmRjMjE4OWRiMmE1YjYxMGE0YmY4NDkxMzgyMDUxODcifQ"
+        },
+        {
+          "resource": "repo://Makefile#L90-L101",
+          "version": "repo-lines-v1:sha256:4c0e828943e9f48b6efd67dcb0370c043a442f6655edb7d1b30ecd25d0bda27b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjY2Y0MjVkODNlZmUzZTdlYTA3OTAxOWM5NTJlZjM3ZDI2YTk2OGFmMDU1Yzc5NjE1NTA4YjBkZjgyOGIyNjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzlkOTIyM2U4MGYyNDkwNDhmZDk2YjQ2MTExMWQ2MTVlMDVjMGZmNmE5MzZhOGUxMjYxZTk4MTRhZjZmMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NTUxMzljOGQ1YmE4NzQzMWNmNjQ3ZGQ5MWM0MTBkZTQ1YmYzYTg1ZTcwOTg1ZjY0NWRlNmViODc5NmNhMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNDEwM2Q4NTEyYjA5NGZiZDY0ZTk1NmIwN2NiZDg2YmNkOWRjZjliYTI0M2JjYzgyMjFiMjE1OThkOWFhMTYifQ"
+        },
+        {
+          "resource": "repo://README.md#L35-L35",
+          "version": "repo-lines-v1:sha256:4d7a515c74f990ba07ad6711ad966a58720461c0246d60327cbe03ffb54a238a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTUxNWM3NGY5OTBiYTA3YWQ2NzExYWQ5NjZhNTg3MjA0NjFjMDI0NmQ2MDMyN2NiZTAzZmZiNTRhMjM4YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTUxNWM3NGY5OTBiYTA3YWQ2NzExYWQ5NjZhNTg3MjA0NjFjMDI0NmQ2MDMyN2NiZTAzZmZiNTRhMjM4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWE3OTY1ZTM1ODllYTQ0YTg5ZDcxNmE2MTIxMzg0ZWQwMmU1OWNhNTYwMGVhMDM4MDQ5OWJlZjNlM2FiYWJjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_39dddc9bf71b44f3bc72afda361df3ee",
+      "statement": "Unix html depends on SaaS PDF/DOCX and partner DOCX generation before Sphinx: the SaaS recipe combines terms, service description, pricing, and DPA via Pandoc JSON with appendix headings, while partnerdocx consumes the included RSTX form; privacy policy is linked by Legal but absent from that SaaS assembly.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L62-L91",
+          "version": "repo-lines-v1:sha256:d9dbd0594190699d39deb687f9bddc72632a07ce2ae1750ed121d33316963097:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OTM4OWVmMmRjYjE5YjZjMjRhMjU4NTU4YmZlMGMwM2E4MjY3N2M0ODU0OWU3N2U3YWNmM2M3Mjg3ODI1NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmYjNjNDFkZGRlNTk4YmVmYzRhZDZhNTU2NDQxN2I5ZWNlOTk0YWNiNWFkOTUwMTljZGQxZjVlNmVlNDkxYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODYxOGM5NmZhZWNlNzBhMzkyOGVjMTYxOWZmNDk0NmVhNDJjZGViZWZjOGE5OGI0NTc1NmJiZTcxNjhmNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwNTZhYjc1NTQ2YjQ5MzZkZTNlMGU2NDViNTJhYjRjMGMwY2NkMWMyMDY1MDMzYTk3MTAxMzMwMmRkOTI2NmIifQ"
+        },
+        {
+          "resource": "repo://legal.rst#L7-L22",
+          "version": "repo-lines-v1:sha256:3e997746aba381cfbf9f9bda42e8166532ca07ac869ac45a69376efa0cad4025:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4ZjdlNzE2MTk0MzU5OWJhMjQ5N2MxODQ4YTdjODZlMTJmYWRmNDEwZDE5OWU5YWJkMTg5OTRiMzg3NDFiMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4MWE5M2FkYWZhNTViNjU4YjQ2NTA1NjUwYmY2OTdmZWY5YmM2NDZhZDg5NmFkNDNiYzYxYTZjNWFhOTFlMmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1NjYyYTI0NWNjYjAxOGNiZTY0YmI0MmFlYTM5NDYwY2Q3NDc4NzFkNzg1NTI2ODdmNGE4NGE2NzhjYzBjYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://partner-agreement-form.rstx#L25-L38",
+          "version": "repo-lines-v1:sha256:eeccb8225b63ccf3c1d8f6acda1fff7b9163cf7582a4cfe028d66f37535e1dc5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViNWRlZjk2ZDQzN2I5NjY5OWQ3NGRiNTllZGZiMzhmMWUzMDJkZGMyY2YyMTM4OGFlYWI4ZmI5M2ZkYWVmMGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZjJjNDNjZjZhYTk3NjIzZTA5MTY3OWJmMzJjNGY4MDBmN2ZkZWVjMWYyNzg0Mzg0NzY2MDgxYjBjNDUzY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU4NDE3MTgxZWE0MWZmNGZhNzNlMzhiZGFiYzFjYTJlMzU1YTk0ZDFkNjNhOTg1NTZlODM0NTc0MzkyMzFiMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ca3d4fa879054ac78271f623c04d3ddf",
+      "statement": "pagebreak.lua preserves TeX output while converting raw newpage/pagebreak commands and standalone form-feed paragraphs into target-specific page breaks, including OpenXML for DOCX.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L77-L86",
+          "version": "repo-lines-v1:sha256:f069655ef78ab187ddc44bdf0f81751fa78ec6b7d50857be7b603dd25f4e4072:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1MjFkYWE3ZmMzZmM3Y2Y0YjdlYjU5Y2Y3ZjY0NmI3M2JkOTU3NjdlMDdkMmY3MzE0ZDRiMjcyNDA3NjE0MDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3Y2FlNGY2ZDk0OTY2N2M0ODdhNWU0OTNlZTNkMGExNTk5MGRjMjZmM2U5ZTNhZjY0NmYxNjM0MjVkNmJjOGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiMDkxZjQxOTczNDllNGJlMjZiZTEzNzQ1ODYyZDlkMmVhOGFkYWVlNjA0MTNmMWZhYmJmODNjZTBhMTIwY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0NTUxMzljOGQ1YmE4NzQzMWNmNjQ3ZGQ5MWM0MTBkZTQ1YmYzYTg1ZTcwOTg1ZjY0NWRlNmViODc5NmNhMmIifQ"
+        },
+        {
+          "resource": "repo://pagebreak.lua#L25-L34",
+          "version": "repo-lines-v1:sha256:f7dda206f944b2f089016da8e1554db6430479e084e76e8e528598bda81522b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkMjBjMjJhNWE1YzdiNWFjMmY1ZWRmMTMwODhkOGExZTg4MWQzY2JiZmU2MTczNzYzYmY2OWM2Y2FiYmYzMTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwNWU1OGFhNGUwOWVlYjhmODY4YWFmZDRlN2FlZmUyMzljYjJiMmE1YzI2OWQ5ZWIwOGQ3Zjk0ZThhNmQxNmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0MGNjZjNkYzYyNDJlMWQwNDQ0YWQyMzY5OTVmYjNmNWEzNjI0OTM3ODAyYTBjMWM4ZTUyM2NjMjQyYzgxYWQifQ"
+        },
+        {
+          "resource": "repo://pagebreak.lua#L52-L109",
+          "version": "repo-lines-v1:sha256:889966baca15870e73484224f8fb7649d0107e61dba50954b78f7bed664771e1:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmY2VlOTkyNzc5NWM2YzNjNDA3ZTJiMDE1MDBiMzI0YmU5ODI1OGNjOThhZmFiYTE1ZjE5ODc2ZGI4ZGYxNDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NmUwZWNhZDNhYmU2NDUxM2ZiMDljYjA2NTU2NWQ0ZTdjZTYxM2Y1MjdhOWE1NDEyNmIyMThjY2U2ZGQzMDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6887f671081b4fcf820c3d2d8af4a34d",
+      "statement": "Generated contract downloads under files and the _build directory are ignored outputs; the Makefile derives the contracts from authored legal inputs rather than using exported PDF/DOCX as sources.",
+      "evidence": [
+        {
+          "resource": "repo://.gitignore#L1-L1",
+          "version": "repo-lines-v1:sha256:fde6e46547307ef7e718427de6b7e3d65c6804d77a104f59bed39cec5b1b7c51:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRlNmU0NjU0NzMwN2VmN2U3MTg0MjdkZTZiN2UzZDY1YzY4MDRkNzdhMTA0ZjU5YmVkMzljZWM1YjFiN2M1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRlNmU0NjU0NzMwN2VmN2U3MTg0MjdkZTZiN2UzZDY1YzY4MDRkNzdhMTA0ZjU5YmVkMzljZWM1YjFiN2M1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjg3YTRkODAzNzY4YjJmYWUzODE4MGQyNWFkMDI2ZWIzMmI5OTlhYmExMDA3YjZkMjA0YzMyOTA2ZTE3N2E5ZSJ9"
+        },
+        {
+          "resource": "repo://Makefile#L62-L91",
+          "version": "repo-lines-v1:sha256:d9dbd0594190699d39deb687f9bddc72632a07ce2ae1750ed121d33316963097:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OTM4OWVmMmRjYjE5YjZjMjRhMjU4NTU4YmZlMGMwM2E4MjY3N2M0ODU0OWU3N2U3YWNmM2M3Mjg3ODI1NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmYjNjNDFkZGRlNTk4YmVmYzRhZDZhNTU2NDQxN2I5ZWNlOTk0YWNiNWFkOTUwMTljZGQxZjVlNmVlNDkxYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODYxOGM5NmZhZWNlNzBhMzkyOGVjMTYxOWZmNDk0NmVhNDJjZGViZWZjOGE5OGI0NTc1NmJiZTcxNjhmNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwNTZhYjc1NTQ2YjQ5MzZkZTNlMGU2NDViNTJhYjRjMGMwY2NkMWMyMDY1MDMzYTk3MTAxMzMwMmRkOTI2NmIifQ"
+        },
+        {
+          "resource": "repo://files/.gitignore",
+          "version": "repo-file-v1:sha256:d0afb0e6678e53effbc1423bd9a8d586050f86ad4361fdb8ed98c549a6fd07b4"
+        }
+      ]
+    },
+    {
+      "id": "claim_3072ffdf83e045fdb17027f5cb85d01f",
+      "statement": "Despite the README's without-SaaS wording, html_no_saas only touches three download paths and runs the same HTML build, with no Pandoc conversion or SaaS source exclusion/tag; missing files become empty placeholders and existing files are not regenerated.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L90-L101",
+          "version": "repo-lines-v1:sha256:4c0e828943e9f48b6efd67dcb0370c043a442f6655edb7d1b30ecd25d0bda27b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjY2Y0MjVkODNlZmUzZTdlYTA3OTAxOWM5NTJlZjM3ZDI2YTk2OGFmMDU1Yzc5NjE1NTA4YjBkZjgyOGIyNjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzlkOTIyM2U4MGYyNDkwNDhmZDk2YjQ2MTExMWQ2MTVlMDVjMGZmNmE5MzZhOGUxMjYxZTk4MTRhZjZmMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NTUxMzljOGQ1YmE4NzQzMWNmNjQ3ZGQ5MWM0MTBkZTQ1YmYzYTg1ZTcwOTg1ZjY0NWRlNmViODc5NmNhMmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNDEwM2Q4NTEyYjA5NGZiZDY0ZTk1NmIwN2NiZDg2YmNkOWRjZjliYTI0M2JjYzgyMjFiMjE1OThkOWFhMTYifQ"
+        },
+        {
+          "resource": "repo://README.md#L35-L35",
+          "version": "repo-lines-v1:sha256:4d7a515c74f990ba07ad6711ad966a58720461c0246d60327cbe03ffb54a238a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTUxNWM3NGY5OTBiYTA3YWQ2NzExYWQ5NjZhNTg3MjA0NjFjMDI0NmQ2MDMyN2NiZTAzZmZiNTRhMjM4YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ3YTUxNWM3NGY5OTBiYTA3YWQ2NzExYWQ5NjZhNTg3MjA0NjFjMDI0NmQ2MDMyN2NiZTAzZmZiNTRhMjM4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWE3OTY1ZTM1ODllYTQ0YTg5ZDcxNmE2MTIxMzg0ZWQwMmU1OWNhNTYwMGVhMDM4MDQ5OWJlZjNlM2FiYWJjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://conf.py#L95-L97",
+          "version": "repo-lines-v1:sha256:b3379627ee71bc3b01993028ffa391fb6d3f926176acba291cb8af7cefe3b129:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2FkODEwZGViMWVkN2Q2NmMxNWVkNjdjNDQwNmQ4NWEwZTA2MzFkNzZiN2VlYTg4YTA1ZTUxNWE2NTdiZWU2MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWIyODVhM2U5YWU0YzRkNzkwY2NlOTkxN2FjMzQwMDE1OGIwZTgxMDk2MzQzZjI0Njk3MTBiYzFiZTJkZDNhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzI5NjgzZTk2ZGI2YjEyZWRmNzE2NTQzZjdhYWE1NzdiODExNzQ3ZDc0MWZhNDU2MjQ0NjllY2E2NGY5NjI2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWFlYjY2Y2FlYWQyYTg0Yzg2YWFlNzBlM2M0ZWVmM2U2Yzk4ZTI3MmI0OTU2ZTJiNzIyMzcwNWQ2MjVlNzJjMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6c4396615ffa4b49be49ba7510b7727e",
+      "statement": "The Unix Makefile offers alternative Sphinx builders directly without html's legal-generation prerequisites; LaTeX PDF and Info targets add external tool steps, and gettext uses a separate environment rather than shared doctrees.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L103-L216",
+          "version": "repo-lines-v1:sha256:9a578bad8e30e0cc6093cb180195eaf71f237d2f22b80c38f33cb9d6dd24fd13:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzYmFmMzJjZTJhZDlmZmFhMTQ3NjlhOTE2MmFjNjQ3NjZmOTU5OTA3NTY3OGNjZjI4NWJlMjUwZmQwNTBjZTllIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4ZTFmNzQwYjBkODlhMjlmZmNhNWRkMDJmNGM2OTY2ODc1ZjgxOTA4ZjE2OTUxZTcwOWQ2OWQwMmY0MThjN2QxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MDU2YWI3NTU0NmI0OTM2ZGUzZTBlNjQ1YjUyYWI0YzBjMGNjZDFjMjA2NTAzM2E5NzEwMTMzMDJkZDkyNjZiIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiN2IyMTE0N2E5YmFmY2FlMjA4Y2NlNDQ0NTc2NGQ3YTgwZDY3NDZhZjEyZTU0ZDM3NmUzMTAyZjgzMzRlODVjIn0"
+        },
+        {
+          "resource": "repo://Makefile#L21-L55",
+          "version": "repo-lines-v1:sha256:ecd5bc633641c8ecbde6fa3d634be2548ac4c0c917a911a78fbc028ebb9bfb6a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1Y2U4NWIxMmY4ZWJmMzYzMTQwNDg4YWJmNGRkNTlmMjRmYmQ0ZmM2ZTQxM2IwZDBjMzBiZTZiNzYyMjEyZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkYmI0MWJkZjk1NzI1NmY3Y2U5YTdkMDQzZDM4ODA0ZmY1NDA2YTA1ZWQ0MzgxMTdlODI1ODhjNTYwN2MxZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVmODE1ZWY2YjI2NzU2Yjc4ZjVmZmFkY2VlZTAyZmM1NjcyZmViYTllODA3MTM2NzAzMmU4MTk2M2ViMjExODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxODY5YWMxZThkZGE0MTg2NTA4ZTVmNDRmZjk1OTYzNTY3Y2I5OTY2NjYyNWZkYTAzMWI1ODFmNGUzZjQ4NDUifQ"
+        },
+        {
+          "resource": "repo://Makefile#L228-L236",
+          "version": "repo-lines-v1:sha256:c93c6587e469089799a5b2b9e98199d467b32ef10c5a4dddbb63f6ded78766a6:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWJjOGQ4NDQwOTQ5YzRiYzAwYzc5Y2IzMjdmNDNlNjFjZWU0NzRkOGUwNzVmYmQ2NDhlODU0NGI0Y2Q4Y2QxNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNiZjkwYjdlM2JmMWMzMDUzYzM5ZGExMWRhNTVlODkyNzhiM2ZmOTU4MWU2YmE3ZTU0ODljNjAwYmQ4ODVmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWE3ZDVlZmRhMzIzMzZkMmRkMmRmYzI2MTBkZWEyYTQwYzZhMmI2NDU4ZWRjYWY5NWMwYzIzZDE5ODY2YzM5OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmVkNTI3MzNiNjUxMDE4NmZkYmIwZTkzMDI1OWQ1MzI2NTZhMDUyYzUyNGQ2ZjU0OTQyNjY0ZDI0MmYyMjFhYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9094855b8d1423d97ae5d869df98186",
+      "statement": "LaTeX, man-page, and Texinfo document lists are commented out in conf.py, so exposed targets alone do not establish a configured and verified alternative release artifact.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L160-L200",
+          "version": "repo-lines-v1:sha256:ccc97964bec0d44538fbf2fbf58dc4f307d7648cf55bbedf16bc8da4aa66afb2:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxZDM3YjgyOThlOGI2N2UyMDA5MDkyZDVkNGM4M2NjZTllNzE3Y2M2ZjY2NGExNWM2MDU4MmI0OGU1OGE0OTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkN2E5NTIzOGMzNmRmYTBjMDM4Y2JiYjU0ZDdkYjQ5NGIxYTc2Mzc5ZmUxNDA4ZjlhZjVjYjZkYWFjMzUyODAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxZjUzZjEzZWRjMDNkYTZmZTgwY2U0ZjgzYjZmZjdlZmQ3ZGMyZWM3NjMxMmE4ZGRiMjllMjFmMjRiMDQ4YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwZjUyMDM0NDUyMTAxM2IwMTc5NmU4NjMyMWI1MGMzNjg3ZmI5NWNlZjNkMDZkYTk4MGIzMDRiOTQ1OTkwMjAifQ"
+        },
+        {
+          "resource": "repo://conf.py#L262-L268",
+          "version": "repo-lines-v1:sha256:254886e71d43b7c856f1d379da4d1c67d47451b3a0237d6b65dfa1116462f3c9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc4ZDYxN2Q0NDIyYTQwZWI3NjBlYjc1NzNhYzcxMDYwYmQ5YTFhZGExNzAyYjYwNzc1MDFmZTRkMjc1MTQzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTEwNDM4MzZkYTA2OTkxMTBmNmQ0NDA0NDY1NzA0YmRkMmZmODZmNDRmYTVlN2JkNDJhZTY4NTM0NGY2ODkxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmFlYzk4N2QxZDE4ZjEwODIwZTg3ZTY4NGZlNjkzMWRkNWMxNWY3ZjE2NzNlMTliOTQwNjM1YzY5NWI1NjcwMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcxYzlmODcwZGJiNWY5MzhhZDliOWRmMzZjNjNmNjAzMzRlNzdjYWJhMGY1ZTY5YzdlYTdlZmM3MjMwNzczZiJ9"
+        },
+        {
+          "resource": "repo://conf.py#L293-L298",
+          "version": "repo-lines-v1:sha256:e2472f650168be8ac1b5ee6520730407e127ce78b18ddb753289f15c1152dba9:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTg5Y2I3ZTE4NDYxMWRiZDE5ZDliN2JjOWFlMzUwZWM0OGM3ZWJhMTY1MzQ2M2U4MGFiMTcxZTU5NjI3MDc3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTEwNDM4MzZkYTA2OTkxMTBmNmQ0NDA0NDY1NzA0YmRkMmZmODZmNDRmYTVlN2JkNDJhZTY4NTM0NGY2ODkxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDI0MmRkYWE4M2Q0MmFlMmRkMDhkMThkN2M1MjhhYzRiZDI4ODk3MDY2MzI5NDRmZTY5ZTVjMzBjZDY0Y2MyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGU5YTA4N2I3MTc5NjFjOWJjMGZjZDNlZTQ3MDlmNjk4NzIwM2Y2MDk0NDMzYzA5NzM5YjljYzMwNjA5ODcyMiJ9"
+        },
+        {
+          "resource": "repo://conf.py#L306-L313",
+          "version": "repo-lines-v1:sha256:9f44669163c46825a3f66ee3f1ce51e1ed80d908bf160e586b1e52a330cbbfee:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc2ZjRiMTlkNTEwZmE2ODJhNThjZDFlYzgyOWRkMDA5NWZjYzc0N2M1YTY3YjQ1ZThiNzg4ZmZkMTEzOTE2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTEwNDM4MzZkYTA2OTkxMTBmNmQ0NDA0NDY1NzA0YmRkMmZmODZmNDRmYTVlN2JkNDJhZTY4NTM0NGY2ODkxZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ2NDRkZTY0ZmRiNGRmODliOGMyNGY0MDUyMWRlNzcwMTY5NTIxNGQxY2ZjMTJkOGI2NGU0ZjA2OGFiZTJhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzg4NWI2ZTc0Yzk0MjE2NjExMGM4NjJkMGEyZTdmNzIzM2UxZWE0YjM0N2VkNzE2YjQwYTJmMjBkYzNjN2IwZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_04e5cd15423842adaf4c1330d973e670",
+      "statement": "make.bat is not equivalent to Unix make html: it does not default SPHINXOPTS to -W, has a Python-module fallback for missing sphinx-build, invokes HTML directly, and lacks the Unix contract-generation, html_no_saas, and Docker targets.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L238-L243",
+          "version": "repo-lines-v1:sha256:15cd3ccf08c5ad0888e1ad5816d8c73dd681051f0b2323327ddb2df9d32f5484:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmUwNjY3ODY1ZmQ1OTk0MGMzZDg4MGMyOGM1Y2U2NzI0OTk1MmQxYTYyMTU5YjE3ZTQ2ODk1YzdiMDMxMjM0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU3NjY3ZjE5ZTY0ODhhMDdlZjA0MmMyOWYyNTBiNTRmNzU3ZWU5YWZhZjQxMmUxZDdmYmU0OGJlZmQyNzU1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUxMjJhOTM3MmQ0ZmUxYTZjNDcxNjBhNzM3ZjMzOWM0OWE5ZGQzNDQzZTIyNDI1NmEzOGI0ZTE2NDkxNGZjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://Makefile#L62-L101",
+          "version": "repo-lines-v1:sha256:c398193f412c09dc91d89bdcb05a981d96ca60a61b39618abf4045996f140918:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OTM4OWVmMmRjYjE5YjZjMjRhMjU4NTU4YmZlMGMwM2E4MjY3N2M0ODU0OWU3N2U3YWNmM2M3Mjg3ODI1NWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzlkOTIyM2U4MGYyNDkwNDhmZDk2YjQ2MTExMWQ2MTVlMDVjMGZmNmE5MzZhOGUxMjYxZTk4MTRhZjZmMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ODYxOGM5NmZhZWNlNzBhMzkyOGVjMTYxOWZmNDk0NmVhNDJjZGViZWZjOGE5OGI0NTc1NmJiZTcxNjhmNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNDEwM2Q4NTEyYjA5NGZiZDY0ZTk1NmIwN2NiZDg2YmNkOWRjZjliYTI0M2JjYzgyMjFiMjE1OThkOWFhMTYifQ"
+        },
+        {
+          "resource": "repo://make.bat",
+          "version": "repo-file-v1:sha256:2aebc84e49ae810372e041021b1933b870cd59cfa0e28c84219fa7f9c639691b"
+        },
+        {
+          "resource": "repo://make.bat#L5-L14",
+          "version": "repo-lines-v1:sha256:4e40c012eaedff686fc6e9a5e059ea22c0ffd5dc80a773329781eb7e9e2729dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwNGVmZDA4MTU5ZWMxMDA2MDM3NTM1YzZhZDFjMDVmYWJjOWNmNmQ5M2Q2ODIwYzg0YWM3MTkzNjY4MjBmNTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliMzllMDIyZTBkODU0MTIwMDAzZDc5MGMyOGI3NTk2MmVkZDMwMzc1NmQ1MTMzM2RmNzQ1Y2ZiODZlYTExY2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMjJjMDVhYTM2ZjM2ODVkNjU3N2FmOWJlMWJkZGZiMTA1MTA0MGQxNzEyMTI3YmJjYTYyOTg3ODM0Y2U2NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhNWJhODYyNjUxMTc4ZTc5MmQ1MTk5YTVjYjhlMWQ1NTRhMjEzYWExM2Q0OTkzMTQ3OWEyZjY3NTMxZTg2NTgifQ"
+        },
+        {
+          "resource": "repo://make.bat#L51-L81",
+          "version": "repo-lines-v1:sha256:907ac157b282a31a379556bf0882637d5ba49bcd966803f1f29f09324316d1ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhMTRiMjM3ZjBhZTQzMDE3NzllN2RlY2JjZTFhMjk4MjViZGU1NTI0YzNhOWFhNzUwNDgyZDI5ODAyYzJmOWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliMzllMDIyZTBkODU0MTIwMDAzZDc5MGMyOGI3NTk2MmVkZDMwMzc1NmQ1MTMzM2RmNzQ1Y2ZiODZlYTExY2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlNmNkMjRmMmVjMWVmNGJkMzhiYzBkZjAxYjhkNThjMjE2ZGI2MDYzOTlhZTNkMGJhNDQ4NDkzNGQ0MTE2YzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3NjY2MTkwNWRhMzAzNTBjNDVlYjIzMzY4Njc4NWMzYmE5YTFkZjRjNGM4MDI2MGZkNmQ4OGI5Mjg3Y2RhMjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4dcad3ad628445d3a10e37893d87b903",
+      "statement": "External-link validation is available through make linkcheck with output at _build/linkcheck/output.txt, but neither inspected PR nor master workflow invokes it.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml",
+          "version": "repo-file-v1:sha256:962057d689690ebd65f24686ccc8984844fa1548a615094446ee787cbc8414db"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml",
+          "version": "repo-file-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696"
+        },
+        {
+          "resource": "repo://Makefile#L212-L216",
+          "version": "repo-lines-v1:sha256:e2c892e2921bf3ecaf8eed21390d5cf285c4ec8da435f6d4335a7889239213da:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGEwOTRiMDgzM2FhNTg3ZGM1OWExMjcxMTk0ODI0YTNjNTgzZmI2MTM5YWUwYjM4YTAyODU4MDJiYzljNjg3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGUxZjc0MGIwZDg5YTI5ZmZjYTVkZDAyZjRjNjk2Njg3NWY4MTkwOGYxNjk1MWU3MDlkNjlkMDJmNDE4YzdkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmJmNzQzZDc3OGYxZTM5NGZkZmExYjhhNDNmM2ViNjE4MDk2MzFjMGYwZmM1ODgxMmU2NTBmZDgzZTE1YzE4NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdiMjExNDdhOWJhZmNhZTIwOGNjZTQ0NDU3NjRkN2E4MGQ2NzQ2YWYxMmU1NGQzNzZlMzEwMmY4MzM0ZTg1YyJ9"
+        },
+        {
+          "resource": "repo://Makefile#L53-L55",
+          "version": "repo-lines-v1:sha256:c8cd0742264065766584ed5992d5bea5afd116605fa2b120f4f668af026295c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFlMmY2NjY4OTg2ZGYwNjYzMWEzNGQyYjk2N2M1NjA3NzVlZWI1Y2E0YTEwMjRkOGY1YjJiNzhmYjNhNjRjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2RiYjQxYmRmOTU3MjU2ZjdjZTlhN2QwNDNkMzg4MDRmZjU0MDZhMDVlZDQzODExN2U4MjU4OGM1NjA3YzFmNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGQzNjczMWU5NTg5YmNhNmU1YWFkODdmNzQ0NzliYzFmYTdhODY4ZWQ4MmM4ZDU2YTg5NjlkZDQ0YmRmZTYwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjE4NjlhYzFlOGRkYTQxODY1MDhlNWY0NGZmOTU5NjM1NjdjYjk5NjY2NjI1ZmRhMDMxYjU4MWY0ZTNmNDg0NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c027ca2541b04ea18dcae654dd11b882",
+      "statement": "Doctest and coverage targets are advertised conditionally, but conf.py enables neither sphinx.ext.doctest nor sphinx.ext.coverage, so these are not an enabled documentation test suite.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L218-L226",
+          "version": "repo-lines-v1:sha256:308fe2d497d03482bbc7b618d6c4e780b2d26ca3fbbdbe83f3cd0bea055860d3:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjM1ODIyMGUzNWJjZjYwOGQ2NTY1ZDg2MDhlOGNkYzZmZTc5NGMxMDViNGQ3Y2NiMmZkMjFhNzNlOTYzYzM3MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ5MTJkNzZiNDg2YmFlMDhjNjg0ZjA2OTYyMjVkZmY0ZjkyYTBlN2ViMjYzNzA2NjY5MWQzYjkyMjY2ZDhiMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWQxOTBhZTI5NjEwZGNjMDcwMWY4MTQyM2RkNjUyYjA5YmM3YzNmYmMzZWQ2YjA1YjdjYzYxNGJmZGM1YmNiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDliNTBkNmExMmM1MWI0YjE0ZDA5NWQ3Yzc0MTY5YzViYTExZjJhYzU0ZDc3NGMwOGQ4ODMwMTM2OWRkZWMyNyJ9"
+        },
+        {
+          "resource": "repo://Makefile#L54-L55",
+          "version": "repo-lines-v1:sha256:5db251f6c30f9ce944e8558d70da006a7b228e5f1da1f4167e7c3e14284b5b6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzkyMGQxZmRiY2NiYmFmOWI0YmMxZDc0MDNjOWU3ODg5ZTcyNzc2ZDFhMDY4ZTYzMjlhYWNhNzgyMDNhMDExZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2RiYjQxYmRmOTU3MjU2ZjdjZTlhN2QwNDNkMzg4MDRmZjU0MDZhMDVlZDQzODExN2U4MjU4OGM1NjA3YzFmNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTZiNjEwMTJlNDg1OGFkNmY4OWM0MjczOGQ4OGFjNTY3OGQ2MmMxNzYzZmJjZjg2YmI1MTUyYWYwNzNhNDZlOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjE4NjlhYzFlOGRkYTQxODY1MDhlNWY0NGZmOTU5NjM1NjdjYjk5NjY2NjI1ZmRhMDMxYjU4MWY0ZTNmNDg0NSJ9"
+        },
+        {
+          "resource": "repo://conf.py#L29-L36",
+          "version": "repo-lines-v1:sha256:101036f64dc30b882886c4f36afcf1bbe0ac20d8bb00d6dd6f69f459536aa6ef:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA3MmVhYWYzNmNlYzlhNzkzMzAzYjNlYjI2ZmQyODU1NTI1OTFhNTliOTUwNWVmODY3N2UwNGYzY2RmNzhjNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdjMzQyZjA2Njg4NjY3YWU0YWFlOGUwNmNiYjI3YzdjYjQ3NTMwYzNkNWUxYjEwNzFlZWZlMmQ4ZDE1ZDZjMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmFkOWZkYzA0Mzg2MmVhMDNmYmFjOGQ3MjM2NDg2ZGFlNTMwNWZmYjhjMzkwNmY1Y2YwMGQ2N2Q0ODA2NGRiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjgwNDEyMWQyZGY5YjBiMDA0ODAzZTc5ODg4N2RhMjE4OGE1NTRjMzk1NTgyZTUxODI3MDZiOGFiMGU3MWFmYyJ9"
+        },
+        {
+          "resource": "repo://make.bat#L38-L40",
+          "version": "repo-lines-v1:sha256:67e1876cad09cf98cac9000f9b88e4535c373d1c1b7c874a0cbcf3e744696593:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgyZDY1OWE2MTIxMDY3NGViYmM0NDg3MjVhMWUzZDc5NjNjMTgxNjVlNGYyYjVhZTMwZGJhM2M4M2VhNDg5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc1ODNkNjViOGEzM2JhMDY5ZWE3NThkNGY5ODMyZTM5MzY3MWQ2NzkxZmE4YjJlYjgxM2NiZmIyYTFiMjYzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzJjYTUwNGQ1YjllNmVhY2I0MDk0Mzk3YzJiODBhZmNjNmZmNTQzMTcwMTQ4MzlhNGQwNzEwY2ZiMGE5YTQ2ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2ExOWNlNjNmYWVlYjgyZDIzYmU0ZmQ0M2I5OTk3ODBlMzBmNTZiYTkzMDRiZThiNWNhZWI4NjlmNTE0YzEzNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a316890d29124c8c98f35cc425e1eb04",
+      "statement": "The PR workflow runs on pull_request and validates through make html with contract tools and VIRTUAL_ENV=venv; it has no image publishing/deployment step, and the PR/master workflows contain no separate schema-validation, lint, or example-execution step.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml",
+          "version": "repo-file-v1:sha256:962057d689690ebd65f24686ccc8984844fa1548a615094446ee787cbc8414db"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml",
+          "version": "repo-file-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9a2b805a1734c76838bb1e9228584f6",
+      "statement": "HTML presentation is wired through pydata_sphinx_theme, _templates, _static/css/custom.css, logo/favicon assets, configured search/navigation sidebars, and custom navbar/footer options; enabled extensions provide OpenAPI, panels, not-found pages, copy buttons, redirects, argparse, and Jinja.",
+      "evidence": [
+        {
+          "resource": "repo://conf.py#L135-L178",
+          "version": "repo-lines-v1:sha256:c736c150cfaddd2adb9ea1e80a2354c8ccf300fce23417197216b33831d7aa00:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1YTRiMzcwYzQxMDMxZjJkMTk2ZDVkNGMwMzVlNzMyY2QwODJkNmNmNWI3NzM1NDdhNzY5Y2NlNzRkZjU3NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1YzQwMDEyYzkyZDU4MWNkN2Y0NWU3ZWQ5MWY5MzlkZmM1MDA3OTQ1ODA1MTIzOWYxMTNjZTQxZjQ3NDJkMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwODE3MjVjYTQxNzkzMmQyOTM4NDcwMDcxMTQ4ZjExZTRhZTA3ZTFmOGYwN2EyNDY1MjkzZTQxNDVhYTI0YmQifQ"
+        },
+        {
+          "resource": "repo://conf.py#L193-L197",
+          "version": "repo-lines-v1:sha256:6f5a40148afa18f7df9b333c6009224e5f3044fd17f1a2d0e59a0cb1bdab3d75:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWUwYTM1NDQ3NDE2M2NmNmM0NTA1YjNhNTQzYmYzOTg3NTU3OGUyYmE2ZWNjN2Y1YzAyMWIzOTI5M2NmMDliNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWNhMjllYmI1ZWZjNTRjOTMzZWU5ZjA3YjU5Mzc2YjVkZTU1N2ZlYTcyYjBlMThhYzExYTI3OTIzMGZkM2IxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjEzMWJiNTRlOTM5OWExYjU5MDcyZWVjOTNkNmE4NDlhZjE0ZGFmOWUwNWE2ZGJlYzE1MjliYTIwODdlZDk0NyJ9"
+        },
+        {
+          "resource": "repo://conf.py#L29-L55",
+          "version": "repo-lines-v1:sha256:5c04a286d471edcde5301b4c00eca5fa74d91fb9d76fb21d2a546ba4a397ec4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwNzJlYWFmMzZjZWM5YTc5MzMwM2IzZWIyNmZkMjg1NTUyNTkxYTU5Yjk1MDVlZjg2NzdlMDRmM2NkZjc4YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3MTljYTBjNGUzMzY0YTQyMjczMjNmYmI1MjA5ZGUwZmYyNWEzNmQ4Zjk4MzNiZTk2NmE3ZTQ5MDIzOWZjMDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhZDlmZGMwNDM4NjJlYTAzZmJhYzhkNzIzNjQ4NmRhZTUzMDVmZmI4YzM5MDZmNWNmMDBkNjdkNDgwNjRkYjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzYmJiZDg4ZGJmODY4ZWNiOThlZTQ3NWU5MTgwYTM3YjQ1ZTJjNjZjMzM4NWJlYWQyOTNiZjZhNDE4MTZiODcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f2fa5226eeee44548d47d0a96fb01003",
+      "statement": "The layout template extends the upstream layout and defines footer/body overrides, analytics/marketing embeds, and conditional breadcrumbs; its exclusions compare bare page names rather than hub-prefixed document names, while breadcrumb links use pathto(master_doc) and parent links.",
+      "evidence": [
+        {
+          "resource": "repo://_templates/breadcrumb.html",
+          "version": "repo-file-v1:sha256:581e352b03b2b2c89ce9bcabdb13c86a53722a4966e3c554887bbee253242432"
+        },
+        {
+          "resource": "repo://_templates/layout.html",
+          "version": "repo-file-v1:sha256:6c990d6f0a2fe4d49ceb2e351f755c108cee0a54de64ec3c52bcfafd65ad957f"
+        },
+        {
+          "resource": "repo://conf.py#L65-L66",
+          "version": "repo-lines-v1:sha256:7ab24414bea82b585c991ec8514b86d40a3d8addd7c2c35c5277b71e689f1740:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjRlYWNlOWIwMzQ0Njg3NTg1OTkzODkxN2Q3ZGIyZDZmYzdjY2IzZTIxOTRkMDQyMDY0ZmFlZGQyNWE5NTRkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTZhYTFiNDNlNzgyODZlZGE2MzY3NDkxN2MyNDBkM2EwMzE3YjNjM2RjYmEyOWI4Y2NlNjAyODU3NThiYmFlYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmY0YTJkZjcxZjU1ZGE2MWI1YTNlMjJjMjlkYzZlMGJiYTE1MmM1MmY5NjNmYjMyN2E2YTliOGRiMTVmYzg4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTIzNjUzNjM1NjMyN2I3MjFlZGRhZDc2ODZkODNlOWFjYjY0N2JhOTFjNzgwMWQ0Zjg5YzU3ZjllMTRjZDc5YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d065999fa6f431fa6c4dd085c41604a",
+      "statement": "Custom navigation has deployment-path assumptions: the right menu links Community through /community.html plus external Support/Sign up links, the footer links Legal/Terms to the public docs host, and a separate template supplies ISO footer text.",
+      "evidence": [
+        {
+          "resource": "repo://_templates/iso.html",
+          "version": "repo-file-v1:sha256:56b204d222b2c1cd715ae1a7dc965ff6b020a85663884431cd7c518e42dc4667"
+        },
+        {
+          "resource": "repo://_templates/left-sidebar-bottom.html#L23-L28",
+          "version": "repo-lines-v1:sha256:8634d520ac95a02130766ae6819ee9d1ca45ccf00f39fbd22160531f1696d985:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjliZTMyNThlMzI0ZjA3Y2YwNTg5ZDU4YjRhZmMxNWI5MDg3MGRhOWFmYzVjOTEzZjk0MjI2Y2M2MzE3ZGRjNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjI2YTJkYmQ4YjliOTZiNmNmM2E3ZTE5MTk3NjM4ZmRlMTE3ZmQ0MDE2OTQ3ZTI2ZTVmNDMyMDkyN2I3OWJjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzExNjk3NzE0ZDM3ODFjNTdjOTc2ZWNjZDk1ZWE2OGQzM2Q1ZDk5NjM2MzMyZWRlZjIyNjAwY2I4ZjE0ZTNiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJjMGY4YjI2ZjZmOWQ1ZTg2OThlZjc5OGU1ZDE2ZWM5YzgyMmE0NGMzZmRjNTBlYTcyYmY2M2VlNjQzNmYwMiJ9"
+        },
+        {
+          "resource": "repo://_templates/right-menu.html#L19-L37",
+          "version": "repo-lines-v1:sha256:06749d283a5caff542698d46e30adaf8fc4af1476e54843366eca9f4ac02cfc6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkMjczYzFjN2E5MjNkN2EzNDM5YWQzOGFjZTY1NWQ5YmNjZjJiYWZmMmU3NWMwZWNhMmNkZWQ1ZTBlNmNmNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVmNGE0MDQ0YTlkYjZhMGRiODg0OWVhMDFkOWQwMjIwOWE1ZDI5MTNjMTBhNmJmY2Q5YjYzYmNiMjYxM2VkYjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1MDBiYWNmYzM0OTU1Y2QxNGU2MGIyZDJkZTM4MGUyMDc1ZWIyZmFhYWQwMzlhMDA2NDk4ZTFjMzU1YjZkMGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhZTJhNTNiYjMxMTIzMDg4MzE0MDYyMjkxNmI3NzliYjQ1MDM0OTRjZjk2NjA3NDAwOTAxMzZlMDFlMzlkZmUifQ"
+        },
+        {
+          "resource": "repo://conf.py#L140-L146",
+          "version": "repo-lines-v1:sha256:701a92de8c26fb313f24a13afdbc76043f438a2f8de0ec86679e4615bef98c19:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIzOGJjM2QxMGVhMDQ3ZGE1NmZjYjYwMWQ1NDgzZDI5MTRhMzdlN2Q1NGVmOWFmMmFiYzdkOWVhYTM3OGI3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzJmZTZhNjYxZWNmZWQxYzJmZTNkYjQ5YThkMGEyNWFmYWI4MWUwMmY4YzUwMmNlZWI1NTFmOTNkMmM3MzRjNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDZkMGRkNTM0YzU5YmM2Y2EyOWRjNGQzMWJiMDlhYWI0M2NhMzg4NThkZTJlMzA1MDNhYTdkNzNmYzVhYjA1OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTRkNzZmYWUzOTcwYjRmZWU5NWYwYWIyNjAzZDM1Y2U0N2JjMjc0ZWJkMjM1Yjk5ZjA0ZGJmYjQ4N2JjYWMwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4fa88419828249efba28b8b8d656ab5e",
+      "statement": "custom.css imports remote fonts and overrides responsive navigation, breadcrumbs, sidebars, cards/buttons, code tables, and footer styling; source-linked figures and downloads also exist outside _static, such as databrowser-guide-images and hub/files.",
+      "evidence": [
+        {
+          "resource": "repo://_static/css/custom.css",
+          "version": "repo-file-v1:sha256:e14fccaafaa3524dddd28f269c5ec08c92175273b2fb308b44f1ccfc74e07934"
+        },
+        {
+          "resource": "repo://hub/databrowser-guide.rst#L697-L701",
+          "version": "repo-lines-v1:sha256:8b6642346c2d718fce26bf8d19d6e539e9e1ae11293a67f544981466f78b8567:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJjZjRjYWMxMzNmNTEwN2Y5OTYyYzcxY2E2ZTVmNjU2ZmE4MzE4NDllZmI4ZGI2MDc1ZGU0YzMzMDA4MWRhNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQ2MmNkMGM3NmY3NTRmOWQ1Y2Y2ZDMyNmE4NzJmMGI2ZDRiMGM3NDc1ZDRlYWM3ZGZiZDM1NmRhMzU3ODcyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDhmMGQzYmU1ODBlNGZiOTllYWZkYzExNmFkNTcwNTNlYzkxMWY0ZDQ4ZDBmOTJkZTk4MWJjMzE0Mzc1YzMzNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTY5ZWM4N2FhOGRhZTUxMjU3MTZjZDI0NWNjMmVkMGRkNDY1NjI4OWNmMjY0MDE5M2YyZmJlZjA4NjZkMzZiZSJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-getting-started-collect.rst#L29-L29",
+          "version": "repo-lines-v1:sha256:eb45ec1bc0afc77e7c09e4c990fe0008b5c7c86b96e2aef1c0dcf35e3c5e49fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI0NWVjMWJjMGFmYzc3ZTdjMDllNGM5OTBmZTAwMDhiNWM3Yzg2Yjk2ZTJhZWYxYzBkY2YzNWUzYzVlNDlmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI0NWVjMWJjMGFmYzc3ZTdjMDllNGM5OTBmZTAwMDhiNWM3Yzg2Yjk2ZTJhZWYxYzBkY2YzNWUzYzVlNDlmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjFkYzgyMTY4OWEyNGRjOWYzMjQ4OGM5NGNjYTI1YjMxNmViNTJlMWMwM2EwMDViMjZiMDhjNzUyOWM1ZjVjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmZmNzM2MTUwYTlkODY0ZGQ2NDgwMTIwMzkyOGJiNTg3ZDA2ZWUyNGRhY2IwMWY0OGU1Yjc3YmIzN2JhMjBkMCJ9"
+        },
+        {
+          "resource": "repo://hub/tutorial-upload-baseline-config.rst#L14-L14",
+          "version": "repo-lines-v1:sha256:639c462b58a7dd9fc0f45eb1c2691648ccb83919f436c48743a087edf7ac49c7:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjM5YzQ2MmI1OGE3ZGQ5ZmMwZjQ1ZWIxYzI2OTE2NDhjY2I4MzkxOWY0MzZjNDg3NDNhMDg3ZWRmN2FjNDljNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjM5YzQ2MmI1OGE3ZGQ5ZmMwZjQ1ZWIxYzI2OTE2NDhjY2I4MzkxOWY0MzZjNDg3NDNhMDg3ZWRmN2FjNDljNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQ5NDBjNDgzNDk2Mjk3ZjQ3MzU5NTIyYzg2ZDA3ZTY0NDk0ODQ0NjM3NWViMWM2ODA4OWQ1ZmY1OWQ2N2ZjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjg3ODU4OGMyNDhhOTNlM2RlYzJjNjRmMzY4ZmQ5ZTBiNWQ3MjhhYTBlNjIzMDc2MGUzZWU1NzhkYjA1ZjA3MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_22bac6fdfde0492bac94cc4ab6c50b18",
+      "statement": "The older _static/custom.js copy-button code depends on jQuery and Clipboard, but conf.py does not register that asset via html_js_files and instead enables sphinx_copybutton; asset presence alone does not establish activation.",
+      "evidence": [
+        {
+          "resource": "repo://_static/custom.js",
+          "version": "repo-file-v1:sha256:862033ac91fa4aea62bad142a63f08efa8d168d2225da522800f4d4f6d76bb9c"
+        },
+        {
+          "resource": "repo://conf.py",
+          "version": "repo-file-v1:sha256:a7176907f339bb191a858d0c4cc41136c4020e631a6bfc2a92d5997180347672"
+        }
+      ]
+    },
+    {
+      "id": "claim_6ce3e6628cf847d497308cd41c23fdf7",
+      "statement": "The publishing workflow is triggered by any push to master, sets DOCKER_BUILD_PUSH=1, defaults TAG to latest, and runs make html followed by make docker; docker depends on html, so the second command traverses the HTML dependency again.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L1-L5",
+          "version": "repo-lines-v1:sha256:eb53bd528aa500c27f94cf199c905a509549ba947572231826b22f7ba706b502:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTI1YzgxYjYzMmQ1YjVhNjAyMmM1OWI0YjUzMTY4MDI1NWIwNTBiZjI1YjMyMTU3ODczMjQ0NWM3MzMzOGQ2NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjZiM2JiN2MxMWVjOTU0ODI0MjNmOTM0NGZiNDgzODExODRmNjZhNjk4OWIxNDJjMDg1YjUyZDdhOTYwN2Y3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTYwNmQzOTUwZjVjY2VlMzI4ZTM0NWIxYjUzMzQxOTRhYjRjNWJjYTA1OTBhM2MxNTYwNjcwMzNiM2ZjNDBmNCJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/merge.yml#L29-L40",
+          "version": "repo-lines-v1:sha256:1fe48a9c4ce8dd180bc041629280b897b26caa19726f4ca50c17eb78102116f8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyZDlkZTE1MTlmMTc3NDJjOWNiMzYxNDQ5NGZhZjJjZjZkODM1MjNiZDU5MDQ2NzFjYTUwZWUzYzA3NjM2ZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjYzQwMmJmZjc1NjVlZDk4MzJlZDAxMDQ2MmZlMThiMjllMzY2ODJjNTBkY2UyMzIwZjJkNWQwZDI2NjJiMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlZDFhYzc1YjEwYWMyMTI2ZTZiMWYzNGFlZDNlN2JhNjNjZWYzNGJjY2VhMzdmOGUzMTY4OWRiZTRhNmQzZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkZTUzOTQwMWM3YzBkZGIxNzE4NzE1NzQzNjdjZGYwNTc0NjdhMGY2Y2NkN2FiNzhlZjNkZTBiYWMzNDJjMjIifQ"
+        },
+        {
+          "resource": "repo://Makefile#L238-L243",
+          "version": "repo-lines-v1:sha256:15cd3ccf08c5ad0888e1ad5816d8c73dd681051f0b2323327ddb2df9d32f5484:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmUwNjY3ODY1ZmQ1OTk0MGMzZDg4MGMyOGM1Y2U2NzI0OTk1MmQxYTYyMTU5YjE3ZTQ2ODk1YzdiMDMxMjM0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU3NjY3ZjE5ZTY0ODhhMDdlZjA0MmMyOWYyNTBiNTRmNzU3ZWU5YWZhZjQxMmUxZDdmYmU0OGJlZmQyNzU1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUxMjJhOTM3MmQ0ZmUxYTZjNDcxNjBhNzM3ZjMzOWM0OWE5ZGQzNDQzZTIyNDI1NmEzOGI0ZTE2NDkxNGZjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_87d47e8c16514831921e46fb27fe0217",
+      "statement": "make docker stages _build/html under docker/dist/html and cleans staging only after build.sh succeeds; failed build/push can leave staging, while Unix make clean removes _build output and docker/dist but not files contract downloads.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L238-L243",
+          "version": "repo-lines-v1:sha256:15cd3ccf08c5ad0888e1ad5816d8c73dd681051f0b2323327ddb2df9d32f5484:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmUwNjY3ODY1ZmQ1OTk0MGMzZDg4MGMyOGM1Y2U2NzI0OTk1MmQxYTYyMTU5YjE3ZTQ2ODk1YzdiMDMxMjM0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU3NjY3ZjE5ZTY0ODhhMDdlZjA0MmMyOWYyNTBiNTRmNzU3ZWU5YWZhZjQxMmUxZDdmYmU0OGJlZmQyNzU1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUxMjJhOTM3MmQ0ZmUxYTZjNDcxNjBhNzM3ZjMzOWM0OWE5ZGQzNDQzZTIyNDI1NmEzOGI0ZTE2NDkxNGZjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://Makefile#L57-L59",
+          "version": "repo-lines-v1:sha256:ad2625e32553bc0cdf38946fd5e78309290e0ffbf6fdfec75adb4597663eab82:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTE0MDdhOWRkNGI3NWMyNmJkNTczZmUxN2I5YWFhMGY2ZDQyZWE2YjJlZDMwYTJiZDZiMDkwN2Y2ODRmYjk4NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU3NjY3ZjE5ZTY0ODhhMDdlZjA0MmMyOWYyNTBiNTRmNzU3ZWU5YWZhZjQxMmUxZDdmYmU0OGJlZmQyNzU1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDA1YzM2NGUxZGY5ZmM0MzczNjVhNmViNGE3NzY0ZDhmMDI4Y2QzNTU5MWJmZDI3MzE4YmNkNDVkNDM3YTkyNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDk2ZGI4Y2IxZWFjMDk5Mjk1ZjE4NjViZWUxYjBmODEyYjhiNTFmNDc5MTNlOWM5ZTQwYjBkZmRkYzE1Nzk2MiJ9"
+        },
+        {
+          "resource": "repo://Makefile#L77-L86",
+          "version": "repo-lines-v1:sha256:f069655ef78ab187ddc44bdf0f81751fa78ec6b7d50857be7b603dd25f4e4072:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1MjFkYWE3ZmMzZmM3Y2Y0YjdlYjU5Y2Y3ZjY0NmI3M2JkOTU3NjdlMDdkMmY3MzE0ZDRiMjcyNDA3NjE0MDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3Y2FlNGY2ZDk0OTY2N2M0ODdhNWU0OTNlZTNkMGExNTk5MGRjMjZmM2U5ZTNhZjY0NmYxNjM0MjVkNmJjOGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiMDkxZjQxOTczNDllNGJlMjZiZTEzNzQ1ODYyZDlkMmVhOGFkYWVlNjA0MTNmMWZhYmJmODNjZTBhMTIwY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0NTUxMzljOGQ1YmE4NzQzMWNmNjQ3ZGQ5MWM0MTBkZTQ1YmYzYTg1ZTcwOTg1ZjY0NWRlNmViODc5NmNhMmIifQ"
+        },
+        {
+          "resource": "repo://docker/build.sh#L1-L17",
+          "version": "repo-lines-v1:sha256:a3d499aba4cc0ee1fe057039de40195ded43f0f38dcab9156bbc8f39a6334aac:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkOTVmYzA0YTgwYzk1MmY0OWNlNDE4ODYyN2M1M2IwZmJlOGM0NDA0MWI5NTJkNTkyYWNkMWRlOTk4NjE0NjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f907b812fdd7448cb96c273761c9017d",
+      "statement": "docker/build.sh is fail-fast, defaults to building but not pushing, and exposes TAG, IMAGE_NAME, DOCKER_BUILD, DOCKER_BUILD_PUSH, and DOCKER_BUILD_OPTIONS as controls; master enables push after registry authentication.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L24-L38",
+          "version": "repo-lines-v1:sha256:677ae226471a30b72cffc03497b826d385e09cd1a91225c7f3167246dc4cb604:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3ZGU0ZGI0OGU3YTJlNTBjM2QzZGEzMzZlN2QxNjZlMjM5NDEzMjM2NmNkYTU1MDRjOGIyZDNmYTc4OGJlZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyN2RmOGI0MzU4NWU0MjU5ODcwMzBiOGE0YjJhNDI2YWNlMmNmYTUxZDMyZWY3MWIyZTIxMzAxMWU5ZWIyOGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFmYzBhNWRlNzBiNTZhMWVmYzk5YmNmYWQ5M2NiMjYyNjA3M2NmZTJlZmU3NDdhZTNlMWE3MDdkMjBlOThhNzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmNDU3NzBlMWQ1MTlhZThmZDQ2MjY4NWE1MDhhOTA5N2Y5MTk4ZjE5MzE4NTU3ODlkNzM4ZjZiMGYyNjE3ZjUifQ"
+        },
+        {
+          "resource": "repo://docker/build.sh",
+          "version": "repo-file-v1:sha256:a3d499aba4cc0ee1fe057039de40195ded43f0f38dcab9156bbc8f39a6334aac"
+        }
+      ]
+    },
+    {
+      "id": "claim_032d5136e41e48e18e2c75929a06a657",
+      "statement": "Master publication retags and pushes the serving image to ACR with both the selected tag and github.sha, authenticates to Azure, and requests deployment of the SHA-tagged image using acrName, containerAppName, resourceGroup, and imageToDeploy; credential inputs are DOCKER_PASSWORD, ACR_PASSWORD, and AZURE_CREDENTIALS.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L24-L66",
+          "version": "repo-lines-v1:sha256:5d66720ed801e8eb7e55f0f5a7de64f798600e52f4dc16ee0eb2c76aa66620b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3ZGU0ZGI0OGU3YTJlNTBjM2QzZGEzMzZlN2QxNjZlMjM5NDEzMjM2NmNkYTU1MDRjOGIyZDNmYTc4OGJlZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiZmU2ZTMzNDIzNzcwMDA0ODA1ODNjNjMyMWJiNzNiZTM5MmIxZDZmZmNmOTA2NDAzOTQ0ZDljMDNhNDIyZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFmYzBhNWRlNzBiNTZhMWVmYzk5YmNmYWQ5M2NiMjYyNjA3M2NmZTJlZmU3NDdhZTNlMWE3MDdkMjBlOThhNzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a4ae2d44eaf4f1782a34fc6c640a3dd",
+      "statement": "The root Dockerfile supplies a Python/Pandoc/TeX build environment in /docs, installs requirements, defines VIRTUAL_ENV empty, and defaults to make html, but copies only requirements rather than the authored source tree; inspected CI prepares its toolchain on the runner.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/merge.yml#L10-L23",
+          "version": "repo-lines-v1:sha256:11ba8f5f2d3ce835ba22f69a31e1b43d578b7c94a7e677068cfbd6350b220411:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhOGUzODNmZWE4M2VjMDI4ZGE4NTU3ODZiZDVjODAxMzdiNGQ4NTE2MmJhYmUxY2E3OWU4NWViNDNhYWY5NTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzYmM3OTlkZGY4ZjQ1NmIwMDkyMjZhOGRjMGZhNGFhMTQwNjFmMDY4YjUwMThjY2E1OTk3YjA5OTUxZTJiMzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NWY5OTdjY2Y0MDIxYzNmNWYyN2Y5YjQ5YzE2MzdlMzRiNDlmMDBiNTk5NjIxZjFhNTJlMmUzZWMyMDFiODYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJjMThmMTdkNWY1MjFhODI4MTBlZDBlYmYwYjJlYzY0MzFkNWFkNmNhOTVjYWU5ZDAxMDFiODA3YzE5MDFiYTQifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/pull_request.yml",
+          "version": "repo-file-v1:sha256:ab2d94a14754095e30394af009c769acad0193ea609c92644e1643ab8d158696"
+        },
+        {
+          "resource": "repo://Dockerfile",
+          "version": "repo-file-v1:sha256:c87caaee112c7ba22a6ee47aa7954ab96f2428153e28a54bd6713d117563601c"
+        }
+      ]
+    },
+    {
+      "id": "claim_9796a5ebffdc4848983cbc4cc99023a8",
+      "statement": "The docker-directory Dockerfile instead builds the nginx serving image from staged dist files; nginx listens on port 80 and serves static HTML with internal 404/50x error pages, separate from Sphinx's redirect map and configured notfound extension.",
+      "evidence": [
+        {
+          "resource": "repo://conf.py#L29-L52",
+          "version": "repo-lines-v1:sha256:04472cd4861a63ef0ae1fa99f9446e151cf4168f8ee37b6ba08865f1dcadda21:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwNzJlYWFmMzZjZWM5YTc5MzMwM2IzZWIyNmZkMjg1NTUyNTkxYTU5Yjk1MDVlZjg2NzdlMDRmM2NkZjc4YzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhZDlmZGMwNDM4NjJlYTAzZmJhYzhkNzIzNjQ4NmRhZTUzMDVmZmI4YzM5MDZmNWNmMDBkNjdkNDgwNjRkYjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1OTEwNDlhNWRlMmQ4N2Q5ODViZDRkMTVkZTJiZmQxMTE2MWYyMjk1MGY2YTNjZmM0MzE0YzQ0MWVhMTJjNzcifQ"
+        },
+        {
+          "resource": "repo://conf.py#L327-L328",
+          "version": "repo-lines-v1:sha256:cf0f14de6b8a2a82b9979eebf96b27c9ae5c73f6ef62e6ddad880734dd21b9d9:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2IyYzM2ZmNmYzY4OWM1YzIxN2Y3YmU3Yzg3NTk3N2U3YjVlYTQwMTczNzU1MWUxZTI2NGMzMDQ2MzRmZGIxNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDA0MjVkMTQ4NmIwNGU3YjExYzM0YWQwZmVkNjkxNjIyZWE1MDJlZjljZGMwMmQ2ODk2MzEyYmRiYTkxNzlhNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2VmMjkzYWRhNDFmMzBmMzdhNzBlYjYyMzcyZDRlNGFkMWVlNTBkMzM0MTU1YWExYzFiMjg3YWM5OGY2MDdhOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTc2NTRjNzIwMTM0ZmZlYzIwZDAxZTBkOTI3NTE0NmMwOGJiZDM4MTk2MjY1ZWQyNjdmZDlkNzU5ZjgxMDJkZSJ9"
+        },
+        {
+          "resource": "repo://docker/Dockerfile",
+          "version": "repo-file-v1:sha256:e86d76564d9af15211c147a84d88268c446180ec2824df4626576e121f058dc2"
+        },
+        {
+          "resource": "repo://docker/default.conf",
+          "version": "repo-file-v1:sha256:8e777107dcb0263888c4704133cd5a462a98adfb0b0b2b8c4903a96fe873073d"
+        }
+      ]
+    },
+    {
+      "id": "claim_923fc1849c7942ce91b8e26ec32258d2",
+      "statement": "Managed OpenWiki updates run daily at cron 0 8 * * * or manual dispatch with content/PR write permissions, full-history checkout for update diffs, Node.js 22, OpenWiki 0.7.2, and optional Mermaid/jsdom validation dependencies; provider/authentication/tracing settings are environment inputs.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L1-L49",
+          "version": "repo-lines-v1:sha256:60a92b29b0082d61611abf5a0167fe34139e393d24a605a26eb5c2c58fb21634:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2MDI3ODdhZjZkY2MwODM0ZGUxMjFjYmIxY2I5NWY5NDU5YjcyMWVhYjAzNDlmMTA1MDFiOTk2YzFjNzdmZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ZjhiODAyNzQxYWZjN2ZiMzg0MGZlY2RjNDNkN2Y4ZTQwMjNiYmZjYjViN2VjNjVlZTA4ODc5OGQ4NTE3MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ZTc5NGRkZjMyYTNlMmRhYWFkODgyNjMxM2MyNGY0ZTRjZGE2ZjYxYWJmNDE3ZTQ4OWJlMzlkNWI5OGE1NTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_df6a2a9285364ad8b8616a186312b2b1",
+      "statement": "OpenWiki update automation deliberately continues after update-command failure, removes transient .run.json, creates a scoped openwiki/update PR containing wiki/managed-navigation/workflow paths and conditional CLAUDE.md, preserves completed-page progress, then propagates the failure unless cancelled before the relevant steps.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L33-L89",
+          "version": "repo-lines-v1:sha256:5aaf3cfb89aff3ba65d3b3f25fbaba5b8691dfec30fb9ff48ee42ecb225a86d9:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZThmOWZhNDBlN2JkMDQ5OWQxYzBkODNmZDc1OGFhODViMzA4NDJkYmQ2MWYwZWE2YjdhZTEwZWZlYzc2ZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2NzE4ZjA2N2I1ZTVjMWYwOTkxYTZlNzQ3MjZmZTJhMjNkMjY0MzQ1ZTA4ZTRlYWQwNGZhZjczYzI3ZWQ0NDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiNDRjZTgyMmYzMDY4MTljZmQ4Y2FmMjRmNWI5MDViZGFlNDU0YmFlYWRlMTFkZTM3ZDY3NGMzN2M3YzE5Y2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2dced642a9314058bea353f2d5c914e5",
+      "statement": "AGENTS.md makes the generated wiki optional just-in-time context and directs normal contributors to update source code/docs rather than hand-edit generated pages unless explicitly asked, keeping managed wiki updates distinct from authored Sphinx maintenance.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L5-L14",
+          "version": "repo-lines-v1:sha256:965b11a851738f08a591fcd7200331a525a9902e67b614ce6d86c6a4283402a5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkYjQ2MDY2MGY0ZDUwYTI1YWNhNzc5NjEwMDJkMzk3MDVjNjQ2ZGMyNmE4YmZhNjZhZTZmNjkwOTU5YzY5NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNTM5NTNiZmI3MmMxMjYyYmJhZTJlYWNhNzJjYWJmMWFmNDk5MjdhMGJiYTExNTdiMmQ1YmRiMjg1YzRiZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZmI5NjA2ZjViMGQ4ZjYzNGIyNjAzNzhkNmVjZTI1M2I1YzE0NDdhOWJmMWQwNDkzNDk0NDBhOGI1ZWJmMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwODlkZjkzZjhiYTU3YTRkZGJmZDhmMDEzOTYyYzM5NzhjZTRkYjY4MTk5YzRkYTY2NjY0OWIwOTk2Y2VkYTkifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

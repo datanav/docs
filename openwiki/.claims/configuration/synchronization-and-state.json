@@ -1,0 +1,1016 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:af51b1106d5c6b280ff60cfe294b2aad65851cd9ee17beb8c9cdcd24892b3b5b",
+  "claims": [
+    {
+      "id": "claim_82bb96335e0146d19ba431461ceb88e3",
+      "statement": "A pipe's pump reads entities from its source, sends them through the configured ordered transforms to the sink, handles failed writes, and logs execution activity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L171-L177",
+          "version": "repo-lines-v1:sha256:ea11905a50d047e3c342903c9710cf6de1d22027c77ec1c1e85c0cd897c3acf2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFmN2Q1YTdmYWE1MDZiNjk3NjA1OGVmNWY4MzJlMDIzNThiZjE0NGQ5ZGJlMjUxMTJmN2QxYmJiZjkwNWM5YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZkZWZlZDhlYzQ3ZWI3Mzc5OGI3MzYyOTdhYTFkMWJlN2Q0ZjQ5ZmI0MDYyZTMyNGU5ZDVkNTY1NDJiZDczYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L6-L13",
+          "version": "repo-lines-v1:sha256:cf8516d3db33abc55b15f6b9c2785b938503b337049e3de9536d4358c1428f4e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2MxYTVkYzg4ODYzNWNlMzMwNjcyOTRiYTJjYzY2MzE1YWM3YzcwMzZlMjk2ODgxNGQ1ZGIzY2YwYWY2MzczMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmI5NDNlZGJjYTA1MzA5YjI3MTI2Mzc3NzBmZDA1ZGFjNGQ5MTAzZTY4NTM5ZjE3ODNlOGJlOTY2OGFmZjhlNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2ZjNTllMGY1M2NkMWYzMmUxZjFhYzQ4ZDg2ZTFkMzdmMmVjM2RmODBiY2MzOWExNmM2YmJjZTFjNzJjNGFjNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQ2OThmMTI2NGY0YmVhMjc5M2M4NWQ4NDNhYzdiMTgyYmY4YWQyYjFiYTNmYmUyNGY4NDgyYTYzMWRmYzZjYiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L6-L11",
+          "version": "repo-lines-v1:sha256:e4438d6c78f02bb8733dc5f3386246a7f2cd3df0c70d20ba92f3218fe3360be2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGExMTA0Mzc4ZmYzZjg2MzhlYTI1NzU2YmUyYjZiNmVjODM5ZjUyMWFjYjI0NzU2NDg3YzUyZDA3NzE3MmZlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjYyNDVhYTRiZjg3ZTc0NWFiNzZlOTcyN2RhZGFkMTE4YTZmNGMyYzEyMjc3YjZiODU0YzAxMDNhNGI3ZmVmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWEzYTVlODc3MDg1OGE4OWU1MjEzNzkyMDQwMzY5NzY2MjliNTM0ZTI2Y2E0MDI2ODYyNjBjMzdkOTI1MDdhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWNjMGUxM2U5MzYzNmZjZmI5Njk0NTU1ZTY1OTllMjBjYjkwY2NmZTRkOWNiNmRjZjRmZDRhMTczNWIyMjVlYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc24bd14aef640258f884789df547fe8",
+      "statement": "Continuation tokens are source-interpreted bookmarks carried in _updated; when tracking is enabled the pump stores the marker as pipe_offset, exposes it through the Service API, and permits manual update-last-seen changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L249-L256",
+          "version": "repo-lines-v1:sha256:3a1a8f087316117fdbee8324beeaddab4ca34e9bfee06ceac4cf709ca7c9c5ff:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U0YjYzNzlmOGIzZmNlYmNkNThmMzU0NmI2ZTM3ZDgxMTBiOTdmOWVjNWM5N2NkNWQ2ZTc3OThkZGFiMzk3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2UzNTBiNjQxOWQwZGQyMDk2ZDg4Y2QzZTU2MGM0NDQ4YzUwMzFlNjE2ZWFkYjk0MWEwMWQwMDg4ZjY2NTc0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDM2NzJhNjA0ZmUxNWJkZDQ3NDc5MDIyZTg4NWUwYTkxYjU3Y2ZlMTc2YmQ3ODMwNGJjNzZhY2YxMmZkOTYzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2QzMDdlZTY2OTJmMjgzMzFhNGQwNDVhZjY5ZTg5MzRiY2I4NDZhOTlmZWVhZjU4NDU2N2Y1OTk0YjI0NWJlNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L55-L65",
+          "version": "repo-lines-v1:sha256:ddd49f1b49493ac056aaa46cfe6c75305dc324a333beddc5b1828f0b05ab33b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhNTBlM2M0MzU2MThhYWMzZmZiYjNhMjgwNjA4YjcxZTNhYzQ5MjJjZWU4MGQzMDY5NmM5MTNjNjE3OWJlMWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwYzVmOGE0MjhhM2RjODY0ZDQ3ZmVlYzJjN2JkMzI4ODUwYzM4OGM0NDU0NGFmNzI3ODI5YTFkNDBmMWE0MDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwZGQ3ZTdmMjFkMGExMTdlMjYwY2Q4OTYwNTczM2FiZGY4NWEyYjU4YWNmYjE3YTZlYjQ0YWQ4ZjNhMzI2ZTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cf4fdcb2998d4568acf16c0f3c911ced",
+      "statement": "Stored dataset entity versions receive dataset-local incremental _updated counters, while a dataset source fixes supports_since, is_since_comparable, and is_chronological to true and returns only latest versions by default unless include_previous_versions is enabled.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L138-L157",
+          "version": "repo-lines-v1:sha256:f255527102f793601c0f0887c71b0e2da9dad429b1c9d3bec267d073c897c8ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkNzVkZDRmYzkyZTRhOWI2MTE0Nzg3OTg2NmI0MGRkYmI0Y2FiNzc2OTM3NDc0YzViZjE4MjBhMTVkZWJiZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MzM0M2FiNThjMTgzNzg2NWQ3YmI4M2I0ZWJhMmI2MWYxNmM3NzZlNmQ5YzNhNjE1NDk4YjdlYzMyZmM5MDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L95-L99",
+          "version": "repo-lines-v1:sha256:9c8b229fa025af093a71349e59bb5be45388c2d6a5977f63fa3ff5646956935e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdlMDU0OTNiMGZkN2M4NTVmMTViODc4M2ZkMGM4MGJlY2UyMjFmZmE5NjNmYWQ5NDljY2YxMGUyMmU3NmIxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTA3NGI2MmMyYWUyYjRjYmEzMWE3MjFlNGE2ZjIxMmUxNWU3MmQyNTYxNzZkZGVhZDE1MDdiYmVkMjg4ZWYxNyJ9"
+        },
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L20-L20",
+          "version": "repo-lines-v1:sha256:cd1fa8ece98789f7886a6b0e8eead19546c39b3adf17d22c51509ba8afe6c651:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QxZmE4ZWNlOTg3ODlmNzg4NmE2YjBlOGVlYWQxOTU0NmMzOWIzYWRmMTdkMjJjNTE1MDliYThhZmU2YzY1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QxZmE4ZWNlOTg3ODlmNzg4NmE2YjBlOGVlYWQxOTU0NmMzOWIzYWRmMTdkMjJjNTE1MDliYThhZmU2YzY1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE0ZTU4ZmNlZDUwNDViMzExZDMzNzYxMDI3NWYxYWVkNzViMGUyYTVkZmFkMzY2MmVkZWJlNTIwOTcxYjZiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzVlMjUyZWFhMDgxZjQyN2QzM2ZhMWMxMWNhOTViYTk5OTkyMDcyZWJkNGY4YmJjMWJhY2E4NjJlNWI1NTc1YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_249cf271682b4f998ae3c019df1df845",
+      "statement": "The pump chooses chronological continuation first when supports_since and is_chronological are true, otherwise maximum-token tracking when supports_since and is_since_comparable are true, otherwise no continuation tracking; chronological processing permits advancing progress during a run, whereas unordered maximum tracking determines the marker at the end and requires rereading an interrupted request.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L129-L146",
+          "version": "repo-lines-v1:sha256:2ff2a6153a5461e090745160271c6408541d8727d135cab5f028c8d6fba6f404:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4ODA4ZDdiMmY2MGU4NDE0MGQyMjJiYTNkYTFkYTZkM2ViYjYzZmM4NWE1NjQ4ZWJkNTUwZTkwNjMyNjJiYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2Njc1N2RhYTQ4ZDQwOGVmYTYwZWMzMTE1MTJhZDJjYTgzZDM2YjFmMjA4N2FlOWUwYWM5MGJjNGNhMTQyMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NDZiZDY4MDllYjNjMWRmM2NjYzc3MTIzNzc3Y2VjZmM4ZTE5NmRmMzAxMjM5MTI1Y2RhZmZmMTAyODBjMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhYjc2NjA4ZWFhMDM3NWI3NGUyMzdlNDMxZjRkYjExYzRjNjg0MmQyNTQwY2IyNDY3ZDJmY2NkOTM0MDBmYWMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L187-L247",
+          "version": "repo-lines-v1:sha256:bbaf088c53ce8188843c2ff22b4b1c5e290e49fd15e0827671d7116744a8ee8c:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczYmMzMzIxYTFmOTEzODRiZjM1Nzc4YjA2ZmM3YzBhOWU4NWQ2MzZhNTdlZmE4ZWI4YTMyMTE5ZWY2N2M0YWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhY2VkZDY3NmFlYmEwOGIzYTAyMTg2MDI3NzYwMDEyMGRjYzQ0MjI0YzRkYWIzN2I5ZGI5MTRjNGY3NjYyM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwM2ZiN2MyMGIxNWQ0NWE2YzYwZWRjZDZiZjZmNjQyYmM2MDY2OGU5MDBiNjZlMDM3MGI0YjE2YWE1NGYzYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmMjBiYTMzYzlmMzAzOGNmZWM5NWZhZjcyNDE2MjFlYzcwZTg2MTY0YTA1YmI5ZDRlZTliMzdlYzdhZmRiMjEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L342-L342",
+          "version": "repo-lines-v1:sha256:215e8220a8f5665588d03cab51e8be9cb13e7148cb03b13f570080cbee5a0226:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE1ZTgyMjBhOGY1NjY1NTg4ZDAzY2FiNTFlOGJlOWNiMTNlNzE0OGNiMDNiMTNmNTcwMDgwY2JlZTVhMDIyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE1ZTgyMjBhOGY1NjY1NTg4ZDAzY2FiNTFlOGJlOWNiMTNlNzE0OGNiMDNiMTNmNTcwMDgwY2JlZTVhMDIyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGNiYTJmOTgyOGM4MGEyYzM4ZTI0OTY2ODk4NGNkY2I2MzJkNzYzZDY4ZmFkZGY4ZmU1ZThlYzI5YmQzNGVlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTIzNjQzODFhMzM0ODY4ZWYyZDc4Mjk2NmYxMDU2YmM2YTExMDdlNTQwN2YwNzg0NzZhNWViMWRlMjZlNjZlZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_448553f246b443c9a75a920c46d0d8df",
+      "statement": "Continuation flags must describe actual source properties: is_since_comparable promises lexical/bytewise token ordering and is_chronological promises increasing stream order; falsely enabling flags can prevent correct change tracking.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L81-L86",
+          "version": "repo-lines-v1:sha256:abe6760fa54e2b1313d15ae2028d5cb8e14396e07c8a7fb4f1ad0e10f6190cc9:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDMzNTM5YzUwNzUzMjhhZWJkNzY5YWM1ODQxYjRiNGE4NjBlM2RiYzFjYjA4YzQ4MWVhZTVkYzQ3OTM1ZWFiZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWZmOTQwZTNlYmRlNzYwOTI0MmE0MjIxYzBhMDM5OTA2ZGM0MzZjYjJlYjU5MWE5MzAxYWU0ZjNmNTRlMjdjNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L96-L146",
+          "version": "repo-lines-v1:sha256:57c9034ace549522eb4c5bf1987eee83a4d9963c432128f95de8f33c7f133b1b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmYjk1YTBiZGRmMzZiNWM2YzEyOWUzZDhiZTlhOWEzOWVhN2M5NDdlNGEwNWNlYzU2YTE5NjRhNTBhNDI4M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2Njc1N2RhYTQ4ZDQwOGVmYTYwZWMzMTE1MTJhZDJjYTgzZDM2YjFmMjA4N2FlOWUwYWM5MGJjNGNhMTQyMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZDI4MzllY2I4OTcxNjU1NjYxMTM0MGQ2MmQwMWNmNzFlMGJhNjIzZjU4ZGE5ZjA2MGNmMmZmMzYxMDYyN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhYjc2NjA4ZWFhMDM3NWI3NGUyMzdlNDMxZjRkYjExYzRjNjg0MmQyNTQwY2IyNDY3ZDJmY2NkOTM0MDBmYWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dfcd5a00d3c945f0af18855bc449ccd9",
+      "statement": "Pipe-level checkpoint_interval counts processed batches between saved offsets, defaults to 10000/batch_size with an exception of 1 when batch_size is 1, and a changed offset is always saved at the end of the sync; less frequent checkpoints leave more progress to redo after interruption.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L118-L137",
+          "version": "repo-lines-v1:sha256:a5d875bab301cbb0364b03b84700c9b0469a61773caf7fbef8d07b534dc5a5df:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5ZmZhNTcxZGJhYzVlZGM4ZDVlMjFjNzIyMzQ2YWU3ZTFiNTk4OGFlNGM3NWZiMzhjNmI5ZjdkYzIwNWJmNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhOTU1NTQ0YzI5NWUwZTYyYzdlZjUzYTAyNmM4YmNlMGI4NTJlMGU1YTk3ZjJmZjVmM2VjZTFkYzhiZTUzY2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlOGUzMDllYWZlMzY1MzQ1NDI0YTM3ZmUxODI3NjZkM2MzNjcwMmZmNmJkZjQ5MTQ5YzkwNmY4YjM1Y2I0M2IifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L129-L140",
+          "version": "repo-lines-v1:sha256:138a08661c50ab8d5b5727425882e15eed247731802b9e7ea771aeb9a2403caa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4ODA4ZDdiMmY2MGU4NDE0MGQyMjJiYTNkYTFkYTZkM2ViYjYzZmM4NWE1NjQ4ZWJkNTUwZTkwNjMyNjJiYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYzAwNGQ5NjgxM2E0OTA2YWZiMmQ5ZjdjNTM0YWU4ZmIxOGU3OWY3MmIzOWJkODZmMjExZmQ4ZDFkY2U2ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NDZiZDY4MDllYjNjMWRmM2NjYzc3MTIzNzc3Y2VjZmM4ZTE5NmRmMzAxMjM5MTI1Y2RhZmZmMTAyODBjMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5ZjAyZTZhMDFhNDA0Y2Y2Y2Q1MzM4YzhhMDlmMGM0ODg2NTU4NjYyMGZiNmM2NGI3YzFhYWYyYzI3NTU1MDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c9bca6b8155d45e8b1b3e75636074e9c",
+      "statement": "initial_since_value on a since-capable source is used when the pipe has no offset or has been reset and can deliberately prevent fetching all historical source data.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L180-L184",
+          "version": "repo-lines-v1:sha256:f4039160812b74e8936e24a05a5c20e578430a89ac6dafa7b7ead8a9d0aa8340:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZjMWRlYzU0YzQ0N2Q2Nzc5NTdiMGU3ZDVkYjcyZjY2ZDI3YWE4NjlhYzQ4OWU3ZDI1OTA1YjcyZTQ4YjQ3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY4ODQxNDA5MjQ2MDAwZGRiYTBhMWYxOTMwNDZkMTQzNWFiODI5Yzk5MWYyN2Y1YmU2ZjQ2YmQ4ZTQyNGQyMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGIxYTIwYmQ1YzE5MGIyNGVmMDM4YTEwZTM3MDBhZjJjNGFhODkxM2ZhMGM4ZTk5YjEwODU4MWRhYzhhMWM1ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmY1MDZlNWY5NjYyNzNkMDNmZDNmMzcyM2M5ZDY2ZWQ5MjNlMDgzZTg2OWJiMDMzZTJmYmZmY2NlNjY3YzM2YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b63c66e1acde4826a8ccbdb08db331ad",
+      "statement": "Custom source entities can supply _updated for continuation, and JSON Pull defines since as the offset after which to stream entities, with an omitted since meaning start from the beginning.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L13-L22",
+          "version": "repo-lines-v1:sha256:83a4269b44b6b484559fcf109c70147cb65fcf3ad13a40031839da17c6f58296:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlNWNkYjUwN2M1YWNiN2U2YWZiMGZkZTdkOGE1YmRlM2ZkZTllMzc4ZWRmMDljZGQ0NzFlYjliZWNjNjgzMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NDRlYTkyNmJmODRiMTk2NzE3NDA3MmMxM2E3ZjUyYWM2ZGE3OTQzOGQwZGEwN2UxNzdiODQ3Mjk4ZTg4ZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkNmZhNzhiNGM4NzBiYTBiN2NkNTllOTczYWViZTRlY2VhYjlkNzFlYzViYzU1NTVlMWFiMzAzMWQ4YWI4ODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjMDIxMDIxMTZkYTAxZDVhYTk2ZmJjYzZmYTQ0ZDMzZmNlZjZiYzg5NmJhODVjMDMyZDVhOWU2ZGVkYWI0MzQifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L263-L305",
+          "version": "repo-lines-v1:sha256:427078f0314628444040f8ca6b271d9ce65a1fa3baaefcf16cbfafe4af6213f4:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3MWNkOWYwNGM2ZjRiOThmNWVhZjdjZDNmMjc4MTZmMmFlZmQ5YjAwZjQ1OGI3Mjg2M2M1ZmQ0OTRiYmY2NjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUxMmM5OWUzMDZiMTQ5ZDJmZDBlYmZmMmFmNDI1OGYzYjIzZTFkOTEzZTA1ZjQ3NjhjN2E5ZjlmZTgyNWY1NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkYThmYTBjNTIzMzhkNWM2ZjRkZTM1YzhhM2IxNGQ3YjNkZWUzNmJhODE1ZTRkNjlkYTBjMjgwZmYwMGJiYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        },
+        {
+          "resource": "repo://hub/json-pull.rst#L29-L41",
+          "version": "repo-lines-v1:sha256:9d43239c0f8b1191647f430a3b278b256b31c59c009247e41b0d3d4937c5f319:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NjBjMTg2YjliNTc5M2JiYmE0NWE3YWEzNmUxNDkxZWQ3ZmYzOWQ1Y2VhMGQzMWQ0OWQ4N2ZlMzk4NmZkZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NDM4MTQyNjg3MWI2MGY2ZjNkZWY0YzI4MDQ3NDBhNmZkMjU4ZTFlM2NlZDg2NjIzYmRjZDg5YjllMTdiZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlODIzNGEyNGY3ODUzMGMxNjhlNGJlZDBlNzE4NzIxMzlkYjk3NDU2YjUwZDgxZGMxYzk5OTcyNzNkN2ZhNmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhMDU4MTU5MGNiYTNkMTY2ZWE1ZDFhZTVmNDhlYzFiMmNmNjkyZjdmNThlYTg5NzFhMzMzMjYzYzk5ZDg5NmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_aef379bf4fbc403ba05460b640aa9022",
+      "statement": "Pump schedule_interval specifies seconds between runs and is mutually exclusive with cron_expression, with cron taking precedence if both are present; without either, dataset-to-dataset pipes default to 30 seconds plus or minus 1.5 seconds and other pipes to 900 seconds plus or minus 45 seconds, and explicit cron is recommended for external-system pipes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L67-L73",
+          "version": "repo-lines-v1:sha256:0e7b481efefbb10eea5e10c2b7a9513189ecd6ca3e0549c70aea907dca12a773:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzE2ZjM3MWI2YzBhMTcxMzUyMmQxNzcyYzA1ZGNhNDk2YWY2NDExNmE4MzkxZTdjOGZiNTE5OWJlOTk2NzRmZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzhmMDgxMWNkOGQ1YjhjODRlYWZiNGU0OTg0MmRkNjJmZGE4MDBlNzBkZDIyNmMwZmEwMTY1ODExZjFlM2JlZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTNlYmQ3NjZhZGU2NWViMGQzZDc3ZjY2Y2YwNDY4NmJmYWVlZmViMDg4ZjdiYWI1NGE1NTk3NGQzOGU1N2MxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQzODQwYjYxYzA3NmRkMTg0MjlhM2E2OTFhNGU4YWZlZjVlNDg4ZDQ4ZTliMWRkMGJlYTU3MDIxM2U4NGIxNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L96-L109",
+          "version": "repo-lines-v1:sha256:3b5c4834daa171a5e630b99de40694c5159c68bd0b639c36c67b9c2ea878c772:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MzI0MDRkZTU4YzlmNGU4YTcyZjZkZTBhNjc4MDZjN2NhMmQ0NTVhY2Q5YTA1OWQzNGMyMDM4MTMzZTZmZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyYmM3MzRmYTJhNjVmYjRlMWVkYzUwNDc0OWY3M2ZjOGE5NjEwNWJmYTg2M2NmMzNkNmJjNTAwOGQwMTY4NjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3391b0b322b040eb88746d30f21cf4a1",
+      "statement": "Sesam pump cron expressions are evaluated in UTC and consist of minutes, hours, day of month, month, day of week and an optional year; the explicit syntax restriction says W and # are unsupported despite a # example in the table.",
+      "evidence": [
+        {
+          "resource": "repo://hub/cron-expressions.rst#L115-L116",
+          "version": "repo-lines-v1:sha256:314867ad9a61d78665af484aabcfc9da4d121a40e1f69ccb54b9a4a5b68a29b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGY1NGFhYmNmNWZlZDU4YmU0OGYwYTMxN2M2N2Y4ZDc3MDEzOWVlOGI1ZDFlZTNkZjNmNDdkMWE5OTg5NDI2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjNkYzhlZDg4ZTI4ZDFmMTI1MGE4MTRmZDViNDFlYjI4NmY4YzFlZDkxOWYyOWJhMjBkZDhkYjQ2YjkyZDg0ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjUzNGYwMmE4ZDBkNWY0Yzk2YjAwNjIwYWI0ZTI2YmNkMmEyZDM2ZjkyYjA1NTQ3NzI3ZjFiYjlhYTQ2NzRmZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ2YWQ2YzE2YTUwMjkzNWEwZmFmZmFiOGM4YWRiMDYyYjBlNGZkZGQxNTJmODZlMWFkYWE4NTgxNGMyOTU1YiJ9"
+        },
+        {
+          "resource": "repo://hub/cron-expressions.rst#L6-L60",
+          "version": "repo-lines-v1:sha256:80c8d378b34eb71625475c6d892dfc39932642fb9e8c7bdc768ae111474d2ae6:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhYzIwYjI1ZGNmM2QyNzNjYzEzYzkwNGYzYjQ5MTcwNGY3YjliNWJmNmY1Y2FiOTAwYWRiZTA4YTg2ZDVjYTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0OThkZDVlYzY0Y2QyMWMyZDNhYzI5YWZkMDY2NDY0MmU5Yjg4MWI5ZGRjN2Q3NmIzNzA1OWI1OGU0NmRhYjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlNTgwOGU3MTg4M2I1ZGVlZjlkY2UzMTRiZmVlZDBlMWZjMTMyNzUwYmEyYTRmODljNjY5MTgzNTU3Yzk1NGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlYzU0Y2Q0MGM0YzNlODcyYjE5MjU5ZTI0ZWQ5YWI5YTZjNTI4MTY5OGU4OTNiNjQwMTczZGI1NjkyNGZlMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7b12d76bda164c0987ac4e9fdd57d933",
+      "statement": "For cron schedules and scheduled intervals longer than one hour, the planned run start time is persisted so a missed run is attempted as soon as the service can run it.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L26-L30",
+          "version": "repo-lines-v1:sha256:d60f62143efb03960f0a1830b736315e3b76ad19ba450d0b92db99cf7873474d:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDMyMTk4ZWU3NWUwYjk3MWFhNGYzMjZkM2M2NDZkNzY5NDI4ZjUzYmNhNDI2ZmNmNzJiY2Q3OTYxNzQ1NTIzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTZiNTMxZTAyYzVmMTc0ZTk1MzcwNjhiYjBiOGU2MTc0MWM2NTc4NWYyYWNmOTQxODYzYmJhZDAyZDJhOTk4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE5NTBlZGE4Y2MwZWYyMGU0MWJlMGM4ZDAzYTg2YmYzODc5NzJmYWQxMzllMzhlZjhiNzBlODQzMGFlMTcyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_360216218fe9430cb8e67116e981b8a5",
+      "statement": "run_at_startup and run_at_startup_if_not_populated default to false and add startup execution to the normal schedule, with the latter conditional on the dataset not being populated.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L164-L176",
+          "version": "repo-lines-v1:sha256:7535bcb5ebe999c808d227aa23fa27e95be2cba7d1e6ac11ca7226524f9a027b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyMWE1YmFjZWVjZWFiMTlhZmZmZjczNWE0MTc0NDFhNzVkY2I2ZTk4NzkyNjUxZTQ2NjI0NDAyZWIxYTE2MGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMTU2ODMxN2JjZTUzOGJiNDEzZTlkM2RlMzM3MDFjMmNjMGE2M2JjNWYzYWZlMjllMjFjOTMyZmM3MGE5NGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM5ODA2NWNiMjNiMjc2OTU2MWQxMDczMTcwOWRlNGMxOTY5NWZmN2U3YWJmMjBkYzU0ZDA5NWUxMDdkMWIwNDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e0bac8f9eb8e40d4919339b974dbf7a8",
+      "statement": "Pump mode defaults to scheduled; manual mode permits only manual Service API operation, and off mode prevents starting the pump at all.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L286-L298",
+          "version": "repo-lines-v1:sha256:dd67216ce0208eafdf40ad3a408b5247f2c3cf7306d9bcfd0077270464fec3cb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MTg2NjI5OWU3MTU4MTQ3YTYwYTgzMmYwODk1NGI2YmNhZDgzMTUxNDJkZGYxZDY3MzQwMjFkMGIxYTE4ZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhYTQ4MzI1OGFhMWFhZWEwZTkxNzNhMzcxOTczYzY5NGQ4ODg0NzQ2Y2U5YWU0ZWJlOTAwZTZmZmQ0ZDIyYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1NGRlMmJjYjIyYjMyMzcyMmJjYzJmMzNlZDM2Y2EyOWE5ZWMxZjI5YWYzMDU5ZjEyNjA5NTA3ZTcyNGIyMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyNzJhMjRiZjVhZDYzOWYyNjNiOWJlYjMxNDE4MzUzNzE4MmY1NjZjNjg3MzQ4NDI3MzFiY2MyODg0NDU2YjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_911523a677d84dcb8b9a6263adc919cd",
+      "statement": "Runtime disable prevents automatic pump starts but allows manual start and does not stop an already-running pipe; the stop API operation stops both normal and rescan runs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L204-L217",
+          "version": "repo-lines-v1:sha256:e4b55d8a0c0d33d383ae2be8ee280af52975a12fd6632e729f07635f2d900a6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YTJmY2YwYWY3MmZhNDVkNjg0MDEyZDhhZWM2YmM3MDlmMzMyNmE4ZDdkZWRmNjNjMDYzYzI3OTlmYzZjZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwMmVjOTRlMTI0OTdlY2UwNjkzYjlhMmY4ZmYzODRjNjAwMjgzODY4YmZmMjg5OGQyNjlhMDk2ZWZjYTljNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3ZTIxYjYxNDI1OTBmMjI5YTQ4NzcyMmZmNzQxYzZhMjY5NGI3NzA4MWVlNmQ0M2M0MGNlM2E0N2VjZTZiMDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiOTUxMjg4NDFiMDIwNTJlMGZmNmMzM2Y2MjNjNDJlOTE0MTI2NjQ1ZWZhMjU3MDAyNTFiYTMyNjYxOWFlNDYifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L557-L573",
+          "version": "repo-lines-v1:sha256:4fe352862179d4ac81f4569ac3cf51fd1d700fe19100bad0e05ab40524c659a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmZDFjZDhlNGUzZTQwNTdiODcwYjIwZjZhZGUyYTIzYTRiYzJhOTE0NTJkNTA5N2Q4MmI1NDNmNjU0ODk2ZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOWMwMjZiOTM1Yzg4ZDRlZTdjNTVkOGUxZGIzYTM1N2JmNDM1YTM0OWM5ZGFlYWQ4ZmU3OGVjMWZjMjcwYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliNjhiYWZiOTJhMGM5NWZkYWIxYWFhZmJkZWQyZTNjOTQ2NGNiNmIyZDM5ODc1YTM3MmJmMmEwOTkyY2RmMzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwNmJjNTA2NGFmNTQzZjcxN2Q2Y2E4M2RkMzQ5NDU3NjBhNGFhMTQ0N2FjZjg1MzE5YmZkMzNmZTIwMmViZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_11ed0e29ef00481d829ceabf21016b0f",
+      "statement": "global_defaults.use_signalling_internally defaults to true for internal dataset-to-dataset flows; changes in any input dataset schedule immediate execution without interrupting a running pipe, and source supports_signalling can override it including for non-internal pipes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L88-L112",
+          "version": "repo-lines-v1:sha256:eee08333f58557e61587f03634d2f37e70c585b602cc27726f6fb3ab171ae3c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZTFlMWFkZTNhMzc5NDNlNTRiNzkzYTZjZTgyYzA0NzhlNDg2YTUzZTg3OWEwMThmOTBlNDI3NTk2MDY4NzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MGIzNjJkODFjZDA4YzE2M2YzNTM3NDU0ODYyN2NhYzRlZmFkZDgwNzNkMmQwOGE3N2RkYTY3NzkzYjVhYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM2MmMyYzU4MmM4OTkxNjAxMjc1OTI2OTJiMzc1YTdkZTA3YTU2ZGIyYTA1NWVmMzRmNDQxN2IxYTJhMzFhMGMifQ"
+        },
+        {
+          "resource": "repo://hub/features/scheduling-and-signalling.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:97e4d567ede6a31c7e5994c8cba6d6b0422f75d411b76c8f6e74d6f8fc020297:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjdjNmU4YzI4Mzc0ZTIyNDI0NmU3NDY0YjNiZjI3YTgyMjdkYTM5Y2E5YmMzODA0Y2VmYTI3NTFmYzg0ODJjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJmNDhkMTZmZmYzZjlhYzQyMTRjOGFhMzFkNDQ3YzQ2NDljMzExNTIwN2NkOWM4Zjg1ZGRiY2Y2ZjJiN2I0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2I4YTEyZmZlYzc4NmMzMDExMTAwOWU3Nzk3NTY1ZWFiMjQxYWJmZmNmYTEyYjhjMzIwNzIxYzM0OTA3NTdkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ba641ef314b34c7da1e61f7bb6f19ac5",
+      "statement": "The dataset-source documentation says an interval below one hour or a cron expression disables implicit signalling unless explicitly enabled on the source; explicit supports_signalling true enables signalling regardless of the pump schedule.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L103-L110",
+          "version": "repo-lines-v1:sha256:a84755fe43fe3315773c43701750d023504ef6b4411ce7799e094c1e03cf0e1d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlOGRkYWRmMmFjNTM1YjU3YmE1OTIxMzgyN2I1Nzc0MDdkNTUwYzA1YmIzMDIwODVhNWIwM2JhNDg0MzhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGFlZjUxNmM1ZDM3Y2JkZGFkZmU2MjM5ZTc3ODM5YzRmNWM0ZWJhYjY3ZThmMGY2NjdiNTI1MjlhOGRiYTQzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTgzZGE5MTk5Y2UzMDI4ZGNmZGUzYmEwMDA2NDI1MWFhYjU5ZDk3ZTczOGFmZWUzNTVkZGIzNTg1ZTA1ZWE4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzY2Nzc2Yzk2NmVmOTE2MjIwOTJmM2Q1Y2E4NGE5NTQxMDczNmVkZGI5MTY2YzljMWE1OWMxM2ZlOWRlNjhiZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L108-L121",
+          "version": "repo-lines-v1:sha256:c74ffe7071bff74efd194661ceae6134488ea5fa81bca959e8234a33d3204da4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2NjQ4MWE5OTMwMWY5NWMxYzIyZjczZDgxYTUwMTNkZjA5NDIyNWY3YTM4NjUxOTljYjNiZjdhNzE0YWI4N2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2OGQ1YmQ5OGRmYTFiZTdlNGY0MTQxN2MxZTQxYTZmNTU2ZDM4M2NhN2QzY2YyNmM0NzU2ZmM2MGRkMmQzYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkZTFiZDY1MWNjODFkNGY0YWZjNmNkNDVlNjEzNmU4NmIxOGUzYmJmOWYwYzZiNDg0ZDc4N2ExN2U3ZDEyM2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_52445610b6ee4370aa200577f7f141ef",
+      "statement": "Signals are best-effort, not persisted, and not guaranteed to arrive, so signalling-based flows should retain a scheduled backup.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L103-L108",
+          "version": "repo-lines-v1:sha256:e7f720281043d718fde91229ffd5110631c5cc841e8a8c3c6f5920bd8408daf8:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlOGRkYWRmMmFjNTM1YjU3YmE1OTIxMzgyN2I1Nzc0MDdkNTUwYzA1YmIzMDIwODVhNWIwM2JhNDg0MzhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTRkNmQwZjdmNjRjYzk4ZGI3MzYxNGNiZDI0NDFkOTg1M2IzM2I2ZWYxOWZmNGMxNmMyNzNhMzc3N2QwYWQ1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTgzZGE5MTk5Y2UzMDI4ZGNmZGUzYmEwMDA2NDI1MWFhYjU5ZDk3ZTczOGFmZWUzNTVkZGIzNTg1ZTA1ZWE4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTJjNjdkYzY5ZmVkYzQ2NTlmOTMyODk5ZTViNzJhYmQyYjAxZWE4MzhhZmEwNzRmMzU3NTcyZTYzOWY0ZDZjZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf6cc89745be4a2fb69d1853cce02f63",
+      "statement": "An incremental run begins with a nonempty stored last-seen marker and processes source entities after it; an explicit reset/full run reprocesses source entities and performs deletion tracking on completion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L391-L417",
+          "version": "repo-lines-v1:sha256:d2aa64913824883110242c4c74d1f09bc81b11c0b2119f452bc367ff8d9bfc14:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5M2QzZTM4MGFlODAzMjVmNGNlZjI0ZDFkNzQzY2IxZWNhOTJkZjU0YjJhNmEwZDFlMTZjNWZhYTM1ZTk5Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1OTQwODQyYzZjZTllNDBmNjIzNGM1OGJiYWQ2ODU5NTllMzQwMzBlN2VjYzRjMTIyZTA0YTBkMTM2YTQxN2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkOWQyYTY4ZTIzNGMyZWRkYTliNjAyZmZhOWIxYjk4MTJlMjU0NDRkNTQzNmYxOWMxZWY3Y2RmMDRiNDNhZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljMzYyNGNhNDllMjA2MDBlNjFhNWI1OTExM2I2MzgwMTUwNjMwMDEwN2MxM2YwZjVmZTJlZmE4YTFlZGQwYmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b84712349c34bec855cfa64fc566c36",
+      "statement": "rescan_run_count selects complete rescans every N runs and rescan_cron_expression schedules full rescans by time; these pump settings are mutually exclusive.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L112-L129",
+          "version": "repo-lines-v1:sha256:fb7b3a7aaf9b6e20507803b9fcddf1955bfe4eb049822af0ff1eb67eefe5ec95:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3MTE5NjdhNGEyNTU3YjlmNTI1NjQwMTA1MGJiN2I1YTI5ZDk2MzMzMWZlNDM0OTZlNzY3MmRkODc3NDYwYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNGQ1MzQ5ZTE3MTllZDYwYjZiYWI0ODQ5NTBjMzI5MTVlNjJjNTBlNDQ3YzYyNTAwNmU2OTkxZTA4Y2MxMjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_85b7a5e6636540e4b7a887d6f0137096",
+      "statement": "partial_rescan_run_count requires partial_rescan_delta and is documented as mutually exclusive with rescan_cron_expression; full rescans take precedence, and the delta subtracts an integer offset amount or seconds from a timestamp since value.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L133-L160",
+          "version": "repo-lines-v1:sha256:9b730695bf49aff53b560c6860a94fe8f472f6844e183618c5ff97bb5d9bc26c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3NGJmYTMwZGRlZjFlYWIwZWE1ZTg1OTM3OTI0ZjZiYzRmOWJlNDY5NTQ0MDQwNjI0ZDM2NDZlYjRmNzYxMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiM2EwYzFhOTU0ZGRkNjAyYTIyNWM4Nzg4M2IzZWMwYTllODEyN2VkNmNkNTBhODNkZGJmNTNjOGY1ZjEyMzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cbd65b68cfbf445e81dd67b743a0f567",
+      "statement": "Background rescans process all source entities and deletion-track at completion while permitting incremental work; they are disabled by default, require enable_background_rescan at pipe or global-default level, and are supported only by dataset sinks because these protect newer incremental output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L225-L230",
+          "version": "repo-lines-v1:sha256:cefff05ce087f29e16f46c74a4161f0bd0fd691ee9e59206140292dd34a2fb40:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDhjZThmMTUzOWQ4NmQ4YzBhNGQyNDUyNTg1MTA0NzU3YWIxMjA4ODc5NTg4ZjA2ODAwOGUwOTE1NTg0OWYxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGQ0N2M5YzQxNmViOTVhZmMyMDczMDNkNDFmODZmZDYzNGFkOWIyYjg3OTg0MzYwMGJmNTY4ZTIwZjIwMzU0YiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L147-L152",
+          "version": "repo-lines-v1:sha256:4dc671409200ddcc91b69dad92cc507af993d0813c60da64cc7886df2f231f49:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI5MWQ3YTJiMmY3YTg0Y2U5MjA1ZThjN2EzNzM4OGFmNjZkYmY4YmY2MmEzMGY5ZmRlNTliNGY0YWExMTZmNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDZhNTYzNmYyMzQyZDdkYTU0NDU2M2QyODM5ZmM1MmY5MTA3YTExODJhZTE2NzQwYWEyNzJiMWM2MjQ5MmZiNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L398-L412",
+          "version": "repo-lines-v1:sha256:5ad1796dc31857c6929ec23167e04188db17dfc67eccc50a3a2ebe6154ae9692:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmYzg5MTc1YTA0NzZlYjMxMTY5NjJjYTdjNTljZDJhZDllMDE4ZDdlMzMzYWY0ZGNhNjc5OTU5NDM0NjQ3ZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNGFiYWViZWZkMWEyNWI4ZmQwNjg2ZTYwODY0ZDA0ZWQ2NzNjNzJjOWRlYTM1Y2NmZDZhMGJjNDFhZjZhZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwYjE5YjIyZDc1MzBmOTNlY2RmZTMzZWY3NzAyODg1YWYzOGZhYTE2ZGVmYzg1ODc0ZjZjNzRiMTNlYmM3NjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlMThmZThkZDMzOWIyN2I0ZjFhMGZlYTIxNjM1MTU1NjNhZmRjYjNjZGE4ZDYzZTA4ODJmOGVkMWYyNGIyNTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c786b5bb394f42478011f5d87de697a4",
+      "statement": "When concurrent incremental output is known correct, a rescan stops at the first overlapping incremental run's last-seen boundary and neither overwrites nor deletes its output; without overlapping incremental work the rescan can advance beyond the stored offset, after which incremental starts are prohibited, and ordering and emitted historical versions can differ from a reset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L429-L451",
+          "version": "repo-lines-v1:sha256:c39bd7ce57a57ffcff022750e51285a7387ab2c5183e0055993c8d10b4b33d94:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyNjI4OTk2YWZkZGNkMjRlYTk3ZTMzMjI5YjBlMjI3ZDdlOTgzOGViNTdlOGZhOTk1MmU5NWY2YjdlNzU5ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlYmY2ZWUzY2UyNGIzMWQ5Zjk0YWRhOGM4NmY0NzUwZjA5ZDRmYjViMDQ5YjAxY2NlN2ZkYjkwZThhODY4ZWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJjZjI4YTg3ZTZhNGZlYjBkMDVkOTk0NDM4MmQxODRhOWUxMzI3ZjU1YmI2NTlhNGNkM2RmYzUwZTZlYmM3NGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2NjE2YWIxZTdiOTJmMTBjM2ZhYmEyYzU3NWZjOThlZjU1YjBiYjMzNmUzOThlNWVmZDMzYmQzNTVmZjJiODkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_42ef14afe4cb49eda81a54a534f83af0",
+      "statement": "After changes such as merge-source reconfiguration, concurrent incremental output may use the old merge source and be temporarily incorrect; it does not overwrite rescan output or enter the sink seen tracker, and the finishing rescan stops active incremental work, catches up new entities, and deletes erroneous incremental output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L453-L468",
+          "version": "repo-lines-v1:sha256:a37349c49ce9c31b8957c50c095bc9369ad04888fecf4fa26c01125c16b17f8c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwY2Y0NWZjNjUxMDQ2Njc1MWU0YjNjZGQ4OWFlZGZkMmE2M2IwMDBiYjM2ZjRiOWQ2MGNkOWUxMTJlOGVmZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMDBlMDEyYjdkY2Q0ZDJmZDJkYzlkZWNmZmU1NTM1MDNkZDNjNzI0M2ZmY2JiZGVlNTg2YTA4MGM3NWFlM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhM2U5YzhhZGI3MzQ2YTU0MTZkYWY1Yzc0M2NiZDNjMDdiNDkzM2Q3Y2Q5YjQ3ZjQ3MzIzMGJkNGU3NDJmY2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyYjZjYjk5ZjkwYjViYTNjNWNmOTZhYjljOTBhNWRhNzVkNWY3ZjA4OWRkY2IwZDcxY2ZlY2JiNjBjMDE4NWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec835dd70319473798be7981065c9129",
+      "statement": "Only one incremental run can be active at once, but successive runs can overlap an unfinished rescan and a rescan can begin during incremental work; in this concurrent-rescan context incremental runs perform dependency tracking but skip retries because the rescan reprocesses failures.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L470-L474",
+          "version": "repo-lines-v1:sha256:a86740893fd652d2db4013de9413b3657652be2c24f707cc0c73f95b2002fb66:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWQ1ODI0MTk5YTQxZGEwMWFmNjdlMWMwMGE3NjZjNDVkOWI3OTc5NGQzZjI2ZTg3NWYyZjZjZGMwOWI3NjZkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE1YzJhMDY1ODc5OWFkZmM2OGU5M2FlYzU3MjEyNzFlMTIyMTdlNTgyZDA2OTc5M2Q0ZDRhNTI2MGNhNmMxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjY3ZjJjNmVjNjVkMDUxYzIwMmExMTgzMjFiNDFjYzRmN2QwNTAzNGFiMWYzZmI3M2ExZDk5ZmZhZGFjYzdlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3acace547114787ac1e3a650d13473c",
+      "statement": "start-rescan starts a rescan unless one is already running; interrupted rescans normally resume, while reset-rescan forces subsequent rescans to restart at the beginning.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L553-L555",
+          "version": "repo-lines-v1:sha256:a171343c8293c02f752fbe2e4157b8b8c0942ca90f00d903e354a1cd2deb0edb:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE2NDAyMjY0YjlmZDhkZjJiODUyMzZmZTYxZTI3YTg3MGZhNTIwMmFlMzVhNzViMzFiMTgxOGZmMzRhMmMwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyZDFmMzkzNjJlYjJkZTZiMmNmMzhiYzk0MjA2NWViZjk3N2I1NjYwY2RlZTU2ZDJjM2Q3MGUxOGVmNGVjMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2VjNWNlNjU1ZDkwOWZmNTE4OWY0NTg3YjllNjE2OWNhZDQzN2ZiMDU4MjY3Mjk3NTcwNDYzNWE4NTkyYmM1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzdlM2FiZjVkZWQ3MGFkYzUzNGRkYTUxM2M0NjgyYjhiZjNmZmExMTY1M2Q0ZWMwZjZmYWZiNzI1ZDdjM2Q2YiJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L607-L611",
+          "version": "repo-lines-v1:sha256:ff499046dfe5b11221599b3d5d151d7a446f9cce10cc54ee11c09d159a4381d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNkYmZiODA5NTE0NThhZDhmNmNlMzNmNGYzNzY3YWUzNDAwNGYwOWY1NmJmYmEwYWVlOWVlNzRiNjMyNGU0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGE4YWQ5NjU4MWUwNDU4MDUwYWEzYzc4NWE3N2E3NTQ0M2ZhOGY5NDkxZGRlYWM5N2EzMGQ2ZjhlYTZiMmI5MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTQyNzE2NDJkNjA1YTQ2NmUzMjUwMDcwZDVjZWY2Y2UxYTBlZTZkOTFmYzMzY2FiMzFjZDg0ZDU2NWRjYjBmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNkNDE4OTgxOTU1ODI1M2EwMDkyNDNlZGNiZGIyODRmZWFjYTY0OTE2Njg2OGJhMjkwNjE2YzlkYTJmMjA2NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3cc015571f4c42e686a0adfe316325a7",
+      "statement": "A dataset is considered populated when its initial offset is set, and dataset-source require_populated_input true prevents runs before input population; it defaults to false and can be set globally with a source-level override.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L287-L296",
+          "version": "repo-lines-v1:sha256:f73f5a037631b55ce07e4b121c869a117ff079164b293d25ab27ef5cf9f375fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMmMwYTMyYzMwMDFjMGNlZjBkZjE3MDJjOTk2M2Y1MjYwODUwNTg3YjNhZGQ2MWVmYThlNDFiNDQ1Mjc4M2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3OGE2NGU1MzI2MGU1MDAxN2EzNzA1M2RjMjViYjZiYWM3YTFkMmI1YjVkZDI2ZDljOWY5MzIwNjA4YzQ0YjYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L60",
+          "version": "repo-lines-v1:sha256:6a70484c5f3e8b8e11c620da768637e3aa50e54aff71191506e805c2e1970f56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiN2FhOGZiYzk4YjhiYTBmNzhhNTIwYWNlZjA4ODE4ODJkNGM2NGI3OThiMWFmM2M0N2IyZjI3ZmRmMDk0N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YjQyYTM5ZDRkMTU2OGZhNDYzMTgxNDZjMjhlNzYwN2ZkM2NmNjkzNGM0ODE5NzMyNDI1MGJhMDY5ZTdhYTYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L87-L92",
+          "version": "repo-lines-v1:sha256:0d06eac2294b68b2e1f9776917b7c862012fe6f10dde6d36bca5767009d57208:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FkZjFhM2MxYzJhYzliZTU2YjE0OTIyMzE1YTY2MzQwNDcxOWIwZjgzZTJjNzFjNGVhZTg5NDIwNmY5NDc0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODVjMWZjZjg0MjRmNDRjYTRhMjlkZTBhMGY4NmM3ZTk1MzM1ZTc0NTk0MmJhZjQ5ZDM1NjlmMjk1OWVkNTU2NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_aef66edc687b42b7921a23374b4b56aa",
+      "statement": "Dataset-sink set_initial_offset defaults to if-source-populated, setting population after a populated source is fully consumed; always sets it on successful completion, never does not set it, initially sets it at run start, and onload at configuration load, so population alone is not proof of nonempty input or a completed successful import.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L62",
+          "version": "repo-lines-v1:sha256:a5489e7a0ab74f0060ee4139cdae0608f0ec4281985d1176be95c3cd69b6ce89:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyZTExZTcxZGYyYTViNzg2OTBmYTRiNTQxMjkwNWQ0NDk4ZGMwMDJlY2NjMzk4YzNjMGQ5NTkyNDY2NDdkY2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMzZTQ2ZGI5N2E1NzAwZjQzYzIzNGM4ZDYyZDAzNDM2MTQwMzE3NmFjOGNjYjcxYjc0MDhhMzIwZjQzZWFjMDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:e6f011f5ff6996e7534d719a982e9e7825b7057a076878b8024415961e609ed0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4324e483cda343558e8c854bdb4878fa",
+      "statement": "Successful pipe runs propagate the minimum completeness timestamp from source and related datasets to the sink dataset, while inbound pipes use current time; completeness holds back recent entities to reduce processing or sending intermediate versions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L8-L28",
+          "version": "repo-lines-v1:sha256:e2dcc8e3dc1d725e4392dd9265228dc9720f73c3fa698dd418c18ac27f390bca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkYWM3MmMyNWUyOGY5OTM0ZjIzNTM5MWZkOTUyZjk3MGJkOGNhNGZkYzQ2MTliYzg3ZTViNDIwODkzYTRjMDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyNTRmMmE5YjVjYTkxNzU0NzJiY2U3OTE1NDRhZjY1YWE1NTcwM2QyNGNjNjczNWFmNzVjNzRkMzE4Y2JjMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRiMTg4OGM5OTMyOWM2NjQ2NGUwMzY5NDQzMmE5NzNhYzI1MTZkNGRkMzhlZmQzZTQwZGNjMDE4Y2UzNTM5OWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU1MWU2ZTFjY2VlMDIwODEyYTNlYWEwODQ1ZWJjYzZhYjVkOGU5MGYwYjliNmMwNTI0OWM3MGUxZmQ2YWRkMTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ff3c391094446b2803863b5e10c1c17",
+      "statement": "HTTP endpoint imports can override current-time completeness with an X-Dataset-Completeness POST header whose value must be a positive integer, with microseconds since epoch recommended.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-http.rst#L177-L182",
+          "version": "repo-lines-v1:sha256:fb8675dbe6d30c3a472fec1d08514645e2eda94ebd4737bec9a30f64330f97ac:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjg3OGZjNGUyNWU5NjYwNDEwNGE1NTMwNDQ4MmJmZWIwYjYyNzhjNTE5ZWVhYTkxODZmNTYxNTZmZmRkNTlmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDMwNjAyNzNhODNmYzMyMmE0MWQ1YTMyYThlYmU5ZTUzNTQzN2MwYjExNTE1ZDJiYmJhNzU4NTgzZjJkOTZlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGY1ZmRlZmRhMGI4NDY2NDRiMDE2MjNiN2Q4NGRhZGEyMmQ1ZTc2YTc4NzcyZjJlZjc1ZTYzOTM0MDI3NDk3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjJhYTcxZjM4NjY2ZWY3YjcyMGE4ZmIwOGNlMTQ4NzJlYjI3MWM4ZjU4ZjYzODY2NmUwZmUzMGE3OTI3MjgwMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9eb78ab5cb154ed6ac56c14dbf5a85e8",
+      "statement": "Pipe include_completeness controls contributing datasets and by default includes datasets in sources and transforms except exclusions; exclude_completeness wins over inclusion, and excluding all datasets generates a new completeness timestamp in the pipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L54-L79",
+          "version": "repo-lines-v1:sha256:e0ce291a6e7120406c43c30ecf724c74f12d88e9d706aab5fba6ea8a9b90863a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxM2U1NjcxNGJlZGI0MDgzODQ0NGRmMDZjYmFhODBmNTU1ZTU3MGViNTc4ZGNhMWE5ZjZmMmU4NTJmZjE3MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzODFkNTE4MTY1N2ZiNzM5Y2I3OTRmNDBhMzk0ZmIzM2Q1YmU4MDgxNDBhOWY1YzQ1NjkyZWZlMDFkYTI4YTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bfa03e7d4ead447d93537b86b01a4f63",
+      "statement": "Dataset-source completeness defaults to false; true filters to entity _ts values at or before the source completeness timestamp, while an array of dataset ids uses the minimum completeness timestamp of those upstream datasets.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L53-L76",
+          "version": "repo-lines-v1:sha256:3d0e6252aebf805769639b50605145178c8b048ae317c11df7d0f4077c560a06:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4YzYxYjUxNDU4MGIxNDkwNzZiNmE4YjgyNGNiNzA0MDM3ZDllOGMwZTM2NTk3YzZmNDk0ZGJlYmNhMTQzNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiNzkyNmQ3MDQ5ZjM3NmU3NTVmZjUyODIzYjhhMGFmYWI5ZmYxOTgyZDVkNzVlYThjYmIwMTE2ZGQ3ZmE0ODEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7e990d261894bbd95892193a3929843",
+      "statement": "Dataset-source completeness can use a DTL expression evaluated before each start that must return a datetime; a non-datetime result falls back to ~t1970-01-01T00:00:00Z, usually preventing processing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L60-L71",
+          "version": "repo-lines-v1:sha256:29e4f7f227e1937f43bdf81a75057d19192542298bcf0471ab490688d10f1cab:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMTBjMjEyNWJhYTYwOTEyODBhOGNmMmRjMjQ3NDY4N2VjMDEwODdhNmQ5M2EzYjhjZjg4MDY1NDgyMmI5NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiYTVhNmQ4NGJhZWU0Mjc2NzMzMGNhYzUxNzliODBjMWI5OWI3MzY2NTUwOTBhMmVmMDdhMjgyM2Q3ZTY2OGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZDhhOWYwYTBiNjg4ZTYzZGZmMmU5N2Y5YWJmYTY0NzEwMjQxNmJkNjU0NzcwMGFlMjQ0ZTg3Yzk5NTZjMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmNzA5NmNmMzFhYzMxMzVjNTZkODFlZmYxODhkNDRmMDI1MTIzODhkZjdmMDI4NDRiODRmNTBiZjdlOTM4NDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a44bf1ab631840179632b657e53001f7",
+      "statement": "Dataset-source initial_completeness gates entity output on the presence of completeness values in all listed datasets, without depending on the actual timestamp values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L79-L83",
+          "version": "repo-lines-v1:sha256:6570f3f3572270f583008b58816f28db7e3ffacc9d89b52a728e869dede5a4a6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYwZjhlNzM0ZjM4ZmM3Nzc0MmM1MzYwNGJmOGUxZWMxYTg0NTAzNzM3MDNlNDIwNGY4NTA5ZDdiN2NiYzZjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI2NmMxMWEzOTM3NzhlODA0NTE2N2RkZjA2OGZlN2IyYmRlNzlkZjBiODQ1ZTAzYjUzY2EyZTA0Y2FhMzI1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L34-L34",
+          "version": "repo-lines-v1:sha256:5cdf102b7b3f8772baab257d7569aa00082c02df5e712c4cf9350160b787aadd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWNkZjEwMmI3YjNmODc3MmJhYWIyNTdkNzU2OWFhMDAwODJjMDJkZjVlNzEyYzRjZjkzNTAxNjBiNzg3YWFkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWNkZjEwMmI3YjNmODc3MmJhYWIyNTdkNzU2OWFhMDAwODJjMDJkZjVlNzEyYzRjZjkzNTAxNjBiNzg3YWFkZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjU4Yjk1ZDc2ZjUyYWRkNmJiNzZkNWYzZmE3NGMzYzc0NmY2MDg0YzBlNDNkMGIxMThlOTQxODMxYjAyZTc5YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWQ3Nzc4MjRmMzc0NzhmY2JhYjFiNzcwZTM3MmQyMDZmNTc3ZDQ3OTA3MmUyYjkxMmMwNDc3MWY4ZmQ4NDk3ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b09af6c944044d658c294a83cc67ac7e",
+      "statement": "Completeness filtering is hazardous with full rescans and dataset deletion tracking because latest entities can be hidden and their unseen ids deleted from the sink; deletion_tracking false disables this sweep when a completeness-filtered stream must not be authoritative for deletion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L147",
+          "version": "repo-lines-v1:sha256:5541d7abd2fde800053d8b9bbb143d5cee60afcfee54c9e15fd50be11ae5d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5MTc4ODhmYjgyZGVlOTgwYmYyYWEyMzAxOTE1ZDk3MDQ1YmE3NTExYWNlYzNiYTFkMjRkY2E4OTU2MWZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzViMmI1ZWNjNGY3MDUwNzc5NWViNTc1N2Y0YWZjOGQzMDZkZWVhYjcwNTM1ZThjYjAwNWEyYTE5OWQ0M2Y2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L37-L39",
+          "version": "repo-lines-v1:sha256:931bfd27345f79e724c95d2b2da6fc0f600b98311088681ed2b9dd64bc976143:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDAxMjJiMjNhMzk0YjI2ZGE3YTdjODBkYTZhNTE4ZmE3Yzk0MjI5ZDJmOTk0Y2E2NWRjYjg5NGY1OWIwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGMxMjM0ODk4NTM2YjU3YTk3OWQ2NzI4OThkNmQyN2Q0NTE1NDE1ODRmOTJhNDFjMWVhNWM1NDQ1YjU1YTQ1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWI4YTdjZDMyY2U3MjY3ZjczOTBmNWY5NTM0MjBlYTQ2MjhlMDYwNTcwYWVjNzk0NmJlY2RkMTRjNmFlOTU0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8470fc03e4ce4699a974ab417220bf75",
+      "statement": "Dataset content change tracking compares _hash against the previous version and drops identical output; new identity, changed non-reserved content, or changed deletion status can generate a version, and among reserved fields only _id and _deleted contribute to the hash.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L82-L88",
+          "version": "repo-lines-v1:sha256:8127481397e75bc5a5554ce37ad567cc324ce0a868fbf981de21e07986beaf7f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzgzNmE4N2ZiYjIzM2VhNDBkNWYzNjc3Y2NkOTRkMjNlMTEyNzg5NTM5M2I5NGQyOWFlODdjZWVkMTdlMGQwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmZmOTkyNGQxZDgxNGQ5MmZhNWM3YTc1Nzc0N2QxZTUwNGNlN2Y5NmYxNWVjNjdmOGUzMTI2ZjM3MzUwMzYwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYxYjg4OTcwNmNhNWRlZmU3Mzk2YjdmYzY5YWEzMjY2ZWE1MDI1ZTY5NmMwMDgxYjE2NDM1MzQ3NmNjYzQ5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDA1ZDEzNWY5NmEwNjc2YjI4ZDgwMGRhYjBiYzViNzc5MTMwZTRiOGJkMTNjN2IwYTZjNTI1ZDU0ZjIxMjJhZCJ9"
+        },
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L10-L20",
+          "version": "repo-lines-v1:sha256:e686473e01dab0c873635f14c499429e95698d4d98ab94a0fd0f233958df6c64:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3ZWRmMjg3M2QwYjRmYTY5MzkwYjUyZTU3MGUxOTJjYTRlYTgxYWFkZGQ5YTk5M2UwZjQ0YTIwYTVjYjRlZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMWZhOGVjZTk4Nzg5Zjc4ODZhNmIwZThlZWFkMTk1NDZjMzliM2FkZjE3ZDIyYzUxNTA5YmE4YWZlNmM2NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNTdlNmJjNjNiNGFiYzgxODhiOGU3MDRjZDViNWZlNjFlODI0NDhlMzViYTc5MjFhN2Q5ODBmOTNhNDk2N2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZTI1MmVhYTA4MWY0MjdkMzNmYTFjMTFjYTk1YmE5OTk5MjA3MmViZDRmOGJiYzFiYWNhODYyZTViNTU3NWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f784e01cc9ea48ab99dd36c708529faa",
+      "statement": "Dependency tracking reprocesses source entities affected by changes in joined datasets by analyzing DTL hops and apply-hops and traversing their joins in reverse from the referenced entity back to the pipe's source dataset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L9-L11",
+          "version": "repo-lines-v1:sha256:a1bd2cf1485667322c1d314fe889c2b1f9886d19fe1d007a938a091067598872:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODk1MTc3N2Q5OGI3YzFjNzUxYTY0YzQ2MmE5YmRiOWQwN2MzNDg2N2I2Y2QzYTA1YzE5NWFhMTQ0NTllMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0NmY5NjM5ODUzY2I2ZGZiOGMzOWYzMTZiZDQ0ZDg4YjYyNjc1NmMwZTM2OTI3NzM0NTAwNzNmOGNjYjg5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjgwNmNiMmI0ZWQ2M2ZlOGQ1YjhjNzkyZmM0YzZmMTNiNWViOWU5YzRmYzcwYjU3YTYwNTBjMjBmOWRiOGExMCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:c72c8aa0c47791e1b192d80c8bbe07e13eeebdcbf64a6e8c95af3fd5894d7313:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGExYzE4ZjFmMDJkN2Q1MzQ1YTY5ZWQxYjM3OWYxNDAwNWZmYmRmZjZlZTEwODY1ZGFiNjk4NDY2YjhhMzMwMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlYWJiMjFhYTBlOGRkNDU0ZjkyN2ZhMjE0MGZlNDM4YmU2OTI0ZDA4NDViZmFhOTNkZGUzMTg4YWU5NjQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_36a356f0eb814572b9e95b83e99b1fb0",
+      "statement": "Dependency tracking is supported only for dataset-source pipes because it requires source lookups by id before a particular point in time; merge-source DTL joins do not get it and should be separated into another dataset-source pipe when tracking is needed.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L9-L9",
+          "version": "repo-lines-v1:sha256:0317247381f14f68a0bf596da8d57ac2d9f4e89e9b1b24b2fd2918e111cf6618:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMxNzI0NzM4MWYxNGY2OGEwYmY1OTZkYThkNTdhYzJkOWY0ZTg5ZTliMWIyNGIyZmQyOTE4ZTExMWNmNjYxOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzc0NmY5NjM5ODUzY2I2ZGZiOGMzOWYzMTZiZDQ0ZDg4YjYyNjc1NmMwZTM2OTI3NzM0NTAwNzNmOGNjYjg5YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L12-L14",
+          "version": "repo-lines-v1:sha256:575522e2ead826951cfe9c2e534169ad7008885b7a3ff1e59df8a3d5f0b2b530:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzBlYjY2M2M0MjgxOTdkOTYzMzM1NDFjMjRlZTI4ZGQxODZlZGFhZjk0MjVmZjU4ZDI5YzA4ZDdiYTg5NjFkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f05e7c90b8be42689742efb326062151",
+      "statement": "Inverse dependency matching uses original source-dataset join values, so hops in later chained transforms require unchanged join criteria; namespace rewriting and dynamic _S.$ids wrapping can interfere with those inverse joins.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/caveats.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:6419ac7275c07e7654cb59fe4c95097379760e036aaff57fd126603e42a284a7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI1MzgwYmYxN2MyZWFmOTQxNGFmY2VjMTVkYzEwYTYxNmUyYmIzMWE1YmQzNDIwZWUxNTliMzhmOThhYTdmMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmOGRhY2Y4ZWY3NzRmYjI5OGM3ZDQ0MTI4OTQyZWU5ZTZiOWM4MWFjMTU1ZGNmMmJmNDAxMDllMjU5YjM4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWVlYzA0MGVlYTJmZjliMWM3YTA3MmRjN2ZiNmQwNjY3ZDE1ZTY5ZGU1Yjg5MmVhZmRhM2NmYTRkODQwMDYyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a56fa0609e75403cafc8e78be22602ee",
+      "statement": "The older dependency feature description of materializing a source entity at the head of the log must not be treated as a current implementation guarantee: the entity model explicitly says _tracked was superseded by dependency tracking that does not require modifying entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:ec396663ffedd310efc2e71ab2c5a7f929ecece32fd40d805e5e2528baad0403:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MWMxOTY2YWExMjA5MDZjNjNjYThhZmVmYjgyZTZlZDJiMmUzODY0Y2JiNWQ5YmQ2ZjMzNmU0MjYyMDk3ZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNWU0MzlmMjY1NzU1NDU0ZWQwMTBlN2M0YzU5YWZhOTI2YzVlMDQyMjdlMDNjNzZjODQ2NTRkMDcyODQyYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MDU2NTIwNDA1OTAwMWQxMGUzNzZjMWQ3ZWM3MTllNDRlZWVkMmExYjI3YTdmMjE0ZWFiYmExYjkzZDBjMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViN2NjY2I5MWE3Y2RlZjg5NjZmMmMyNWIzN2EyOTIyODI2NzQ2M2YxNzdlYmE3OGRiN2IyYmMyMzJmNGNjN2MifQ"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:c72c8aa0c47791e1b192d80c8bbe07e13eeebdcbf64a6e8c95af3fd5894d7313:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGExYzE4ZjFmMDJkN2Q1MzQ1YTY5ZWQxYjM3OWYxNDAwNWZmYmRmZjZlZTEwODY1ZGFiNjk4NDY2YjhhMzMwMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2JlYWJiMjFhYTBlOGRkNDU0ZjkyN2ZhMjE0MGZlNDM4YmU2OTI0ZDA4NDViZmFhOTNkZGUzMTg4YWU5NjQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_48b41973d73943f0b6fe9a520a102c36",
+      "statement": "compaction.keep_versions defaults to two; keeping fewer than two makes dependency tracking best-effort and can miss reprocessable entities, with full or partial rescans documented as countermeasures.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L44-L55",
+          "version": "repo-lines-v1:sha256:15796258efe5927782434c201883c1a3841b374c6862a7b3b1d6e68c7f7aa8dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjZDIyZDViN2RhYzY1N2QwODZhYTNjMjUwNWU2NDcwYTg5ZTJmYzMzY2EwNzUwZTI4Y2Q2NTdlNGVjNjE2ZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMmYzYjhlODgwMmQzNGUwMTRlZDk2Y2E0NjQzODk3MzRiOGQyMWM4YTI3N2FhNWE2ODBmMGY0ZTUwMDE1MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljNjczNzI1MTQ0YzA1NjM0NzA1YTRhMWE1ZTU5ODUwZjQzYmE1NDU1OWNmZmU2ZTFhZGNiMDAzZWMyMTNmOWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_633aef0d63f942c5b4856d1e90fe4455",
+      "statement": "Each dependency-tracking pipe keeps a tracking offset on referenced datasets, and compaction cannot go past the lowest such offset; even disabled pipes can hold off compaction.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:161f3d3bb8ab13b7fe0769349e9d01cb9cae336a74eabcd637cb809d0c566485:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjFlYWFjMDdlMDA2Yjc1NjIzNmJmMzllZDhmOWM2MWUxOTk5NjU1ZTAyNTM3ZjRjODQxNTUwMGE3OTY5ODA1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjYxMjZiMDczNDU5ZjQxYWJhMTBhMGI2M2ZiNWNiYTY5OTAwZjQ5OWU3NWI0MmIzODcxZDdkYTc3Y2ZhNmYzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a29008ee323847659d4cc37023da71c3",
+      "statement": "Pipe dependency_tracking has entity warning/error thresholds defaulting to 10000/50000 and total-byte warning/error thresholds defaulting to 33554432/134217728; exceeding error thresholds fails the pump, and enable_hops_thresholds defaults false but can apply the same limits to ordinary hops, as recommended for development.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L206-L233",
+          "version": "repo-lines-v1:sha256:0ded7eb1db2773717757fab01fa3b7dd3dd5d688d6308ddebdf7c75110db967f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNTAzZjYwYWNjM2MyYmVkNDkxYTFhYzIxNGM4YzZjOWJmMDAyYjA5MmRiZDJmZTAyMzY3NDQ1Zjc0ODZkZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2OGQ1YmQ5OGRmYTFiZTdlNGY0MTQxN2MxZTQxYTZmNTU2ZDM4M2NhN2QzY2YyNmM0NzU2ZmM2MGRkMmQzYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ5ZDljNzY1NTI3NDQ0ZjQzZjAxOWMzYWMyYTk3YmY3MTM5MzlmNzNkODMwYzE3MTZkMjk4YjcxMjRhYjk5NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_01edb1d4eeba4f468a73a25d49dbbe39",
+      "statement": "Property lineage is a best-effort property dependency graph derived from static pipe-configuration analysis combined with schema-inference data, distinct from runtime entity dependency reprocessing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L14",
+          "version": "repo-lines-v1:sha256:752f9ae994e38b757195dcec312457813f6ed823de4486cff9a14aae1b61267b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        },
+        {
+          "resource": "repo://hub/features/property-lineage.rst#L8-L17",
+          "version": "repo-lines-v1:sha256:8f55fdae5f99ea8156f66caa2d3ef0ece6b462403ffe59903aa4249d955c9931:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2OGMzZGViNGFlNzJiZDcyZDhjNjZlNWIzNTc4MjNkMmNhYjJjZmZmYTIzZjVmNjk3ZjE4ZGU2ZDc3OTdmN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYmVlYzViMTMyZTU1NDg4MzEzOGJlNjhlNzVlOTY2ZWI3YzAzNGU4ZTMyMjZjYmU3ZjU0ZGUyOWY0NzExNTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5YmY5YTNkYTdjN2YzN2M2YmZhZTdlYTFkMDNiZDM4MmU1M2MzMjA2YzNjZTViZmYwNGFhMTAyNWZjMTQwOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bc7ee84b082945b5832194941a1ce5c5",
+      "statement": "Dataset-sink deletion_tracking defaults true and after full runs deletes previously existing unseen ids by writing versions with _deleted true, rather than physically removing their history.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L147",
+          "version": "repo-lines-v1:sha256:5541d7abd2fde800053d8b9bbb143d5cee60afcfee54c9e15fd50be11ae5d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5MTc4ODhmYjgyZGVlOTgwYmYyYWEyMzAxOTE1ZDk3MDQ1YmE3NTExYWNlYzNiYTFkMjRkY2E4OTU2MWZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzViMmI1ZWNjNGY3MDUwNzc5NWViNTc1N2Y0YWZjOGQzMDZkZWVhYjcwNTM1ZThjYjAwNWEyYTE5OWQ0M2Y2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/features/deletion-tracking.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:4020424a3c25ef2069d7aa025543cc5ec2d4bc57ed0833a3e2ffc413f7178424:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMThmNGY5NzczMWRhZWI3MDE5NWEwNjA4NGU2ZWQ5NWNlYjQ2YmEwYTYwYTk3YmI0NzQ0ZjllMWQ3NDE3N2EzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b6f200630634f07bfe3cd1709fbdc46",
+      "statement": "Dataset-sink mark_deletion_tracked defaults false; enabling it adds $deletion_tracked true to entities deleted through tracking after full runs or rescans.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L150-L154",
+          "version": "repo-lines-v1:sha256:fe65e0049be591ce989c392e94b5a67cd0f3eb798de4f275ff8e70ab816ee311:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTc4MzU3NmUwOGY5MGQ3ZjdkMjc2Y2YxMTE2Nzc4YzY5ZDU1ZWNmNmYxYWE3NGJlMGE4MjUxOWViMTkxMTliNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjIyZjNiOGU4ODAyZDM0ZTAxNGVkOTZjYTQ2NDM4OTczNGI4ZDIxYzhhMjc3YWE1YTY4MGYwZjRlNTAwMTUxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGRhMzI2MTY4NTMxYjFjZDNjMmJiYTZjNWVhN2ViZDAxZDExMzZkOGYzYTFhMDZiOTc1Zjg1MTRkZTgyOTRkMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2c3b1fc7535c457eb2116dac608fe1da",
+      "statement": "Continuation alone cannot infer deletion from absent delta entries; when a source does not report deleted entities, regular full synchronization is needed to discover disappearance.",
+      "evidence": [
+        {
+          "resource": "repo://hub/custom-data-source.rst#L18-L20",
+          "version": "repo-lines-v1:sha256:f99460e7b041877fb26b18d976391f9a018179b799b6002df3ebabe6abd99a25:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWE0NTQxNDI5MGFiYjgyMGRhMmJlY2U4N2QxODIxMzEwNjE1OWVhOTcwODA4OGY0NjJlN2NkNjFiODQ0ZTdkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODU2NTA2ZmI0ZmE0MWVjMTg4NTk5MTA5NDNlMDcwMjAxNWFhNDJlNzRmOGVlMmU2YTY4OGE0Y2NkYTc2ZGU5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmIzMDYzZDcyZDQzMzU2Yzc4OTc2NjQwMjI5ODE5NThhNzE0MGJlZmVjNWI0NGJjNTAwOGNlNmYzZjdmN2VjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWQzYjk3MTA4YmIwNDRlZjZlYjRmNWZjMzA1MzI3ZWM4NDdiMzNmODBhOTc4ZDQ5OGIyYWQyYWM3ZWJjNzZlNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources.rst#L67-L73",
+          "version": "repo-lines-v1:sha256:3dad4b19ed60f021a7ba27b5bc228f498ee935e9036d221933c3366054b0d042:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTMwYzZiZWUyZGEyMTA4YmUyMTRjZDhmYzU5Y2U0MGQ5NDM4MGM2NDhkM2Y5Mjg2MjA3MDZiMDhmOTBmODU1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDUwMWVlYzUwZmJmNDY0ZTkzYWNmNDU5NTcwNWE3NTAwOTM5NWIzNzI4MWM0N2FiMzBjMzE4ODhkMjRlMTYxYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTA3ZmI1OTFmZjhmMjZmZDA5NWUzOGE2YTBhZTcyZTIzYjhlY2I5MDA5NjMzOGFhMDAzYmE1MWEzOGNmN2VkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTYwNjkxOTI0ZDhhYWIyOWVhZWNiMjUzNzJmNGFhZjc1MDI5YzAxYjU0MmNhYzc4OGM2ZDcwMjRmY2Q4OGYyZCJ9"
+        },
+        {
+          "resource": "repo://hub/features/deletion-tracking.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:4020424a3c25ef2069d7aa025543cc5ec2d4bc57ed0833a3e2ffc413f7178424:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMThmNGY5NzczMWRhZWI3MDE5NWEwNjA4NGU2ZWQ5NWNlYjQ2YmEwYTYwYTk3YmI0NzQ0ZjllMWQ3NDE3N2EzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5ac8a72c6b354b4b98d286f8f69567f2",
+      "statement": "DTL _filtered signals a dataset sink to delete an existing entity, while sinks that do not support it discard the filtered entity instead.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L113-L121",
+          "version": "repo-lines-v1:sha256:95c243f019475e68797591a4e93e297c67063758f4363e381114aa886bb78a79:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTMzNTQ2OWEzNjlmYzViZjlmMGZiMzRjYTdiYWVjYWI5MjBiMTNlNTY3ZjNjZWZiYjY0MjZjMDQzYmU4YWRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZkY2NmMDJlZDk4OThjYmQ3ZjM2YjMxYTExMTA3NjczMDg4Y2U5YWRlOTdjYjk2YjRmMzNlMjc0ODMxYTMyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVhMjlkOWMyNjQ0MjdiMTE0NzE0ZThhMGQxMThhNWE3ZTdmZjUwY2Y0MDM3NmI0MmViNGIxZGMxNjdlZDU1NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25486e87533b41258ca3f60c2432cb05",
+      "statement": "Dataset-sink track_children compares $children with a previous parent version to detect removed children during incremental synchronization with create-child and emit_children; it is inferred true when transforms use create-child and can be overridden false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L78-L93",
+          "version": "repo-lines-v1:sha256:ad6fb55d97566c397623de989bd93ab4d0a209f80cdafd718bff19af24ecdc37:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNTQ3ZmIxYTEzOWFlMjRkZTQzYWNkNzBlODI0NWJmMmRlYWY0NTk3MzYwZmMxYWY1N2Q2YmNmMjJlNmUzZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYWQ3YWJiNTc1OGU4OTBmMmE4NWYzZmM5MmE1ZTZhOGUzMDkzMjFlYTM1OWVjMjA1OWMwMzJlNGMxNWZjYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MjVjOTVmMzQ4Mzk2ZjJmZTZkMTQ2NjY2YTI1ZjE2YmNkODRkODAxNGM3ZDQyNmVlZWYwNDMxODMxMDkwODMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NzdlZGU3NjY4NzZjYzgwMjE4MDE2ZDIzNzg3MTkyZjcxODJlMjZkYWU5YjlmNTMyYzNlYjhkMGY3NWM1MWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1351f1d1820f44e4990d08dd43cccb2b",
+      "statement": "Dataset-source if_source_empty defaults to accept, allowing an empty full import to delete previously synced entities when deletion tracking applies; fail stops empty-source processing and prevents that sweep, with global_defaults.if_source_empty overridable on sources.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L271-L283",
+          "version": "repo-lines-v1:sha256:5f2760c446d1d99052de038bc666157c1ee295624cd4cd2290e9fc0d3b0f7eb5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjMzU5ODFmNDczMzk1ZDViMzY5ODcyYzZhODIzOTQyZGU1NWQyOGFlMWJiOWQyODAwMjRiYmI4N2FmY2I0Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmZDViZjZiM2ZmYzA2NTVmN2EzNGMyMDc2YTRiNTBmMWY4Mjk2OTY0MDI1NTgwMzVmNjliMmRkMGY5YTAzZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDJkODdiZjNjMzhkZTBhMjBiOTBlYjM5NDY0ZDljZDVmMmY0ZGQwYzg0ZDYwNzMwYmI3MjA4N2JkMTRkNDAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L147",
+          "version": "repo-lines-v1:sha256:5541d7abd2fde800053d8b9bbb143d5cee60afcfee54c9e15fd50be11ae5d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5MTc4ODhmYjgyZGVlOTgwYmYyYWEyMzAxOTE1ZDk3MDQ1YmE3NTExYWNlYzNiYTFkMjRkY2E4OTU2MWZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzViMmI1ZWNjNGY3MDUwNzc5NWViNTc1N2Y0YWZjOGQzMDZkZWVhYjcwNTM1ZThjYjAwNWEyYTE5OWQ0M2Y2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:e6f011f5ff6996e7534d719a982e9e7825b7057a076878b8024415961e609ed0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_65da5cd6fef24e48890598bb9538f8b5",
+      "statement": "GET /api/pipes/{pipe_id}/pump exposes pump state and form-encoded POST controls it with an operation field; update-last-seen uses a source-specific last-seen value and an empty string clears progress for first-run behavior, while pipe disable_set_last_seen true prevents reset or manual last-seen changes and defaults false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L12-L22",
+          "version": "repo-lines-v1:sha256:b8279743a07cae1b6729847f86dbea9a477b470aeb4a5b28f2ae490c7cb38370:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3M2YyMWQ1MzExYThjOWFlNWQ2MGU5MDhjNmY2M2RmZjkwMmRkZDMzOWNmZGZmNzFkNmRjYWU1NDQzMjUyNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhNjEzYjEyMThmN2UzMThiYTM0YzdlMmFhZWEzNjQxMDJiMDAwYjY1YzRiZTViMTA4MzA5Y2VjZGJkMDU4ZTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlMmZlYmU2YjNhOTU3ZWYzYzUzZDdlYzkwNDVkZDg0ODkyOGFjMzUyYWQyNzg1MjAzMmY5Y2ZlYjA5MWIzMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEwNmNjMGMyYTNhOTMzZTgxYzg5NGU1NDRhOTliOWUyNjQwOGI3NTlhNWRlZGFhMGMyMzg0N2Q3NDg1M2MyMmEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L140-L144",
+          "version": "repo-lines-v1:sha256:561822624792ba99798eb2dde2af2a6ce1028ab8d0a8a3ce24908aba30a4b6e9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjMxMWQ1Njg4NWJmYzBiMzVmNTk5ZjIwYTQ4Yzc4NDM4MWE1Zjg3ZGE5MDNiZTcxM2QzNzMwNzZlNDY4NWIyNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGNhMjk1NDUyZDQzOTAxZDAxYjM4N2EwZDllOTEzNGUzMjY3Y2JkZDE2NDk1ZjE3YjNiYzQ4YzAxYjhkOWRiYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmMwNzk2NTI5NWJiM2I1MDU1YTc2YjBhYTg5OGQ2NGQ5NGRjODczM2E0OTYxYzcyOWIwODM0OTM2NGE4N2VhMCJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L519-L544",
+          "version": "repo-lines-v1:sha256:3fd485109666737f95b7c87a91541d1e7f11887d968c21828c2a2a7826d669df:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjN2Y2NWM0MDNiZGM1MzRiZmQ4NGU5YTNmYjEyNzhiYTFlOTUxYjQwZTUwOGZjOGM0NmU0OWQ3OTc4MDhhNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmMjEzYzc3ZDkzMDk3MDBiYWViNDAyZTFkZjkzYTg2NDU0MDAxYTA3MTcwMjRkMTVlZmQwYzI3M2FkNjUxNzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYjBmNzM2YjkyNzY1MzkzNmQ2YThkMjMyOThiY2E3ZTllMzAyOWE0ZTBhNjllZTE3MmZiOGE0MmZjZTE3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmNDc2MDU5NGVlYTI5OGIzNTEzMjcyNTUxNWMwNzM2YWJmMThlMmNiZDQxODVmOTM1YjBkOTZhZDhjZTUwYTEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L575-L585",
+          "version": "repo-lines-v1:sha256:fb1049b08452c6b5e24e438a188773a2d3a7d26499b2c17530016d192aa55e93:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZjdlNzQxOTEyYWQ4YWIyZGY0YWYyMDE1ZmVhNmVkOTJmMGY3NjVlY2MwYmEwYzRhY2FmNDJhYzhjMjc2MjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlMjAxODVhZTUzNDBhMGIxMjYyNjEyZWQ2MDU2ZjFhZGU5YTM3MGI4MDAwNmRjOWUzYTNkOTJkODNmZGIyNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1ODI0ZTg5NGE3MmJjYjIyM2FhNzQzMWIyYzA3MjBlZjM5NmNhMzFkMzQ0NTJjYmFjNmI4ZDUwNzc4NWI4MzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkOTA5NjBmODE2MDc5NDJiZDU1M2I1OTJkODExMTBlY2NmNTNkM2RhZTAzZTAzMjk2ZjE3YWY3MTU5ZjMxMWQifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L634-L650",
+          "version": "repo-lines-v1:sha256:539c17829e8fd8ab11388277acc0c0bb00706da57aa68610327a9f79b1626ff2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmOWI5ZDcwZGZhMDMzNjc5MzFjYmRlM2JiYWExOGFiMWIwM2NmMzM1NzJlZDIxZTNjMDZlMmMwOGFhZjQ5NGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3NDA0MWE4M2VkNDMyMTJjZThjYjYzYzcyODM3MjdhZjU0ZDdiZTQxZmNkMzdhODkzNWM5NzQ4OTU0OGJmZjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI5ZWU2MzI1NjM1NjE5YzczNjFjMzNjNjEzZjI3NTMwYzZhNjg1M2I0MmE5ZWQwMjIzZmUzZGZiYzdmZTIzODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljMmRlNTVkMDk0ZDFhY2UxMTczYjhmOTkxNzM1YTU2MWFmZWM5ZmUyZDllZWZiZjk4NWEwMTUzZDUzMjIyZmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_20b2015753cd422ca1feeac2b93a5c6e",
+      "statement": "Management Studio describes Reset as setting since to 0 for reprocessing and Restart as Reset plus Start; these UI descriptions do not replace the source-specific API marker contract.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L210-L226",
+          "version": "repo-lines-v1:sha256:98e58f051f2bd4f4aa7d08cfffc73a9ec51fe3f4a351738bddb3f477267cf26a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViOTc2Y2ZkY2U2YTc0N2U2Mzc1NGMzZmI3ZjBjNzZjN2NmNWUwMTNjZDBhMzIwYWE4OWUxODg4NTIyZDBjODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNWU4ZTc3Yjk1ZmQ4M2Y3YjY3MmM3ZmE2N2NkMWFhODlkNjU0ZGFmMjZmMTdhZTgyNDNhYzdhZGFlYzI0MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlNzQwOWVkNjY0ZWU4NjJmZWRmZjY2YmM1Zjg2NDdjYjdlN2ZkNDM3NjBjYWIwZmFkMTYzYjI4MzIzNmM4MzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5ZjhkMzZlM2U1NzMyNWE0MzcwM2Y5ZTNhNTQ5MjU1NjMyYWMxZWFhOWU1OTZjNTI1ODNmNmNhOTQ5YzgwODEifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L575-L585",
+          "version": "repo-lines-v1:sha256:fb1049b08452c6b5e24e438a188773a2d3a7d26499b2c17530016d192aa55e93:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZjdlNzQxOTEyYWQ4YWIyZGY0YWYyMDE1ZmVhNmVkOTJmMGY3NjVlY2MwYmEwYzRhY2FmNDJhYzhjMjc2MjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlMjAxODVhZTUzNDBhMGIxMjYyNjEyZWQ2MDU2ZjFhZGU5YTM3MGI4MDAwNmRjOWUzYTNkOTJkODNmZGIyNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1ODI0ZTg5NGE3MmJjYjIyM2FhNzQzMWIyYzA3MjBlZjM5NmNhMzFkMzQ0NTJjYmFjNmI4ZDUwNzc4NWI4MzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkOTA5NjBmODE2MDc5NDJiZDU1M2I1OTJkODExMTBlY2NmNTNkM2RhZTAzZTAzMjk2ZjE3YWY3MTU5ZjMxMWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4a06ba9c5cff4193b5e827ffb406cedd",
+      "statement": "set-last-seen-to-end skips unread source data, is unsupported for some source types, and can cause data loss; it is documented for deliberate development or testing use.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L222-L226",
+          "version": "repo-lines-v1:sha256:26c5576c8e9e2f460f8fbd30261ea5b459b2353a03c22406569f3d0f306e3ab4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI5ZTQ2NjAzYWQ4MDQyN2IzZjEwMmUzNTJhYWY5N2YwZTdhZWQ0NDk4MjkzMTI5ZDVkZDg3NDdkNDJlZWNlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U1ZThlNzdiOTVmZDgzZjdiNjcyYzdmYTY3Y2QxYWE4OWQ2NTRkYWYyNmYxN2FlODI0M2FjN2FkYWVjMjQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGQ0ZmI0MWE5OTE1MTI5OGJkY2FlMmM5NmQyY2NiNzMxNWRjMmE0YjBjYzZhMjZkOWQ5YWI1NjE2MGVmMmZkYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTlmOGQzNmUzZTU3MzI1YTQzNzAzZjllM2E1NDkyNTU2MzJhYzFlYWE5ZTU5NmM1MjU4M2Y2Y2E5NDljODA4MSJ9"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L587-L593",
+          "version": "repo-lines-v1:sha256:06748b942dfad926dd26b93e14df213caf8edc0789b2bd777b913bce8173d21f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFiZDdkYmM2Y2NhNjYzMjU2ZDIxMTY4MThjYTIyNzEzOWU5Y2FkODllMDY2Yjc0NWZhY2Y3ZGUzNDA1N2NlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZiZTFlMGVmMDNiYzQ5N2Q1NjE3OTU1YmRiNzFiY2RkZTU2NDJhNjZlZDEwMGY1MTIxZGE1YWJhZTc4ZmFjZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODIxNmU0NGYxNTNkM2ViM2MzYjg2MjdjNDgwNzZmNzZiZDU5M2YyYzlmYTk4OWQ4ZTY1ZTA5MGJkOTAwZDRlMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmY2MzdiYThkZDQzMGNjYjBiOWY2ZDhiNGY1Y2Y0MTdjOThhNzczYTI0YTE4ZDVjZDMzYjhiYmYzZjAyY2Y2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ecbd1a5e3033444d82e4c5b0a2b44b1d",
+      "statement": "Experimental reset-tracking is unsafe while the pipe is running and resumes tracking at dependent datasets' ends as of the next run rather than the API call, skipping untracked changes and potentially making output incorrect; it is restricted in guidance to development or a planned full sync soon afterward.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L595-L605",
+          "version": "repo-lines-v1:sha256:2cbbabc20e2aca019bf31f82780d9062a3f4ba12ba74ca4c4a586394a023eccc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZTU0MjM1ZThlOWNlZTc5NWJlYjRjZjY0MDJlNTVkMmM0ZWU2NzRhMTAyNTMwMzk2M2Q5ZWMwMmFjMjRjNTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNDQxNWIyOTgzNzIyNDk0ZWFjZGYzN2FjZTU0MjlkNWVkZTY2ZWZkYWE3NTdkYzFlOTliYzU5MzY1MmJmZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJjZmJiOTFjZmZlOTlmMTAyM2ZhNDRlMGRlZTE5MDAyMWExN2QwNTE3Y2Y3MDM1OTEwNjRlYThkN2RlZTgwYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJlZWQxMmVmMTFlYjU2YzFjNzliZDRhMWNiZGI3ZTVlNmE2Zjg2NGEwOWU0NjY0MjgzZGU2YWZmNGQzOTE4ODcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1f3f0904cfef432da692b0b41f1a6032",
+      "statement": "discard-retries makes the next pump run ignore pending write-error retries and does not send the discarded failures to the dead-letter dataset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/swagger_public.yaml#L613-L617",
+          "version": "repo-lines-v1:sha256:527e4340071c0f73f529f50ff966912eaf540f5b5dfa606f0be27998315f270c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzM2ZGM2NjBjNWU0YzM1MzAxNDg1MzQxOGVhNWVmMzFkNzFjZGMyZWM2OGNmMjUzNjk0MTViOWE5NDcyYWIwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTQ4MDBjZWI1MTUwMWJmMTEzOGQ0NGMwY2M2ZTY5MDJhN2U5YTEwMzhmODRkYmVjZWNlNDMzY2Q3NzI4ZGNhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmNhMGE1MGMzZTQzODIxYWVjYTNiYmU5Y2E0YmQyYmI2NTE1MzFkODQzMzY5YWJlZDA1OGE3ZjFhZDNhNDlkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWQyOWNhNTNiODc0ZDZlY2VhYmQ1M2MwZDU5OWQxNzUzZjhiMWM5ZDdhMDhjNzhhNjhlZGZmNTY5M2RlZmY2YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8f0ba4011f745109de795b254dc34d9",
+      "statement": "Management Studio's Delete sink dataset action deletes the sink dataset and resets the pipe's since value to 0, unlike a reset that replays into an existing dataset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/management-studio.rst#L219-L220",
+          "version": "repo-lines-v1:sha256:699c1acb8b6936e5f47c99194451f6c4bc73f0fa94326be3edac07a3ad3d1baf:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmE5ZjRlZjNlYmNkODYyY2Q4NWU5ZGI0MDU0YTMyYjJhMWM3NjRiZmI3NDdiOWU4Zjg1NDNkYWRkNDAxMGZlNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTQyNDcxOWJiYjdhYTkxYWY1MTkzNGYyNTdhZTgxZWI4YjE5NTgzM2M3MTU1NTIwNzI3ODc3ODVmOGUyNTJjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNThhN2ViMzc5ZjM2MTcyOGRkMzRhZTg5Y2FmM2E5MjMxY2FlYzFmZDkwZjZiODM0OGVlZjYyNDkxN2Q0ZmE1MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmJlNjIzNjY5MmM4NDViNzA4MzVhNDE2OWZlNTI1NWNhNjA2MzViZDJjOTk1MTQ5ZGNhMDJiYzg0ZTg5NGJiZCJ9"
+        },
+        {
+          "resource": "repo://hub/management-studio.rst#L246-L247",
+          "version": "repo-lines-v1:sha256:c6f6cf132e2a1280cbdc1ef957b0c912dbfae5aad7e55e87020c173f997f3b83:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJjMjdhYzFjYzE2ZjYzNWIzZDFiZGU4Y2ZlZmQ5NWNkMWYxOWQ0ODI2ZGY4Zjg4YmUyM2VjMDUwNDg4MTEyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODU5ZWYxMmNjZTA0YmE5ZGI2M2IwZTlkMjQ5ZTA3ZTVjYWIyYjU5NDYyYjFhYWEzNGJmMGJhMzZjNDk1ZDI2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU0NDM2OTNkY2M3MzM5NDI5YTlmNzkyMzU4MmU4ZjY0MGVmZGFlODNkODg2Y2EzODhlYTU2ZDk4OGFmZjdmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTJhMWViOGIwYmQ4NDY5ZjcxNDY3ZTJjZmVlMmZlNGZlODJiNDU3YTQwYWFmM2Y5ZDRlZjI4ZDY4NWM4MTJjNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fd2f4137303a4e32be735d84daf6332f",
+      "statement": "Repeating operations against external systems can have non-idempotent side effects, so dataset change suppression or resetting progress is not a guarantee of safe external replay.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L10-L12",
+          "version": "repo-lines-v1:sha256:5a4800c74bd58c5f822e3b8605ef951f6ee9187e1752abb3565023c6b73d683a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODdlZGYyODczZDBiNGZhNjkzOTBiNTJlNTcwZTE5MmNhNGVhODFhYWRkZDlhOTkzZTBmNDRhMjBhNWNiNGVlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2MyOGE2MWMzYzk3YmQ5ZGM0YTcwMGIzNWNhZmM4MzI3YTBmMjBiZGY5ZDI5MTJiNjA1MTU5NDE2NGYyZjVkYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1N2U2YmM2M2I0YWJjODE4OGI4ZTcwNGNkNWI1ZmU2MWU4MjQ0OGUzNWJhNzkyMWE3ZDk4MGY5M2E0OTY3ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWYwN2U0NGZiOWI1ZTc2YzZlMjBiYTE2OWYwMTIxZDEyNjk5OGNlMWNkODVjMjdkNDNjNmFiZDg3M2VkYWEyNiJ9"
+        },
+        {
+          "resource": "repo://hub/idempotency.rst#L4-L25",
+          "version": "repo-lines-v1:sha256:5f66ddb7de61c6e01b69d819d5923a9f95cb0eab2a25bb351f8f8a1343111499:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjNzk0NTQ5MDhiZGQ0NTJjMDM2NzVlMWZjZDdmYzQ3NDFjNDNiZjAwMTk1MGZlZjI2ODBhYWUzMmRjOWUxNTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2MjI5NmY5Y2Y3NWM3Y2U2NWJmZDUxMjczOTE0Mjg0ZTc3NWM1ZDgwNzk3ZjAzMDFmNDRhZGY1ODdkZTQzZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM0M2I5Y2IzYjBkZGM4OGViNmQ2ODhmOGJkMjkyZTA3NDY4ZTZlNDU1OWUwYzgwYjRlNmU1MjY4MDM1MDZmNzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzYTI0YTEzY2RmYjFhYTZjZTE5Y2Q5YTViNWE1ZGFjYWMxOTVkZGE4OTM5ZDYyYzBiYjZkZTE5OGJiMTQyMWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9539ec11c5174a429172e5bb8d71119e",
+      "statement": "Out-of-sync conditions include configuration changes, recreated datasets, truncated sources, backup restoration, new joins or inputs, and deleted hopped-to datasets; reprocessing_policy continue is the default and continues without reset while tracking affected datasets, whereas automatic repairs with reset/full rescan or sometimes rewind.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L205-L214",
+          "version": "repo-lines-v1:sha256:7cf277abc90a23038d7b5f9d16f7f38b2bafb172e0353d21633709bd7de89042:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1ZDU5ZDQ3NGU2ZTAzOTQ3NmFjN2ZiODA1M2Y4MmQwYjNkZDI5Njc5OWQ5MWJmZDQwMTVhMjNhYWZkYjdjZTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3MTVmNzJjZDM4NDBiMjE5NGMwZWU0NGZhOWUzZDYyYzUwODcyZDQ3M2ZlMTQ0NTg3YWRlNjQ1MGQzNWI0NTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkYzBkZTMwNmY2NTY1OWFjNWQ3YWIyZWJmNDRiODQ1ZmEyMDIxMTMxM2FlMzNjNzI0M2E4YzkyZTJhYzdhNzMifQ"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L44-L52",
+          "version": "repo-lines-v1:sha256:f0172db2703bd060347d503c0fdd5dff62d2032a5a3636b302a4ad8ef8bbae82:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ4YWM4NjZiYTI0YThhZGVmOTkyMDQ0MDlhYTEyYjk3ZDE4Mjg1MDQyNjdlNzFhNGZhZjBiMDlkNjQzZDlmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L29",
+          "version": "repo-lines-v1:sha256:a4b946ddb36e387d4a22d297c148b62823304265c2176c1fc46d4042a5bf3e60:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0b85d01cd9ad4fdd9bad849bfb6e8c7f",
+      "statement": "Pipe rescan_when_config_changes true causes reset on the next run when automatic reprocessing is enabled, otherwise out-of-sync marking; its default is false inherited from service metadata, and it is distinct from reprocessing_policy automatic.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L217-L222",
+          "version": "repo-lines-v1:sha256:10af0c872eee8f7b36decb902f31876e685f98bc873c360a941aa1a6172a2323:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYzODAwYmVjMjRkYWE1OTc2MTA4NzhmYTZhZjViNWQxZTAwY2E4Yzg4YzE1ZDQzYjdiZTUyMGZmY2NiYzhhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGZiZDA3NmI2YzA5MTcyNDAyNjYyYjgyOGI0MDFmMWE3NDQ3NmRlYWQwN2EzNmU1M2U1MjM0OTlkY2FkZjY3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzliZTk3ZGZhMTkwNjUwNjBmMzFlZjQ0ZTY4MTIzMmE5Yzk3YTMzOThjNGZhZTA4Y2RiZGM2ZmMyYjU4ODRjYSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L155-L162",
+          "version": "repo-lines-v1:sha256:6ab3dea6e9c759844cf92a9b8bed60a168b9c0bc69e0b31bb09c92650285c455:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjA5ZGVkNmZjOTZiYmE2NzU5ZjNiOTEzNWUzYzFkOTJlYzk5OTQxNWNkYjU0MDNmM2JmM2QyZjYyMDYxMGFjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmNlYjIyMWZjZTYyNWQxNGYwMjQyNTFlYmQzNjllMGUwZTU5NTllNjgyNThiMjA4MmFiZDliMTc4MTFkYzk0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_36bf2278fbc8476ba09153540ee215a0",
+      "statement": "JSON Pull exposes populated, maximum committed offset, completeness, generation, and restore metadata in response headers; recreated datasets receive new generation UUIDs and restoration supplies restore UUID/offset, and automatic reprocessing uses several of these headers for rewind/reset decisions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L65-L96",
+          "version": "repo-lines-v1:sha256:b9376b5575a6b933ea67418dd6b9522fcce08bcf813a0967728c2cb67de27dbd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwYmRiZmNiNDM3MWRmZWU1MjIxMjQ5OGU1Zjc5ODlmZjIwNzIxN2QyOTM2N2I0NzQ0YzhjNmYzMGM0NGU3M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZWVkMTQ5NGY4YTY5MWY1YTNjYjI2ZDYwZTUyZGY3ODlhNGQxMGQzY2QyMjMwNTU0YmNkZjNjNWEwOTA2N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlZWMyZmMzMzhjZThjYTBhNDBmYzcwOWE5YTNjNjllYzU0MDQ1NTJhYTc3NjkwNTNmNGExMGVmZGQ4MDNlNTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5Y2Q3YTZjZTk1NmE5NWE2NGZhODI1MmUyMGVkMzdjYmUxNWE4YmM4M2Y5NjRlOGVjY2M1MGMzZDg1MDE0MDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ead384def9744e08f595c439480344c",
+      "statement": "Pump max_read_retries defaults 0 and logs read errors without retries; read_retry_delay defaults 0 seconds for immediate retries when a nonzero read budget is configured.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L208-L213",
+          "version": "repo-lines-v1:sha256:5e657e9067929e0c0efbb2724239145e97034e3127aeb0f2bfa639cfe5feeda1:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTc3NTIyMzgzMDhlMzY0ZjlhOTMwMzdmMDA1MWNmZDI3MjZlMjFmNmY4Y2Q1OTAxMjc3OWZjZmRhN2RjMjVlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYyZGQ1NDRjZmQ4NDNlMjViZTQ3N2NjMjA4MjljOWViYzZjMzk3N2I1MWJiZGJmN2NjY2RlNTIyYjg0ZTAyZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjcxZDlkZGI2MTk2ZWY2ZTQ5NzJlMjE2MWNkZTI3N2VkZTkzYzZjNWQzNTA1ZjI3OTQ4MmVkMDY4MTliMzRhOCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L225-L231",
+          "version": "repo-lines-v1:sha256:f292e89eb47983330ccd6fd58f7ba890d0aec905d8c415439eee7dc6c6fc9631:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2EwMmQ1ZjBmZjMwZWM0YTNmOThmNDM4NzA0YzQyYmJhMjc1NjgyMjE4MzJiMWQ5OGIzMjg0MDRmYzNjY2JkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2MwMzA5MzJiMTE5OTAwMTgwYzZhOGEzMzUyNzE1MmI2NjZjMmY4MmQ1ZDc1Yzk3M2E4YjZhN2I5NzAyNWJlNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9e6ec84a11f4f45b3483d6b6bbda691",
+      "statement": "Pump max_consecutive_write_errors defaults 1, terminating the run at its first write error; write_retry_delay defaults 0 seconds and controls delay between write-error retries only when the consecutive-error limit exceeds 1.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L234-L241",
+          "version": "repo-lines-v1:sha256:39f039b4337c1b8953326cb254b8921efea6c5859fac0db1d6bd77f4a78878bd:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE4MDUyMzYyNWQ0ZWRhYjIwMmE1OTcwZWU3Y2E5ZDc1NDgyN2QzOTRjNWM5N2ZkNWMyMDc3YzAxMzFlNzE0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2EwNTdjNzViZmI5ZWUxY2M0N2VmNmEwNDNmOGY0ZDlhZGEwYTNjNzU0ODMyYjE4M2MxMzUxNjU5NmUyM2FkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjAxYzVlMWM3N2MwOWY3YjE4MDQ2YmJjNTMyMTFiZjBmMDc4MzQ3ZjJmZTdmODlhMmU1YTJmMjQ5MjNhNzg5MCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L252-L257",
+          "version": "repo-lines-v1:sha256:a7d0d30a4f4cf8557cae5d815d973eb0cc4d40787091f73a66b0494ef3b80ef7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWNlMzE2Njg5MWVjZWU3OTViMzIyMDQxY2I2Mzc5YzE5YTZlMzc2MzJiMGExMGQ5YWIyZjc3NjU4MDQwNzk2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZkNDIwMmIzODE1NjRmMDU3NmM5NDk0MGI4NDQxODMxMzk5MjNjZTNhNWQwNmE0MGRiYjk3NGMwMzBkYTM4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2M1N2JjMzU3YjE3YzBmNGY3YjgzYWRlNWQ5ZWM5OWNmNTJkODYyY2I1ZTY4NTU1MmJjNjEyOWRiZmRmYzJmNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTg1MmU3MDJhZDUxYzZjMjExMmE4NzJkNjdjOGU3ODljZmRlODEyZjVhNjVlZTdjZmIyMmU0YWMzZTA0ZjEyMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_95802f09d8ec47d3a0b760f06e772bdc",
+      "statement": "Pump max_write_errors_in_retry_dataset defaults 0, effectively disabling write-error replay; a positive limit bounds retryable not-dead execution-history failures and exceeding it stops recording more failed entities and terminates the run even before other retry limits are reached.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L260-L268",
+          "version": "repo-lines-v1:sha256:90aa0b3231b04e7a00bcf55b12dc513f2448dad2c0a48c6a1ad48125bb9875bc:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZjOTg1MjJlYjRiYzM2Mzc0OWQ1ZjhiOWFhNTMwNGVkOGQ3ZjJkNGJkY2JkMGQ3OGM4OTk3M2VjMDYxNmRjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGM1Y2NlZjM4ODQxMjgxMGEzZWNkMTcwODRhZjAzMmE2NTU1ZjVlNjI5ODRiNjQzZTZhN2I0OTYyOTM0ZTRkYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGU3MDk5OGExMjk4NDc2M2E5MmEwOTZmM2JhNWQyZTNlMzFkODg5N2UyZGE3Y2I0NzYzNjM1ZjQ1MjgwZDg4YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5c0dada248346bfa2c54c5649c7447d",
+      "statement": "Pump max_retries_per_entity defaults 5 and limits sink-write retries before giving up; an optional dead_letter_dataset receives exhausted entities only with active write-error retry storage, must be unique per pipe, and is restricted to users authorized to see that pipe's configuration.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L190-L195",
+          "version": "repo-lines-v1:sha256:03130d01638e6af896f086fd7b1c2cb61736d1e687031ba161e6758d573af745:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOThiZjAxZjQ4M2U5MDljZjU1NTJhMjMwNWUzM2VjYzQ3NDM5MTBiZDlkOTJiNGY2NmJlMjZjMThkMjk3YmRjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjYyYzNlMDQ5Yzg5NDAyYTRjMGI3OWY2Mzg2MmVkY2Q0YmJkNTkxOTcxM2M4MTAzOWEyYmQ2Yjg5NzNmZjM5NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L244-L249",
+          "version": "repo-lines-v1:sha256:284463a8272fe5bfab54ed9617bd5b53282fef4fd60c62a8387a081faca19d81:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Q4MjcwOTJiYTQ4ZTZhMmYzY2NiNmU5NWVkODk1YTQ0NTJiNDI4NDkwYjJmOTEwZDUxNzA0ZWIyNDM5ZmQwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODBiMjlhYjM1YTQxNmZhOWY1YTQ0Mzg4N2NlOTlmNTFkMTA2MGFiZTYyZTQ4ZjMyMjE4ZjIzZmFkOTgwNGQ3MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2EwNTdjNzViZmI5ZWUxY2M0N2VmNmEwNDNmOGY0ZDlhZGEwYTNjNzU0ODMyYjE4M2MxMzUxNjU5NmUyM2FkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQ5ODRjZjI3MzkzZjNmYmNlZTQwOWM0ZmUzN2VmYTdjNTc4ZDViOGMxNGEwYzBkZWI5NmZjMjdjNGQyOWIyZCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L260-L268",
+          "version": "repo-lines-v1:sha256:90aa0b3231b04e7a00bcf55b12dc513f2448dad2c0a48c6a1ad48125bb9875bc:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZjOTg1MjJlYjRiYzM2Mzc0OWQ1ZjhiOWFhNTMwNGVkOGQ3ZjJkNGJkY2JkMGQ3OGM4OTk3M2VjMDYxNmRjMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE5MThlNTIwYzM4ZGZlN2RlNTRlNTg5NjBkOWY4MTI0ZjQ5NzcxNjUwYTNmNWY1MTgzZjI0MzM4MTRjMTY0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGM1Y2NlZjM4ODQxMjgxMGEzZWNkMTcwODRhZjAzMmE2NTU1ZjVlNjI5ODRiNjQzZTZhN2I0OTYyOTM0ZTRkYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGU3MDk5OGExMjk4NDc2M2E5MmEwOTZmM2JhNWQyZTNlMzFkODg5N2UyZGE3Y2I0NzYzNjM1ZjQ1MjgwZDg4YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee57f445519f40ae915beb43d2886f51",
+      "statement": "Pump batch_retries defaults 3 and limits batched-write retries only when the sink supports batching.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L271-L275",
+          "version": "repo-lines-v1:sha256:b1a3037ac8647c8a2d49fcb28c279467a521765ce64e97507b3fed09c081e1bf:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDMwNWI5N2NkNjMwMjRhNmIzYWQ0YzFjMTc4MTVlZGJkZjYzMmFjMmRmMDRlYWY3NzY2MjUyZjdhMmI1MGExZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNiNzA2OGVlNjAxZGFlNmM2NjllNjEyZmY4YzE1ZjhlOWI3NGJlNjg4YTFiYmYwMTcyYzVmZTU3ZjQ1ZjdkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2EwNTdjNzViZmI5ZWUxY2M0N2VmNmEwNDNmOGY0ZDlhZGEwYTNjNzU0ODMyYjE4M2MxMzUxNjU5NmUyM2FkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmFlMmQyMWJkY2IxY2U0ZWViMmZhYzBmOTMyOTRkNTdhZjE3N2FiMjkwNTRkYTk5OTUyYWE1ZDYyZjI2YTNkNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5fe8b7a544a24b43aae7015fddf687fc",
+      "statement": "Pump fallback_to_single_entities_on_batch_fail defaults true and makes a failed batch eligible for single-entity-at-a-time processing, which can be disabled when that cost is prohibitive.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L278-L283",
+          "version": "repo-lines-v1:sha256:c002bba064ebcd9c9722011af0826a54fb2216303fc7fb3f01c8896ab3ac4325:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmEzNzE1YjQ4ZjE0NGM4ZjQwMjNhZWZiM2ExYWI1ZDEwYzAxNzRlMjFiNmYxYWJlY2U4MmQyODQxZmM2OTNiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQ5OTlhYjkyY2MyM2RmMDY2YzdiZjQ0N2RjY2I1YTVmZTRkZmM5YjIxYzM3YjQ1MmEwZWFiYWQ3NGI1ZWZmMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjU4MDJkMDFiOTVlYmE0MDkzNWUxMzg4Mjg1MTE4MjY4NzNhNGRhNDY3ZDQ3MzQ0N2VmNjc1MjJlZWQ3MjQ5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTk2OWQ1MWQ0YzljOGZhZmNlOWY0Nzk4ZjNlZDc4YzQ5OGU1MmViYWRjMWNmMTNmZDQwMDA5MzQwYThiN2YwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_45104639de8a4546ab353970c317d4b5",
+      "statement": "The retry dataset is pump execution history, documented as system:pump_execution:<pipe_id>, where write errors embed failed entities and can be retried in later runs; successful newer source versions can resolve older failures and make them non-retryable.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L24-L25",
+          "version": "repo-lines-v1:sha256:5367bf2aae36d7ca8b3b6b3324f8da4def00392cae9900a49955b8d2aa4e92d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI5MWE5ZGFiMDYxOGQxNGUwMmNjNmE4ZTk4ZWYzYTUzMzdjZWEyODllYjFhNGYyYzdiZjkxZDhiODUzY2I5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmEzYWU4NTFmY2I0ZGMxMjI0NjhlMTYxMThhNzM0NDkzZDZiYmU0NWI4Njg1NzgwZTA0MDVjNGQyZDhiNzNlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTM0YmJjOTU1NDIxZjFiZGZlYjI3NThjNzQyZTAxYWUyZWQzMGI5YzMxOWY5ODU4MWRhZGVkMjhmMzhlOWQ4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODNmOTEzZTAyNTgzMTIyMjI2NDUxYjhiMDU5ODA5YWNhNzIyMmFlYjk5ODk1ODJmMmIzOWY4Y2Y2ZTcxNmI2MyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L395-L397",
+          "version": "repo-lines-v1:sha256:9c257d34959c7131db99cba1ac4f58bf0d111ee371e2a6ae0825aecafd106905:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ4YTYxODY1OWU1MWVhZjg2YzU5MzI2ZWYxNjYwYmU0YzVkNWFmY2FlMjZjZjk4MTJhOWU1ZWNiY2MxZTk0OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhjNjRlYTk1YzRhZDg4MWY2MDdhYzdkMDhiOTQ1OTNlZjZlZDJjMTEzMTA3M2U4MDY0NDVlZWYzMTE3YzYzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmMxYmYzZjE3ZTkxODg2Mjk5YjNiZWU1MzA3ZDRlNjBjOTM4NGE1N2JkZjkzODljZDMxNjkyZDgxOTlkNmFmOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdlM2NjOGZiMjE1ZDM0NTk4MDRlZDQxMzlmOGUyMjFmNGNlYWM3Yjg0M2Y4OTU4YjlmYjhiNDBkNzVlNGNhMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L468-L480",
+          "version": "repo-lines-v1:sha256:e0ae083fa86e01d3fe64e1d8582b8412ebbf348ca7a93df9e18a2b3782463b86:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjOTAyNDcxODQxZWVmZjdlYzUzODc0MjE3ODE4NjRjYmZkNWNiZTY1NDk5NTE0ZTlkYWM2MzVlYjBkMzNhN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZTY1N2RhMDBmYWEyYTk3Y2YyMDdiYWRhNGFjZmEyMTUyNDU3ODM4MGMyNDA2NTJiYTUyODFjOGMxZjBhYjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI0ZjQ2MTMxMDZlNjNiNTI2YTI2OGViOGNiNTgxNmQ1ODQ4NjZjNWI4NGIxMjkyNjJkM2RlNTIyMjRiMGI5MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmNzVlYmU3NTViNGJkMjNiYjlmNmMxYmZhODA3OTdlZGI0NzZkZjdmNjhjZTYwMTY5YTgyYTg1OTI4MGYxY2YifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L6-L11",
+          "version": "repo-lines-v1:sha256:e4438d6c78f02bb8733dc5f3386246a7f2cd3df0c70d20ba92f3218fe3360be2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGExMTA0Mzc4ZmYzZjg2MzhlYTI1NzU2YmUyYjZiNmVjODM5ZjUyMWFjYjI0NzU2NDg3YzUyZDA3NzE3MmZlMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjYyNDVhYTRiZjg3ZTc0NWFiNzZlOTcyN2RhZGFkMTE4YTZmNGMyYzEyMjc3YjZiODU0YzAxMDNhNGI3ZmVmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWEzYTVlODc3MDg1OGE4OWU1MjEzNzkyMDQwMzY5NzY2MjliNTM0ZTI2Y2E0MDI2ODYyNjBjMzdkOTI1MDdhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWNjMGUxM2U5MzYzNmZjZmI5Njk0NTU1ZTY1OTllMjBjYjkwY2NmZTRkOWNiNmRjZjRmZDRhMTczNWIyMjVlYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d49e29919f242e6bb76f1d36333c3f1",
+      "statement": "Execution-history failures marked dead are given up on, optionally copied to the configured dead-letter dataset, and never retried again until a new source version arrives.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L482-L487",
+          "version": "repo-lines-v1:sha256:09f03bac9685a2146d439193963ee17944bdb8026c603cd088b0225424df2b6f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWNlNmNiZTE0OTY2MjA3NDBlN2YzOTg5NjVkYTQxNWFiYTE0ZjRiNjE4MGE5YWVhNTIyNDQ2MzNjNjZmMmQxMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM4ZTRjYTc1MmJjNzM5M2NlMjliOTFlYzkzNTkxZWEyMjQwOGVmZTZiOGM4NDk1NTVjYmZhMTc4ZTVmYmVlZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQwODY2Mzg0MTdhMjRjMmE2ZTZiZmM0MWIwYjY2NWI1YzJiYjk0YjMwODExNTFiMWIzYzE4NTRiNzQ4Y2RlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjk3ZDM4YThlMWEzMWJkODQ3NDk0MDkzNjM2OGQ5N2MxMGZiNzk1Njc3Y2JmMmZmN2UzNTU1MTY4NjBjMGYzNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3a89a31787204c04b32d8afcfb905a48",
+      "statement": "track_dead_letters defaults false and is documented to remove an earlier dead letter after a later successful write at the cost of execution-log lookups; its documented activation still requires deprecated use_dead_letter_dataset plus active retries even though dead_letter_dataset is the replacement destination setting, so modern-setting-only cleanup is not established by this documentation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L179-L205",
+          "version": "repo-lines-v1:sha256:59d4f0313ee047a6f79e0b26f201e4fb80b2fe73918d85e7965073895a79fedd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyMWViMTI5NzkwNzg5NDg2ODM3ZTU4YWVjYzM2M2I4NmM5MWI4Yzg5NzEyYWY3NzI5ZWY2NzU0Y2E5ZDcyY2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwMTU2ODMxN2JjZTUzOGJiNDEzZTlkM2RlMzM3MDFjMmNjMGE2M2JjNWYzYWZlMjllMjFjOTMyZmM3MGE5NGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2MmRkNTQ0Y2ZkODQzZTI1YmU0NzdjYzIwODI5YzllYmM2YzM5NzdiNTFiYmRiZjdjY2NkZTUyMmI4NGUwMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmMGNjZGFiZTJmYzE3YWI3M2FjZmRmMTI3ZjE4OWZkZTExZjUzYmM2MTRmYmQ4MGM3MTEzYjkwMTI4ZTViMGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b316bcbc65b947b88055d6094c90f4f9",
+      "statement": "Execution history exposes full, partial, and incremental sync types, completion/failure records, retry existence, and entity success/failure counts, but its entity structure is explicitly not a stable public application API.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L188-L214",
+          "version": "repo-lines-v1:sha256:6483ec8b6b49153baa0e9206d375414056e2a76bfab6120e9a1c785553fbc6a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhZTgxNDU3YWNkNDZlNTEwOWZiNDhiZWExYzBhNTg5ZTU3ZGU0NmJkNzdmOWQ5NjMxZDcwODk1YzU3MjY4NjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNjczYWJkNDU3YTk3ZWVhMTdhNjAwNjJlYjBmYWVhNmJkZjA5NDg2OGNjNmI4ZjhjMGViZGEyZjYxZWQ0MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMzYzg3MGU0M2VmYmQ0MWU4ZDA2MjBkMjdlNjY4OWRmOTQ4MjgxYmU3OGE4YjhhOWZhYWI5MDI0NWUwOWFiNTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmNjBlMTg5NzQ2MTgyZTVmOTAwNTM1MzUwZjg3YTA3OTJjMGFmYjE5M2FhMDEwNGE5ZmQ1ZWJiNWQ3MzhkNWMifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L75-L78",
+          "version": "repo-lines-v1:sha256:69d31bd1502b143b957e17075d475e78705015b0cbcd7b68fcbd8d9f5a555066:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFlYWI1ZmY1NjlmNWM0OGM4NmNlZGQ2NzlkM2UxNGFkMTFlMzVlMGQ2Y2VkOTU0MzI4MWZkZWU5NDA4Yzk4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTU5NjkzY2NkNmRlZjYwNWQ1YWRhZmMyYjc5MDc1MTQwOGZhZDA5NzI0YTRjZmFjYjI3ZDdmYTQ4NWFkYTc4NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDUwZTEwMWEwMzA2NTg1NDU4Y2VmZDY4MzExZDg0MzNlNWEwMDAwMzA5ODkxMDBhMDU0NTAxNWU4NTc2MWI2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmYwOWQzNGEyM2EzMmM5MjE4M2JkN2I5NDBlNzM0ODQ5YTc4MjA2NTBlM2U5YjcwZTQ5ODk0MjYxMzk0NTk4ZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L9-L13",
+          "version": "repo-lines-v1:sha256:7ee06b44f7bc0d1e9f39ea7edacde32ae4d65ae8b6b5bb6acab341816a298d83:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDAxMjJiMjNhMzk0YjI2ZGE3YTdjODBkYTZhNTE4ZmE3Yzk0MjI5ZDJmOTk0Y2E2NWRjYjg5NGY1OWIwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzQyZWNmYjE1ZGJlOTFmNDFkNWIyYTM5OWNhODk0NWQ5ZWNmN2NiYTYxNzc4ODBiYTVkYzQ2Nzc3M2Q3OTNmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjZhYTJjMWIwMTBhOTgxYmFhMjQwODZjZjZlMjBjNDFiZmFhZDE3ZjJiZDk5YmI0MDVmODc4ZDI2ZjdlN2ZkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDllYjY3NDBiMmI5MDM3ODA2OWM5YTE0ZjlhZDEwNzUyMzY1OTViNDUyOTI2MTU2YjAxNDNhMTU2ZGYzNjhkMyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/pump-execution.rst#L96-L117",
+          "version": "repo-lines-v1:sha256:4417dee54ec443d84ea0ea679984b1f6ab1472263c2938fbbe01597ec5ea5788:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1MzE0ODZlM2Q5YjAwZTA4NTNhNmQ0YjcxZjgyZjkzYzM3ZWVmYzg2ZDE1YWFmMTZkY2YwODZkYWQzY2NjZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFhYWE5NGEzMDE3MmM1ZjhlMzcyYjRhZTUxMmExMWJjYmUyMDIzMjkyYjlhMjQzNTc2M2IxY2Q5YmI4OGE0YWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2OGFmNDBiY2U0YWUzNTRmYmEwNDg2MmU4OWY5MGEzZWZiZTMxNjdiNjA5MjU4YjUyMzc4YmU1NTI1Mjc0Y2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6ad6946ab15c47aeabfc35006c505461",
+      "statement": "log_events_noop_runs defaults false and suppresses no-op history logging, while log_events_noop_runs_changes_only defaults true and classifies no-ops using sink changes rather than just source output; any errors or retries imply logging.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L301-L318",
+          "version": "repo-lines-v1:sha256:501374a3976ba19513aa8adb365a53490b36e930b183250965efc20ae7c6ad10:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2NmRjNmFhMGI3Y2QzMDdkMTQwM2U1MGVkMTc2NmU3NDQ4MTdiNTA4YzNlNWY4MzMwNzRlMWE0YzYzZmI1YWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkOTk5YWI5MmNjMjNkZjA2NmM3YmY0NDdkY2NiNWE1ZmU0ZGZjOWIyMWMzN2I0NTJhMGVhYmFkNzRiNWVmZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1ZjRkZTE2YmEwYWI2NTE4NmJlMmJmNjVlMDM2Yzg4ODAzYTBjNmZhOTAxYTAyYTU1NzJlY2FjNmQ1YjgwNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjMmE1MDlmN2Y2OTZhMWFhZmIwMjdhNzhkODI5NWJjMmFlNGRjNzk1ODZlMzYzMDZlYjU0ODk4NDdiZTFiODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_62d9e729b6e84e368ab347280898a804",
+      "statement": "A dataset-sink circuit breaker trips when writes in a run exceed a configured limit, but activates only after sink population to avoid tripping on initial synchronization.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/circuit-breakers.rst#L8-L16",
+          "version": "repo-lines-v1:sha256:7de4562bdb9889717bacdeb7b24e9a3ab0fae29c153050028e74d61b7268abb0:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg5ZjAwNDVjMWMyNTNiZTM4MTQxOGE5ZTY1YjJiOWM4MDg4NWQ3ZTJhZmJkZjVjNDFjZTVhZmVlMGNhMDNlNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGQ1MDk3Yjk3M2Q3ZGEwYjk1N2U5OGMzZGFiZDRkZWYyYWI2ZTM1YjI3MWU3ODkxYzI3YzIxNGViNTQ1Yjg5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTMwYmI1NjJkYTY0NTdhZjY1MDljZDI1MGYzYTM0YThlOWRjNDEwOTA2MzlhNDk1ZWQ1ZWUwYjZiYzg1Njk5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWQ2OTlmYzA5YTczMjQ3ZjFjNDc4ODViNzhlZjc1NTgwZWVkMDRhZWFhN2E3NWYxNTRmYzFhMGFmMzE5NjI4YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_64a0236ef65540e89dfa43cf999f07ee",
+      "statement": "Dataset-sink circuit_breaker_threshold_factor and circuit_breaker_threshold_count default null; the factor uses unique latest entity ids including deleted entities, and if both thresholds are supplied their maximum defines the limit.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L112-L138",
+          "version": "repo-lines-v1:sha256:fbcfd58b76cb9f5b0df87db4c737107f7bc1136c7b3b831fea7aeba8eb3d038b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4ZTJjMjI2OTY1ZWQ1MjEwNWNmMWRhZTZiZTVjYmFkMjk2MTUwNDI4NWY2YWI0NGM1ODIwOWNjMDVmMjZmYzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwN2E3Nzg1NWU4YmVhODllOTRhZGEwYzY5YzA1YTEwNGM2NDdjMGNlNzc4YTc1YzViZTgyZDZjOWYwZTc0YWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_28af56cdffb249e892b4c5270a83a0df",
+      "statement": "A tripped dataset circuit breaker prevents pipe runs, compaction, and reposting to that dataset until recovery.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/circuit-breakers.rst#L18-L26",
+          "version": "repo-lines-v1:sha256:c03eb87fa9f99773dc8f2385536eaf373a5c1cbdd63f44acf1a02ade6f9cc373:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY0YjA5YTdhOGI5NzQ0YzYxMGIwZjNmMjNmM2Q3OGVhMTBiNWI0ODcyZjA0ZGI5Y2M5Zjc5YzA3ZjRlMTNkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI0YzE1OGUzNDVlMmFjYjAwMWQ3ZWZhYWU5NDFiMmRkNWFmYzJkMjBlZGRlNjUxZDJjYWJhZWE3NmRjNGY0OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmE4ZDU5ZjE5NDk2MjljYWJmN2VlMmU4MDk1MTI2ZGY4M2E1MjU4NDU5ODk2MzNjYTlmYTg3OWViYWU1YTAyNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGE3YTVkMzViN2RkOWIyOGQyNWU5NTJiNDhhNTA4MTg0M2Q0ODM0NGJlMjM0Y2YxZTMwN2Q1MDk3MTc0MDk4MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d3123abcb98846b496256d12b8920730",
+      "statement": "Circuit-breaker rollback deletes entities written during the tripped run, while commit exposes uncommitted entities; both reset the breaker and are available from Management Studio or form POST /api/datasets/{dataset_id} using rollback-circuit-breaker or commit-circuit-breaker.",
+      "evidence": [
+        {
+          "resource": "repo://hub/api.rst#L12-L17",
+          "version": "repo-lines-v1:sha256:797d461a977f65aed7dbf919251b5566beabfb7936ecf4c65855ae19b6cf035a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTczZjIxZDUzMTFhOGM5YWU1ZDYwZTkwOGM2ZjYzZGZmOTAyZGRkMzM5Y2ZkZmY3MWQ2ZGNhZTU0NDMyNTI1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFmZGQzN2UzMzJlZDIzNTk4NmNmMzhlZWM4OTEwYzlkZjQ5ZTkyYTYxMjE1YzBiZWYyMmE2NGRiNDc1YzYwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWUyZmViZTZiM2E5NTdlZjNjNTNkN2VjOTA0NWRkODQ4OTI4YWMzNTJhZDI3ODUyMDMyZjljZmViMDkxYjMwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjY2N2YzNTlhZDU1NDQ0MDExOWJmYTVhOTg0NGFmNWNlMmMwMjc4YzE1ZDJmN2Y3MjZmZDhmNzZhZTE3YzQ4YyJ9"
+        },
+        {
+          "resource": "repo://hub/features/circuit-breakers.rst#L18-L30",
+          "version": "repo-lines-v1:sha256:8e15d59983bb8d0444a01a6b6664d5377235eb4d60b3aa869e4817833f3c4653:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2NGIwOWE3YThiOTc0NGM2MTBiMGYzZjIzZjNkNzhlYTEwYjViNDg3MmYwNGRiOWNjOWY3OWMwN2Y0ZTEzZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYzczZGU2MGU1ZDBhZTY3YmYwNzAxOTg5MTc2YmRlODU3ZTE1MjM5NDdmMWY3YjY4ZTcyOThhNjJhM2I3ZmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhOGQ1OWYxOTQ5NjI5Y2FiZjdlZTJlODA5NTEyNmRmODNhNTI1ODQ1OTg5NjMzY2E5ZmE4NzllYmFlNWEwMjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyYTQ4NTlhMDQ5YjAzYmQ3NzlhOGI1MjBkOTJlZTY1NzljZjNjNmQwMTgwYjFjN2ZkOTk1NDFiNWQ3NzlkYzIifQ"
+        },
+        {
+          "resource": "repo://hub/swagger_public.yaml#L786-L807",
+          "version": "repo-lines-v1:sha256:d11b4157022fdf0fa33f2d16cb3355670c8c1fda713ff1561d7e569303bbb040:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZWFhMjhhODgxZWFjYTE0ZDY5ZGYwZGZhNWVlOTBjNTliNjZmZDI0ODRkYzJmODY4MDgyZDliMzM1MTRjMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhYzE5MGNhOWM3N2U2YzQ4OTQyNTliYjkyMWI1NWU5MGU1ZGZmZTA0ZWViYzFmOTg4YWU0YTViYWRmN2I5MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ODA2OGY3MThjYmNmZWNlOWVjM2E1YTMyNTM5YjA3MGJiZjEzMTY1MmMyMTM4MmRhN2ZkODEyMWU5MzY4ZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkMDhmMmYwZTE3YmJkODc0OTlhNTlkNDc5YTI0ZGY0NTU5ZmIwY2U5MTcwMDExYzhlMTc0YzBkNDAzY2E0ZmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c29c7d77b62448fafcf685b64738fc7",
+      "statement": "The dataset-write circuit breaker is distinct from global_defaults.use_config_circuit_breaker, which guards configuration uploads against deletion of more than 10 percent of existing components when the count is also greater than 10.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L199-L202",
+          "version": "repo-lines-v1:sha256:ba8bc6b48a37e5c97db2d328827a23034037997189636f05fdbc4094e5065fe1:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2RmNDFiOGE5MjcyNTQxMjA3OTJkODhmZDU0M2YwMzg4YTc3MDRkODkzOTczYWIwZjU0ODgyNjJlYmIyY2I4ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzY4ZDViZDk4ZGZhMWJlN2U0ZjQxNDE3YzFlNDFhNmY1NTZkMzgzY2E3ZDNjZjI2YzQ3NTZmYzYwZGQyZDNjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDJjNDFiZmIwNWNmY2I4NDRjNDY0ZDc0YTAyNTZlM2E0NDhmNmVhZTY0ZWZlOGRhMTI3NjU3YzVkMGQ1NDNiOSJ9"
+        },
+        {
+          "resource": "repo://hub/features/circuit-breakers.rst#L8-L11",
+          "version": "repo-lines-v1:sha256:c6c2ec1de321d872f2f913eeef02a7546a95daabc683a9bd1ba54a58ba7aa077:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg5ZjAwNDVjMWMyNTNiZTM4MTQxOGE5ZTY1YjJiOWM4MDg4NWQ3ZTJhZmJkZjVjNDFjZTVhZmVlMGNhMDNlNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjNkYjFiMmI1ZDU3ZDdiNDFiOTZiYzcxYzliMTJmYWQwMzM3MWZlMDRjZmQwNWM2ZWMzYzlkOGQ4YjYwZmJlNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTMwYmI1NjJkYTY0NTdhZjY1MDljZDI1MGYzYTM0YThlOWRjNDEwOTA2MzlhNDk1ZWQ1ZWUwYjZiYzg1Njk5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGUwZDY5NTRmNzQ1Y2M4NzA1MjM1NmFiN2YyNzY5NDQ5NTA2YTA0OTcxMzA5ZDAxZGNjNDA1YzUxNjU2ODQwOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_18e832f785dc4c4a91c9cfd819bae3b0",
+      "statement": "Documented local configuration testing uses expected output and .test.json files per endpoint pipe, drains pipe queues with outgoing writes disabled or unable to reach real systems, and runs sesam -vv test to compare results.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a8d3a9498a046eda7ed338e2860e321",
+      "statement": "Configuration CI requires a dedicated test node, serial test execution because configuration uploads overwrite shared state, and isolation from real outbound systems including omission of their connection secrets.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L7-L22",
+          "version": "repo-lines-v1:sha256:81b97600d1a11a87e4d614dec70be22441d2ef3700e558ebea7fc43c37265492:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5NWQ0OTIyYjgzZGRlZTFkODI2ZWNhNWFlZGYyNTUyNTVhYjZhOTlmYjljZTBhNTcwYTE4MTFlNjZmZDQ4ZGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2ZWExOWRlYWQ3YzQ2NzExMzJjY2Q3NDM5NmZmZjFiODg3NTQ4YTkyYzdlNzQzYWRkZjlmMmE0Y2M3MmQ0MGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MjMyOTcxYzUwMTJkZjU1ODc2MDZiOTRlMjVhOWI0Y2VlOTA4NDQ1MzUwODlkNTEyZjkzMTk5YjA0MDQwY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwOTE0NjAyZThjNGJmZDI0ZTVlODRiYjdjM2NmMDg1YjIxYzZhMTQ0NTk4MjAxMjIyMzRmZjhlMWEzMTk1ZjcifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

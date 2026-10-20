@@ -1,0 +1,60 @@
+# OpenWiki read boundary. Preserve authored RST/RSTX, includes, Swagger YAML,
+# configuration examples, build tooling, templates, and meaningful diagrams.
+# Do not ignore openwiki/: generated pages and claim metadata must stay writable.
+
+# VCS, editor state, installed dependencies, and local environments.
+.git/
+.idea/
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+.python_env*/
+.my_env/
+node_modules/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.cache/
+
+# Rendered site/exports and generated runtime output, not authored source.
+/_build/
+/build/
+/dist/
+/htmlcov/
+/coverage/
+/logs/
+*.log
+*.log.*
+.coverage
+.coverage.*
+coverage.xml
+*.zip
+*.tar.gz
+*.pptx
+*.docx
+
+# Local secrets; template configuration is useful evidence.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
+/.secrets/
+/.aws/
+/.azure/
+/.ssh/
+.netrc
+.pypirc
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519

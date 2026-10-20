@@ -1,0 +1,1050 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:429b27019d4efcba0c222deb2abdbeefff178fbbdd41eb0eb946b6064f7fccfb",
+  "claims": [
+    {
+      "id": "claim_82548c326ba3467783003529ec04796a",
+      "statement": "Sesam represents entities as dictionaries with string keys and literal, list, or dictionary values; an entity's required _id is a string primary key, not a typed NI or URI.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L201-L212",
+          "version": "repo-lines-v1:sha256:76e32da288e343b7decd4a133e494ad13812b987018f41e342977d522392751e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0YWMyODUzNWI4ZDhkZmQzMWI5NWNkOThiYWU0NmVlYzFmNjU1MWIwNDBjZThiYzU3MjRlNDdmYTcxYTMyNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0MDFkOWVlYmI0MGM0ZDNhZTUzMDhhMWMxOTU5NmY1NTU1YjUxYTQ5MzlmZmRhMzc2ZmRlYjYxYzk0MjBkMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE0NmQxMGYyOTlmYmNkYTFlZGJhNzI0MmUwZjM2MWQzYTFiYjQ5MTFhMTMxOWZiMmYzYzIwMDI1ZWFjYTg3MGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ3MzcxNzJhODUwZTAzMmIwN2E3MDg0NzQ5MWI4ZmRlNDU1OTBkOWMwNWM0ZDZkMmNiMzA4MGQ0MTRkYjQ4MWIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L60-L64",
+          "version": "repo-lines-v1:sha256:1420a14fa48f912a6a404c72d963fea5a900a4af76a23928a00f32193e21fd18:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQyZDEyMGNhZjU4ZjM1M2IzOGVlYjQzN2VlNWMzNDMzYWRiY2FhOTg1OTg2Zjc2MjM5M2I5ZjljNmRiZjdlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdiNTNmMmFiMzlmYmI2ZTNkNzhjMzg0ODY2ZmE4Yjc4NjI5MGNiOTY1YmU0OWFkYjRmODQwZTM5NjEwZmU0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDY1ODY3MTg5ZGQyMDRmYjU3MjM1M2M3NzNmNWJlMjQ2YmYyNjlhNDEzYjY0ZDlhMDI0N2YyNDE4YjVhNzMyNyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L7-L25",
+          "version": "repo-lines-v1:sha256:35895767a4bc7b0255aab8297b1b868f0436b4c47d82890cb41895952891035f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNzYzYmMyMGRmNWY4YjJkZDM0Yzk5NWExODBlZTY3ODVkZDhlODVmMDgzZWQ5YWQ5YjQ1ZDM4NWMwZTA1N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkOTIxYTdkMjkwZTE5YjZhMTA2ODc2YmQ0MzUzMDY3ODgxYWExOTJiMjA3NzYwZDZmNDg5ZTNjMWYyNWM3OTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwMjYxN2NlOWE1MWMzYjJhN2FkZGVmZjJmZTZmNDU4YzRlNmRjZGRhNzRlYWUzZDczMzRkNzAyZTRmNDgyYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1OGE1ZGVkNmY4NjAxYTNlM2U5ZGUzY2U1OTI4ZWRkMjQwYjIyN2UxZjhhOGJiNzQzZTgxOTg5ZGZhZmNlZmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_197f105bc1984c8cbf08862d6f77bb8a",
+      "statement": "A dataset is an append-only immutable entity-version log supported by primary and secondary indexes; a normal dataset write appends only new or content-changed entities and drops candidates identical to the latest version using content-hash comparison.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:5b5ff563c911da552ba50940e6872d6af3abffcd29873c0afb06af8434e561d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWVmZmM4OTA1ZTNmOTdlMDIyMmM3NTk3NjA1NDcwYjdiMWFjZjcxNzMzYTA5MzBmZDAxYWQyMzhjZWFmMDJkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzIzNDdlMGJlYTcwM2MyOWY2NTAwZmFjODE0ZmI0N2NjNWQ5NTY5YmU5NDQ3NmNmZDQ4Y2Y2YmZlZjllOGY4MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2MwOWRlMzcxN2Q0MDllZDU5ZDAzYzM3YjdmMjZjYzI5Mzk4YjYyYTc0ODk3NjE1YmUyNjAwYjg5ZDAxYTJkMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDU4MDQwOGZkMGYxODllMGUwMTA0NjcxNTRlZjRjZTQyYjBjZjVjZjQ4ZDk3YzA4MjFlNjI1MzRkOGI2YjNjZSJ9"
+        },
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L10-L18",
+          "version": "repo-lines-v1:sha256:a2ce6164c45f60527a5ff3a18870c7f0b6ca944541ae5cdf490cbbd9424bbaa9:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODdlZGYyODczZDBiNGZhNjkzOTBiNTJlNTcwZTE5MmNhNGVhODFhYWRkZDlhOTkzZTBmNDRhMjBhNWNiNGVlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODkyNzc0NmJmNzhhZmNkNDgzZWMzNzJlNjliODg2ZDZhNGU2YzFiZGNhMmQyNWU5MGQ4Y2EzODUxYWNjNTIzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1N2U2YmM2M2I0YWJjODE4OGI4ZTcwNGNkNWI1ZmU2MWU4MjQ0OGUzNWJhNzkyMWE3ZDk4MGY5M2E0OTY3ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRmZjM1OTljYWIyZmExMGEwZWY1N2JiNGJjNjMzNDJjY2JjMmQ3ZTNhNzYwYzA2MmI5YzhkZjJiOGU1OWJmNSJ9"
+        },
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:613edaa2efc6ccfeb889f952823222a47139afd422c3eee2cacb64040e967a9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJiZjkyNTRmYmEyNmFmYmY3ZjljMGQwYzFkNjlmYzAzMjI4MzM2OWY1ZmIyNjdmNjhjYWYzNzhmY2M1ODBkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY3ZTU1N2U5ODEyNWUzMzRkY2I3MmM3Y2YyNDYwZjNjYjViNTcyNDFhYmY2OGM3MjE5MDI4YTlmMDUxYjY2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWY3OTMzZjNiODdjYzlhYWZkOWEyMmQ0M2MzYzM3OThmMDEwNjA4OTk4NDYyODFmZmU4ZDYxMWZhY2UwY2U5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQwYzBiMjViMDFiMTc3M2VkMTg1NWEyZGFiMzRiNDcyNDcwZmNiNjYzODc3NzdkMGU0OTQ1OTc1YzJkOGE0MSJ9"
+        },
+        {
+          "resource": "repo://hub/images/dataset-structure.png",
+          "version": "repo-file-v1:sha256:7a59ced9cb479ea85c9275a8600f8e6a666713f9e6fb3946ef13f9a0c608792a"
+        }
+      ]
+    },
+    {
+      "id": "claim_c64916de1a614b62a901d7549980ef5c",
+      "statement": "A scheduled pipe pump pulls entities from a source, passes them through transforms, and sends the results to a sink.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/streams-of-entities.rst#L26-L26",
+          "version": "repo-lines-v1:sha256:7423b68954875d9f59c60eed9877c9455ab2dc08bfbbcb689fdd705b2b8f8f88:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQyM2I2ODk1NDg3NWQ5ZjU5YzYwZWVkOTg3N2M5NDU1YWIyZGMwOGJmYmJjYjY4OWZkZDcwNWIyYjhmOGY4OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQyM2I2ODk1NDg3NWQ5ZjU5YzYwZWVkOTg3N2M5NDU1YWIyZGMwOGJmYmJjYjY4OWZkZDcwNWIyYjhmOGY4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgxY2E3Mzk4ODk4MDJjMThmZDM3MjVjM2NlZWJkZDU3OTY3MGIxYmM5YTFjYzJkZDI5MTBhZjY2N2MyODRhNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQwYzBiMjViMDFiMTc3M2VkMTg1NWEyZGFiMzRiNDcyNDcwZmNiNjYzODc3NzdkMGU0OTQ1OTc1YzJkOGE0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d71e6436bf8f429faffd766aea0720ce",
+      "statement": "Sesam is primarily an asynchronous batching and stream-processing system; its Service API is not designed or guaranteed for highly concurrent, low-latency, high-throughput user-facing applications, for which the documentation recommends a dedicated publishing system.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/streams-of-entities.rst#L29-L31",
+          "version": "repo-lines-v1:sha256:a4687f186dcecf812846f0e8e8bc71a95fb916a4740fb8d65dc686f19b7bc7b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDBhYTMyYjYyM2NlM2M3NGEwNzY1MzllZDI5OWJhMmQ4ZjFlNGQyYzYwODdlODdjNDJmNTQ0OGRkNDgwNDdmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmE0ZTc3NDkwZjY1ZjIxMDAwMzkzMjVmMTVjYzAwNGUxM2YwMGFmYWU4MDExNWZmYzU1ZjBhM2VhZjFlOWJiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bde7482677f44f5f90f44d4ae852db56",
+      "statement": "The normal dataset sink defaults its dataset id to the pipe id, creates an absent dataset when entities are written, and prohibits dataset ids containing / or targeting system: datasets.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L31-L44",
+          "version": "repo-lines-v1:sha256:52aa3efc9485cdea68e52c669c2f1daa7694f01fb88f7a6b52d77839701372d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1N2MyOWFkY2JjMDkxNjhlODFkN2Q2Y2UzNTMxNWM4YTFlNTNlZjVkNzA3MmYyODZlYzQ0MzAzMDcyNDU4MjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwZDk2YTY5ODFkZjkyMTNhMWU5Yjk4YjViNzBmODE4MzJmMWI2OWJjMzI2ZWY0ZGUzNzE3MzM0NzBmMGMzMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5ZTU0ZTFmMDFlMTJjYjA1NGJmZjlhMmJhZTEwY2JmYWNkNjQyZjVjZTZlNzEzM2I2YTA3MDc4OWU0OWQ2Y2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1ca49d464a74e4e82fa3bb32c05f201",
+      "statement": "A dataset source requires a dataset id and defaults include_previous_versions to false, returning only the latest version per unique _id; previous-version reads cannot recover history reclaimed by compaction.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L91-L100",
+          "version": "repo-lines-v1:sha256:9345733f8333b3a9a7292a5696014e6eaae4a188034eb07f05175b85507a98b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkMjZiNGI0NWYxOWU0NmUxNjYyMWNmNzk1MDRlZmQyODhjMjAzMTRmMTI2YjU1NmExNDQ4Y2VlM2MwMzNhYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmZjk5MjRkMWQ4MTRkOTJmYTVjN2E3NTc3NDdkMWU1MDRjZTdmOTZmMTVlYzY3ZjhlMzEyNmYzNzM1MDM2MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVjN2YzNzYzMTgzMWI4NzhlMzg1ZGRiY2U2YTc4NzdlYTA5ZmI3OWUyMTk3MjE4ZDg5NDVmY2RkNjIyNzA3OTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4OGFjNzNlMzEyZmU2YzlmY2I0NThiNWE0YWVmNzc0NjAxNDg3NzBmNTcyNTY1MmZiODkwZjNjOWQ3MDM1M2QifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L35-L39",
+          "version": "repo-lines-v1:sha256:c4713085110bd110e94f3c44aaaafc049235fa858ee2155b76a8be07784605e0:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTU3YzI5YWRjYmMwOTE2OGU4MWQ3ZDZjZTM1MzE1YzhhMWU1M2VmNWQ3MDcyZjI4NmVjNDQzMDMwNzI0NTgyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODA0ZGVlNjBmYjlmNjU5YTgwNzA3MGUxN2NiNjViZGZkMDliYzZhZGU4ZTIzYzc2OTAxYjA1ZjA3NDUwMWFjZSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L95-L99",
+          "version": "repo-lines-v1:sha256:9c8b229fa025af093a71349e59bb5be45388c2d6a5977f63fa3ff5646956935e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdlMDU0OTNiMGZkN2M4NTVmMTViODc4M2ZkMGM4MGJlY2UyMjFmZmE5NjNmYWQ5NDljY2YxMGUyMmU3NmIxZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTA3NGI2MmMyYWUyYjRjYmEzMWE3MjFlNGE2ZjIxMmUxNWU3MmQyNTYxNzZkZGVhZDE1MDdiYmVkMjg4ZWYxNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_491c12dfafb7466b93386166609f4140",
+      "statement": "Dataset sources have fixed supports_since, is_since_comparable, and is_chronological values of true; the public _updated contract allows string or integer tokens, requires consumers to treat them as opaque, and permits passing them back as HTTP since.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L72-L79",
+          "version": "repo-lines-v1:sha256:ef9d11140cd9b18c16ebd5ffe115f213641977af53a37431b7c1eb326143301e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhkYmQwMTk5MmQ2ZDhmNjRjNjRlYjEyMzg2NzkyYjJhMmYwMjlhYTBmYjNkNWU1OGE1ZTdlNDc3MTQ1YTZiMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkNWRkODMyNDM0MTEyNTA1YTlhZTRkMTAyY2I2NWFmNDMyMWIxMmI5YTVjZmQ2N2Y1MWRlNjIyYmM4MDA0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIxYzBjYTdmYjRkYWFhYmNjZTlhZWQ0NTY1N2MxMTQ5YjUyZTk5MDJlOWU2OWEzNjc0ZDZmMTE5MTYxYzZkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUxN2E4Y2QxNGIzOTM3YjEwODgyMDkzMGI2OTllNTg1ZGRjNjY5MmE4MzYyMWJjNWM0ZDAwMGE5MDYzNjczZiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L138-L157",
+          "version": "repo-lines-v1:sha256:f255527102f793601c0f0887c71b0e2da9dad429b1c9d3bec267d073c897c8ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkNzVkZDRmYzkyZTRhOWI2MTE0Nzg3OTg2NmI0MGRkYmI0Y2FiNzc2OTM3NDc0YzViZjE4MjBhMTVkZWJiZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MzM0M2FiNThjMTgzNzg2NWQ3YmI4M2I0ZWJhMmI2MWYxNmM3NzZlNmQ5YzNhNjE1NDk4YjdlYzMyZmM5MDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNjcxNmZkODg4ZGM3MTkwODFkNThjNjdkZTI2ODBlYjRiOGUzMmU0MWZmM2ZkMGZiODI4NmRmZWY5MDcxZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_51a1aa6a1cf846dc92dd8dae7203bd81",
+      "statement": "Normal dataset writes assign dataset-local incremental _updated values to versions, and a successfully completed pump saves the newest processed _updated as its since position.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L20-L20",
+          "version": "repo-lines-v1:sha256:cd1fa8ece98789f7886a6b0e8eead19546c39b3adf17d22c51509ba8afe6c651:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QxZmE4ZWNlOTg3ODlmNzg4NmE2YjBlOGVlYWQxOTU0NmMzOWIzYWRmMTdkMjJjNTE1MDliYThhZmU2YzY1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QxZmE4ZWNlOTg3ODlmNzg4NmE2YjBlOGVlYWQxOTU0NmMzOWIzYWRmMTdkMjJjNTE1MDliYThhZmU2YzY1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE0ZTU4ZmNlZDUwNDViMzExZDMzNzYxMDI3NWYxYWVkNzViMGUyYTVkZmFkMzY2MmVkZWJlNTIwOTcxYjZiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzVlMjUyZWFhMDgxZjQyN2QzM2ZhMWMxMWNhOTViYTk5OTkyMDcyZWJkNGY4YmJjMWJhY2E4NjJlNWI1NTc1YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e15e7a7e3b0c41ea861d03a1adf57f20",
+      "statement": "A sink dataset becomes populated when its initial offset is set; the default if-source-populated policy waits for a populated source and consumption of all source entities, while dataset source require_populated_input defaults false and gates execution on population when true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L63",
+          "version": "repo-lines-v1:sha256:4268ebfc6c40260783c2011f564082f7d69930d7c4674b75c5de064cd2bf58d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhMWIzYmE0ZTYzNDFhYTE5MGYwMTgxYjZhNWY4MjM1ODM1OWJmNzIxMWVjNjE4ZTRmMTJmZDUxMzk4YTRiMjEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L87-L93",
+          "version": "repo-lines-v1:sha256:356cc04ecca28e377abe51250f02bcae6915b3627978ac034e56a22a9d42567f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FkZjFhM2MxYzJhYzliZTU2YjE0OTIyMzE1YTY2MzQwNDcxOWIwZjgzZTJjNzFjNGVhZTg5NDIwNmY5NDc0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTM3OTA3MGMwYmNmNzUyNmRhOWE0Mzk2YTBiMzBhODgzY2Y4ZWUyNDMzYjZkMjJlZWQwNDY0OGFhM2M4YmY0NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b075390a269a4a16ba16bf6a85ea19fe",
+      "statement": "Dataset sink enable_optimistic_locking compares incoming _updated tokens with previous versions; if any token does not match, an error is raised and no entities are written to the target dataset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L96-L109",
+          "version": "repo-lines-v1:sha256:ef1fcc3eecfecd346518b9da8682ef745d4b01e284c2a019d89393ce78cd8506:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NzUzYWE2MjMxNWNlYmEzOGE4Yzc0MTA5NjkwOTU5ZTMwNmY2N2JmOWE3MDQxMzA0NzZlMDk4YmJhZmIzOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExOGE1ZmRlMTcyY2FmODY4MjRkMGY2OTkwOWFhYmJmZDc2NmNkZDhmMmVmYzkzNTQxOTE0NmNhMTgyYzljNzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4M2FiMmNiZmIzNWU2N2VjMWVkZTU3MmUxYWY4NTlkNDE1ZGZlZTU5ZTUxYmI3YjM1NmUxM2RmODk4NzgwYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_70ec873f32fd4460ba1b8e3d1bc2c585",
+      "statement": "The replicated_dataset sink preserves upstream entity sequence order and offsets unlike the normal writer, but does not support deletion tracking, entity re-posting, or circuit breakers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-replicated-dataset.rst#L6-L16",
+          "version": "repo-lines-v1:sha256:1f470800d331ddc8c74225b8750aa98e46d63e73e210cb6f7a4d719d0b33e902:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4YjcxODk2ZTMyM2QwY2YyOTc4MmY4YjIzN2UwZTQyMTU5NTg4NDMxYzZkMWNiMjRjYWY0M2QyMDViODcxYjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhOGEyZTcwMjFlZWJiNWRhZjcwMzhmYmZhOTUxZWUyN2FhYWM4ODNkZmIzODdhN2Q2MGQyMDYwZTNlNzA5MDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwMzZmMTdlZTIwM2UzZGZiZWNmOWJkMTUwYzNhZWYxNmEwM2ZkOTAxZjkzNzg2Mjg0YjIzYTY1NmMxYTA5ZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTNjYzhmYjIxNWQzNDU5ODA0ZWQ0MTM5ZjhlMjIxZjRjZWFjN2I4NDNmODk1OGI5ZmI4YjQwZDc1ZTRjYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8adbae0a24d42e4a3cfa92825709c9b",
+      "statement": "JSON Pull returns entities as a JSON array even for a single entity; since starts after a supplied stream offset and limit caps the number of returned entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L29-L62",
+          "version": "repo-lines-v1:sha256:86dd19b7ec8b4945835af29dfd3c7ae7469575589f8b1b42e88211b17dd9956c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NjBjMTg2YjliNTc5M2JiYmE0NWE3YWEzNmUxNDkxZWQ3ZmYzOWQ1Y2VhMGQzMWQ0OWQ4N2ZlMzk4NmZkZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2MzU4ZGExN2I4ZTkwOWUzNzQ5ZWE4ZmIxZTU0NGYxZDkyMGQyYzZmN2UwMTEzYTRiNzAzMmI1MzRiMDdiYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlODIzNGEyNGY3ODUzMGMxNjhlNGJlZDBlNzE4NzIxMzlkYjk3NDU2YjUwZDgxZGMxYzk5OTcyNzNkN2ZhNmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4NWNhODk1Yjc2ZWEyYjZiNTUzMTAwNGM3MjNhMDQ3NDBhZDIxYjViNmVmNjFmN2M4YjJkNGI3Mjk3ZWRkMTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b778639400f44801b2965fd9ce36ef85",
+      "statement": "X-Dataset-Filtered marks a filtered JSON Pull stream in which the entity at X-Dataset-Max-Updated is not guaranteed to appear; the latter header is the highest committed dataset offset, JSON encoded.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L78-L82",
+          "version": "repo-lines-v1:sha256:32d6a9eb238eaac8b89318f5eea082d481c846f201c01a191342f312c6c59f5e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdjNGNhZWVmYTgxYjIwZGFlZmIxOTQxMjU4MTc3ZDI3NTg2NjU1YjQzNjY0Zjg0MjNjZWNkMjhhZjIxYzhhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTU4YTkwMGFkN2UyMzg1MjQyMzQzZTQ4OTIxZmFkZjE1NjUxYmIxNTM0MmFmZGMzNGFkMTY3YzVmZWJkMTE4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTViZjU2Y2FhMjFmMzgyYTQ5OWQ5MGYwYTE5NDE3YTVmMmZkM2QyOTVmOWMzYWEyOTBiYmYzOWVjZTlmNjE1ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjkwZWU5NmQzMTFhMzdlZTE2YmFhYzRjNDhiM2NhZDA3M2NiNjMwODdkNjZkMGU5ZGZiYmMyMjM4NDlkZDIxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d3c0831cd54e4962b64badb0061b4d4f",
+      "statement": "Dataset recreation assigns a new generation UUID exposed through X-Dataset-Generation; backup restoration assigns a restore UUID and exposes the highest committed offset at restoration through restore headers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/json-pull.rst#L84-L96",
+          "version": "repo-lines-v1:sha256:553560646424a120cd4805d3e3709048385db7701bf4dd45baad6b7c75be46ea:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMGY0MTdhNDc2ODNiMDBkMDI1Y2YzYjEwYzgzODliMGQxNTQ5ODA5ODU1ODVkYjdmZjIxNWIzNzZiOWNlMjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZWVkMTQ5NGY4YTY5MWY1YTNjYjI2ZDYwZTUyZGY3ODlhNGQxMGQzY2QyMjMwNTU0YmNkZjNjNWEwOTA2N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ1YWU3Y2QzZDE5Yjk0M2Y4NGE1MGExNTllOWE1ZDFhYmI4YjAwNTIxNmI1Y2RiMDU0NjBmZDIzODliNWU4YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5Y2Q3YTZjZTk1NmE5NWE2NGZhODI1MmUyMGVkMzdjYmUxNWE4YmM4M2Y5NjRlOGVjY2M1MGMzZDg1MDE0MDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2f00d8e0b1644b5c8ba5640074e5b0aa",
+      "statement": "Secondary indexes are maintained automatically and declared by hops join expressions, subset definitions, or explicit dataset sink configuration; orphaned indexes currently require UI or API deletion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L19-L26",
+          "version": "repo-lines-v1:sha256:ad193d9874e1f68818125740ef84db57034fadbd0ef465bb759aad10a16729fe:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQwZjkxZmM1YzUwODYyMmQ4MjlmOTdkZGZiNDRkOGE5NDJmYjUyYTVkNzI2M2U0ZWMzY2ZlZTQ2MmNjMDk0NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGI5YjVlOWY1YzI0ZmFhYjgyOGY0MzNlNTA3ZWRmMzZhYmJhNjViNDVjZGNiMGNjMGMzZTQ0NzU4MDFhZTAxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODY4ODA1MmIzY2NmYjMyMmEzYWNiZGYwMmRlZWYxZjY5Y2FiNDI1ZDYwMzIyMmEwZWYwYmE0YjA3NGYzNGEwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2E3NjA5YWMxYzYwMjM5YjdmMmY2NmRhNmEwZWUyODRiNWQ0NjI4ODEzNDZlNmI5ZGU0MmI4NzQ4YjExNzRhYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e298c125975042748607499ffacdb6c0",
+      "statement": "Dataset subsets behave as datasets in sources and hops and are implemented by secondary functional indexes, with one subset per indexed key; almost all deterministic DTL expressions that do not reference other datasets are supported.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/building-blocks/datasets.rst#L30-L37",
+          "version": "repo-lines-v1:sha256:cff100835b59268670ddaf95d2ced54ccecabee6ee33d0170d53a80c6c49d089:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2ZjYmQ2YmQ4OTE4NWY1OGI3NGZiNTYzNDQ0MGM0NTRiNWQyNDEzZGNkNTFjOTFkOWViZDc2OGM4YmJlZDY2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhiZmZmZmQzNjA1MjUwODJhMjg3OTk5ZTA2YzQyZmZiNDExNjRmYjZiZTRiOWM0NDg5NWIwZTk2ZGQ2NDE4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2E3NjA5YWMxYzYwMjM5YjdmMmY2NmRhNmEwZWUyODRiNWQ0NjI4ODEzNDZlNmI5ZGU0MmI4NzQ4YjExNzRhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_27839be036fb4626bc7c3511846fac7f",
+      "statement": "A dataset source subset must be an eq expression with an index expression on the left and a literal value on the right; version 2 indexes are required for subset delete support because version 1 indexes do not support deletes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L41-L49",
+          "version": "repo-lines-v1:sha256:dcbbc90dcec0546dbdaee717ab484e6768f95fb92f3f2d746686384e4e04f185:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ0YTQ0NjY4NzQ1ZDBlM2E0OTFjOGFhMTY2NGZjOTU3NDQxYTdiNmU4ZjA3MzdmMGQxYWQyMTcwNzkzNmQzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzE2N2NjYTNhODczMDdlMjkzZmQwYWNjMGFhZjhiMDU1YzAzZTkzOTNhNDdiYjg5OWFlYjVlMzgxZWE3MjZlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3fcf199992354327ad7253fb91f99144",
+      "statement": "Subset equality follows join equality, where any overlapping scalar or list value succeeds; null values and deleted entities are not indexed for joins and are not traversed by them.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L48-L49",
+          "version": "repo-lines-v1:sha256:055eb479073449032ec31f7a3310ea8a9b7cb046d9510507577dcad5c4e0d446:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTUyMjQzOGQzMjliZWI0MGM1NzcwYWRmMWQ1M2E4ZjgzYjM1Njc3NjkwMWZhN2NlZDNlNTZkMTZlOTliODIyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzE2N2NjYTNhODczMDdlMjkzZmQwYWNjMGFhZjhiMDU1YzAzZTkzOTNhNDdiYjg5OWFlYjVlMzgxZWE3MjZlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTY4NDYwYzFiMzBhOTQ0NTg0YWZiODgyMWFlMjFjYmQzMTdhZmNhZjIwMmMyN2JkOWI1NDZiZmZhYjAxNzczYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/joins.rst#L25-L50",
+          "version": "repo-lines-v1:sha256:45c0a2173bd231406f1fabf6c4036b1d104330d590e998926e17e84779199297:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwOTlhYThmMTYyMGFlNjM2OWM5YTMzY2Y5YzMzODAwNWViNWY4YmQwZThlODljYTA0ODVjMTIxOTc2NjE2YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzYjcyOTMyY2YxYzc0YWQyNDRlNjQxZGJlZTU2N2Q2YTdhNzRjMTczN2JmMzJjMDgzNjVhYmE0YzdmNDY3MTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZGMyMGIxN2ViMzljMjVmZmMxMTc0NmJkYzY5NjE2ZjdlMDEzMzg3ZjhlZmRhMDg3ZmZmNjYwOTUyYTgwMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiZWFiYjIxYWEwZThkZDQ1NGY5MjdmYTIxNDBmZTQzOGJlNjkyNGQwODQ1YmZhYTkzZGRlMzE4OGFlOTY0NjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2c40ecbd7b25470397d4c30844f0e59d",
+      "statement": "Dataset sink indexes set to \"$ids\" maintains alternative-identity lookup for the dataset browser through _id and $ids; service global_defaults.always_index_ids enables this by default and itself defaults false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L262-L268",
+          "version": "repo-lines-v1:sha256:b1f5df305df2eaa555ee7c48a26cdd626fd1017e12f4ee40d59ccef6e240f88e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQ2YWJmZDA3NWE3MWMzNjQyZGM3NjAzYWQwMjZlY2FiOTYwZjI0Zjg2YTM2NmQ1M2QxMjkwZjEzNDZmOGE5NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNhZTM1ZGQwNTI5NWU3NzViOTFjNmY0OWVmNDBkYjc0ODI4MGM4OGFlZjQzMDkwOWQyYjBkNzY2ZGQ1ODkxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2M0NmZkMTA5Y2UxYWQ5ZjQ4NTQyMmUwNjM4NWU2NGYzYTQ4ZjZhYmE2ODViMGRkOGYyYWMwNjBjZjVjNjMzYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L65-L75",
+          "version": "repo-lines-v1:sha256:c8964b9df210679b3defe846065782ec7d9d00494fc3abd03866aa408983aa31:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNjdmMWMyZTM2YzM4MzlhZDEwYWY3MjMxNTJlMDhmYWI3YjgzYzUyOTgzZjdlOGY3NTI2MTQ1MmVjYjVhNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MDcwODEwOTVjYThkNDQ2ZGU4NmE2MTlkZjQ0MmZmODllN2RlNzdlYzg5NzE2MGFmOGNiYzE5OTM0NjU1NWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhNzRkZmVhNmVkYmNiOWM0MGU0YzUwOTQzZjA2M2RiMjViODY5NjQxMzExMWU4NGQwM2E1YTJlM2E0ZWYzZTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyMmJhOWJlMzRkZjM5OWMxNThiZmY2YmQ5MGEyYTRhZDY2MjhkY2YzYjZkM2RiNWJiNzVmNGFlMGZiZjQ4YTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_153bb0df0cae479e85a84b6ce4f83311",
+      "statement": "Compaction defaults to retaining two unique versions per entity; keeping fewer than two makes dependency tracking best-effort and may miss reprocessable entities, with rescans recommended as a countermeasure, while keep_versions zero requires a time threshold.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L44-L55",
+          "version": "repo-lines-v1:sha256:15796258efe5927782434c201883c1a3841b374c6862a7b3b1d6e68c7f7aa8dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjZDIyZDViN2RhYzY1N2QwODZhYTNjMjUwNWU2NDcwYTg5ZTJmYzMzY2EwNzUwZTI4Y2Q2NTdlNGVjNjE2ZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMmYzYjhlODgwMmQzNGUwMTRlZDk2Y2E0NjQzODk3MzRiOGQyMWM4YTI3N2FhNWE2ODBmMGY0ZTUwMDE1MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljNjczNzI1MTQ0YzA1NjM0NzA1YTRhMWE1ZTU5ODUwZjQzYmE1NDU1OWNmZmU2ZTFhZGNiMDAzZWMyMTNmOWEifQ"
+        },
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:613edaa2efc6ccfeb889f952823222a47139afd422c3eee2cacb64040e967a9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJiZjkyNTRmYmEyNmFmYmY3ZjljMGQwYzFkNjlmYzAzMjI4MzM2OWY1ZmIyNjdmNjhjYWYzNzhmY2M1ODBkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY3ZTU1N2U5ODEyNWUzMzRkY2I3MmM3Y2YyNDYwZjNjYjViNTcyNDFhYmY2OGM3MjE5MDI4YTlmMDUxYjY2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWY3OTMzZjNiODdjYzlhYWZkOWEyMmQ0M2MzYzM3OThmMDEwNjA4OTk4NDYyODFmZmU4ZDYxMWZhY2UwY2U5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQwYzBiMjViMDFiMTc3M2VkMTg1NWEyZGFiMzRiNDcyNDcwZmNiNjYzODc3NzdkMGU0OTQ1OTc1YzJkOGE0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a27a419eb2764c3bb2acd7711363b161",
+      "statement": "Compaction is bounded by the lowest dependency-tracking offset on a dataset, and disabled pipes doing dependency tracking also hold back compaction.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:161f3d3bb8ab13b7fe0769349e9d01cb9cae336a74eabcd637cb809d0c566485:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjFlYWFjMDdlMDA2Yjc1NjIzNmJmMzllZDhmOWM2MWUxOTk5NjU1ZTAyNTM3ZjRjODQxNTUwMGE3OTY5ODA1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjYxMjZiMDczNDU5ZjQxYWJhMTBhMGI2M2ZiNWNiYTY5OTAwZjQ5OWU3NWI0MmIzODcxZDdkYTc3Y2ZhNmYzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_66104f58bf524287aacd191246967d11",
+      "statement": "Dependency tracking is supported only for pipes using a dataset source because tracked entities must be looked up by id before a specific point in time and re-fed through the pipe.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L12-L14",
+          "version": "repo-lines-v1:sha256:575522e2ead826951cfe9c2e534169ad7008885b7a3ff1e59df8a3d5f0b2b530:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1ODlmNGU1NmMxZmRhNGQzNzBmOWRmM2UxZTgxMDY0ZmI5MTgxYTJlMjcxZDJmZTgzMTQ2NGMxNzc4Y2VhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzBlYjY2M2M0MjgxOTdkOTYzMzM1NDFjMjRlZTI4ZGQxODZlZGFhZjk0MjVmZjU4ZDI5YzA4ZDdiYTg5NjFkNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_848c1c036be04c6395c3d16ac52d0719",
+      "statement": "Retention and durability address different risks: compaction chooses which log versions remain, whereas durable data uses high-durability storage to reduce infrastructure-related loss of pipe data and state.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:613edaa2efc6ccfeb889f952823222a47139afd422c3eee2cacb64040e967a9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTJiZjkyNTRmYmEyNmFmYmY3ZjljMGQwYzFkNjlmYzAzMjI4MzM2OWY1ZmIyNjdmNjhjYWYzNzhmY2M1ODBkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY3ZTU1N2U5ODEyNWUzMzRkY2I3MmM3Y2YyNDYwZjNjYjViNTcyNDFhYmY2OGM3MjE5MDI4YTlmMDUxYjY2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWY3OTMzZjNiODdjYzlhYWZkOWEyMmQ0M2MzYzM3OThmMDEwNjA4OTk4NDYyODFmZmU4ZDYxMWZhY2UwY2U5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQwYzBiMjViMDFiMTc3M2VkMTg1NWEyZGFiMzRiNDcyNDcwZmNiNjYzODc3NzdkMGU0OTQ1OTc1YzJkOGE0MSJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L80-L84",
+          "version": "repo-lines-v1:sha256:be707cb9f14400b8f53f83871032b352a618e1ea6114458da388d12b4640e9c9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGZhZTNkNzJmNWZiZDIxY2M3OGI1Y2UwZDM0ODIyMmY1ZmI1N2IzMjAwNTIzOTVhMzEwOWFiYmJiM2RhZWU5NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmM4MzViYTMwYzViMTg1YjUwMjJlMDY0YjVjNzMwMzYwMGEwMDRjNzNmNDQzMTE1ZGE4NGJkMGE3MDRiNTRjZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2U4Y2QyOWQ3ZjVkZmI0MGUwMDYxMWFiZTMwODI5ZDEwZjA2ZGNkYmI3Mzg2OGE4OTVhNjNjNmE0MDZiZjVmZiJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L9-L15",
+          "version": "repo-lines-v1:sha256:fdd7d1b640d3bf37bee4ddf575ae6416a3145de01b3781d09851632dae3b74c5:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzhjZjAxMzJmMzYxOGFkMGRhOTZiOTcwOTQ0NWNlMzhjMDQ3Y2E1MjRhZWE5MWVjNDE2N2UzOGFkYTA3OTFlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkMTkwZTIxOWI4YjIyZGQ0Mzg5ZDY1ZjhiODNlOGNjYTY4ZGQ1YTE1OWVhYzIzMzIxNjY2NDU2MzhkYzU5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmZlMTM2NTU3Yzc5Y2FmY2VmNTA3YTE1NzkwZjM1ZmJhZWNmZWQxYTZhNmIxZDU3MzgwMDA4NTBkMDI4MDNmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDM3ODUxMzZkMjUwZGM1MmU5MjE2MDdkOWM3MDI3M2FmMmYxNmRhYTUxNzk1Nzg2N2M5MjUzYjE0NWE2M2RlMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fca616c1af394e97a5d4f5dc37d61957",
+      "statement": "Underscore-prefixed fields are reserved only at entity root level; normal dataset writes ignore them except _id and _deleted, while child entities may contain underscore fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L44-L49",
+          "version": "repo-lines-v1:sha256:e237ceeb7a0e7bc6a6be80b995f72704b772bdcd7468683a681b773ae4579c40:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg2ODVhMGJlMWZlNWZhZTQyMDRlZGEzZTZhNWVkMjMwN2ExNTRhZTNiMmZlNWMxYWRjNzFiMjgwYTRmYzJmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFhOGE4YWE2M2NhZWUyMTg2MzVjYzFkMWYzMWQxMGRmYWU0ZjRjYTBmNjVkZTJhMWZkMzRlNDg3MzEyMTA0ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgxY2E3Mzk4ODk4MDJjMThmZDM3MjVjM2NlZWJkZDU3OTY3MGIxYmM5YTFjYzJkZDI5MTBhZjY2N2MyODRhNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQ0NTBmZmE4ZmRlMzQyMDcwYmViYzNmNmNhYzk3YWFjNzY4ZjU1YjQ1ODM0M2MyZDJjMWRjYTQxMjU2ZTFkMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c099d630989e41f89d4226d6a9224d0a",
+      "statement": "The dataset-generated _hash is a string used for change detection; only _id and _deleted among reserved root fields contribute to it, while ordinary fields including semi-reserved $ fields are stored and hashed.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L137-L140",
+          "version": "repo-lines-v1:sha256:027db407a1960ec6f6af9290395dccd769bd97da9beac2071ffc6ba6a138e042:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMxMTgxNTY4YjJlOGI4ZDFhMTBkOWM0MTM1Y2NkNTM4YjI5ZWNlOThkN2I0Mzg5YWMzYTRkNThlOThjMWM2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODVkOTIxNWIxNjc4YmU4OGFjNGIxNjJiZDJlNzk3NTQ5NjhiNmFjOTc4ZjhiNzhkMTNlNmE3YTFkZmMxMTA4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWVkNmU1NmQ4NmY1MjNjZWFlZDdlNzFjNTdkMzc3NzU0OTdiMzFlZTQwY2UwOWI1ZWUyOGZiYThmM2MzZGYxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQ0NTBmZmE4ZmRlMzQyMDcwYmViYzNmNmNhYzk3YWFjNzY4ZjU1YjQ1ODM0M2MyZDJjMWRjYTQxMjU2ZTFkMSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L82-L88",
+          "version": "repo-lines-v1:sha256:8127481397e75bc5a5554ce37ad567cc324ce0a868fbf981de21e07986beaf7f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzgzNmE4N2ZiYjIzM2VhNDBkNWYzNjc3Y2NkOTRkMjNlMTEyNzg5NTM5M2I5NGQyOWFlODdjZWVkMTdlMGQwYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmZmOTkyNGQxZDgxNGQ5MmZhNWM3YTc1Nzc0N2QxZTUwNGNlN2Y5NmYxNWVjNjdmOGUzMTI2ZjM3MzUwMzYwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzYxYjg4OTcwNmNhNWRlZmU3Mzk2YjdmYzY5YWEzMjY2ZWE1MDI1ZTY5NmMwMDgxYjE2NDM1MzQ3NmNjYzQ5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDA1ZDEzNWY5NmEwNjc2YjI4ZDgwMGRhYjBiYzViNzc5MTMwZTRiOGJkMTNjN2IwYTZjNTI1ZDU0ZjIxMjJhZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0af4d50beddf411aa0cd32983786d8c7",
+      "statement": "Only _deleted true marks an entity deleted; a dataset deletion writes a tombstone version rather than physically removing all entity versions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L66-L69",
+          "version": "repo-lines-v1:sha256:a574df90b87759a646d3776fab95d9f0c53e2c4b71acb987d9c0f0aacbff3ffc:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdmZmE2MzUxNzAzYjlmMWVhYzJmOTM2NGY4OTEwZTdkZDI3NDVkNGNjMjdkMDA4ZjA4YThiNjk2MzA2NmNhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmRkYWVkNWYyOWI4MzM3MjA3ZjMxNDViZDEyMmI2ZGNiZjQwZDM0OGE4MDQ2NmI4OGM3YjMwNzMwYzE0ZTAxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzY3MTUxN2RmMzI5YTlkNTA0NjE5ODRhM2Q1MzcwMGZkNzBhZDdmZWJiMGViNzgwNmE5ZDllYWY1NTAzOTdhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTdhZDc1OWZmNmQzYjA4N2RmZTcyOWZjNmNjZmU2OWQ3Y2VhYmJmZDZmYWQ0NmY0N2YxN2IyZGY4YjM0OGUyNSJ9"
+        },
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L90-L94",
+          "version": "repo-lines-v1:sha256:06e3db9ff1bf743284c300ec2c663ef495ac492b2ab9cfe8181ae3ba3167e4d3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ZiNmVjYzg2NWVjMTIzNzQ3NTFkYWM1YTdmNDc0MDM5YzBkMjVmM2FkMTM1Mzk1ZjkwYWY4YmE4NjExN2Q3MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzE3OGQ1NTU1MzYxNWMzNjE2NjZmYThiNzg4ODVjNDBhY2JiNzkwY2NlMGRiOGQzYzNkYTE2MjJhMmM5NGE5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzIwYWYzYmUzZmRiZDdiZDE4ZTcwMzE1MWY2Y2I1YzUyZjY5MWUxNDMyYzQ0MTI0ODY0YWMwNGMzOWY1MTNlMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiJ9"
+        },
+        {
+          "resource": "repo://hub/features/deletion-tracking.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:4020424a3c25ef2069d7aa025543cc5ec2d4bc57ed0833a3e2ffc413f7178424:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMThmNGY5NzczMWRhZWI3MDE5NWEwNjA4NGU2ZWQ5NWNlYjQ2YmEwYTYwYTk3YmI0NzQ0ZjllMWQ3NDE3N2EzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_33a7f362324c46f9a08212e2bcd291a7",
+      "statement": "The dataset generates _previous as the previous version's _updated token; missing or null means no previous version, and a non-null pointer may reference history already removed by compaction.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L91-L100",
+          "version": "repo-lines-v1:sha256:9345733f8333b3a9a7292a5696014e6eaae4a188034eb07f05175b85507a98b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZkMjZiNGI0NWYxOWU0NmUxNjYyMWNmNzk1MDRlZmQyODhjMjAzMTRmMTI2YjU1NmExNDQ4Y2VlM2MwMzNhYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmZjk5MjRkMWQ4MTRkOTJmYTVjN2E3NTc3NDdkMWU1MDRjZTdmOTZmMTVlYzY3ZjhlMzEyNmYzNzM1MDM2MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVjN2YzNzYzMTgzMWI4NzhlMzg1ZGRiY2U2YTc4NzdlYTA5ZmI3OWUyMTk3MjE4ZDg5NDVmY2RkNjIyNzA3OTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4OGFjNzNlMzEyZmU2YzlmY2I0NThiNWE0YWVmNzc0NjAxNDg3NzBmNTcyNTY1MmZiODkwZjNjOWQ3MDM1M2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a67cd51bc6824b68a1395e9253288ac6",
+      "statement": "The dataset generates _ts as an integer number of microseconds since 1970-01-01 UTC describing when the entity was added; it is informal metadata, not the opaque continuation token or an application modification date.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L103-L110",
+          "version": "repo-lines-v1:sha256:681f8687eb7bd55dfc1d42b81572af8069a01808487091c1176c7c7707537e12:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWUzZWYzMDRjZWQwNTAxOTg3MDhlNmYyMmZmNjVkMzEyYmE2MGE3ZDFkZjg4ZWQ1ZDViNTgyMmU5Njk5NGUwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmZmOTkyNGQxZDgxNGQ5MmZhNWM3YTc1Nzc0N2QxZTUwNGNlN2Y5NmYxNWVjNjdmOGUzMTI2ZjM3MzUwMzYwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDdlNDhmYmQ1YjYyZTI3Njg3ODJiNTE3MDQ5MGRiNWRiMGIyNGMxNjg1YzVhODgzMjdkYzFkN2Y3ZTY5MGI3MSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L72-L79",
+          "version": "repo-lines-v1:sha256:ef9d11140cd9b18c16ebd5ffe115f213641977af53a37431b7c1eb326143301e:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhkYmQwMTk5MmQ2ZDhmNjRjNjRlYjEyMzg2NzkyYjJhMmYwMjlhYTBmYjNkNWU1OGE1ZTdlNDc3MTQ1YTZiMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRkNWRkODMyNDM0MTEyNTA1YTlhZTRkMTAyY2I2NWFmNDMyMWIxMmI5YTVjZmQ2N2Y1MWRlNjIyYmM4MDA0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIxYzBjYTdmYjRkYWFhYmNjZTlhZWQ0NTY1N2MxMTQ5YjUyZTk5MDJlOWU2OWEzNjc0ZDZmMTE5MTYxYzZkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjUxN2E4Y2QxNGIzOTM3YjEwODgyMDkzMGI2OTllNTg1ZGRjNjY5MmE4MzYyMWJjNWM0ZDAwMGE5MDYzNjczZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_49556b6e8b12408797d7e423a6cb8b19",
+      "statement": "_tracked true is a legacy dependency-tracking materialization marker; the newer implementation does not require modifying entities, so the field is not a current tracking-status contract.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:ec396663ffedd310efc2e71ab2c5a7f929ecece32fd40d805e5e2528baad0403:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MWMxOTY2YWExMjA5MDZjNjNjYThhZmVmYjgyZTZlZDJiMmUzODY0Y2JiNWQ5YmQ2ZjMzNmU0MjYyMDk3ZTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNWU0MzlmMjY1NzU1NDU0ZWQwMTBlN2M0YzU5YWZhOTI2YzVlMDQyMjdlMDNjNzZjODQ2NTRkMDcyODQyYzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MDU2NTIwNDA1OTAwMWQxMGUzNzZjMWQ3ZWM3MTllNDRlZWVkMmExYjI3YTdmMjE0ZWFiYmExYjkzZDBjMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViN2NjY2I5MWE3Y2RlZjg5NjZmMmMyNWIzN2EyOTIyODI2NzQ2M2YxNzdlYmE3OGRiN2IyYmMyMzJmNGNjN2MifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_78a3b62d9671433396dd7e416936fd76",
+      "statement": "$ids contains alternative identities as NI values and the merge source collects merged identities in it, without replacing the required string _id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L89-L92",
+          "version": "repo-lines-v1:sha256:5430168ea115e7a15f4d1ac0b2e80f6681265ad707c6b5c5ab5b837ea6e0ef63:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FkYWZhMTAyMGYzMGMzYzRlMGJlMTczY2IwYzBkMThjYTczNjA3MzViN2UxYWE3YWE5MzIyYjE3NmRkZDU0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODBlMGMyYWM2M2QxOGU1MTJlODU2MmEwMTgyMjA3MzI4OWU4ZjNmYzM4ZDZmN2VkMzM3ZWY2YTI0MjU1OWQzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQwYTFjNGE5MDU1ZmI3NDUxOTljMmEwMTFiMTExMWU4MjE5NzY1MTE5ZWFlNzdlMDQ3ZjE5OTY3ZTdiYTUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjBmOThlODljYmQ1YTZmNzQ0ZDQ2ZTcyYTcxZTA2Mjg4ODNkYmM4NWEwMWY5YTBmYjQzNDkzOWU1YjA5NWU3YiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L151-L156",
+          "version": "repo-lines-v1:sha256:a17f50b3df6dacaeb59862b97c2864ce4614aceefa80da5775365ae178e4135a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDk4NWRjZTMxYmFlYWNhZTgzYWNmYWQ1YzM0MmNlNmY1YzlkNjMxMzE5NzA1N2U0NjMxMmIyZGQ4NDdhY2UwZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWEyMjczMTE0NzRiNjA2NDBjZTllYzBjZjVkMjZiZWY3MDZjYTdjNWVkNzA3MTg2MTkyY2VkYmU1ZWMxOGFlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdiNTNmMmFiMzlmYmI2ZTNkNzhjMzg0ODY2ZmE4Yjc4NjI5MGNiOTY1YmU0OWFkYjRmODQwZTM5NjEwZmU0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzdlODk3ZjlmZjJiNDU3ZDUwYTIwMDA1MmQyOWRjMmMyMTk0MjhiNjg2Yjg1MmJlZDFjM2NjYjkwMjI0MWZiMiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L60-L64",
+          "version": "repo-lines-v1:sha256:1420a14fa48f912a6a404c72d963fea5a900a4af76a23928a00f32193e21fd18:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQyZDEyMGNhZjU4ZjM1M2IzOGVlYjQzN2VlNWMzNDMzYWRiY2FhOTg1OTg2Zjc2MjM5M2I5ZjljNmRiZjdlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdiNTNmMmFiMzlmYmI2ZTNkNzhjMzg0ODY2ZmE4Yjc4NjI5MGNiOTY1YmU0OWFkYjRmODQwZTM5NjEwZmU0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDY1ODY3MTg5ZGQyMDRmYjU3MjM1M2M3NzNmNWJlMjQ2YmYyNjlhNDEzYjY0ZDlhMDI0N2YyNDE4YjVhNzMyNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a733536fb2984c25bf3ffa9096cf9dce",
+      "statement": "create-child adds child entities to $children and emit_children expands them to standalone entities; dataset sink track_children compares against the previous version and produces deltas for incremental child deletion detection, inferred true when create-child is used unless overridden false.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L159-L164",
+          "version": "repo-lines-v1:sha256:4585cc3c65b729fad018b2d444a1f993c799653a54907df938cbb653790da11c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM0ZTdkZGVhNTA0YmY3ZmMxMzZkOWFkNzU0NTY3MGIxNDJkOWIzYmRiYWUzZjFiYjVjOTA0ZjExZTQyMGU0MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODAyZjcwMzg3NzczN2M2NWUwZGVjNDRjZWVkODUwZDcxYmFlYWE2MWJjMWU1ZTM5ZjA5NTc5ZDFmMmQ0MDhhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Y2NjIwZmM4YzM4Yzk3ZGE3MTY1MDA5NGYzNTFiM2ZkYTM2YjA2NzY5YjNkMWM2NjU3MjA3OWM3Y2EzZjA3MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjUyY2EwMDM2N2NjZGM2NTMzODJmMzJlNTNiMThlNGYxNmUyY2ZhMDVhMDRkMmEzNzJmYjU1ZTc1NDczZDQxYSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L78-L93",
+          "version": "repo-lines-v1:sha256:ad6fb55d97566c397623de989bd93ab4d0a209f80cdafd718bff19af24ecdc37:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNTQ3ZmIxYTEzOWFlMjRkZTQzYWNkNzBlODI0NWJmMmRlYWY0NTk3MzYwZmMxYWY1N2Q2YmNmMjJlNmUzZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYWQ3YWJiNTc1OGU4OTBmMmE4NWYzZmM5MmE1ZTZhOGUzMDkzMjFlYTM1OWVjMjA1OWMwMzJlNGMxNWZjYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MjVjOTVmMzQ4Mzk2ZjJmZTZkMTQ2NjY2YTI1ZjE2YmNkODRkODAxNGM3ZDQyNmVlZWYwNDMxODMxMDkwODMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NzdlZGU3NjY4NzZjYzgwMjE4MDE2ZDIzNzg3MTkyZjcxODJlMjZkYWU5YjlmNTMyYzNlYjhkMGY3NWM1MWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f7ba2c08542c4022baa96f23f0719aaa",
+      "statement": "The Entity Data Model's reserved-field prototype and standard Entity example contain malformed authored syntax and should not be treated as executable JSON.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L205-L208",
+          "version": "repo-lines-v1:sha256:5e16af265e616dfa05b37589b38f2a6da260ac5040e8833ce20d3afe55c36f27:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGNkNDg3YjFlOTY2Yzg4MmZhOTUzNWFhOTRhYmM2MzI1MWE0ZjdhMDRjMTMxNTFhN2JmNzViNmZkODBiNDdhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc0YmM0YmVhMDdhY2M2NDAyYjdiMDdkMmFjODcxYjQwYzk0YmM0YTc4OTA0NmQ5N2E2Zjc0NzA4ZjdiZmEzOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzAzZGUyMWU0NTZjMzBkMzljYTk0NWQ1ZDFkZWE1NmFhZmMyZGRhM2IzMDA2NTZkMGQ0NTg2MTFiNDdiNzdkNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzk1NWM3OWQxNjA2ZjhhYTdlYjI3OGU4OTlhYzAwM2YzOWMyYzNlNWIwY2ZlNzhlZjQ5ZjVhZDE5M2JkMGI4MyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L9-L23",
+          "version": "repo-lines-v1:sha256:79ef655c025d5b9f975057c31bb05ec2b7ded59de45b33e09efe2e9b86550c9f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYjg1MGZmMzllYjFiZjVmNGVkY2RlMDhiNzk0ZjNjZTcyZWI3MmMyOGE4Mzc3ODZmYTYzODQ4ODc1ZjdjNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyYmYzZjZkYzY0ZTAyMzg0OGJhYTIyNDRjYTFlZTc5YjI2OWMxYzYwNjM1ODQxNDQ2MmFkMDViMTdlNDA3NDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3OGI4ZTFlNjhjNWNkYzYzYzk4NTE4ODRmM2M3OGNiYzNiMmVkYWYwODkyYjVkMmQxOGFlNTRhZDdmODVmMWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlODQzZWQ4MGE0YjEzNWJmNTM4ZDE1NWMxNTVkMDZhNDMxZjJmZTVlZjQ3Mzg3MThjODk2ODA0OTg5MzRkOGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f23032e029fe436290d04f849aa7cd93",
+      "statement": "Dataset sink deletion_tracking defaults true and, after a full run or rescan, writes deleted versions for entities that existed before the run but were not seen during it; this disappearance test is not absence from one incremental batch.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L147",
+          "version": "repo-lines-v1:sha256:5541d7abd2fde800053d8b9bbb143d5cee60afcfee54c9e15fd50be11ae5d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5MTc4ODhmYjgyZGVlOTgwYmYyYWEyMzAxOTE1ZDk3MDQ1YmE3NTExYWNlYzNiYTFkMjRkY2E4OTU2MWZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzViMmI1ZWNjNGY3MDUwNzc5NWViNTc1N2Y0YWZjOGQzMDZkZWVhYjcwNTM1ZThjYjAwNWEyYTE5OWQ0M2Y2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/features/deletion-tracking.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:4020424a3c25ef2069d7aa025543cc5ec2d4bc57ed0833a3e2ffc413f7178424:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDAyMDQyNGEzYzI1ZWYyMDY5ZDdhYTAyNTU0M2NjNWVjMmQ0YmM1N2VkMDgzM2EzZTJmZmM0MTNmNzE3ODQyNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMThmNGY5NzczMWRhZWI3MDE5NWEwNjA4NGU2ZWQ5NWNlYjQ2YmEwYTYwYTk3YmI0NzQ0ZjllMWQ3NDE3N2EzNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fc4a8679c906465f9b7bcad7e340cee8",
+      "statement": "A failed DTL filter stops further DTL transforms; with a dataset sink it emits _filtered true to delete an existing not-already-deleted entity even during incremental synchronization, while unsupported sinks discard the entity instead of receiving it.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L113-L121",
+          "version": "repo-lines-v1:sha256:95c243f019475e68797591a4e93e297c67063758f4363e381114aa886bb78a79:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTMzNTQ2OWEzNjlmYzViZjlmMGZiMzRjYTdiYWVjYWI5MjBiMTNlNTY3ZjNjZWZiYjY0MjZjMDQzYmU4YWRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZkY2NmMDJlZDk4OThjYmQ3ZjM2YjMxYTExMTA3NjczMDg4Y2U5YWRlOTdjYjk2YjRmMzNlMjc0ODMxYTMyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWM3ZjM3NjMxODMxYjg3OGUzODVkZGJjZTZhNzg3N2VhMDlmYjc5ZTIxOTcyMThkODk0NWZjZGQ2MjI3MDc5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWVhMjlkOWMyNjQ0MjdiMTE0NzE0ZThhMGQxMThhNWE3ZTdmZjUwY2Y0MDM3NmI0MmViNGIxZGMxNjdlZDU1NCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L573-L599",
+          "version": "repo-lines-v1:sha256:4b73700db7c4fad5e78c8e70f5d555c7ea465eebd1dcb091d17b8df979332283:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NDhlYTkyNTU4MTZmNDgzMDMxMzljODIyM2M4MmRmYjVhNGFjMDRjM2E3MzlmMTEzNjFkNjY4ZDc3ZTU5NWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEyYWJmN2YwYmNiZjMwMTVjOGRjMDkxNDFiMWU3N2I2YzQ5OGU1N2ZjZTljZGIwNDZjYzBiY2MyMmZiMjcyYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ecf7e84f99354e4fa4f1c905b9c5f779",
+      "statement": "DTL filter does not stop entities already emitted by create, subsequent pipe transforms must handle _filtered carefully, and explicit _deleted is recommended when controlling deletion content directly.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L576-L580",
+          "version": "repo-lines-v1:sha256:99bc1cfe8c8efe0d624cfe2d09a43c34634eea29c09ec18a2e5cc6088ad66239:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGMxZWYwN2Q0ZWE2ZDBlOWZmMTJmMGIyYzA5ZTZmMWMyNGJhYjJlMzQzYWM3NzFiZTJmYjU2ZWU2NjJjZjkyZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk0ODA2ZTY1ZTJlZWYwZjQxMDVkYTU1MmY0Nzc4NzBjNzM0MWExYWFkZGZjOGFmNDNhN2IwOTk4MDhjNTdmOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNiZTM5NDE0NzVmMWRmNGU4MTZlZmUxY2NlYWQ0ZWZiYTFiOWRhNTlhZGNiMjMyN2ZhMmJkNmI5MGYxMzk2ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWRlZGEwZDM1NGM5ODc0MWEyZGZkMTc5ZjJlZjI4MjVhZmJmN2JlMDdjZGMwNzQ0YTdiMzVhMGJmNzc1YmJiNCJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L601-L607",
+          "version": "repo-lines-v1:sha256:97faef703832427f28626964f41d6b6b32c93d34a4058039aad8befb6f2940ea:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJmNzRiYTI0Y2I2ZTJiYzFlNGVmZWE4NDYxMWZhNTlhY2EzYjQyOWVmODcyNWM4OTYyYWYxNTU5MTM4ZThjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTMwNWUxM2Y4YWZkY2RiOGJiNTEwMDJkYTIyMmI2NTg3YTJjNWY3YjhiOGYxNzA0NWJhM2FiYzU0NzViZWUwNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDE2ZDU0NzU2ZGEwYWE3ZTZlNTliOTI1YTUyNDc0M2ZlMDc1M2UxOTcyNDBhZDIwZmM4YmY1ZTQ5MWI3Y2RkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTU3NGMxMTRmY2MwYzhmMmE0NzE3YjQyZThjZmQ0N2Q4MjdhNDllMmZjOTMwZjRhYmM4ODUzODI4ZGYyMjMyYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_313288877dfb405d99e86248d48a2637",
+      "statement": "The dataset sink suppress_filtered early-suppression optimization should only be used when a pipe produces exactly one output version per _id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L170-L174",
+          "version": "repo-lines-v1:sha256:22a3ddd0e5f466b6ad6a15446337a715c1f1311ef82d3c42515d6460415e98dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjQ1YTE4ZThiNDNmYjBjZTRjMjczNTY5ZjRhNDQ4M2I3OTUyN2JmYjJlOTcyOWEyZDk0ZGE3ZTk1NThhNGVhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWU1ODJlMGExMTQ2MzcxMzZjOGI5ZDllMjkyNDA4MzRjMjk0Mjk3MTM1MTM2MmNmNjM2Yzg0NjAwMGFlYmRhYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjYwYmIzNWI5OTllZWZiZjU1MTM1YmQ2ZDk5YjNkYWM0MThlZmFkNmViMGY2YjQ5OTUyNzNhZjg0NmNkNTAwYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_31e6086c05a8484e9d93ce853c5a3477",
+      "statement": "When a merge's resulting identity changes, the merge source emits deletes for obsolete ids with $replaced true; this is identity replacement rather than a real business deletion, and dataset source include_replaced false suppresses it while the default true retains it.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L101-L104",
+          "version": "repo-lines-v1:sha256:e00831bc215db9d967b99f1a4af145e59b3404fff40feb06d83b4fb516884d89:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWI0ZTdjMDJjOTBiNGI5ZmQwNjE5MDM3N2IyZGQ1MDVjMjU1ZjFmMTkzNTE4YTE5MGI2ZGM2ODVmNmUxNzI0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWMzYTA1YTA2OTQ5NTc3N2I2NGU0ZWUyMDhkMmI0Yzk5NGI2MDVlZjg3NzEwZDgzNjEzMjE3ZjY2ODFmOGYzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTYyNzdjMDkzODg3YmE2NWNhODMxYWQyOTJkNDE5YmQzY2M3OGE5ODBjMjFjY2E0ZGU0NjJkOTlhYjJmNWYxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2M3ODUxZjI4Y2U0M2UyN2Y5ODMzOGIzZmZkNGNkYTBhYTJiNGMwYjIyOGI2ZWNkYmYzOTk0NjhhMjg4NzljNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L102-L105",
+          "version": "repo-lines-v1:sha256:e7d3da1a8d0aa66b093e8a63a43d519e1ce596550506e3cdccd35443be5e3d29:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAyNTkyZjA3MGU1NGJmNzU4YmM0NGMxZTM1ZGYzY2Y0NDAyOTg4NTcwNmZiOWFlOGRhNzNlNDY3NDlkNjI2OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzBkYjZiZjRiYzI1MzA5OTAyOTZmM2Y0N2E2ZGE2MWIwNTA5NTAyNDM3MTE4MzQxZGI3MzA5ZjZjZDJkZmIwOSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L12-L16",
+          "version": "repo-lines-v1:sha256:834f38e9d156d3198d777e8e46350b746f8c68776c67d081cb17bd9523155eb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODUwMWUwMWJhNzYzNjg3MjdmNGExNWJhYzA1OGY5YzFhNTY3YWYzYzA1ZWY4MGNhNGEwYTJiNzU2OTc2NDY2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRiZDQ3OWIyNWI0MWE5MTBjMGM2OTFkYWFkZWU0MGRjOTNhMjcxZmIxZjBiYzk0NWMyMDg4YWY0N2IxNzk4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDA2MWZjOWI4NGE1M2U2MjE2YjM3ZTU1ZGYwM2FlNjk5MDIyMDA3ZmFjMjE5ZGQ5OTQ5MzE3MDU3ODEzNjczMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmU2YmJmYTJlOTQ0OTQ2MGJkZmYyNWIzYThmZmUzYTA3YzUwYTYzYTk5YzBkZGEyYzE2MDgwNjYzNWNkOWJiMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_67b14b9ec1934f47a98f7aeafbce1108",
+      "statement": "compaction.ttl_deletes_hours makes a deleted entity eligible for reclamation after the configured number of hours; reclamation removes all versions of that entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L90-L95",
+          "version": "repo-lines-v1:sha256:3f3a388761c23eac293d31d7ed442695ac570ad59d0222b47d7594301335d241:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ZiNmVjYzg2NWVjMTIzNzQ3NTFkYWM1YTdmNDc0MDM5YzBkMjVmM2FkMTM1Mzk1ZjkwYWY4YmE4NjExN2Q3MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg3YTljNDk5YTRiZmM2MDQ1MjNmZjgzNzc4NmU4OWQ1MTY5YjBkYmQyMzAzNjc1MzUwYjlmZTYyYTYzMmRjOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzIwYWYzYmUzZmRiZDdiZDE4ZTcwMzE1MWY2Y2I1YzUyZjY5MWUxNDMyYzQ0MTI0ODY0YWMwNGMzOWY1MTNlMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDFhOGRlNGI5NGVhNDUyMGZiZGE0N2Y1NzMwYmM1Njg1YWQ3YTU5OTk3OWM1ZWQ4Nzg4ODQ5Yjg0NDk5MjAwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7fb74ce8fb804e62a38a753d7ab34e80",
+      "statement": "compaction.retract defaults false; when enabled with output $retract true it irreversibly removes all earlier versions in the sink dataset, retains the current version and deletion state, is idempotent, and overrides keep_versions per entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L105-L111",
+          "version": "repo-lines-v1:sha256:9813b3d3227f477e53747bafabfaaaf609c99cc94930e12dcdf80a746fe1697c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmQxM2ZmMTgxM2U3YmY2NWU4Njk1MGJmZTU3NDE2ZjU3MjY0ZDVhNzgzMGZiNDUwY2VjMTgwYzc4ZjljMjc1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM5ODFkMzQ4OWE2NjM1OTgxMmQxOGQ2Mzk2ZjE0MDU0MGExNWE5OTA2MGU1ZjI4MWRhZGM1NDJkMmMyZjMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjYzZWIxMjdiNjhjNGI3ZTA4ZWM1ODBhYmViN2I3ODExMjFiY2EwZjZiYzIzNWM5NjUwNDMwNTEyOTcyYjU3NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmFjNjVkOTcyOTU0YWVkYmY4ZTQ5MjVkOGRhN2UyZjg2NGJlOTBjMDY4MGY2ODcxMjY0ZjJiMWY1YjYyY2Y0NiJ9"
+        },
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L120-L132",
+          "version": "repo-lines-v1:sha256:ea9d6fdebf6bab084e965ef5f3a187b52577e68f14b80ccd19436d3c2731003b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyMDQzMWI4MWI0NTRiZDg2ZTdhODJjMDkzY2Q4ZjEwNDZiOWNiMWE5ZjlmNmJmMTNlZTI2MzFlZTFmMTc2MjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NGU5ZjIxMzhhOWRlNDZkNjE5NDBmOTYwNWNjODllYjQ3OGFhMTRiNTcwMTM2YjZiMWRhNDg0NzE0NGNjMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2M2ViMTI3YjY4YzRiN2UwOGVjNTgwYWJlYjdiNzgxMTIxYmNhMGY2YmMyMzVjOTY1MDQzMDUxMjk3MmI1NzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU0NTA1OGIwNDlmMmVkMGI4ZDlkZTQyYTBiNzM3MWM3ODBjOTJhZWE0NWUzNzg4MDNiYTc5ZWQ0ZjEyODExMTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8dfe28cf783a44ddaf94361467f1fea9",
+      "statement": "Retraction affects only the pipe's sink dataset, not upstream datasets or external consumers; $retract may be dropped by merge sources or emit_children, so downstream pipes honoring retraction need it explicitly in output and compaction.retract enabled.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/compaction-feature.rst#L134-L137",
+          "version": "repo-lines-v1:sha256:a096ff6190efe867920dcb44480884ab98a75a845b0e15d4731542f215dc62d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDE4N2E5NmNjN2U0ZmNjNmNkYjMzYThiZmQ1YzFlNTdmNjgwNDE3ZWNlYTZiMDk4MmI0ZmRmYmU4NWEzZmJiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWRiMWYyMDU5NThiNjBlNWJlZTkwOWRkOWNjNGYwOTcwYTM2Njg2MDc4NGY4YjcwZWUxMjgxZTMwMjhjYTdhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmZiYmI0MjE5MDk1ZmYzOTlmMDgzYjgyYjA3Y2NiYzYzZDI1NzQyMGZmOTdmM2FhNTIxMTQ3YTc5YmU0NzZjMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eadbe9248c02449fa9a66432b2f06d1a",
+      "statement": "Dataset source if_source_empty defaults accept, allowing deletion of previously synchronized entities on empty input; fail instead fails the run and avoids those deletions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L124-L134",
+          "version": "repo-lines-v1:sha256:e6f011f5ff6996e7534d719a982e9e7825b7057a076878b8024415961e609ed0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZWIzZDliMmYxY2IwOTJlNTJkMWZlNDBkMmFkMmQ1NWVhMjg3OTAzY2FiM2MxMGE1ZGMwZGE4N2FlYzk2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5MTA1YzA1NzY5NDQzMDU2NjllODg1OWU4ZjRjZWJiNDM4NGE4OGZlNTRiN2Q0MWE0YzdmN2MzYjYyOGM2NGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxNmU4OWVhOGU3ZDYzMjRlODY2NGU2N2MwOWYzNzYyMjYzMmNjNGJkMzk4ZGE1MjBlM2U2NzY3MTIwZDUxMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyMTE1MzFmMTk2YWNjYWYwMmMxMGI3NmFjMDY4NjU0M2ZmNTcyY2UyMWMzMTU4NjVmYmMyYjg4N2FkZTdjYTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0bbd311f0b6c4b73a97943dcd37324cf",
+      "statement": "Merge source equality rules infer sameness transitively across datasets; null or empty-list equality results do not cause merging.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L25-L30",
+          "version": "repo-lines-v1:sha256:eca143eb5fc45878fa4eee0d395aa8bd250213b4cb8b0115b734257b895c2e3e:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E1NTc0YTUyYzM5Njg3YzI0YTBhNzk1ODhhZTUyOWFkYzcwZDUyNTUwMWY2ZTU3ZTM1NGY0NDE5NDlkNGUxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzJjODBiZGIyZWQwMmQ0M2JiNzBhYTE3NjA2N2JlOTdkODg3YjQxMzM1NTcxNjllNWJlMGM0NThkMTYwZmY2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzFkNWJkOTMxNzBmNzk0ZTA1OGVkNWQxZGRhZDllMDQxMWExMjk2NWU3YmVjY2Q3Njk3Zjk5YWE1OTc1ZTJkNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q2MTI3MTQ4OTlhNzU2YzUxMzJhNmQ1ZjY5YmEwYjU4ZmQ0ZDFjZjkxZWU4ODVjYTdmNzYzY2JmMmYzM2YxNiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:e742c9ea582e15ed1628e88f995be73c55a3cdd6c0200d53dff0e8f7ed4b8976:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRmMmJlOTdjNDRjNDNmYjg2MGYwMThkNmU5ZWQxN2IyMzFmY2JjODY2ZjU1MmY1NWY3MDllODc2Njc3OTI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2NlOTFjNGU2ZmM5YzUxY2JmMmU0NDQzMDhmYzMwMzQ0Njg2MDA5Y2RiZmE4N2Q4ZjI3NjJhZDMyZjBjOGRkNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU2NDNiMzVkOGQwOTljMDcyNWM4YjgzOWRiNjg5ZGQ1N2VlYmQ4YTBlZWUwODU2MjNkMTI0OTE3YTlkNTZjZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTNiOTQ3YTE1Nzk5NzNiZjg0OWIwYzYyMWUzNDZiZjAwMmJkMTdjMzk2ZWYzYTUzNmViYjc1YjI1NDA5NDA5MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a142dae3235840a2bbc6ed6e92588406",
+      "statement": "Equality rules added after a merge source has processed entities do not retroactively merge those entities; reset or rescan is required to apply the new rules to them.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L42-L49",
+          "version": "repo-lines-v1:sha256:da903fe32e07154b490aef3e8365db376ce9e84f51f5a824524c02f0eb86b9ec:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDM4YTJhOTY3ZGI1MDI2Y2ViNmYyODJmMDAxZmRlMjNkOGYwZWVkNTVmYzdkYTI4YzBlMzBhNTNjY2MzODA5MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzA3YzIxYTVhNWI4Y2JiMzdhODYyOWY0MzcwOTk2MjYxODlhN2U5Yjg3NTcxYWIzMDk5NmE5OGY3MWEzNDAxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q2MTI3MTQ4OTlhNzU2YzUxMzJhNmQ1ZjY5YmEwYjU4ZmQ0ZDFjZjkxZWU4ODVjYTdmNzYzY2JmMmYzM2YxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmZkYjgwZjI3NmI5YzVmMDk4NGVlMmEyZDExZDYzMDE3NjE0NjE0Yzg3OGIwNzZlZTliOGJkYzkxNjYxNWQwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_42b8ecc7d09a439c93be96d86ed17570",
+      "statement": "Sesam Integers have unlimited range, Decimals arbitrary precision, and Floats IEEE 754 binary64 double precision that can lose precision; lists can contain heterogeneous nested values.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L210-L233",
+          "version": "repo-lines-v1:sha256:0fd62202c28a993693df99d36adb1e16172bf19d1dec3196df96d064918ed73f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiYzA0NzNlMWQyNGUxNDJjNWRjNjhlOTEyNDhjZTE1YjVlYzJjZDFkOTYxODU5Zjc4ODU2MDIzNWE3MjE5MTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkYWNkZDZhNGU4NjA0ZWFlZDZiN2Y4YzE4ZjA0YTEyMDZjYjZiYmIxNDI1OWQ5NmE3ODM3YzYyMjVmZDQ4ZmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZkODM1OWIwNTlkYTgyODIwNDdhNTBmNGUyMjZjNDc0Y2Q4YzY1YjhhZGI0ZTg4NzU0YjE5NGNhOWI2YTJlNGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzZDQ2N2Y0MzUxZTRlMTBkNzdkYzk0YzMyMDE5ODZhMjA2NjliZDk4MTZiMGVlOTg0NGRhYzU2ZWRiZjUxNDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1cecf43b39ef439bbea5cfb79c10e982",
+      "statement": "The documented maximum String length is 4294967296 bytes, distinct from the default stored entity-size limit of 104857600 bytes configured through dataset sink max_entity_bytes_size or the service global default.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L214-L216",
+          "version": "repo-lines-v1:sha256:582529a113f26e3979828fe61bc53a276b0fe96f55f153312fbdbc637927b9a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWUwZmQzY2QxNGRmMGVlZWI4ODYxZGVlZTcyMWExYTc1ZDBiNDBiNmIxYmQ1ZDVkYTQ4Mjc2NDJhNTNhNjRmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc2ZGZhMWIwOGRmMDA2ZDNkZDgwYTNiMzFkYmVjNWU4YzljYmY1ODE4NTY1YWM3MWMxMTMxZDljOWRkYzc0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjczMTRkZTUyM2FhOWEzOWUxYzM2ZGE3N2YzZTRhNjQ5YmI0NjQxM2E5YzNiYTdkZTJiNTMyYzhhZTEwNWM5MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMxMDFjMzUxNTM5MGFkMDU2NGViYjJmM2M4ZDNjOTVkM2Y1YTU0MDcyZTRmNGQ4MzAzNDUwYjMwYWVjYmVlNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L172-L175",
+          "version": "repo-lines-v1:sha256:7c0a3e113c398713a632d8812cc69d9ce4df2929af4e90f2c61c241097431ade:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkzMTQ1MTcwZGNiYTk3NGFlMWI4OGUxMDdhOTdjY2EyYzIyZjkyNGRlMjhkMDE5ZWU4Mjg2ODBiZTg0MTAzNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2VkYmQ5ZmRmMGQ4YjU1NjFkYmE0NWY2MTIwNzZlZjZlNzdlZDcxYTQ1ZjQyMWUwZDQ2NzNlNzIwNDk0OWUxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjM3OTc3MGI4YjhlODcxZjhhNDA4MjljMTVhYWM4MzYxYjdiMjI3ZmNmOWJhYjFiYzlhNDI1Yjc4MDI1YmRjNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L176-L179",
+          "version": "repo-lines-v1:sha256:bfb5fc8edd1d274d64252c06b01c3d6a9e2de84b84f4e97abfef9aa1a38d9c17:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2I5YmUxOWNhNWZlY2JmNzQ0MTI5Y2ZmZmM4NDc1ZWI1YWY4YjE5NDA5NDk4ZjVhZTRjNTJiMmRkYTQwZDFjNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2VkYmQ5ZmRmMGQ4YjU1NjFkYmE0NWY2MTIwNzZlZjZlNzdlZDcxYTQ1ZjQyMWUwZDQ2NzNlNzIwNDk0OWUxMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzE1MjgzNzQ4NmIzZDY5OTVjN2I4MzBiZTMzNjY5NGYyNTZkZWQ0NTk0ZGE2NTYwMGRkZTI3MTY1ZjBmNGNhNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTIxMTUzMWYxOTZhY2NhZjAyYzEwYjc2YWMwNjg2NTQzZmY1NzJjZTIxYzMxNTg2NWZiYzJiODg3YWRlN2NhNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_314f606fb7bf4464abe4a35d2feada9e",
+      "statement": "Sesam serializes NaN and positive or negative infinity values in entities as null rather than invalid JSON.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L31-L35",
+          "version": "repo-lines-v1:sha256:6bc8358937794d65f4c5fee81f1b8148cb571295362c141cf4166cdd86260154:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTYzM2JjMmM5ODg3NGZlMWYzYmMxMDM3YTJjZGZlM2RhY2IzYmY0MjEzZTJlZGUzNGIwODBmZDI0Zjc4ZDMzZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDRlNWVjN2ViZjUyMTYyMGNmNjkwMTRiZDI0NDhlMzRhYzFiMThjODQ0Y2YzM2I1OGNhMWZhOGQyZjFmMWM1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODk3NzJkY2M0YmIzOGVjNDMwMDBhOTA3Yjg4OTI1Y2NhYmU4NzdjYzA4NDQwYmM0ZWRiNWUyOTNiYTU4YTRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmM1OTE0NDEwNDg3YTIyYzY3MTU0MmY4NDQyY2FiYmVmYjc0ODFjZGE0NGFlZTYyYjhjOGExNjhiZDhiYzdmMSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7d99caa6c814b798d7c94425a3c1fbe",
+      "statement": "Supported Transit extension literals serialize as JSON strings with ~ plus a tag: NI ~:, URI ~r, Date/Datetime ~t, Bytes ~b, UUID ~u, and arbitrary-precision Decimal ~f; Bytes payloads are base64 and UUIDs hexadecimal text.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L249-L298",
+          "version": "repo-lines-v1:sha256:427208eaa5ea5c46f134481d03b4e33a9d10ac4065d01322b38bc8cae5e6e9f5:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMGQ5YWE5M2RjYTE2ZjVjYzYxNDk0NGFjN2E3MjJjZTUyMTM5YzM2MDNhY2I3YzMyNzY4NWRhMjU2NDNlMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjNzBkNTBjMmYzYTc5NTgwNmJlODZjODA0MTc2ZmI5MDEyOWM0ZjQ0NDIxMWNmMDM5MjI3NTM4YTdiMjEzMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwNWY3OTExMjE1ZDk5ODNlZmM2OTlhNTI3ZWExMDEzZjY0OTRkMDA5YTZiYzNjZTBkOWJiY2IxNDU3NWU2MTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1MzgzMDViZWJmZThhZTVkMjQ5OTgzZGNlNjljMTVmN2UyNzQ5OTYwNGM0ZGQ4OTY1NDYxMDRkNjcxNGRkNmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7ad791a41eff4016b46fbf02586347cb",
+      "statement": "The Transit Date range is ~t0001-01-01 through ~t9999-12-31; Datetime supports up to nanosecond precision, requires date and time plus UTC Z, permits an optional fractional second, and has documented bounds ~t0001-01-01T00:00:00Z through ~t9999-12-31T23:59:59.123456789Z.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L275-L286",
+          "version": "repo-lines-v1:sha256:617687d9a6f88c960bcb2c2e293962d9615fe9009632c95fe78393ad032c29db:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwNmM2ZWEwYWVhYzc5M2MwY2I1NjRiNDczOTI2MzdiMTI4NTE0OWQzYjQwNjI3OWFiNGIyMWEyYjE5NGEyYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZGZiNjVkY2ViOWU3YjUwZGUyYWU4NWQ5M2ZkNWJkMDIyODg0YmY5MGFhYjRhOWZkYmIxMTQ2MjJmMDIyYmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc2YjllMzU5MmU4MGU5MTc0NDczZmJkMzEyMDM1NGZjOTE0NDZkY2U4ZmU5YzkxYmRlMmJiNDJiYTYwZDI5MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiMGVlZDg1YzVkMDgzMTJkNDUyY2I3MjFmZjJiOWRkNjY4MjgxY2FmNTdkZWNkNTBjMGRkNDI1ZTYyNjViYzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8800c95c484143b8bce88957fd67b2d4",
+      "statement": "Only the documented Transit extension types are supported; unknown Transit types are treated as strings, and Sesam currently does not support escaping string literals starting with ~.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L249-L256",
+          "version": "repo-lines-v1:sha256:4421b579035b9daec3681f206b96c3acb10bcd450ff9e91d32ea887a4d8e96cb:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIwZDlhYTkzZGNhMTZmNWNjNjE0OTQ0YWM3YTcyMmNlNTIxMzljMzYwM2FjYjdjMzI3Njg1ZGEyNTY0M2UyMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDk3MTYxZDRkMmIyNjJmMDFmZDY4YjZhMWQ1NTM2YjdmY2ViYmY4YzY1MDhlZWY1Mzk1YWY2NmNjMzlmYjQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjA1Zjc5MTEyMTVkOTk4M2VmYzY5OWE1MjdlYTEwMTNmNjQ5NGQwMDlhNmJjM2NlMGQ5YmJjYjE0NTc1ZTYxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_143f677c70254bd78d0319c8c0e25aae",
+      "statement": "Mixed-type ordering ranks Null, Boolean, Integer/Float/Decimal, Date/Datetime, UUID, NI, URI, String, Dict, Tuple, and Bytes in that order; compatible types sharing a rank sort together by value, incompatible types by rank, and Dict ordering sorts keys then compares key/value pairs.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L300-L340",
+          "version": "repo-lines-v1:sha256:57b44e6034aa40482a13a2f704e9472eb60a571b4106d23f49c912f9fc989b14:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5ODhlODMzNzc2Mzg3YTI5ZjEwNWFiYzUxMjk1OWUxMDY3OGZhYjAyNjZkYzVmN2E5ODQ1MmI5NTUzZGRmNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjMzMxMjYyMzg1YjU0YTUzZjUyM2ZkNmFmYmExMDUwMTkyZDc1YzlkMDA2MDkzMjgzNGQxMzViMzVhZDUxMzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0ZmM3Njk4ODVkNzQ0NWQzY2NmNWNjNGU1MzllY2EwZmVlZTMwYTgzOTM3MjBjM2MwMWQ5OGI2MDA4NWEwODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c043437e50d845039744896a3bef355c",
+      "statement": "The entity type documentation is internally inconsistent about orderability: its Standard types table calls Dict, List, and Null not orderable, but its focused Mixed type ordering section ranks Null and Dict and defines Dict comparison; that section ranks Tuple rather than List.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L201-L212",
+          "version": "repo-lines-v1:sha256:76e32da288e343b7decd4a133e494ad13812b987018f41e342977d522392751e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0YWMyODUzNWI4ZDhkZmQzMWI5NWNkOThiYWU0NmVlYzFmNjU1MWIwNDBjZThiYzU3MjRlNDdmYTcxYTMyNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0MDFkOWVlYmI0MGM0ZDNhZTUzMDhhMWMxOTU5NmY1NTU1YjUxYTQ5MzlmZmRhMzc2ZmRlYjYxYzk0MjBkMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE0NmQxMGYyOTlmYmNkYTFlZGJhNzI0MmUwZjM2MWQzYTFiYjQ5MTFhMTMxOWZiMmYzYzIwMDI1ZWFjYTg3MGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ3MzcxNzJhODUwZTAzMmIwN2E3MDg0NzQ5MWI4ZmRlNDU1OTBkOWMwNWM0ZDZkMmNiMzA4MGQ0MTRkYjQ4MWIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L240-L242",
+          "version": "repo-lines-v1:sha256:b512798bffde542d4463b74ba1f128faa3814093b76c019a5e86fb8b5419ea46:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY0ZjMyYWYwOTViNDMxMjcyNjc5ODMwNmQzMWZjMDg3ZWU2MGNjOTAxNmY0NzA2OGI5MzBhOGNhZTgwODVkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjg3YTljNDk5YTRiZmM2MDQ1MjNmZjgzNzc4NmU4OWQ1MTY5YjBkYmQyMzAzNjc1MzUwYjlmZTYyYTYzMmRjOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGY4MGQ2NWJhYzA4ZDBiZWRhZjNiOTZlNDdmNzc2MmNiNjliNTU0MGU3M2NhMzQ4YTJhZWUyMjJiMDcwYjMwMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzE2ZTcwMzNlMDVmZTRkMmZkMWU4OTBhNTFmMWI2NzRhYTk3YTVkYzg0NDdjYmZlZmQzMjY2M2UwNDRjOGE0YSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L300-L340",
+          "version": "repo-lines-v1:sha256:57b44e6034aa40482a13a2f704e9472eb60a571b4106d23f49c912f9fc989b14:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5ODhlODMzNzc2Mzg3YTI5ZjEwNWFiYzUxMjk1OWUxMDY3OGZhYjAyNjZkYzVmN2E5ODQ1MmI5NTUzZGRmNWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjMzMxMjYyMzg1YjU0YTUzZjUyM2ZkNmFmYmExMDUwMTkyZDc1YzlkMDA2MDkzMjgzNGQxMzViMzVhZDUxMzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0ZmM3Njk4ODVkNzQ0NWQzY2NmNWNjNGU1MzllY2EwZmVlZTMwYTgzOTM3MjBjM2MwMWQ5OGI2MDA4NWEwODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_760ffefc72294a5ead0f947472b45470",
+      "statement": "External source types must map into the entity model; unsupported SQL column types must be blacklisted or coerced in a custom query, and mappings differ across database drivers.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L21-L402",
+          "version": "repo-lines-v1:sha256:4750a2b174e86c4b634c39765921aa791d6e1fb9df88e2846439730205fb3556:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzZGE5ZDA2OTkwZTFjZjhhMWM4YmI1ZTZmNzVlZTNiMDg1Njc3MmFhYWVhMTA3YzQ4MjIxMzcwZGNjMjllMTc2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwZTRlN2M0NjY0NjlmYjc3ZTAzOWM0MDI2NzRlN2E5ZTdiN2IxNjVjODhkYzk3MjkzZmE2Mzg3MjllMjllNDlmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhOGY2NDMzMThiNjNmZTdkOGJjNDhiMDY0YjQ0ODVhZDEyZDNmY2U0M2ZmODM5NWIwZTFhMmI5M2JjMDk2YzUwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L8-L19",
+          "version": "repo-lines-v1:sha256:44505378989ffe4c408d4248eec376358d8efb503fd5ed8c6e43ba295e36340b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyMDQyYmM1MDIxZDg3MDQ5NWU3ZTJmYjJjYTUyZDY0ZDgxZTY4NWI1ZmIxOWNjMDVlYjk0OWE4MmM1YjE4MjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlN2I0YmZkNDQ4ZTI5ODJjYzEyOWJkOGRlOGQ1NzMxYTVmZGQ2OGJmNzU0YTUwOTFjOTQ0MGUyYjdiNmY4YTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZWY2NmU2N2FlNWFkNWY5MWRlMDc4MDQ5ZGY3ZGY4ZDhkMWIyMThlZjk1MzEyYjM4NTgzZDQ0YWY3NzdmZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2MGY3OTlkZGJmNGJkYzM0ZjIyMDJkOGZhN2UwYzRlYTNlZjJlODU1MjFlYjQzMWY3OWQ4Yjg1ODQxMDA4ODUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e05ba976e42c46b4b85e6881a3ebca8b",
+      "statement": "SQL Server's documented numeric mappings are INT/TINYINT to Integer, BIGINT/NUMERIC/DECIMAL to Decimal, FLOAT/REAL to Float, and BIT to Boolean with 0 false and 1 true.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L37-L71",
+          "version": "repo-lines-v1:sha256:416f506851a83bb12693f6e6c7fa3019d0c38243992c7fb321d86aeaf0055a45:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMTdkZjhkNDZhY2I0NDljYzJjYTQyYTg3MDA5ZjM2MWQ0ZGM3MTZlYjBlMTU4NzY0YTU2M2RkNjlmZGVhZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExOTE0OTRlM2FmZjhjOTk3NDM5ZGRkZmJhOWJhNTNhYzJjYTE4OTdmNGFkZjZmMzBjZmJjYjg2NWIzYzQ4YjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMGQwMmU1NzNhNTllMGIwNTY5MjhmOTUxMGM3YWI4Mjc5ZGRkZDVhNDU5ZDU3ZmZjMzhlYjIyN2Q5NWNmYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhN2Q2MjhlMzI1YmQ2YjkxMWI4NWVlOThkMmIyNDRmM2JmYWY2ZWY4M2IyM2Q0Y2JhODM1YzQzNmI4ZWY2ZDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d19297345ce04c13b691f9846a7aef52",
+      "statement": "SQL Server maps CHAR/VARCHAR/NVARCHAR/XML to String and UNIQUEIDENTIFIER to UUID; DATE/DATETIME map to Datetime with timezone-bearing values shifted to UTC, while DATETIME2 and TIME are driver-formatted strings and datetime-parse can convert DATETIME2.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L65-L106",
+          "version": "repo-lines-v1:sha256:051a0a5a53089521b0245ce2a4b549c4c150b63f1d30133e3da683c8f1a7f20e:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5NTVlYzcwY2EzNzcxMjAzZmQ4ODI4MGM2YTc3MTM2MjllNzNkOWUzZDViNjdhMjU4NjFhOTA4NmU4N2NlYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4MWM5YzI4MzExZjRhYTY1YTE5ZTA0ZjhjZTYyMDI0ZjEzOThmOWI3YzEyZDY5ZjVjODY2YWFlOGRjYzJkOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxNDQ5NjUyZTZmODdhNTc2ZWU5YzM5MzExMTkxN2ZhODAxYTc4MjQ4NzAxNDU5ZjViN2NiMWQ3ODg2NzJlOWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c39bdf7f399b43f383c5386f3c7a4e41",
+      "statement": "Oracle's documented mappings are INTEGER to Integer, NUMBER to Float depending on column definition, BINARY_FLOAT/BINARY_DOUBLE to Float, CHAR/VARCHAR/VARCHAR2/CLOB/NCLOB/XMLType to String, BLOB/RAW/LONG RAW to Bytes, and DATE/TIMESTAMP to Datetime with timezone-bearing values shifted to UTC.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L124-L184",
+          "version": "repo-lines-v1:sha256:9fbe979dfa5e8af4609114b1b886ed4d457bde3b3b243c2091798f496dfb31dc:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhM2NmNmMxODVmYzM5MzQ1MzBiZTNhNDMwYmQ1NDM1MGQ1NTZiM2JhZDMzYmEzYjc2OGNkNDU1ZWY5NzczNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMGQwMmU1NzNhNTllMGIwNTY5MjhmOTUxMGM3YWI4Mjc5ZGRkZDVhNDU5ZDU3ZmZjMzhlYjIyN2Q5NWNmYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2NzY3MmU5ODdkOWFhZjBlNTY1Nzc5ZDMzMzA5MmM5ODM1NzA4YWMyZGI3OWI4YzkxNjdiZTIzY2VjNzc0YjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5951ec3111344ac58b828ab69f841c00",
+      "statement": "MySQL maps INT/TINYINT/BIGINT/BIT/BOOLEAN/YEAR to Integer, with BIT/BOOLEAN represented as 0 or 1 and YEAR documented as 1901–2155; NUMERIC/REAL/DOUBLE/DECIMAL map to Decimal while FLOAT maps to Float.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L202-L240",
+          "version": "repo-lines-v1:sha256:1481babbf43ddc6c83f5e70c7e2cbbe0803942965f6d3a12540aa0785fa0830f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMTdkZjhkNDZhY2I0NDljYzJjYTQyYTg3MDA5ZjM2MWQ0ZGM3MTZlYjBlMTU4NzY0YTU2M2RkNjlmZGVhZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlMDg5NWZhMTZiNzE0MjEwYzM4YzY0ODRmZjk3MmE4YzAzYjA2ZDM3ZDY2MDE4MzI0MWZmZmZiMDJhYzdmNmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMGQwMmU1NzNhNTllMGIwNTY5MjhmOTUxMGM3YWI4Mjc5ZGRkZDVhNDU5ZDU3ZmZjMzhlYjIyN2Q5NWNmYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlNTZmODcxZTc0MDAxNTkzZjE5OTYwNjdlYTQ2NjkyYzRjODU3YWI3ZDcyYjUzZWQyZDE1MDgwYmIwYzljODcifQ"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L275-L277",
+          "version": "repo-lines-v1:sha256:b650fa2b76f15ff07ef4efb47e1296310c3b053c55bf76629166fb9aff25b9ab:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDU3NWM5NzVhMDNhMzQ4Y2MzNzJhMDgyMTU3OWRmMTI1YTc0YjRmZDRjOGRiZDY1NDQ4ZGQ3ZjY0YWEwYzIyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMxYTUxMTc5ZDBhODJhZjczOWFiZDc1Mjg0ODc0OWRjNzJlZWY2ODI3ZDM2MDFmNjE0NmUxMWMyMzc0NjBkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIzNWQ3NjVlN2MzNGQ3NThkYzk4ZTQxM2YzMmUyZjllZDBlN2VlODc4YTU3MzhiOGQ2YTg0NzNmOTQxMmMyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2U4ZjM5YTUzZWI2ZmNlMzBlNmEzN2IyYjc1ZDcxNTFiZTE2MWNmMTFkMGIxNTk4ZWM3MjBkYzY2OGYwNWJjMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6cdbbfda7ae147f29dacd35fb89ee7d2",
+      "statement": "MySQL maps CHAR/VARCHAR/TEXT/TINYTEXT/TIME to String; BINARY/VARBINARY and TINYBLOB/MEDIUMBLOB/BLOB/LONGBLOB to Bytes; DATETIME/DATE/TIMESTAMP to Datetime; ENUM/SET vary with their underlying types and SET is a list.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L242-L310",
+          "version": "repo-lines-v1:sha256:a75214eeda177b0516b6c91f66b1248f0e33994016f6383eee2edec05b96a77a:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5NTVlYzcwY2EzNzcxMjAzZmQ4ODI4MGM2YTc3MTM2MjllNzNkOWUzZDViNjdhMjU4NjFhOTA4NmU4N2NlYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2YzU3Yzk3YWViMjc5ZmYzYTUwNGNlNjIxYzA3MThkNWRmMmE1MDNiNzliMTAzNmNkMWViNzc2ODAwMGU2ZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhNWE2YzIxMmVmOWNiMTNkMDI0MzM1NjI3N2EyNGQ3MTZjNGZiYjE5ZDA3Zjk2Mzc4NDc4NWIzMWE3ZjNlMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkNTU5ZDc3M2U5NjhlMmY1ZDk4MmJmNWU0YzA2OWE3M2YyMWFjYzIzZDNhMjNiZDgwNmRiNjc5M2Q1ZjhlZjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_94327d41d5554d1da20a6dc2ea402848",
+      "statement": "MySQL DATE becomes a Datetime at midnight, its DATETIME import shifts timezone-bearing values to UTC, and its TIME strings use hh:mm:ss[.nnnnnnn].",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L266-L282",
+          "version": "repo-lines-v1:sha256:ee58c081b35b5f1a0fe065335e6d91aee3448d608c1be9dbd52f6ddd78034a95:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkZWI4MjJiNTI5NTIzZDZiMjg2YTliZTc2ZWY1YzA1Njc2MGUzMzdlOGZkZjY0NjU4YjNlZThkZDdjM2UwNGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhZjYyYmQ2NmMxNWFiZTg3NTczZWQ5MWJhZjMxZjQ1Y2QzYTUwNDQyOTI5MDYzZDQ2Y2ZiOGUzNDA2MjkyMTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3ZWQ5ODE2YmEzZTkzYmE1NzBlMGI2NjJjMjVlYjNmYWNlNTJiMjFkZmFiNTM1ZDdiNDUyYWU4ZDYzY2M4NTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1ZDhkYTBhYjM4MTA4NTRiNTBmNTU4ZDY1YTM5M2ZlMzgyMzVhMTY0MzZiYmM4ZjY4ZDMyZWE1MTQ4MWNkYWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fbb681d318af463aafee812671715b10",
+      "statement": "PostgreSQL maps INTEGER/SMALLINT/BIGINT to Integer, NUMERIC/DECIMAL to Decimal, REAL/DOUBLE to Float, BOOLEAN to Boolean, CHAR/VARCHAR/TEXT/DATE/TIME/UUID/XML to String, TIMESTAMP to Datetime, BYTEA to Bytes, and ENUM according to enum type.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L329-L402",
+          "version": "repo-lines-v1:sha256:be812c5aaf976848399d8b2e2fcfc6a375f541028f7fcd692783f8ca8e4e5e67:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhM2NmNmMxODVmYzM5MzQ1MzBiZTNhNDMwYmQ1NDM1MGQ1NTZiM2JhZDMzYmEzYjc2OGNkNDU1ZWY5NzczNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxMGQwMmU1NzNhNTllMGIwNTY5MjhmOTUxMGM3YWI4Mjc5ZGRkZDVhNDU5ZDU3ZmZjMzhlYjIyN2Q5NWNmYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a9a8300c549c481ca7efdc3efa25adcc",
+      "statement": "PostgreSQL DATE is a YYYY-MM-DD String and TIME a driver-formatted hh:mm:ss[.nnnnnnn][+|-tz:offset] String; timezone-bearing TIMESTAMP values shift to UTC, and PostgreSQL UUID is String unlike SQL Server UNIQUEIDENTIFIER's UUID mapping.",
+      "evidence": [
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L100-L102",
+          "version": "repo-lines-v1:sha256:daa090462591cc46013d76cd4a5319cb1d32d221a80e893f95b594b7fe253cfa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDUxMTQ4MTk2NjBjZmE1M2M2NTE4OGNiYzdmNTQwMGJkMDk4MGEyMDFlYzU1NzVjOGZhODlhOGZjZTE5MWNhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjRmMmRhNjMzN2JiMGUyNWQzMjczZmYwNDE3YTQzMDdmYmYyZDA2YzAxM2NlZTY2ZDczMjdlMGVjYTQ5Y2MxOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTlkNjEyNzQ2ZDI3MTBiOTI2Yjc4ZGNiYWZhNzBkNjNiNzUzZjMwNGJjZjcxOTE4OTMyZThhZjE5NGFiNWVjNiJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L373-L398",
+          "version": "repo-lines-v1:sha256:b94cb25cf89c72f95bdbe12c76e3a645b650d65735311563540d5a56db4bad6f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1MTVlMjdjOTJjNzFjNTY1ZjE0ZDA2YzlmYmQ3YTg2NWVmOWIzZDMxZGEzMmQ0YWJiMWUyMzZiNGQ0YTY4YTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3ZWQ5ODE2YmEzZTkzYmE1NzBlMGI2NjJjMjVlYjNmYWNlNTJiMjFkZmFiNTM1ZDdiNDUyYWU4ZDYzY2M4NTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE5ZDYxMjc0NmQyNzEwYjkyNmI3OGRjYmFmYTcwZDYzYjc1M2YzMDRiY2Y3MTkxODkzMmU4YWYxOTRhYjVlYzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d85856265cb04fe5ba43e232825b82c7",
+      "statement": "The SQL mapping reference contains legacy tested-version statements and describes several native temporal ranges as unlimited to nanosecond precision, whereas the entity Transit wire-type reference gives bounded Date and Datetime ranges.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L275-L286",
+          "version": "repo-lines-v1:sha256:617687d9a6f88c960bcb2c2e293962d9615fe9009632c95fe78393ad032c29db:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwNmM2ZWEwYWVhYzc5M2MwY2I1NjRiNDczOTI2MzdiMTI4NTE0OWQzYjQwNjI3OWFiNGIyMWEyYjE5NGEyYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZGZiNjVkY2ViOWU3YjUwZGUyYWU4NWQ5M2ZkNWJkMDIyODg0YmY5MGFhYjRhOWZkYmIxMTQ2MjJmMDIyYmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc2YjllMzU5MmU4MGU5MTc0NDczZmJkMzEyMDM1NGZjOTE0NDZkY2U4ZmU5YzkxYmRlMmJiNDJiYTYwZDI5MDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiMGVlZDg1YzVkMDgzMTJkNDUyY2I3MjFmZjJiOWRkNjY4MjgxY2FmNTdkZWNkNTBjMGRkNDI1ZTYyNjViYzEifQ"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L113-L114",
+          "version": "repo-lines-v1:sha256:b19cb8c5bca15af8c80fe44fabba3ac683eccf0df218e0e334faae1facd3b5ae:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU0NmM5YjBjMmI5N2FkNDYyMDJjZmJlOWViMGFlMTJiOGZkMDhmNmM5ZDJlZTdmMjM0ODZhZTgzMGUwOTczMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDZlMTM4ZWFlNTM3ODYyMTA1Zjc4ZTkxMzQ2YTRkOTI0YmRhMGIxNzA5ZDE4MjMzMGRjODI2Njg5NjFiZWJlZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjliZWQxYjY2YmIwN2U1ODJkMWFiZDlhYjc2YzllZDZiMmNkYTE2MzdlMmRiM2I3NWVjM2JkNzRlYjg4NWFiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L152-L160",
+          "version": "repo-lines-v1:sha256:b02bd9a6b81747fb5ccaa873d6eeb8ee9cae724c30391ad16934afe090b26fd3:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg1ZWYxN2M0NmJiZTM2N2NlMjcwNjA3MWI0NGYyZDY1YzI3ZWQ2NTVmNjUyYzBkNWZiMTMyNTdkYmZiN2Q4YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdlNThjYjE5NzZhOWRmMmU4OTIzOTk0OWRkODBjMmFjYzViNWJiMjMxYTgzNTY4OWRjZmIzNDBiNWI1NzNhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDdlZDk4MTZiYTNlOTNiYTU3MGUwYjY2MmMyNWViM2ZhY2U1MmIyMWRmYWI1MzVkN2I0NTJhZThkNjNjYzg1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzY5MzIzNGZiNmMwNDVlMGU0MzU2MjY0N2YxMWFiOWVkZWM0Yjc3MjNhYjdlY2Y5YmIwZWI2ZmUyMzMyNWZiZSJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L191-L192",
+          "version": "repo-lines-v1:sha256:02cd10a56c5efbb07c9bfc8b8af9828989827e8d727f70bc0d51372b3e566961:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFjMGRiZWEyMzg5ZTgxNTQ5ZmY3NzMyZTVlNTJjYjcxNmIwNjQwZjgxNjY0MWY0OTFkNWE2OGI4YzkzNDczZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWRiNGYxZTY0ZTk2YzUzYTM3MzFiZTE5MTIwN2Q2YWE0MDA0MWM2MWZiNWVmMDA0YjQ5OGQwY2UzYjliNTBhMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDE0ZDE5ZDY3MTdjNTgwMzJlNGM5MGFjZDYxODNkMjZiMDg3OTc2MGEzZjQ3NWFiNmJhZTFhOTY2OGFiNTBhOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L26-L27",
+          "version": "repo-lines-v1:sha256:914d3dda8dd3b5e7f40d35a4923212901370e7496a837eabdadf5c696dd5c2d8:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDhmYjI1OGI1MjExY2Q0YmUyM2I2ZDk0NTA0ZGZhZWZmZTRkNjUyMmMwMjg2M2YwYjNlOWVhZmM3ZmVmZjUxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzliZGQ0MTgxZjEzNDc5MWQ2ZTFhZDVhMjk4MmFkMmEzODQyZjUzMjBkZTUzYzhhYTM2MjlkYWQwMjNiYzU1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmM5MjU5MmY1ZWNiYTRmYjIxZTljMmY2YzAyOGJlMWRhYzFhMmFkYWMyOWQ1NzU3YTgyZGVmNDEyMWFkNGRkYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L318-L319",
+          "version": "repo-lines-v1:sha256:ba8369161f94d71447963e6056383b813278c6645416029002897df81fdb917c:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTBiNDNhNzYyZDVhZmRjNjY2MzRhMTcxZjNlMjY3NGI2NTYyMjRjMTEzZjM5MGY4MDMxMjI3OGI5NjVlNGE1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTgyODkyMDUwZjFlMDIxZjM4NTMzMWFmMWEyZWQ2ZWU3N2U1YzEzZDUyODFmOWRjYzQ3YzdiYWM2OTBiMmJmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmNjNmVjYmI0NTc0ODA5ZmVkYTFmNmI1NzZiM2NmNGUzYTQ3NDI5ZDkxY2JkN2FjNjJjNDU2NjMzYjNiNDVjOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/source-datatype-mapping.rst#L373-L376",
+          "version": "repo-lines-v1:sha256:d88df572b3f7cacc17a5431313863fdca75bc701a4b903119c4db7d3bf7c44ca:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTUxNWUyN2M5MmM3MWM1NjVmMTRkMDZjOWZiZDdhODY1ZWY5YjNkMzFkYTMyZDRhYmIxZTIzNmI0ZDRhNjhhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdlNThjYjE5NzZhOWRmMmU4OTIzOTk0OWRkODBjMmFjYzViNWJiMjMxYTgzNTY4OWRjZmIzNDBiNWI1NzNhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDdlZDk4MTZiYTNlOTNiYTU3MGUwYjY2MmMyNWViM2ZhY2U1MmIyMWRmYWI1MzVkN2I0NTJhZThkNjNjYzg1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzRiZjU3NTYwYTY0NzkzNjJkMTI3MjBkYzQwMjZkYmE3YTE3NzBkODA0OWY0ZDAwMDAxZDY3YjMzZGYyNzdhNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0f603292a3784507be0d7a4227615388",
+      "statement": "Namespaces preserve attribute origin for multi-source merging and late schema binding; an attribute x first created in pipe y normally becomes y:x, while namespace-aware copying preserves existing property namespaces.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L333-L344",
+          "version": "repo-lines-v1:sha256:89d51e1bab60f5006aca15f4761401872b5ce48c421f6eaaf335b79e45570903:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1OGE3MGVhOWViOGYzMGMwNjRlMGE5MjNjMmQ1MjRjMGY5YmM2ZmY4Y2FiOTM4ZTUzZDM5NDMyYzE5N2M2ODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzNDI0YTk3NTZiYmE0NDk2YjBkMmRhNDUzYjU4NmFmMjkwZmI1ZTY3OTU3ZjI0YjVjNzZmOGI0YTMzODI0NTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3N2VmMjNjNmY2OTFkNDI1ZTNiYjEzMjViNmQ2MWJmNGRlMzI4YTk5NGYzMzQzZmYwYjJmMDVlNzA5ZDczYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjNTdiZGQyYzE4OWJmOTY3MjYzNjQ2YjQ2YzM4OTFhMTkyZWU3NDFkMmI2Mjg2YTc2ZDc5N2RiNjJmYzU3YWEifQ"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L8-L10",
+          "version": "repo-lines-v1:sha256:4b058feae7cc5a4fe4d0969db69fdfcaf3cc840df9f5e87f4d6bd7c2c56f372e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTg2ZTU1ZDcyYmUyNzE2NjIyMWU1NjA5MzBjM2VlNTIwOWRkNDQzYzVlMzQ1NDAyZjU5ZTFhNzViOWRhMDhiNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGEzM2U0MDZmMjk2MGI3MGZmZDZjODg0OTMwZWVjYjg2ODFlZWNjNGI4MzVlYjdkOGQ0NGIzZTZkMDljNGQzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDJhZmUwZGFhYzM3YTIyNzE1NTU1OTIyZDRhNzc4ZjY3ZTRlMTMzOTdmODRiNWM2ZmRmOGExODQ2ODJmOWFhZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjMxN2UxOTZjMjk3MDY2ZjkzYjc1MGEwN2FiMTQyZTI4Nzk0NTc0MGJkZDNiYTM1YTYzZTI4ZWEwYTRlOWE4NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ef3bcae6bb0d4c098538d6109625dfc1",
+      "statement": "The overview concepts.rst sentence saying attribute x in pipe y becomes x:y contradicts its own examples and the focused namespace feature and DTL references, which establish namespace-first y:x placement.",
+      "evidence": [
+        {
+          "resource": "repo://hub/concepts.rst#L14-L36",
+          "version": "repo-lines-v1:sha256:839ee114497542358875ecd26630a0a3d2f68b7083d31dc00824e11a3b6eb139:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxZWM5NjE0NjkzN2QzNjVjZDc3ZGJhNzc5NDg5YjgyZmZmOTgwODVhYTg2MzFmOTdmOGNkZTFkMDk2YWNhNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyNzAwMDI1YzhhNDczZmNjYjU4NmIyYmIwY2M2ZDU2NjU1Yzk0ZGRhZjY1NDE0ZDVhMDNlYjc2N2MzN2ViMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNTZjZWQxNDBlYWM2YTJlY2JhMmJkY2Y3OWMwYTBhZjYxY2YxNTRmODUxYWZhZGZkODRjYmY4MTNlYTQwNTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjMmEyMTlhNTYxYWRmNzhlNzNjM2M4ZDZkMzkwZDAyMzQ5NzNmZWU0MjE0YTliY2U2MDRiM2MzMmUwZDU0NzgifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L28-L41",
+          "version": "repo-lines-v1:sha256:b91917bc43a97e76fb34ac53e4201c1d659df921407aa736fb34e5767f79f422:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZWNiYWEzZDc4YjIxODFjODk1Yjc5ZDdjYTVmNTQyMmQ3NTE5ODVkNzRjMWE2NGI0OGEyMWZkMWQ0OTliMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYzQzYzU3OTlkOTljZDc3NzVmZjhhMDk4OTUyYjcxZjAxMjBmOGRjMmMyMjllOTUzYjhmMDZhMmRlZjlhNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwZmNmNjFlMmMwYjg0ZTJlMmMyZjc3MTY2ODVhODcwNTc0ODI2NmE3ZThkZjI2NzNlMWI4YzAzZjdlNWNhNjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L10-L32",
+          "version": "repo-lines-v1:sha256:92a43da516d5f28f2e558a29d6df6722980b68a67ed563d63ec295cc7e05c103:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMzNlNDA2ZjI5NjBiNzBmZmQ2Yzg4NDkzMGVlY2I4NjgxZWVjYzRiODM1ZWI3ZDhkNDRiM2U2ZDA5YzRkMzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyNzAwMDI1YzhhNDczZmNjYjU4NmIyYmIwY2M2ZDU2NjU1Yzk0ZGRhZjY1NDE0ZDVhMDNlYjc2N2MzN2ViMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyODQxYzk0M2Q5NzhjZjIwYTJjMTA4Zjk1NWEzNzY2NDJjMjdmMmZjNTM1MjMyNWNlNDEzOWE1NDEyMjFiNTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5ODU3ZWJlMWY2Y2QzMWQzM2FjYzc3MzQ5NTNhYmNiYzdhMmJkZjhmNGRhY2UwMzE5MTRlNmFkZjQxMjY0MzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1bf78088a8594526a405239fc04d7e90",
+      "statement": "A namespaced _id retains the reserved property name and stores a string value; property names and colon-bearing strings are distinct from typed NI and URI values, and colon syntax alone does not make a string an NI or URI.",
+      "evidence": [
+        {
+          "resource": "repo://hub/concepts.rst#L38-L49",
+          "version": "repo-lines-v1:sha256:b5ab3006224ab8f6419c4d2ab129692d4d7910a1bd4931bda9f86b106912ee16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3YTlkMWJkYmRlYmQ1MDIyMTQxZjY3MzliZmU2MWUyNTJjODM2YWRmZDllNmM2OWViOTMwMDdjMGVmNWVmMzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZmU1MmU4NzEyNDVhZTdhMWI2MzcxMzhlOWM2NjI2YWU5MTc5NmRmODZhMzc1ZjBjODkwZWRmMGJjNzY2MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViNTc2NGZjNjk1ZjYxNDc4MDAxMWI5OGU5YzQzM2MyNzMxMWUwMTUxYTRhODE5MGY2NWIzMTllMTEyM2YzMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkYTA4NTJhODRlN2RmYTQ4MTljZWVlMjQ2ODkyY2M0ZjlmMDMxOWE2NTJkYmVmN2FkOTJmM2U2YjliNGQ5OWIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L267-L273",
+          "version": "repo-lines-v1:sha256:062800f490adb854a93a439d22372a86244747468c4f6d2d0f618fd5240f2851:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTIxMjU1MGQ4NTg3YTg0OWEzYTkwYmU1MDJkZTJmOTdkZGI4OTJhMTEwNDllM2FhMzY4ZDgxOGJlZDdmOTY4OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmEwZGQxNjYyMzBiMjZiNjNmMDE4OTcxY2MzMDlkYzZjYWE2NDljNjJkOTFjMGQ1YmNmMWEwOGM4ZjUxOTAxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTcwMWM4NDFkNGQ1OTc2NmRlODU5ZTgzZGFkMDg0YjRkOTU1NjI3NGY2ODNjMTZiNWE4ZWRhYWQ3NzMwMWMxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmM2MTA3M2M2NmQwMTRhZWQ2OGMwZjljZWI2ZTcxNDRmOWM1MzExZWM5ZGM1OTI2NDhmY2E4NWFhZjJjYWMzNSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L19-L28",
+          "version": "repo-lines-v1:sha256:32a50ae84bbd419cc6d2069b5e16d63317849f185754862df0a7fd178f6dee74:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMzRlOTEyMTYyYjY5ZTU0YWIyNDIzNzk4YWMyMDJkNjRmMTE2YzEzODQ2OWZiNzNhZjM2MDM1MjZhYThmZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGZiMDBjNGEwNDRkNzZlNTFlZTQ0MGUwZTBhNzRiZWM5ZjY1Y2JhNTAxOTUwNjQwZTFjNDc5MWI2MjllNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwMDYxODRjMzgyNDI5OTgwZWEyYzY1YWE0ODI2ZTQ2ODg3YmQ3NzUwMTBlOTY5MWMwNjAyZjFkMDc0NTAxZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlMzQzMTUxYmZkOGNiMGE2Y2Y3Mzg2NzFjMmRhNzlkOWQxODY4OTRjMzE2MmY4ZjhiNjljMzE5MTM1YThhYmYifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-uris.rst#L19-L27",
+          "version": "repo-lines-v1:sha256:253f6366856e070b120f3c26e103914cefeb487f1ccc78da4aafe31bbe5c316b:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzU0NTVlZGQ1NmVkMWViNzRkNmE5OTE0ZDQ1M2Y5NDJjNDYxNzUwNzQ3NzhjOWQ0ZjNhODczMzlhOTg2ODMzZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU0ZmIwMGM0YTA0NGQ3NmU1MWVlNDQwZTBlMGE3NGJlYzlmNjVjYmE1MDE5NTA2NDBlMWM0NzkxYjYyOWU1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzAwNjE4NGMzODI0Mjk5ODBlYTJjNjVhYTQ4MjZlNDY4ODdiZDc3NTAxMGU5NjkxYzA2MDJmMWQwNzQ1MDFmNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTFlNWEzY2ExOTNhZWM0NGU0MjE4YjBhNzI4M2I3MTczYTU3YWE4NjY3M2U4Zjg4Mzk4Nzc0NzkyZTYwZGQ4OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_42d84502d89e45fda2379d078c896b17",
+      "statement": "namespaced_identifiers defaults false in service metadata and is inherited by pipes unless overridden; pipe namespaces.identity and namespaces.property independently default to the pipe id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L54-L57",
+          "version": "repo-lines-v1:sha256:a2b011fadf9fbfb7ca402ff74857302b0ab9ac45c3680413079330ca5f34f175:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWRlYTM1OGI3ZDczMWNlNDYyMmNiODQwYTYyMDIyNGQ1ZTc1Y2NmYTUwMTNlMjkyYjZiNGE3MzY1OGNiY2FmZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWUxNjdhMGVjOTU5ODgzMDVkMmJlZjIwMjAwMzBmZjM0YjE1MmExNzMxZjc0OGRkNGE1OGRlMjE3OTUzMmY5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGVhODE0MGJhYjdhZDZjYTZlY2IxNWE5YmQzNTZjNzQyMmYxY2UxN2NhMjJhZWRjNjNiNTNmNDBjMDczNjQxNiJ9"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L61-L76",
+          "version": "repo-lines-v1:sha256:513f8213dc790cb5f249628111e93456450bd3e9495bedd1d3c8ae478dcd006a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkZWEzNThiN2Q3MzFjZTQ2MjJjYjg0MGE2MjAyMjRkNWU3NWNjZmE1MDEzZTI5MmI2YjRhNzM2NThjYmNhZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZmNmZjY5YmQ4OGQ0NTUwNmE2ZTE0YmJkMDRkYWEwMzlkZTE3ZGNjNTQ3YTE1N2IwODhmNTBmYjdlYTgwZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjgyNWZlZmQzODYzMzE1NTM2YTQxYjMwMTMyMDUxZWM3ZTliZWY5ZDlhYzQ3Y2U2MDQ0NTA5ZDZiZGE5NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a9bcff0ac6440b08f431ffd0621146c",
+      "statement": "add_namespaces adds current identity namespace to _id and property namespace to properties before the first transform, normally inbound; remove_namespaces removes namespaces from _id, properties, and NI values after the last transform, normally outbound.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L79-L92",
+          "version": "repo-lines-v1:sha256:9e6bc1d03bb7142ef5394b21549a6d998663f9d12dda9c29a0d82a99fe831e7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhOTZhMTU0ZGNlYmM5ZGE3MmRkZGE3M2EyYmQ0NTM4YjA5OGIzMTBmZDQ5M2JmNjk0MjA5M2E5MmY2MWFiMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViZDAyZGY4MzRiMTMxZjBjNTdiZGU0MzE3MGI4MTZkZWVhZDdkMjJkMzRmOTdhY2Y4NTdmYWFlMWIxNTQwZWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyYTM2YTAyZDQxZmZlZDdmODM1ZWIwNTI2NTBkNmVhOTJiZmY3MmZiMjVlM2MxYTVlMTg2YjRmMzUyYWE5YjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_41ae0eef73b844ab8b8e594c3feed432",
+      "statement": "When namespaced_identifiers is enabled in service metadata, documented add_namespaces source defaults are true for csv, kafka, ldap, sql, embedded, http_endpoint, and json; documented remove_namespaces sink defaults are true for csv_endpoint, elasticsearch, mail, rest, sms, solr, kafka, sql, http_endpoint, and json.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/namespaces.rst#L79-L92",
+          "version": "repo-lines-v1:sha256:9e6bc1d03bb7142ef5394b21549a6d998663f9d12dda9c29a0d82a99fe831e7a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhOTZhMTU0ZGNlYmM5ZGE3MmRkZGE3M2EyYmQ0NTM4YjA5OGIzMTBmZDQ5M2JmNjk0MjA5M2E5MmY2MWFiMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViZDAyZGY4MzRiMTMxZjBjNTdiZGU0MzE3MGI4MTZkZWVhZDdkMjJkMzRmOTdhY2Y4NTdmYWFlMWIxNTQwZWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyYTM2YTAyZDQxZmZlZDdmODM1ZWIwNTI2NTBkNmVhOTJiZmY3MmZiMjVlM2MxYTVlMTg2YjRmMzUyYWE5YjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNGU3YzQ2NjQ2OWZiNzdlMDM5YzQwMjY3NGU3YTllN2I3YjE2NWM4OGRjOTcyOTNmYTYzODcyOWUyOWU0OWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_abc11eebc1514fba92c4047e844ffefe",
+      "statement": "Service metadata is the special configuration entity with _id node and type metadata, editable through configuration, UI, or Service API; namespaces.default is a namespace-to-URI expansion dictionary used by RDF-capable components rather than a pipe identity/property namespace selector.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L60-L65",
+          "version": "repo-lines-v1:sha256:1cb4cb095b05a88cf7045e8bcb3a42247970d96b0e6fa724553d7e87eb6abfb6:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTIyZTZiMGQzODJiM2JiMGNhYWViYzljNTkyNGYwZTFlYjgzYWZiODc5Mzc3NGEzZDBiZDQyZWVjNWJkMjYyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODIwYTU1YmY4MWJkNDNhY2FmNGE0OTY4Y2U5NzkzMTgyZTQyNWYxZmE0YTYwMWU2MDg5OWVhZjQzNWRmZjIzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTliMDliZGQ3YjhlZjZjNDc3NTFlZTVkZTIzZTZiZjgzMDc4ZjM4YjU4MzdmOTA5ODdmMmRiYWMxYWI3OGQ5YSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L7-L25",
+          "version": "repo-lines-v1:sha256:92d262f7a5be5f17dde046aa48cc960c39b7b4fb84591f1342f2f3b6273ea113:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwOTJjMzA0MzA3ZDlmOGI0NGVjNzIxZTIyYTcxMjMwOTQyMjQ0NzczOGM5OWQwNGI2NmNjNjYzOTAzZmZlZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhMWU4NjA2YmJjOTJjZmU5MGZmYTk1ZWU0MTNjMWMwZTQ0MWUyZDNiZWQ1OTUxMWZkNWY1YTg5MTJiOTI5YzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhNmVlZGJkZGRmNzAyNjk4NDk4NmNiMDI3MzFmNzY2NGNiYTdkNGNlY2RiOTA4MDhhYjc5NDY5NzNjNzM4NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFjM2UxMTdmYmFiODNhOWYwM2EzNjc0ZWYxODZkNDNhMzFmNmJmY2Q5MTc2ZDFjZDcyYmQ1NjQ1MDY2MGQ2OTcifQ"
+        },
+        {
+          "resource": "repo://hub/features/namespaces.rst#L67-L76",
+          "version": "repo-lines-v1:sha256:2ae07393e073ff17862f7ee9dbc56746405b2d1b3a6b5ef0856df8368c09bb44:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5YjVjZWJhMzdjNzU4ODYxYjUwNTA1MjQ4MTU4YTdkNjdlNWE2ZTAyNzU3NWNiN2FhODU2ZmY0MDI4ZDIzYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZmNmZjY5YmQ4OGQ0NTUwNmE2ZTE0YmJkMDRkYWEwMzlkZTE3ZGNjNTQ3YTE1N2IwODhmNTBmYjdlYTgwZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlZTE0YjQzOTZlMGRmODUyODNlZDMwOTBhMmJhYzI1MTgxMDVkZmRhYzQ0ZDQ0ODYxNjcyOGRhMGNhYzFkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlZjgyNWZlZmQzODYzMzE1NTM2YTQxYjMwMTMyMDUxZWM3ZTliZWY5ZDlhYzQ3Y2U2MDQ0NTA5ZDZiZGE5NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee60d59b48a942b3b374e2b9404b6ed3",
+      "statement": "Built-in URI expansion mappings are available unless explicitly overridden for _, rdf, rdfs, owl, foaf, wgs84, xsd, dc, skos, dcterms, and gs; _ maps to http://example.org/.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L67-L83",
+          "version": "repo-lines-v1:sha256:ee5ba258f4e75238306f4bf10c64a7f0f9273da5f02e94e357b8a064881389da:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwNzJjNTkzMTIxYWQwNTBlNWFlN2E5ODRjNzUyZTVmZGJiODJlMzEyNDdhOWFkMDNkNTJiZDJjZTAwMmE1NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiMWYxM2Q0MWU0NDVmYTJiZGU4NTliODhhYmIyMjczZmNlYzMyNjNjZDY1MzE4YzlhN2Q4MWE0ZGI4Zjk0Y2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhMDZjMDYzNDFiZjVjZTUwYzgwNTljM2QzZGE1MGMzY2M1ZjlhZmMyNTg2ZDdkMTQxYmMyMjA4MWM0MzMyYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2ZGVhOTUzNTA2OWViODZkZTc2NTJkODU2MWQ0NmEwMjllZDEyMzJjNGRjMWE5YmZhOTgyZGZkOGYyMzVhNzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_388e8d8295f54e42ac559a0d6a48cda3",
+      "statement": "global_defaults.symmetric_namespace_collapse defaults false; enabling it changes RDF/SPARQL URI/NI collapse and expansion so that inbound and outbound mappings are symmetrical.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L241-L248",
+          "version": "repo-lines-v1:sha256:b41cb24b07692054d4bcbd2068ee49a3b07fa0f30b071224913ab77bdcb408cc:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzdlOTVkMWViMmE2ZmE5YTE5MzQ4MWE2M2FkOGE3YTVjMWZmZWM1YTA4OTk0MTMxYmYzYmFjNGFkYzA4NTU4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzY4ZDViZDk4ZGZhMWJlN2U0ZjQxNDE3YzFlNDFhNmY1NTZkMzgzY2E3ZDNjZjI2YzQ3NTZmYzYwZGQyZDNjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjFhZDQ5Y2Q3YzhjZTkzZTdmNzhlZGI0NTNkYWE1ODNmOWZiYzU0ZjA3NzU2Njk5ZGZiNTliZTY1N2Y3OGQ5OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8167c90fa46e4983a96a629e3d9ec1eb",
+      "statement": "ni-collapse and ni-expand DTL functions are deprecated despite still being mentioned in service metadata documentation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/changelog.rst#L58-L62",
+          "version": "repo-lines-v1:sha256:b1a9eea97e30ef2630484bfeb8913ca567ae20984bb62a9f61778f4932f1be90:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFlY2JhMTM4NTcwMDI0NWI1MTQ5M2Q3NTVjZWQ0YzIzZTE5Yzc1YmQ1MDQ4ZmU0MDEyZWFjNzBkMTA1NzEzNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGFhMDMyOTRhZWJiYTQxMDljZjhmNjgyNzE5MDllMTMyOWJjYTIyNjRhYzdlNTI5Y2Q1ZDgzMGI4ZmE0NGJjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDI2YjA5NDM4ZjdiMTkyZWQ4YmZlMTNkNjBkNjljZjFhYTNiMDlmZDg4Y2RmMTg5MzQ0NDYzY2Q0NmU5ZDU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzdjOTAxOTA0NjdhMjI1MjkwZDhhZDdlZGQ1MmM2N2Q2Yjg2MTUwNjRlYjkzYWFlMjM1YTljOTgyNmY2NjNjOSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/configuration-metadata.rst#L243-L247",
+          "version": "repo-lines-v1:sha256:43b27cb329f4d0bd31d9b72a0ae630f8ef7cbe1c34f85067bf90f0370f40921e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmZjYTg1NGIyMmE1ZGJmYmIxYmIxMjM3YzQzNTA3Yjc2MWU1NjIwMzlhNzlkNWIzODEzYTFhYmI4Mjg5NGZjMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjIzNDVjMWFmOTFiNGQzYTNkZGU3NzkyNGI3NzRhYTM4ZWZjODc4MWNiY2JlOTVjOGUwMjVjNGFjY2FmMGY2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzY5NjdmMTRjZDIwMjg3Njg4MGEzMzdkYTViOTAyMGUyNjc4Y2YyZGExZmQ4NzMxZTdlMzFhMzQzMmYxNDc2YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7d6ac77d12f1437f9c2cbb284abb98fb",
+      "statement": "add, add-if, default, make-ni, remove, copy, rename, and path are namespace-aware; unqualified property references generally match across namespaces and wildcard patterns respect the boundary, with copy/remove patterns using the last colon as separator.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L301-L306",
+          "version": "repo-lines-v1:sha256:cc2407fbd7a49efa674cb9670a40e8b091ccf62e91d6a0529e9911c5b82f16d1:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlOGRkYWRmMmFjNTM1YjU3YmE1OTIxMzgyN2I1Nzc0MDdkNTUwYzA1YmIzMDIwODVhNWIwM2JhNDg0MzhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzUyNTIxNWMwNTU3MzFjYmM3NmI4YTA0YTE4MWUwYTBhNDUxOWMwMzdlNWIzZDk2ZTc0YzBlZmU4ODAyOWNiNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjVhNzNmYmM0NzVlODkyNGMzZjg2NjAwOTBlNzM0MDE1N2UwZmQ2MWUwNmIxMzRlZTdjMGE5YjIzYjkwNDA4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTNhZWVjYzkzZTU3MTQ4ODI3NjgyODZkYmIzNWFjNWIzNGE1ODI2MzkyNGYzMWQzMmE0ZWI2MGViYmVjMmJkYSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L854-L859",
+          "version": "repo-lines-v1:sha256:cc2407fbd7a49efa674cb9670a40e8b091ccf62e91d6a0529e9911c5b82f16d1:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjVlOGRkYWRmMmFjNTM1YjU3YmE1OTIxMzgyN2I1Nzc0MDdkNTUwYzA1YmIzMDIwODVhNWIwM2JhNDg0MzhiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzUyNTIxNWMwNTU3MzFjYmM3NmI4YTA0YTE4MWUwYTBhNDUxOWMwMzdlNWIzZDk2ZTc0YzBlZmU4ODAyOWNiNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjM3ZDE5ZjZkYTUyNGY4YWVjYjA5OWYzYzE5NzNkNmQ2YzZlZDU4MjFkZWNiYWU5ZjI5MzdmMmI3MzZkZTM4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGVmOTNmZTk5NzY3YTg1YWYwZmYwNjAwYzAwMTJiOWIyZWQyMzRlM2VlYTJiMGUxMzk0ZjdjZmYwZDI0N2QzNiJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L6-L21",
+          "version": "repo-lines-v1:sha256:f9fa5b54c7276782d1b018c3ce5c28686a04d7acfcbeae0bdcd89738d1c5733c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1Njc2ZDhlNmNlNWJiMDYxZDYxYjhkMWRlZDM5YjExYWZjNmQ1ZjdkMTNkMzdhY2FjNDAzNzdmYWQyOWRhMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDZjYjJhNzBlNDM3ZjYwNGMzZGU2Nzk1M2EyZjdlYWQxOWI5MmI4ZTFlYjE2M2Q0NGE0NWZkNmYzN2ExZTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NDk2ZWNjMmY3ZDM5MDRlYTVkNjI0ZTI5N2E3NGU5YTlmNjFmZjYwMTgxOGFhZDNkODY2ZWQxMmEyYTIyOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyOGM1NmNjMDljNTJiYjg3N2Q4NWRiNDEyNTZmNGI2MjM4MGU1N2QzYzg2N2ZkN2YyYjc5ZjFjMTdmYzQzNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_84117b3e4fdf4ae28f8216e6de3e9556",
+      "statement": "Namespace-aware add prefixes unqualified properties with the current property namespace and _id string values with the identity namespace, while preserving fully qualified properties; copy can match across namespaces, and rename preserves namespaces for an unqualified target or collects values into a fully qualified target.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L30-L87",
+          "version": "repo-lines-v1:sha256:5d8415a61c5a70972f6faebd9aa9646cb00b55b0fccf7d5da07e485451a26437:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiYTc2MGI1OGU4MTk5NzFhMGRjNTBlYjE0ZTJmZWEwYTZhZjc3MTRjMGM2OTRhNmI0NzZlYWE2ZTU2YzBhMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlMWJkZTEzOTJkNmFlMGE2ZWUzMTRlMDQwZGIyMzMzNGU4ZDg3MDMwYTk2NGRmZWI1OTJiYzI1ZTU4OTk1OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5ZjAyZTZhMDFhNDA0Y2Y2Y2Q1MzM4YzhhMDlmMGM0ODg2NTU4NjYyMGZiNmM2NGI3YzFhYWYyYzI3NTU1MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNmMTczNmViNDM2MGNhYmYzMGM2NzU4OTEzNDkzNWUxM2VkODVjYjg4NDE1NDkxYWEwMzIzN2FlZDI5OTE3YTUifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L338-L344",
+          "version": "repo-lines-v1:sha256:5311cda059f4cba28c21b8cffd2ddba618568c1617523569fc6e5acf1b50bb70:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYwZjNhMDU5YWZjMWJiZTQ3ZDIwYmY0OTk2YzZkNjM4OTk4OTQyZjkyODYxYmYwNmQ0ZTNjMzJkNTZjYmM3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDM0MjRhOTc1NmJiYTQ0OTZiMGQyZGE0NTNiNTg2YWYyOTBmYjVlNjc5NTdmMjRiNWM3NmY4YjRhMzM4MjQ1NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZThhZWExZTE5YWViMDQ3NDhkNmJmYmVmZjBiY2Q2NDA2OGVmMzI2NjliYzIzZGQwMTlhODNmZWMwY2JkMTkzMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmM1N2JkZDJjMTg5YmY5NjcyNjM2NDZiNDZjMzg5MWExOTJlZTc0MWQyYjYyODZhNzZkNzk3ZGI2MmZjNTdhYSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-transforms.rst#L923-L973",
+          "version": "repo-lines-v1:sha256:66ed0f611d57828216c851579ac74e3bcc9e3b6ed94c93abd68bf2d159def70e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiYTc2MGI1OGU4MTk5NzFhMGRjNTBlYjE0ZTJmZWEwYTZhZjc3MTRjMGM2OTRhNmI0NzZlYWE2ZTU2YzBhMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwZjIwNzBlMDE5MTBlMDdhMmVmYjNjNTE3ZWFmMWIwOTZiMjc5NGZiNTJjMmFkNTIyNDgwYzZiZmYwMzQ2ZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5ZjAyZTZhMDFhNDA0Y2Y2Y2Q1MzM4YzhhMDlmMGM0ODg2NTU4NjYyMGZiNmM2NGI3YzFhYWYyYzI3NTU1MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU0ZjU0NTg4OWIyODIyMjAyOGQ3MTAwNTk2ZmQ5NWRlMzA4ZjQ3MWRjZTA3MzVhZDhlMTJjZDhjZWM5Yjg2ZGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c319ff23bf2413285eb58e4f41b5208",
+      "statement": "In DTL namespace-aware argument syntax, :: means interpret the following value as-is and : means relative to the current identity or property namespace according to context; these escapes are separate from Transit encoding.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-management/entity-data-model.rst#L249-L256",
+          "version": "repo-lines-v1:sha256:4421b579035b9daec3681f206b96c3acb10bcd450ff9e91d32ea887a4d8e96cb:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjIwZDlhYTkzZGNhMTZmNWNjNjE0OTQ0YWM3YTcyMmNlNTIxMzljMzYwM2FjYjdjMzI3Njg1ZGEyNTY0M2UyMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDk3MTYxZDRkMmIyNjJmMDFmZDY4YjZhMWQ1NTM2YjdmY2ViYmY4YzY1MDhlZWY1Mzk1YWY2NmNjMzlmYjQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjA1Zjc5MTEyMTVkOTk4M2VmYzY5OWE1MjdlYTEwMTNmNjQ5NGQwMDlhNmJjM2NlMGQ5YmJjYjE0NTc1ZTYxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2ExNzAwYmYwM2JmZDc4MjRkZTNlYTg4MmNhYTI2YWQyMzkxODA3ZTFhYmFiZGM5NmI0ZjRlM2QzODE3MzdmOSJ9"
+        },
+        {
+          "resource": "repo://hub/dtl/namespaces.rst#L23-L41",
+          "version": "repo-lines-v1:sha256:0cc80ec22a0be81efd6294a5493b43ebfc3d8d0c54a2aacee6465e7e2265afae:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkZGJkNjhhNTUyZjMzNGUyMzZmMzQ2YzJkNTZlZGVkMTZlZTU1M2MyM2YwYTM3NjFhNTk4NDk4MTM3ZjJmM2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYzQzYzU3OTlkOTljZDc3NzVmZjhhMDk4OTUyYjcxZjAxMjBmOGRjMmMyMjllOTUzYjhmMDZhMmRlZjlhNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMTA0ODc0OGFmZGNiM2VhODEwNmRkNGViM2Y0YmJmOTBhZWYzNmY5YjEzZWNiNTA2YjkwNzQ2NWFhN2UzNWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e90ec739939f49fd8a47e9aac47ae591",
+      "statement": "ni constructs typed NIs without string escaping, uses the global namespace when NAMESPACE is omitted, and accepts URI values only without that argument, collapsing prefixes to declared or generated namespaces.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-namespaced-identifiers.rst#L50-L95",
+          "version": "repo-lines-v1:sha256:7439ae608c6060aa1dd3a4d63e6160db1f5f54549c02b54f6691abc6e7e4750f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZjcxMTI3MjdhNWE1MjJmNDJiMTY5OGM3MjU1YWM0ZmQ0OGE5MDE4ZjY4N2I1NmYzNzY3ODA5YjhlN2EyODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlMjJkNGI1OTdmNTIwM2E3MmEwN2NmMDQ5YWNkYTQ1MGMzM2I2ZmVmMjMwNzcyZjk1MDBiODY3YzNiZjcwODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ef9d021c8074b8b82d20979680aebbe",
+      "statement": "uri casts string input values to typed URIs without URI escaping; explicit URL quoting is a separate operation.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-uris.rst#L48-L62",
+          "version": "repo-lines-v1:sha256:d4c5636ddc4388016b0d0e783bcb67cb226f5bed0a2a16044ed82dcfc3e04ba5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxNGZjNTliZTQ2NjAxZmU4MGYxOGJmNzAyMmMyYmIyMDc1NWQxNzEwODlmMGI3ODAxZjYyYWQ5ODliN2U4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3ZGQ0YWUxMzUwZmJlNjlhZTViNGJkNjY5ZDkyNTdiZGM4ZDkxMzI5NWM3YzliZjhhMWRhYzBmMTM2YTUwM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYWViN2VmMjYwYTE0ZjFkOTNjM2VkY2M3NGMwMWRkZmM4YjlhNzhmNDdjZGJlYjJlOGUxOWU3NTEyMWUyOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzNWY4NWExOGEyMjI3YmZlMzliMDg5YTZkMmRhMWRiMTg2Yjg1YmIwYjJiYjIxOGY0MTlkMGVmMGJjZmI2NTkifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-uris.rst#L64-L96",
+          "version": "repo-lines-v1:sha256:11d972b1ed8374d335d814e18b637e2f2c974dc3782ffa5a9de4dedf3373cbb5:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzZjRiOWJmMjBkMjI5ZjhhZTNhODIyYjA5NzkzNmQxZTQ3YTFhMjQzMTIzZGYzYTRlM2YwZDkwYmU4MjI4NGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzNWJiNzdlNzk0MGY2OGRmMzNiMWFjZWVjODE2ZmZkM2NkYTNlODRmNjYwZjgxNzhiZmFmODFmNTEzNmRiMzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJmOTU4NzE5MmQyY2MxZGIxM2E5OTYxYjBlYzI5ZDMzZjE2NTJmY2M2MmI0ZWE4OGVlMTgxYmQ3YmIzZDY0YjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmYzI2MzNjNzM1NDkxOWZlMTgwYjZhOGJhMjFmMDllMTUyMzM2ZDQ3MTdjNTZjMzY3YzFlYmE5ZGZlM2VkOGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_48217e8f7a8e4ebabed8977e8e76b603",
+      "statement": "The RDF source maps subject URIs to _id, predicate URIs to property names, and literals or URI objects to values, turning RDF blank nodes into child entities.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-rdf.rst#L12-L23",
+          "version": "repo-lines-v1:sha256:479ed15a57a9bc48fc593641f306d4dd790e74edc81cd92d312d115c938eb980:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MWEwNTZiYTkyNjMxN2QwODExMDY5MjkxZjMwNzRiOWJiZjdmMTRkY2ZlZmM3YzgwOWZkODc2OWJjNTQ5NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwZjU5YWZlMjRmMGRkNzQxZmIwMjQ3M2IwMTQ0OWRlNmFiNmI0NmExMWEzZTM4ZTkxMTNiNzdmYjMyMGI3YzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzZWI5MGJkNzBiNGM1OWVkZDRlM2NiZDEzODI1YWVmZWY2MTMxNjk3MzM4NWM5ZDQyY2IxMjE3MTlkZTliZGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTNjYzhmYjIxNWQzNDU5ODA0ZWQ0MTM5ZjhlMjIxZjRjZWFjN2I4NDNmODk1OGI5ZmI4YjQwZDc1ZTRjYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d0c956c9e12f46d68fca4bfabdcec9da",
+      "statement": "RDF output represents nested entities as blank nodes, lists as repeated predicates, and property types as RDF datatypes; language tags are unsupported and receivers lacking blank-node support require flattened output.",
+      "evidence": [
+        {
+          "resource": "repo://hub/rdf-support.rst#L101-L110",
+          "version": "repo-lines-v1:sha256:6abfe3057d76b6898a1affe2bd6a80ecc9a4f82bd96fbf755515924a33c84b15:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxNjc0ZTlmN2Y1YWI5ZGRjYzdiOGUxMjM5OTkyNmM5MTUzNjYzNmE5NWUwMDcxNzM4MGI3NzU3ODdiYTdkZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlZjdlOGY5MWQwMWJlNzQ4ZjkzMjhiZWY2ZmU3ZDgxOGIxMmFlNDQ5ZGM0NjNlYTk5YTU4YmQ0YzEyYmYyMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3M2FkYjYwMjAwNmM1NDdkY2E0OTg3ZTZiNzljODQ0Nzk2NDVmMTU5NGViNTFjMDc5Mzc4NWM0NWJlOThlZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmYjFhYjc4ZTI2NTgxYzU0MTQ0NjI5MjI5ZWU4NTY5ZTYwNmRhMmJlYWZlOTVmYjMyZGRiODczZjkxMmUzMGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e70e8b2302934d94a4a7181b2e43a759",
+      "statement": "The documented local configuration-test workflow uses sesam -vv test, an expected directory, and paired endpoint output .json and .test.json files; test configuration can select stages or publisher endpoints and blacklist properties.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L57-L91",
+          "version": "repo-lines-v1:sha256:064a456505efaa5d13d932d2fa37176bcba7503dbaf96d4d927d469fd986ae6a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ZTVmMDlmNGE0YTJkMTIyYjI5N2U3ZjQ1MzViMDg0OTY2ZTQzNDZlY2QxNjU5ZTM1OTFmNzFhNjAxZTJhZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzMjExOTAwMjM3NTFhM2M5MWVlYTM2ZTUyN2UwMzRiZGRhZmNhMGY2NzFmMTE4NzY5NWViNDI3MmI4NTAxM2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY0MGY2YWU0OTAxY2Y1NWJmMTM2YjE1MzZkN2JmNjk3YjMyNzU4OGM3OWJmNTNhYmQzZGJhZWJkYTkxNzFhYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YjkzNDE2ZGQzNWQ0Zjg0MGQxMjk4YzZhYTYyNzZiMDNmNjcxMWY0OThhN2UyYTViY2MyMDdlYmE1ZTNkZTAifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_73a4303765e9424687a67f4b8b90cf1c",
+      "statement": "The documented local-testing output removes internal properties other than _id and _deleted, so fixture comparison alone does not verify _hash, _ts, _updated, or _previous metadata.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L141-L144",
+          "version": "repo-lines-v1:sha256:89506b668ea86ed7cfc1df98d73995ad754d532bab9f4bd6e2227ef9aabfd51b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM3NTIyMzE5NGYyYzlkY2RlODIxMjQwOGE1NTBmZDM0YmZiZTdhNmI4YzQzMmM5NTAyNGE3Y2VhZjYzNjBiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzlmZGY0YmI5OGVjMWQ5ODYxYjRiMTViMWU5NDc0NTVlZDI3NmU0MmFjNzI4NTU2MDliMzAzNDZiOWZlZDgwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQzZjdiMWU1YmQ4MzYxYjY3ZGFmMWM0ZmI5NTY1YzJkMWE3YmQ1NTc1MDFjNjQ5NGIxZmZlMmNkODAxYmUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjY3YTUyNzAxZGQ2YWMzMTEyZGNlMTI5N2ZlZDdlNDRlNjUzYTk3MTFjYzEzOTRiMmJmYWFkNzlmYjAwOTMzMyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

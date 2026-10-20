@@ -1,0 +1,800 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d90bf37578440d2c412c6c303b1e92af5c174199fcf7c97e7d8f34561990e2d4",
+  "claims": [
+    {
+      "id": "claim_e29fec39f5a94c62bc32298b5e82f747",
+      "statement": "Bidirectional synchronization uses global golden records both as the result of collecting contributing systems and as master data propagated back to those systems, creating a feedback loop that requires duplicate management, source-integrity checks, and completeness ordering.",
+      "evidence": [
+        {
+          "resource": "repo://hub/bidirectional-synchronization.rst#L9-L50",
+          "version": "repo-lines-v1:sha256:5530ed94d147f9f76a2eb5babfef1ff805756fd51f934ae1a478b8347acf5692:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2NDc5YmRiY2QxZTBhZTUzMjk3MmQ2ODA3M2I3YWFhYjE1MTg3NjEyMzJjMGQ4OTc2YjgxNzFhNTkwMDI2ZmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmOWZmNGZhZDNlNzY2YTZkNjc2Y2QwMDAwYzMxYTc1MTdkMTg2YjU1MGRhNDljZmY5MDEyYTk4ZTU1YjQyZmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiMmJkODg0NzRkZjc5NTg3MTkzYTA0ZTg2YzMwMmExNThhZDc0Yjg0ODA2Y2QyZWJkZWQ4YmNmMTVlMjc4ZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM5N2IwOGM5NDM0MTVmMzVkYzIxNzBiYjg4YWU3ZjA1OGQ3ZjIzYjZmYTAzMjRlY2JhZTFkNzI3NTE0MGIyZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_673ad6041a5147f09682068e3443fa8e",
+      "statement": "The connector boundary is SYSTEM-DATATYPE-collect for output and SYSTEM-DATATYPE-transform for desired-state input; desired state preserves collect property names, types, and structure, removing property namespaces but retaining the namespace in _id.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L10-L15",
+          "version": "repo-lines-v1:sha256:9955ce2cff1e950e7c7d791f39f9edd3dfaf2091cf2e3aa4752c2bdaff47381a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTEzM2Q5ZWY3NzNjN2JmMGQwZGUzOWJkYWEyOTc0NWNkZTk3NTI3YTAzNzIxYTFlNzdmZDg0MjI0MmQxYzQxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDM2NTQ2N2UzODAzYWIwNzFmMjdiNjdmOWJhODEyOTA1YjA2ZGM1MjgxZTUxODMyN2ZhNWU4MmI0NjlhZTMzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGNkMzk3MjMwZjNlZTkwYjVjMjNmNTc1MWM4NThlYmU5NGJiNjJhZWNjNGQ1ZTMyNzM5ODI0YjFiNzQ4MTBjYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGFkZDBlNjkyZTM5YWYxNmIxZTgxYjFkMDI2MThhZjM3MGJjNjRmYzFmMGNhOWU3MzU1YTVlM2UzYzI4MTk4YSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L66-L76",
+          "version": "repo-lines-v1:sha256:188ccebb9c0646cf80470e42b11f56d1c2f2a13151856688dfc7e139b4b4196f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhNDgyZDRhMTY2NGM0MGRiYjBkMGYxNDA5ODlmYzhkMDgzNmZiZWU5ZDJmYzU3NGY0NGUyNjM3Yzk2ZjkzY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkOGY1OTJkNTYwODkwMmY2OWJmYzgzOWUyOTBmNzRlMTVlOWZiMDIzNTc1OWYwNzg3M2Y5NmU0N2U4Mjk5MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlY2I0N2QyMzcxNmJhYzEyOTIyNmI4OWFmOGU4NjQ4ZDMzYThiODYxZGZmYTljYTdhY2M5Yjg4MzViMWYzNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhZGQwZTY5MmUzOWFmMTZiMWU4MWIxZDAyNjE4YWYzNzBiYzY0ZmMxZjBjYTllNzM1NWE1ZTNlM2MyODE5OGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3ffb8b75ea3b4ea38d4992d514ba6ae4",
+      "statement": "Connector-collected data should stay close to the original API, connector-added API properties use the sesam_ prefix, and optional $last-modified records when the entity was modified in the system rather than serving as the dataset completeness timestamp.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L13-L35",
+          "version": "repo-lines-v1:sha256:b70c1ff3af96c736a6f0891384cc9b28d2fbdacec51ee0f7fb752f6024f1d9ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2ZDU5ZGY4NDg0YmRjM2RjNGEyYzNmYWRhYTk5MzMxYzAyMzJmNzc4N2Q5YzI2NjYxZmRjNTM2ODI5ODdiNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQwNWE3ODQ3NjlkOWRhYjY5MTE0YjIxODk4NjljMmNmMTNiY2ZkOTEwYTRjMTc0NWMxYmQzNjdjMWNiZWFiMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4ZGE3YzAwZWJlMzA4MDViN2VhMzQ1NWRjNTY3YWM2NjZiOTA3ZTM2OWQyOWM5YjZlYTdlYmM5MDBhMDczN2UifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L53-L58",
+          "version": "repo-lines-v1:sha256:81cb0c695a5496a19ece3cb8cf3bfb91afd4023fe77a918173cac58e0dbb88d5:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzhjNjFiNTE0NTgwYjE0OTA3NmI2YThiODI0Y2I3MDQwMzdkOWU4YzBlMzY1OTdjNmY0OTRkYmViY2ExNDM0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGM4MGU3ZDI4YTJmMGI5OTQ1MDljNzQ3YTRlMTcyN2UzYWM3ZDlhNWFmYTZhNTZmZjA2ODNhZGU5NjQxNzdlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDViMTgxZjllMDVjMzhjZWE4NmJlNDI2NDNhMzUzMjNjNmU5ZjdhY2Q5OGE2NjRmYjM1NWFmOGMwZmFiNTQ0MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b233769af5b0451bb3400ab9cdcc5503",
+      "statement": "Namespace splitting emits one desired-state entity per target-system member using that member's enriched namespaced _id; if no target member exists, it emits one candidate preserving the source _id as the future insert's origin.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L74-L76",
+          "version": "repo-lines-v1:sha256:348eb72c18e2425d4288c5f50b4098b09b2dd3ac056a1f087855764b74979198:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQzM2M5NWI1Zjg0NzY2NGJjNTBjMjNkOWQwNTk5NzA2M2U5OWU4OWU4MmVhY2YxOTczYjA2YjgzOWVhN2FlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGQ4ZjU5MmQ1NjA4OTAyZjY5YmZjODM5ZTI5MGY3NGUxNWU5ZmIwMjM1NzU5ZjA3ODczZjk2ZTQ3ZTgyOTkwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTI3ZDM1OTViMzlhMmYxNmEzNjMzMTQ4MmJhNzhjZDIwZWM4YTE2ZGFmZGMzYWE0NzQ3Mjg0OGVjZjM2YmU2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGFkZDBlNjkyZTM5YWYxNmIxZTgxYjFkMDI2MThhZjM3MGJjNjRmYzFmMGNhOWU3MzU1YTVlM2UzYzI4MTk4YSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/namespace-split-pattern.rst#L26-L66",
+          "version": "repo-lines-v1:sha256:794922b370c91354f6d6b2d1a618919ba943671ee976742f99abc76fb9d0aa98:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2UwYWRhYjdiYjM2OWNhOTAwNTMyYzk5MjVkNjhlYWFlN2U3NTVjNzNjZmExZjA5ZDA4ODVlMDM0NTE2ZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhZWU0MjFhNjk5NzRiOGIxMWZjMGIyYWNhNzg1MzM5NDI0MDZmNmQ1ODM0NDdmZjliMmEwNTk0NzU2MWEyOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJmN2E4OTgxYjY2Y2E5YjM0YjRkMDc4Y2QzYjliZTkyMjQ0M2MyYTY3NmJjMTIyNjIzNTdjNTMzYjE3ZThhZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiOTZkNzc2MTg2MmY2ODA3ZGI4NDFlNjBlMTcwMzBiYjg4YTlmMTY2MWVmYWU0ZWM3OTVmMWUxNWE2ZDU4ZmEifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/namespace-split-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:53f3cea7d06903bdfa045cf389a3a4cf2526062908107278ca2afb5300108772:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjg1OTBmODNmY2RjNmMzMzFiOTQwOTA0MDNiZDQ1OWViZmJkMjEwZTBjMTM3NDAxODQzZmJlNGY3MTg0NjQxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTc3MTJmNGM5OTlmOTI3NDBkYTZmOTkxNjQ5ZGNlOGEwYjYyNjllN2IxZWM2MDQ0ZjJjYWY0MWNiMDgyNmI5MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgyM2ZhNmRkMGJjYzYyNGI1ODA4ZmI0MDU2OWQ4MjY1MGQ5NTNiMjcwZWRkYzI4NjhkNjk1NGMyNWNiYzliNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiOTM0MTZkZDM1ZDRmODQwZDEyOThjNmFhNjI3NmIwM2Y2NzExZjQ5OGE3ZTJhNWJjYzIwN2ViYTVlM2RlMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2e2d48dc6ac44dc6b2bd8455c2916943",
+      "statement": "Pre-existing internal or cross-system duplicates must be identified and merged in the global flow using a suitable merge criterion; namespace splitting alone does not discover that sameness.",
+      "evidence": [
+        {
+          "resource": "repo://hub/bidirectional-synchronization.rst#L58-L87",
+          "version": "repo-lines-v1:sha256:067879b8f36f1d06ef2656814d9c6ca18600da24a55533395d610a7c7e49ad38:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmMzhiZTY1OGY3MWViNjU3MDc3NzBmZTNlZTEwODEyZmRiZDI4ZDU1NjZlM2ZkYjY2ZTgyMWM1OTMwOWUyNjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNDRjODE2ZjE4YTgzMTI1MDQwNzA5YjU5MWJmYmMzOGViMjFlODM5MjlkYjE0MWNmN2E0NjRhNzQ3ZGI0OWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwZmQ2Njc4MDk3NmU1NzQ5NjM2ZWZjZWUwZDJlOTRhZjBmY2ExNWU0NDAxMTY4NzQ0MjFmN2FjZmE3OWVlMmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY3NmQ1OWU0YjgzOWU2ZDA0MzVkMTQ4YTUzMDMyYWExZDAwYzUxMzY5MGVjMDgzYTI1YjBjNmM4MmFmYmZjOWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_95b414579c8d43b2aa6a514d11e61085",
+      "statement": "The connector contract requires $ids to include _id and all other ids previously emitted for the object; it is required for inserts and optional for updates and deletes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L89-L92",
+          "version": "repo-lines-v1:sha256:5430168ea115e7a15f4d1ac0b2e80f6681265ad707c6b5c5ab5b837ea6e0ef63:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FkYWZhMTAyMGYzMGMzYzRlMGJlMTczY2IwYzBkMThjYTczNjA3MzViN2UxYWE3YWE5MzIyYjE3NmRkZDU0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODBlMGMyYWM2M2QxOGU1MTJlODU2MmEwMTgyMjA3MzI4OWU4ZjNmYzM4ZDZmN2VkMzM3ZWY2YTI0MjU1OWQzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQwYTFjNGE5MDU1ZmI3NDUxOTljMmEwMTFiMTExMWU4MjE5NzY1MTE5ZWFlNzdlMDQ3ZjE5OTY3ZTdiYTUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjBmOThlODljYmQ1YTZmNzQ0ZDQ2ZTcyYTcxZTA2Mjg4ODNkYmM4NWEwMWY5YTBmYjQzNDkzOWU1YjA5NWU3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_25f75de2ccc24a3fa6b4de3324be5d95",
+      "statement": "The duplicate hops block checks the share sink for a previous successful insert using historical $ids, disables track-dependencies for the lookup, and marks an already-inserted candidate with $discard rather than permitting another insert after identity changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/duplicate-hops-block-pattern.rst#L21-L36",
+          "version": "repo-lines-v1:sha256:752ef00ca8c1f522f5958deefe6753d60edeb804f1f2480f2187dba921c60aed:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4OTI0OWQyZjE2ZWUyOTI0ZThjYzBiMjViZThiMjVjYjk0OWIxYzI5ZjA3ODYzOWQyOTc0NmEyZjVlOGY4OGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1OTllN2U0MjUxMmY1MGJhZTNmZTQyZWNlZGVkZWUzMGUwZWNlN2RlNWY2NWRjYjRmNTU1ODAxNDQ1NjNiODAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEyZDAzOWQwZTM3N2E0ZDIwMGI0YjcxZjk1ZThjNWFiZGQzNjQ2ZWI4NzNjMjcwMjg4ZDg0ZWU4MDViNWQ5NzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzOTZkNGFhOGNjNTdmMTQ0ODlhZDgzNTE0MWIxNjgxNmZjZWQzYzBhZTcwNzMwMjVjNzM0ZTU4Mjc1NDg1MjUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/duplicate-hops-block-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:5a86c42d7053bdad7e6af576c20342776a51180c02db8a0edf8f4d2c587e4909:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGE0YTFjYWUyMjI1MmY4MjlmNzQxZWZmMjM4OGRiZTQ5ZTliMzdiMWU0YTJlMGNhYjRiY2Y3MGZlNGY4MmExMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JiMWY4YzM5MzlhNThhZTNkYjlhYzE5OTYzZGI5MGZmMDM2ZGQxMTdkNzM0ZDkxNjg1ZDgzY2I5ZTllMWRhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU2ZjA2Y2ViZjAzMTMzMjk4NTNiYzkwOTc0YjE3MmQ3OWM0ZGMxM2Q5NmE1OWFmYWRmZjY0ODZkYmQwY2ZkZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiOTM0MTZkZDM1ZDRmODQwZDEyOThjNmFhNjI3NmIwM2Y2NzExZjQ5OGE3ZTJhNWJjYzIwN2ViYTVlM2RlMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_94764032914749eab4fa7783e8d82ce4",
+      "statement": "A hops lookup into its own sink requires batch_size 1 so prior writes are visible outside the unflushed batch, and set_initial_offset onload so the pipe does not wait for its own sink to become populated; setting the initial offset defines populated state.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L62",
+          "version": "repo-lines-v1:sha256:a5489e7a0ab74f0060ee4139cdae0608f0ec4281985d1176be95c3cd69b6ce89:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyZTExZTcxZGYyYTViNzg2OTBmYTRiNTQxMjkwNWQ0NDk4ZGMwMDJlY2NjMzk4YzNjMGQ5NTkyNDY2NDdkY2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMzZTQ2ZGI5N2E1NzAwZjQzYzIzNGM4ZDYyZDAzNDM2MTQwMzE3NmFjOGNjYjcxYjc0MDhhMzIwZjQzZWFjMDAifQ"
+        },
+        {
+          "resource": "repo://hub/dtl/dtl-functions-hops.rst#L110-L114",
+          "version": "repo-lines-v1:sha256:8d32ec827f5f7dee45c45cd4f3852bef552101f13596fa6b3bdb4442a3e629b5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJlNDE0NDRiZTBiNzM5ZDgxOGYyNWQ3Yzg3MGNjMWU3ZWE3MTU3N2RhOGViYTgzZTM0OGFhMmY1ZGFiODUyNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTU4ODgyZTcyMDE3ZTA1MzhjNmUyOThmNDhjNmU3MThkYjkyYmM4ZDBmNTVjNTMwZjFiNDRjNzNiODA5ODRkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNkNDc5MjQwYjBmOTc4MzQ1ODQ1OGY0NTJmZTU1ODYzNzVhY2FiOWM4MzE0ODZjOWY2NWU1YThkODJiODY2YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM3OTJkNTdhZTJlZWNjZjFhN2ExN2ZkZWEwNDJhNzNhZjg0NjU1Zjg1ZmI0ZWRjZjU3MjEzOWYyYTg0YjJlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c68e148bbb5842438142ed70211b318a",
+      "statement": "Change tracking compares a new entity with the previously produced version at the dataset sink and drops identical versions, so it does not by itself prevent an earlier mutation transform from executing again.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L13-L17",
+          "version": "repo-lines-v1:sha256:e7af29acf9e0e6c206eebb2f1c9844b20dd7e82a83ff27374662e3da177f61be:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyMjgzNGZjZTljYjY0NDlkMDM2MWQxYzQzOTBiZmRiNGEzZTk3NTU4ODJmZWY2YTUxNjhkMWQ0MmFiZGM0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDY0NDQ2ZWM3NzkwZGU5NGFmOGU4ZTkxNzk1OTZjMjg5NTgzMzYyNmY1YjIwZjZlZjM4MDVhZjVlMTExYTg4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGYzNTlkZGI5ZDY0YTE2YTYyNDlkNTVhNWZkNTBhZTY2ZTI2ODE1YjcxMjFhM2I5YTM5NzNhMjA4ZjQzZWZiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzNjM2E3Y2NjYzMwZmQ2YmNiZWMwMjA5NzFlZjdiYzAyMjNhMDBlYWJhODVjZjYyOWU4ZmQ0OWRlMzIzYzExMiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L171-L177",
+          "version": "repo-lines-v1:sha256:ea11905a50d047e3c342903c9710cf6de1d22027c77ec1c1e85c0cd897c3acf2:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmFmN2Q1YTdmYWE1MDZiNjk3NjA1OGVmNWY4MzJlMDIzNThiZjE0NGQ5ZGJlMjUxMTJmN2QxYmJiZjkwNWM5YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZkZWZlZDhlYzQ3ZWI3Mzc5OGI3MzYyOTdhYTFkMWJlN2Q0ZjQ5ZmI0MDYyZTMyNGU5ZDVkNTY1NDJiZDczYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCJ9"
+        },
+        {
+          "resource": "repo://hub/features/change-tracking.rst#L8-L20",
+          "version": "repo-lines-v1:sha256:cf8338331565e1b961c1c7ce67746011e07a13004a2a75b5c65a03987b61a5a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1YzM2ZWNiNDk3ZWYwZDEyZTU5NTYxMzEzMTU5MGJlMGEzN2NmODZhMjBkNTM2ODc1MTUyYzM4NTljZTRmNTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMWZhOGVjZTk4Nzg5Zjc4ODZhNmIwZThlZWFkMTk1NDZjMzliM2FkZjE3ZDIyYzUxNTA5YmE4YWZlNmM2NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmY2YzYjM3MzdhZDBmOGIxOTY5OWFiYzYwMzhiY2Y1YzlhMDI5MTJhZjViMGU1ZGUyYjFiNTlmNDhhOTUwZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZTI1MmVhYTA4MWY0MjdkMzNmYTFjMTFjYTk1YmE5OTk5MjA3MmViZDRmOGJiYzFiYWNhODYyZTViNTU3NWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad2d1d66aa524cfa872900b42b328f6e",
+      "statement": "Dependency tracking can reprocess source entities when hopped-to data changes; the response-capturing mutation pattern warns against mixing dependency tracking into that non-transactional pipe, while duplicate-block and origin lookups explicitly disable it.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L6-L8",
+          "version": "repo-lines-v1:sha256:7029ab7f46142aac0227318451cd23b18e03f4d4e5417b96f068e1b3379f783a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiMWU4YmYwOGNmNTkzYjgxYTE1NmI5NGFhNzUwMjdkMjA3ZmI5MDcwMDA0ZGRhM2RiOGFmYTg5OTUzNWFjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MzNhOWE3ZTJhNjI5NGY4NzM2MGRiY2EzNDM4ZjYyY2U1YjFmOTY0NTNmNDUyZWIyNGE2YjRkMzE5MTVjZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTUwYzhlYzdlMDY1YWNmMjQ3MTBlOTJkZmJhYWVlYjljYjkyNzE1NjYzZDQ5MGU5MzM5YTMzNDRkNWUxZjU3YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcxNGM0NTg4MjJkNjg4ZDYwMmE5MTdiMjU4ZmI3YjA0N2FhYmNjYzA5MGJkZWMwNGMyMWFjOTljMDE4M2MzYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/duplicate-hops-block-pattern.rst#L24-L32",
+          "version": "repo-lines-v1:sha256:2c59937089d2048e24524dcbee54f8d582b70d872a7407fb764ebba2e2dd60d1:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODY3YWVjMDM5YmRjMTFlY2RmNjE3OWFlYWU1NjI1ZjM4ZjI5NjE3Yzg4ZGU0ZTZkMDliYmM2ZmQwOWIyMjcyOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQ3OWNlMjE5ZjRiNWZhYjlkMGIwYzVhODNhZWIwOTBkZGRmMGQ2Y2EwNzQwOWNhYzhhMDg4MTUxOTUxYzI4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTYxOGMzZmU1MGQ3ODQ5ZjEzZDJjODQ2OTA2MmY2ZDI5OWRmMTkyZDhhNDFhN2I2MjY1YzFjOGFiZGM0Njc0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWVjZmVhN2UxNjRmZDM3MzhhZmJlYTRhYmEzN2FkYWY3NmJlZDAxNjU1MWUzOGU5MWNhZDhlNjY5MWY4ZTk3YSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/establish-origin-pattern.rst#L26-L31",
+          "version": "repo-lines-v1:sha256:03a43f3e28ba423a0c4dc9ef3a3da19c2760f125b6ae329290bb11a84adbce31:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFhY2Q5OTA2OGMwNTlhZTI4Y2UzYmI4ODZjYTI0ODJlOWQ5MzRmNjA1YWJkZmQwN2Q4MDRlM2ZhYTI3MzFlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzk4MDA1Njg0ZmNmMzA4YWQxNGQ3ZTgyMzQxNzk2NTYzMzFhZWRlZDVhZmQwOWI0ODgzNjdiY2Y4NWZiMjA1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI1Y2Y2ZmY2M2U2MmFmMGZlNzg2N2FkNWI1NGE2ZjNiMDFiNTYxNzI1NzAwYzZjYWQ2ZmIzNDJlZGU3YzdjNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWVhOWRhNGUzYmJjM2U5MTk5ZDEwZTlkMmNhZTg2OWI4YTdmMTkyMWY2OGQ1MDM2NjVmYTExZjgxMDNmMTY4MiJ9"
+        },
+        {
+          "resource": "repo://hub/features/dependency-tracking.rst#L8-L14",
+          "version": "repo-lines-v1:sha256:752f9ae994e38b757195dcec312457813f6ed823de4486cff9a14aae1b61267b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmUzN2VjNzZlZmRiZDZlNTU3ZjQ4MjFkNmEyMWM4Y2E3YjBjYTdkNjdiNmNjNzIxYTBjMjI0YjU1ZmM2MDMxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwZjVhODVlZmEyYmE5NDM1OTViYjFiYmQwMTZhMDVlMzk4MTljOWZmNGNjMjFhZWQwNTM3NTdiNTc4MDUyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI0MGVjZWQ1MDEwYTQyZjEwZDcyZjFhMDU5YTA3ODliN2NhZDVlN2E1NTA1MTFkYzYzM2FkYWQ5OGU3OTQ0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWUxMGM2MDA1NjAyNjMyOTgzY2QxMTJiYTVjZWUxZWIwODkwNjYxYzczNDk0NWNhZjllMzVjM2QyMTk3MjY3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f83b1e9400d24cfb8601b7e7b53ca930",
+      "statement": "When downstream logic needs an external write response, the capture-response pattern performs the mutation in a transform and stores the response in a dataset sink; an external sink does not capture that response, and the external write plus local recording is explicitly non-transactional.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:69182b7ffd2e488cd4631a1c63f938f2234de997844440220ee17be74934e02e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRiMWU4YmYwOGNmNTkzYjgxYTE1NmI5NGFhNzUwMjdkMjA3ZmI5MDcwMDA0ZGRhM2RiOGFmYTg5OTUzNWFjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZThmZWI3MWQwY2Y2NDVlYmNhYWY5OTMwMDM2Yjk2MjNiMDFiYzVjY2M4NDhkMzNlMDZhYjMxOGM3MWIxYTZjNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTUwYzhlYzdlMDY1YWNmMjQ3MTBlOTJkZmJhYWVlYjljYjkyNzE1NjYzZDQ5MGU5MzM5YTMzNDRkNWUxZjU3YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjMzMzg0MzRiNmY4NjM3Mjg4MzNkZTg3MTUzNjhhN2I5ZGQ1ZGVjYmM4MzVkOWI5MzgzYWM3MDdmMTQ0ZTZlYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1616713ca2174ddc863f2c1172f27f1a",
+      "statement": "Insert batching can cause successful external inserts to be retried when a batch fails before outcomes reach the sink; the insert pattern prescribes batch_size 1 to reduce this duplicate exposure, not to create a transaction spanning the target and Sesam.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:8f433a9a7e2a6294f87360dbca3438f62ce5b1f96453f452eb24a6b4d31915cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MzNhOWE3ZTJhNjI5NGY4NzM2MGRiY2EzNDM4ZjYyY2U1YjFmOTY0NTNmNDUyZWIyNGE2YjRkMzE5MTVjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MzNhOWE3ZTJhNjI5NGY4NzM2MGRiY2EzNDM4ZjYyY2U1YjFmOTY0NTNmNDUyZWIyNGE2YjRkMzE5MTVjZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzgzMzBiYWY3YjI5NWI1MDcxMDA1N2FhZWViOGI0MDRiZmQ4YjlkMzJmOWIxOGZlZDIyYTBkN2QzNDI3OWFkZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcxNGM0NTg4MjJkNjg4ZDYwMmE5MTdiMjU4ZmI3YjA0N2FhYmNjYzA5MGJkZWMwNGMyMWFjOTljMDE4M2MzYyJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L19-L22",
+          "version": "repo-lines-v1:sha256:beb9a8b84a5a91c9fe1d3d0052274e14ab271e3eb88baf717b5040c9dadad4c6:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzUzMDYyMTBjNzBiYjZmMjc1ODcyZTU1ZjEwMjUwOGIzOGI4MGE3MDNhMTU0MGRmMDhiODEzM2Y5MWY3NWY4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDMxODQ3ZTkwMWY1ZWNhMWQ4NDFmYjk5NDAzODA3ZDk1ZmVjM2NlODIyYjVjYzdiYjQ2YmJmYzIzMzVkZjVlMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWM0NTlmZjc1YzdjNGEzNTllYTc0ZjRiMDI3OWI0MTM5ZDQ1ZTgyMjc1ZDNhMzU2YWMzYTJjMTNmYWQyOTVjNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODg4ZTAyMGFiZDE1MjZmMDhhNWZlZjA3MDZkODQzMjgwNjk2MDAwZTUwZTUzMmU5MTk2Nzg5Mzc3MDdlZTU5NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eb7438fd26df4df8abbff9e9a2f50fb4",
+      "statement": "Establishing origin requires the target insert response to include its generated primary key; recollection joins the system primary key to the share sink's $generated_id and retrieves $origin so the newly created target identity can be connected to its originating entity.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L28-L30",
+          "version": "repo-lines-v1:sha256:44027409f83238649d4601bb19edadfb92b4d66de4044a293ee156d7f183f9f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk4MDk5Y2MwNmE5MDkxYmYyZTY5NjkyODE0NmNiMmZiNjY0YTBhZWZiMjU0NzdlZWI0MmMxODllMzFhNmRkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJlZjllMjQ4NTgwYWVkMDRjYWM5OTcwMTQzNmQwMjg5NGIzMWRhNDI1ZTY4ZTRiZjAxYzc4ZDNjOTA0MDAwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQwYTFjNGE5MDU1ZmI3NDUxOTljMmEwMTFiMTExMWU4MjE5NzY1MTE5ZWFlNzdlMDQ3ZjE5OTY3ZTdiYTUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDVkMDNiMTdhMDE4YTM1NTg1ODMwZjVkZmJkZThjZTQ0MjhlMWU3ZWIyZWNmYmJlOWYwYmNmZmM2OTdjMDkyOCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/establish-origin-pattern.rst#L6-L12",
+          "version": "repo-lines-v1:sha256:96b4487d39c080ffef5d67c687215ee36eed00b928c4fec5fc1a19edc336f88e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzIwOTY1N2Y1ZmMzMDY1ODRhZGQ0NzgyOTliZTU3NmY4ZDlmYjUwY2Q0N2Y3NDQ5MjM1ZTM3N2YzYzU2OTY1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc3ZTE1NDYxODFkYTQ1YTIxZGRhNDc4YjMxYmU0NDBkMjQ5ZjQwNDdjZWM3OTZkODMwOGY2YjAwOGFjYzZmNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTMyYmIyMzkwZjk3NjdkNWZlNTA1YTVjM2NjYzZlOGExYWE5MGNiMjJiNDA2NDgwMzY0OTc4YjU2ZjI4ZDg4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiOTM0MTZkZDM1ZDRmODQwZDEyOThjNmFhNjI3NmIwM2Y2NzExZjQ5OGE3ZTJhNWJjYzIwN2ViYTVlM2RlMCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L39-L42",
+          "version": "repo-lines-v1:sha256:e5e411eff5b5b9471c4360070b75191cbd40e626012f584d5c4aa9ee88ce5a8f:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmRkNzNhYTk0MzIwZjEzMDFlZTVkODhjZGZlYzkyOGNjZjM0N2M0OTQ3YWM5N2YwMzMzOTBjNmMzNGE5ODIwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQ2ODQ0OThmYmY3YTYzMjY1ODhhODkzMzU3ZmYwZDRhODA3NDU5MmM2MDEyNDliMWQyNmE4NzUwMzg0NDQ2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTViMDE1ZWM5OTgxZTgyMThhY2VhMGE1YWVlMzE5M2YwYTgwMDZkYjRhZWNmMTIzZGU1ZGI3OGI5NzBjMDQwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmIyMzExMGM0YzY1YzRjYTQ4ODM2NjViMjQzYmU5NmU2MmZlNmM2NGRjYzYyYmYxNGUzMjBhNTMwOGJhYjIyYiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L54-L57",
+          "version": "repo-lines-v1:sha256:b80199a380313d279797c15c9893590a932e8aaafca6a998942524d912af36bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE3OGU4NDgyZmYzMjQ3NzBmNThlOTc1MDZjZGM0NmJkZDI1MDIzN2RkOGYxYjA1YzIwYzA4ZDUzNDI5YTJjMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJlMGVjNzMzYTliZjFhYzBjYmUwMjMxNTE2MDI4ODI2ZWIzMWQzYzRlY2UwMDE5Mzk2MDBmOTkwZDQ0MGYyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWRjM2VhZmU3OWViOWI0MjRjZjgxZmY5ZjVkNTQ5MTYyODg3NWFlNWJlZDc4ODllYjYzYjU5Zjc0NGJkYjExMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNjM2MzMDk5MDYwNzM4NmQ3Yjc2NjU1ZDJlNjg2MjMwYmI3N2ZlNGEzMDNiZmU3NTA5NjY2MWM1MTBjMDFmZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8fad3260ee9d4ca98913c45b2ce30622",
+      "statement": "$origin is opaque and managed by model mapping; share passes it through to its sink, and contract prose says a missing $origin on insert is an error even though the field is optional for entities originating in that target system.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L105-L108",
+          "version": "repo-lines-v1:sha256:948780e87f82e0a6e8093deef46afdb8d98751b5d0e101a142017452c56091a2:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk4MDk5Y2MwNmE5MDkxYmYyZTY5NjkyODE0NmNiMmZiNjY0YTBhZWZiMjU0NzdlZWI0MmMxODllMzFhNmRkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODYyMDNhZDhkNzIxNWI1YTJmMWY3YTk0ZGUzNzZjZjYzYjg0OTM1MmMyMzkwY2EyZTc5NzVkMWQxMjE5NjUyNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWUwMTI1OTU3ODRjZjk3ZGVmOTY0MGQxYWUwMjk5NTU2ZDBjMmMyNGZiZmE2MzBlZTJjZTgxOWZiNTM2YmM1ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTJlMmY0YWM0YWM0ZjU0OTEwYjFkNzg5NDZiNDJkOTY4ZmI3NGQyMDZiYWNhMDhhMWVjZDRjNGVlN2U4YzQ1MCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L28-L30",
+          "version": "repo-lines-v1:sha256:44027409f83238649d4601bb19edadfb92b4d66de4044a293ee156d7f183f9f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk4MDk5Y2MwNmE5MDkxYmYyZTY5NjkyODE0NmNiMmZiNjY0YTBhZWZiMjU0NzdlZWI0MmMxODllMzFhNmRkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJlZjllMjQ4NTgwYWVkMDRjYWM5OTcwMTQzNmQwMjg5NGIzMWRhNDI1ZTY4ZTRiZjAxYzc4ZDNjOTA0MDAwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWQwYTFjNGE5MDU1ZmI3NDUxOTljMmEwMTFiMTExMWU4MjE5NzY1MTE5ZWFlNzdlMDQ3ZjE5OTY3ZTdiYTUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDVkMDNiMTdhMDE4YTM1NTg1ODMwZjVkZmJkZThjZTQ0MjhlMWU3ZWIyZWNmYmJlOWYwYmNmZmM2OTdjMDkyOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c923ba95a3534b8d8a97e97e8e252521",
+      "statement": "The older insert example illustrates an alternative reconciliation layout by storing generated _id and original_ids in the insert sink, obtaining sesam-id during enrich, and including it in connect equality_sets.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L115-L137",
+          "version": "repo-lines-v1:sha256:333cf915fdc24b35e44691581c206c99c2b5436e66b9077c9955ae56f80a087f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxMzk5ODY4MjViNmY3MzVhOTRiYzAwYzQ0ZjI3ZjRmMTUyMTZkYmI3MjRlNmFlNDg1OTgwMDg3N2U0OGEyMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZTRiODA1YjU5NTgxZTJlNjhkNTJiNzM2ODhkMTc4ZDM1NjcxZTY3N2Q0YWNkZTQ2YWJkMWU3NGQyZWY1MjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYzYzFkZjljNDAwYzhjZWRiZDQ2NjE3NTBlMzg5NzE3NTYxZTI4OTQxZWI3ZTc5YWQ0OWJiNTQzMmIwNDAyYTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM2M2Q1MzVjZTM4MDYzZDZiNGM1MWQ4YzM4NmE3ZjliM2U1ODBhMTRhMTBjMDdiMTk4ZGZhZjE5YzkzYTNiZmUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L94-L100",
+          "version": "repo-lines-v1:sha256:90f9ec2415fe69f8194906cb3e57ff185719ecf0336caa09e60b0c3b0d15391c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmUzYTdiZGJiOWNjMTNmYTQyYzk4ZGJmODhhMWIwNjhkM2JjNTJmM2U5ZjE4NzFmZGQ0NWI4ODc0YTgxYmFjOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY1MjQwYmRlODgyMGQ0NWUzMWFhM2YyODViYjY3ZTQ5YzBjNWFiY2RhNDZlMzNjNjg1NTUyMzBlMzA2YWE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZhMDU3Y2QzOTcxNzZmYzUwNGRmN2MyNGY3NjkwMjA0YzA1ZjFmZjQxMTI0MGI5ZGQ2NzA4MDM3ZmIzYTRlNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjcyODIzNDk2YzJiNzVhYzcwZWI0MTA4MGYwZDlkZjM5ODNlYjQ2MzRiMTVlN2M3MGZjYmRmYzgzM2EwMTgxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_51eb227f1e534353821304a485d32d16",
+      "statement": "The capture-response example classifies 200, 201, and 204 as successful insert responses, adds $error error-insert for other statuses, extracts $generated_id from the response, and includes a trip! check for an incomplete or missing generated primary key.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L54-L75",
+          "version": "repo-lines-v1:sha256:4d83fcf4ff6833c5562b5560aacd9a1e23c61db3911cc33d2d8978bf5329582a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3Yzk4NmRkNDUxMjM1MmM3NzBlZDcxZmI4NjUzOTM3YWFhZmQ5MTkwN2E1OTgwM2IyZDgwYWE0OWQzZWI4ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2OTAzZTBkYTA5YTgyYzFiNmZkOWYwNDE0Yjg2NzNlZTE1ZDY4MDM3YmNiNDk1OTA1N2VkYzQ2ZjIzMjMwZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwYmZjNzk0ZWVjMmJlODRkYTQ2MDkzMmMxMzc4YTg2NDgwNjVjN2I1OWZmMWJhZWIwYWIwY2UzODcwYTYwNmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ2ZGM4NGQ3MjM0ZmVkMGM2YzAwODU5MDM5ZDM0OThjODQzNjVmNTc2OWUxMzc1NjBlYzgzZGEyZDJjZGE5NzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e3cc747ea104da8806eb3d053afaa8c",
+      "statement": "For updates and deletes the connector contract requires $based_on as Dict<String,Any> containing collected values for the writable raw properties, plus $based_on_properties as List<String> specifying compared property names or dotted paths; both are disallowed for inserts.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L93-L100",
+          "version": "repo-lines-v1:sha256:a536dbf3cb4bc14d93368cf5ff94b5281098f3e7de36ce0cb67802ca418c1c28:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlhNzEzMDRjYTlkNzFkZjZlNDEwNmFjODg3OTI0MDgzNTczMmE1Nzg4ODc5NGU0MWU3OWRmNmMyODNlNTUzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjEzZDQ5N2IwMjMyNDhmNDkwZTJiYzhlYWYwMjNjY2UxNjJhMDljNzhkYjA5ZWM3NTlmNDk3YWEwNTdkNDliZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmQ5OWEzNTc1ODM1ODA3ZTg0M2Y3ZTFjYzVjNWNjZDkxZGUwY2Q1NTAyYTdlYTk4YmEwYTFiYmJmZmZmNjE1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzU2YzNiMmE5NTE1NWE5NDNmNjkzMjVlZTQxMDBiNzdkY2QwNTQxMTMzYWVkNzk3NGU2NmViYzFkMzExYTMzMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a605e5f4d2144058ffabe9fcb8d1445",
+      "statement": "Although the contract's simple insert example has no system primary key, transform-share-rest also supports is_natural_key for keys not generated server-side and primary_key_insert for insert key fields differing from other operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L110-L124",
+          "version": "repo-lines-v1:sha256:c0e8678d27dcff6bc10126864adc47cdc87e5ba57a42d8c8ea114fc276112ead:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyOWVjMWY5OTZmZTgzNDUxZGJlNTljMDNhOTVkYTUwNzlkZDdmMzc0OTQxM2NjYmRjNTg1YTkwZDdkN2Q0MGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjYWM3M2YxNGJkMGRlODQ1N2NiYzllMDIwMGFhMjE2NGM5YzMyZGM1NzcxOWIyYWM2NDg0ZTU1NWRlZDg3NzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllZDZlMWE0YWQ2Yjk2N2FiNDk1YTQ0ODk5ZTBiNmE3MTJiOGVlY2ZhODdlOWUwYzQ2ZWE3ZDI2MDYwODBlZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjZWU3NjQ3M2JlNDJkODBiYzY1OTQ5OTc2MTBiMTMzZDMwZGUxMzMyZGEwYTJlMzAwZjYxMjcyYjAxZjYzYTcifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L257-L272",
+          "version": "repo-lines-v1:sha256:7cf7ffd34f3f222f10d2b2b0b6b9e5d8a55563e68f912c8297564042f5ae3f09:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3Y2VhZmFmNDI5NTMxYTZlZWM3YjI5MThkMmJiM2E2ZTFjMDk0ZDllNDM2ZjBiZjZmZWMwY2I0ZDBmZTc0YzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZmJjYWI1ZTFkNDA2ZjdlNWQ0NmY4ZTEyZjQxNTdhNzM2ZWU5N2Q5Zjk2OGI0NzMxZGFkMDQxNGI4ZThlYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5NzFhM2M3ZjFkYTFmNmYyNjlkZDJhZmIwMWU0MTQwMTkyZTg0NTlkMjA2ODE2NmVlNDc1Mzg2ZWM0YmFkOWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2fddaab9e4b74916b46dbafc40e85baf",
+      "statement": "The optimistic locking pattern looks up the current target entity and compares it with the last imported version, discarding a differing update until recollection; its example removes underscore-prefixed fields, serializes with json-transit, and compares hash128 murmur3 hashes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L44-L91",
+          "version": "repo-lines-v1:sha256:1844a6890fca969425deae77958d7ebdc5d84020783dc9b904a6e948e9108c15:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwY2ExMmIxZmQyMmRhNWM5NTI2YmRiNjMxMThmZmIwZGMxODA5NGI3ZWVmZjcyNWZmOTljNGY2OGExZDBjYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkOTQ5ODM1OTc3YzhlMmRhNWIyYjY5YWRlNzc0MmY0ZTMxYzM0NzQ0NTcxMmEzZGU1YWU4OWUyMmM0Mzk4NmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyMTVkMzA3ZTQ4ODM2ZmZiMDU1YTAyNzU5YzdhYThjYzMzY2FkNmFhMTMzZGMyMzQwNmFmMmRiZjYzZDcwNTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYwMmUzZjZmMjEyOTgwZWM3OTQ4NjE4MGExZGJkZWU3Y2VlNmMxMWQxOTY0NzMyYjU3OGQ3MDQ2Nzg5ODJjN2EifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:43397f85205babc585ebf6e64e2d829e7909bc8067f15ada0f3f8b8a19de229a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDRkYmE5NmE2OGVkMDAxNmEyZmVkY2Q5M2E3ZjZhZmFjMjIzMzRlZWYwODAzMzRhZWUwMWE1MWY2Yjc3NzY0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjQyZWM0NGYxMTExZTE4NDc4YjI5MDdkN2FlNzY1ODYzY2ExNGM1ZTE2MmQwNzNmODAzZTE0NDJlZTE5NGUwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU4M2ZlMjY3OWY5Nzk3ZmNlNjFhYWNlMTAxMGQ2OTA3ZDUxZDdmM2VhYmVlNTZmYmUyMzU1OTRiNGUzYzc2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJiYmU5N2ZmZTJhMWFiYjIyYjhiNWE0ODBiZDIyMWY5ODJjYWY4MTk5YmQ1ZDU1NGJlYjQ3NDk5NTkzMzQ3NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7d8e8810eb44198b1f2a30e50806dc2",
+      "statement": "Sesam's documented external optimistic check minimizes the window for unseen edits rather than guaranteeing atomic compare-and-write: the lookup and subsequent update are separate operations, so target-side transactional or conditional-write support would be needed for an atomic guarantee.",
+      "evidence": [
+        {
+          "resource": "repo://hub/bidirectional-synchronization.rst#L92-L98",
+          "version": "repo-lines-v1:sha256:79be05e36070bd44e807076d483391fb1c2edb1d09a6cbb487a250883d6e2f5e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJkN2RkMmUwMjlhMzEzMjI3YjAyZDE5ZjAyNmQ5YzY5ODVmZTNlMmM0NjE2MzFkZDU4ZjcwYzA0OTlkOGUyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU4MDFjYWJhMTIyYmY3ZTg2NjQ0ZmY4MTQyN2NmZGU1Njc5ZjI5M2YwNjU1ZDI0ZDdhMTZlN2ZlOGIwZGQwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1NjNiYjcwMzc3YzQxNWRhNjYwZTg1NTQ4NmRmNDliYWY3MDE5NGNiZTdhNGU4NGIwNGE1YmNhMWI2NzU5MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk5YzQ2OGUwNWE5OWU3ZmI3ZmQ4NTQ5ZWZiYmZkMTI1NjJjZmUwMjIwNDBiY2Y4Nzc5ZGI3MWY0MzFmY2QxYSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L17-L40",
+          "version": "repo-lines-v1:sha256:c11634ad4ba15780aa01e445853f9b9bd7aa32d2fe99a0e021cf922a7bb2cbda:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZDY1ZjAzODY3NWQ5NmEzNWZhNjYwY2JjMGIxYWIzYmU0NjVmODk4ZjZjYjlmYmI3YmI5MGNhODliNWMzMTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MjA0NWI4YzZmNWY1NzZhYWFiZGEwYzRjMTg0ODk1NmViMDAyYzIwZWE2NjQ2OTI0ODBkMTQ1ZGQxMmM0MGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYjkwYjI1OGIwNGIyYTZkZWVmZTY2NWM4MjE3OTBmNjE4MmExZWRjN2ViMDE3MjRlYjY0MTRkNTJmODYzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMyMTVkMzA3ZTQ4ODM2ZmZiMDU1YTAyNzU5YzdhYThjYzMzY2FkNmFhMTMzZGMyMzQwNmFmMmRiZjYzZDcwNTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L76-L86",
+          "version": "repo-lines-v1:sha256:4e6138ac51f0c8362ac24dbaee147107b81d9014ae30b0949aa66eac1668d510:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmNTc0ZDRhOGZkNjA5Y2I4MTkxYjNiNzg0ZTg3ZGIxZjVkZWFmZGE5NDEwOWMzMzkwZWE0ZjdlYWZmZTc4NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljMjFhNTI5MmZlY2U0NTgzZWI4MmY5NDAxYWQ1OTI0ZDM3MTI1YTY3NjhjZGZhZjVmMjFiNTIwYjA3OWVjZTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlNTY1ZWIxNGZiODY0MDE1MGM0N2ZlYTIzMjI1M2NjYTdmZTYxNmEzZWVhM2I3MWNiZDY5ZmNkYzYzM2NiZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmMDcwNGY3NTE3Y2U5YmRjZWRiNmIzZTViOWU4NjRkYTFlZGMzNjQ5N2RmY2E0ZDI5NDIyZDA0MWQzOWE5MWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_93143dcadfab4fafae4e81e392fc8b2d",
+      "statement": "Updates may compare the current target state with the desired payload to avoid unnecessary writes, independently of comparing the target against the imported baseline to protect unseen changes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L93-L95",
+          "version": "repo-lines-v1:sha256:f0f98e89cbd5a6f744d46e72a71e0628883dbc85a01f9a0fb434939e5b095e7b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjlhNzEzMDRjYTlkNzFkZjZlNDEwNmFjODg3OTI0MDgzNTczMmE1Nzg4ODc5NGU0MWU3OWRmNmMyODNlNTUzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjNWY1ZjQ5MzhhNzc4NjAzZWZlMWM3MDM5NDFmMTIyNTZkZmNmYjAwZTFiNmRhODNmZDMzNGUzYTQ5MzM5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmQ5OWEzNTc1ODM1ODA3ZTg0M2Y3ZTFjYzVjNWNjZDkxZGUwY2Q1NTAyYTdlYTk4YmEwYTFiYmJmZmZmNjE1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTQwYWQ3MmE5Y2VjYzFmMmJmOTI2YjkxNTM4ZmNhOGRmMzZkY2Y2NDA1ZGJmODk5Y2YyZmE4YWE0OTIzZTIxNCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/update-pattern.rst#L1-L4",
+          "version": "repo-lines-v1:sha256:6544e22009ce5581ae93882282b81700d5875ff528b5db632f50a0e386722248:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2RlNTBjYWJlZDQyOGVhZThlZDNkOGRmMmM5N2JkNDRkNTkwNTJlZTEzODkwZmU0OTg0Zjk1MTVhZmYxZjhkOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmQwMDlkNmQ1ZGNhMjQ4MjVmNmM1NmRlMDEyOGVhNzE0ZmZmYTZhYjE1YWM1NTI3MTFiZjcyNjM4NTQzZmYyMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_be4986f2e171464ab150478a47de8418",
+      "statement": "Dataset sink enable_optimistic_locking protects Sesam dataset writes by comparing _updated against prior entity versions and rejecting all entities if any value fails to match; it is not external REST optimistic locking.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:43397f85205babc585ebf6e64e2d829e7909bc8067f15ada0f3f8b8a19de229a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDRkYmE5NmE2OGVkMDAxNmEyZmVkY2Q5M2E3ZjZhZmFjMjIzMzRlZWYwODAzMzRhZWUwMWE1MWY2Yjc3NzY0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjQyZWM0NGYxMTExZTE4NDc4YjI5MDdkN2FlNzY1ODYzY2ExNGM1ZTE2MmQwNzNmODAzZTE0NDJlZTE5NGUwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU4M2ZlMjY3OWY5Nzk3ZmNlNjFhYWNlMTAxMGQ2OTA3ZDUxZDdmM2VhYmVlNTZmYmUyMzU1OTRiNGUzYzc2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJiYmU5N2ZmZTJhMWFiYjIyYjhiNWE0ODBiZDIyMWY5ODJjYWY4MTk5YmQ1ZDU1NGJlYjQ3NDk5NTkzMzQ3NiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L96-L109",
+          "version": "repo-lines-v1:sha256:ef1fcc3eecfecd346518b9da8682ef745d4b01e284c2a019d89393ce78cd8506:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2NzUzYWE2MjMxNWNlYmEzOGE4Yzc0MTA5NjkwOTU5ZTMwNmY2N2JmOWE3MDQxMzA0NzZlMDk4YmJhZmIzOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExOGE1ZmRlMTcyY2FmODY4MjRkMGY2OTkwOWFhYmJmZDc2NmNkZDhmMmVmYzkzNTQxOTE0NmNhMTgyYzljNzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4M2FiMmNiZmIzNWU2N2VjMWVkZTU3MmUxYWY4NTlkNDE1ZGZlZTU5ZTUxYmI3YjM1NmUxM2RmODk4NzgwYTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_04f98767d9d84967b148652354111da4",
+      "statement": "Merge source emits _deleted tombstones with $replaced true for obsolete identities after merging, whereas an entity actually deleted in a source dataset is emitted standalone as _deleted true; $replaced represents identity replacement and must not become a real target delete.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L101-L104",
+          "version": "repo-lines-v1:sha256:e00831bc215db9d967b99f1a4af145e59b3404fff40feb06d83b4fb516884d89:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWI0ZTdjMDJjOTBiNGI5ZmQwNjE5MDM3N2IyZGQ1MDVjMjU1ZjFmMTkzNTE4YTE5MGI2ZGM2ODVmNmUxNzI0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWMzYTA1YTA2OTQ5NTc3N2I2NGU0ZWUyMDhkMmI0Yzk5NGI2MDVlZjg3NzEwZDgzNjEzMjE3ZjY2ODFmOGYzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTYyNzdjMDkzODg3YmE2NWNhODMxYWQyOTJkNDE5YmQzY2M3OGE5ODBjMjFjY2E0ZGU0NjJkOTlhYjJmNWYxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2M3ODUxZjI4Y2U0M2UyN2Y5ODMzOGIzZmZkNGNkYTBhYTJiNGMwYjIyOGI2ZWNkYmYzOTk0NjhhMjg4NzljNSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/delete-pattern.rst#L6-L6",
+          "version": "repo-lines-v1:sha256:4959ab218db8e2fffa4e67be3f71f55c8c0f117024e403ef330d24221795a5b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1NDAyNjI0YmE5N2VlOGNlNzUxNDIwMTM5MTAyZGNmNzk5MDNlMDljNzg4MTEyMjdlMjE0MDk3ZDA4ODFhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L12-L20",
+          "version": "repo-lines-v1:sha256:038325c4ad691b5c16ec732eeed21c124a26547abf092e3a162c478f7c50ef7f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODUwMWUwMWJhNzYzNjg3MjdmNGExNWJhYzA1OGY5YzFhNTY3YWYzYzA1ZWY4MGNhNGEwYTJiNzU2OTc2NDY2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmQ2MTNmYWE0MmIwNzBhNzZlMGY2ZDhmMzUyYTM3MzJhYzA5NGRkYWIxMmI5YzAxYmU5NTExZGJmMTRhNjRjYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDA2MWZjOWI4NGE1M2U2MjE2YjM3ZTU1ZGYwM2FlNjk5MDIyMDA3ZmFjMjE5ZGQ5OTQ5MzE3MDU3ODEzNjczMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTU4MzkxNjQxMzgxMjIyN2M2NTAzYjUxYjFjYzA4OTJhNjIyOGUxZTVmYmMyZWMwYmNjZTZmMzhiZWY2NDJiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6e6259f2b04043de8899c9704b42faf2",
+      "statement": "Deleted entities normally pass through transforms, so insert paths must explicitly discard them; the delete pattern uses a separate path rejecting non-deleted entities and replacements and preserves _deleted true when logging a transform-performed delete to a dataset.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/delete-pattern.rst#L6-L6",
+          "version": "repo-lines-v1:sha256:4959ab218db8e2fffa4e67be3f71f55c8c0f117024e403ef330d24221795a5b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1NDAyNjI0YmE5N2VlOGNlNzUxNDIwMTM5MTAyZGNmNzk5MDNlMDljNzg4MTEyMjdlMjE0MDk3ZDA4ODFhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L34-L37",
+          "version": "repo-lines-v1:sha256:ffed3c2aee6aab7db1e940d1ea141e67a337ab72a048e38a57bad061b32a9f82:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTY3MzcyMTI3OTEwZjU0MjcwMjBjYjE5ZDliMTE1YWJlMmQwOTczMTYyMTgwMmRiZDA1MjQwZjVmNWM0YzVkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlZTFlYjE3NTdlYTU5NGFmYWQxNzBkMzUwNjMyNTEwZmUxMWVlYmM4ZDk5YzQ1MmM3NzMyYTdkZjBjM2U0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTI4NjJlMWJlMGQzYTMyMDFhN2Y4YTUzZTQ0NWRhN2FiYWJhNTE4ZmUxMWU4N2EwNDg5Yjc0ZDExYjkwYTVjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGU2OTUxNDFlM2UwN2VkZWZkMDkxYzVmNzhlY2NhN2QwNWFiZmQxNTJmOGE2ZmRjYzM0ZTQyNzg4Yzc4YjMyOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc116ce1fe1248a59d29910573e8f837",
+      "statement": "Verify-deletes protects against unreliable source scans by looking up purportedly deleted entities individually; the example accepts 200 and 404 and rewrites _deleted false on a 200, while circuit breakers are documented as insufficient for all scenarios.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/verify-deletes-pattern.rst#L41-L66",
+          "version": "repo-lines-v1:sha256:1a799260ec695b2c1a36294888614089e3a77408c386c0a29aac60f6e768e2e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmZjc2YzNjMDQ3NzgzOTViOWQ4ZjIwNDE1NGI4NWM1MzU0M2EyYWUxOTM4NjExNzBkMzg4YzIxMjM0YmQ5OTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4OGRkNWE4ZmMwNGYyMTNiNDcxNDZhYzMyYTg5N2ZmYWQ3Y2M2ZmE2MzI3MThlYWJjNDk2NzQzNDg1NDg1MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkMDhiNGQ3NThlMDY5YzUyMDY5NDM2OTBiMzEwMWU4ZDI3NjdkNThiODQ2YmVkZmVjMDhmNGEyZDNmMTY0YjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzOTZkNGFhOGNjNTdmMTQ0ODlhZDgzNTE0MWIxNjgxNmZjZWQzYzBhZTcwNzMwMjVjNzM0ZTU4Mjc1NDg1MjUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/verify-deletes-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:5b89340adb4a977ddf167e6e7a236ef58482600edd2451ffdc6e3e2dab6ac4aa:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2E5ZjM5NjQ0ZDFjNDE3ZjhjOTA1NzVkNzVkOTI3ZTE0YTg5M2JhNWI4YWIzM2M4NjA4YWEyMGU4Y2VhMGVmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQxYTJhMGNiNmY2M2FkMzVkNjVmMTVlMzY1OWY3MzQzMTFiNDZkZjg1YTNhYTM0NGIwMTQxNDNmNTAyNGMzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODdkYWVkMDdlNjkxODc0YTFhYjMyNGEyMmY3NmIzNTQ3MjBhNWRmZGJiN2E1NmMyMDQ4MjkwZmFlYzE0OWJjMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiOTM0MTZkZDM1ZDRmODQwZDEyOThjNmFhNjI3NmIwM2Y2NzExZjQ5OGE3ZTJhNWJjYzIwN2ViYTVlM2RlMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad6561fab65a48d3bb67ffcc833de503",
+      "statement": "Collect-template delete verification uses operation_lookup_delete with rest_system, rewrites _deleted false when the entity exists, and is documented as taking precedence over and not being usable together with operation_lookup.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/verify-deletes-pattern.rst#L73-L73",
+          "version": "repo-lines-v1:sha256:86eabe3f775e2385d2642b06ad35fbc3b1d809cae8008bef77e254f355bf19a5:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODZlYWJlM2Y3NzVlMjM4NWQyNjQyYjA2YWQzNWZiYzNiMWQ4MDljYWU4MDA4YmVmNzdlMjU0ZjM1NWJmMTlhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODZlYWJlM2Y3NzVlMjM4NWQyNjQyYjA2YWQzNWZiYzNiMWQ4MDljYWU4MDA4YmVmNzdlMjU0ZjM1NWJmMTlhNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmQ1Y2U2ZDViOTU3YzQ2Y2VkMGUzZmNjZWNkYjE5ZmZkOTAzNTRjMTI4MmE3MTBkMjY4NGZiMTJkYTc5MzQwMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L129-L133",
+          "version": "repo-lines-v1:sha256:ecb5dbf90a48b610805664fb7c3c847b714d1fa222eb9b8afac50e5fa98e7006:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmY5MmI4ZWE3ZDhkODNjZTFmNTlkODM2YjhhYTViYjJhYTkxODYwNjhmZmU4MTI4OTEyNzJlZDJkYTQxY2Y4NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjBkOTZhNjk4MWRmOTIxM2ExZTliOThiNWI3MGY4MTgzMmYxYjY5YmMzMjZlZjRkZTM3MTczMzQ3MGYwYzMzNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDNlODNjYmZhZGM1NDhlMDM3OTNkZjBhMzk0NmYzNDc4MTU5YjQyZWVkZWJmYjc4ZDAyMTJjZTdmMTdkMjVmYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_dec49e13b604469fb1c5083ee6fb3ebf",
+      "statement": "The delete pattern leaves handling of entities disappearing from an outbound subset as an open question rather than specifying a policy that safely distinguishes subset exit from real deletion.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/delete-pattern.rst#L6-L6",
+          "version": "repo-lines-v1:sha256:4959ab218db8e2fffa4e67be3f71f55c8c0f117024e403ef330d24221795a5b3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk1OWFiMjE4ZGI4ZTJmZmZhNGU2N2JlM2Y3MWY1NWM4YzBmMTE3MDI0ZTQwM2VmMzMwZDI0MjIxNzk1YTViMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1NDAyNjI0YmE5N2VlOGNlNzUxNDIwMTM5MTAyZGNmNzk5MDNlMDljNzg4MTEyMjdlMjE0MDk3ZDA4ODFhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_15c65ae52e5347b385dc341f11d3c24c",
+      "statement": "On successful runs completeness propagates the smallest source/related-dataset watermark to the sink; inbound pipes use current time with an optional HTTP endpoint header override, and include_completeness/exclude_completeness control contributors with exclusion taking precedence and a fresh watermark generated if all are excluded.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L28-L32",
+          "version": "repo-lines-v1:sha256:ae21930d7c59c01ba523e9880f6589b1131398c82ea3883a168f51ee3e5fea7a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI1NGYyYTliNWNhOTE3NTQ3MmJjZTc5MTU0NGFmNjVhYTU1NzAzZDI0Y2M2NzM1YWY3NWM3NGQzMThjYmMyMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ5ZjRmN2E0MDNkNmQ2NDU0NjgwNzExYmE0MjcxYWFhYjhiYzVmYjdlNzFjYjhjMGExNDkyYjNhZDk3MjFiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzczNmQ5OThkZmZjODk5YWFiYzM3YTg1MzBkNzBiODBlZjgxYzQ0NGRmYjM3NTk1MDE3ZTJkMDg2MWY4NjA0YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjc1ZTZiODRjYzVkYzFhYjAzMzhkOWFmODhiMDNmYTA4N2VmOTM3ZTZlYTU0NjdiOTE1OGM3OTFmMDFiMGM1MiJ9"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L54-L79",
+          "version": "repo-lines-v1:sha256:e0ce291a6e7120406c43c30ecf724c74f12d88e9d706aab5fba6ea8a9b90863a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxM2U1NjcxNGJlZGI0MDgzODQ0NGRmMDZjYmFhODBmNTU1ZTU3MGViNTc4ZGNhMWE5ZjZmMmU4NTJmZjE3MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzODFkNTE4MTY1N2ZiNzM5Y2I3OTRmNDBhMzk0ZmIzM2Q1YmU4MDgxNDBhOWY1YzQ1NjkyZWZlMDFkYTI4YTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlMTY3YTBlYzk1OTg4MzA1ZDJiZWYyMDIwMDMwZmYzNGIxNTJhMTczMWY3NDhkZDRhNThkZTIxNzk1MzJmOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec83b8a150a54001a2db8ce38e3cee65",
+      "statement": "Dataset source initial_completeness checks only that every listed dataset has a completeness value; it does not check how recent that value is or compare it with the entity timestamp.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L79-L84",
+          "version": "repo-lines-v1:sha256:bbde38ee32db56402c63015c8c52687289a7e8041f0a5d887ab6e65ef3cc0d8c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTYwZjhlNzM0ZjM4ZmM3Nzc0MmM1MzYwNGJmOGUxZWMxYTg0NTAzNzM3MDNlNDIwNGY4NTA5ZDdiN2NiYzZjYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGU0ZTdjNDY2NDY5ZmI3N2UwMzljNDAyNjc0ZTdhOWU3YjdiMTY1Yzg4ZGM5NzI5M2ZhNjM4NzI5ZTI5ZTQ5ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjE2ZTg5ZWE4ZTdkNjMyNGU4NjY0ZTY3YzA5ZjM3NjIyNjMyY2M0YmQzOThkYTUyMGUzZTY3NjcxMjBkNTEwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDRjYjljMzZjYmU0Y2YyODU3NTliMzMyY2JkNzhiN2Y2YWM5OTAxZmI3YzljOGE4N2FkOTU2MjI0ZjgwYTA2YyJ9"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L34-L34",
+          "version": "repo-lines-v1:sha256:5cdf102b7b3f8772baab257d7569aa00082c02df5e712c4cf9350160b787aadd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWNkZjEwMmI3YjNmODc3MmJhYWIyNTdkNzU2OWFhMDAwODJjMDJkZjVlNzEyYzRjZjkzNTAxNjBiNzg3YWFkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWNkZjEwMmI3YjNmODc3MmJhYWIyNTdkNzU2OWFhMDAwODJjMDJkZjVlNzEyYzRjZjkzNTAxNjBiNzg3YWFkZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjU4Yjk1ZDc2ZjUyYWRkNmJiNzZkNWYzZmE3NGMzYzc0NmY2MDg0YzBlNDNkMGIxMThlOTQxODMxYjAyZTc5YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWQ3Nzc4MjRmMzc0NzhmY2JhYjFiNzcwZTM3MmQyMDZmNTc3ZDQ3OTA3MmUyYjkxMmMwNDc3MWY4ZmQ4NDk3ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_98c7103660b24b91a4521451b68c883d",
+      "statement": "require_populated_input gates running on populated input state, not completeness timestamp: dataset sources check their input dataset, merge sources check datasets or initial_datasets, and the default false can be overridden through global_defaults.require_populated_input.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L46-L60",
+          "version": "repo-lines-v1:sha256:6a70484c5f3e8b8e11c620da768637e3aa50e54aff71191506e805c2e1970f56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDEyZDU3OWEyZjMzYWFmZGVmOTE1MzczYjk4YjIwMzBmNGI1NGEyNzYyYjEwNjIxYTIzYTM4MjlhYzAzOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiN2FhOGZiYzk4YjhiYTBmNzhhNTIwYWNlZjA4ODE4ODJkNGM2NGI3OThiMWFmM2M0N2IyZjI3ZmRmMDk0N2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2NzBmZjUxM2MzN2Q0NjU0ZDk1OWVmMjk0YWM1NmE0NTBmMDZkMmU5MThkMGExOWZmMzBhZjgzNzc1Mzk4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YjQyYTM5ZDRkMTU2OGZhNDYzMTgxNDZjMjhlNzYwN2ZkM2NmNjkzNGM0ODE5NzMyNDI1MGJhMDY5ZTdhYTYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L87-L92",
+          "version": "repo-lines-v1:sha256:0d06eac2294b68b2e1f9776917b7c862012fe6f10dde6d36bca5767009d57208:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2FkZjFhM2MxYzJhYzliZTU2YjE0OTIyMzE1YTY2MzQwNDcxOWIwZjgzZTJjNzFjNGVhZTg5NDIwNmY5NDc0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTlkMmQ4N2JmM2MzOGRlMGEyMGI5MGViMzk0NjRkOWNkNWYyZjRkZDBjODRkNjA3MzBiYjcyMDg3YmQxNGQ0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODVjMWZjZjg0MjRmNDRjYTRhMjlkZTBhMGY4NmM3ZTk1MzM1ZTc0NTk0MmJhZjQ5ZDM1NjlmMjk1OWVkNTU2NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L122-L143",
+          "version": "repo-lines-v1:sha256:8723ea0243378ccccb21669e3e388aace90418a14d2090f00eafefc892d5d09b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyMjNlMTM0MmY0YzYxODQ3YzgzMWJmZDlmNTNmMjE2YTQ2NTRlOWNiZWUwYjZlMWQ0ZjBmNzAwMTQwNWQ3NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjMzdmNjFhZThhZDQxOTk0YjM4YWQ5ZTU1ZjkyMjMwMzQwMzA4MjY2YzdjYzVmMDIzZTQ0NTRhYmE3OGE3M2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZmJjYWI1ZTFkNDA2ZjdlNWQ0NmY4ZTEyZjQxNTdhNzM2ZWU5N2Q5Zjk2OGI0NzMxZGFkMDQxNGI4ZThlYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjYzk2ODMxODgxMDhmMDM0YjcwMDk5NGJkZTY5OWJhYWVlMzc5ZmY3NDU5MzAwZjY5NTg0MTM1YTRiNGQzMDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f4206ad2026b41df9aeb4ac22d9668a8",
+      "statement": "Dataset source completeness true emits only entities with _ts at or before the source watermark, while an array selects the smallest watermark from specified upstream datasets to hold back incomplete source versions.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L53-L74",
+          "version": "repo-lines-v1:sha256:a1968a0bfcc9c973919d339ec615478bd35b676cfccd944064a20234d05c8053:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4YzYxYjUxNDU4MGIxNDkwNzZiNmE4YjgyNGNiNzA0MDM3ZDllOGMwZTM2NTk3YzZmNDk0ZGJlYmNhMTQzNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiZDkyODA5ZGJjMTE3MDk0MWFmMmVkZDdmMTBkODAyODYxYjc0ZmJhNmJiNGE3NGYyNDNhMzM2YzEzNDUzZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyZDk1ZjViZmRhMzEyYmIyOGQ3MWFlYWRhODk0ODNhMGYyYmNlMmY4YjQ1YWMxZjMwNDQ5MWE5Mjk3MThmMDIifQ"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L18-L22",
+          "version": "repo-lines-v1:sha256:ad20621d734cdbe6f2163a491a78e54e3190d9f0d6f2f6213b931ef026430357:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTA2ZmZlMjAzYjlmYjVjOTI1YmI5OTU2NjVlMjM3MDEyN2M5NDkyYTExYjMzYmRkODE1MTZlNzUyZDcwMjhjZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTk1OTNjNzg4MTcxNDM1YjdjZDI1ZGRlZDA3ZjU0NmYxMzZhZGMxMTBiZjZkMWRmNDk2NWYyNGE1MDkyMWFjZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWUwMDliNTM0ZjI4ZGRlZjRjNTJmYmNiYWU4NzFjMTFmYzA0Zjc5OGY4YjdjZGE5NDRmNzY5MDZhYmNlY2JmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2ZiOTA2ZTY4YjMwNmU3NGUyMjVkN2I0YmE4OWJmNzA3ZTllZDVhYmVjNDk5OTk3Y2IwZjk3NWNlOTBiNTY4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a3fc208c2024e3cad9ccaa3155d4e90",
+      "statement": "Expression-based dataset completeness is evaluated before each pipe run and must return a datetime cutoff; a non-datetime result falls back to ~t1970-01-01T00:00:00Z, normally preventing processing.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-dataset.rst#L60-L71",
+          "version": "repo-lines-v1:sha256:29e4f7f227e1937f43bdf81a75057d19192542298bcf0471ab490688d10f1cab:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMTBjMjEyNWJhYTYwOTEyODBhOGNmMmRjMjQ3NDY4N2VjMDEwODdhNmQ5M2EzYjhjZjg4MDY1NDgyMmI5NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiYTVhNmQ4NGJhZWU0Mjc2NzMzMGNhYzUxNzliODBjMWI5OWI3MzY2NTUwOTBhMmVmMDdhMjgyM2Q3ZTY2OGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZDhhOWYwYTBiNjg4ZTYzZGZmMmU5N2Y5YWJmYTY0NzEwMjQxNmJkNjU0NzcwMGFlMjQ0ZTg3Yzk5NTZjMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmNzA5NmNmMzFhYzMxMzVjNTZkODFlZmYxODhkNDRmMDI1MTIzODhkZjdmMDI4NDRiODRmNTBiZjdlOTM4NDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9a85f943799d4842bf2c5c8cf5ea992f",
+      "statement": "The DTL completeness function reads DATASET_ID's propagated watermark via VIA_DATASET_ID, so the value can differ between downstream paths and is null if a dataset is missing or the via dataset has no record of the requested watermark.",
+      "evidence": [
+        {
+          "resource": "repo://hub/dtl/dtl-functions-misc.rst#L169-L199",
+          "version": "repo-lines-v1:sha256:16ee09895fa9dc37c5209165702452d2c1907edf7bd611839126a5915f341b11:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1M2FmOTcxOTdiNGQ0MDMwZTQ0YjNjNjhiODVlNWRkMjllNDg3NDZkYTBmOTA0MTNkNDAyMDIxNzI3YjEzZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4MGEyYTg2NmIwZDk2NjQ2YTkwYTVjOTFmMThiYzIzNWJjMmQ2YmNjZmRmYWZjMTY3MTdjYjRlMThjZDliYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlMzE1ZDI0MzczMmFmNjEwOTc1NTgwNTFmZmM3YTAyOWVlZTQxOTEwMDRhZjRkN2M5MGRkZGY4NDdhMWM5YTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_be05e15e04f840e0914eb8df75ea61ed",
+      "statement": "The bidirectional completeness example compares A-company-collect as known via global-location and A-company-transform-split, releases to now only when both are positive and the global path is at least as advanced as the split path, and otherwise uses a minimum/fallback cutoff.",
+      "evidence": [
+        {
+          "resource": "repo://hub/bidirectional-synchronization.rst#L130-L167",
+          "version": "repo-lines-v1:sha256:67f30a8a298840010b05e616bd3aac1b7e58d53e2cc8b59f0400f364e6c19a6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmYWQ3YWNkNWZiYWY0MmNlNzJmZDgxODQ1MGMwYmRkMWFlYjc2YTlkNDFkNmZjZTI4Y2NkMzNlZTJiZjIzN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYjkwYjI1OGIwNGIyYTZkZWVmZTY2NWM4MjE3OTBmNjE4MmExZWRjN2ViMDE3MjRlYjY0MTRkNTJmODYzZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a253fd8a21134d03b1dab3ae92f20a6f",
+      "statement": "Completeness filtering during a full rescan can hide recent entities and cause dataset deletion tracking to delete unseen ids; deletion_tracking is true by default and can be set false when those inferred deletions are unwanted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sinks-dataset.rst#L140-L147",
+          "version": "repo-lines-v1:sha256:5541d7abd2fde800053d8b9bbb143d5cee60afcfee54c9e15fd50be11ae5d93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjg5MTc4ODhmYjgyZGVlOTgwYmYyYWEyMzAxOTE1ZDk3MDQ1YmE3NTExYWNlYzNiYTFkMjRkY2E4OTU2MWZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDhkM2I4ZGE2YzE1ZTdjZDA1YTJiNmEyYTcyY2YzZWVkYjExNDFlNzhmNWE1YmRmODhkMjI0NGI3MDY0NGRlMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzViMmI1ZWNjNGY3MDUwNzc5NWViNTc1N2Y0YWZjOGQzMDZkZWVhYjcwNTM1ZThjYjAwNWEyYTE5OWQ0M2Y2ZiJ9"
+        },
+        {
+          "resource": "repo://hub/features/completeness-feature.rst#L37-L39",
+          "version": "repo-lines-v1:sha256:931bfd27345f79e724c95d2b2da6fc0f600b98311088681ed2b9dd64bc976143:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTAwNDAxMjJiMjNhMzk0YjI2ZGE3YTdjODBkYTZhNTE4ZmE3Yzk0MjI5ZDJmOTk0Y2E2NWRjYjg5NGY1OWIwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGMxMjM0ODk4NTM2YjU3YTk3OWQ2NzI4OThkNmQyN2Q0NTE1NDE1ODRmOTJhNDFjMWVhNWM1NDQ1YjU1YTQ1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWI4YTdjZDMyY2U3MjY3ZjczOTBmNWY5NTM0MjBlYTQ2MjhlMDYwNTcwYWVjNzk0NmJlY2RkMTRjNmFlOTU0OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTY4YWY0MGJjZTRhZTM1NGZiYTA0ODYyZTg5ZjkwYTNlZmJlMzE2N2I2MDkyNThiNTIzNzhiZTU1MjUyNzRjYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9e33af3581004c8093f11866c4a6852b",
+      "statement": "Connectors should hide API model and method asymmetry at the collect/desired-state boundary; parent or cross-datatype insert requirements can require additional share or preshare flows, moving insert responsibility and having recollection look for $generated_id in the flow that actually performed the insert.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/handling-asymmetry-pattern.rst#L4-L30",
+          "version": "repo-lines-v1:sha256:040ae79c96ff74a74757db43bf6fcd9c0807adba8c70084f7f0f56c557fdfb23:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwMTZmOGE1M2E2YzMzMWI0ZTg1MWY2YmEwYTgwMWFlMzU1ZThkNTFjYTk3MjYxZDdlMjcyNmViMjhjMzY1NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4OWFjYWY5OTNjYjkwNThiZTcyYzRkYjY2Y2U5YzY1Y2UxYmJmNzMwZDM4NjkyZDRhNWVjNjFlMjAxOTY1OTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyYjE3ZGE4YjAwM2Q1NWIzNzJmYWE3MjZjNjZhNTJmNDM0NDBjOGYxZWI2YTliYzI0N2NkYmFkMWRhNTg5NjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZiMmZiOGE1MmJmYTI0MjgzYjc3Y2ZhOTFjMzI2NzgxMDM1MWZlMzlkY2I4NzJiMmZiMDUzOTdhZTRjMjA5NzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8c530189ef9f441ca33dbd63d37d89a5",
+      "statement": "Connector hops used for symmetry or required relationships may target other datasets inside the connector but not outside it, and require caution because they can introduce loops and dependencies.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/handling-asymmetry-pattern.rst#L32-L35",
+          "version": "repo-lines-v1:sha256:8eb247bda19f91dabacd279e00e9c1960fe4635e9e938415b15cbb95959b4def:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTA0YjMzYjMxNjEyM2NhY2Q2YmE0NjE4MWNmMmU2YjhmNTE1OWQ5OGVmNzdiNDc0OGZjMGViYWMxNGNhYTk1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2RkNmUxM2E5MDFkZWJkYzMxMzg3YzE4YzNlODdkYjY5ZGQ0NWI3ZTIzZGZhNjQyMzNiZGIyZjBmNDBkYTExYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODFmYjgzYWU0ODBkOGEzNTk0ZDA3NGI1NjU4ZmE3ZTdlMzU2MTdlOTM4MmFiMjk5NjU3NzdkN2NjYTJlNTVmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzVhMTFkYTQ0YzgwMjQ4NmJjNmY2NTY0MGFhNDhhNzMwZjBmNjg0YzVjMDdhNDJiYTNjZDE3MzVlYjNmYjA3MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_42f122db64b1425582c8ff5bf5b0c271",
+      "statement": "transform-share-rest is the documented CRUD and optimistic-check entrypoint with payload, lookup, and mutation rewrite extension points that should be preferred over additional transforms when shaping requests, responses, and key formats.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/share-template-extension-points-pattern.rst#L4-L19",
+          "version": "repo-lines-v1:sha256:a3fb086320c9f7d3f5e04309e11e65f1862040d6d0dda32e6b0f0094ac17a61e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhOTIxZDBmMGQ4ZDkxMWQwNzM1Zjg0ZTM2MDMyYjY4MjdiZjAzNzg1YTcwYzRkZDY3MWFiMTZlMWE0MjMxMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmNTY3ZDZjOGM3ZjVhNjM3ZjRhMjAyYzNlN2Q5NTU2ZDYwYjdmYzg2YWY4YTFjNTkyOWYyMmMxN2Y3YTM4ZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwM2YzNjBkZDFiYmQ4NGE3MmNkNjlmNzJkZjVjMDQ1YTFlMGQ5ZTYzNWQ4MzExNjYyZDc1ZTE4OWU3NDJmZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L206-L215",
+          "version": "repo-lines-v1:sha256:6408a1d7ba4590cca790bee10266555590a8b6ce2b6d46cbc38c6b85ed24d7fc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYWFhMTQwMWU0ZWI2ODBmNWRkZTdhYzBhNGUyN2FmMmQwNGZkMmJjNjRmYzRmZGQ3YjQzZDg0NGVmOTNjZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ2YzcyNzNhNDE4MzVlZGYxMWQ0NWU5OTFmMWMzZWNkMzFlOGZkMDY5YTZkMWUxYTk4ODIxMDM4ODI1MzkwYzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmNWZkZWZkYTBiODQ2NjQ0YjAxNjIzYjdkODRkYWRhMjJkNWU3NmE3ODc3MmYyZWY3NWU2MzkzNDAyNzQ5NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjYzNjMzA5OTA2MDczODZkN2I3NjY1NWQyZTY4NjIzMGJiNzdmZTRhMzAzYmZlNzUwOTY2NjFjNTEwYzAxZmYifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L365-L381",
+          "version": "repo-lines-v1:sha256:2afa1d98062e9c1c6737c5f9c26e06e81fff36ccc7bf0fdba83cbf162cd7982c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhOGJiM2I5NTgyNGNkYzE2YjZiY2JhY2MyMWFmODBlNTg0YWQ4ODY2YjM1MmI5M2JkYzk0NmViNTM2NjBmMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0MjI1YzQ5YjUwMmJmMzBkNGZhNGExMmI0NTJiNDU5ZjY1NmViMjcyNTc3ODFiMGE1ZDZkZThkNDI5MjhmZDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dd309683f5f54f63ab92a2878671b49c",
+      "statement": "client_side_patching true builds a complete update payload from the lookup result patched with the desired payload for APIs without patch support; it is client-side payload construction rather than an atomic target patch.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L6-L10",
+          "version": "repo-lines-v1:sha256:43397f85205babc585ebf6e64e2d829e7909bc8067f15ada0f3f8b8a19de229a:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDRkYmE5NmE2OGVkMDAxNmEyZmVkY2Q5M2E3ZjZhZmFjMjIzMzRlZWYwODAzMzRhZWUwMWE1MWY2Yjc3NzY0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjQyZWM0NGYxMTExZTE4NDc4YjI5MDdkN2FlNzY1ODYzY2ExNGM1ZTE2MmQwNzNmODAzZTE0NDJlZTE5NGUwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU4M2ZlMjY3OWY5Nzk3ZmNlNjFhYWNlMTAxMGQ2OTA3ZDUxZDdmM2VhYmVlNTZmYmUyMzU1OTRiNGUzYzc2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJiYmU5N2ZmZTJhMWFiYjIyYjhiNWE0ODBiZDIyMWY5ODJjYWY4MTk5YmQ1ZDU1NGJlYjQ3NDk5NTkzMzQ3NiJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L385-L388",
+          "version": "repo-lines-v1:sha256:4b89196e3a375e0b7fd0675455f58c8d306ea0f8a2ec84239f92aface89c555c:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmJlMmQ5YTg3MzIyOTQyNWM2YjAxNDliNjVlMGI3NGY4ODZkYTcwOGJkZTU2ODE1ZjgxNzZiNDU3MzEwZWRhYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Y3ZGJhNGQ2ZmFiNjU4ZmI2YzBjMmJmYTQ3MDJhNzJmOTRiZjI4MTA5MWQ3NmIwNDVmZjYxMGU3ZDQwZWY2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjhiMzg3OWE0NDM4MmI2YjliNWViZmVmMGJkNGI4OTBmN2UxYWM1MzVjODQ3MmU1OTMwOTFkMTQzYjg1NjQ0NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5bdc71d64c06475e8d749fff3594429f",
+      "statement": "The share-template reference separately documents legacy rules for lookup and baseline rewriting, a payload_property default of payload, and special $payload customization, so these documented identifiers are not interchangeable by assumption.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L281-L284",
+          "version": "repo-lines-v1:sha256:f97f050598e3a5a79f3347047f84ee570674fe0c25247498fecadfc74943bbab:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzg1NzhhNTk5ZDNlMjI2Y2JhYmE3OTI4MmZjZWM0YmMxMDZkMDY4MGI5ZjgwZjZhZDEyODYyYzdlY2RhNDZiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGIzODViZmM2YzhjNzg3ZmExOTk0NGQ5OTQxZTNmMjY0NzI2M2QzYTVjMDhkZGRkNzFmNzU5Zjg5MjY4YWJmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDUwNDJlNzFjN2NiZGJkYzc1YjY4NjJlNzI0NDgyOGMwYTIwOWJiODgxZWNjZGJkMjhkYTcwNGNjMmQyYTFjOSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L359-L369",
+          "version": "repo-lines-v1:sha256:9308089735f66bb62cad55dd0f4e2b8c468fef49321ad7df30a51145404540a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1OTQ4ZTJlZGY2ZThmMjYwOTBlZjNiN2FjNzBhMDRjYmI2NWU5MzgxNWQ2NzNhMDEzZjVhMWU4MzY3MWMxZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwZjA4OTE5MGM1YzU0MTFhYmU5NjdlYzhmZTY1OTJhYzBmOTIyZjg2MzViZWJmYjhiMTBjYzg0YjlhMDA0MWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3M2U0NWM1NzUyYTg2ZWVkNDUzZDljYTU0NGNjM2RiZGQyOTE4NTc3NjAwZTM4YmI1NWRmMGY0MGY2YzllNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L391-L406",
+          "version": "repo-lines-v1:sha256:5967cf1bddca2ae9610655dd0b0fcdcd8c2e7dd104a2595aa61a07d4294b3036:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjMWRjZDU5ZmQ0NjI0ZTQzODcyZTA3OGJhYWNhZTExNjQ1NjhlNGY2ZTc1Njc1NjFiNzBjZjk4NzQ3YzM2ODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllNTgyZTBhMTE0NjM3MTM2YzhiOWQ5ZTI5MjQwODM0YzI5NDI5NzEzNTEzNjJjZjYzNmM4NDYwMDBhZWJkYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdde05010b0a4bada766432464763258",
+      "statement": "Preview executes transforms without writing the normal sink and can produce untraceable duplicate inserts if mutations are unprotected; side_effects true protects preview, is the REST transform default, and should only be set false for genuinely safe operations.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L29-L32",
+          "version": "repo-lines-v1:sha256:6d1b20d5695d283db4769b30fe64dc8ae57eedf1a11bc666d7fe5255277fd13c:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFiZGU0ZjY0N2NkNDhjMzBhZWExMDUxYzE1MWJjYjRkY2RiYTM2M2I1NDFkYjlhMjVlZWZkYTlhMTYzMGU1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZmMjE0NDFkMjhiZGI1OTIwMDlhOWM4OGI3ZTdmNzI5NDljM2QyMjU0YjQ4NTQwOTUzYTFhMjY2OGEzMzRhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjhhYWM4ZjQ0NTdmZTZmNGFjNGMwOWRhMzJhYWY4NjAwYWIwMDI0OGVkMzY3ZjYyNjBiMDg3ZGE1ZjZkZGU4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM3ODJlOWExYmZmODE4ZDA5NTY2MTI3OGZmNjBlYTFjMjUxOTU0YjQ4OWUxMmFkODkwOWI0Nzg0OTA3OGMwMCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-rest.rst#L73-L76",
+          "version": "repo-lines-v1:sha256:7c046aeebe103c5e9076ec79ca4c8b53ef0260555b125d80a9594c39a9b6b65a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDhlMjI5M2E5NDI0Mzc5YTdlZmU0NzJlZTMzYmY4NmI5ZDQ1M2ZlNTg1MmRlMjc1ZjhmNWQ2ZGQyMWQyY2UxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwYjM2MmQ4MWNkMDhjMTYzZjM1Mzc0NTQ4NjI3Y2FjNGVmYWRkODA3M2QyZDA4YTc3ZGRhNjc3OTNiNWFhNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjZmYmNhYjVlMWQ0MDZmN2U1ZDQ2ZjhlMTJmNDE1N2E3MzZlZTk3ZDlmOTY4YjQ3MzFkYWQwNDE0YjhlOGViYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjEzMGUyNzg5YzAzZWY0MmY1MzUwNDcxYjg1OWIzNGJjYjkwMGMxYzc4ZjMzNWZhMGQwOTZjNzk1NzhmOTk4OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2b14880bd70f4d158c596ee1ef8787a7",
+      "statement": "$unsafe_skip_optimistic_locking true lets transform-share-rest update even when the comparison reports modified-in-system; it is a repair-oriented unsafe override rather than a normal integrity safeguard.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L211-L215",
+          "version": "repo-lines-v1:sha256:e8134c7ad3433c8c99440883e90311b2c2c0cef527e2455459340e4fa6dd8342:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjczNjMyMWU1MzY3ZmViYzJkZGI0MDMxYzFjMDJkN2FlYzAzYjhmNjZlNDQ4ODI2ZTljMmM3MTk4MmFmMWZhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZjNzI3M2E0MTgzNWVkZjExZDQ1ZTk5MWYxYzNlY2QzMWU4ZmQwNjlhNmQxZTFhOTg4MjEwMzg4MjUzOTBjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmYwOTM1OGViMTVjODU2MWIzZjJmMTU2Y2YxOWU5YjczNDRjZTAzNDU3MmU5OTM4NjgxYjY5Yzg2MjhiNDMyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWNjM2MzMDk5MDYwNzM4NmQ3Yjc2NjU1ZDJlNjg2MjMwYmI3N2ZlNGEzMDNiZmU3NTA5NjY2MWM1MTBjMDFmZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_79bb7d910f004608aa1cf6fedc5cc9b9",
+      "statement": "Reset/full run reprocesses all source entities and performs deletion tracking, while disable_set_last_seen true prevents resetting the pipe or changing its last-seen parameter to protect against accidental replay.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pipes.rst#L140-L144",
+          "version": "repo-lines-v1:sha256:561822624792ba99798eb2dde2af2a6ce1028ab8d0a8a3ce24908aba30a4b6e9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjMxMWQ1Njg4NWJmYzBiMzVmNTk5ZjIwYTQ4Yzc4NDM4MWE1Zjg3ZGE5MDNiZTcxM2QzNzMwNzZlNDY4NWIyNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGNhMjk1NDUyZDQzOTAxZDAxYjM4N2EwZDllOTEzNGUzMjY3Y2JkZDE2NDk1ZjE3YjNiYzQ4YzAxYjhkOWRiYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmMwNzk2NTI5NWJiM2I1MDU1YTc2YjBhYTg5OGQ2NGQ5NGRjODczM2E0OTYxYzcyOWIwODM0OTM2NGE4N2VhMCJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-pump.rst#L415-L417",
+          "version": "repo-lines-v1:sha256:9c408320fb233cfd76e90522022b4dbe5cc4139bd5a5f06d0657569c154380f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYxMGE3NDJmMThjZDYwNzQwY2NjYWYwMzlmZDY5ODkyYjY2ODcxZWI5MmIwZjhlZTA0ZmYwN2ZiZjM3YTVhMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU5NDA4NDJjNmNlOWU0MGY2MjM0YzU4YmJhZDY4NTk1OWUzNDAzMGU3ZWNjNGMxMjJlMDRhMGQxMzZhNDE3ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTNhY2ZhNWMwMWI0OTc5YWNkMDgwNTlmMWFiODkyZjNhNTY2OGM0M2RiMmY4ODQ0YjU5M2VlM2RiMTVkNTRkMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWMzNjI0Y2E0OWUyMDYwMGU2MWE1YjU5MTEzYjYzODAxNTA2MzAwMTA3YzEzZjBmNWZlMmVmYThhMWVkZDBiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d366e91b7a7141a8840690a5e03a7bd1",
+      "statement": "Automatic reprocessing defaults to continue without automatic reset; automatic policy can reset/full-rescan or sometimes rewind a pipe when it falls out of sync, including after configuration changes or restoration from backup.",
+      "evidence": [
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L29-L50",
+          "version": "repo-lines-v1:sha256:8cb5824a9643a6f63e859b94ecedef96c2d0534418145bdf6fc48ea4e9044c4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MmE2YzI4OWEyMzAxMGE1MTkwNGRmNTViNTljOTdlNzRhMzI2M2QwZjdmOWYzMDhmZTI3NTIwZGM2OGRjZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5YzdmNjM2Y2NjZWE0YTI4YTFlY2UxZmM4MjllYmU4YWU3YmUxZTA4ZmI2NGIyM2UxZTZiNzI1YmFjZDVkN2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxNWUxM2NjMWQzNTQxODQ5NTk5Njk4NzkyMWI5NjU0YWQzMjE4MDFhOWEwMDg5MWU4ZmUzM2EzYjZkNzMzN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxMjA2NDMyMmU3Yzk1MGU5OTI1OGUxMmQxNTljYzRhODVmOWRmYmE3M2ZmMzNkODZlOGRjOTRjODYyZWRjMTMifQ"
+        },
+        {
+          "resource": "repo://hub/features/automatic-reprocessing.rst#L8-L20",
+          "version": "repo-lines-v1:sha256:e9df6cd6c5afc463df3755ddb4ef15e5a3add789be66ee189b51b16a112dd994:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ZTYxZDE4YzU5NzViYTYxMGJkYzNiM2M3MjE5Y2QzNDRkZWVkODU0ZmQ5MzNiOWRmMjgwMDVjZDA5MTRlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmMDIzNDk5OGJlZGJkYzU0YThjNDY0YmEzMTg4OTNjOTMzMzA0YjlmYjM5NWY5ODM1Y2I1MWY1NDg5M2YyM2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5ZDk1OWZkMGVkNDIzMTVjZjE2Y2Q3MDkyMjc1YjVjMDVkZGMxY2I5ZWYwOWU1MmNmODg3NTQ3Y2NhMDNjMGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExNzRmMDMwYTNmYTY5ZWU3ZDU1YWZlZWUwOWNlZTIwNGIwNjg0Y2Q5ZTNmZTdhNmY3Y2MwNTNlZTNhNWZjM2UifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_869abf8fd1134cf98ae2683f7bbacac2",
+      "statement": "Cloud durable-data documentation describes daily backups and potential loss of the last 24 hours during recovery; restoring older Sesam state can replay already successful non-idempotent target writes, illustrated by a noon invoice being resent after recovery to a 10:00 backup.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L24-L27",
+          "version": "repo-lines-v1:sha256:e5a86e56a0ac3ff1bbc8b663991cc0e7041f9707f873b5128b8a664428890dc6:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTI5OGM0NzFmNTk1NDNkMTY1NDQ1ZTgwMTFkOTgwMDhhOTAwNGExODg3YzBhYjRlODdkODYzNzJkMjQ1NjU0ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc4OGUwMGMyMjgyMTA4Y2EyMjAzMThlMmY4YjlmYTZlMzg1MTI4ZTkwMTQxOTllYzA3ZDMwMTM4MGZmNThhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDJhNGQyYjcxNWNlNDJiMjA5OWRiZmI2NmRkZjg3Y2M0MDc3NGU5OGQ4OTc0ZTQ1NDhjYmQ1NTY0MDFhMjk1ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjNkNDY4MmE3MWYzODhkZjE2ZGQyZGRjZWYzNzg5ODdlMWIzYjEyNDBlODFiZjUyZDAzY2U4NjAyNmI0ZGU5MSJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L15-L15",
+          "version": "repo-lines-v1:sha256:43d190e219b8b22dd4389d65f8b83e8cca68dd5a159eac2332166645638dc599:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkMTkwZTIxOWI4YjIyZGQ0Mzg5ZDY1ZjhiODNlOGNjYTY4ZGQ1YTE1OWVhYzIzMzIxNjY2NDU2MzhkYzU5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDNkMTkwZTIxOWI4YjIyZGQ0Mzg5ZDY1ZjhiODNlOGNjYTY4ZGQ1YTE1OWVhYzIzMzIxNjY2NDU2MzhkYzU5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg4YWExYzFmNmJiN2RiMGI2NjEwM2MxOTNhMDI4NTdlZGNlNmIyNTFmOTVlZDg2NGIzMmEyZThkODczNmQwZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDM3ODUxMzZkMjUwZGM1MmU5MjE2MDdkOWM3MDI3M2FmMmYxNmRhYTUxNzk1Nzg2N2M5MjUzYjE0NWE2M2RlMyJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L31-L33",
+          "version": "repo-lines-v1:sha256:6a6e88c991a3da643bff88abb05d697d615d60c2bcef7521755879c5f6add049:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTUyZGNiZDg0NDM1YTJkZGRhOGI1NWFmY2E3YzhjOWI3ZjhjMjgxNTQ3MzMwNDk4ZDU2NmQ3ODI5M2RlZmVkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDIzNjg2MWJlN2M1YjJjMjNhZTJmZjk2MTBlMmM0ZmNhYWVmMTk3YWU5NTZiOTZmYTE2MTM4MjMwNDAyZTUwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGNkMzUxODA5ODljMGQ1MGNjNzgyMTMwYTQxZmM2YzY2NzI0MzdkZWRiM2I1NDQ1OTZjZjlmOTI5YmQwN2Q0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODEwZTNkZDQzM2M0Mzc2MTJkNTZiOWNkY2U5N2ZhZTI0NTJmZjZmNDY4ODA2NjExZDI4OTRlYzJmYTk4OGQ2ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_727c585ae68b41839e4e00bb4ecd3cd5",
+      "statement": "metadata.durable true stores pipe data and state on high-durability storage to reduce data-loss risk; durability is recommended for pushed inbound pipes, non-idempotent endpoints, and both paired endpoint and share pipes, but does not establish an external exactly-once transaction.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L8-L8",
+          "version": "repo-lines-v1:sha256:8f433a9a7e2a6294f87360dbca3438f62ce5b1f96453f452eb24a6b4d31915cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MzNhOWE3ZTJhNjI5NGY4NzM2MGRiY2EzNDM4ZjYyY2U1YjFmOTY0NTNmNDUyZWIyNGE2YjRkMzE5MTVjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0MzNhOWE3ZTJhNjI5NGY4NzM2MGRiY2EzNDM4ZjYyY2U1YjFmOTY0NTNmNDUyZWIyNGE2YjRkMzE5MTVjZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzgzMzBiYWY3YjI5NWI1MDcxMDA1N2FhZWViOGI0MDRiZmQ4YjlkMzJmOWIxOGZlZDIyYTBkN2QzNDI3OWFkZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTcxNGM0NTg4MjJkNjg4ZDYwMmE5MTdiMjU4ZmI3YjA0N2FhYmNjYzA5MGJkZWMwNGMyMWFjOTljMDE4M2MzYyJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L18-L24",
+          "version": "repo-lines-v1:sha256:687d60831c2f7b852c43ee107f43ccbff77f14597ed892d64029e52a0bb204ee:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGIxZDdjZDlmNmUwNzc5N2QyMzAyMmQyNTIzODA3ZGM1MDg3ZjAwMjlmNWEwYWNlMmU3YmUzOWQ5ODUwMDQyYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYzMDA4ZTg2ZjBkNDhiMjhiMWVhMmQxODJiMzIxMTBmMjQ4OTk0ZGEzMWRmMmI3OWVkYWQ3OWMyNDU0YzNiYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmJmYzMxMTg0MWZmZDU1MWE2ZTA2MWJiYjA1ZjczNGNjOGE2MWVmYjI5MGMwZTg1NTljZGNlYTViNmY1MDg4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWM0MDE4NGY4ZmFmNDExZTA2YWY4NGVhYWM5NDk4Zjk3ODYyM2U1M2EwNjMwNjMxNmI3N2EwMjc4OWYxMDA0OSJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L38-L38",
+          "version": "repo-lines-v1:sha256:c73e53c2b77461b92a7e817666de2e69109a07ea106901a83dd6f1cccad0b3ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzczZTUzYzJiNzc0NjFiOTJhN2U4MTc2NjZkZTJlNjkxMDlhMDdlYTEwNjkwMWE4M2RkNmYxY2NjYWQwYjNlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzczZTUzYzJiNzc0NjFiOTJhN2U4MTc2NjZkZTJlNjkxMDlhMDdlYTEwNjkwMWE4M2RkNmYxY2NjYWQwYjNlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzk4NTdlYmUxZjZjZDMxZDMzYWNjNzczNDk1M2FiY2JjN2EyYmRmOGY0ZGFjZTAzMTkxNGU2YWRmNDEyNjQzNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTQ3MjJiNmQzZGY0Nzk3NjAxNDIyNWIxZGEzYTI3YzVmMmU5N2U1NzhiMzg3NTBkNjRkMTZmMjBhNWU3MWExNCJ9"
+        },
+        {
+          "resource": "repo://hub/features/durable-data.rst#L80-L84",
+          "version": "repo-lines-v1:sha256:be707cb9f14400b8f53f83871032b352a618e1ea6114458da388d12b4640e9c9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGZhZTNkNzJmNWZiZDIxY2M3OGI1Y2UwZDM0ODIyMmY1ZmI1N2IzMjAwNTIzOTVhMzEwOWFiYmJiM2RhZWU5NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWMzN2Y2MWFlOGFkNDE5OTRiMzhhZDllNTVmOTIyMzAzNDAzMDgyNjZjN2NjNWYwMjNlNDQ1NGFiYTc4YTczZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmM4MzViYTMwYzViMTg1YjUwMjJlMDY0YjVjNzMwMzYwMGEwMDRjNzNmNDQzMTE1ZGE4NGJkMGE3MDRiNTRjZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2U4Y2QyOWQ3ZjVkZmI0MGUwMDYxMWFiZTMwODI5ZDEwZjA2ZGNkYmI3Mzg2OGE4OTVhNjNjNmE0MDZiZjVmZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f9596e56ec3143f2b94c12a64d87c3ff",
+      "statement": "Replay safety depends on the actual source or target operation's idempotent or non-idempotent behavior, so repeated-request semantics must be analyzed rather than assuming all target writes are safely repeatable.",
+      "evidence": [
+        {
+          "resource": "repo://hub/idempotency.rst#L30-L34",
+          "version": "repo-lines-v1:sha256:ed5a866e0a1344096c99b58d3029edeae6eacef2bda4d6b4e8dba06f56c7e412:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFhZmFjYWVlNDM4ZmU3MjQ4YmViYzcyMjdlZmUzZWVkNDFkYzcyYjM2NzY0ZmVmZjE5NGM4MmE4NDUwZWM0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjEzNzU1YTk5YzcxOTA5MmYyNGRlYzgyNDhkYmQ0NmU5Zjc0YjdmMzI3ZWUzMDJjNTNiMmEzNGIyODU5NzA0OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYThiZTdjODI1ZGEyYTQ0ZmNlYmUxMjM1NjAwMDRkZTRjOGQ5YjQ1ZjhmNmYxYzcxYmViNWFjMmU4YTExOWY1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/idempotency.rst#L9-L14",
+          "version": "repo-lines-v1:sha256:2d930b04f934e890169428f4a97259d34f5a8016ce833293c349dacd0c3329a2:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZhN2RiZTM4ODQ2ZTI2ODNiZGRmY2MwMDFhZDNkZDhiOGU0NjQyZDIyNzY5OWI5YTVmNjdlN2MyZTI1NWM3MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ1OTMxNmNhMmUyZWZiM2FmYTNmNzM2NTMwMDc2NThlMjM5MTkxNTlmNTQzMTY1M2EwNmY2ODg5NTA1ODY2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWMwYjZjZWRjOTI2NzVkZmZkNTkzZTc0ZThmMWI3MDU0NWQ4NDdiYmM2NzkyYTA1MjAzMDJhZjViZmNlYjRjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzFhYzY2NmUxNjdmZDU2YTZiNjQ5YTA5ZDU2MTNjMjM5MjYxYmY0ZDQ5ZDI4ZjE0MjA5YzlkYjkxYTNkOWM0NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_80e21276818d4aa689e91f78db3d674a",
+      "statement": "Connector contract examples conflict with their field requirements: the insert omits required $origin, the update uses square brackets for dict-valued $based_on and omits $based_on_properties, and the delete omits both required baseline fields.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L140-L170",
+          "version": "repo-lines-v1:sha256:5c0627af104341b85b7814b8dbc3a2519b8b7779c6c0d486ebe950853f08b86f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyZjNiMjU3Mzg4ZjQ5ZDFiZWZkY2MwZTJkZTczYmI5MzkyYzlhMWRmZmJiZTQ2NTE3Yzk5NmYyMjY5MTkzMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1ZjM5ZTE5MzYxMWMxNDZjYWNiZTg4NmMwNzA2ZDAxMTE1MmU0ZWZiMGNlMTgxOGVhZmFjMDM3NGJjMWNmZTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1ODEzNjhkMTJjYjJkNzUzODY2NDc5ZmI1OGNjNTAwZTNiODFiNWIxMzUzYjg3ZWFhZTVkZmRkNDAzOGEwZWIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L93-L125",
+          "version": "repo-lines-v1:sha256:2d2314e8ba0c4bb2cdd2d363a88d7b9860d03a24c7b280884cdbbd4711ee7c55:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YTcxMzA0Y2E5ZDcxZGY2ZTQxMDZhYzg4NzkyNDA4MzU3MzJhNTc4ODg3OTRlNDFlNzlkZjZjMjgzZTU1MzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkOTlhMzU3NTgzNTgwN2U4NDNmN2UxY2M1YzVjY2Q5MWRlMGNkNTUwMmE3ZWE5OGJhMGExYmJiZmZmZjYxNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMwMTY1MmMzMzE1MjJlNDY0M2JjNGYxNGI1MDVjZDU0MDU5YTM3OWY2Mjg4MmFhMzQwMzMwZjBjMWQ0YTAzNDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_07fc7945aebe492dabb13f631365d110",
+      "statement": "Connector contract illustration text inconsistently uses foo-person:123 and foo:person:124 for split identities and calls the deletion field _delete in replacement prose while the example uses _deleted.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L127-L138",
+          "version": "repo-lines-v1:sha256:d4edf0790b6db7715e8e6cd4bbf9eb7c74d2a4d961b53199e29fa7db5f60a323:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0OWMwODZlOGMyNzUwNTEwNDE5YzJlNWY2Y2FmOTA0OGFhNDFjYzFmN2E5NmYyYWRkNGM3MjEzMzYwNzljOTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiMjExMzFkZWE5ODM0NDhiYjdmZDE3ZGZlOTE1ODRhMDQxNGQ5NGVhZTdkZTVjOTNkYjBhZGE3NjNlZmUzMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4MWZhNTBhNzgzOWVjZGYyZWYzNTI3NjMyZTZlZjY5Yjg3ZGZiYzA2YmEyMzUwYzEyOTEzMTY1OTE3NzkwMTIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/connectors/connector-contract.rst#L74-L74",
+          "version": "repo-lines-v1:sha256:0433c95b5f847664bc50c23d9d05997063e99e89e82eacf1973b06b839ea7aed:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQzM2M5NWI1Zjg0NzY2NGJjNTBjMjNkOWQwNTk5NzA2M2U5OWU4OWU4MmVhY2YxOTczYjA2YjgzOWVhN2FlZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQzM2M5NWI1Zjg0NzY2NGJjNTBjMjNkOWQwNTk5NzA2M2U5OWU4OWU4MmVhY2YxOTczYjA2YjgzOWVhN2FlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTI3ZDM1OTViMzlhMmYxNmEzNjMzMTQ4MmJhNzhjZDIwZWM4YTE2ZGFmZGMzYWE0NzQ3Mjg0OGVjZjM2YmU2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGQyNTJkNGQ0NmE5ZTMzODBjODYzNWEwNTYwZDM1ODhhNmJhNzYwM2RiYzAzOTUzMjAwY2UxOTk1MWZlYjExNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_93ec6d3988aa437ea4830c7d8b7c360b",
+      "statement": "The capture-response example is internally inconsistent: it lacks a comma after the $payload addition and sets $operation to inserts while trigger_on expects insert, so it is not a runnable configuration to copy unchanged.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/capture-response-with-transform-pattern.rst#L22-L50",
+          "version": "repo-lines-v1:sha256:c607a032208164126aa359bf2b113bcfb7f46528c9267d78f8353b47da3582be:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzZWI3YzM4ZmE2OWZmMDQxNWJjODI2ODViYmE4NGIzYTBhZDE5OWJiMDAyMDExMzc0NGE2M2E2ZTMxNzYyYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MDIyNDZhZWEwZGMyZDAwYTgwMTA3NDE2NzhkYTUyMmUyMzU5ZWNmNjcxMmU3YmYyNjhjY2ZjNGFiNzc4YzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzOTNjZDc3ZWZlZDIxNWRiNTMxNTBmZmYwNjBjMzU3Zjg2ZjQ0ZTQ2OTA2NDFjN2E4OTliYzk3ZjBkNWRkYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEwYmZjNzk0ZWVjMmJlODRkYTQ2MDkzMmMxMzc4YTg2NDgwNjVjN2I1OWZmMWJhZWIwYWIwY2UzODcwYTYwNmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f3fa90bb75174a08bc8359d97f19b43b",
+      "statement": "The older insert example contradicts its already-processed-discard intent by using is-empty on sink hops and joining si.$original_id while storing original_ids; the dedicated duplicate-block example instead checks for non-empty successful prior results.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/duplicate-hops-block-pattern.rst#L21-L36",
+          "version": "repo-lines-v1:sha256:752ef00ca8c1f522f5958deefe6753d60edeb804f1f2480f2187dba921c60aed:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4OTI0OWQyZjE2ZWUyOTI0ZThjYzBiMjViZThiMjVjYjk0OWIxYzI5ZjA3ODYzOWQyOTc0NmEyZjVlOGY4OGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1OTllN2U0MjUxMmY1MGJhZTNmZTQyZWNlZGVkZWUzMGUwZWNlN2RlNWY2NWRjYjRmNTU1ODAxNDQ1NjNiODAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEyZDAzOWQwZTM3N2E0ZDIwMGI0YjcxZjk1ZThjNWFiZGQzNjQ2ZWI4NzNjMjcwMjg4ZDg0ZWU4MDViNWQ5NzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzOTZkNGFhOGNjNTdmMTQ0ODlhZDgzNTE0MWIxNjgxNmZjZWQzYzBhZTcwNzMwMjVjNzM0ZTU4Mjc1NDg1MjUifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L65-L78",
+          "version": "repo-lines-v1:sha256:bc4be0adef18af006e77c98f3cb4f604be178f8f03dd27952ac91320d014b0f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2MjU2MTc0OWQ0OTQyNzU3MmVjODU5MzQyOTIzMjIzMzM4MTJkNzU1NmUzZWYyN2RjY2M1Nzk3ZDgzOTUwNjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4MjJlYjk0NmU0MGM1ODEyNGVkN2IxZjFlZmU1ODk4NTcxZGEwZTNlYjJiMzU1OGQxNWEyN2MxMTc0ZDc3OTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyMTVkMzA3ZTQ4ODM2ZmZiMDU1YTAyNzU5YzdhYThjYzMzY2FkNmFhMTMzZGMyMzQwNmFmMmRiZjYzZDcwNTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxYmI1MjA1MDZlMWYxMjIxNTM0MTM3ZDIzMjU2YjU3ZTIwM2IwZjNiY2VlOWU3YzY3YTFhN2Y1MGRiZDRiMmIifQ"
+        },
+        {
+          "resource": "repo://hub/documentation/data-synchronization/insert-pattern.rst#L94-L100",
+          "version": "repo-lines-v1:sha256:90f9ec2415fe69f8194906cb3e57ff185719ecf0336caa09e60b0c3b0d15391c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmUzYTdiZGJiOWNjMTNmYTQyYzk4ZGJmODhhMWIwNjhkM2JjNTJmM2U5ZjE4NzFmZGQ0NWI4ODc0YTgxYmFjOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTY1MjQwYmRlODgyMGQ0NWUzMWFhM2YyODViYjY3ZTQ5YzBjNWFiY2RhNDZlMzNjNjg1NTUyMzBlMzA2YWE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZhMDU3Y2QzOTcxNzZmYzUwNGRmN2MyNGY3NjkwMjA0YzA1ZjFmZjQxMTI0MGI5ZGQ2NzA4MDM3ZmIzYTRlNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjcyODIzNDk2YzJiNzVhYzcwZWI0MTA4MGYwZDlkZjM5ODNlYjQ2MzRiMTVlN2M3MGZjYmRmYzgzM2EwMTgxYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0caba2382cfc4f8593cd3e56fe0b5cd4",
+      "statement": "The optimistic locking configuration example lacks a comma between its success-path comment and payload addition, so its documented lookup/hash/discard algorithm should not be treated as a ready-to-paste valid JSON example.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/optimistic-locking-pattern.rst#L76-L86",
+          "version": "repo-lines-v1:sha256:4e6138ac51f0c8362ac24dbaee147107b81d9014ae30b0949aa66eac1668d510:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmNTc0ZDRhOGZkNjA5Y2I4MTkxYjNiNzg0ZTg3ZGIxZjVkZWFmZGE5NDEwOWMzMzkwZWE0ZjdlYWZmZTc4NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljMjFhNTI5MmZlY2U0NTgzZWI4MmY5NDAxYWQ1OTI0ZDM3MTI1YTY3NjhjZGZhZjVmMjFiNTIwYjA3OWVjZTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlNTY1ZWIxNGZiODY0MDE1MGM0N2ZlYTIzMjI1M2NjYTdmZTYxNmEzZWVhM2I3MWNiZDY5ZmNkYzYzM2NiZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmMDcwNGY3NTE3Y2U5YmRjZWRiNmIzZTViOWU4NjRkYTFlZGMzNjQ5N2RmY2E0ZDI5NDIyZDA0MWQzOWE5MWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e83c8b8b6e3c46f6a4671dad36eeaaee",
+      "statement": "The transform-share-rest section's prototype names transform-collect-rest rather than the section's own share template.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-transforms-template.rst#L206-L235",
+          "version": "repo-lines-v1:sha256:903fa286a811a7806d4d6154def875a8a5436af2580d0a2fef1f629629866868:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYWFhMTQwMWU0ZWI2ODBmNWRkZTdhYzBhNGUyN2FmMmQwNGZkMmJjNjRmYzRmZGQ3YjQzZDg0NGVmOTNjZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMWEyNGNmYjg1MDYwN2Q2NGVmOTVjMmY0ZGM4YTAxODJlNzkxMjY5ZjViZjI0ZWQ2YTc2MDNjNTVjN2RmYjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmNWZkZWZkYTBiODQ2NjQ0YjAxNjIzYjdkODRkYWRhMjJkNWU3NmE3ODc3MmYyZWY3NWU2MzkzNDAyNzQ5NzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExOTQ5NWNhNDFjNTlkYzFmMmJhNWZlOWI1ZTgzOThhNWVhZDU1ZWY5NDAxM2M0ODQxZDliZWIxN2M5ZGMxMTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d88ab3c2f3174ed29c4acd4a8509303a",
+      "statement": "The namespace-split narrative describes keeping the first member identity under default merge settings, whereas the merge-source reference documents composite as the default identity strategy and first as explicit; actual merge configuration must resolve this discrepancy.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/data-synchronization/namespace-split-pattern.rst#L6-L8",
+          "version": "repo-lines-v1:sha256:8f4f261c401a2a30c73f5316ba411f8a30cf1eb3d9d06a10a88fb06b29d2143b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjg1OTBmODNmY2RjNmMzMzFiOTQwOTA0MDNiZDQ1OWViZmJkMjEwZTBjMTM3NDAxODQzZmJlNGY3MTg0NjQxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTBkM2ZjNmM0ZjdiZTZmNWEzZTYwOGI3ZWU2NjdmYjY1Mzg2OWE3ZmVlMzNkMzE5NjA3ZDNjNzZmNmJkNjkzYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjgyM2ZhNmRkMGJjYzYyNGI1ODA4ZmI0MDU2OWQ4MjY1MGQ5NTNiMjcwZWRkYzI4NjhkNjk1NGMyNWNiYzliNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2M3NjVlMjVmODc1ZGQ3MmNjNzE0MDE4ZTUwZDZhYTRmOGJhZDdlMWI0MzEwOTMxYmI1YTVmMTNhZDA5Nzk2ZSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/service-configuration/pipes/configuration-sources-merge.rst#L160-L187",
+          "version": "repo-lines-v1:sha256:982b22595ebb27c855372fca289cddc4520ff4610828933e9ce9ca87bc61737e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4YTJlYTc3YmU0MTM3OTcxZGMzNzQ1ZWY1ZWQ1Y2E4MTljZDBhYzk0M2Y2YWVhN2Q3MTJiYzBjZjc3NTI4N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTgxZDM0ODlhNjYzNTk4MTJkMThkNjM5NmYxNDA1NDBhMTVhOTkwNjBlNWYyODFkYWRjNTQyZDJjMmYzMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmN2RiYTRkNmZhYjY1OGZiNmMwYzJiZmE0NzAyYTcyZjk0YmYyODEwOTFkNzZiMDQ1ZmY2MTBlN2Q0MGVmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyODQ2YzIzZTVjYmIxZDRkNDFhZDEyNjRhMzM5YTFhZTUzOTE4Njk5ZWI1MzY4Y2MwMGIwNzQ2NGE3MzlkZGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea8f6cafb09841f7b0c7212167df2e64",
+      "statement": "The documented local configuration-test workflow drains pipe queues with external output disabled or unable to send, compares endpoint results using expected JSON and per-pipe test JSON files, supports selecting source/before-transform/after-transform/sink stages, and runs with sesam -vv test.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L178-L186",
+          "version": "repo-lines-v1:sha256:d3f3e930714c1d330072874f2391cc0efc113858ca7dd9da8a2a9d3e18f8260e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNkNDIwMzJlNzJkZGYyMGE4YTQ3ZDVjMTY1OTgwNDc5Yjk5NzBlYzQwZjExYzkwOThjZmY1YjgwOWFkNDkzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdkNGMzMDVkNTkyNGMyODk1MDA2NjYzN2U3NjhkY2UwMzE2N2VhNDBiZDY0YmE2NDVhNzk4YmNmMDM2ZTk2NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzM1ZTZlMDgxMjhmNjE5MDI2OTYwY2JlNmRhMWNlZGQ3OGY0MjQ4NjM4NWQ2NzAwZmVkNTg0YTAzZTRhNzY3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L63-L67",
+          "version": "repo-lines-v1:sha256:7358af66a028f4d2e9b0ba5be3c1f72485419ed8ed61c60c37f941dca90263e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGQzN2I0NzFlNzA5ZTA0ZTVmZjAwYjczZjkzM2Y2NjVlYzIyNjJlZTVmYzQxNzQ2MGIwZTNjNThjNmRkZWQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGU0YWRkNDA1MTlmMDhiNzlhOGRmNzRiMmU4N2Q0ZWNiZDM5YTg2YmQ4OGFjMDdkYzAwZjcwMGRkMmMxMmExNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGExM2VmNjg1YWU3NzljODhkMmFlOTE0MWY3OWExM2JiNDFjYmUyYTEwODkxYjg1Y2Y4ZTBmODRkMWY3NWQyYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjhhMzRiNTRhZmU4ODA3ZTAzODhlNTI2OWM2OGVmZmI2OTZhYjMyNjExNDFkMTNjMTJkZWU5MDJiNmI1Mzc2MSJ9"
+        },
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L7-L21",
+          "version": "repo-lines-v1:sha256:d728920650b733582762cd2916dd09f6f0f0af185fdda8c3774bd133cdd1ef38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4YWJkY2YyYmM5MDgyMDQ2MTU5MjI2NjhlNjViZDZkOGI3ZjFjOWE0ZjcxNDU3MDI2NWI4ZTY3Yjg3YTJjMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjMDdmNzI1ZTk4OWY3MTI4YjVkNTExOGVlNjczODI5ZDAwNmY1MGFiMThiZjcyYzcwNmZhZWVlYjcxMmY5YWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5MmEyYjgzN2Q2NTAxOGQwNDljODJhNDgwZmU4MjVlNTlmYmMxMDRjNzBlMzUyMDNmNDkwOTZlZjg4OWIxZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhMTcwMGJmMDNiZmQ3ODI0ZGUzZWE4ODJjYWEyNmFkMjM5MTgwN2UxYWJhYmRjOTZiNGY0ZTNkMzgxNzM3ZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3908ac01dc7d48a59ed54b8cb1395eee",
+      "statement": "Configuration CI must serialize tests because the Sesam client overwrites the test node configuration, and the CI node should be unable to write to normal target systems and lack the connection variables or secrets needed to do so.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/continuous-integration.rst#L18-L22",
+          "version": "repo-lines-v1:sha256:7d9862d12597d3b47d3f4f8be7a5588dca48397562006b53718438e1af30fc21:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWE0ZGIxMTExY2VmNDUzMzYwYzYzNTQzY2FhNmZlMzI5ZWEzMDFiNWQ0M2FjZDA3ZTA3OGI0NzVmZmM0ZjU5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTZlYTE5ZGVhZDdjNDY3MTEzMmNjZDc0Mzk2ZmZmMWI4ODc1NDhhOTJjN2U3NDNhZGRmOWYyYTRjYzcyZDQwYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQyYjRjYzIwZmM4YzJiMzI5YzkwN2YyNTBiZTE0MDhlZmJiMzY0NzE4ZWE4MDU5NDhlN2ZlNzdkZWUzOTVmYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDA5MTQ2MDJlOGM0YmZkMjRlNWU4NGJiN2MzY2YwODViMjFjNmExNDQ1OTgyMDEyMjIzNGZmOGUxYTMxOTVmNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fc0ad91e9dd44105ac5de9f58623744d",
+      "statement": "The local-test reference's internal-properties section explicitly says entities with _deleted false are removed from test output; this wording must not be silently inverted when assessing whether comparison output covers live and deleted outcomes.",
+      "evidence": [
+        {
+          "resource": "repo://hub/documentation/operations/testing-locally.rst#L141-L144",
+          "version": "repo-lines-v1:sha256:89506b668ea86ed7cfc1df98d73995ad754d532bab9f4bd6e2227ef9aabfd51b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM3NTIyMzE5NGYyYzlkY2RlODIxMjQwOGE1NTBmZDM0YmZiZTdhNmI4YzQzMmM5NTAyNGE3Y2VhZjYzNjBiYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzlmZGY0YmI5OGVjMWQ5ODYxYjRiMTViMWU5NDc0NTVlZDI3NmU0MmFjNzI4NTU2MDliMzAzNDZiOWZlZDgwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQzZjdiMWU1YmQ4MzYxYjY3ZGFmMWM0ZmI5NTY1YzJkMWE3YmQ1NTc1MDFjNjQ5NGIxZmZlMmNkODAxYmUwMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjY3YTUyNzAxZGQ2YWMzMTEyZGNlMTI5N2ZlZDdlNDRlNjUzYTk3MTFjYzEzOTRiMmJmYWFkNzlmYjAwOTMzMyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-20T13:49:14.868Z"
+  }
+}

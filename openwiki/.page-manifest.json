@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/hub-model-and-boundaries.md": {
+      "pageVersion": "sha256:3bcc16f961df7b8676dd4cd7775712f4e5e05d2ef45c382c28dccf622f9ca319",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/concepts/dtl-evaluation-and-operators.md": {
+      "pageVersion": "sha256:8cceb513ef9852ef565bc765d5f346244f087492313d284eae176c7f2bc579f5",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/concepts/entities-datasets-and-identifiers.md": {
+      "pageVersion": "sha256:429b27019d4efcba0c222deb2abdbeefff178fbbdd41eb0eb946b6064f7fccfb",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/configuration/pipes-and-systems.md": {
+      "pageVersion": "sha256:aa3880a2616a65d7925b9840ad65eb24b5baf61e316bc3e1c173d6d3953006e3",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/configuration/synchronization-and-state.md": {
+      "pageVersion": "sha256:af51b1106d5c6b280ff60cfe294b2aad65851cd9ee17beb8c9cdcd24892b3b5b",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/integrations/apis-and-repository-handoffs.md": {
+      "pageVersion": "sha256:5278acea38c54b9af2f30eb0d1919ca9e41fabe32a87c8a00513b03ec8964537",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/integrations/connectors-and-contracts.md": {
+      "pageVersion": "sha256:7f69a8b54b17239097b2711dfe502d249aeb61454a2d08d176f0bba0069885c0",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/integrations/extensions-and-json-protocols.md": {
+      "pageVersion": "sha256:2e17dee8677819039d9c06ca98e2de33d7fa6128b5af2affabbe11d8ece7a3dd",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/operations/deployment-and-durability.md": {
+      "pageVersion": "sha256:73450040740314dad6edd355160a3cc8b8ae49a8c99eee75b59e3ec7fd5d0315",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/operations/monitoring-and-troubleshooting.md": {
+      "pageVersion": "sha256:9bc436a8342d84eb356281da9a95886a831e2a91a7f677226835c07ee3209267",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/operations/security-and-secrets.md": {
+      "pageVersion": "sha256:47376a80acc8ad67387c44a0bc3e29160d43e1c079c7b01ec8bc3ced2e33029c",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:6d58cf743a11399cee784124a710442562920521ebc778d3180e6486da80714c",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/references/history-and-policies.md": {
+      "pageVersion": "sha256:b3734589478111044a1c8aa9240d39777dd05295a2436804df99d47c6f6b666c",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/references/legacy-data-access.md": {
+      "pageVersion": "sha256:ba0fd7f9c491a690dc1a36af4d415dc1ab0567f673cdb9a0546429be0764a088",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/testing/configuration-change-lifecycle.md": {
+      "pageVersion": "sha256:c565996d0cce710a11aa5ba77eb70dd222b6895114e9a22cd26dc544078adbb7",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/workflows/bidirectional-synchronization.md": {
+      "pageVersion": "sha256:d90bf37578440d2c412c6c303b1e92af5c174199fcf7c97e7d8f34561990e2d4",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/workflows/build-an-integration.md": {
+      "pageVersion": "sha256:23e425be5c6714fa2f4c2b3fa3ff3a8fc19ce13618974f5377ae7f5309398e52",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/workflows/documentation-maintenance.md": {
+      "pageVersion": "sha256:79b826952679f093615e1c4a1b05cf2346fc6ce87c6ddd0366b751a5af4e0c4a",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/workflows/dtl-joins-and-transformation-patterns.md": {
+      "pageVersion": "sha256:64a4ca0aebb6f09eace36fee9ffa5df06d2e1636a92ea6f7fe70724ab4ad0acb",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    },
+    "/openwiki/workflows/master-data-management.md": {
+      "pageVersion": "sha256:bc4c07381ec2e344a95213f35a14a58401032f3874a64b62234d2d5dd0299d3f",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "6ba6fcf4-0a08-471a-9c08-9ab76afb4bd7",
+      "gitHead": "7cb5191307a44769c5579764de7dc93aae7712b6",
+      "sourceFingerprint": "sha256:49e6bd140326ffb0e6783e696274089336356d1d987306ca8883165ee1f8d681"
+    }
+  }
+}
