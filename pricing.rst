@@ -155,12 +155,13 @@ A production or test environment comes with automated backup [#]_ and support fo
 
 
 
-3. Subscription fees after July 1st 2027 
+3. Subscription fees after July 1st 2027
 ========================================
 
 .. note::
 
-   The prices below are not final and will be KPI adjusted in the future.
+   These prices are only for the select customers who have a deal for extended service after the Sesam SAAS shutdown.
+   The prices below are not final and will be KPI adjusted in the future. 
 
 .. _pricing-developer-2027-07:
 
