@@ -5,7 +5,7 @@ Changelog
 
 2026-11-23
 ----------
-* Upgraded the Python version used by Sesam in preparation for future library updates.
+* Upgraded Python version used by Sesam in preparation for future library updates.
 
 .. _changelog_2026-06-17:
 
