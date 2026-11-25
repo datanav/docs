@@ -161,7 +161,6 @@ A production or test environment comes with automated backup [#]_ and support fo
 .. note::
 
    These prices are only for the select customers who have a deal for extended service after the Sesam SAAS shutdown.
-   The prices below are not final and will be KPI adjusted in the future. 
 
 .. _pricing-developer-2027-07:
 
@@ -179,9 +178,9 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - NOK 776.11
+     - NOK 952.29
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - NOK 3,311.40
+     - NOK 4,063.09
 
 .. _pricing-production-2027-07:
 
@@ -197,11 +196,11 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Compute 
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - NOK 13,452.56
+     - NOK 16,506.29
    * - Flexi compute [#]_ - Minimum 8 Engines
-     - NOK 26,905.12
+     - NOK 33,012.58
    * - Multi compute [#]_ - 16 Engines < 1 TB Data
-     - NOK 43,462.12
+     - NOK 53,328.02
 
 .. list-table::
    :widths: 70 30
@@ -210,9 +209,9 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Data [#]_
      - Pr GB
    * - Storage
-     - NOK 227.66
+     - NOK 279.34
    * - VPN
-     - NOK 31.04
+     - NOK 38.09
 
 .. list-table::
    :widths: 70 30
@@ -221,14 +220,14 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
-     - NOK 227.66
+     - NOK 279.34
    * - Enterprise - 1h
-     - NOK 434.62
+     - NOK 533.28
    * - Premium 0,5h x 24/7 [#]_
-     - NOK 1,293.52
+     - NOK 1,587.15
 
 .. [#] Geo-replicated backup is included in cloud environments.
-.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at NOK 13,452.56 pr increment. Minimum 8 compute. 
+.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at NOK 16,506.29 pr increment. Minimum 8 compute. 
 .. [#] If data storage is more than 1TB you will be billed with an additional Multi compute for every TB above 1TB. As an example, if you have 4,5TB of data you will be billed with 5 quantities of Multi computes.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
