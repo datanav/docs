@@ -97,9 +97,9 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - $84.47
+     - $95.71
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - $360.42
+     - $408.35
 
 .. _pricing-production-2027:
 
@@ -115,11 +115,11 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Compute 
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - $1,464.22
+     - $1,658.90
    * - Flexi compute [#]_ - Minimum 8 Engines
-     - $2,928.43
+     - $3,317.81
    * - Multi compute [#]_ - 16 Engines < 1 TB Data
-     - $4,730.54
+     - $5,359.54
 
 .. list-table::
    :widths: 70 30
@@ -128,9 +128,9 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Data [#]_
      - Pr GB
    * - Storage
-     - $24.78
+     - $28.07
    * - VPN
-     - $3.38
+     - $3.83
 
 .. list-table::
    :widths: 70 30
@@ -139,14 +139,14 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
-     - $24.78
+     - $28.07
    * - Enterprise - 1h
-     - $47.31
+     - $53.60
    * - Premium 0,5h x 24/7 [#]_
-     - $140.79
+     - $159.51
 
 .. [#] Geo-replicated backup is included in cloud environments.
-.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1464.22 pr increment. Minimum 8 compute. 
+.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1658.90 pr increment. Minimum 8 compute. 
 .. [#] If data storage is more than 1TB you will be billed with an additional Multi compute for every TB above 1TB. As an example, if you have 4,5TB of data you will be billed with 5 quantities of Multi computes.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
