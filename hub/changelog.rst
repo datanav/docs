@@ -1,5 +1,10 @@
 Changelog
 =========
+.. _changelog_2026-11-26:
+
+2026-11-26
+----------
+* Sesam community GitHub repository has been changed to read-only.
 
 .. _changelog_2026-11-23:
 
