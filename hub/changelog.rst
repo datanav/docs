@@ -4,7 +4,13 @@ Changelog
 
 2026-11-26
 ----------
-* Sesam community GitHub repository has been changed to read-only.
+For security reasons, we are setting the Sesam community GitHub repository to read-only.
+Sesam will not provide new Docker images built from the repository. Any future changes will need to be hosted and built by you, the customer.
+
+If you rely on the community repository, we recommend that you:
+
+* Fork or clone the repository.
+* Set up your own build and hosting for any Docker images you need.
 
 .. _changelog_2026-11-23:
 

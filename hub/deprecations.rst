@@ -11,6 +11,7 @@ not make use of these features.
    :maxdepth: 1
    :hidden:
 
+   Community <community>
    Databrowser <databrowser>
    GDPR platform <gdpr-platform>
    Management Console <index-management-console>
